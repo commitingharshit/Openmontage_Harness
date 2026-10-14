@@ -1,0 +1,8 @@
+Agentic Office launch film: teammate handoff
+
+1. Unzip this folder anywhere.
+2. In Terminal, cd into the folder and run:   sh setup/setup.sh
+3. Restart Claude Code, then open this folder in it.
+4. Ask Claude: "Read CLAUDE.md and preview the V27 cut."
+
+The finished cuts are in videos/. Everything else (the workflow, rules, scripts and UI) is described in CLAUDE.md.

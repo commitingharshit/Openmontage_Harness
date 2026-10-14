@@ -1,0 +1,38 @@
+{
+  "critic": "claims_rights",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "claim_accuracy": 95,
+    "ui_authenticity": 85,
+    "rights_provenance": 35,
+    "numeric_consistency": 95
+  },
+  "issues": [
+    {
+      "shot_id": "00:12, 00:29, 00:49, 01:11, 01:14",
+      "category": "incomplete_rights_provenance",
+      "severity": 0.9,
+      "confidence": 0.95,
+      "evidence": "The frames show cinematic Maya and David footage. artifacts/provenance.csv lists stock clips but provides no mapping or generation records for these visible shots; CAST.md and GEMINI_QUEUE.md contain prompts rather than completed asset provenance.",
+      "suggested_action": "Verify each shot's source and add a candidate-specific provenance log with asset filename, source, generation provider or ownership, and applicable usage rights; label any film or TV material internal-only."
+    },
+    {
+      "shot_id": "00:55–01:08",
+      "category": "pending_result_verification",
+      "severity": 0.65,
+      "confidence": 1.0,
+      "evidence": "00:55 proposes 'Slide 2 · TextBox 23 €71–73m → €74.6m'; 01:04 shows '10 of 10 changes accepted'; 01:08 verifies the memo and table. The task explicitly says the post-acceptance slide 2 recording is PENDING, and no supplied frame verifies that box after acceptance.",
+      "suggested_action": "Capture the real post-acceptance slide 2 and show the previously flagged box reading €74.6m before the payoff; retain the pending verification flag until that recording exists."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Stock, generated or owned footage needs a provenance log.",
+      "shot_id": "00:12, 00:29, 00:49, 01:11, 01:14",
+      "evidence": "The available provenance log does not identify or map the visible cinematic character footage to documented sources and rights."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Fail the release gate until every cinematic shot has documented provenance, then verify the flagged slide 2 box with the pending real post-acceptance recording."
+}

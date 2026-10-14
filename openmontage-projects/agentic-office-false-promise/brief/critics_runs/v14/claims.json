@@ -1,0 +1,93 @@
+{
+ "critic": "claims",
+ "stage": "animatic",
+ "score": 58,
+ "dimension_scores": {
+  "claim_accuracy": 60,
+  "ui_authenticity": 50,
+  "rights_provenance": 70,
+  "numeric_consistency": 58
+ },
+ "issues": [
+  {
+   "shot_id": "1:24 (f_29)",
+   "category": "fabricated_product_ui",
+   "severity": 0.8,
+   "confidence": 0.8,
+   "evidence": "Generated laptop shows a mock 'Board Pack Q3' list with 'Changes ready · review' and overlay '3 of 3 files changed · waiting for her'; not real app footage, not labelled as mockup",
+   "suggested_action": "Replace with a real recording of the file list with pending changes, or label 'Illustration'."
+  },
+  {
+   "shot_id": "1:12 (f_25)",
+   "category": "misleading_caption",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "'The same request.' over a different prompt ('Research says 20% DACH growth is too aggressive…Show me the diffs.')",
+   "suggested_action": "Caption: 'The same change, in Agentic Office.'"
+  },
+  {
+   "shot_id": "0:51 → 1:48",
+   "category": "implied_speed_claim",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "By hand: 11:52 PM → 2:41 AM. With Diffs: '2:49 AM · DONE'. Implies ~3 h → ~8 min; no approved time-savings claim, and real UI is labelled 'sped up'.",
+   "suggested_action": "Drop the 2:49 clock on the proof side or show a neutral 'DONE' without a timestamp."
+  },
+  {
+   "shot_id": "1:33 vs 0:54",
+   "category": "numeric_object_inconsistency",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "Missed box is on the chart slide (chat called it slide 4); Diffs ring is 'Slide 2 · TextBox 23'. Script's David text says 'slide 2' but the frame doesn't show it.",
+   "suggested_action": "Make problem-act slide and ringed row the same slide and textbox."
+  },
+  {
+   "shot_id": "1:15-1:42",
+   "category": "inconsistent_real_app_label",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "'Real app · sped up' badge visible on f_26 and f_35 but not on f_27, f_28, f_31-f_34 (same recordings)",
+   "suggested_action": "Burn the badge on every real-UI shot for its full duration."
+  },
+  {
+   "shot_id": "end card",
+   "category": "undemonstrated_claim",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "VO and card: 'Accept or reject each one.' Only Accept/Accept all is ever performed; known gap: no single Reject recorded",
+   "suggested_action": "Record one Reject on a row (e.g. TextBox 9) and cut it in, or soften to 'Review each one.'"
+  },
+  {
+   "shot_id": "0:30, 1:21",
+   "category": "third_party_ui_provenance",
+   "severity": 0.2,
+   "confidence": 0.5,
+   "evidence": "Microsoft Excel ribbon visible (f_28); AI chat UI is a generated mock (fine, not branded). Generated people from Canva/Meta/Qwen need the provenance log entry.",
+   "suggested_action": "Confirm provenance log lists every generated shot and that the Excel UI capture is ours."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "Brief rule 5: product proof only from real app footage; mockups labelled",
+   "shot_id": "1:24 (f_29)",
+   "evidence": "mock '3 of 3 files changed · waiting for her' folder UI on a generated laptop, unlabelled"
+  },
+  {
+   "rule": "No implied speed/time savings unless approved",
+   "shot_id": "1:39-1:42",
+   "evidence": "'2:49 AM · DONE' 8 minutes after the 2:41 AM hand-done failure"
+  },
+  {
+   "rule": "Captions must be accurate",
+   "shot_id": "1:12",
+   "evidence": "'The same request.' over a different request"
+  },
+  {
+   "rule": "Numbers/objects consistent everywhere",
+   "shot_id": "0:54 vs 1:33",
+   "evidence": "chart slide (slide 4) vs 'Slide 2 · TextBox 23'"
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Replace the generated '3 of 3 files changed' laptop with real footage (or label it), remove the 2:49 AM clock from the proof, and fix 'The same request' caption."
+}

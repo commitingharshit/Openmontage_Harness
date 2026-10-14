@@ -1,0 +1,279 @@
+{
+ "file": "projects/agentic-office-false-promise/renders/diffs_v13_main.mp4",
+ "duration_s": 82.3,
+ "fps": 30.0,
+ "shots": 26,
+ "asl_s": 3.17,
+ "median_shot_s": 3.0,
+ "shortest_s": 0.5,
+ "longest_s": 9.0,
+ "pct_shots_under_1s": 7.7,
+ "pct_shots_over_4s": 11.5,
+ "reference_asl_s": {
+  "a16z It's Time To Build": 0.97,
+  "SMITH ANOMALY": 1.27,
+  "Codex It's time to fly": 4.5
+ },
+ "grade_consistency": {
+  "luma_mean": 54.6,
+  "luma_spread_sd": 37.3,
+  "sat_mean": 116.4,
+  "sat_spread_sd": 40.0
+ },
+ "sharpness": {
+  "median": 167.2,
+  "soft_shots(<60)": [
+   11.2,
+   13.7,
+   28.8,
+   48.8,
+   54.3,
+   63.3,
+   73.3
+  ]
+ },
+ "letterboxed_shots_pct": 19.2,
+ "loudness": {
+  "integrated_lufs": -14.6,
+  "lra": 6.9,
+  "true_peak_dbfs": -1.8
+ },
+ "silence_starts_s": [],
+ "black_starts_s": [],
+ "per_shot": [
+  {
+   "t": 0.0,
+   "len": 3.2,
+   "luma": 19.4,
+   "sat": 163.1,
+   "sharp": 846.3,
+   "contrast": 40.9,
+   "letterbox_rows": 271
+  },
+  {
+   "t": 3.2,
+   "len": 3.5,
+   "luma": 51.2,
+   "sat": 141.0,
+   "sharp": 288.4,
+   "contrast": 53.0,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 6.7,
+   "len": 4.5,
+   "luma": 75.7,
+   "sat": 83.9,
+   "sharp": 578.2,
+   "contrast": 90.8,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 11.2,
+   "len": 2.5,
+   "luma": 38.0,
+   "sat": 176.9,
+   "sharp": 5.9,
+   "contrast": 46.1,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 13.7,
+   "len": 0.7,
+   "luma": 70.3,
+   "sat": 120.7,
+   "sharp": 17.3,
+   "contrast": 54.3,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 14.4,
+   "len": 2.5,
+   "luma": 41.9,
+   "sat": 144.0,
+   "sharp": 141.4,
+   "contrast": 40.7,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 16.9,
+   "len": 0.5,
+   "luma": 81.3,
+   "sat": 112.3,
+   "sharp": 103.1,
+   "contrast": 67.4,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 17.4,
+   "len": 2.2,
+   "luma": 75.4,
+   "sat": 124.0,
+   "sharp": 330.6,
+   "contrast": 74.9,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 19.6,
+   "len": 3.2,
+   "luma": 39.4,
+   "sat": 123.6,
+   "sharp": 245.0,
+   "contrast": 68.5,
+   "letterbox_rows": 60
+  },
+  {
+   "t": 22.8,
+   "len": 2.5,
+   "luma": 45.9,
+   "sat": 155.6,
+   "sharp": 148.2,
+   "contrast": 41.9,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 25.3,
+   "len": 3.5,
+   "luma": 48.8,
+   "sat": 127.0,
+   "sharp": 536.9,
+   "contrast": 62.1,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 28.8,
+   "len": 2.5,
+   "luma": 35.5,
+   "sat": 181.9,
+   "sharp": 1.9,
+   "contrast": 28.6,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 31.3,
+   "len": 3.0,
+   "luma": 12.8,
+   "sat": 182.1,
+   "sharp": 440.0,
+   "contrast": 31.5,
+   "letterbox_rows": 259
+  },
+  {
+   "t": 34.3,
+   "len": 2.5,
+   "luma": 18.2,
+   "sat": 100.4,
+   "sharp": 258.2,
+   "contrast": 29.1,
+   "letterbox_rows": 37
+  },
+  {
+   "t": 36.8,
+   "len": 2.5,
+   "luma": 20.0,
+   "sat": 97.3,
+   "sharp": 296.1,
+   "contrast": 32.3,
+   "letterbox_rows": 41
+  },
+  {
+   "t": 39.3,
+   "len": 3.5,
+   "luma": 139.0,
+   "sat": 49.7,
+   "sharp": 186.3,
+   "contrast": 98.6,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 42.8,
+   "len": 3.0,
+   "luma": 70.1,
+   "sat": 62.8,
+   "sharp": 100.5,
+   "contrast": 91.4,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 45.8,
+   "len": 3.0,
+   "luma": 49.7,
+   "sat": 131.6,
+   "sharp": 187.2,
+   "contrast": 45.6,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 48.8,
+   "len": 2.5,
+   "luma": 14.5,
+   "sat": 161.3,
+   "sharp": 1.5,
+   "contrast": 22.9,
+   "letterbox_rows": 7
+  },
+  {
+   "t": 51.3,
+   "len": 3.0,
+   "luma": 34.0,
+   "sat": 106.6,
+   "sharp": 62.9,
+   "contrast": 54.7,
+   "letterbox_rows": 13
+  },
+  {
+   "t": 54.3,
+   "len": 9.0,
+   "luma": 26.9,
+   "sat": 131.3,
+   "sharp": 39.8,
+   "contrast": 26.1,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 63.3,
+   "len": 4.0,
+   "luma": 28.2,
+   "sat": 72.7,
+   "sharp": 29.8,
+   "contrast": 43.8,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 67.3,
+   "len": 3.0,
+   "luma": 143.9,
+   "sat": 45.5,
+   "sharp": 198.9,
+   "contrast": 99.5,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 70.3,
+   "len": 3.0,
+   "luma": 92.4,
+   "sat": 76.3,
+   "sharp": 134.7,
+   "contrast": 72.0,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 73.3,
+   "len": 3.0,
+   "luma": 130.9,
+   "sat": 56.0,
+   "sharp": 13.1,
+   "contrast": 63.0,
+   "letterbox_rows": 0
+  },
+  {
+   "t": 76.3,
+   "len": 6.0,
+   "luma": 16.2,
+   "sat": 98.1,
+   "sharp": 539.1,
+   "contrast": 30.8,
+   "letterbox_rows": 0
+  }
+ ]
+}

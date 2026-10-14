@@ -1,0 +1,122 @@
+{
+  "critic": "edit_rhythm",
+  "stage": "animatic",
+  "score": 67,
+  "dimension_scores": {
+    "rhythm_wave": 70,
+    "cut_motivation": 73,
+    "connectives": 57,
+    "economy": 65,
+    "transitions_quality": 65
+  },
+  "evaluation_basis": "Inspected frames from ../artifacts/frames_v13, measured shot statistics, audio measurements and composition timing. Audio was not auditioned; sound-bridge judgments remain provisional. SHARED.md was read; ../references/TECHNIQUES.md was not found. Measured ASL is 3.17 s versus reference ASLs of 0.97, 1.27 and 4.5 s. The film has short inserts and sustained holds, but the product section settles into repeated three-second beats.",
+  "issues": [
+    {
+      "shot_id": "00:51.3–01:03.3",
+      "category": "rhythmic_plateau",
+      "severity": 0.8,
+      "confidence": 0.96,
+      "evidence": "Four consecutive three-second panel crops show 'Every change, in one list.', 'The exact box David flagged.', 'And the chart that depends on it.' and 'Each one: accept or reject.' Frames retain nearly identical floating-panel framing.",
+      "suggested_action": "Combine the chart and controls into one continuous move, retain a readable hold on the flagged box, and shorten the sequence from 12 seconds to approximately 9 seconds."
+    },
+    {
+      "shot_id": "00:45.8–00:51.3",
+      "category": "unproductive_hold",
+      "severity": 0.76,
+      "confidence": 0.96,
+      "evidence": "Both 00:45 and 00:47.5 samples show the PowerPoint cover 'Board Pack Q3'; the sequence then spends 2.5 seconds on Maya's face before returning to review.",
+      "suggested_action": "Replace the cover hold with the existing real Slide 2 diff panel and move directly into the flagged change; reduce Maya's reaction to a brief punctuation beat."
+    },
+    {
+      "shot_id": "00:17.4–00:22.3",
+      "category": "insufficient_reading_time",
+      "severity": 0.73,
+      "confidence": 0.99,
+      "evidence": "The memo containing '**€74.6m**' and the unchanged table receives 2.2 seconds; the two-deck comparison containing 'Not your deck.' receives 2.25 seconds. Both require locating a discrepancy as well as reading.",
+      "suggested_action": "Give each discrepancy at least 2.5 seconds of stable visibility, funding the additional time by trimming the later review plateau."
+    },
+    {
+      "shot_id": "00:13.7–00:25.3",
+      "category": "fragmented_burst",
+      "severity": 0.65,
+      "confidence": 0.87,
+      "evidence": "Measured statistics report only 7.7% of shots under one second. The grind alternates isolated short inserts with 2.2–2.5-second screen holds, repeatedly returning to the same shoulder-and-laptop composition.",
+      "suggested_action": "Cluster three existing hand, desk and face inserts into one accelerating run, then land on readable screen holds; preserve the workflow order and all message-reading minimums."
+    },
+    {
+      "shot_id": "00:54.3",
+      "category": "missed_visual_bridge",
+      "severity": 0.63,
+      "confidence": 0.95,
+      "evidence": "The red ellipse around the stale slide box at 00:25–00:27.5 returns around 'Slide 2 · TextBox 23' at 00:55, but the two targets occupy different positions and scales.",
+      "suggested_action": "Align the ellipse and amount across the two shots, using a brief reprise of the flagged box followed by a match cut into its real diff row."
+    },
+    {
+      "shot_id": "01:07.3–01:16.3",
+      "category": "extended_resolution",
+      "severity": 0.57,
+      "confidence": 0.95,
+      "evidence": "After '10 of 10 changes accepted', the film adds three seconds of the corrected memo, three seconds of dawn and three seconds of David before the six-second end card.",
+      "suggested_action": "Keep the corrected memo readable for three seconds, shorten dawn to approximately 1.5 seconds and cut David to the completed nod, retaining the end-card hold."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A message must not be cut off before 2.5 seconds.",
+      "shot_id": "00:17.4–00:19.6",
+      "evidence": "The memo discrepancy and 'Then the memo.' disappear after a 2.2-second shot."
+    },
+    {
+      "rule": "A message must not be cut off before 2.5 seconds.",
+      "shot_id": "00:20.05–00:22.3",
+      "evidence": "The comparison and 'Not your deck.' disappear after a 2.25-second shot."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Compress the repeated review-panel beats and use the recovered time for readable manual-work discrepancies and a visual match cut from David's flagged box to its real diff.",
+  "recut_plan": [
+    {
+      "timestamp": "00:13.7–00:22.8",
+      "edit": "Regroup existing short inserts into an accelerating burst before the screen holds; retain model → memo → deck order."
+    },
+    {
+      "timestamp": "00:17.4–00:19.6",
+      "edit": "Extend the memo discrepancy to at least 2.5 seconds of stable visibility."
+    },
+    {
+      "timestamp": "00:20.05–00:22.3",
+      "edit": "Extend the deck comparison to at least 2.5 seconds of stable visibility."
+    },
+    {
+      "timestamp": "00:45.8–00:51.3",
+      "edit": "Replace the PowerPoint cover hold with existing real Slide 2 diff evidence; shorten the intervening face reaction."
+    },
+    {
+      "timestamp": "00:54.3",
+      "edit": "Match the flagged-box ellipse's position and scale to the real Slide 2 diff row through a brief visual reprise."
+    },
+    {
+      "timestamp": "00:57.3–01:03.3",
+      "edit": "Merge chart and per-change controls into one approximately three-second continuous panel move."
+    },
+    {
+      "timestamp": "01:10.3–01:16.3",
+      "edit": "Trim dawn to approximately 1.5 seconds and David to approximately 1.5 seconds, ending on his completed nod."
+    },
+    {
+      "timestamp": "00:28.8–00:31.3",
+      "edit": "Verify the rendered pause: the composition schedules a cut accent across its opening. Remove or shorten that accent if it obscures the intended room-tone breath."
+    }
+  ],
+  "target_shot_stats": {
+    "duration_s": 75,
+    "shot_count": 30,
+    "average_shot_length_s": 2.5,
+    "median_shot_length_s": 2.6,
+    "pct_shots_under_1s": 13.3,
+    "pct_shots_over_4s": 6.7,
+    "shortest_shot_s": 0.45,
+    "longest_shot_s": 6,
+    "minimum_message_visibility_s": 2.5
+  }
+}

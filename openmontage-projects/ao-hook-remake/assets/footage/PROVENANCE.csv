@@ -1,0 +1,44 @@
+file,source_url,licence,attribution,used_in (V38 timecodes, s)
+mixkit_24054.mp4,https://assets.mixkit.co/videos/24054/24054-720.mp4 (Mixkit stock video 24054),Mixkit Free License,not required,5.05–8.0 · 36.75–37.4 · 44.55–45.6 · blurred room background 49–106
+mixkit_23717.mp4,https://assets.mixkit.co/videos/23717/23717-720.mp4 (Mixkit stock video 23717),Mixkit Free License,not required,22.95–24.05 · 31.05–31.8
+mixkit_1808.mp4,https://assets.mixkit.co/videos/1808/1808-1080.mp4 (Mixkit stock video 1808),Mixkit Free License,not required,15.6–16.5
+pexels_typing_dark_a.mp4,https://www.pexels.com/video/hands-typing-on-laptop-in-dark-environment-34771078/,Pexels License,not required,24.15–24.85
+pexels_lap_desk.mp4,https://www.pexels.com/video/video-of-a-laptop-on-a-desk-6279140/,Pexels License,not required,0–1.2 · 106.3–112.4
+pexels_lap_topdown.mp4,https://www.pexels.com/video/woman-typing-on-laptop-with-blank-screen-6611947/,Pexels License,not required,8.0–9.8 · 12.45–13.9 · 58.4–61.4
+pexels_lap_mockup.mp4,https://www.pexels.com/video/laptop-screen-mockup-6279151/,Pexels License,not required,49.0–52.6 · 91.8–95.2
+pexels_mouse_click.mp4,https://www.pexels.com/video/close-up-of-hand-clicking-a-computer-mouse-36392510/,Pexels License,not required,107.3–107.9
+pexels_sunrise_window.mp4,https://www.pexels.com/video/sunrise-timelapse-through-office-window-35649915/,Pexels License,not required,112.4–115.3
+music_digital_clouds_175.mp3,https://assets.mixkit.co/music/175/175.mp3 ("Digital Clouds" by Alejandro Magaña),Mixkit Free License,not required,49–121
+music_hazy_after_hours_132.mp3,https://assets.mixkit.co/music/132/132.mp3 ("Hazy After Hours" by Alejandro Magaña),Mixkit Free License,not required,5–17
+voice,local Kokoro TTS (af_heart / bm_george),Apache-2.0 model weights,draft only — replace with recorded VO before release,throughout
+pexels_ots_girl.mp4,https://www.pexels.com/video/black-girl-typing-an-email-on-her-laptop-20065494/,Pexels License,not required,hook laptop shots (V39)
+pexels_hands_dark.mp4,https://www.pexels.com/video/female-hands-typing-on-laptop-5716890/,Pexels License,not required,hands insert (V39)
+sfx/typing_soft.mp3,https://assets.mixkit.co/active_storage/sfx/1396/1396-preview.mp3 (Mixkit sound effect 1396),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/typing_hard.mp3,https://assets.mixkit.co/active_storage/sfx/2538/2538-preview.mp3 (Mixkit sound effect 2538),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/key.mp3,https://assets.mixkit.co/active_storage/sfx/2542/2542-preview.mp3 (Mixkit sound effect 2542),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/click.mp3,https://assets.mixkit.co/active_storage/sfx/2997/2997-preview.mp3 (Mixkit sound effect 2997),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/pop.mp3,https://assets.mixkit.co/active_storage/sfx/2354/2354-preview.mp3 (Mixkit sound effect 2354),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/pop_long.mp3,https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3 (Mixkit sound effect 2358),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/bell.mp3,https://assets.mixkit.co/active_storage/sfx/933/933-preview.mp3 (Mixkit sound effect 933),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/buzz.mp3,https://assets.mixkit.co/active_storage/sfx/1152/1152-preview.mp3 (Mixkit sound effect 1152),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/glitch.mp3,https://assets.mixkit.co/active_storage/sfx/2595/2595-preview.mp3 (Mixkit sound effect 2595),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/static.mp3,https://assets.mixkit.co/active_storage/sfx/1457/1457-preview.mp3 (Mixkit sound effect 1457),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/whoosh.mp3,https://assets.mixkit.co/active_storage/sfx/1492/1492-preview.mp3 (Mixkit sound effect 1492),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/whoosh2.mp3,https://assets.mixkit.co/active_storage/sfx/1490/1490-preview.mp3 (Mixkit sound effect 1490),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/clock_fast.mp3,https://assets.mixkit.co/active_storage/sfx/1063/1063-preview.mp3 (Mixkit sound effect 1063),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/ticktock.mp3,https://assets.mixkit.co/active_storage/sfx/1059/1059-preview.mp3 (Mixkit sound effect 1059),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/riser.mp3,https://assets.mixkit.co/active_storage/sfx/632/632-preview.mp3 (Mixkit sound effect 632),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/impact.mp3,https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3 (Mixkit sound effect 1143),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/heart_slow.mp3,https://assets.mixkit.co/active_storage/sfx/494/494-preview.mp3 (Mixkit sound effect 494),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/heart_fast.mp3,https://assets.mixkit.co/active_storage/sfx/493/493-preview.mp3 (Mixkit sound effect 493),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/office.mp3,https://assets.mixkit.co/active_storage/sfx/447/447-preview.mp3 (Mixkit sound effect 447),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/bass_pulse.mp3,https://assets.mixkit.co/active_storage/sfx/2298/2298-preview.mp3 (Mixkit sound effect 2298),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/swell.mp3,https://assets.mixkit.co/active_storage/sfx/786/786-preview.mp3 (Mixkit sound effect 786),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/suspense.mp3,https://assets.mixkit.co/active_storage/sfx/685/685-preview.mp3 (Mixkit sound effect 685),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/done_chime.mp3,https://assets.mixkit.co/active_storage/sfx/2870/2870-preview.mp3 (Mixkit sound effect 2870),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/identity.mp3,https://assets.mixkit.co/active_storage/sfx/2574/2574-preview.mp3 (Mixkit sound effect 2574),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/rewind.mp3,https://assets.mixkit.co/active_storage/sfx/1093/1093-preview.mp3 (Mixkit sound effect 1093),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/city_morning.mp3,https://assets.mixkit.co/active_storage/sfx/2930/2930-preview.mp3 (Mixkit sound effect 2930),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+sfx/birds_morning.mp3,https://assets.mixkit.co/active_storage/sfx/2472/2472-preview.mp3 (Mixkit sound effect 2472),Mixkit Free License,not required,see brief/sound_mix_v39.py cue list
+pptx_diff_new_elements.png (slide photo),in-product screenshot; the slide image is credited in-app to vecteezy.com (licence unknown),UNKNOWN — photo area is blurred in the film; only the product's diff badges are shown sharp,—,56.0–58.4
+pexels_sofa_night.mp4,https://www.pexels.com/video/side-view-of-woman-typing-on-laptop-6611955/,Pexels License,not required,hook laptop shots (V41)

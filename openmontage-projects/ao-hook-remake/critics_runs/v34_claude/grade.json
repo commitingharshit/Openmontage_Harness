@@ -1,0 +1,124 @@
+{
+ "critic": "grade",
+ "stage": "animatic",
+ "score": 45,
+ "dimension_scores": {
+  "look_family_unity": 45,
+  "skin_tones": 62,
+  "contrast_curve_blacks": 50,
+  "shot_to_shot_match": 35,
+  "finish": 40
+ },
+ "issues": [
+  {
+   "shot_id": "00:24.07-00:24.87",
+   "category": "exposure_jump",
+   "severity": 0.85,
+   "confidence": 0.9,
+   "evidence": "Measured luma 16.5 (night hands insert, contrast 9.7) → 187.8 (white chatbot) across one cut inside the same scene; repeated at 00:31.07→00:31.83 (33.4 → 148.7) and 00:22.97 (33.3) after 00:16.5 (95.0). Overall luma spread SD 57.6, sat spread SD 36.4.",
+   "suggested_action": "Grade the illustrated UI into the night world: pull UI whites to ~70% (luma ≤ 140), tint highlights cool, so stock and UI sit within ±30 luma."
+  },
+  {
+   "shot_id": "00:08-00:43",
+   "category": "raw_white_ui",
+   "severity": 0.8,
+   "confidence": 0.85,
+   "evidence": "Chatbot/Word/Excel look-alikes are neutral white (sat 12.9-23.1, luma ~200) with a hot centre glow, next to teal-shadowed stock (sat 63-118).",
+   "suggested_action": "Apply the night LUT to the UI layers too: lift blacks slightly, teal in shadows, gain down, add the same grain."
+  },
+  {
+   "shot_id": "01:11.4-02:16",
+   "category": "saturation_swings",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "Solution world saturation swings 12.7 (1:11.4 room thread) → 74-77 (1:18-1:31 split) → 14.2 (1:44) → 125.8 (1:55 evidence, flat saturated blue slab) → 90.6 (2:03) → 142.0 (2:11.6 candle room).",
+   "suggested_action": "Desaturate the blue slab at 1:55 (or remove it), and hold the product world at sat 35-60; pull the candle room to sat ~90."
+  },
+  {
+   "shot_id": "00:22.97 / 00:31.07",
+   "category": "milky_blacks",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "Head-in-hands plate: contrast 31, soft and lifted, with true-black frame edges around a milky grey-blue image.",
+   "suggested_action": "Set black point so the plate's shadows meet the frame's black; add contrast S-curve, keep skin at 55-65 IRE."
+  },
+  {
+   "shot_id": "00:11.1 / 00:52.6",
+   "category": "inconsistent_letterbox",
+   "severity": 0.45,
+   "confidence": 0.9,
+   "evidence": "Letterbox only on 6.4% of shots (96 rows at 0:11.1, 23 rows at 0:52.6), elsewhere full-frame 16:9.",
+   "suggested_action": "Either letterbox every live-action/in-world shot at 2.39:1 or none; never single shots."
+  },
+  {
+   "shot_id": "02:10.0-02:11.6",
+   "category": "skin_shift",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Mouse-click hand is pushed red-orange (sat 63, luma 18.8) and does not match the protagonist's teal-lit skin earlier.",
+   "suggested_action": "Pull hand to the skin line (hue ~20-25°), match warmth to the following candle shot."
+  },
+  {
+   "shot_id": "00:00-02:25",
+   "category": "finish_inconsistent",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "Grain/halation visible on stock only; UI, cards and end cards are clean digital.",
+   "suggested_action": "One finish pass over the whole timeline: fine grain, soft vignette, light halation on highlights."
+  },
+  {
+   "shot_id": "02:16.1-02:19",
+   "category": "world_shift",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "Sunrise (luma 64, sat 60) then cut to near-black text card (luma 23).",
+   "suggested_action": "Dissolve the tagline over the sunrise rather than cutting to black."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:24.07→00:24.87",
+   "evidence": "luma 16.5 → 187.8, sat 36.1 → 23.1 in the same night sequence"
+  },
+  {
+   "rule": "UI frames left raw and white beside graded film",
+   "shot_id": "00:05.07→00:08.0",
+   "evidence": "teal stock luma 46.4/sat 118.2 cuts to white chatbot luma 202.9/sat 12.9"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Run the night-world LUT over the illustrated UI (whites down to ~140 luma, teal shadows, grain) so the problem half stops jumping 16→190 luma across cuts.",
+ "grade_recipe": {
+  "night_problem_world": "stock + UI: eq=gamma=0.95:contrast=1.08:brightness=-0.03, colorbalance=rs=-0.05:bs=0.08:rh=0.04:bh=-0.02, UI layers curves=all='0/0.04 0.5/0.42 1/0.72' (whites to ~72%), hue=s=0.85, noise=alls=6:allf=t, vignette=PI/5",
+  "product_world": "neutral-cool dark: eq=contrast=1.05:saturation=0.9, colorbalance=bs=0.04:bm=0.02, cap solid UI fills at sat 60 (desaturate the 1:55 blue slab to s=0.4), same grain alls=5, vignette=PI/6",
+  "dawn_resolution": "warm: colorbalance=rh=0.06:gh=0.02:bs=0.04, eq=saturation=0.8 (pull 2:11.6 from sat 142 to ~95), halation via gblur on highlights 0.15 mix, grain alls=6"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:24.07",
+   "to": "00:24.87",
+   "issue": "luma 16.5 → 187.8"
+  },
+  {
+   "from": "00:31.07",
+   "to": "00:31.83",
+   "issue": "luma 33.4 → 148.7"
+  },
+  {
+   "from": "00:05.07",
+   "to": "00:08.0",
+   "issue": "luma 46→203, sat 118→13"
+  },
+  {
+   "from": "01:44.0",
+   "to": "01:55.0",
+   "issue": "sat 14.2 → 125.8 (blue slab)"
+  },
+  {
+   "from": "02:11.0",
+   "to": "02:11.6",
+   "issue": "luma 18.8 → 82, sat 63 → 142"
+  }
+ ]
+}

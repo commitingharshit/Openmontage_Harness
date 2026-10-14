@@ -1,0 +1,134 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 53,
+ "dimension_scores": {
+  "lighting_shape": 57,
+  "lens_depth": 55,
+  "composition": 50,
+  "camera_movement": 52,
+  "frame_design_ui": 50
+ },
+ "issues": [
+  {
+   "shot_id": "00:00-00:43",
+   "category": "flat_ui_lighting",
+   "severity": 0.8,
+   "confidence": 0.85,
+   "evidence": "Problem-half UI frames (f 0:07.5 chatbot, 0:12.5 Word look-alike, 0:25 'Generating presentation', 0:42.5 Send) are flat-lit white panels with a hot centre glow vignette (measured luma 187-203); no source, no falloff, nothing in the room. They read as screen captures, not shots, beside the teal night-office stock.",
+   "suggested_action": "Re-stage these beats as in-world shots: corner-pin the illustrated UI onto her laptop in the blue night office (as already done at 0:50 and 0:57.5), let the screen be the key on her face, and keep pure-UI frames under ~40% screen luma."
+  },
+  {
+   "shot_id": "01:55-02:03",
+   "category": "dead_half_frame",
+   "severity": 0.7,
+   "confidence": 0.9,
+   "evidence": "Evidence panel shots (f 1:55, 1:57.5, 2:00): left 55% of frame is an untextured flat blue slab, right column holds all information; same at 1:30-1:32.5 with a flat teal slab in the slide area and 1:07.5-1:10 teal slab.",
+   "suggested_action": "Reframe: crop to the evidence panel on an angled plane over a blurred set background, or fill the left with the actual memo/deck page the evidence cites; drift 3% push."
+  },
+  {
+   "shot_id": "00:22.5 / 00:30",
+   "category": "framing_error",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "Head-in-hands stock is soft (measured sharpness 7.6) and shows a black band along the top and a black pillar on frame-right (from x~875px): the plate is not filling the frame. The identical clip and framing recurs at 0:30.",
+   "suggested_action": "Scale the plate to fill (or replace with a higher-res take), and use a different size for the second beat (e.g. 85 mm CU on her eyes or an OTS on the screen)."
+  },
+  {
+   "shot_id": "02:10-02:16",
+   "category": "set_identity_flip",
+   "severity": 0.6,
+   "confidence": 0.75,
+   "evidence": "Resolution beat cuts to an unknown red-lit hand on a mouse (2:10) and a candle-lit warm room with an empty desk laptop (2:12.5); the protagonist and her blue night office never return, and the on-screen email now shows one attachment chip where the opening had three.",
+   "suggested_action": "Bookend in her space: same desk/lamp from 0:05, her hand on the trackpad, screen glow on her face, morning light creeping in; match the email to the opening (three attachments)."
+  },
+  {
+   "shot_id": "02:00-02:10",
+   "category": "static_centred_ui",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "File tree sits dead-centre in a blurred void for ~7 s (f 2:02.5-2:07.5) with captions; nothing changes in frame.",
+   "suggested_action": "Cut to 3 s, put the tree on the left third with a slow arc and a cursor selecting Board Memo Q3.docx."
+  },
+  {
+   "shot_id": "00:42.5",
+   "category": "composition",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Climactic Send hesitation is a cropped white email panel on black, cursor at Send, upper-right notification; no human in the frame at the film's emotional peak.",
+   "suggested_action": "OTS from behind her shoulder: Send button in the screen, her hand frozen on the trackpad, shallow focus, push-in."
+  },
+  {
+   "shot_id": "01:42.5-01:52.5",
+   "category": "repeated_setup",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "Room-thread framing at 1:50/1:52.5 is the same crop as 1:12.5-1:15 (doc page left, thread right).",
+   "suggested_action": "Vary the size: wide of the whole workspace for 'Your team', then a tight insert on the Accept button."
+  },
+  {
+   "shot_id": "02:20-02:25",
+   "category": "flat_end_card",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Tagline and end card are type on a near-black radial gradient.",
+   "suggested_action": "Put 'This time, you checked.' over the held sunrise/her face, then the logo."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "identity or set flips across a cut",
+   "shot_id": "02:10-02:16",
+   "evidence": "Protagonist's blue night office replaced by a candle-lit room and an unrelated red-lit hand; email attachments 3 → 1."
+  },
+  {
+   "rule": "unreadable composition",
+   "shot_id": "00:22.5 / 00:30",
+   "evidence": "Plate does not fill frame: visible black top band and right pillar around the subject."
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Re-stage the first-half UI beats (0:07-0:43) as screens inside her blue night office with the screen as motivated key light, instead of glowing white panels on black.",
+ "per_shot": [
+  {
+   "t": "00:07.5",
+   "grade_A_to_F": "D",
+   "fix": "corner-pin chatbot onto her laptop, OTS 50 mm f/2, screen glow as key on her face"
+  },
+  {
+   "t": "00:25",
+   "grade_A_to_F": "D",
+   "fix": "same: UI on the laptop in-scene, push-in 3%, kill the white vignette glow"
+  },
+  {
+   "t": "01:57.5",
+   "grade_A_to_F": "D",
+   "fix": "remove the flat blue slab; evidence panel on an angled plane over blurred set, drift"
+  },
+  {
+   "t": "00:22.5",
+   "grade_A_to_F": "D",
+   "fix": "fill the frame (no black edges), higher-res plate, 85 mm CU"
+  },
+  {
+   "t": "02:05",
+   "grade_A_to_F": "D",
+   "fix": "off-centre the tree, arc move, cursor action, cut to 3 s"
+  },
+  {
+   "t": "00:35",
+   "grade_A_to_F": "D",
+   "fix": "deck card on black → put it on her screen with her reaction in the foreground"
+  },
+  {
+   "t": "01:30",
+   "grade_A_to_F": "C",
+   "fix": "crop out the empty teal slide area; tighter on the changes panel with a push"
+  },
+  {
+   "t": "02:10",
+   "grade_A_to_F": "C",
+   "fix": "use her hand in her office lighting, matching the opening set"
+  }
+ ]
+}

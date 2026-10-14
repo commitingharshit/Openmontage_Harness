@@ -1,0 +1,106 @@
+{
+  "critic": "mix_master",
+  "stage": "animatic",
+  "score": 61,
+  "dimension_scores": {
+    "loudness_spec": 65,
+    "vo_vs_bed_balance": 55,
+    "tonal_balance": 35,
+    "dynamics_arc": 75,
+    "transitions_bridges": 45,
+    "stereo_image": 85
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–01:22",
+      "category": "true_peak_headroom",
+      "severity": 0.95,
+      "confidence": 1.0,
+      "evidence": "Measured true peak is 0.0 dBFS, exceeding both the −1.5 dBTP delivery target and −1.0 dBTP failure threshold; clipped_samples is 0.",
+      "suggested_action": "Remaster with an oversampled true-peak limiter at −1.5 dBTP, then measure the encoded delivery file."
+    },
+    {
+      "shot_id": "00:00–01:22",
+      "category": "bass_heavy_tonal_balance",
+      "severity": 0.85,
+      "confidence": 1.0,
+      "evidence": "Measured spectrum contains 52.6% at 60–250 Hz and 19.7% below 60 Hz, versus only 5.6% at 1–4 kHz.",
+      "suggested_action": "High-pass the brown-noise ambience at 100 Hz and music at 40 Hz; reduce the music's 120–220 Hz region by 3–5 dB, then remeasure."
+    },
+    {
+      "shot_id": "00:30–00:38",
+      "category": "vo_masking_risk",
+      "severity": 0.75,
+      "confidence": 0.7,
+      "evidence": "The confident cue starts at 30.7 beneath VO at 30.8 and 33.9; aggregate mid energy is 5.6%, and the introduction's transcription match is 0.84. No VO-over-music measurement or VO-window spectrum is supplied.",
+      "suggested_action": "Verify isolated VO-window balance, then duck music by approximately 6 dB with 25 ms attack and 300 ms release, targeting a measured median VO-over-music margin of at least 8 dB."
+    },
+    {
+      "shot_id": "00:26–00:28",
+      "category": "digital_dead_air",
+      "severity": 0.75,
+      "confidence": 1.0,
+      "evidence": "Digital-silence windows occur at 26.0, 26.5, 27.0 and 27.5; the 26-second dynamic section measures −180 dBFS during David's flagged-number beat.",
+      "suggested_action": "Keep the deliberate score stop, but carry filtered room tone through the pause with a 100–150 ms fade at the boundary."
+    },
+    {
+      "shot_id": "00:32–01:10",
+      "category": "flat_product_act_dynamics",
+      "severity": 0.55,
+      "confidence": 0.9,
+      "evidence": "Most supplied loudness values through the product act cluster around −15 to −17 dBFS under one continuous confident cue, despite distinct request, editing, review and acceptance beats.",
+      "suggested_action": "Lower the score 2–3 dB for the request and review passages, rise into acceptance, then taper toward the laptop-close scene while preserving the measured 9.1 LU LRA."
+    },
+    {
+      "shot_id": "00:28, 00:49, 01:13",
+      "category": "weak_audio_bridges",
+      "severity": 0.45,
+      "confidence": 0.8,
+      "evidence": "Only 45% of cuts coincide with sound events; cuts_without_sound_event_s includes 28.2, 48.7 and 73.2, corresponding to reaction and setting changes.",
+      "suggested_action": "Bridge the reaction cuts with short room-tone L-cuts and introduce the boardroom ambience approximately 300 ms before the 73.2-second cut; use 150–250 ms crossfades."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "True peak must not exceed −1.0 dBTP.",
+      "shot_id": "00:00–01:22",
+      "evidence": "The supplied true-peak measurement is 0.0 dBFS."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Remix the bass-heavy beds beneath the narrator, preserve room tone through the dramatic pause, and remaster to −14 LUFS with a −1.5 dBTP ceiling.",
+  "mix_recipe": {
+    "ducking": {
+      "music_reduction_db": 6,
+      "attack_ms": 25,
+      "release_ms": 300,
+      "target_vo_over_music_db_median": 8,
+      "verification": "Measure concurrent VO and music stems during each narrated passage; adjust ducking to meet the margin."
+    },
+    "music_eq": [
+      "High-pass at 40 Hz, 24 dB/octave.",
+      "Broad cut of 3–5 dB around 160 Hz, Q 0.8.",
+      "VO-keyed dynamic cut of 3 dB around 2.2 kHz, Q 0.7, covering approximately 1–4 kHz."
+    ],
+    "ambience": {
+      "high_pass_hz": 100,
+      "slope_db_per_octave": 24,
+      "pause": "Retain quiet filtered room tone at 26–28 seconds instead of digital silence."
+    },
+    "dynamics": {
+      "product_act": "Automate score down 2–3 dB during request and review, recovering into acceptance.",
+      "target_lra_lu": 9
+    },
+    "stereo": "Keep VO centered and retain the music's natural stereo field; correlation 0.909 needs only a mono-compatibility check.",
+    "limiter": {
+      "true_peak_ceiling_dbtp": -1.5,
+      "oversampling": "4× or higher",
+      "lookahead_ms": 5
+    },
+    "two_pass_loudnorm": {
+      "pass_1": "loudnorm=I=-14:TP=-1.5:LRA=9:print_format=json",
+      "pass_2": "loudnorm=I=-14:TP=-1.5:LRA=9:measured_I=<input_i>:measured_TP=<input_tp>:measured_LRA=<input_lra>:measured_thresh=<input_thresh>:offset=<target_offset>:linear=true:print_format=json",
+      "verification": "Populate pass two from a fresh analysis of the revised mix, then verify integrated loudness and true peak after delivery encoding."
+    }
+  }
+}

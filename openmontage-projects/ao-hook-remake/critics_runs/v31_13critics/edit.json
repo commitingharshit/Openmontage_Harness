@@ -1,0 +1,110 @@
+{
+  "critic": "edit_rhythm",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "rhythm_wave": 85,
+    "cut_motivation": 83,
+    "connectives": 82,
+    "economy": 73,
+    "transitions_quality": 79
+  },
+  "issues": [
+    {
+      "shot_id": "00:28.4–00:30.8",
+      "category": "message_hold",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "The partner's message, “Revenue is now €74.6m, not €71–73m. Fix slide 2.”, is specified as visible for 2.4 seconds. The measured shot beginning at 27.53 lasts only 2.47 seconds and also contains the preceding completion beat.",
+      "suggested_action": "Give the fully revealed notification at least 2.5 uninterrupted seconds before cutting to the corrective prompt; place the slide highlight within that hold."
+    },
+    {
+      "shot_id": "00:46–00:55",
+      "category": "consecutive_holds",
+      "severity": 0.64,
+      "confidence": 0.95,
+      "evidence": "The promise card occupies approximately 3.6 seconds, followed by a 5.4-second logo and screenshot reveal. The supplied frames show the promise, standalone logo, then the screenshot fan before the actionable prompt appears.",
+      "suggested_action": "Shorten the logo-only interval and bring the real workspace into the promise-to-logo transition, preserving the calm reset while reaching the prompt sooner."
+    },
+    {
+      "shot_id": "00:23–00:37.4",
+      "category": "redundant_reactions",
+      "severity": 0.55,
+      "confidence": 0.9,
+      "evidence": "The supplied frames repeat the protagonist with her hands at her temples. The measured sequence adds reaction or hand inserts at 22.97, 24.07, 31.07 and 36.77 seconds between successive UI failures.",
+      "suggested_action": "Remove one intermediate frustration reaction, preferably at 31.07, and sustain the regeneration screen through the waiting line; retain the reaction after slide 4 fails."
+    },
+    {
+      "shot_id": "00:37.4–00:41.6",
+      "category": "burst_cadence",
+      "severity": 0.47,
+      "confidence": 0.93,
+      "evidence": "The overload burst has measured shot lengths of 0.6, 1.7, 0.6 and 1.3 seconds beneath “Copy. Paste. Check. Repeat.” The 1.7-second second shot interrupts the acceleration between two short cuts.",
+      "suggested_action": "Redistribute the burst into three increasingly short action cuts followed by a longer window-pile hold on “Repeat.”, aligning each cut to its spoken verb."
+    },
+    {
+      "shot_id": "00:66.6–00:72.6",
+      "category": "proof_sequence_cadence",
+      "severity": 0.4,
+      "confidence": 0.85,
+      "evidence": "A single measured six-second shot carries the scrolling changes list and the “Slide 4. Caught.” callout. The supplied frames retain the same narrow list crop before and after the red ellipse appears.",
+      "suggested_action": "Let the list establish, then stop scrolling and punch into the Slide 4 row on “Even slide four.” Hold that resolved detail before returning to Send."
+    },
+    {
+      "shot_id": "00:72.6–00:76.1",
+      "category": "action_connective",
+      "severity": 0.34,
+      "confidence": 0.78,
+      "evidence": "The measured sequence separates the email, a one-second mouse insert, and the email result into three shots. The supplied email frame shows the cursor beside Send, making the physical click a useful connective if its timing matches.",
+      "suggested_action": "Verify the mouse-down frame against the 74.55-second click sound, then cut directly on mouse-down to the Send response with identical cursor placement."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A message must not be cut off before 2.5 seconds.",
+      "shot_id": "00:28.4–00:30.8",
+      "evidence": "The partner correction notification is explicitly held for 2.4 seconds, below the required minimum."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Compress the consecutive promise and logo holds at 46–55 seconds into one continuous reveal that reaches the real workspace sooner.",
+  "recut_plan": [
+    {
+      "timestamp": "00:28.4–00:30.8",
+      "edit": "Extend the fully revealed partner notification to at least 2.5 seconds, borrowing time from the preceding completion animation."
+    },
+    {
+      "timestamp": "00:31.07–00:31.83",
+      "edit": "Remove the intermediate reaction insert and continue the regeneration screen beneath “Wait again.”"
+    },
+    {
+      "timestamp": "00:37.4–00:41.6",
+      "edit": "Re-time Copy, Paste and Check as approximately 0.8, 0.65 and 0.5-second action cuts; use the remaining interval for the accumulating windows and Repeat impact."
+    },
+    {
+      "timestamp": "00:46–00:55",
+      "edit": "Keep the promise readable, overlap the logo reveal with the incoming real screenshots, and remove approximately two seconds of separate branding time."
+    },
+    {
+      "timestamp": "00:66.6–00:72.6",
+      "edit": "Establish the reviewed list, stop on Slide 4, then make one motivated punch-in at 69.6 seconds and hold the correction."
+    },
+    {
+      "timestamp": "00:74–00:75",
+      "edit": "Match the physical mouse-down to the UI response and carry the click sound across the cut."
+    }
+  ],
+  "target_shot_stats": {
+    "duration_s": 82,
+    "shots": 35,
+    "asl_s": 2.34,
+    "median_shot_s": 1.9,
+    "pct_shots_under_1s": 23,
+    "pct_shots_over_4s": 14,
+    "shortest_s": 0.5,
+    "longest_s": 5.5,
+    "urgency_burst_asl_s": 0.85,
+    "product_proof_asl_s": 3.2,
+    "minimum_message_hold_s": 2.5
+  }
+}

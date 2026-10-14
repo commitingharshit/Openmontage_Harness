@@ -1,0 +1,68 @@
+{
+  "critic": "craft",
+  "stage": "script",
+  "score": 77,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 84,
+    "subject_character_consistency": 78,
+    "motion_temporal_stability": 75,
+    "composition_camera_readability": 64,
+    "audio_editing": 84
+  },
+  "issues": [
+    {
+      "shot_id": "beat 13; vertical 15.5–18.5",
+      "category": "reading_density",
+      "severity": 0.85,
+      "confidence": 0.97,
+      "evidence": "The complete request beginning “Research says 20% DACH growth is too aggressive” contains 35 words. The primary gives it only 2.5 seconds fully visible; the vertical gives it 3 seconds. The primary also asks viewers to notice the folder tree while hearing a separate narration line.",
+      "suggested_action": "Keep the authentic request crop, but allocate at least 7 seconds to reading it across sequential crops; move the folder-tree view to a separate hold and shorten another sequence to preserve runtime."
+    },
+    {
+      "shot_id": "beats 4 and 11",
+      "category": "generated_action_overload",
+      "severity": 0.78,
+      "confidence": 1.0,
+      "evidence": "N2 specifies an exhale followed by “her right hand moves to the mouse.” N6 specifies “She blinks once, slowly, and her jaw tightens.” Both combine two actions in a five-second generation, then use only three seconds.",
+      "suggested_action": "Give N2 only the exhale and N6 only the jaw tightening; show the mouse movement in the following Remotion screen shot."
+    },
+    {
+      "shot_id": "vertical 26–30",
+      "category": "required_footer_omission",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The vertical end card lists only “Agentic Office · AI drives. You approve. · Request early access”; unlike beat 20, it does not include “Can make mistakes.” UI_REUSE.md explicitly says to keep that statement.",
+      "suggested_action": "Include “Can make mistakes. You review every change.” on the four-second vertical end card, fully present from its first frame and sized for phone reading."
+    },
+    {
+      "shot_id": "beat 8",
+      "category": "screen_action_overload",
+      "severity": 0.66,
+      "confidence": 0.93,
+      "evidence": "Three seconds contain dropping the downloaded file, opening her own slide, reading a pinned instruction, retyping the title, exposing a smaller stale text box, and hitting Send.",
+      "suggested_action": "Start with her own slide already open and the pinned instruction visible; complete the title edit within the first half-second, then hold the slide for 2.5 seconds. Move Send to a brief transition."
+    },
+    {
+      "shot_id": "optional P3 replacing beat 17",
+      "category": "replacement_timing",
+      "severity": 0.48,
+      "confidence": 0.95,
+      "evidence": "P3 specifies a ten-second hover, single Accept, “1 of 10” status, and Accept-all sequence, but would replace the opening of a four-second beat. No replacement edit timing is supplied.",
+      "suggested_action": "Keep the existing Accept-all fallback in the primary and vertical cuts. If P3 is used, assign it a longer director’s-cut slot with explicit holds for both status messages."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Each generated face shot must contain one emotion and one action.",
+      "shot_id": "beats 4 and 11",
+      "evidence": "N2 combines exhaling with moving a hand; N6 combines blinking with tightening the jaw."
+    },
+    {
+      "rule": "Keep “Can make mistakes” in the product presentation.",
+      "shot_id": "vertical 26–30",
+      "evidence": "The specified short end card omits the statement retained in the primary end card."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Reallocate screen time so the authentic request is readable across sequential crops and each generated reaction contains only one action; the existing real-footage fallbacks remain usable without the optional recordings."
+}

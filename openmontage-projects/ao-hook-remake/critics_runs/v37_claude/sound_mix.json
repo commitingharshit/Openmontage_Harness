@@ -1,0 +1,74 @@
+{
+ "critic": "sound_mix",
+ "stage": "animatic",
+ "score": 72,
+ "dimension_scores": {
+  "loudness_spec": 92,
+  "vo_vs_bed_balance": 58,
+  "tonal_balance": 55,
+  "dynamics_arc": 85,
+  "transitions_bridges": 58,
+  "stereo_image": 92
+ },
+ "issues": [
+  {
+   "shot_id": "01:58.8–01:59.5",
+   "category": "tag_masked",
+   "severity": 0.75,
+   "confidence": 0.75,
+   "evidence": "The end-card brand VO at 118.9 s is measured as \"see you next time.\" (match 0.32). The identity sting (118.8 s, 0.3, SFX bus, not ducked) and the music (115.6 s, 0.18) sit under it, and loudness reaches -13.3 dBFS at 118.5 s, the loudest moment in the last 10 s.",
+   "suggested_action": "Duck the music 8–10 dB under the tag, move the sting 0.7 s earlier, and key the SFX bus to the VO with 4 dB of reduction."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "vo_mid_energy_low",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "spectral mid 1–4 kHz is 13.1% against the 15% target, with VO almost continuous from 0.4 to 111 s. No vo_over_music_db_median is supplied. The VO gets +3 dB at 3 kHz, but the music has no EQ carve.",
+   "suggested_action": "Apply a dynamic EQ on the music bus at 2.5 kHz (Q 1, -4 dB when keyed by the VO) and raise the VO bus by 1 dB. Measure the VO-over-bed margin from the stems and target at least 8 dB."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "dark_tonal_balance",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "Spectral balance: sub 13.3%, low 37.6% (50.9% below 250 Hz), presence 3.1%, air 3.2%. The sound is dark and slightly heavy for phone speakers.",
+   "suggested_action": "High-pass the music and ambience at 40 Hz, use a -2 dB low shelf at 120 Hz on the beds, and add +1.5 dB at 5 kHz on the master. Re-check that presence reaches at least 5%."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "cuts_without_sound",
+   "severity": 0.4,
+   "confidence": 0.85,
+   "evidence": "cuts_on_sound_pct 31.1. 31 cuts without a sound event (for example 49.0, 78.0, 101.8, 106.3, 112.4, 115.3). The level drops to -68 dBFS at 115.0–115.5 s on the end-card cut.",
+   "suggested_action": "Bridge the act changes with J-cuts (bring in the next scene's bed 0.5 s early at 49.0, 106.3 and 115.3), and keep a floor at or above -45 dBFS through 115.3."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "ambience_pumping",
+   "severity": 0.35,
+   "confidence": 0.85,
+   "evidence": "The sidechain (threshold 0.03, ratio 5, attack 12 ms, release 350 ms) ducks the whole bed bus, including the office, city, birds and ticktock room tone.",
+   "suggested_action": "Split the beds into music (ducked) and ambience (not ducked)."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "master_chain",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "The master uses single-pass loudnorm I=-14.3 TP=-2 LRA=11, then +1.9 dB, then alimiter 0.79. The result is TP -1.6 dBTP, only 0.1 dB inside the -1.5 spec. The brief states \"-14.1 LUFS / -1.8 dBTP\", which does not match the measured -14.3 / -1.6.",
+   "suggested_action": "Use two-pass linear loudnorm (measure, then apply measured_I/TP/LRA/thresh with linear=true), set the limiter ceiling to -2.0 dBTP with true-peak oversampling, and correct the brief's numbers."
+  }
+ ],
+ "constraint_failures": [],
+ "mix_recipe": {
+  "ducking": "Music only: sidechaincompress keyed by VO, threshold 0.03, ratio 4, attack 15 ms, release 400 ms, about -8 dB under speech. Ambience: no ducking, or at most 2 dB. SFX: 3–4 dB duck under the brand tag only.",
+  "music_eq": "Dynamic EQ at 2.5 kHz, Q 1.0, -4 dB keyed by VO; high-pass at 40 Hz; low shelf -2 dB at 120 Hz.",
+  "vo_chain": "Keep the high-pass at 90 Hz, +3 dB at 3 kHz, -2 dB at 250 Hz; add a de-esser at 6.5 kHz (-3 dB); bus +1 dB.",
+  "ambience": "High-pass at 80 Hz, low-pass at 10 kHz on the office air, own bus at -45 dBFS, crossfades of at least 0.5 s on location changes.",
+  "master": "Two-pass loudnorm: pass 1 measures, pass 2 uses I=-14.0, TP=-2.0, LRA=9, linear=true with the measured values. Then alimiter with limit=-2.0 dBFS (0.794) and 4x oversampled true-peak check. Targets: integrated -14.0 ±0.5, TP at or below -1.8, LRA 6–9.",
+  "ending": "Music ends on its chord by 118.0, sting at 118.2, VO at 118.9 over air, fade to -65 by 121.4."
+ },
+ "revision_scope": "whole",
+ "top_revision": "Clear the brand tag (duck the music, move the sting earlier) and put a VO-keyed 2.5 kHz carve on the music so mid energy rises above 15%. Loudness and peak already pass spec."
+}

@@ -1,0 +1,79 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 73,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 80,
+    "subject_character_consistency": 65,
+    "motion_temporal_stability": 78,
+    "composition_camera_readability": 65,
+    "audio_editing": 75
+  },
+  "issues": [
+    {
+      "shot_id": "00:40–01:08",
+      "category": "source_resolution",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "The real Word diff and Changes-panel close-ups have visibly soft, enlarged lettering. At 00:55.5, even the highlighted TextBox 23 value is blurred; several neighboring descriptions are truncated.",
+      "suggested_action": "Recapture these views with the app zoom or panel width increased before recording, then use shallower crops that preserve crisp labels and complete before-and-after values."
+    },
+    {
+      "shot_id": "00:12.2 → 00:29.4 → 00:49.9",
+      "category": "character_continuity",
+      "severity": 0.74,
+      "confidence": 0.92,
+      "evidence": "The first Maya has a broader nose, fuller lips and a rounder face than the narrower-faced Maya in the hurt reaction and review shot. Clothing and ponytail match, but facial identity changes noticeably.",
+      "suggested_action": "Replace the initial face insert with a screen beat, or select an initial reaction take that matches the facial proportions of the later Maya shots."
+    },
+    {
+      "shot_id": "00:09.2–00:11.2",
+      "category": "message_hold_duration",
+      "severity": 0.7,
+      "confidence": 0.99,
+      "evidence": "The timeline introduces David's second message, 'Set your model to 8.5 and fix the memo and deck by 9,' 2.5 seconds into a 4.5-second shot, leaving only 2 seconds before the cut.",
+      "suggested_action": "Extend this shot by at least 0.5 seconds, plus its entrance animation time, so the second message remains fully readable for 2.5 seconds."
+    },
+    {
+      "shot_id": "00:19.7–00:22.2",
+      "category": "phone_readability",
+      "severity": 0.66,
+      "confidence": 0.97,
+      "evidence": "The side-by-side decks contain small bullets and chart labels inside two reduced slides. The entire comparison lasts 2.5 seconds; on a phone, 'Chart data (see model)' and the old outlook box become difficult to read.",
+      "suggested_action": "Show the original slide and downloaded slide consecutively at larger scale, holding each for 2.5 seconds and emphasizing only the missing chart and wrong template."
+    },
+    {
+      "shot_id": "00:30.7–00:33.7",
+      "category": "text_density",
+      "severity": 0.58,
+      "confidence": 0.96,
+      "evidence": "The introduction combines 'Introducing Diffs in Agentic Office' with a 23-word explanatory subtitle in a three-second card.",
+      "suggested_action": "Keep the introduction headline and shorten the subtitle to 'Every change, reviewable. Accept or reject each one.'"
+    },
+    {
+      "shot_id": "01:08.5–01:16.2",
+      "category": "finished_artifact_visibility",
+      "severity": 0.55,
+      "confidence": 0.98,
+      "evidence": "The corrected memo and table are visible, but the corrected slide containing David's circled box is absent. The subsequent relief and board-meeting shots show people rather than a readable finished deck.",
+      "suggested_action": "Once the pending recording exists, insert a crisp post-acceptance slide 2 view showing the exact box at €74.6m before the relief shot."
+    },
+    {
+      "shot_id": "00:48.7–00:51.2 and 01:13.2–01:16.2",
+      "category": "audio_join_verification",
+      "severity": 0.35,
+      "confidence": 0.45,
+      "evidence": "The edit timeline inserts separate music excerpts beneath the new review and David shots, then resumes the original composition. Supplied still frames cannot establish whether these joins sound continuous or whether generated facial motion remains stable.",
+      "suggested_action": "Verify these transitions in playback; align music phase and crossfade audible joins, and check eyes, hands and facial identity throughout each inserted clip before changing any assets."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:09.2–00:11.2",
+      "evidence": "David's second message enters at approximately 00:09.2 and the shot ends at 00:11.2, allowing only two seconds including its entrance."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "NOT BUY yet: a crisp real-app post-acceptance view showing David's exact slide 2 box corrected to €74.6m would flip me to BUY after a trial."
+}

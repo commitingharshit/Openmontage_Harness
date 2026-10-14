@@ -1,0 +1,14 @@
+{
+ "round": "d2",
+ "C": 81,
+ "S": 84,
+ "P": 85.25,
+ "Q": 83.8,
+ "constraint_failures": [
+  {
+   "rule": "Every message must be large enough to read on a phone.",
+   "shot_id": "00:24",
+   "evidence": "The comparison places essential old-outlook text and replacement bullets inside small half-frame slides; these are substantially smaller than the main captions."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 78,
+    "subject_character_consistency": 88,
+    "motion_temporal_stability": 85,
+    "composition_camera_readability": 70,
+    "audio_editing": 88
+  },
+  "issues": [
+    {
+      "shot_id": "00:35–00:37.5",
+      "category": "reading_time",
+      "severity": 0.8,
+      "confidence": 0.99,
+      "evidence": "The card combines 'Introducing Diffs in Agentic Office.' with the 22-word definition 'Every AI change across your model, memo and deck — shown in your own files, yours to accept or reject.' The timeline holds both for only 2.5 seconds.",
+      "suggested_action": "Keep the title and shorten the subtitle to 'Changes in your files. Accept or reject each one.' Hold the card for at least 3.5 seconds."
+    },
+    {
+      "shot_id": "00:38.7–01:06",
+      "category": "source_resolution",
+      "severity": 0.73,
+      "confidence": 0.98,
+      "evidence": "The request, tracked changes and Changes-panel frames are visibly softer than the crisp graphics. At 00:56, 'Slide 2 · TextBox 23' is enlarged but blurred; the crop fills the output from a source region only 290 pixels wide.",
+      "suggested_action": "Use wider crops of the existing recording with crisp editorial captions quoting the key change. Replace the extreme punch-ins with higher-resolution captures when available, preserving the real UI text."
+    },
+    {
+      "shot_id": "00:47",
+      "category": "crop_composition",
+      "severity": 0.62,
+      "confidence": 0.99,
+      "evidence": "The memo heading and changed paragraph extend beyond the right edge. The assumption replacement is cut off, and the table's FY26 outlook column is only partially visible.",
+      "suggested_action": "Reframe to contain the entire changed paragraph; use a separate table crop rather than showing a truncated paragraph and table together."
+    },
+    {
+      "shot_id": "00:24",
+      "category": "phone_readability",
+      "severity": 0.58,
+      "confidence": 0.98,
+      "evidence": "The side-by-side slides leave the chart labels, old outlook box and replacement bullets small within the frame. The two slides and bottom caption must all be scanned during a three-second hold.",
+      "suggested_action": "Show each slide sequentially at a larger size, holding each for 2.5 seconds, or enlarge the comparison and remove incidental chart labels."
+    },
+    {
+      "shot_id": "00:16",
+      "category": "graphic_layout",
+      "severity": 0.44,
+      "confidence": 0.99,
+      "evidence": "The spreadsheet summary row visually runs 'Summary' into 'FY26', while the highlighted 8.5 cell and surrounding rows have clear spacing.",
+      "suggested_action": "Give the summary label a wider cell or merge the first two cells into one clearly spaced 'FY26 summary' label."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message must be large enough to read on a phone.",
+      "shot_id": "00:24",
+      "evidence": "The comparison places essential old-outlook text and replacement bullets inside small half-frame slides; these are substantially smaller than the main captions."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Replace the extreme product-footage enlargements with wider, complete UI crops and crisp captions so the native changes remain legible without magnifying compression blur."
+}

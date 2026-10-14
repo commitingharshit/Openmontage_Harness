@@ -1,0 +1,68 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 86.7,
+  "dimension_scores": {
+    "pain_specificity_salience": 93,
+    "target_relatability": 90,
+    "emotional_authenticity_progression": 88,
+    "product_pain_fit": 89,
+    "trust_transformation_credibility": 75,
+    "purchase_motivation_cta": 70
+  },
+  "recognition": 9.3,
+  "resonance": 8.9,
+  "persuasion": 7.8,
+  "issues": [
+    {
+      "shot_id": "00:36.2",
+      "category": "feature_value_definition",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "The card says 'Introducing Diffs in Agentic Office.' It clearly announces something new, but does not explain Diffs. At 00:47 the first explanation is 'A diff, in her own memo.' As someone already using tracked changes, I initially wonder whether this is familiar review functionality with a new name.",
+      "suggested_action": "Keep the introduction and add 'Every change across your model, memo and deck, reviewable.' Carry that meaning into the first real Changes panel shot so Diffs immediately means review across the pack."
+    },
+    {
+      "shot_id": "00:38.7–00:47.0",
+      "category": "financial_scenario_credibility",
+      "severity": 0.54,
+      "confidence": 0.9,
+      "evidence": "David establishes his scenario as FY26 €74.6m with DACH Q4 €8.5m. Later the real request says 'Take DACH Q4 down to 8.5,' followed by a memo revision from €71–73m to €74.6m. I can accept a superseded outlook, but reducing an assumption while increasing the headline makes me pause over the financial logic.",
+      "suggested_action": "Add an editorial caption beside the request: 'Apply David’s revised scenario across the pack.' Preserve the real UI text and avoid implying that the DACH reduction alone produces the higher FY26 figure."
+    },
+    {
+      "shot_id": "00:56.0–01:09.0",
+      "category": "resolution_proof",
+      "severity": 0.5,
+      "confidence": 0.97,
+      "evidence": "The film identifies the exact missed object, 'Slide 2 · TextBox 23 · €71–73m → €74.6m,' then shows '10 of 10 changes accepted' and the corrected memo and table. It closes on Maya without showing the corrected slide that triggered David’s complaint.",
+      "suggested_action": "Capture a real post-accept view of slide 2 and show its corrected €74.6m text box before Maya closes the laptop, using part of the existing closing sequence."
+    },
+    {
+      "shot_id": "00:01.5–00:24.0",
+      "category": "comparison_relevance",
+      "severity": 0.42,
+      "confidence": 0.92,
+      "evidence": "'So you drive. The AI suggests.' accompanies a generic chat workflow, followed by a broken downloaded deck. Those failures are recognisable, but I already know AI tools can work inside Office applications; the comparison alone does not establish why I need another product.",
+      "suggested_action": "At the first grouped Changes panel, add 'One review across all three files.' Make the demonstrated coordination across the pack the reason to switch."
+    },
+    {
+      "shot_id": "01:13.0",
+      "category": "trial_motivation",
+      "severity": 0.36,
+      "confidence": 0.95,
+      "evidence": "The ending clearly names Diffs and says 'Every change across your model, memo and deck. Accept or reject each one.' The button only says 'Request early access'; it does not connect that action to trying the workflow I just recognised.",
+      "suggested_action": "Use one CTA: 'Request early access to try Diffs on your pack.' Keep the caution footer."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Define Diffs at its introduction as one review across the model, memo and deck, then show the corrected slide text box to substantiate that promise.",
+  "purchase_objections": [
+    "How is reviewing the whole pack different from the Office AI tools I already use?",
+    "The panel shows proposed edits, but how do I check whether an important reference was missed?",
+    "I would need to test formula, chart and template preservation on a representative pack.",
+    "Using confidential fund files would still require my firm’s approval; the film gives me no basis to resolve that."
+  ],
+  "would_try": "yes — The missed text box and grouped review make me want to test Diffs on a sanitised quarterly pack before relying on it for a live delivery."
+}

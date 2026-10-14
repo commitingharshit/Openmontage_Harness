@@ -1,0 +1,79 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 83,
+  "dimension_scores": {
+    "pain_specificity_salience": 91,
+    "target_relatability": 88,
+    "emotional_authenticity_progression": 80,
+    "product_pain_fit": 86,
+    "trust_transformation_credibility": 70,
+    "purchase_motivation_cta": 67
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7,
+  "hook_2s": "9/10: 'Model updated. Memo and deck still wrong.' immediately names the pack reconciliation problem I own, with recognisable files and conflicting numbers.",
+  "purchase_objections": [
+    "Does it find every dependent reference, or only the references prepared for this demo?",
+    "The exact slide box that caused the embarrassment is proposed for correction, but I never see it corrected in the accepted deck.",
+    "Why does reducing DACH Q4 revenue produce an FY26 number above the previous outlook range?",
+    "Will it preserve my actual templates, formulas and linked charts well enough to justify another tool alongside Copilot and ChatGPT for Word?",
+    "My firm would still need to approve how document data is handled before I could use this on a live pack."
+  ],
+  "would_try": "yes — The grouped changes across my existing model, memo and deck are specific enough to justify testing it on a sanitised quarterly pack.",
+  "buy_decision": "TRY_FIRST — I am not yet convinced enough to pay after a trial unless it demonstrates that it catches dependent references throughout my own pack.",
+  "issues": [
+    {
+      "shot_id": "01:02–01:05",
+      "category": "missing_resolution_proof",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "At 00:26.5 David circles the stale €71–73m box; at 00:50.5 its TextBox 23 change is proposed. The accepted result at 01:03.5 shows only the memo and table before Maya closes her laptop.",
+      "suggested_action": "Add the pending real post-acceptance slide 2 recording showing that exact box at €74.6m, alongside the updated title, before Maya's relief."
+    },
+    {
+      "shot_id": "00:08–00:15 / 00:32–00:42",
+      "category": "financial_logic_uncertainty",
+      "severity": 0.72,
+      "confidence": 0.94,
+      "evidence": "David's message states FY26 €74.6m with DACH Q4 €8.5m; the request later says 'Take DACH Q4 down to 8.5', and the real Excel diff shows 8.9 → 8.5, while the memo outlook rises from €71–73m to €74.6m.",
+      "suggested_action": "Establish that €71–73m is stale published guidance and €74.6m is the recalculated current model output; verify that relationship against the actual workbook before adding the explanation."
+    },
+    {
+      "shot_id": "00:46–01:00",
+      "category": "proposal_count_vs_coverage",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "The Changes panel shows ten proposed changes, including 'Chart data, slide 4 · FY26 72 → 74.6', then '10 of 10 changes accepted'. That proves acceptance of the listed changes, but does not show whether other stale references remain.",
+      "suggested_action": "Use the real footage to connect the updated cell, memo paragraph and table, flagged slide box and dependent chart as a readable review sequence; avoid treating the acceptance count as proof that the whole pack is correct."
+    },
+    {
+      "shot_id": "00:18–00:21",
+      "category": "skeptical_user_comparison",
+      "severity": 0.51,
+      "confidence": 0.92,
+      "evidence": "The Word paste contains literal '**€74.6m**', and 'The chat's · slide 2' is a default slide with 'Click to add title'. As a daily AI user aware of Office integrations, I recognise these failures but could dismiss them as an avoidable workflow.",
+      "suggested_action": "Shorten the generic formatting failure and give its time to the surviving stale table value and slide box, making cross-file reconciliation the dominant reason to switch."
+    },
+    {
+      "shot_id": "01:05–01:08",
+      "category": "premature_emotional_closure",
+      "severity": 0.44,
+      "confidence": 0.91,
+      "evidence": "Maya closes her laptop after the accepted memo appears, while the deck that David flagged has not been shown corrected.",
+      "suggested_action": "Place her quiet relief after the accepted deck proof so the emotional release follows the specific risk being resolved."
+    },
+    {
+      "shot_id": "01:08–01:14",
+      "category": "trial_motivation",
+      "severity": 0.38,
+      "confidence": 0.95,
+      "evidence": "The final card says 'Request early access' and 'Every change across your model, memo and deck. Accept or reject each one.' It offers access without naming the practical test I should bring.",
+      "suggested_action": "Keep the single CTA and replace the supporting sentence with an invitation to try reviewing changes across an existing model, memo and deck."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Show the accepted correction in the exact slide box David flagged before Maya closes her laptop, completing the proof that Agentic Office resolved the pack inconsistency."
+}

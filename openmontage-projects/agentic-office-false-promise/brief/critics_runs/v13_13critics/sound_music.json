@@ -1,0 +1,106 @@
+{
+  "critic": "sound_music",
+  "stage": "animatic",
+  "score": 68.6,
+  "dimension_scores": {
+    "arc_serves_story": 74,
+    "hit_points": 44,
+    "genre_and_emotion_fit": 76,
+    "motif": 78,
+    "ending": 72
+  },
+  "issues": [
+    {
+      "shot_id": "00:13.7–00:76.3",
+      "category": "weak_musical_synchronization",
+      "severity": 0.75,
+      "confidence": 0.98,
+      "evidence": "Measured cuts_on_sound_pct is 40.0. Cuts without detected events include 17.4, 19.6, 22.8, 42.8, 67.3, 70.3, 73.3 and 76.3 seconds. The reveal at 31.3 and acceptance around 64.6 do have nearby onsets, but the broader edit lacks consistent measured synchronization. These measurements cover all sound layers, so musical synchronization alone is unproven.",
+      "suggested_action": "Re-edit the existing cues so phrase changes or restrained musical accents land on the grind transitions, corrected memo at 67.3 and brand card at 76.3; verify against music-stem onsets rather than adding more whooshes."
+    },
+    {
+      "shot_id": "00:51.3–01:07.3",
+      "category": "flat_proof_to_accept_arc",
+      "severity": 0.58,
+      "confidence": 0.88,
+      "evidence": "The measured half-second curve stays approximately −17 to −18.5 dBFS through much of the review sequence. dynamic_sections reports no new section around acceptance. The cue B envelope remains at 0.3 until approximately 64.3, then rises to 0.4 around 65.8; acceptance chimes at 64.75.",
+      "suggested_action": "Thin cue B during review, begin a short harmonic build before the acceptance click, and land its resolution with the accepted state and chime at 64.7–64.75."
+    },
+    {
+      "shot_id": "00:28.8–00:31.3",
+      "category": "unverified_silence_contrast",
+      "severity": 0.55,
+      "confidence": 0.76,
+      "evidence": "Cue A ends at 28.8, supporting the intended stop, but measured quiet_windows_s is empty. The mix curve reaches −21.1 dBFS around 30.0, versus −31.0 around 29.5. The timeline also places a riser before the reveal, so the entire face hold is not established as room tone only.",
+      "suggested_action": "Verify music and transition tails separately; preserve an uninterrupted room-tone-only hold from 28.8 to about 30.6, then confine the riser to the final 0.7 seconds before 31.3."
+    },
+    {
+      "shot_id": "01:16.3–01:22.3",
+      "category": "ending_resolution_unverified",
+      "severity": 0.4,
+      "confidence": 0.7,
+      "evidence": "The acceptance chime recurs on the end card at 76.3, giving useful motif continuity. However, 76.3 appears in cuts_without_sound_event_s, and cue B uses a fade to zero at 82.3. The measured dynamic change at 80 seconds establishes a fade, not a confirmed musical cadence under the brand line.",
+      "suggested_action": "Verify the existing cue's cadence against the final VO; align a resolved chord and the recurring chime with the brand phrase, then leave the remaining CTA hold on room tone."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Re-cut the existing score around the review-to-acceptance sequence so restrained review tension resolves precisely on the accepted state and carries a recognizable cadence into the brand line.",
+  "cue_sheet": [
+    {
+      "act": "Hook and setup",
+      "time": "00:00–00:06.7",
+      "feel": "Exposed, uneasy late-night concentration",
+      "tempo_bpm": 0,
+      "instrumentation": "Room tone; no score",
+      "hits": "Let the opening contradiction and VO establish the problem before music enters."
+    },
+    {
+      "act": "Grind and escalation",
+      "time": "00:06.7–00:28.8",
+      "feel": "Controlled tension becoming repetitive pressure",
+      "tempo_bpm": 112,
+      "instrumentation": "Muted synth ostinato, restrained bass pulse, dry percussion",
+      "hits": "Enter on David's texts; add rhythmic density at 13.7; accent selected grind cuts and the 25.3 mismatch; stop at 28.8."
+    },
+    {
+      "act": "Silence and reveal",
+      "time": "00:28.8–00:34.3",
+      "feel": "Suspension followed by release",
+      "tempo_bpm": 0,
+      "instrumentation": "Room tone, brief terminal riser, resolved reveal chord",
+      "hits": "Hold room tone through approximately 30.6; riser into 31.3; introduce the confident cue on the reveal."
+    },
+    {
+      "act": "Proof and approval",
+      "time": "00:34.3–01:07.3",
+      "feel": "Precision, control and earned confidence",
+      "tempo_bpm": 100,
+      "instrumentation": "Clean synth pulse, light piano, warm sustained harmony; acceptance chime integrated into the harmony",
+      "hits": "Light phrase changes on the file demonstrations; reduce density during 51.3–63.3 review; resolve on the accepted state at 64.7–64.75."
+    },
+    {
+      "act": "Resolution and brand",
+      "time": "01:07.3–01:22.3",
+      "feel": "Calm completion",
+      "tempo_bpm": 100,
+      "instrumentation": "Reduced percussion, warm chord sustain, recurring acceptance chime",
+      "hits": "Release at the corrected memo at 67.3; soften through dawn and the meeting; repeat the motif on the end card and cadence with the final brand phrase."
+    }
+  ],
+  "free_source_suggestions": [
+    {
+      "source": "Mixkit",
+      "search_terms": ["minimal suspense pulse", "restrained technology ambient", "confident cinematic resolution"]
+    },
+    {
+      "source": "Pixabay",
+      "search_terms": ["dark minimal synth ostinato", "precision documentary underscore", "warm piano electronic resolution"]
+    },
+    {
+      "source": "YouTube Audio Library",
+      "search_terms": ["ambient tense electronic", "minimal dramatic pulse", "calm inspirational electronic"]
+    }
+  ],
+  "assessment_limits": "Frames were found under ../artifacts/frames_v13 and sampled. Assessment uses audio_v13.json, measure_v13.json, the supplied timeline and composition timing; audio was not heard. No local sound_SHARED.md was found, so the supplied sound rules were used. Genre fit is provisional, and no music-through-silence constraint failure is established by the full-mix measurements."
+}

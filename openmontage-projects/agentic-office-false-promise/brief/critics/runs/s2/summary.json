@@ -1,0 +1,39 @@
+{
+ "round": "s2",
+ "C": 77,
+ "S": 83,
+ "P": 85.05,
+ "Q": 82.4,
+ "constraint_failures": [
+  {
+   "rule": "Each generated face shot must contain one emotion and one action.",
+   "shot_id": "beats 4 and 11",
+   "evidence": "N2 combines exhaling with moving a hand; N6 combines blinking with tightening the jaw."
+  },
+  {
+   "rule": "Keep \u201cCan make mistakes\u201d in the product presentation.",
+   "shot_id": "vertical 26\u201330",
+   "evidence": "The specified short end card omits the statement retained in the primary end card."
+  },
+  {
+   "rule": "Show the workflow at the pace a real person would read it, with messages readable on a phone.",
+   "shot_id": "beat 13; 30 s cut 15.5\u201318.5",
+   "evidence": "The primary gives the complete 35-word request 2.5 seconds; the vertical cut gives the same complete request three seconds as a static crop. Meeting the minimum hold does not make this much text readable on first viewing."
+  },
+  {
+   "rule": "Keep 'Can make mistakes' in the product presentation.",
+   "shot_id": "30 s cut 26\u201330",
+   "evidence": "The dedicated short end card specifies only 'Agentic Office \u00b7 AI drives. You approve. \u00b7 Request early access'; it omits the caution explicitly included on the primary end card and required by UI_REUSE.md."
+  },
+  {
+   "rule": "Show the workflow at the pace a real person would read it.",
+   "shot_id": "beat 13 and 30 s cut 15.5\u201318.5",
+   "evidence": "The complete 33-word request is allotted 2.5 seconds in the primary and three seconds in the short. Meeting the minimum hold does not make this message readable."
+  },
+  {
+   "rule": "UI_REUSE.md: Keep \u201cCan make mistakes\u201d.",
+   "shot_id": "30 s cut 26\u201330",
+   "evidence": "The specified short end card omits the caveat that is present in the primary."
+  }
+ ]
+}

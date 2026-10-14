@@ -1,0 +1,28 @@
+hook 79 · story 79 · cinematography 68 · grade 63 · edit 81 · realfilm 60 · sound_dialogue 70 · sound_music 78 · sound_sfx 61 · sound_ambience 77 · sound_mix 73 · customer 79 · claims 70
+→ Q 74.8 · Visual 68.0 · Sound 71.8 · real_film_index 54.71 · constraint failures 20
+hook_2s 8 · scroll-away 35s · R/R/P 9/8/7
+BUY: TRY_FIRST — a successful trial on one representative pack, with independently checked numbers and preserved formatting, would flip me to BUY.
+GATE: REVISE
+  CF[story] One task, one number, start to finish: DACH Q4 to 8.5 → FY26 | 00:08–00:30 | The illustrative workflow requests a generic “new FY26 forecast” and later treats €74.6m as a new ch
+  CF[story] Every message holds for at least 2.5 seconds. | 00:28.4–00:30.8 | The supplied timeline explicitly holds “Revenue is now €74.6m, not €71–73m. Fix slide 2.” for 2.4 se
+  CF[grade] No hard grade jump inside one scene. | 00:05.07 → 00:08.00 | Within the night workflow, the office-to-chat cut changes mean luma by +156.5 and saturation by -105
+  CF[edit] A message must not be cut off before 2.5 seconds. | 00:28.4–00:30.8 | The partner correction notification is explicitly held for 2.4 seconds, below the required minimum.
+  CF[realfilm] real_film_index must be at least 60 | whole | The 34 supplied candidate frames average 5.4706 out of 10, yielding a real_film_index of 54.71.
+  CF[realfilm] No UI frame that looks like a screenshot pasted on black | 00:49.6–00:55 / f_22 | The three product screenshots appear as detached rectangles against a near-black field; the describe
+  CF[sound_dialogue] Brand or product name must not be misheard. | 00:49.9 | Expected 'Agentic Office'; measured heard 'a genteck office'.
+  CF[sound_dialogue] Brand or product name must not be misheard. | 01:22.6 | Expected 'Agentic Office'; measured heard 'genteck office'.
+  CF[sound_dialogue] Every VO line must have match >= 0.85. | 00:11.0 | Measured match 0.78.
+  CF[sound_dialogue] Every VO line must have match >= 0.85. | 00:15.55 | Measured match 0.83.
+  [hook] Keep the imminent-send mismatch, but add a brief real Slide 4 diff before the rewind so the opening promises visible, human-controlled review as well as danger.
+  [story] Make DACH Q4 8.9→8.5 the initiating request in both halves, and show the manual transfer that leaves slide 4 stale before the real product exposes that exact reference for approval.
+  [cinematography] Give the screen sequences a consistent monitor-space treatment with motivated light, controlled white luminance, and deliberate wide-to-detail framing.
+  [grade] Match UI paper whites and live-action midtones within each world before applying a shared finish, starting with the office-to-chat cut at eight seconds.
+  [edit] Compress the consecutive promise and logo holds at 46–55 seconds into one continuous reveal that reaches the real workspace sooner.
+  [realfilm] Replace the recurring floating-window presentation with a coherent, high-resolution screen treatment that integrates the real product captures into the office film.
+  [sound_dialogue] Re-edit the VO with fewer words and 2.6–3.0 words/s delivery, correcting both brand pronunciations and verifying every failed line match.
+  [sound_music] Re-edit the existing score around a few decisive picture anchors, especially the 49.6-second product reveal, so the musical release lands with the visual release.
+  [sound_sfx] Complete a frame-synchronized spotting pass that covers the urgent cuts and physical contacts while preserving the room-tone pause and distinctive Accept sound.
+  [sound_ambience] Extend a quiet ambience or identity-tone tail through the final CTA to eliminate the measured digital-silence failure.
+  [sound_mix] Remaster with a −1.5 dBTP ceiling and stronger VO-led ducking, preserving the existing act contrasts.
+  [customer] Make the real demo visibly connect the DACH edit to the resulting €74.6m total and the scoped review of 10 proposed changes across three files.
+  [claims] Replace the simulated Accept interaction with authentic recorded acceptance so the central review promise is demonstrated truthfully.

@@ -1,0 +1,36 @@
+{
+ "critic": "customer",
+ "stage": "animatic",
+ "score": 67,
+ "dimension_scores": {
+  "pain_specificity": 82,
+  "relatability": 70,
+  "emotional_authenticity": 52,
+  "product_pain_fit": 76,
+  "trust_credibility": 60,
+  "purchase_motivation": 55
+ },
+ "recognition": 8,
+ "resonance": 6,
+ "persuasion": 6,
+ "purchase_objections": [
+  "In the 'checked' memo shots the Key figures table still reads FY26 outlook €71–73m, the exact kind of leftover I'd be fired for.",
+  "'Cloud AI may process document content' and 'Can make mistakes' on screen: for board and client material I need to know which cloud, what retention, and whether it can be disabled.",
+  "Is this replacing Excel/Word/PowerPoint? Do my files round-trip back to real Office with formulas, styles and our template intact?",
+  "Real recording is labelled '8x speed'; I can't tell how long the actual run took for 10 edits.",
+  "The chatbot failure is a strawman: nobody on my team regenerates a 12-slide deck in a chat to change one number; we'd fix it by hand, which is the real competitor.",
+  "No price and 'Request early access' only."
+ ],
+ "would_try": "maybe — the per-element change list (Slide 4 title, TextBox 23, Revenue!E6 8.9→8.5) is the first AI-office demo that looks auditable, but I'd only try it on a copy of a real board pack.",
+ "buy_decision": "TRY_FIRST — flips to BUY if I see it open my existing Office files from our drive and hand them back to Excel/PowerPoint with formulas and template intact, plus a clear statement of where document content is processed.",
+ "issues": [
+  {"shot_id": "01:12–01:25 (f_30–f_33)", "category": "credibility_leftover_number", "severity": 0.6, "confidence": 0.75, "evidence": "Paragraph shows '€71–73m→€74.6m' but Table 1 FY26 outlook still reads '€71–73m' while the super says 'Change what matters. Keep everything else.'", "suggested_action": "Show the table cell's tracked change as well (it is in the changes list) or crop to the paragraph."},
+  {"shot_id": "00:23–00:46", "category": "melodrama", "severity": 0.4, "confidence": 0.65, "evidence": "Head in hands (f_10, f_13), scratching head, head dropping onto the desk, 'Done. AND AGAIN.' shaking: stock-office acting reads as an ad, not my morning.", "suggested_action": "Keep one human reaction (the hesitation over Send) and drop the head-drop and head-scratch inserts."},
+  {"shot_id": "01:42–01:46 (f_42)", "category": "data_governance_unanswered", "severity": 0.45, "confidence": 0.7, "evidence": "'Your files, stored on your device.' next to 'Cloud AI may process document content.' raises the question without answering it.", "suggested_action": "Add one concrete line on processing (provider choice / no training on content / enterprise option) if true and approved; otherwise drop the local-storage claim to avoid a half-answer."},
+  {"shot_id": "01:39–01:42 (f_40–f_41)", "category": "continuity_trust", "severity": 0.3, "confidence": 0.65, "evidence": "After '10 of 10 changes accepted', the Room shot shows the memo back at '€71–73m' with 'not signed in' collaborators.", "suggested_action": "Use a Room capture after the accepted state, or a different file."},
+  {"shot_id": "00:08–00:35", "category": "strawman_competitor", "severity": 0.3, "confidence": 0.55, "evidence": "'Regenerating all 12 slides… about 5 min left' for one number is not how I or Copilot users work today.", "suggested_action": "Make the failure the realistic one: the AI edits slide 2 but silently misses slide 4 and the chart, and the 'Done' hides it."}
+ ],
+ "constraint_failures": [],
+ "revision_scope": "product_demo",
+ "top_revision": "Replace the memo shots so no €71–73m remains visible after the change and add one honest beat showing the edited files opening in normal Excel/PowerPoint, because a leftover number and an unclear round-trip are what keep me at TRY_FIRST."
+}

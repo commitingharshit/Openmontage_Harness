@@ -1,0 +1,3929 @@
+Reading additional input from stdin...
+OpenAI Codex v0.162.1
+--------
+workdir: /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+model: gpt-6.1-sol
+provider: openai
+approval: never
+sandbox: read-only
+reasoning effort: medium
+reasoning summaries: none
+session id: 01a13560-6d73-7fb1-bcd5-f945a564bf36
+--------
+user
+# Shared contract (every critic)
+You are ONE of five independent critics judging a cinematic ad. The others judge other things: stay strictly in your lane and score ONLY your dimensions.
+Inputs are in the project's brief folder (your working directory):
+- WHAT_WE_WANT.md (brief, audience, approved claims, rules)
+- RESEARCH_PAIN.md (real customer complaints), if present
+- persona/context files named in the brief
+- the CANDIDATE named in the task: a script (stage "script"), or rendered frames whose filenames are timestamps plus an audio timeline (stage "animatic")
+Judge only what a viewer would actually see and hear, never what the writer intended.
+Return ONLY a JSON object:
+{"critic":"<name>","stage":"<script|animatic>","score":0-100,"dimension_scores":{"<dim>":0-100},
+ "issues":[{"shot_id":"block N or mm:ss","category":"snake_case","severity":0-1,"confidence":0-1,"evidence":"what you saw (quote it)","suggested_action":"a concrete change to that block"}],
+ "constraint_failures":[{"rule":"...","shot_id":"...","evidence":"..."}],
+ "revision_scope":"none|single_shot|shot_sequence|opening|product_demo|ending|whole",
+ "top_revision":"the single highest-impact change, in one sentence"}
+List at most 8 issues, highest severity first. Every issue needs evidence plus a concrete action. Low confidence means "verify", not "regenerate".
+
+# CRITIC: CUSTOMER / BUY (psychology and purchase). Read SHARED.md.
+Answer AS the target customer described in the brief or personas: skeptical, busy, already using competitors. Don't reward melodrama; subtle and true beats loud.
+Evaluate three separate things: RECOGNITION (is it my problem?), RESONANCE (do I care?) and PERSUASION (is this a credible solution I'd pay for?).
+Dimensions (weights): pain_specificity 20 · relatability 20 · emotional_authenticity 15 · product_pain_fit 20 · trust_credibility 15 · purchase_motivation 10.
+Also return: "recognition","resonance","persuasion" (0-10 each), "purchase_objections":[...], "would_try":"yes|maybe|no + why", and
+"buy_decision":"BUY|TRY_FIRST|NOT_BUY + the single thing that would flip it to BUY". Be honest; a NOT_BUY with a precise reason is more useful than politeness.
+
+STAGE: animatic. TASK: Evaluate this CANDIDATE: PRODUCT: Agentic Office, an agentic workspace where Word, Excel and PowerPoint files live together. An assistant drafts edits across files as tracked changes/diffs; a person accepts or rejects each one. Audience: consultants, finance teams, lawyers. Approved truths: one request updated model (Revenue!E6 8.9→8.5), memo (€71–73m→€74.6m) and deck (Slide 4 title, Slide 2 TextBox 23 etc.); 10 changes across 3 files, all reviewable; real recording sped up. Do NOT claim time savings or unattended approval.
+FILM: "Done." V31, 85 s, 16:9, master -14 LUFS, VO-led ducking. Fictional illustration UIs (unbranded chatbot, Word/Excel/PowerPoint/PDF look-alikes, email client) in the first half; REAL product screenshots/recording in the second half (labelled). Real stock footage (Mixkit/Pexels): one protagonist (Black woman, striped shirt, blue night office) in 2 clips, plus hands/phone/mouse/sunrise inserts. Kokoro TTS draft narrator (af_heart) + one British male voice reading the partner's email.
+SHOTS (s): 0–4.5 FIRST FRAME: cards "FY26_Model.xlsx €74.6m" ≠ "Board_Presentation.pptx Slide 4 €71–73m" over the email to the partner with 3 attachments (Board_Memo_Q3.docx, FY26_Model.xlsx, Board_Presentation.pptx), cursor on Send, red clock 8:57 AM · BOARD AT 9:00 · 4.5–5 rewind glitch · 5–8 protagonist at desk (real), super "45 MINUTES EARLIER" · 8–11 chatbot: "Hi, how can I help?", prompt typed "Update the board memo with the new FY26 forecast", reply streams · 11–12.4 giant "✓ Done." (#1) · 12.4–15.6 Word-like window opens Board_Memo_Q3.docx, glitch on "wrecked", flags Template gone / Numbering wrong / Table shifted · 15.6–16.5 real hands typing insert · 16.5–23 fixing by hand; partner email notification enlarges and is read aloud · 23–24 protagonist head in hands (real) · 24–27.5 asks chatbot "Now update the board deck to match the memo" (night hands insert); "Generating presentation…" slide thumbnails fill · 27.5–28.3 "✓ Done. AGAIN." (#2) · 28.4–30.8 partner: "Revenue is now €74.6m, not €71–73m. Fix slide 2." stays on screen 2.4 s, ring on slide 2 · 30–35 re-prompt; "Regenerating all 12 slides… about 5 min left" progress crawl; red clock time-lapse 8:41→8:46; super "Five minutes. For one number."; insert: she scratches her head (real) · 34.5–35.2 "✓ Done. AND AGAIN." (#3, ghosted, shaking) · 35–37.4 deck regenerated: slide 2 ✓ but slide 4 reverted to €71–73m, ringed red; her frustrated reaction (real) · 37.4–41.6 whip pans across Word/Excel/PowerPoint/PDF/chat with giant words Copy. Paste. Check. Repeat.; windows pile up, notifications stack, clock 8:52→8:59 · 41.6–46 back at the email; notification "Are these the final files? The client is waiting." held 2.7 s; cursor drifts onto Send and STOPS; total silence; 44.55 insert: she drops her head onto the desk (real) · 46–49.6 black: "See exactly what changed. Decide what stays." · 49.6–55 logo reveal (real UI screenshots shown inside a blurred real office background, not on black), real Word/Excel/PowerPoint screenshots fan in and merge · 55–60 "It finds." real prompt typed in the real app, framed tight on the prompt text (no model picker in frame) ("Take DACH Q4 down to 8.5… make the memo and the deck match… Show me the diffs"), agent working, sped up · 60–64.4 "It fixes." real Excel bar "Revenue!E6 8.9 → 8.5 Reject/Accept", real memo tracked change €71–73m→€74.6m · 64.4–72.6 "You decide." cursor to Accept on the real bar; real "All changes reviewed · 10 of 10" list scrolls; red ring on "Slide 4 title €71–73m → €74.6m"; callout "The slide that slipped. Slide 4. Caught." · 72.6–76 back at the same email; real hand clicks mouse; "✓ Sent · Memo · model · deck · every change reviewed" (no clock) · 76–79 real sunrise through office window (warm grade, first warm shot) · 79–85 "AI said it was done." struck through → "This time, you checked." → logo, "See exactly what changed. Decide what stays.", "Request early access".
+AUDIO TIMELINE: cold open: buzz, bass pulse, fast heartbeat · rewind sfx · 5–17 light lounge bed (Mixkit "Hazy After Hours", licensed) + office room tone, typing, send pop · DONE CHIME (same sound) at 11.05 (soft), 27.5 (louder), 34.45 (loudest, echoed ×4) · glitch+static on "wrecked" · phone buzz on email, jazz dies, suspense bed from 17.3 · bass pulse from 28.3, slow heartbeat 30.8–35, clock ticking time-lapse, swell to Done #3 · whooshes per whip, impact on "Repeat.", riser into overload · 41.6 heartbeat only; 43.6 everything cuts to room tone (silence) under "The worst part…" · 46.2 a new soft identity tone · 49.6 calm confident electronic bed (Mixkit "Digital Clouds") · one UI tick per visible edit, soft pop on Accept · 72.6 music dips, heartbeat, mouse click at 74.55, identity tone on "Sent" · music returns under dawn with morning city ambience and birds, then end card. All music/SFX Mixkit free licence, footage Mixkit/Pexels licence, per-file provenance logged.
+
+VO LINES (exact): 0.4s Nine A.M. Board meeting. And the deck doesn't match the model. | 6.0s You ask a chatbot to update the board memo. | 11.0s It says it's done. | 12.5s Then you open the file... and the formatting's wrecked. | 15.55s So you fix it by hand. Then, an email. | 18.15s Please update the model and the board deck to match, before the meeting. | 24.0s So you ask it for the deck... and it builds one, in the chat. | 28.35s Then, one number changes. | 30.2s Prompt again. Wait again. Five minutes... for one number. | 34.6s Done. Except now... slide four changed. | 37.6s Five tabs. Copy. Paste. Check. Repeat. | 42.3s The worst part? You don't even know what's wrong anymore. | 46.3s See exactly what changed. Decide what stays. | 49.9s Meet Agentic Office. Your Word, Excel and PowerPoint, in one workspace. | 55.1s Tell it what changed. Once. | 57.0s It finds where that number lives: the model, the memo, the deck. | 60.45s And drafts each fix in place, for you to review. | 64.6s Every change is marked, in every file. You accept it, or reject it. | 69.6s Even slide four. | 75.2s Done. And this time, you've seen every change. | 82.6s Agentic Office.
+
+Output the JSON only. All scores must be numbers.
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (/Users/harshitverma/.codex/config.toml): `disable_response_storage` is ignored.
+warning: Codex is ignoring 1 unrecognized configuration setting. Check for typos or deprecated settings.
+  user (/Users/harshitverma/.codex/config.toml): `disable_response_storage` is ignored.
+warning: clamping SessionEnd hook timeout to 3s in /Users/harshitverma/.codex/hooks.json
+hook: SessionStart
+hook: SessionStart Completed
+hook: UserPromptSubmit
+hook: UserPromptSubmit Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "pwd; rg --files -g 'AGENT_GUIDE.md' -g 'SHARED.md' -g 'WHAT_WE_WANT.md' -g 'RESEARCH_PAIN.md'" in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ exited 1 in 0ms:
+/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'ls -la; for p in /Users/harshitverma/Desktop/OpenMontage/AGENT_GUIDE.md /Users/harshitverma/Desktop/OpenMontage/projects/AGENT_GUIDE.md; do if test -f "$p"; then cat "$p"; fi; done' in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ succeeded in 0ms:
+total 0
+drwxr-xr-x@ 12 harshitverma  staff  384 Oct 13 18:12 .
+drwxr-xr-x@  6 harshitverma  staff  192 Oct 13 12:24 ..
+drwxr-xr-x@ 18 harshitverma  staff  576 Oct 13 18:33 artifacts
+drwxr-xr-x@  4 harshitverma  staff  128 Oct 13 16:10 assets
+drwxr-xr-x@ 11 harshitverma  staff  352 Oct 13 18:33 brief
+drwxr-xr-x@ 13 harshitverma  staff  416 Oct 13 17:48 corpus
+drwxr-xr-x@  4 harshitverma  staff  128 Oct 13 18:33 critics_runs
+drwxr-xr-x@  2 harshitverma  staff   64 Oct 13 12:24 kling
+drwxr-xr-x@ 11 harshitverma  staff  352 Oct 13 18:33 renders
+drwxr-xr-x@  2 harshitverma  staff   64 Oct 13 12:24 stock
+drwxr-xr-x@  3 harshitverma  staff   96 Oct 13 12:24 visuals
+drwxr-xr-x@  2 harshitverma  staff   64 Oct 13 12:24 voice
+# OpenMontage - Agent Guide
+
+Start here. This is the complete operating guide and agent contract for OpenMontage.
+
+For architecture, key files, and conventions see [`PROJECT_CONTEXT.md`](PROJECT_CONTEXT.md).
+
+## First Interaction — Onboarding
+
+When the user's first message is vague, exploratory, or asks what you can do ("make me a video", "what can you do?", "help me create something", "I want to make content"), read the onboarding skill **before** doing anything else:
+
+**Read:** `skills/meta/onboarding.md`
+
+This skill teaches you to run discovery, classify the user's setup, present capabilities in plain language, and offer starter prompts tailored to their available tools. The goal: get the user from "curious" to "making a video" in under 60 seconds.
+
+**Skip onboarding** when the user arrives with a specific, actionable request (e.g., "Make a 60-second explainer about black holes"). Go directly to Rule Zero.
+
+## Reference Video Entry Point
+
+When the user provides a **video URL or local video file as inspiration** — for example:
+
+- "Can you make a video like this?"
+- "I love this YouTube Short. Make me something similar."
+- "Use this Reel as a reference."
+
+— do **not** treat this as a generic web-search or prompt-writing request.
+
+This is a first-class workflow in OpenMontage.
+
+### Required behavior
+
+1. **Read:** `skills/meta/video-reference-analyst.md`
+2. **Run the reference analysis workflow** using the local analysis tools (`video_analyzer`, transcript extraction, scene detection, frame sampling)
+3. **Produce a grounded summary** of what the reference is doing:
+   - content
+   - pacing
+   - structure
+   - style
+   - what makes it work
+4. **Then** run normal capability audit and pipeline selection
+5. Present **2-3 differentiated concepts** for the user's version — not a carbon copy
+
+### Important distinction
+
+- **Reference-driven request:** "make me something like this" -> use `video-reference-analyst.md`
+- **Source-footage request:** "edit this footage" / "cut this into clips" -> use `source_media_review` and the appropriate footage-led pipeline
+
+If a model misses this distinction, it will often fall back to plain search + guesswork. That is incorrect for OpenMontage.
+
+## Rule Zero — All Production Goes Through a Pipeline
+
+**Every video production request MUST go through the pipeline system. No exceptions.**
+
+When the user asks to make, create, produce, or generate any video content — a trailer, explainer, clip, animation, or any other video — the agent must:
+
+1. **Identify the pipeline.** Match the request to one of the pipelines in `pipeline_defs/`. If unclear, ask the user.
+2. **Read the pipeline manifest.** `pipeline_defs/<pipeline>.yaml` — know the stages, tools, and quality gates.
+3. **Run preflight.** Discover available tools via the registry. Present the capability menu.
+4. **Execute stage by stage.** For EACH stage, read the stage director skill (`skills/pipelines/<pipeline>/<stage>-director.md`) BEFORE doing any work in that stage.
+5. **Read Layer 3 skills before calling tools.** Before using any tool with an `agent_skills` field, read the referenced skill in `.agents/skills/`. These contain provider-specific prompting guidance, parameter optimization, and quality techniques that dramatically improve output.
+
+**Do NOT:**
+- Write ad-hoc Python scripts to call tools directly
+- Skip the pipeline and go straight to API calls
+- Generate assets without reading the stage director skill first
+- Use a tool without checking its Layer 3 skill for prompting guidance
+- Bypass preflight, checkpoints, or review
+
+The intelligence is in the skills, not in improvised code. An agent that reads the director skills and Layer 3 knowledge will produce significantly better output than one that calls tools directly with generic prompts.
+
+## What OpenMontage Is
+
+OpenMontage is an instruction-driven video production system. The AI agent IS the intelligence — it reads instructions (pipeline manifests + stage director skills + meta skills) and drives the pipeline using tools.
+
+```
+Agent reads pipeline manifest (YAML) -> reads stage director skill (MD)
+-> uses tools (Python BaseTool subclasses) -> self-reviews (meta skill)
+-> checkpoints (Python utility) -> presents to human for approval
+```
+
+**Python = tools + persistence.** No orchestration logic, creative decisions, review logic, or checkpoint policy in Python code. The agent makes those decisions guided by instructions.
+
+Core loop:
+
+1. Select a pipeline.
+2. Run preflight.
+3. Discover real tools from the registry.
+4. Present the user with concepts, tool plan, production plan, and cost.
+5. Execute stage by stage with checkpoints.
+
+## Decision Communication Contract
+
+For any meaningful production decision, the agent must communicate the decision before acting. The user should never have to infer which provider, model, or render path was chosen after the fact.
+
+### Announce Before Execution
+
+Before any paid or consequential generation call, state:
+
+- the exact tool name,
+- the provider,
+- the model or provider variant,
+- the reason it was chosen,
+- whether it is a sample or a batch run.
+
+### Ask Before Major Changes
+
+The agent must ask the user before changing any major production choice, including:
+
+- switching provider,
+- switching model family or provider variant,
+- switching from video-led to still-led treatment,
+- switching composition engine when that changes the output character,
+- dropping narration, music, or other approved creative elements,
+- changing from sample mode to batch mode.
+
+Minor prompt refinements inside an already approved provider/model path do not require separate approval unless they materially change the creative direction.
+
+### Re-log Changed Decisions (Binding)
+
+The `decision_log` is the board's Decisions rail and the run's audit trail. It is **append-only history, not a scratchpad.** When a choice you already logged changes mid-run — the user swaps the voice, you switch provider/model/runtime/music, or a fallback overrides an earlier pick — you MUST **append a new `decision_log` entry** for the new choice, reusing the **same `category` AND the same `subject`** (e.g. `category: "voice_selection"`, `subject: "Narration TTS provider"`), with the superseded option moved into `options_considered` and `rejected_because` noting it was changed.
+
+Editing only a downstream artifact (the `asset_manifest`, a prop) while leaving the old decision in the log is a defect: the board keeps showing the stale choice (e.g. `voice → openai_onyx` after the user moved to Chirp3). The board identifies a decision by its **(category, subject) pair** and renders the latest entry for that pair as current (tagged "revised") — so the fix is to append the new entry with an identical `subject`, never to silently mutate the old one or reword the subject (a reworded subject reads as a different decision and both will show). Keeping distinct decisions in one category (e.g. TTS vs image `provider_selection`) is exactly why the pair, not the category alone, is the key. This applies at every stage, not just `idea`.
+
+### Present Both Composition Runtimes (HARD RULE)
+
+When both Remotion and HyperFrames are available on the machine (check `video_compose.get_info()["render_engines"]`), the agent **MUST present both options to the user** before locking `render_runtime` at the proposal stage. The agent MAY recommend one with rationale — but silently picking a "default" is forbidden even when the pipeline manifest or a director skill suggests one.
+
+The presentation MUST include, for each runtime:
+
+1. A one-sentence plain-language description of what it is best at for **this specific brief**.
+2. A one-sentence honest tradeoff (why it might not be the right pick here).
+3. The agent's recommendation and the reason, tied to the brief's delivery_promise and visual approach.
+
+Then wait for explicit user approval before advancing. Record the full shortlist — BOTH runtimes plus any "ffmpeg" option that applies — as `options_considered` in the `render_runtime_selection` decision logged in `decision_log`. A decision log entry with only one runtime considered when both were available is a CRITICAL reviewer finding.
+
+Exception: if only one runtime is available on the machine, the agent proceeds with it but MUST say so explicitly ("HyperFrames isn't installed on this machine; I'm proceeding with Remotion. Install HyperFrames if you want the alternative."). The `render_runtime_selection` decision still records the unavailable option as `rejected_because: "runtime not available on this machine"`.
+
+This rule applies to every pipeline that invokes `video_compose` — not just Wave 1. A pipeline's director skill may recommend a runtime, but that recommendation is input to the conversation with the user, not a decision.
+
+### Composition Authoring Mode — Templated vs Atelier
+
+Orthogonal to *runtime* is *authoring mode*: **how** the composition is built. Present it as its own proposal decision and log it in `decision_log` (`category: "composition_mode"`).
+
+- **Templated** — assemble the stock `cut.type` scene-types (`text_card`, `stat_card`, `bar_chart`, …) into the `Explainer`/`CinematicRenderer` compositions. Fast, cheap, reliable — and the reason most videos look alike. Right for batch output, localization variants, quick drafts, and low-stakes internal clips.
+- **Atelier** — **hand-author the composition from scratch**: bespoke scenes, a one-off theme, and motion written for this piece, rendered via `composition_mode: "atelier"` (see `video_compose` → `_render_via_atelier`). No reusable creative components; a fresh visual language every time.
+
+**Default to atelier for hero work** — marketing, launches, brand pieces, any single-deliverable explainer that must impress. The deciding rule: *reuse engine knowledge, never creative components.* In atelier mode the stock scene-type catalog, `hyperframes-registry` blocks, fixtures, and finished components are **off-limits** — they are frozen looks that reintroduce sameness. Before building, route through **`skills/meta/taste-direction.md`** to set the design read and taste dials, then **`skills/meta/bespoke-composition.md`**, which sequences: art direction (`visual-style`) → motion principles (Disney 12 via `framer-motion`/`lottie-bodymovin`) → engine mechanics (`remotion-best-practices` + the stock components read *only as a mechanics codex*) → render via the atelier path. Close with a **distinctness review**: *could this be any other product's video? does it reuse a look I've made before?* — the inverse of "does it match the reference." Atelier costs more tokens and iteration than templated; say so at proposal so the user opts in knowingly.
+
+### Escalate Blockers Explicitly
+
+When a blocker occurs, the agent must surface it immediately using this structure:
+
+1. What was attempted
+2. What failed
+3. Whether the issue is auth, provider access, tool bug, or prompt/design quality
+4. What options exist next
+5. Which option the agent recommends, with reasoning
+
+Do not continue with a substitute path until the user approves.
+
+### Recommendation Style
+
+When asking the user to choose, do not just list options. The agent should:
+
+- provide the shortlist,
+- explain the tradeoffs briefly,
+- recommend one option,
+- wait for approval before proceeding.
+
+### No Unilateral Substitutions
+
+If the approved path is blocked, the agent may investigate and prepare alternatives, but may not execute those alternatives without user approval.
+
+This applies especially to:
+
+- provider swaps,
+- model swaps,
+- fallback tools,
+- prompt-only substitutes for reference-driven generation,
+- still-image animatics in place of true motion.
+
+## Orchestrator
+
+The agent itself orchestrates the production state machine:
+
+`research -> proposal -> script -> scene_plan -> assets -> edit -> compose`
+
+The agent:
+
+1. Reads the pipeline manifest (`pipeline_defs/*.yaml`) to know the process
+2. Calls `checkpoint.get_next_stage()` to find where to resume
+3. Reads the stage's director skill (`skills/pipelines/<pipeline>/<stage>-director.md`) to know HOW
+4. Uses tools (`tools/`) for concrete capabilities
+5. Self-reviews using the reviewer meta skill (`skills/meta/reviewer.md`)
+6. Checkpoints via the checkpoint protocol (`skills/meta/checkpoint-protocol.md`)
+7. Presents to human for approval when `human_approval_default: true`
+
+Infrastructure files:
+
+- `lib/checkpoint.py` — read/write checkpoints, stage validation
+- `tools/cost_tracker.py` — budget governance
+- `lib/pipeline_loader.py` — manifest loading and helpers
+
+## Project Directory Convention
+
+Every production run creates a project workspace under `projects/`. This directory is gitignored — all generated assets are regenerable.
+
+```
+projects/<project-name>/
+├── artifacts/          # JSON artifacts from each stage (research_brief, script, scene_plan, etc.)
+├── assets/
+│   ├── images/         # Generated images (PNG)
+│   ├── video/          # Generated video clips (MP4)
+│   ├── audio/          # Narration segments + final mix (MP3/WAV)
+│   ├── music/          # Background music track (MP3)
+│   └── subtitles.srt   # Generated subtitles
+└── renders/
+    └── final.mp4       # Final rendered video (the deliverable)
+```
+
+**Naming convention**: Use kebab-case derived from the video title (e.g., `hidden-math-of-nature`, `how-music-rewires-brain`).
+
+At pipeline initialization, before any stage runs:
+
+1. **Initialize the workspace**: `python -c "from lib.checkpoint import init_project; init_project('<project-id>', title='<Title>', pipeline_type='<pipeline>')"` — creates the layout above and writes `project.json` (the marker the Backlot board reads).
+2. **Open the board**: run `python -m backlot open <project-id>`. This starts the Backlot server if needed and opens the user's browser at the project's live board. If the command fails, continue the production — the board is an observer, never a blocker. This is the agent's ONLY board duty; the board derives everything else from disk.
+
+All tools and agents must write outputs to these paths — **always pass an explicit `output_path` under `projects/<project-id>/`**. Assets written to the repo root, cwd, or temp dirs are invisible to the user's board and violate the workspace contract.
+
+**This applies to atelier and HyperFrames-skill runs too**: hand-authored compositions still write the canonical artifacts they have (script or beats-plan, scene_plan-equivalent, asset manifest) plus checkpoints into `projects/<project-id>/`. The board is runtime-agnostic; only runs that skip the artifacts get a degraded board.
+
+## Music Library
+
+Users can place royalty-free music tracks in `music_library/` (gitignored). The asset director will check this folder before falling back to API-based music generation.
+
+```
+music_library/
+├── ambient_track.mp3
+├── cinematic_epic.mp3
+└── ...
+```
+
+If the folder has tracks, the proposal and asset stages should present them as options alongside generated music. See the proposal-director and asset-director skills for details.
+
+## Available Pipelines
+
+| Pipeline | Best For | Stability |
+|----------|----------|-----------|
+| `animated-explainer` | Topic to fully generated explainer | production |
+| `talking-head` | Footage-led speaker videos | beta |
+| `screen-demo` | Screen recordings and walkthroughs | production |
+| `clip-factory` | Many clips from one long source | beta |
+| `podcast-repurpose` | Podcast highlights and derivatives | beta |
+| `cinematic` | Trailer, teaser, and mood-led edits | production |
+| `animation` | Motion-graphics and animation-first videos | production |
+| `character-animation` | Local rigged cartoon characters and reusable character acting | beta |
+| `hybrid` | Source footage plus support visuals | production |
+| `avatar-spokesperson` | Presenter-led avatar or lip-sync videos | production |
+| `localization-dub` | Subtitle, dub, and translated variants | beta |
+| `framework-smoke` | Test: minimal 2-stage smoke test | test |
+
+> **Beta pipelines** have not been fully audited. They work, but expect rough edges. Mention this when the user selects one.
+
+## Mandatory Preflight
+
+Do this before any creative work. **Use `provider_menu_summary()` first — it's the human-ready rollup.** The raw `support_envelope()` dump is a firehose (megabytes of JSON on a well-configured machine); pasting it into chat will bury the user.
+
+```bash
+python -c "
+from tools.tool_registry import registry
+import json
+registry.discover()
+print(json.dumps(registry.provider_menu_summary(), indent=2))
+"
+```
+
+The summary returns four fields the agent should translate into plain language:
+
+- `composition_runtimes` — booleans for `ffmpeg`, `remotion`, `hyperframes`. This is the source of truth for the "Present Both Composition Runtimes (HARD RULE)" check.
+- `capabilities[]` — one entry per capability family with `configured / total` counts and provider lists. Ready-made for the "N of M configured" menu.
+- `setup_offers[]` — unavailable tools whose install is a 1-minute env-var fix. Lead with these when offering upgrades.
+- `runtime_warnings[]` — specific signals like "hyperframes: npm package not resolvable". Surface these to the user verbatim — they're the kind of silent-failure bugs that break the governance contract.
+
+Then, for deeper inspection (only when the summary isn't enough):
+
+```bash
+# Full menu — grouped available/unavailable per capability.
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_menu(), indent=2))"
+
+# Raw envelope — every tool's full contract. Slow/firehose; use for debugging only.
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.support_envelope(), indent=2))"
+```
+
+Then:
+
+1. Read the selected manifest in `pipeline_defs/`.
+2. Check every `required_tools` entry against the registry.
+3. Check `fallback_tools` for unavailable tools.
+4. Report one of: `passed`, `degraded`, or `blocked`.
+5. Do not start production until the user understands the real capability envelope.
+
+### Provider Menu (Mandatory at Preflight)
+
+Already fetched via `provider_menu_summary()` above. Read that output and **present it to the user as a capability menu**, not as a flat tool list. Use `provider_menu()` directly only when you need the per-tool detail the summary collapses.
+
+**How to present:**
+
+```
+YOUR CAPABILITIES
+
+  Video Generation:  0/13 configured
+  Image Generation:  1/7 configured
+  Text-to-Speech:    1/3 configured
+  Music Generation:  1/1 configured
+  Composition:       3/3 configured (FFmpeg, video_stitch, video_trimmer)
+
+  You can produce videos now with images + TTS + FFmpeg.
+  Quick upgrades available — see below.
+```
+
+For EACH capability with unavailable providers, read the `install_instructions` field from the menu output and present setup options grouped by effort:
+
+```
+QUICK SETUP OPTIONS (1-minute each — set an env var in .env)
+
+  Video Generation (0/13 -> unlock the biggest upgrade):
+    Each unavailable provider lists its own install_instructions.
+    Read them from the provider_menu output and present grouped by env var.
+    Example: if 3 tools need FAL_KEY, group them: "FAL_KEY unlocks 3 providers"
+
+  Image Generation (1/7 -> more style options):
+    Same pattern — read install_instructions from each unavailable tool.
+
+  Text-to-Speech (1/3):
+    Same pattern.
+
+LOCAL OPTIONS (free, needs hardware):
+  Tools with runtime=LOCAL or runtime=LOCAL_GPU — read from the menu.
+
+Already Available:
+  List what's working. The user should feel good about what they have.
+```
+
+**Rules:**
+- Do NOT hardcode provider names, API key names, or setup URLs in your prompts.
+  Read them from the registry's `install_instructions` field on each tool.
+- Always show the ratio: "X of Y configured" — this makes breadth visible.
+- Group by capability, not by individual tool.
+- Show what they CAN do now, then what they COULD unlock.
+- If the user declines setup, proceed with the best available path — no nagging.
+- If a tool shares an env var with others, group them (read from `dependencies` field).
+
+### Setup Offer Protocol
+
+When tools are `UNAVAILABLE` but can be fixed with simple configuration, **offer the user setup help instead of silently working around the limitation.** Many tools are one env var away from working.
+
+| Fix Complexity | Action |
+|----------------|--------|
+| **1-minute fix** (env var) | Offer to help configure now — read `install_instructions` from the tool |
+| **5-minute fix** (install) | Explain what to install and why — read `install_instructions` from the tool |
+| **Complex fix** (GPU, model download) | Note the limitation, explain what it would unlock, move on |
+
+**Rules:**
+- Always tell the user what they're missing AND what they'd gain
+- Show the cost difference (free local vs. paid API)
+- If the user declines setup, proceed with the best available path — no nagging
+- Group related fixes (tools sharing the same env var dependency)
+
+### Composition Runtimes (Inside video_compose)
+
+`video_compose` has **three** render engines / runtimes. They are parallel, not ranked — the choice is made at proposal and locked in `edit_decisions.render_runtime`. Check which are available:
+
+```bash
+python -c "
+from tools.tool_registry import registry
+registry.discover()
+info = registry._tools['video_compose'].get_info()
+print('Render engines:', info.get('render_engines'))
+print('Remotion note:', info.get('remotion_note'))
+print('HyperFrames note:', info.get('hyperframes_note'))
+"
+```
+
+| Engine | Used For | Requires |
+|--------|----------|----------|
+| **FFmpeg** | Video-only cuts, concat, trim, subtitle burn | `ffmpeg` binary (always available) |
+| **Remotion** | React-based composition: still images → animated video, text cards, stat cards, charts, callouts, comparisons, transitions with spring physics, word-level caption burn, TalkingHead avatar | Node.js (`npx`) + `remotion-composer/` + `node_modules` |
+| **HyperFrames** | HTML/CSS/GSAP composition: kinetic typography, product promos, launch reels, website-to-video, registry-block-driven scenes, SVG character rigs | Node.js ≥ 22 + FFmpeg + `npx` (consumed via `npx hyperframes`) |
+
+`render_runtime` is **locked at proposal** (`proposal_packet.production_plan.render_runtime`) and **carried through edit_decisions unchanged**. `video_compose` routes based on this field; silent runtime swaps are forbidden. If the chosen runtime becomes unavailable at compose time, surface a structured blocker per "Escalate Blockers Explicitly" above. See `skills/core/hyperframes.md` for the Remotion-vs-HyperFrames decision matrix.
+
+### Critical Rule: Motion-Required Requests
+
+For any request where the deliverable inherently depends on motion rather than static coverage, treat motion as a hard requirement. Examples:
+
+- sci-fi trailers,
+- cinematic teasers built from generated clips,
+- hype edits,
+- avatar or agent videos,
+- any brief whose promise depends on moving shots rather than still frames.
+
+For these requests:
+
+- The `render_runtime` chosen at proposal (Remotion, HyperFrames, or FFmpeg) must be confirmed available up front if the planned visual treatment depends on it.
+- Still-image fallback is forbidden. Do not quietly convert the job into a Ken Burns teaser, animatic, or slide-based video.
+- FFmpeg-only fallback is forbidden when it changes the approved deliverable from motion-led video to still-led video.
+- **Silent runtime swap is forbidden.** If `render_runtime="hyperframes"` was locked and HyperFrames is unavailable, do NOT route to Remotion instead. Surface the blocker, propose options, get user approval, log a `render_runtime_selection` decision — then proceed.
+- Bubble critical issues immediately. If the chosen runtime is unavailable, fails to render, or provider clip generation fails in a way that blocks the approved treatment, stop and tell the user before proceeding.
+- Do not spend more tokens or time on downgraded output unless the user explicitly approves the downgrade as an animatic or proof-of-concept.
+
+**When Remotion is available**, the agent should design production plans around it:
+- Explainer videos with `flat-motion-graphics` playbook -> Remotion animated scenes, not Ken Burns
+- Data-driven videos -> Remotion stat cards and charts, not static image screenshots
+- Any pipeline using still images -> Remotion spring animations, not FFmpeg pan-and-zoom
+- **Screen demos of a CLI/terminal/install flow -> `TerminalScene` (synthetic screen recording), not OS-level capture.** See `.agents/skills/synthetic-screen-recording/SKILL.md`. Faster, deterministic, privacy-safe. Use real capture (`screen_recorder`, `cap_recorder`, `playwright-recording`) only when the demo is a real app UI or requires unpredictable live behavior.
+
+### Remotion scene types available in `remotion-composer/`
+
+See `remotion-composer/SCENE_TYPES.md` for the authoritative list and their cut schemas. Current scene types usable via `cut.type`:
+`text_card`, `stat_card`, `callout`, `comparison`, `hero_title`, `terminal_scene`, `anime_scene`, `bar_chart`, `line_chart`, `pie_chart`, `kpi_grid`, `progress_bar`. Overlay types include `section_title`, `stat_reveal`, `hero_title`, `provider_chip`.
+
+These stock scene-types are the **templated** path — fast and reliable, but they are why videos look alike. For **hero work, prefer atelier mode** (hand-authored composition) over this catalog; read those types as a *mechanics codex*, not a menu to assemble. See "Composition Authoring Mode" above and `skills/meta/bespoke-composition.md`.
+
+**When Remotion is NOT available** and `render_runtime="remotion"` was NOT locked, `video_compose` may use FFmpeg Ken Burns motion on still images. This still works but produces less engaging visuals. Mention this tradeoff in the proposal. When `render_runtime="remotion"` IS locked and Remotion is unavailable, that's a blocker — escalate, don't silently swap.
+
+When `render_runtime="hyperframes"` is locked and HyperFrames is unavailable (Node < 22, missing `ffmpeg`/`npx`, or `hyperframes doctor` reports issues), that's also a blocker. Do not substitute Remotion or FFmpeg without user approval + a logged `render_runtime_selection` decision.
+
+Routing is automatic — `video_compose` reads `edit_decisions.render_runtime` and dispatches to the matching engine (`_render_via_hyperframes`, `_remotion_render`, or `_render_via_ffmpeg`). But the **agent must know both Remotion and HyperFrames exist at proposal time** so it can design the visual approach intentionally. Don't default to Remotion for motion-graphics-heavy concepts that HTML/GSAP would express more naturally, and don't default to HyperFrames for briefs that reuse the existing React scene stack.
+
+## Capability Discovery
+
+OpenMontage uses two layers for capability choice:
+
+- selector tools: capability-level routing such as `tts_selector` and `video_selector`
+- provider tools: concrete tools discovered via the registry that call a specific backend
+
+Always inspect the registry first:
+
+```bash
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.capability_catalog(), indent=2))"
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_catalog(), indent=2))"
+```
+
+For finalist tools inspect:
+
+- `capability`
+- `provider`
+- `usage_location`
+- `supports`
+- `fallback_tools`
+- `related_skills`
+
+Do not rely on memory or old docs when the registry can answer it.
+
+## Tool Families
+
+**Do not maintain hardcoded tool lists.** Always query the registry at runtime:
+
+```bash
+# See all tools grouped by capability (TTS, video_generation, image_generation, etc.)
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.capability_catalog(), indent=2))"
+
+# See all tools grouped by provider (elevenlabs, openai, ffmpeg, etc.)
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_catalog(), indent=2))"
+```
+
+Key capability families to look for in the output:
+
+- **tts** — Text-to-speech providers. Route via `tts_selector`.
+- **video_generation** — Video generation providers (cloud, local GPU, stock). Route via `video_selector`.
+- **image_generation** — Image generation providers (cloud, local GPU, stock). Route via `image_selector`.
+- **music_generation** — Music and sound effect generation.
+- **video_post** — Composition, stitching, trimming (FFmpeg-based, always local).
+- **audio_processing** — Mixing, enhancement (FFmpeg-based, always local).
+- **analysis** — Transcription, scene detection, frame sampling.
+- **avatar** — Talking head and lip sync generation.
+- **character_animation** — Local character specs, SVG rigs, pose libraries, action timelines, previews, and QA.
+- **3d_world_generation** — Local semantic terrain, procedural biome scattering, explicit landmarks, diagnostic passes, and deterministic HyperFrames/Three.js camera fly-throughs. Route through `threejs_world` and read `skills/creative/3d-world-generation.md` plus `.agents/skills/threejs-world-generation/SKILL.md`.
+- **3d_asset_acquisition** — Rights-safe GLTF/GLB catalogs for production-tier Three.js worlds. Route through `threejs_asset_catalog`; never substitute blockout primitives for a requested detailed or reference-grade environment.
+- **3d_asset_generation** — Unique textured/PBR meshes from text or concept images. Route text-described hero assets through `atlas_3d`, image-conditioned assets and regional object extraction through `fal_3d`, and read `.agents/skills/3d-asset-generation/SKILL.md`. Announce provider/model/unit cost before every first paid call and sample before batching.
+- **3d_world_rendering** — Production assembly, terrain, lighting, materials, camera, and image-sequence rendering in Blender. Route through `blender_world`; use Three.js for interactive/blockout review, not as a substitute for Blender when reference-grade scene density is requested.
+- **enhancement** — Upscale, background removal, face enhance, color grading.
+
+Each tool in the registry declares `best_for`, `install_instructions`, `runtime` (LOCAL, API, LOCAL_GPU, HYBRID), and `status`. Read these fields — do not assume tool strengths from memory.
+
+### Tool Class Naming Convention
+
+All tool classes use **PascalCase without a "Tool" suffix**. When importing tools in Python:
+
+| Module | Class Name | NOT |
+|--------|-----------|-----|
+| `tools.audio.music_gen` | `MusicGen` | ~~MusicGenTool~~ |
+| `tools.video.video_compose` | `VideoCompose` | ~~VideoComposeTool~~ |
+| `tools.audio.audio_mixer` | `AudioMixer` | ~~AudioMixerTool~~ |
+| `tools.tts.elevenlabs_tts` | `ElevenLabsTTS` | ~~ElevenLabsTTSTool~~ |
+| `tools.analysis.transcriber` | `Transcriber` | ~~TranscriberTool~~ |
+| `tools.subtitle.subtitle_gen` | `SubtitleGen` | ~~SubtitleGenTool~~ |
+
+When in doubt, check: `grep "^class " tools/<path>.py`
+
+All tools call via `.execute(params_dict)` (returns `ToolResult` with `.success`, `.data`, `.error`), NOT `.run()`.
+
+### Selector Pattern
+
+Three selector tools abstract multi-provider capabilities. **Selectors auto-discover providers from the registry.** Adding a new provider tool automatically makes it available through the selector — no selector code changes needed.
+
+| Selector | Routes to | How it discovers |
+|----------|-----------|-----------------|
+| `tts_selector` | All tools with `capability="tts"` (ElevenLabs, Google TTS, OpenAI, Piper, Azure, fish.audio) | `registry.get_by_capability("tts")` |
+| `image_selector` | All tools with `capability="image_generation"` (FLUX, Google Imagen, GPT Image, Recraft, etc.) | `registry.get_by_capability("image_generation")` |
+| `video_selector` | All tools with `capability="video_generation"` | `registry.get_by_capability("video_generation")` |
+
+Selectors route based on: user preference > availability > discovery order. They adapt input schemas between providers transparently.
+
+## User-Facing Planning Protocol
+
+Before committing to execution, present:
+
+1. `4-5` concept directions when the brief is still open.
+2. Recommended pipeline.
+3. Recommended tool path.
+4. Alternative tool paths that are actually available.
+5. Cost estimate and quality tradeoffs.
+6. **Music plan** — mandatory for every pipeline that has audio. See below.
+7. Production plan by stage.
+8. Approval gate before asset generation.
+
+If a user prefers a specific vendor and that tool is available, surface it directly. Do not hide provider choice.
+
+### Music Plan (Mandatory)
+
+Music is a critical part of any video. **Surface the music situation to the user at proposal/idea time** — do not silently defer it to the asset stage where a failure becomes expensive.
+
+Check music availability in this order and present the options:
+
+1. **User music library:** Check `registry.get_by_capability("music_library")` and inspect `music_library/`. If tracks exist, list durations and let the user pick one.
+2. **Royalty-free search:** Check `registry.get_by_capability("music_search")` for configured search/download tools. Report licensing constraints and whether a key is required.
+3. **Music generation APIs:** Check `registry.get_by_capability("music_generation")`. Report status, quota, cost, and quality tradeoffs honestly.
+4. **Bring your own:** Note that the user can provide a track (for example from YouTube Audio Library or Jamendo) through the `music_library/` drop path.
+
+**Always present the user with explicit choices:**
+- Use a track from their library (which one?)
+- Provide a different track (drop it in `music_library/`)
+- Generate one via API (if available — name the provider and cost)
+- Proceed without music
+
+**If no music source is available:** Tell the user explicitly. Do NOT let this surface as a surprise at the asset stage.
+
+Record the music decision in the proposal/brief artifact so the asset director knows what to do.
+
+## Pipeline Asset Expectations
+
+Each pipeline manifest's `tools_available` field declares what tools a stage can use. Use selectors for multi-provider capabilities — the selector handles routing to whatever is available. Read the pipeline manifest for the authoritative list per stage.
+
+## Stage Agents
+
+Each stage produces one canonical artifact that becomes the contract for the next stage. The stage director skill teaches the agent HOW to produce it.
+
+| Stage | Director Skill | Canonical output | Core quality bar |
+|------|---------------|------------------|------------------|
+| `idea` | `*-director.md` | `brief` | Clear hook, target platform, duration, tone, and user intent |
+| `script` | `*-director.md` | `script` | Structured sections, valid timing, coherent narration |
+| `scene_plan` | `*-director.md` | `scene_plan` | Ordered scenes, timings, asset requirements |
+| `assets` | `*-director.md` | `asset_manifest` | Provenance, paths, model/tool metadata, scene linkage |
+| `edit` | `*-director.md` | `edit_decisions` | Concrete cuts, overlays, subtitle/music decisions |
+| `compose` | `*-director.md` | `render_report` | Output paths, encoding profile, verification notes |
+
+Stage contract rules:
+
+- A completed or awaiting-human checkpoint must include the stage's canonical artifact.
+- Canonical artifacts must validate against the JSON schema in `schemas/artifacts/`.
+- Non-canonical outputs such as media files belong in stage-specific directories.
+- Tools should record seeds/model versions for reproducibility.
+
+## Reviewer Protocol
+
+The reviewer is a meta skill (`skills/meta/reviewer.md`) — advisory, never directly blocks progression.
+
+- Self-review after every stage execution, before checkpointing.
+- Load `review_focus` items from the pipeline manifest for the current stage.
+- Maximum two review rounds. After that, pass with warnings and move on.
+- Findings categorized: critical (must fix), suggestion (should fix), nitpick (nice-to-have).
+- Critical findings -> fix and re-review. Suggestions -> note and proceed.
+- Check playbook `quality_rules` as constraints, not suggestions.
+
+## Human Checkpoint Protocol
+
+The checkpoint protocol meta skill (`skills/meta/checkpoint-protocol.md`) teaches the agent when to pause:
+
+- Read `human_approval_default` from the pipeline manifest per stage. **The manifest value is binding** — never re-judge it. `lib/checkpoint.py` enforces this: a gated stage cannot be written `completed` without `human_approved=True`.
+- Typical gated stages: `idea`/`proposal`, `script`, `scene_plan`, **`assets`** (review the generated assets scene-by-scene — the Backlot board's filmstrip — before compose locks them in), and `publish` where the pipeline has one. Most pipelines auto-proceed on `edit` and `compose`, but not all (documentary-montage gates `edit`) — the manifest you loaded is the only authority.
+- When approval is required: write the checkpoint as `awaiting_human`, present artifact summary, review findings, and cost snapshot — then **END YOUR TURN**. Doing further pipeline work in the same response is a gate violation.
+- **Approval is per-gate.** An early "go ahead" never covers later gates; explicit full-run pre-authorization must be recorded as a `decision_log` entry (`category: "approval_policy"`) to count.
+- Wait for human to approve, request revision, or abort.
+
+## Communication Protocol
+
+Agents coordinate through canonical JSON artifacts, checkpoints, pipeline manifests, and the tool registry.
+
+Primary files:
+
+- Artifact schemas: `schemas/artifacts/`
+- Checkpoint schema: `schemas/checkpoints/checkpoint.schema.json`
+- Pipeline manifest schema: `schemas/pipelines/pipeline_manifest.schema.json`
+- Pipeline manifests: `pipeline_defs/`
+- Style playbooks: `styles/*.yaml` (validated by `schemas/styles/playbook.schema.json`)
+- Tool contract: `tools/base_tool.py`
+- Tool registry: `tools/tool_registry.py`
+- Stage director skills: `skills/pipelines/<pipeline>/<stage>-director.md`
+- Meta skills: `skills/meta/*.md`
+
+Checkpoint rules:
+
+- Checkpoints live at `projects/<project_id>/checkpoint_<stage>.json` (the project workspace — this is what the Backlot board watches).
+- `status` may be `completed`, `failed`, `awaiting_human`, or `in_progress`.
+- Write an `in_progress` checkpoint on entering each stage; during `assets`/`compose`, refresh `metadata.partial_progress` after each completed scene/asset unit — this powers live progress on the board.
+- `completed` and `awaiting_human` checkpoints must include the canonical artifact.
+- A gated stage (`human_approval_default: true`) can only be written `completed` with `human_approved=True` — the writer raises a GATE VIOLATION otherwise.
+- Superseded checkpoints are archived automatically to `projects/<project_id>/history/` — stage re-runs never destroy run history.
+- Invalid checkpoints or invalid canonical artifacts are contract violations and should fail fast.
+
+Pipeline manifest rules:
+
+- Pipelines are declarative YAML manifests in `pipeline_defs/`.
+- Stages declare: `skill` (director skill path), `produces`, `tools_available`, `review_focus`, `success_criteria`, `human_approval_default`.
+- Adding a new pipeline requires a manifest + stage director skills.
+
+Tool rules:
+
+- Every production tool must inherit from `BaseTool`.
+- Tool discovery flows through the registry, not ad hoc imports.
+- Support-envelope reporting is the source of truth for capability, status, and resource requirements.
+
+## Style Playbooks
+
+| Playbook | Best For |
+|----------|----------|
+| `clean-professional` | Corporate, educational, SaaS |
+| `premium-minimalist` | Investor updates, expert explainers, product narratives |
+| `flat-motion-graphics` | Social media, TikTok, startups |
+| `minimalist-diagram` | Technical deep-dives, architecture |
+| `ink-sketch` (Ink Theater) | Hand-drawn ink-on-white doodle animation; a character that draws itself, walks, dances; contraption explainers |
+
+For custom, atelier, brand, launch, or hero work, read `skills/meta/taste-direction.md` before choosing a playbook. Carry its `taste_profile` into the proposal so later stages can preserve the design read, visual variance, motion intensity, information density, reference strategy, and anti-patterns.
+
+### Hand-drawn "doodle" animation → Ink Theater / Ink Puppet
+
+For any brief that wants a **hand-drawn ink doodle** look — "a sketch that comes to life", "a pencil / stick figure that walks or dances", "a little character that acts out the idea", whiteboard-doodle explainers — use the **Ink Theater** engine + **Ink Puppet** mocap system (`skills/creative/ink-theater.md`, `ink-theater/README.md`). It is a **style + reusable engine, not a new pipeline**: illustration / contraption pieces run on the `animation` pipeline; a mocap character (draws itself → walks / dances / waves via `InkPuppet.choreograph([...])`) runs on `character-animation`. Cross-tool entry points: **`/ink-art`** (create a vector doodle from scratch) and **`/animated-drawing`** (animate a *supplied* drawing with mocap — raster; `skills/creative/animated-drawing.md`). Never hand-tune character motion — the agent only chooses named mocap clips.
+
+## Layer Map
+
+OpenMontage has three instruction layers:
+
+1. `tools/`
+   What exists, what is available, cost, runtime, fallback, related skills.
+2. `skills/`
+   How OpenMontage wants those tools used in pipelines.
+3. `.agents/skills/`
+   Raw vendor or technology knowledge.
+
+Reading order:
+
+1. registry / tool contract — discover what's available
+2. relevant pipeline or creative skill (Layer 2) — know HOW to use it in this context
+3. underlying vendor skill (Layer 3) — **mandatory before calling any generation tool**
+
+**Prefer skills over source code for tool usage.** Skills exist precisely so you don't need implementation details in the common case. Layer 2 tells you *what* and *when*. Layer 3 tells you *how*. For authoring prompts, choosing parameters, or understanding usage patterns, you should be reading skills — not `.py` files.
+
+**Exception: debugging, audits, and verifying the governance contract.** When a skill and a tool disagree, or when something behaves differently than the skill claims, reading the tool source is fair game — that's often the only way to catch a silent-availability bug or a stale doc string. An audit that refuses to look at the implementation will miss exactly the bugs that matter most. If you do read source to debug, consider whether the finding belongs in a skill update afterward so the next agent doesn't need to repeat the dive.
+
+**Layer 3 is not optional.** Every generation tool (video, image, TTS, music) has an `agent_skills` field listing its Layer 3 skills. These skills contain provider-specific prompt engineering, parameter tuning, and quality techniques. Read them before writing prompts. The difference between a generic prompt and a skill-informed prompt is the difference between "usable" and "cinematic."
+
+Example: Before calling `kling_video`, read its `agent_skills` → `ai-video-gen` → get Kling-specific prompt structure, camera direction syntax, and quality keywords that the model responds to best.
+
+### Layer 3 skills, by category
+
+The `.agents/skills/` directory is large. When you're not coming in through a tool's `agent_skills` pointer, use this table to find the right file by *what you're trying to do*:
+
+| Category | Skills |
+|---|---|
+| **Composition runtime** | `remotion`, `remotion-best-practices`, `synthetic-screen-recording` (fake terminal/UI demos via Remotion TerminalScene), `threejs-world-generation` (semantic terrain and free-viewpoint HyperFrames worlds) |
+| **Animation knowledge (generic)** | `gsap-core`, `gsap-timeline`, `gsap-plugins` (SplitText / MorphSVG / DrawSVG / MotionPath / Flip / CustomEase), `gsap-utils`, `gsap-react`, `gsap-performance`, `gsap-scrolltrigger`, `gsap-frameworks`, `framer-motion` (Disney 12 principles), `lottie-bodymovin` (Lottie export) |
+| **Character animation** | `character-rigging`, `svg-character-animation`, `pose-library-design`, `canvas-procedural-animation`, `character-animation-qa` |
+| **Image generation** | `bfl-api`, `flux-best-practices` |
+| **Video generation** | `seedance-2-0` (preferred premium default — cinematic, trailer, multi-shot, synced audio, lip-sync), `gemini-omni` (conversational video editing, reference tags, timecoded beats), `ai-video-gen`, `ltx2` |
+| **Audio** | `elevenlabs`, `music`, `sound-effects`, `acestep`, `text-to-speech`, `azure-text-to-speech` (optional cloud TTS — tool `azure_tts`, same Speech key as `azure_stt`), `setup-api-key` |
+| **Speech-to-text** | `speech-to-text` (whisper `transcriber` — default, offline), `azure-speech-to-text` (optional cloud STT — tool `azure_stt`, preferred when `AZURE_SPEECH_KEY` is set) |
+| **Avatar / lip-sync** | `avatar-video`, `heygen`, `create-video`, `faceswap`, `video-translate`, `agents` |
+| **Capture** | `playwright-recording` (browser flows), `ffmpeg` (post) |
+| **Visualization** | `beautiful-mermaid`, `d3-viz`, `manim-composer`, `manimce-best-practices`, `manimgl-best-practices` |
+| **Media editing** | `video-edit`, `video-download`, `video-understand`, `video-toolkit`, `visual-style` |
+
+**When in doubt, read the category's meta routing file first:**
+- Picking an animation runtime? → `skills/meta/animation-runtime-selector.md` routes between Remotion primitives, GSAP plugins, framer-motion, Lottie, Manim, D3.
+- Picking a screen-recording mode (real capture vs synthetic terminal)? → `pipeline_defs/screen-demo.yaml` + `skills/pipelines/screen-demo/idea-director.md`.
+
+## Quick Lookup
+
+| Question | Where to look |
+|----------|---------------|
+| What tools exist? | `tools/tool_registry.py` and `registry.support_envelope()` |
+| What providers are available for a capability? | `registry.capability_catalog()` |
+| What tools exist for a vendor? | `registry.provider_catalog()` |
+| How does a tool actually work? | the tool's `usage_location` from the registry |
+| How should this pipeline stage behave? | `skills/pipelines/<pipeline>/...` |
+| What is the checkpoint/review policy? | `skills/meta/` |
+
+## What Not To Do
+
+- **Do not bypass the pipeline.** Never write ad-hoc scripts to call tools directly. All production goes through pipeline stages with director skills. See Rule Zero.
+- **Do not call generation tools without reading their Layer 3 skill.** Check the tool's `agent_skills` field, read the referenced skill, then craft your prompts using that guidance.
+- **Do not skip stage director skills.** Before executing any pipeline stage, read its director skill. The skill contains the quality bar, the workflow, and the review criteria.
+- Do not use deleted legacy names such as `tts_cloud`, `tts_engine`, or `video_gen`.
+- Do not hardcode provider names, API key names, or setup URLs. Read them from the registry's `install_instructions` and `dependencies` fields.
+- Do not tell a restricted shared-installation user to add credentials manually, create a `.env`, or export a key. Surface the unavailable provider as an administrator setup request and continue only with centrally provisioned capabilities.
+- Before offering a direct vendor credential, check the registry for an available wrapper through an already configured provider (for example, a partner model hosted by fal.ai).
+- Do not begin asset generation before user approval on the production plan.
+- Do not hide degraded paths. Record substitutions and blocked options explicitly.
+- Do not present a single unavailable tool in isolation. Always show the full capability picture: "X of Y providers configured for this capability."
+- Do not skip the Provider Menu at preflight. The user must see what they have AND what they could unlock.
+- Do not change provider, model, or render path without telling the user first and getting approval when the change is material.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+I’ll assess the customer’s recognition, trust, and willingness to try it against the brief and shared critic rules.
+
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "sed -n '180,510p' /Users/harshitverma/Desktop/OpenMontage/AGENT_GUIDE.md; rg --files --hidden brief corpus" in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ succeeded in 0ms:
+
+## Orchestrator
+
+The agent itself orchestrates the production state machine:
+
+`research -> proposal -> script -> scene_plan -> assets -> edit -> compose`
+
+The agent:
+
+1. Reads the pipeline manifest (`pipeline_defs/*.yaml`) to know the process
+2. Calls `checkpoint.get_next_stage()` to find where to resume
+3. Reads the stage's director skill (`skills/pipelines/<pipeline>/<stage>-director.md`) to know HOW
+4. Uses tools (`tools/`) for concrete capabilities
+5. Self-reviews using the reviewer meta skill (`skills/meta/reviewer.md`)
+6. Checkpoints via the checkpoint protocol (`skills/meta/checkpoint-protocol.md`)
+7. Presents to human for approval when `human_approval_default: true`
+
+Infrastructure files:
+
+- `lib/checkpoint.py` — read/write checkpoints, stage validation
+- `tools/cost_tracker.py` — budget governance
+- `lib/pipeline_loader.py` — manifest loading and helpers
+
+## Project Directory Convention
+
+Every production run creates a project workspace under `projects/`. This directory is gitignored — all generated assets are regenerable.
+
+```
+projects/<project-name>/
+├── artifacts/          # JSON artifacts from each stage (research_brief, script, scene_plan, etc.)
+├── assets/
+│   ├── images/         # Generated images (PNG)
+│   ├── video/          # Generated video clips (MP4)
+│   ├── audio/          # Narration segments + final mix (MP3/WAV)
+│   ├── music/          # Background music track (MP3)
+│   └── subtitles.srt   # Generated subtitles
+└── renders/
+    └── final.mp4       # Final rendered video (the deliverable)
+```
+
+**Naming convention**: Use kebab-case derived from the video title (e.g., `hidden-math-of-nature`, `how-music-rewires-brain`).
+
+At pipeline initialization, before any stage runs:
+
+1. **Initialize the workspace**: `python -c "from lib.checkpoint import init_project; init_project('<project-id>', title='<Title>', pipeline_type='<pipeline>')"` — creates the layout above and writes `project.json` (the marker the Backlot board reads).
+2. **Open the board**: run `python -m backlot open <project-id>`. This starts the Backlot server if needed and opens the user's browser at the project's live board. If the command fails, continue the production — the board is an observer, never a blocker. This is the agent's ONLY board duty; the board derives everything else from disk.
+
+All tools and agents must write outputs to these paths — **always pass an explicit `output_path` under `projects/<project-id>/`**. Assets written to the repo root, cwd, or temp dirs are invisible to the user's board and violate the workspace contract.
+
+**This applies to atelier and HyperFrames-skill runs too**: hand-authored compositions still write the canonical artifacts they have (script or beats-plan, scene_plan-equivalent, asset manifest) plus checkpoints into `projects/<project-id>/`. The board is runtime-agnostic; only runs that skip the artifacts get a degraded board.
+
+## Music Library
+
+Users can place royalty-free music tracks in `music_library/` (gitignored). The asset director will check this folder before falling back to API-based music generation.
+
+```
+music_library/
+├── ambient_track.mp3
+├── cinematic_epic.mp3
+└── ...
+```
+
+If the folder has tracks, the proposal and asset stages should present them as options alongside generated music. See the proposal-director and asset-director skills for details.
+
+## Available Pipelines
+
+| Pipeline | Best For | Stability |
+|----------|----------|-----------|
+| `animated-explainer` | Topic to fully generated explainer | production |
+| `talking-head` | Footage-led speaker videos | beta |
+| `screen-demo` | Screen recordings and walkthroughs | production |
+| `clip-factory` | Many clips from one long source | beta |
+| `podcast-repurpose` | Podcast highlights and derivatives | beta |
+| `cinematic` | Trailer, teaser, and mood-led edits | production |
+| `animation` | Motion-graphics and animation-first videos | production |
+| `character-animation` | Local rigged cartoon characters and reusable character acting | beta |
+| `hybrid` | Source footage plus support visuals | production |
+| `avatar-spokesperson` | Presenter-led avatar or lip-sync videos | production |
+| `localization-dub` | Subtitle, dub, and translated variants | beta |
+| `framework-smoke` | Test: minimal 2-stage smoke test | test |
+
+> **Beta pipelines** have not been fully audited. They work, but expect rough edges. Mention this when the user selects one.
+
+## Mandatory Preflight
+
+Do this before any creative work. **Use `provider_menu_summary()` first — it's the human-ready rollup.** The raw `support_envelope()` dump is a firehose (megabytes of JSON on a well-configured machine); pasting it into chat will bury the user.
+
+```bash
+python -c "
+from tools.tool_registry import registry
+import json
+registry.discover()
+print(json.dumps(registry.provider_menu_summary(), indent=2))
+"
+```
+
+The summary returns four fields the agent should translate into plain language:
+
+- `composition_runtimes` — booleans for `ffmpeg`, `remotion`, `hyperframes`. This is the source of truth for the "Present Both Composition Runtimes (HARD RULE)" check.
+- `capabilities[]` — one entry per capability family with `configured / total` counts and provider lists. Ready-made for the "N of M configured" menu.
+- `setup_offers[]` — unavailable tools whose install is a 1-minute env-var fix. Lead with these when offering upgrades.
+- `runtime_warnings[]` — specific signals like "hyperframes: npm package not resolvable". Surface these to the user verbatim — they're the kind of silent-failure bugs that break the governance contract.
+
+Then, for deeper inspection (only when the summary isn't enough):
+
+```bash
+# Full menu — grouped available/unavailable per capability.
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_menu(), indent=2))"
+
+# Raw envelope — every tool's full contract. Slow/firehose; use for debugging only.
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.support_envelope(), indent=2))"
+```
+
+Then:
+
+1. Read the selected manifest in `pipeline_defs/`.
+2. Check every `required_tools` entry against the registry.
+3. Check `fallback_tools` for unavailable tools.
+4. Report one of: `passed`, `degraded`, or `blocked`.
+5. Do not start production until the user understands the real capability envelope.
+
+### Provider Menu (Mandatory at Preflight)
+
+Already fetched via `provider_menu_summary()` above. Read that output and **present it to the user as a capability menu**, not as a flat tool list. Use `provider_menu()` directly only when you need the per-tool detail the summary collapses.
+
+**How to present:**
+
+```
+YOUR CAPABILITIES
+
+  Video Generation:  0/13 configured
+  Image Generation:  1/7 configured
+  Text-to-Speech:    1/3 configured
+  Music Generation:  1/1 configured
+  Composition:       3/3 configured (FFmpeg, video_stitch, video_trimmer)
+
+  You can produce videos now with images + TTS + FFmpeg.
+  Quick upgrades available — see below.
+```
+
+For EACH capability with unavailable providers, read the `install_instructions` field from the menu output and present setup options grouped by effort:
+
+```
+QUICK SETUP OPTIONS (1-minute each — set an env var in .env)
+
+  Video Generation (0/13 -> unlock the biggest upgrade):
+    Each unavailable provider lists its own install_instructions.
+    Read them from the provider_menu output and present grouped by env var.
+    Example: if 3 tools need FAL_KEY, group them: "FAL_KEY unlocks 3 providers"
+
+  Image Generation (1/7 -> more style options):
+    Same pattern — read install_instructions from each unavailable tool.
+
+  Text-to-Speech (1/3):
+    Same pattern.
+
+LOCAL OPTIONS (free, needs hardware):
+  Tools with runtime=LOCAL or runtime=LOCAL_GPU — read from the menu.
+
+Already Available:
+  List what's working. The user should feel good about what they have.
+```
+
+**Rules:**
+- Do NOT hardcode provider names, API key names, or setup URLs in your prompts.
+  Read them from the registry's `install_instructions` field on each tool.
+- Always show the ratio: "X of Y configured" — this makes breadth visible.
+- Group by capability, not by individual tool.
+- Show what they CAN do now, then what they COULD unlock.
+- If the user declines setup, proceed with the best available path — no nagging.
+- If a tool shares an env var with others, group them (read from `dependencies` field).
+
+### Setup Offer Protocol
+
+When tools are `UNAVAILABLE` but can be fixed with simple configuration, **offer the user setup help instead of silently working around the limitation.** Many tools are one env var away from working.
+
+| Fix Complexity | Action |
+|----------------|--------|
+| **1-minute fix** (env var) | Offer to help configure now — read `install_instructions` from the tool |
+| **5-minute fix** (install) | Explain what to install and why — read `install_instructions` from the tool |
+| **Complex fix** (GPU, model download) | Note the limitation, explain what it would unlock, move on |
+
+**Rules:**
+- Always tell the user what they're missing AND what they'd gain
+- Show the cost difference (free local vs. paid API)
+- If the user declines setup, proceed with the best available path — no nagging
+- Group related fixes (tools sharing the same env var dependency)
+
+### Composition Runtimes (Inside video_compose)
+
+`video_compose` has **three** render engines / runtimes. They are parallel, not ranked — the choice is made at proposal and locked in `edit_decisions.render_runtime`. Check which are available:
+
+```bash
+python -c "
+from tools.tool_registry import registry
+registry.discover()
+info = registry._tools['video_compose'].get_info()
+print('Render engines:', info.get('render_engines'))
+print('Remotion note:', info.get('remotion_note'))
+print('HyperFrames note:', info.get('hyperframes_note'))
+"
+```
+
+| Engine | Used For | Requires |
+|--------|----------|----------|
+| **FFmpeg** | Video-only cuts, concat, trim, subtitle burn | `ffmpeg` binary (always available) |
+| **Remotion** | React-based composition: still images → animated video, text cards, stat cards, charts, callouts, comparisons, transitions with spring physics, word-level caption burn, TalkingHead avatar | Node.js (`npx`) + `remotion-composer/` + `node_modules` |
+| **HyperFrames** | HTML/CSS/GSAP composition: kinetic typography, product promos, launch reels, website-to-video, registry-block-driven scenes, SVG character rigs | Node.js ≥ 22 + FFmpeg + `npx` (consumed via `npx hyperframes`) |
+
+`render_runtime` is **locked at proposal** (`proposal_packet.production_plan.render_runtime`) and **carried through edit_decisions unchanged**. `video_compose` routes based on this field; silent runtime swaps are forbidden. If the chosen runtime becomes unavailable at compose time, surface a structured blocker per "Escalate Blockers Explicitly" above. See `skills/core/hyperframes.md` for the Remotion-vs-HyperFrames decision matrix.
+
+### Critical Rule: Motion-Required Requests
+
+For any request where the deliverable inherently depends on motion rather than static coverage, treat motion as a hard requirement. Examples:
+
+- sci-fi trailers,
+- cinematic teasers built from generated clips,
+- hype edits,
+- avatar or agent videos,
+- any brief whose promise depends on moving shots rather than still frames.
+
+For these requests:
+
+- The `render_runtime` chosen at proposal (Remotion, HyperFrames, or FFmpeg) must be confirmed available up front if the planned visual treatment depends on it.
+- Still-image fallback is forbidden. Do not quietly convert the job into a Ken Burns teaser, animatic, or slide-based video.
+- FFmpeg-only fallback is forbidden when it changes the approved deliverable from motion-led video to still-led video.
+- **Silent runtime swap is forbidden.** If `render_runtime="hyperframes"` was locked and HyperFrames is unavailable, do NOT route to Remotion instead. Surface the blocker, propose options, get user approval, log a `render_runtime_selection` decision — then proceed.
+- Bubble critical issues immediately. If the chosen runtime is unavailable, fails to render, or provider clip generation fails in a way that blocks the approved treatment, stop and tell the user before proceeding.
+- Do not spend more tokens or time on downgraded output unless the user explicitly approves the downgrade as an animatic or proof-of-concept.
+
+**When Remotion is available**, the agent should design production plans around it:
+- Explainer videos with `flat-motion-graphics` playbook -> Remotion animated scenes, not Ken Burns
+- Data-driven videos -> Remotion stat cards and charts, not static image screenshots
+- Any pipeline using still images -> Remotion spring animations, not FFmpeg pan-and-zoom
+- **Screen demos of a CLI/terminal/install flow -> `TerminalScene` (synthetic screen recording), not OS-level capture.** See `.agents/skills/synthetic-screen-recording/SKILL.md`. Faster, deterministic, privacy-safe. Use real capture (`screen_recorder`, `cap_recorder`, `playwright-recording`) only when the demo is a real app UI or requires unpredictable live behavior.
+
+### Remotion scene types available in `remotion-composer/`
+
+See `remotion-composer/SCENE_TYPES.md` for the authoritative list and their cut schemas. Current scene types usable via `cut.type`:
+`text_card`, `stat_card`, `callout`, `comparison`, `hero_title`, `terminal_scene`, `anime_scene`, `bar_chart`, `line_chart`, `pie_chart`, `kpi_grid`, `progress_bar`. Overlay types include `section_title`, `stat_reveal`, `hero_title`, `provider_chip`.
+
+These stock scene-types are the **templated** path — fast and reliable, but they are why videos look alike. For **hero work, prefer atelier mode** (hand-authored composition) over this catalog; read those types as a *mechanics codex*, not a menu to assemble. See "Composition Authoring Mode" above and `skills/meta/bespoke-composition.md`.
+
+**When Remotion is NOT available** and `render_runtime="remotion"` was NOT locked, `video_compose` may use FFmpeg Ken Burns motion on still images. This still works but produces less engaging visuals. Mention this tradeoff in the proposal. When `render_runtime="remotion"` IS locked and Remotion is unavailable, that's a blocker — escalate, don't silently swap.
+
+When `render_runtime="hyperframes"` is locked and HyperFrames is unavailable (Node < 22, missing `ffmpeg`/`npx`, or `hyperframes doctor` reports issues), that's also a blocker. Do not substitute Remotion or FFmpeg without user approval + a logged `render_runtime_selection` decision.
+
+Routing is automatic — `video_compose` reads `edit_decisions.render_runtime` and dispatches to the matching engine (`_render_via_hyperframes`, `_remotion_render`, or `_render_via_ffmpeg`). But the **agent must know both Remotion and HyperFrames exist at proposal time** so it can design the visual approach intentionally. Don't default to Remotion for motion-graphics-heavy concepts that HTML/GSAP would express more naturally, and don't default to HyperFrames for briefs that reuse the existing React scene stack.
+
+## Capability Discovery
+
+OpenMontage uses two layers for capability choice:
+
+- selector tools: capability-level routing such as `tts_selector` and `video_selector`
+- provider tools: concrete tools discovered via the registry that call a specific backend
+
+Always inspect the registry first:
+
+```bash
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.capability_catalog(), indent=2))"
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_catalog(), indent=2))"
+```
+
+For finalist tools inspect:
+
+- `capability`
+- `provider`
+- `usage_location`
+- `supports`
+- `fallback_tools`
+- `related_skills`
+
+Do not rely on memory or old docs when the registry can answer it.
+
+## Tool Families
+
+**Do not maintain hardcoded tool lists.** Always query the registry at runtime:
+
+```bash
+# See all tools grouped by capability (TTS, video_generation, image_generation, etc.)
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.capability_catalog(), indent=2))"
+
+# See all tools grouped by provider (elevenlabs, openai, ffmpeg, etc.)
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_catalog(), indent=2))"
+```
+
+Key capability families to look for in the output:
+
+- **tts** — Text-to-speech providers. Route via `tts_selector`.
+- **video_generation** — Video generation providers (cloud, local GPU, stock). Route via `video_selector`.
+- **image_generation** — Image generation providers (cloud, local GPU, stock). Route via `image_selector`.
+- **music_generation** — Music and sound effect generation.
+- **video_post** — Composition, stitching, trimming (FFmpeg-based, always local).
+- **audio_processing** — Mixing, enhancement (FFmpeg-based, always local).
+- **analysis** — Transcription, scene detection, frame sampling.
+- **avatar** — Talking head and lip sync generation.
+- **character_animation** — Local character specs, SVG rigs, pose libraries, action timelines, previews, and QA.
+- **3d_world_generation** — Local semantic terrain, procedural biome scattering, explicit landmarks, diagnostic passes, and deterministic HyperFrames/Three.js camera fly-throughs. Route through `threejs_world` and read `skills/creative/3d-world-generation.md` plus `.agents/skills/threejs-world-generation/SKILL.md`.
+- **3d_asset_acquisition** — Rights-safe GLTF/GLB catalogs for production-tier Three.js worlds. Route through `threejs_asset_catalog`; never substitute blockout primitives for a requested detailed or reference-grade environment.
+- **3d_asset_generation** — Unique textured/PBR meshes from text or concept images. Route text-described hero assets through `atlas_3d`, image-conditioned assets and regional object extraction through `fal_3d`, and read `.agents/skills/3d-asset-generation/SKILL.md`. Announce provider/model/unit cost before every first paid call and sample before batching.
+- **3d_world_rendering** — Production assembly, terrain, lighting, materials, camera, and image-sequence rendering in Blender. Route through `blender_world`; use Three.js for interactive/blockout review, not as a substitute for Blender when reference-grade scene density is requested.
+- **enhancement** — Upscale, background removal, face enhance, color grading.
+
+Each tool in the registry declares `best_for`, `install_instructions`, `runtime` (LOCAL, API, LOCAL_GPU, HYBRID), and `status`. Read these fields — do not assume tool strengths from memory.
+
+### Tool Class Naming Convention
+
+All tool classes use **PascalCase without a "Tool" suffix**. When importing tools in Python:
+
+| Module | Class Name | NOT |
+|--------|-----------|-----|
+| `tools.audio.music_gen` | `MusicGen` | ~~MusicGenTool~~ |
+| `tools.video.video_compose` | `VideoCompose` | ~~VideoComposeTool~~ |
+| `tools.audio.audio_mixer` | `AudioMixer` | ~~AudioMixerTool~~ |
+| `tools.tts.elevenlabs_tts` | `ElevenLabsTTS` | ~~ElevenLabsTTSTool~~ |
+| `tools.analysis.transcriber` | `Transcriber` | ~~TranscriberTool~~ |
+| `tools.subtitle.subtitle_gen` | `SubtitleGen` | ~~SubtitleGenTool~~ |
+
+When in doubt, check: `grep "^class " tools/<path>.py`
+
+All tools call via `.execute(params_dict)` (returns `ToolResult` with `.success`, `.data`, `.error`), NOT `.run()`.
+
+### Selector Pattern
+
+Three selector tools abstract multi-provider capabilities. **Selectors auto-discover providers from the registry.** Adding a new provider tool automatically makes it available through the selector — no selector code changes needed.
+
+| Selector | Routes to | How it discovers |
+|----------|-----------|-----------------|
+| `tts_selector` | All tools with `capability="tts"` (ElevenLabs, Google TTS, OpenAI, Piper, Azure, fish.audio) | `registry.get_by_capability("tts")` |
+| `image_selector` | All tools with `capability="image_generation"` (FLUX, Google Imagen, GPT Image, Recraft, etc.) | `registry.get_by_capability("image_generation")` |
+| `video_selector` | All tools with `capability="video_generation"` | `registry.get_by_capability("video_generation")` |
+brief/sound_mix_v30.py
+brief/sound_mix_v31.py
+brief/clip_rank.py
+brief/SCRIPT_v29.md
+brief/CANDIDATE_v31.md
+brief/CANDIDATE_v30.md
+brief/sound_mix_v28c.py
+brief/sound_mix_v29.py
+brief/CONTEXT.md
+corpus/raw/mixkit_15798.mp4
+corpus/raw/mixkit_8843.mp4
+corpus/raw/mixkit_42039.mp4
+corpus/raw/mixkit_223.mp4
+corpus/raw/mixkit_4513.mp4
+corpus/raw/mixkit_236.mp4
+corpus/raw/mixkit_46712.mp4
+corpus/raw/mixkit_8739.mp4
+corpus/raw/mixkit_31405.mp4
+corpus/raw/mixkit_14861.mp4
+corpus/raw/mixkit_31413.mp4
+corpus/raw/mixkit_49225.mp4
+corpus/raw/mixkit_50748.mp4
+corpus/raw/mixkit_23215.mp4
+corpus/raw/mixkit_4908.mp4
+corpus/raw/mixkit_4713.mp4
+corpus/raw/mixkit_48503.mp4
+corpus/raw/mixkit_4511.mp4
+corpus/raw/mixkit_39852.mp4
+corpus/raw/mixkit_209.mp4
+corpus/raw/mixkit_221.mp4
+corpus/raw/mixkit_42749.mp4
+corpus/raw/mixkit_41268.mp4
+corpus/raw/mixkit_3653.mp4
+corpus/raw/mixkit_816.mp4
+corpus/raw/mixkit_32137.mp4
+corpus/raw/mixkit_14669.mp4
+corpus/raw/mixkit_43527.mp4
+corpus/raw/mixkit_42639.mp4
+corpus/raw/mixkit_51123.mp4
+corpus/raw/mixkit_43269.mp4
+corpus/raw/mixkit_41293.mp4
+corpus/raw/mixkit_41287.mp4
+corpus/raw/mixkit_21573.mp4
+corpus/raw/mixkit_4919.mp4
+corpus/raw/mixkit_796.mp4
+corpus/raw/mixkit_5434.mp4
+corpus/raw/mixkit_4500.mp4
+corpus/raw/mixkit_21957.mp4
+corpus/raw/mixkit_9757.mp4
+corpus/raw/mixkit_24344.mp4
+corpus/raw/mixkit_42638.mp4
+corpus/raw/mixkit_344.mp4
+corpus/raw/mixkit_41655.mp4
+corpus/raw/mixkit_41858.mp4
+corpus/raw/mixkit_4477.mp4
+corpus/raw/mixkit_41643.mp4
+corpus/raw/mixkit_24540.mp4
+corpus/raw/mixkit_40978.mp4
+corpus/raw/mixkit_144.mp4
+corpus/raw/mixkit_24352.mp4
+corpus/raw/mixkit_4701.mp4
+corpus/raw/mixkit_4067.mp4
+corpus/raw/mixkit_39854.mp4
+corpus/raw/mixkit_39855.mp4
+corpus/raw/mixkit_5608.mp4
+corpus/raw/mixkit_39841.mp4
+corpus/raw/mixkit_4700.mp4
+corpus/raw/mixkit_1730.mp4
+corpus/raw/mixkit_5595.mp4
+corpus/raw/mixkit_810.mp4
+corpus/raw/mixkit_41656.mp4
+corpus/raw/mixkit_41865.mp4
+corpus/raw/mixkit_46878.mp4
+corpus/raw/mixkit_41859.mp4
+corpus/raw/mixkit_24056.mp4
+corpus/raw/mixkit_23711.mp4
+corpus/raw/mixkit_308.mp4
+corpus/raw/mixkit_36122.mp4
+corpus/raw/mixkit_4808.mp4
+corpus/raw/mixkit_4607.mp4
+corpus/raw/mixkit_4954.mp4
+corpus/raw/mixkit_917.mp4
+corpus/raw/mixkit_50112.mp4
+corpus/raw/mixkit_3578.mp4
+corpus/raw/mixkit_47321.mp4
+corpus/raw/mixkit_269.mp4
+corpus/raw/mixkit_28902.mp4
+corpus/raw/mixkit_241.mp4
+corpus/raw/mixkit_4982.mp4
+corpus/raw/mixkit_5518.mp4
+corpus/raw/mixkit_4148.mp4
+corpus/raw/mixkit_4809.mp4
+corpus/raw/mixkit_1781.mp4
+corpus/raw/mixkit_4835.mp4
+corpus/raw/mixkit_28889.mp4
+corpus/raw/mixkit_23710.mp4
+corpus/raw/mixkit_24057.mp4
+corpus/raw/mixkit_39774.mp4
+corpus/raw/mixkit_24055.mp4
+corpus/raw/mixkit_41801.mp4
+corpus/raw/mixkit_41183.mp4
+corpus/raw/mixkit_24069.mp4
+corpus/raw/mixkit_23712.mp4
+corpus/raw/mixkit_39789.mp4
+corpus/raw/mixkit_49939.mp4
+corpus/raw/mixkit_29997.mp4
+corpus/raw/mixkit_23458.mp4
+corpus/raw/mixkit_914.mp4
+corpus/raw/mixkit_22961.mp4
+corpus/raw/mixkit_32794.mp4
+corpus/raw/mixkit_50111.mp4
+corpus/raw/mixkit_48010.mp4
+corpus/raw/mixkit_242.mp4
+corpus/raw/mixkit_28901.mp4
+corpus/raw/mixkit_49482.mp4
+corpus/raw/mixkit_4956.mp4
+corpus/raw/mixkit_42662.mp4
+corpus/raw/mixkit_23288.mp4
+corpus/raw/mixkit_5731.mp4
+corpus/raw/mixkit_23713.mp4
+corpus/raw/mixkit_24068.mp4
+corpus/raw/mixkit_24054.mp4
+corpus/raw/mixkit_23717.mp4
+corpus/raw/mixkit_24050.mp4
+corpus/raw/mixkit_39773.mp4
+corpus/raw/mixkit_24044.mp4
+corpus/raw/mixkit_31663.mp4
+corpus/raw/mixkit_47044.mp4
+corpus/raw/mixkit_42048.mp4
+corpus/raw/mixkit_4985.mp4
+corpus/raw/mixkit_39834.mp4
+corpus/raw/mixkit_4577.mp4
+corpus/raw/yt_y8r-wbV-4kU.mp4
+corpus/raw/mixkit_50114.mp4
+corpus/raw/mixkit_247.mp4
+corpus/raw/mixkit_25575.mp4
+corpus/raw/mixkit_4984.mp4
+corpus/raw/mixkit_4953.mp4
+corpus/raw/mixkit_42897.mp4
+corpus/raw/mixkit_4827.mp4
+corpus/raw/mixkit_24051.mp4
+corpus/raw/mixkit_26108.mp4
+corpus/raw/mixkit_23716.mp4
+corpus/raw/mixkit_23714.mp4
+corpus/raw/mixkit_24053.mp4
+corpus/raw/mixkit_48610.mp4
+corpus/raw/mixkit_1746.mp4
+corpus/raw/mixkit_36090.mp4
+corpus/raw/mixkit_4992.mp4
+corpus/raw/mixkit_26917.mp4
+corpus/raw/mixkit_4548.mp4
+corpus/raw/mixkit_25589.mp4
+corpus/raw/mixkit_50116.mp4
+corpus/raw/mixkit_39836.mp4
+corpus/raw/mixkit_39822.mp4
+corpus/raw/mixkit_30386.mp4
+corpus/raw/mixkit_1800.mp4
+corpus/raw/mixkit_40701.mp4
+corpus/raw/mixkit_42664.mp4
+corpus/raw/mixkit_4830.mp4
+corpus/raw/mixkit_29990.mp4
+corpus/raw/mixkit_4401.mp4
+corpus/raw/mixkit_24052.mp4
+corpus/raw/mixkit_23715.mp4
+corpus/raw/mixkit_24063.mp4
+corpus/raw/mixkit_23718.mp4
+corpus/raw/mixkit_23724.mp4
+corpus/raw/mixkit_41638.mp4
+corpus/raw/mixkit_14639.mp4
+corpus/raw/mixkit_4801.mp4
+corpus/raw/mixkit_42133.mp4
+corpus/raw/mixkit_25585.mp4
+corpus/raw/mixkit_46750.mp4
+corpus/raw/mixkit_44147.mp4
+corpus/raw/mixkit_30605.mp4
+corpus/raw/mixkit_26517.mp4
+corpus/raw/mixkit_41375.mp4
+corpus/raw/mixkit_39782.mp4
+corpus/raw/mixkit_23725.mp4
+corpus/raw/mixkit_23719.mp4
+corpus/raw/mixkit_24062.mp4
+corpus/raw/mixkit_24060.mp4
+corpus/raw/mixkit_23727.mp4
+corpus/raw/mixkit_39780.mp4
+corpus/raw/mixkit_41161.mp4
+corpus/raw/mixkit_4433.mp4
+corpus/raw/mixkit_4802.mp4
+corpus/raw/mixkit_42656.mp4
+corpus/raw/mixkit_40733.mp4
+corpus/raw/mixkit_6754.mp4
+corpus/raw/mixkit_4157.mp4
+corpus/raw/mixkit_51602.mp4
+corpus/raw/mixkit_29961.mp4
+corpus/raw/mixkit_49878.mp4
+corpus/raw/mixkit_33468.mp4
+corpus/raw/mixkit_39838.mp4
+corpus/raw/mixkit_4547.mp4
+corpus/raw/mixkit_25592.mp4
+corpus/raw/mixkit_39839.mp4
+corpus/raw/mixkit_17508.mp4
+corpus/raw/mixkit_41174.mp4
+corpus/raw/mixkit_41160.mp4
+corpus/raw/mixkit_317.mp4
+corpus/raw/mixkit_13168.mp4
+corpus/raw/mixkit_24061.mp4
+corpus/raw/mixkit_28897.mp4
+corpus/raw/mixkit_23722.mp4
+corpus/raw/mixkit_24059.mp4
+corpus/raw/mixkit_28893.mp4
+corpus/raw/mixkit_24065.mp4
+corpus/raw/mixkit_4422.mp4
+corpus/raw/mixkit_51405.mp4
+corpus/raw/mixkit_17450.mp4
+corpus/raw/mixkit_4813.mp4
+corpus/raw/mixkit_42653.mp4
+corpus/raw/mixkit_918.mp4
+corpus/raw/mixkit_1610.mp4
+corpus/raw/mixkit_42041.mp4
+corpus/raw/mixkit_50109.mp4
+corpus/raw/mixkit_48746.mp4
+corpus/raw/mixkit_4806.mp4
+corpus/raw/mixkit_23938.mp4
+corpus/raw/mixkit_41165.mp4
+corpus/raw/mixkit_43941.mp4
+corpus/raw/mixkit_30011.mp4
+corpus/raw/mixkit_28886.mp4
+corpus/raw/mixkit_24064.mp4
+corpus/raw/mixkit_24070.mp4
+corpus/raw/mixkit_30005.mp4
+corpus/raw/mixkit_28892.mp4
+corpus/raw/mixkit_24058.mp4
+corpus/raw/mixkit_23723.mp4
+corpus/raw/mixkit_23721.mp4
+corpus/raw/mixkit_24066.mp4
+corpus/raw/mixkit_3428.mp4
+corpus/raw/mixkit_4804.mp4
+corpus/raw/mixkit_16215.mp4
+corpus/raw/mixkit_42136.mp4
+corpus/raw/mixkit_8743.mp4
+corpus/raw/mixkit_40047.mp4
+corpus/raw/mixkit_45922.mp4
+corpus/raw/mixkit_1808.mp4
+corpus/raw/mixkit_25595.mp4
+corpus/raw/mixkit_44143.mp4
+corpus/raw/mixkit_46755.mp4
+corpus/raw/yt_-JHOJ9aNVkw.mp4
+corpus/raw/mixkit_44432.mp4
+corpus/raw/mixkit_40654.mp4
+corpus/raw/mixkit_13218.mp4
+corpus/raw/mixkit_40640.mp4
+corpus/raw/mixkit_45923.mp4
+corpus/raw/mixkit_4805.mp4
+corpus/raw/mixkit_4811.mp4
+corpus/raw/mixkit_46635.mp4
+corpus/raw/mixkit_24067.mp4
+corpus/raw/mixkit_4385.mp4
+corpus/raw/mixkit_23720.mp4
+corpus/raw/mixkit_4876.mp4
+corpus/raw/yt__-SQ3B0oEQE.mp4
+corpus/raw/mixkit_40747.mp4
+corpus/raw/mixkit_4916.mp4
+corpus/raw/yt_POdVJfYym7E.mp4
+corpus/raw/mixkit_4283.mp4
+corpus/raw/mixkit_48285.mp4
+corpus/raw/mixkit_1728.mp4
+corpus/raw/mixkit_40746.mp4
+corpus/raw/mixkit_40961.mp4
+corpus/raw/mixkit_24217.mp4
+corpus/raw/mixkit_808.mp4
+corpus/raw/mixkit_34560.mp4
+corpus/raw/mixkit_4478.mp4
+corpus/raw/mixkit_40988.mp4
+corpus/raw/mixkit_43259.mp4
+corpus/raw/mixkit_40778.mp4
+corpus/raw/mixkit_4915.mp4
+corpus/raw/mixkit_21594.mp4
+corpus/raw/mixkit_4281.mp4
+corpus/raw/mixkit_23195.mp4
+corpus/raw/mixkit_4531.mp4
+corpus/raw/mixkit_43270.mp4
+corpus/raw/mixkit_42620.mp4
+corpus/raw/mixkit_3672.mp4
+corpus/raw/mixkit_4451.mp4
+corpus/raw/mixkit_46122.mp4
+corpus/raw/mixkit_50998.mp4
+corpus/raw/mixkit_23962.mp4
+corpus/raw/mixkit_4119.mp4
+corpus/raw/mixkit_4938.mp4
+corpus/raw/mixkit_4737.mp4
+corpus/raw/mixkit_4079.mp4
+corpus/raw/mixkit_33354.mp4
+corpus/raw/mixkit_204.mp4
+corpus/raw/mixkit_4508.mp4
+corpus/raw/mixkit_25251.mp4
+corpus/raw/mixkit_4939.mp4
+corpus/raw/mixkit_42625.mp4
+corpus/raw/mixkit_4332.mp4
+corpus/raw/mixkit_5951.mp4
+corpus/raw/mixkit_23742.mp4
+corpus/raw/mixkit_46680.mp4
+corpus/raw/mixkit_42343.mp4
+corpus/raw/mixkit_1704.mp4
+corpus/raw/mixkit_4907.mp4
+corpus/raw/mixkit_4720.mp4
+corpus/raw/mixkit_4708.mp4
+corpus/raw/mixkit_16115.mp4
+corpus/raw/mixkit_206.mp4
+corpus/raw/mixkit_5601.mp4
+corpus/raw/mixkit_48733.mp4
+corpus/raw/mixkit_24164.mp4
+corpus/raw/mixkit_1711.mp4
+corpus/raw/mixkit_4872.mp4
+corpus/raw/mixkit_42342.mp4
+corpus/raw/mixkit_43935.mp4
+corpus/ranking.json
+corpus/embeddings.npy
+corpus/shootf/mixkit_24005_0.jpg
+corpus/shootf/mixkit_24040_0.jpg
+corpus/shootf/mixkit_23768_1.jpg
+corpus/index.jsonl
+corpus/shootf/mixkit_23693_2.jpg
+corpus/shootf/mixkit_24059_1.jpg
+corpus/shootf/mixkit_23771_0.jpg
+corpus/shootf/mixkit_23734_0.jpg
+corpus/shootf/mixkit_24082_2.jpg
+corpus/shootf/mixkit_24118_0.jpg
+corpus/shootf/mixkit_23299_1.jpg
+corpus/shootf/mixkit_23688_1.jpg
+corpus/shootf/mixkit_24125_0.jpg
+corpus/shootf/mixkit_24080_1.jpg
+corpus/shootf/mixkit_24042_2.jpg
+corpus/shootf/mixkit_24099_1.jpg
+corpus/shootf/mixkit_23755_0.jpg
+corpus/shootf/mixkit_23282_2.jpg
+corpus/shootf/mixkit_24007_2.jpg
+corpus/shootf/mixkit_24038_1.jpg
+corpus/shootf/mixkit_23709_0.jpg
+corpus/shootf/mixkit_23710_0.jpg
+corpus/shootf/mixkit_24021_1.jpg
+corpus/shootf/mixkit_23299_0.jpg
+corpus/shootf/mixkit_23691_1.jpg
+corpus/shootf/mixkit_24125_1.jpg
+corpus/shootf/mixkit_24064_1.jpg
+corpus/shootf/mixkit_23691_0.jpg
+corpus/shootf/mixkit_24103_2.jpg
+corpus/shootf/mixkit_23795_1.jpg
+corpus/shootf/mixkit_23755_1.jpg
+corpus/shootf/mixkit_23771_1.jpg
+corpus/shootf/mixkit_23280_0.jpg
+corpus/shootf/mixkit_23710_1.jpg
+corpus/shootf/mixkit_24059_0.jpg
+corpus/shootf/mixkit_23734_1.jpg
+corpus/shootf/mixkit_24038_0.jpg
+corpus/shootf/mixkit_24080_0.jpg
+corpus/shootf/mixkit_23736_2.jpg
+corpus/shootf/mixkit_23712_2.jpg
+corpus/shootf/mixkit_24101_1.jpg
+corpus/shootf/mixkit_24101_0.jpg
+corpus/shootf/mixkit_23757_2.jpg
+corpus/shootf/mixkit_24127_2.jpg
+corpus/shoot/mixkit_23757.mp4
+corpus/shoot/mixkit_24038.mp4
+corpus/shootf/mixkit_24021_0.jpg
+corpus/tag_embeddings.npy
+corpus/shoot/mixkit_24004.mp4
+corpus/shootf/mixkit_23709_1.jpg
+corpus/shootf/mixkit_24118_1.jpg
+corpus/shoot/mixkit_23743.mp4
+corpus/shootf/mixkit_24064_0.jpg
+corpus/shootf/mixkit_23797_2.jpg
+corpus/shoot/mixkit_24010.mp4
+corpus/shootf/mixkit_24099_0.jpg
+corpus/shootf/mixkit_23688_0.jpg
+corpus/shoot/mixkit_23794.mp4
+corpus/shoot/mixkit_23780.mp4
+corpus/shootf/mixkit_23280_1.jpg
+corpus/shootf/mixkit_24005_1.jpg
+corpus/shootf/mixkit_23795_0.jpg
+corpus/shootf/mixkit_23768_0.jpg
+corpus/shootf/mixkit_24040_1.jpg
+corpus/shoot/mixkit_23781.mp4
+corpus/shoot/mixkit_23795.mp4
+corpus/shoot/mixkit_24011.mp4
+corpus/shootf/mixkit_24066_2.jpg
+corpus/shootf/mixkit_24023_2.jpg
+corpus/shootf/mixkit_24066_0.jpg
+corpus/shootf/mixkit_24023_0.jpg
+corpus/shootf/mixkit_23768_2.jpg
+corpus/shoot/mixkit_24005.mp4
+corpus/shootf/mixkit_23795_2.jpg
+corpus/shoot/mixkit_23742.mp4
+corpus/shoot/mixkit_24039.mp4
+corpus/shoot/mixkit_23756.mp4
+corpus/shoot/mixkit_23740.mp4
+corpus/shoot/mixkit_23998.mp4
+corpus/shootf/mixkit_24021_2.jpg
+corpus/shootf/mixkit_24042_1.jpg
+corpus/shootf/mixkit_24007_1.jpg
+corpus/shoot/mixkit_23754.mp4
+corpus/shootf/mixkit_23688_2.jpg
+corpus/shoot/mixkit_24013.mp4
+corpus/shootf/mixkit_24064_2.jpg
+corpus/shoot/mixkit_24007.mp4
+corpus/shootf/mixkit_24099_2.jpg
+corpus/shootf/mixkit_23282_1.jpg
+corpus/shoot/mixkit_23797.mp4
+corpus/shoot/mixkit_23783.mp4
+corpus/shoot/mixkit_23768.mp4
+corpus/shoot/mixkit_23796.mp4
+corpus/sheets/coffee.jpg
+corpus/shoot/mixkit_23769.mp4
+corpus/shoot/mixkit_23782.mp4
+corpus/shootf/mixkit_24082_1.jpg
+corpus/sheets/rub_eyes.jpg
+corpus/shootf/mixkit_23299_2.jpg
+corpus/shootf/mixkit_24103_0.jpg
+corpus/shoot/mixkit_24006.mp4
+corpus/shootf/mixkit_23797_0.jpg
+corpus/shoot/mixkit_24012.mp4
+corpus/sheets/face_screen.jpg
+corpus/shoot/mixkit_23755.mp4
+corpus/sheets/trackpad.jpg
+corpus/shoot/mixkit_23999.mp4
+corpus/shootf/mixkit_24127_1.jpg
+corpus/shootf/mixkit_23693_1.jpg
+corpus/sheets/city_night.jpg
+corpus/shoot/mixkit_23741.mp4
+corpus/shootf/mixkit_24101_2.jpg
+corpus/shootf/mixkit_24059_2.jpg
+corpus/shootf/mixkit_23712_0.jpg
+corpus/shootf/mixkit_23757_0.jpg
+corpus/shootf/mixkit_23710_2.jpg
+corpus/sheets/empty_office.jpg
+corpus/shootf/mixkit_23755_2.jpg
+corpus/shoot/mixkit_23779.mp4
+corpus/shootf/mixkit_23736_1.jpg
+corpus/sheets/clock.jpg
+corpus/shoot/mixkit_24016.mp4
+corpus/shootf/mixkit_23773_1.jpg
+corpus/sheets/hands_typing.jpg
+corpus/shoot/mixkit_24002.mp4
+corpus/shootf/mixkit_23691_2.jpg
+corpus/sheets/stress.jpg
+corpus/shoot/mixkit_23745.mp4
+corpus/shootf/mixkit_23736_0.jpg
+corpus/sheets/phone_desk.jpg
+corpus/shootf/mixkit_23773_0.jpg
+corpus/shoot/mixkit_23751.mp4
+corpus/shoot/mixkit_23786.mp4
+corpus/shoot/mixkit_23792.mp4
+corpus/shootf/mixkit_24038_2.jpg
+corpus/shootf/mixkit_24080_2.jpg
+corpus/shoot/mixkit_23793.mp4
+corpus/shoot/mixkit_24021.mp4
+corpus/shoot/mixkit_23996.mp4
+corpus/shoot/mixkit_24035.mp4
+corpus/shoot/mixkit_23772.mp4
+corpus/shoot/mixkit_23766.mp4
+corpus/shoot/mixkit_24009.mp4
+corpus/shoot/mixkit_23799.mp4
+corpus/shoot/mixkit_23798.mp4
+corpus/shoot/mixkit_24008.mp4
+corpus/shoot/mixkit_23767.mp4
+corpus/shoot/mixkit_23773.mp4
+corpus/shoot/mixkit_24034.mp4
+corpus/shoot/mixkit_23997.mp4
+corpus/shoot/mixkit_24020.mp4
+corpus/shoot/mixkit_23759.mp4
+corpus/shoot/mixkit_24036.mp4
+corpus/shoot/mixkit_24022.mp4
+corpus/shoot/mixkit_23995.mp4
+corpus/shoot/mixkit_23765.mp4
+corpus/shoot/mixkit_23771.mp4
+corpus/shoot/mixkit_23770.mp4
+corpus/shoot/mixkit_23764.mp4
+corpus/shoot/mixkit_23994.mp4
+corpus/shoot/mixkit_24023.mp4
+corpus/shoot/mixkit_24037.mp4
+corpus/shoot/mixkit_23758.mp4
+corpus/shoot/mixkit_23760.mp4
+corpus/shoot/mixkit_23774.mp4
+corpus/shoot/mixkit_24033.mp4
+corpus/shoot/mixkit_24027.mp4
+corpus/shoot/mixkit_23748.mp4
+corpus/shoot/mixkit_23990.mp4
+corpus/shoot/mixkit_23991.mp4
+corpus/shoot/mixkit_23749.mp4
+corpus/shoot/mixkit_24026.mp4
+corpus/shoot/mixkit_24032.mp4
+corpus/shoot/mixkit_23775.mp4
+corpus/shoot/mixkit_23761.mp4
+corpus/shoot/mixkit_24018.mp4
+corpus/shoot/mixkit_23777.mp4
+corpus/shoot/mixkit_23763.mp4
+corpus/shoot/mixkit_24024.mp4
+corpus/shoot/mixkit_23993.mp4
+corpus/shoot/mixkit_24030.mp4
+corpus/shoot/mixkit_23788.mp4
+corpus/shoot/mixkit_23789.mp4
+corpus/shoot/mixkit_24031.mp4
+corpus/shoot/mixkit_23992.mp4
+corpus/shoot/mixkit_24025.mp4
+corpus/shoot/mixkit_23762.mp4
+corpus/shoot/mixkit_23776.mp4
+corpus/shoot/mixkit_24019.mp4
+corpus/shoot/mixkit_24042.mp4
+corpus/shoot/mixkit_23739.mp4
+corpus/shoot/mixkit_24056.mp4
+corpus/shoot/mixkit_23711.mp4
+corpus/shoot/mixkit_23705.mp4
+corpus/shoot/mixkit_24081.mp4
+corpus/shoot/mixkit_24095.mp4
+corpus/shoot/mixkit_23275.mp4
+corpus/shoot/mixkit_24122.mp4
+corpus/shoot/mixkit_24123.mp4
+corpus/shoot/mixkit_23300.mp4
+corpus/shoot/mixkit_23274.mp4
+corpus/shoot/mixkit_24094.mp4
+corpus/shoot/mixkit_24080.mp4
+corpus/shoot/mixkit_23704.mp4
+corpus/shoot/mixkit_23710.mp4
+corpus/shoot/mixkit_24057.mp4
+corpus/shoot/mixkit_23738.mp4
+corpus/shoot/mixkit_24043.mp4
+corpus/shoot/mixkit_24055.mp4
+corpus/shoot/mixkit_24041.mp4
+corpus/shoot/mixkit_23706.mp4
+corpus/shoot/mixkit_24069.mp4
+corpus/shoot/mixkit_23712.mp4
+corpus/shoot/mixkit_24096.mp4
+corpus/shoot/mixkit_24082.mp4
+corpus/shoot/mixkit_23276.mp4
+corpus/shoot/mixkit_23289.mp4
+corpus/shoot/mixkit_24121.mp4
+corpus/shoot/mixkit_24109.mp4
+corpus/shoot/mixkit_23699.mp4
+corpus/shoot/mixkit_23698.mp4
+corpus/shoot/mixkit_24108.mp4
+corpus/shoot/mixkit_24120.mp4
+corpus/shoot/mixkit_23288.mp4
+corpus/shoot/mixkit_23277.mp4
+corpus/shoot/mixkit_24083.mp4
+corpus/shoot/mixkit_24097.mp4
+corpus/shoot/mixkit_23713.mp4
+corpus/shoot/mixkit_24068.mp4
+corpus/shoot/mixkit_23707.mp4
+corpus/shoot/mixkit_24040.mp4
+corpus/shoot/mixkit_24054.mp4
+corpus/shoot/mixkit_23703.mp4
+corpus/shoot/mixkit_24078.mp4
+corpus/shoot/mixkit_23717.mp4
+corpus/shoot/mixkit_24050.mp4
+corpus/shoot/mixkit_24044.mp4
+corpus/shoot/mixkit_24093.mp4
+corpus/shoot/mixkit_24087.mp4
+corpus/shoot/mixkit_23273.mp4
+corpus/shoot/mixkit_23298.mp4
+corpus/shoot/mixkit_24118.mp4
+corpus/shoot/mixkit_24124.mp4
+corpus/shoot/mixkit_24130.mp4
+corpus/shoot/mixkit_23688.mp4
+corpus/shoot/mixkit_23689.mp4
+corpus/shoot/mixkit_24125.mp4
+corpus/shoot/mixkit_24119.mp4
+corpus/shoot/mixkit_23299.mp4
+corpus/shoot/mixkit_23272.mp4
+corpus/shoot/mixkit_24086.mp4
+corpus/shoot/mixkit_24092.mp4
+corpus/shoot/mixkit_24045.mp4
+corpus/shoot/mixkit_24051.mp4
+corpus/shoot/mixkit_23716.mp4
+corpus/shoot/mixkit_24079.mp4
+corpus/shoot/mixkit_23702.mp4
+corpus/shoot/mixkit_23714.mp4
+corpus/shoot/mixkit_23700.mp4
+corpus/shoot/mixkit_24047.mp4
+corpus/shoot/mixkit_23728.mp4
+corpus/shoot/mixkit_24053.mp4
+corpus/shoot/mixkit_24084.mp4
+corpus/shoot/mixkit_24090.mp4
+corpus/shoot/mixkit_23270.mp4
+corpus/shoot/mixkit_24127.mp4
+corpus/shoot/mixkit_24126.mp4
+corpus/shoot/mixkit_23271.mp4
+corpus/shoot/mixkit_24091.mp4
+corpus/shoot/mixkit_24085.mp4
+corpus/shoot/mixkit_24052.mp4
+corpus/shoot/mixkit_23729.mp4
+corpus/shoot/mixkit_24046.mp4
+corpus/shoot/mixkit_23701.mp4
+corpus/shoot/mixkit_23715.mp4
+corpus/shoot/mixkit_24063.mp4
+corpus/shoot/mixkit_23718.mp4
+corpus/shoot/mixkit_24077.mp4
+corpus/shoot/mixkit_23730.mp4
+corpus/shoot/mixkit_23724.mp4
+corpus/shoot/mixkit_24088.mp4
+corpus/shoot/mixkit_23297.mp4
+corpus/shoot/mixkit_23283.mp4
+corpus/shoot/mixkit_24117.mp4
+corpus/shoot/mixkit_24103.mp4
+corpus/shoot/mixkit_23687.mp4
+corpus/shoot/mixkit_23693.mp4
+corpus/shoot/mixkit_23692.mp4
+corpus/shoot/mixkit_23686.mp4
+corpus/shoot/mixkit_24102.mp4
+corpus/shoot/mixkit_24116.mp4
+corpus/shoot/mixkit_23282.mp4
+corpus/shoot/mixkit_23296.mp4
+corpus/shoot/mixkit_24089.mp4
+corpus/shoot/mixkit_23725.mp4
+corpus/shoot/mixkit_23731.mp4
+corpus/shoot/mixkit_24076.mp4
+corpus/shoot/mixkit_23719.mp4
+corpus/shoot/mixkit_24062.mp4
+corpus/shoot/mixkit_24074.mp4
+corpus/shoot/mixkit_24060.mp4
+corpus/shoot/mixkit_23727.mp4
+corpus/shoot/mixkit_24048.mp4
+corpus/shoot/mixkit_23733.mp4
+corpus/shoot/mixkit_23280.mp4
+corpus/shoot/mixkit_23294.mp4
+corpus/shoot/mixkit_24100.mp4
+corpus/shoot/mixkit_24114.mp4
+corpus/shoot/mixkit_24128.mp4
+corpus/shoot/mixkit_23690.mp4
+corpus/shoot/mixkit_23684.mp4
+corpus/shoot/mixkit_23685.mp4
+corpus/shoot/mixkit_23691.mp4
+corpus/shoot/mixkit_24129.mp4
+corpus/shoot/mixkit_24115.mp4
+corpus/shoot/mixkit_24101.mp4
+corpus/shoot/mixkit_23295.mp4
+corpus/shoot/mixkit_23281.mp4
+corpus/shoot/mixkit_23732.mp4
+corpus/shoot/mixkit_24049.mp4
+corpus/shoot/mixkit_23726.mp4
+corpus/shoot/mixkit_24061.mp4
+corpus/shoot/mixkit_24075.mp4
+corpus/shoot/mixkit_23722.mp4
+corpus/shoot/mixkit_24059.mp4
+corpus/shoot/mixkit_23736.mp4
+corpus/shoot/mixkit_24071.mp4
+corpus/shoot/mixkit_24065.mp4
+corpus/shoot/mixkit_23285.mp4
+corpus/shoot/mixkit_23291.mp4
+corpus/shoot/mixkit_24105.mp4
+corpus/shoot/mixkit_24111.mp4
+corpus/shoot/mixkit_23695.mp4
+corpus/shoot/mixkit_23681.mp4
+corpus/shoot/mixkit_23680.mp4
+corpus/shoot/mixkit_23694.mp4
+corpus/shoot/mixkit_24110.mp4
+corpus/shoot/mixkit_24104.mp4
+corpus/shoot/mixkit_23290.mp4
+corpus/shoot/mixkit_23284.mp4
+corpus/shoot/mixkit_24064.mp4
+corpus/shoot/mixkit_24070.mp4
+corpus/shoot/mixkit_23737.mp4
+corpus/shoot/mixkit_24058.mp4
+corpus/shoot/mixkit_23723.mp4
+corpus/shoot/mixkit_23735.mp4
+corpus/shoot/mixkit_23721.mp4
+corpus/shoot/mixkit_24066.mp4
+corpus/shoot/mixkit_23709.mp4
+corpus/shoot/mixkit_24072.mp4
+corpus/shoot/mixkit_24099.mp4
+corpus/shoot/mixkit_23279.mp4
+corpus/shoot/mixkit_23292.mp4
+corpus/shoot/mixkit_23286.mp4
+corpus/shoot/mixkit_24112.mp4
+corpus/shoot/mixkit_24106.mp4
+corpus/shoot/mixkit_23682.mp4
+corpus/shoot/mixkit_23696.mp4
+corpus/shoot/mixkit_23697.mp4
+corpus/shoot/mixkit_23683.mp4
+corpus/shoot/mixkit_24107.mp4
+corpus/shoot/mixkit_24113.mp4
+corpus/shoot/mixkit_23287.mp4
+corpus/shoot/mixkit_23293.mp4
+corpus/shoot/mixkit_23278.mp4
+corpus/shoot/mixkit_24098.mp4
+corpus/shoot/mixkit_24073.mp4
+corpus/shoot/mixkit_23708.mp4
+corpus/shoot/mixkit_24067.mp4
+corpus/shoot/mixkit_23720.mp4
+corpus/shoot/mixkit_23734.mp4
+corpus/shoot/mixkit_24000.mp4
+corpus/shoot/mixkit_24014.mp4
+corpus/shoot/mixkit_23753.mp4
+corpus/shoot/mixkit_23747.mp4
+corpus/shoot/mixkit_24028.mp4
+corpus/shoot/mixkit_23790.mp4
+corpus/shoot/mixkit_23784.mp4
+corpus/shoot/mixkit_23800.mp4
+corpus/shoot/mixkit_23785.mp4
+corpus/shoot/mixkit_23791.mp4
+corpus/shoot/mixkit_24029.mp4
+corpus/shoot/mixkit_23746.mp4
+corpus/shoot/mixkit_23752.mp4
+corpus/shoot/mixkit_24015.mp4
+corpus/shoot/mixkit_24001.mp4
+corpus/shoot/mixkit_23778.mp4
+corpus/shoot/mixkit_24017.mp4
+corpus/shoot/mixkit_23744.mp4
+corpus/shoot/mixkit_23750.mp4
+corpus/shoot/mixkit_23787.mp4
+corpus/shootf/mixkit_23998_1.jpg
+corpus/shootf/mixkit_23695_2.jpg
+corpus/shootf/mixkit_24123_0.jpg
+corpus/shootf/mixkit_24084_2.jpg
+corpus/shootf/mixkit_23753_1.jpg
+corpus/shootf/mixkit_23716_1.jpg
+corpus/shootf/mixkit_23730_2.jpg
+corpus/shootf/mixkit_23775_2.jpg
+corpus/shootf/mixkit_23697_0.jpg
+corpus/shootf/mixkit_24107_1.jpg
+corpus/shootf/mixkit_24121_2.jpg
+corpus/shootf/mixkit_23788_2.jpg
+corpus/shootf/mixkit_24086_0.jpg
+corpus/shootf/mixkit_24005_2.jpg
+corpus/shootf/mixkit_24023_1.jpg
+corpus/shootf/mixkit_24066_1.jpg
+corpus/shootf/mixkit_23280_2.jpg
+corpus/shootf/mixkit_24007_0.jpg
+corpus/shootf/mixkit_24042_0.jpg
+corpus/shootf/mixkit_23709_2.jpg
+corpus/shootf/mixkit_23282_0.jpg
+corpus/shootf/mixkit_24118_2.jpg
+corpus/shootf/mixkit_23797_1.jpg
+corpus/shootf/mixkit_24103_1.jpg
+corpus/shootf/mixkit_24125_2.jpg
+corpus/shootf/mixkit_24082_0.jpg
+corpus/shootf/mixkit_23757_1.jpg
+corpus/shootf/mixkit_23712_1.jpg
+corpus/shootf/mixkit_23734_2.jpg
+corpus/shootf/mixkit_23771_2.jpg
+corpus/shootf/mixkit_23693_0.jpg
+corpus/shootf/mixkit_24127_0.jpg
+corpus/shootf/mixkit_23716_0.jpg
+corpus/shootf/mixkit_24123_1.jpg
+corpus/shootf/mixkit_24105_2.jpg
+corpus/shootf/mixkit_23777_1.jpg
+corpus/shootf/mixkit_23998_0.jpg
+corpus/shootf/mixkit_23732_1.jpg
+corpus/shootf/mixkit_23714_2.jpg
+corpus/shootf/mixkit_23751_2.jpg
+corpus/shootf/mixkit_24027_0.jpg
+corpus/shootf/mixkit_24062_0.jpg
+corpus/shootf/mixkit_23729_2.jpg
+corpus/shootf/mixkit_23791_2.jpg
+corpus/shootf/mixkit_23800_0.jpg
+corpus/shootf/mixkit_24060_2.jpg
+corpus/shootf/mixkit_24025_2.jpg
+corpus/shootf/mixkit_24046_1.jpg
+corpus/shootf/mixkit_23793_0.jpg
+corpus/shootf/mixkit_23286_1.jpg
+corpus/shootf/mixkit_23286_0.jpg
+corpus/shootf/mixkit_23793_1.jpg
+corpus/shootf/mixkit_24046_0.jpg
+corpus/shootf/mixkit_23748_2.jpg
+corpus/shootf/mixkit_23800_1.jpg
+corpus/shootf/mixkit_23284_2.jpg
+corpus/shootf/mixkit_24044_2.jpg
+corpus/shootf/mixkit_24001_2.jpg
+corpus/shootf/mixkit_24027_1.jpg
+corpus/shootf/mixkit_24062_1.jpg
+corpus/shootf/mixkit_23279_2.jpg
+corpus/shootf/mixkit_24079_2.jpg
+corpus/shootf/mixkit_23777_0.jpg
+corpus/shootf/mixkit_23732_0.jpg
+corpus/shootf/mixkit_23793_2.jpg
+corpus/shootf/mixkit_24025_0.jpg
+corpus/shootf/mixkit_24060_0.jpg
+corpus/shootf/mixkit_23748_1.jpg
+corpus/shootf/mixkit_23800_2.jpg
+corpus/shootf/mixkit_23284_1.jpg
+corpus/shootf/mixkit_23791_0.jpg
+corpus/shootf/mixkit_24062_2.jpg
+corpus/shootf/mixkit_24027_2.jpg
+corpus/shootf/mixkit_23729_0.jpg
+corpus/shootf/mixkit_24001_1.jpg
+corpus/shootf/mixkit_24044_1.jpg
+corpus/shootf/mixkit_23279_1.jpg
+corpus/shootf/mixkit_23998_2.jpg
+corpus/shootf/mixkit_24079_1.jpg
+corpus/shootf/mixkit_23751_0.jpg
+corpus/shootf/mixkit_23714_0.jpg
+corpus/shootf/mixkit_23695_1.jpg
+corpus/shootf/mixkit_24105_0.jpg
+corpus/shootf/mixkit_24084_1.jpg
+corpus/shootf/mixkit_23775_1.jpg
+corpus/shootf/mixkit_23730_1.jpg
+corpus/shootf/mixkit_24018_0.jpg
+corpus/shootf/mixkit_23753_2.jpg
+corpus/shootf/mixkit_24121_1.jpg
+corpus/shootf/mixkit_24107_2.jpg
+corpus/shootf/mixkit_23788_1.jpg
+corpus/shootf/mixkit_24086_1.jpg
+corpus/shootf/mixkit_24107_0.jpg
+corpus/shootf/mixkit_23697_1.jpg
+corpus/shootf/mixkit_24018_2.jpg
+corpus/shootf/mixkit_23753_0.jpg
+corpus/shootf/mixkit_23772_1.jpg
+corpus/shootf/mixkit_23754_2.jpg
+corpus/shootf/mixkit_23711_2.jpg
+corpus/shootf/mixkit_24126_1.jpg
+corpus/shootf/mixkit_24100_2.jpg
+corpus/shootf/mixkit_23788_0.jpg
+corpus/shootf/mixkit_24086_2.jpg
+corpus/shootf/mixkit_24121_0.jpg
+corpus/shootf/mixkit_23697_2.jpg
+corpus/shootf/mixkit_23775_0.jpg
+corpus/shootf/mixkit_24018_1.jpg
+corpus/shootf/mixkit_23730_0.jpg
+corpus/shootf/mixkit_24084_0.jpg
+corpus/shootf/mixkit_24105_1.jpg
+corpus/shootf/mixkit_24123_2.jpg
+corpus/shootf/mixkit_23695_0.jpg
+corpus/shootf/mixkit_23751_1.jpg
+corpus/shootf/mixkit_24079_0.jpg
+corpus/shootf/mixkit_23714_1.jpg
+corpus/shootf/mixkit_23732_2.jpg
+corpus/shootf/mixkit_23777_2.jpg
+corpus/shootf/mixkit_23279_0.jpg
+corpus/shootf/mixkit_24001_0.jpg
+corpus/shootf/mixkit_23729_1.jpg
+corpus/shootf/mixkit_24044_0.jpg
+corpus/shootf/mixkit_23791_1.jpg
+corpus/shootf/mixkit_23284_0.jpg
+corpus/shootf/mixkit_24046_2.jpg
+corpus/shootf/mixkit_24025_1.jpg
+corpus/shootf/mixkit_23748_0.jpg
+corpus/shootf/mixkit_24060_1.jpg
+corpus/shootf/mixkit_23286_2.jpg
+corpus/shootf/mixkit_23692_0.jpg
+corpus/shootf/mixkit_24043_0.jpg
+corpus/shootf/mixkit_24006_0.jpg
+corpus/shootf/mixkit_23708_2.jpg
+corpus/shootf/mixkit_23283_0.jpg
+corpus/shootf/mixkit_24119_2.jpg
+corpus/shootf/mixkit_23796_1.jpg
+corpus/shootf/mixkit_24004_2.jpg
+corpus/shootf/mixkit_24067_1.jpg
+corpus/shootf/mixkit_24022_1.jpg
+corpus/shootf/mixkit_23281_2.jpg
+corpus/shootf/mixkit_23794_2.jpg
+corpus/shootf/mixkit_23300_2.jpg
+corpus/shootf/mixkit_24067_0.jpg
+corpus/shootf/mixkit_24022_0.jpg
+corpus/shootf/mixkit_23769_2.jpg
+corpus/shootf/mixkit_23796_0.jpg
+corpus/shootf/mixkit_24098_2.jpg
+corpus/shootf/mixkit_23283_1.jpg
+corpus/shootf/mixkit_23689_2.jpg
+corpus/shootf/mixkit_24020_2.jpg
+corpus/shootf/mixkit_24065_2.jpg
+corpus/shootf/mixkit_24043_1.jpg
+corpus/shootf/mixkit_24006_1.jpg
+corpus/shootf/mixkit_23692_1.jpg
+corpus/shootf/mixkit_24058_2.jpg
+corpus/shootf/mixkit_23713_0.jpg
+corpus/shootf/mixkit_23756_0.jpg
+corpus/shootf/mixkit_24083_1.jpg
+corpus/shootf/mixkit_23298_2.jpg
+corpus/shootf/mixkit_24102_0.jpg
+corpus/shootf/mixkit_23737_1.jpg
+corpus/shootf/mixkit_24006_2.jpg
+corpus/shootf/mixkit_24043_2.jpg
+corpus/shootf/mixkit_24065_1.jpg
+corpus/shootf/mixkit_23708_0.jpg
+corpus/shootf/mixkit_24020_1.jpg
+corpus/shootf/mixkit_23692_2.jpg
+corpus/shootf/mixkit_23735_0.jpg
+corpus/shootf/mixkit_24058_1.jpg
+corpus/shootf/mixkit_23770_0.jpg
+corpus/shootf/mixkit_24083_2.jpg
+corpus/shootf/mixkit_24124_0.jpg
+corpus/shootf/mixkit_23298_1.jpg
+corpus/shootf/mixkit_23690_0.jpg
+corpus/shootf/mixkit_23711_1.jpg
+corpus/shootf/mixkit_24039_0.jpg
+corpus/shootf/mixkit_23754_1.jpg
+corpus/shootf/mixkit_23737_2.jpg
+corpus/shootf/mixkit_24081_0.jpg
+corpus/shootf/mixkit_24100_1.jpg
+corpus/shootf/mixkit_24126_2.jpg
+corpus/shootf/mixkit_24126_0.jpg
+corpus/shootf/mixkit_24081_2.jpg
+corpus/shootf/mixkit_24039_2.jpg
+corpus/shootf/mixkit_23737_0.jpg
+corpus/shootf/mixkit_23772_0.jpg
+corpus/shootf/mixkit_23690_2.jpg
+corpus/shootf/mixkit_24102_1.jpg
+corpus/shootf/mixkit_24124_2.jpg
+corpus/shootf/mixkit_24083_0.jpg
+corpus/shootf/mixkit_23713_1.jpg
+corpus/shootf/mixkit_23756_1.jpg
+corpus/shootf/mixkit_23735_2.jpg
+corpus/shootf/mixkit_24124_1.jpg
+corpus/shootf/mixkit_23298_0.jpg
+corpus/shootf/mixkit_24102_2.jpg
+corpus/shootf/mixkit_23735_1.jpg
+corpus/shootf/mixkit_23770_1.jpg
+corpus/shootf/mixkit_24058_0.jpg
+corpus/shootf/mixkit_23713_2.jpg
+corpus/shootf/mixkit_24065_0.jpg
+corpus/shootf/mixkit_24020_0.jpg
+corpus/shootf/mixkit_23708_1.jpg
+corpus/shootf/mixkit_23689_0.jpg
+corpus/shootf/mixkit_24119_1.jpg
+corpus/shootf/mixkit_23796_2.jpg
+corpus/shootf/mixkit_24098_0.jpg
+corpus/shootf/mixkit_24022_2.jpg
+corpus/shootf/mixkit_24067_2.jpg
+corpus/shootf/mixkit_23769_0.jpg
+corpus/shootf/mixkit_24041_1.jpg
+corpus/shootf/mixkit_24004_1.jpg
+corpus/shootf/mixkit_23281_1.jpg
+corpus/shootf/mixkit_23300_0.jpg
+corpus/shootf/mixkit_23794_0.jpg
+corpus/shootf/mixkit_23300_1.jpg
+corpus/shootf/mixkit_23794_1.jpg
+corpus/shootf/mixkit_23281_0.jpg
+corpus/shootf/mixkit_24041_0.jpg
+corpus/shootf/mixkit_23769_1.jpg
+corpus/shootf/mixkit_24004_0.jpg
+corpus/shootf/mixkit_24098_1.jpg
+corpus/shootf/mixkit_23283_2.jpg
+corpus/shootf/mixkit_24119_0.jpg
+corpus/shootf/mixkit_23689_1.jpg
+corpus/shootf/mixkit_24019_0.jpg
+corpus/shootf/mixkit_23774_1.jpg
+corpus/shootf/mixkit_23752_2.jpg
+corpus/shootf/mixkit_23717_2.jpg
+corpus/shootf/mixkit_24120_1.jpg
+corpus/shootf/mixkit_24106_2.jpg
+corpus/shootf/mixkit_23789_1.jpg
+corpus/shootf/mixkit_23999_2.jpg
+corpus/shootf/mixkit_23715_0.jpg
+corpus/shootf/mixkit_24078_1.jpg
+corpus/shootf/mixkit_23750_0.jpg
+corpus/shootf/mixkit_23694_1.jpg
+corpus/shootf/mixkit_24104_0.jpg
+corpus/shootf/mixkit_24085_1.jpg
+corpus/shootf/mixkit_23285_1.jpg
+corpus/shootf/mixkit_23790_0.jpg
+corpus/shootf/mixkit_24026_2.jpg
+corpus/shootf/mixkit_24063_2.jpg
+corpus/shootf/mixkit_24045_1.jpg
+corpus/shootf/mixkit_23728_0.jpg
+corpus/shootf/mixkit_24000_1.jpg
+corpus/shootf/mixkit_23278_1.jpg
+corpus/shootf/mixkit_23792_2.jpg
+corpus/shootf/mixkit_24061_0.jpg
+corpus/shootf/mixkit_23749_1.jpg
+corpus/shootf/mixkit_24024_0.jpg
+corpus/shootf/mixkit_24100_0.jpg
+corpus/shootf/mixkit_24081_1.jpg
+corpus/shootf/mixkit_24039_1.jpg
+corpus/shootf/mixkit_23711_0.jpg
+corpus/shootf/mixkit_23754_0.jpg
+corpus/shootf/mixkit_23690_1.jpg
+corpus/shootf/mixkit_24061_1.jpg
+corpus/shootf/mixkit_24024_1.jpg
+corpus/shootf/mixkit_23287_2.jpg
+corpus/shootf/mixkit_23278_0.jpg
+corpus/shootf/mixkit_24045_0.jpg
+corpus/shootf/mixkit_24000_0.jpg
+corpus/shootf/mixkit_23728_1.jpg
+corpus/shootf/mixkit_23790_1.jpg
+corpus/shootf/mixkit_23285_0.jpg
+corpus/shootf/mixkit_24085_0.jpg
+corpus/shootf/mixkit_24104_1.jpg
+corpus/shootf/mixkit_24122_2.jpg
+corpus/shootf/mixkit_23694_0.jpg
+corpus/shootf/mixkit_23715_1.jpg
+corpus/shootf/mixkit_23750_1.jpg
+corpus/shootf/mixkit_24078_0.jpg
+corpus/shootf/mixkit_23776_2.jpg
+corpus/shootf/mixkit_23733_2.jpg
+corpus/shootf/mixkit_23789_0.jpg
+corpus/shootf/mixkit_24087_2.jpg
+corpus/shootf/mixkit_24120_0.jpg
+corpus/shootf/mixkit_23696_2.jpg
+corpus/shootf/mixkit_24019_1.jpg
+corpus/shootf/mixkit_23731_0.jpg
+corpus/shootf/mixkit_23774_0.jpg
+corpus/shootf/mixkit_23731_1.jpg
+corpus/shootf/mixkit_23733_0.jpg
+corpus/shootf/mixkit_23776_0.jpg
+corpus/shootf/mixkit_23694_2.jpg
+corpus/shootf/mixkit_24122_0.jpg
+corpus/shootf/mixkit_24085_2.jpg
+corpus/shootf/mixkit_23285_2.jpg
+corpus/shootf/mixkit_24000_2.jpg
+corpus/shootf/mixkit_24045_2.jpg
+corpus/shootf/mixkit_24063_1.jpg
+corpus/shootf/mixkit_24026_1.jpg
+corpus/shootf/mixkit_23278_2.jpg
+corpus/shootf/mixkit_23287_0.jpg
+corpus/shootf/mixkit_23792_1.jpg
+corpus/shootf/mixkit_24047_0.jpg
+corpus/shootf/mixkit_24002_0.jpg
+corpus/shootf/mixkit_24002_2.jpg
+corpus/shootf/mixkit_24047_2.jpg
+corpus/shootf/mixkit_23749_0.jpg
+corpus/shootf/mixkit_23752_1.jpg
+corpus/shootf/mixkit_23774_2.jpg
+corpus/shootf/mixkit_23731_2.jpg
+corpus/shootf/mixkit_23696_0.jpg
+corpus/shootf/mixkit_24106_1.jpg
+corpus/shootf/mixkit_24120_2.jpg
+corpus/shootf/mixkit_23789_2.jpg
+corpus/shootf/mixkit_24087_0.jpg
+corpus/shootf/mixkit_24078_2.jpg
+corpus/shootf/mixkit_23999_1.jpg
+corpus/shootf/mixkit_23696_1.jpg
+corpus/shootf/mixkit_24019_2.jpg
+corpus/shootf/mixkit_23717_0.jpg
+corpus/shootf/mixkit_23752_0.jpg
+corpus/shootf/mixkit_23717_1.jpg
+corpus/shootf/mixkit_23715_2.jpg
+corpus/shootf/mixkit_24087_1.jpg
+corpus/shootf/mixkit_24106_0.jpg
+corpus/shootf/mixkit_23750_2.jpg
+corpus/shootf/mixkit_23776_1.jpg
+corpus/shootf/mixkit_23999_0.jpg
+corpus/frames/mixkit_43941_1.jpg
+corpus/frames/mixkit_24059_1.jpg
+corpus/frames/mixkit_49939_2.jpg
+corpus/frames/mixkit_15798_1.jpg
+corpus/frames/mixkit_1808_1.jpg
+corpus/frames/mixkit_41643_2.jpg
+corpus/frames/mixkit_33468_2.jpg
+corpus/frames/mixkit_49225_1.jpg
+corpus/frames/mixkit_32794_2.jpg
+corpus/frames/mixkit_4802_0.jpg
+corpus/frames/mixkit_4511_1.jpg
+corpus/frames/mixkit_42342_0.jpg
+corpus/frames/mixkit_4119_0.jpg
+corpus/frames/mixkit_29961_0.jpg
+corpus/frames/mixkit_42041_2.jpg
+corpus/frames/mixkit_40778_1.jpg
+corpus/shootf/mixkit_23733_1.jpg
+corpus/frames/mixkit_25595_0.jpg
+corpus/frames/mixkit_22961_2.jpg
+corpus/frames/mixkit_4508_1.jpg
+corpus/frames/mixkit_48610_1.jpg
+corpus/frames/mixkit_48610_0.jpg
+corpus/frames/mixkit_4508_0.jpg
+corpus/frames/mixkit_25595_1.jpg
+corpus/frames/mixkit_42039_2.jpg
+corpus/frames/mixkit_15798_0.jpg
+corpus/frames/mixkit_24059_0.jpg
+corpus/frames/mixkit_23712_2.jpg
+corpus/frames/mixkit_43941_0.jpg
+corpus/frames/mixkit_40747_2.jpg
+corpus/shootf/mixkit_24104_2.jpg
+corpus/frames/mixkit_4433_2.jpg
+corpus/frames/mixkit_1808_0.jpg
+corpus/frames/yt_-JHOJ9aNVkw_2.jpg
+corpus/frames/mixkit_49225_0.jpg
+corpus/shootf/mixkit_24114_0.jpg
+corpus/shootf/mixkit_24095_1.jpg
+corpus/shootf/mixkit_23705_0.jpg
+corpus/shootf/mixkit_24068_1.jpg
+corpus/shootf/mixkit_23740_0.jpg
+corpus/shootf/mixkit_23273_2.jpg
+corpus/shootf/mixkit_23684_1.jpg
+corpus/shootf/mixkit_24116_2.jpg
+corpus/shootf/mixkit_24130_1.jpg
+corpus/shootf/mixkit_23799_1.jpg
+corpus/shootf/mixkit_23742_2.jpg
+corpus/shootf/mixkit_23707_2.jpg
+corpus/shootf/mixkit_23721_1.jpg
+corpus/shootf/mixkit_24009_0.jpg
+corpus/shootf/mixkit_23764_1.jpg
+corpus/shootf/mixkit_23271_0.jpg
+corpus/shootf/mixkit_24071_0.jpg
+corpus/shootf/mixkit_23759_1.jpg
+corpus/shootf/mixkit_24034_0.jpg
+corpus/shootf/mixkit_23782_2.jpg
+corpus/shootf/mixkit_24055_1.jpg
+corpus/shootf/mixkit_23738_0.jpg
+corpus/shootf/mixkit_23992_1.jpg
+corpus/shootf/mixkit_24010_1.jpg
+corpus/shootf/mixkit_24036_2.jpg
+corpus/shootf/mixkit_24073_2.jpg
+corpus/shootf/mixkit_23295_1.jpg
+corpus/shootf/mixkit_24129_0.jpg
+corpus/shootf/mixkit_23780_0.jpg
+corpus/shootf/mixkit_23780_1.jpg
+corpus/shootf/mixkit_23295_0.jpg
+corpus/shootf/mixkit_24129_1.jpg
+corpus/shootf/mixkit_24055_0.jpg
+corpus/shootf/mixkit_24010_0.jpg
+corpus/shootf/mixkit_23992_0.jpg
+corpus/shootf/mixkit_23738_1.jpg
+corpus/shootf/mixkit_23297_2.jpg
+corpus/shootf/mixkit_23759_0.jpg
+corpus/shootf/mixkit_24071_1.jpg
+corpus/shootf/mixkit_24034_1.jpg
+corpus/shootf/mixkit_23990_2.jpg
+corpus/shootf/mixkit_24012_2.jpg
+corpus/shootf/mixkit_24057_2.jpg
+corpus/shootf/mixkit_23686_2.jpg
+corpus/shootf/mixkit_23271_1.jpg
+corpus/shootf/mixkit_24009_1.jpg
+corpus/shootf/mixkit_23721_0.jpg
+corpus/shootf/mixkit_23764_0.jpg
+corpus/shootf/mixkit_24097_2.jpg
+corpus/shootf/mixkit_23799_0.jpg
+corpus/shootf/mixkit_24130_0.jpg
+corpus/shootf/mixkit_23684_0.jpg
+corpus/shootf/mixkit_23766_2.jpg
+corpus/shootf/mixkit_23723_2.jpg
+corpus/shootf/mixkit_23705_1.jpg
+corpus/shootf/mixkit_23740_1.jpg
+corpus/shootf/mixkit_24068_0.jpg
+corpus/shootf/mixkit_24095_0.jpg
+corpus/shootf/mixkit_24114_1.jpg
+corpus/shootf/mixkit_24095_2.jpg
+corpus/shootf/mixkit_23723_0.jpg
+corpus/shootf/mixkit_23766_0.jpg
+corpus/shootf/mixkit_24068_2.jpg
+corpus/shootf/mixkit_23684_2.jpg
+corpus/shootf/mixkit_23273_1.jpg
+corpus/shootf/mixkit_24130_2.jpg
+corpus/shootf/mixkit_24116_1.jpg
+corpus/shootf/mixkit_24097_0.jpg
+corpus/shootf/mixkit_23799_2.jpg
+corpus/shootf/mixkit_23764_2.jpg
+corpus/shootf/mixkit_23721_2.jpg
+corpus/shootf/mixkit_23707_1.jpg
+corpus/shootf/mixkit_23742_1.jpg
+corpus/shootf/mixkit_23686_0.jpg
+corpus/shootf/mixkit_23759_2.jpg
+corpus/shootf/mixkit_24057_0.jpg
+corpus/shootf/mixkit_24012_0.jpg
+corpus/shootf/mixkit_23990_0.jpg
+corpus/shootf/mixkit_23297_0.jpg
+corpus/shootf/mixkit_23782_1.jpg
+corpus/shootf/mixkit_24073_1.jpg
+corpus/shootf/mixkit_24036_1.jpg
+corpus/shootf/mixkit_23992_2.jpg
+corpus/shootf/mixkit_24010_2.jpg
+corpus/shootf/mixkit_24055_2.jpg
+corpus/shootf/mixkit_23295_2.jpg
+corpus/shootf/mixkit_24129_2.jpg
+corpus/shootf/mixkit_23738_2.jpg
+corpus/shootf/mixkit_24073_0.jpg
+corpus/shootf/mixkit_24036_0.jpg
+corpus/shootf/mixkit_23782_0.jpg
+corpus/shootf/mixkit_23297_1.jpg
+corpus/shootf/mixkit_24057_1.jpg
+corpus/shootf/mixkit_23990_1.jpg
+corpus/shootf/mixkit_24012_1.jpg
+corpus/shootf/mixkit_24034_2.jpg
+corpus/shootf/mixkit_24071_2.jpg
+corpus/shootf/mixkit_23271_2.jpg
+corpus/shootf/mixkit_23686_1.jpg
+corpus/shootf/mixkit_23707_0.jpg
+corpus/shootf/mixkit_23742_0.jpg
+corpus/shootf/mixkit_24009_2.jpg
+corpus/shootf/mixkit_24097_1.jpg
+corpus/shootf/mixkit_24116_0.jpg
+corpus/shootf/mixkit_23273_0.jpg
+corpus/shootf/mixkit_23740_2.jpg
+corpus/shootf/mixkit_23705_2.jpg
+corpus/shootf/mixkit_23723_1.jpg
+corpus/shootf/mixkit_23766_1.jpg
+corpus/shootf/mixkit_24114_2.jpg
+corpus/shootf/mixkit_23699_2.jpg
+corpus/shootf/mixkit_24053_1.jpg
+corpus/shootf/mixkit_23994_1.jpg
+corpus/shootf/mixkit_24016_1.jpg
+corpus/shootf/mixkit_24030_2.jpg
+corpus/shootf/mixkit_24075_2.jpg
+corpus/shootf/mixkit_24088_2.jpg
+corpus/shootf/mixkit_23786_0.jpg
+corpus/shootf/mixkit_23293_1.jpg
+corpus/shootf/mixkit_23779_2.jpg
+corpus/shootf/mixkit_24077_0.jpg
+corpus/shootf/mixkit_24032_0.jpg
+corpus/shootf/mixkit_23784_2.jpg
+corpus/shootf/mixkit_24110_2.jpg
+corpus/shootf/mixkit_23277_0.jpg
+corpus/shootf/mixkit_23744_2.jpg
+corpus/shootf/mixkit_23701_2.jpg
+corpus/shootf/mixkit_23727_1.jpg
+corpus/shootf/mixkit_23762_1.jpg
+corpus/shootf/mixkit_24093_1.jpg
+corpus/shootf/mixkit_24112_0.jpg
+corpus/shootf/mixkit_23288_2.jpg
+corpus/shootf/mixkit_23275_2.jpg
+corpus/shootf/mixkit_23682_1.jpg
+corpus/shootf/mixkit_23703_0.jpg
+corpus/shootf/mixkit_23746_0.jpg
+corpus/shootf/mixkit_24048_2.jpg
+corpus/shootf/mixkit_23760_2.jpg
+corpus/shootf/mixkit_23725_2.jpg
+corpus/shootf/mixkit_23703_1.jpg
+corpus/shootf/mixkit_23746_1.jpg
+corpus/shootf/mixkit_23682_0.jpg
+corpus/shootf/mixkit_24112_1.jpg
+corpus/shootf/mixkit_24093_0.jpg
+corpus/shootf/mixkit_23727_0.jpg
+corpus/shootf/mixkit_23762_0.jpg
+corpus/shootf/mixkit_24029_2.jpg
+corpus/shootf/mixkit_23680_2.jpg
+corpus/shootf/mixkit_23277_1.jpg
+corpus/shootf/mixkit_24091_2.jpg
+corpus/shootf/mixkit_23291_2.jpg
+corpus/shootf/mixkit_24077_1.jpg
+corpus/shootf/mixkit_24032_1.jpg
+corpus/shootf/mixkit_23996_2.jpg
+corpus/shootf/mixkit_24014_2.jpg
+corpus/shootf/mixkit_24109_2.jpg
+corpus/shootf/mixkit_23293_0.jpg
+corpus/shootf/mixkit_23786_1.jpg
+corpus/shootf/mixkit_23718_2.jpg
+corpus/shootf/mixkit_24053_0.jpg
+corpus/shootf/mixkit_24016_0.jpg
+corpus/shootf/mixkit_23994_0.jpg
+corpus/shootf/mixkit_23699_1.jpg
+corpus/shootf/mixkit_24075_1.jpg
+corpus/shootf/mixkit_23718_0.jpg
+corpus/shootf/mixkit_24030_1.jpg
+corpus/shootf/mixkit_23994_2.jpg
+corpus/shootf/mixkit_24016_2.jpg
+corpus/shootf/mixkit_24053_2.jpg
+corpus/shootf/mixkit_24088_1.jpg
+corpus/shootf/mixkit_24109_0.jpg
+corpus/shootf/mixkit_24051_0.jpg
+corpus/shootf/mixkit_23779_1.jpg
+corpus/shootf/mixkit_24014_0.jpg
+corpus/shootf/mixkit_23996_0.jpg
+corpus/shootf/mixkit_23784_1.jpg
+corpus/shootf/mixkit_23291_0.jpg
+corpus/shootf/mixkit_24091_0.jpg
+corpus/shootf/mixkit_24110_1.jpg
+corpus/shootf/mixkit_23680_0.jpg
+corpus/shootf/mixkit_23762_2.jpg
+corpus/shootf/mixkit_23727_2.jpg
+corpus/shootf/mixkit_23701_1.jpg
+corpus/shootf/mixkit_24029_0.jpg
+corpus/shootf/mixkit_23744_1.jpg
+corpus/shootf/mixkit_24093_2.jpg
+corpus/shootf/mixkit_23288_1.jpg
+corpus/shootf/mixkit_23682_2.jpg
+corpus/shootf/mixkit_23275_1.jpg
+corpus/shootf/mixkit_23725_0.jpg
+corpus/shootf/mixkit_24048_1.jpg
+corpus/shootf/mixkit_23760_0.jpg
+corpus/shootf/mixkit_23746_2.jpg
+corpus/shootf/mixkit_23703_2.jpg
+corpus/shootf/mixkit_23725_1.jpg
+corpus/shootf/mixkit_23760_1.jpg
+corpus/shootf/mixkit_24048_0.jpg
+corpus/shootf/mixkit_23275_0.jpg
+corpus/shootf/mixkit_24112_2.jpg
+corpus/shootf/mixkit_23288_0.jpg
+corpus/shootf/mixkit_24029_1.jpg
+corpus/shootf/mixkit_23701_0.jpg
+corpus/shootf/mixkit_23744_0.jpg
+corpus/shootf/mixkit_23277_2.jpg
+corpus/shootf/mixkit_23680_1.jpg
+corpus/shootf/mixkit_24110_0.jpg
+corpus/shootf/mixkit_24091_1.jpg
+corpus/shootf/mixkit_23291_1.jpg
+corpus/shootf/mixkit_23784_0.jpg
+corpus/shootf/mixkit_23779_0.jpg
+corpus/shootf/mixkit_24051_1.jpg
+corpus/shootf/mixkit_23996_1.jpg
+corpus/shootf/mixkit_24014_1.jpg
+corpus/shootf/mixkit_24032_2.jpg
+corpus/shootf/mixkit_24077_2.jpg
+corpus/shootf/mixkit_24109_1.jpg
+corpus/shootf/mixkit_24088_0.jpg
+corpus/shootf/mixkit_23786_2.jpg
+corpus/shootf/mixkit_24075_0.jpg
+corpus/shootf/mixkit_24030_0.jpg
+corpus/shootf/mixkit_23718_1.jpg
+corpus/shootf/mixkit_23699_0.jpg
+corpus/shootf/mixkit_24037_1.jpg
+corpus/shootf/mixkit_24072_1.jpg
+corpus/shootf/mixkit_24054_2.jpg
+corpus/shootf/mixkit_23993_2.jpg
+corpus/shootf/mixkit_24011_2.jpg
+corpus/shootf/mixkit_23294_2.jpg
+corpus/shootf/mixkit_23758_2.jpg
+corpus/shootf/mixkit_24013_0.jpg
+corpus/shootf/mixkit_23991_0.jpg
+corpus/shootf/mixkit_24056_0.jpg
+corpus/shootf/mixkit_23296_0.jpg
+corpus/shootf/mixkit_23783_1.jpg
+corpus/shootf/mixkit_24117_1.jpg
+corpus/shootf/mixkit_24096_0.jpg
+corpus/shootf/mixkit_23798_2.jpg
+corpus/shootf/mixkit_23720_2.jpg
+corpus/shootf/mixkit_23765_2.jpg
+corpus/shootf/mixkit_23743_1.jpg
+corpus/shootf/mixkit_23706_1.jpg
+corpus/shootf/mixkit_23687_0.jpg
+corpus/shootf/mixkit_24094_2.jpg
+corpus/shootf/mixkit_23767_0.jpg
+corpus/shootf/mixkit_23722_0.jpg
+corpus/shootf/mixkit_24069_2.jpg
+corpus/shootf/mixkit_23685_2.jpg
+corpus/shootf/mixkit_23272_1.jpg
+corpus/shootf/mixkit_23272_0.jpg
+corpus/shootf/mixkit_23704_2.jpg
+corpus/shootf/mixkit_23741_2.jpg
+corpus/shootf/mixkit_23767_1.jpg
+corpus/shootf/mixkit_23722_1.jpg
+corpus/shootf/mixkit_24115_2.jpg
+corpus/shootf/mixkit_23270_2.jpg
+corpus/shootf/mixkit_23687_1.jpg
+corpus/shootf/mixkit_23743_0.jpg
+corpus/shootf/mixkit_23706_0.jpg
+corpus/shootf/mixkit_24008_2.jpg
+corpus/shootf/mixkit_24096_1.jpg
+corpus/shootf/mixkit_24117_0.jpg
+corpus/shootf/mixkit_23783_0.jpg
+corpus/shootf/mixkit_23296_1.jpg
+corpus/shootf/mixkit_23991_1.jpg
+corpus/shootf/mixkit_24013_1.jpg
+corpus/shootf/mixkit_24056_1.jpg
+corpus/shootf/mixkit_24070_2.jpg
+corpus/shootf/mixkit_24035_2.jpg
+corpus/shootf/mixkit_23781_2.jpg
+corpus/shootf/mixkit_24128_2.jpg
+corpus/shootf/mixkit_23739_2.jpg
+corpus/shootf/mixkit_24037_0.jpg
+corpus/shootf/mixkit_24072_0.jpg
+corpus/shootf/mixkit_23993_1.jpg
+corpus/shootf/mixkit_23739_0.jpg
+corpus/shootf/mixkit_24011_1.jpg
+corpus/shootf/mixkit_24054_1.jpg
+corpus/shootf/mixkit_24072_2.jpg
+corpus/shootf/mixkit_24037_2.jpg
+corpus/shootf/mixkit_24128_0.jpg
+corpus/shootf/mixkit_23294_1.jpg
+corpus/shootf/mixkit_23781_0.jpg
+corpus/shootf/mixkit_24035_0.jpg
+corpus/shootf/mixkit_24070_0.jpg
+corpus/shootf/mixkit_23758_1.jpg
+corpus/shootf/mixkit_23783_2.jpg
+corpus/shootf/mixkit_24117_2.jpg
+corpus/shootf/mixkit_23798_1.jpg
+corpus/shootf/mixkit_23706_2.jpg
+corpus/shootf/mixkit_23743_2.jpg
+corpus/shootf/mixkit_23765_1.jpg
+corpus/shootf/mixkit_23720_1.jpg
+corpus/shootf/mixkit_24008_0.jpg
+corpus/shootf/mixkit_23270_0.jpg
+corpus/shootf/mixkit_24115_0.jpg
+corpus/shootf/mixkit_24094_1.jpg
+corpus/shootf/mixkit_24069_1.jpg
+corpus/shootf/mixkit_23741_0.jpg
+corpus/shootf/mixkit_23704_0.jpg
+corpus/shootf/mixkit_23272_2.jpg
+corpus/shootf/mixkit_23685_1.jpg
+corpus/shootf/mixkit_23685_0.jpg
+corpus/shootf/mixkit_23722_2.jpg
+corpus/shootf/mixkit_23767_2.jpg
+corpus/shootf/mixkit_23741_1.jpg
+corpus/shootf/mixkit_24069_0.jpg
+corpus/shootf/mixkit_23704_1.jpg
+corpus/shootf/mixkit_24094_0.jpg
+corpus/shootf/mixkit_24115_1.jpg
+corpus/shootf/mixkit_23687_2.jpg
+corpus/shootf/mixkit_23270_1.jpg
+corpus/shootf/mixkit_23765_0.jpg
+corpus/shootf/mixkit_24008_1.jpg
+corpus/shootf/mixkit_23720_0.jpg
+corpus/shootf/mixkit_24096_2.jpg
+corpus/shootf/mixkit_23798_0.jpg
+corpus/shootf/mixkit_23296_2.jpg
+corpus/shootf/mixkit_24035_1.jpg
+corpus/shootf/mixkit_23758_0.jpg
+corpus/shootf/mixkit_24070_1.jpg
+corpus/shootf/mixkit_24056_2.jpg
+corpus/shootf/mixkit_23991_2.jpg
+corpus/shootf/mixkit_24013_2.jpg
+corpus/shootf/mixkit_23781_1.jpg
+corpus/shootf/mixkit_24128_1.jpg
+corpus/shootf/mixkit_23294_0.jpg
+corpus/shootf/mixkit_24011_0.jpg
+corpus/shootf/mixkit_23739_1.jpg
+corpus/shootf/mixkit_23993_0.jpg
+corpus/shootf/mixkit_24054_0.jpg
+corpus/shootf/mixkit_24092_2.jpg
+corpus/shootf/mixkit_23289_1.jpg
+corpus/shootf/mixkit_23683_2.jpg
+corpus/shootf/mixkit_23274_1.jpg
+corpus/shootf/mixkit_24049_1.jpg
+corpus/shootf/mixkit_23761_0.jpg
+corpus/shootf/mixkit_23724_0.jpg
+corpus/shootf/mixkit_24090_0.jpg
+corpus/shootf/mixkit_24111_1.jpg
+corpus/shootf/mixkit_23681_0.jpg
+corpus/shootf/mixkit_23726_2.jpg
+corpus/shootf/mixkit_23763_2.jpg
+corpus/shootf/mixkit_23745_1.jpg
+corpus/shootf/mixkit_23700_1.jpg
+corpus/shootf/mixkit_24028_0.jpg
+corpus/shootf/mixkit_24015_0.jpg
+corpus/shootf/mixkit_23997_0.jpg
+corpus/shootf/mixkit_24050_0.jpg
+corpus/shootf/mixkit_23778_1.jpg
+corpus/shootf/mixkit_23785_1.jpg
+corpus/shootf/mixkit_23290_0.jpg
+corpus/shootf/mixkit_23698_1.jpg
+corpus/shootf/mixkit_23719_0.jpg
+corpus/shootf/mixkit_24031_1.jpg
+corpus/shootf/mixkit_24074_1.jpg
+corpus/shootf/mixkit_24052_2.jpg
+corpus/shootf/mixkit_23995_2.jpg
+corpus/shootf/mixkit_24017_2.jpg
+corpus/shootf/mixkit_24089_1.jpg
+corpus/shootf/mixkit_24108_0.jpg
+corpus/shootf/mixkit_23292_2.jpg
+corpus/shootf/mixkit_24108_1.jpg
+corpus/shootf/mixkit_24089_0.jpg
+corpus/shootf/mixkit_23787_2.jpg
+corpus/shootf/mixkit_24031_0.jpg
+corpus/shootf/mixkit_23719_1.jpg
+corpus/shootf/mixkit_24074_0.jpg
+corpus/shootf/mixkit_23698_0.jpg
+corpus/shootf/mixkit_23290_1.jpg
+corpus/shootf/mixkit_23785_0.jpg
+corpus/shootf/mixkit_23997_1.jpg
+corpus/shootf/mixkit_24015_1.jpg
+corpus/shootf/mixkit_23778_0.jpg
+corpus/shootf/mixkit_24050_1.jpg
+corpus/shootf/mixkit_24033_2.jpg
+corpus/shootf/mixkit_23745_0.jpg
+corpus/shootf/mixkit_24028_1.jpg
+corpus/shootf/mixkit_23700_0.jpg
+corpus/shootf/mixkit_23276_2.jpg
+corpus/shootf/mixkit_23681_1.jpg
+corpus/shootf/mixkit_24111_0.jpg
+corpus/shootf/mixkit_24090_1.jpg
+corpus/shootf/mixkit_23702_2.jpg
+corpus/shootf/mixkit_23747_2.jpg
+corpus/shootf/mixkit_23761_1.jpg
+corpus/shootf/mixkit_24049_0.jpg
+corpus/shootf/mixkit_23724_1.jpg
+corpus/shootf/mixkit_23274_0.jpg
+corpus/shootf/mixkit_24113_2.jpg
+corpus/shootf/mixkit_23289_0.jpg
+corpus/shootf/mixkit_24092_1.jpg
+corpus/shootf/mixkit_24113_0.jpg
+corpus/shootf/mixkit_23289_2.jpg
+corpus/shootf/mixkit_23274_2.jpg
+corpus/shootf/mixkit_23683_1.jpg
+corpus/shootf/mixkit_23747_0.jpg
+corpus/shootf/mixkit_23702_0.jpg
+corpus/shootf/mixkit_24049_2.jpg
+corpus/shootf/mixkit_24111_2.jpg
+corpus/shootf/mixkit_23276_0.jpg
+corpus/shootf/mixkit_23700_2.jpg
+corpus/shootf/mixkit_23763_1.jpg
+corpus/shootf/mixkit_23726_1.jpg
+corpus/shootf/mixkit_23778_2.jpg
+corpus/shootf/mixkit_24033_0.jpg
+corpus/shootf/mixkit_24076_0.jpg
+corpus/shootf/mixkit_23785_2.jpg
+corpus/shootf/mixkit_23698_2.jpg
+corpus/shootf/mixkit_23995_1.jpg
+corpus/shootf/mixkit_24017_1.jpg
+corpus/shootf/mixkit_24052_1.jpg
+corpus/shootf/mixkit_24074_2.jpg
+corpus/shootf/mixkit_24031_2.jpg
+corpus/shootf/mixkit_24089_2.jpg
+corpus/shootf/mixkit_23787_0.jpg
+corpus/shootf/mixkit_23292_1.jpg
+corpus/shootf/mixkit_24108_2.jpg
+corpus/shootf/mixkit_23292_0.jpg
+corpus/shootf/mixkit_23787_1.jpg
+corpus/shootf/mixkit_24017_0.jpg
+corpus/shootf/mixkit_23995_0.jpg
+corpus/shootf/mixkit_24052_0.jpg
+corpus/shootf/mixkit_23290_2.jpg
+corpus/shootf/mixkit_24033_1.jpg
+corpus/shootf/mixkit_24076_1.jpg
+corpus/shootf/mixkit_24050_2.jpg
+corpus/shootf/mixkit_23997_2.jpg
+corpus/shootf/mixkit_24015_2.jpg
+corpus/shootf/mixkit_23763_0.jpg
+corpus/shootf/mixkit_23726_0.jpg
+corpus/shootf/mixkit_24028_2.jpg
+corpus/shootf/mixkit_23681_2.jpg
+corpus/shootf/mixkit_23276_1.jpg
+corpus/shootf/mixkit_24090_2.jpg
+corpus/shootf/mixkit_23724_2.jpg
+corpus/shootf/mixkit_23761_2.jpg
+corpus/shootf/mixkit_23747_1.jpg
+corpus/shootf/mixkit_23702_1.jpg
+corpus/shootf/mixkit_23683_0.jpg
+corpus/shootf/mixkit_24113_1.jpg
+corpus/shootf/mixkit_24092_0.jpg
+corpus/shootf/mixkit_24061_2.jpg
+corpus/shootf/mixkit_24047_1.jpg
+corpus/shootf/mixkit_24002_1.jpg
+corpus/shootf/mixkit_23792_0.jpg
+corpus/shootf/mixkit_23287_1.jpg
+corpus/shootf/mixkit_24063_0.jpg
+corpus/shootf/mixkit_24026_0.jpg
+corpus/shootf/mixkit_23728_2.jpg
+corpus/shootf/mixkit_23790_2.jpg
+corpus/shootf/mixkit_24122_1.jpg
+corpus/frames/mixkit_49939_1.jpg
+corpus/frames/mixkit_43941_2.jpg
+corpus/frames/mixkit_23712_0.jpg
+corpus/frames/mixkit_15798_2.jpg
+corpus/frames/mixkit_4433_0.jpg
+corpus/frames/yt_-JHOJ9aNVkw_0.jpg
+corpus/frames/mixkit_1808_2.jpg
+corpus/frames/mixkit_33468_1.jpg
+corpus/frames/mixkit_41643_1.jpg
+corpus/frames/mixkit_32794_1.jpg
+corpus/frames/mixkit_49878_0.jpg
+corpus/frames/mixkit_49225_2.jpg
+corpus/frames/mixkit_4067_0.jpg
+corpus/frames/mixkit_4511_2.jpg
+corpus/frames/mixkit_4939_0.jpg
+corpus/frames/mixkit_28902_0.jpg
+corpus/frames/mixkit_42041_1.jpg
+corpus/frames/mixkit_40778_2.jpg
+corpus/frames/mixkit_39838_0.jpg
+corpus/frames/mixkit_4513_0.jpg
+corpus/frames/mixkit_39838_2.jpg
+corpus/frames/mixkit_4513_2.jpg
+corpus/frames/mixkit_40778_0.jpg
+corpus/frames/mixkit_29961_1.jpg
+corpus/frames/mixkit_28902_2.jpg
+corpus/frames/mixkit_4939_2.jpg
+corpus/frames/mixkit_4119_1.jpg
+corpus/frames/mixkit_42342_1.jpg
+corpus/frames/mixkit_4511_0.jpg
+corpus/frames/mixkit_4802_1.jpg
+corpus/frames/mixkit_4067_2.jpg
+corpus/frames/mixkit_49878_2.jpg
+corpus/frames/mixkit_45923_1.jpg
+corpus/frames/mixkit_17508_1.jpg
+corpus/frames/mixkit_24164_2.jpg
+corpus/frames/mixkit_50111_1.jpg
+corpus/frames/mixkit_4513_1.jpg
+corpus/frames/mixkit_39838_1.jpg
+corpus/frames/mixkit_42041_0.jpg
+corpus/frames/mixkit_4119_2.jpg
+corpus/frames/mixkit_29961_2.jpg
+corpus/frames/mixkit_28902_1.jpg
+corpus/frames/mixkit_4939_1.jpg
+corpus/frames/mixkit_42342_2.jpg
+corpus/frames/mixkit_4067_1.jpg
+corpus/frames/mixkit_4802_2.jpg
+corpus/frames/mixkit_49878_1.jpg
+corpus/frames/mixkit_32794_0.jpg
+corpus/frames/mixkit_41643_0.jpg
+corpus/frames/mixkit_33468_0.jpg
+corpus/frames/mixkit_4433_1.jpg
+corpus/frames/yt_-JHOJ9aNVkw_1.jpg
+corpus/frames/mixkit_23712_1.jpg
+corpus/frames/mixkit_49939_0.jpg
+corpus/frames/mixkit_40747_1.jpg
+corpus/frames/mixkit_42039_0.jpg
+corpus/frames/mixkit_22961_1.jpg
+corpus/frames/mixkit_4508_2.jpg
+corpus/frames/mixkit_48610_2.jpg
+corpus/frames/mixkit_22961_0.jpg
+corpus/frames/mixkit_25595_2.jpg
+corpus/frames/mixkit_42039_1.jpg
+corpus/frames/mixkit_40747_0.jpg
+corpus/frames/mixkit_24059_2.jpg
+corpus/frames/mixkit_17450_0.jpg
+corpus/frames/mixkit_4804_1.jpg
+corpus/frames/mixkit_4985_0.jpg
+corpus/frames/mixkit_42653_2.jpg
+corpus/frames/mixkit_26108_0.jpg
+corpus/frames/mixkit_3672_0.jpg
+corpus/frames/mixkit_4919_1.jpg
+corpus/frames/mixkit_43259_1.jpg
+corpus/frames/mixkit_30011_2.jpg
+corpus/frames/mixkit_43259_0.jpg
+corpus/frames/mixkit_4919_0.jpg
+corpus/frames/mixkit_3672_1.jpg
+corpus/frames/mixkit_344_2.jpg
+corpus/frames/mixkit_26108_1.jpg
+corpus/frames/mixkit_4806_2.jpg
+corpus/frames/mixkit_25575_2.jpg
+corpus/frames/mixkit_30605_2.jpg
+corpus/frames/mixkit_39789_2.jpg
+corpus/frames/mixkit_24044_2.jpg
+corpus/frames/mixkit_4985_1.jpg
+corpus/frames/mixkit_4531_2.jpg
+corpus/frames/mixkit_39774_2.jpg
+corpus/frames/mixkit_4804_0.jpg
+corpus/frames/mixkit_17450_1.jpg
+corpus/frames/mixkit_44432_2.jpg
+corpus/frames/mixkit_26917_0.jpg
+corpus/frames/mixkit_221_2.jpg
+corpus/frames/mixkit_40988_1.jpg
+corpus/frames/mixkit_21957_1.jpg
+corpus/frames/mixkit_242_1.jpg
+corpus/frames/mixkit_1746_2.jpg
+corpus/frames/mixkit_223_0.jpg
+corpus/frames/mixkit_25575_1.jpg
+corpus/frames/mixkit_30605_1.jpg
+corpus/frames/mixkit_4806_1.jpg
+corpus/frames/mixkit_42653_0.jpg
+corpus/frames/mixkit_39789_1.jpg
+corpus/frames/mixkit_4531_1.jpg
+corpus/frames/mixkit_4985_2.jpg
+corpus/frames/mixkit_24044_1.jpg
+corpus/frames/mixkit_39774_1.jpg
+corpus/frames/mixkit_44432_1.jpg
+corpus/frames/mixkit_17450_2.jpg
+corpus/frames/mixkit_242_2.jpg
+corpus/frames/mixkit_46680_0.jpg
+corpus/frames/mixkit_40988_2.jpg
+corpus/frames/mixkit_21957_2.jpg
+corpus/frames/mixkit_221_1.jpg
+corpus/frames/mixkit_14639_0.jpg
+corpus/frames/mixkit_1746_1.jpg
+corpus/frames/mixkit_45923_2.jpg
+corpus/frames/mixkit_17508_2.jpg
+corpus/frames/mixkit_24164_1.jpg
+corpus/frames/mixkit_50111_2.jpg
+corpus/frames/mixkit_50111_0.jpg
+corpus/frames/mixkit_17508_0.jpg
+corpus/frames/mixkit_45923_0.jpg
+corpus/frames/mixkit_223_1.jpg
+corpus/frames/mixkit_14639_2.jpg
+corpus/frames/mixkit_242_0.jpg
+corpus/frames/mixkit_21957_0.jpg
+corpus/frames/mixkit_40988_0.jpg
+corpus/frames/mixkit_46680_2.jpg
+corpus/frames/mixkit_26917_1.jpg
+corpus/frames/mixkit_4477_0.jpg
+corpus/frames/mixkit_41174_2.jpg
+corpus/frames/mixkit_247_0.jpg
+corpus/frames/mixkit_40701_2.jpg
+corpus/frames/mixkit_39841_0.jpg
+corpus/frames/mixkit_5731_2.jpg
+corpus/frames/mixkit_50116_2.jpg
+corpus/frames/mixkit_24164_0.jpg
+corpus/frames/mixkit_223_2.jpg
+corpus/frames/mixkit_1746_0.jpg
+corpus/frames/mixkit_14639_1.jpg
+corpus/frames/mixkit_46680_1.jpg
+corpus/frames/mixkit_221_0.jpg
+corpus/frames/mixkit_26917_2.jpg
+corpus/frames/mixkit_44432_0.jpg
+corpus/frames/mixkit_4804_2.jpg
+corpus/frames/mixkit_39774_0.jpg
+corpus/frames/mixkit_24044_0.jpg
+corpus/frames/mixkit_4531_0.jpg
+corpus/frames/mixkit_39789_0.jpg
+corpus/frames/mixkit_42653_1.jpg
+corpus/frames/mixkit_30605_0.jpg
+corpus/frames/mixkit_25575_0.jpg
+corpus/frames/mixkit_4806_0.jpg
+corpus/frames/mixkit_4919_2.jpg
+corpus/frames/mixkit_344_0.jpg
+corpus/frames/mixkit_30011_1.jpg
+corpus/frames/mixkit_43259_2.jpg
+corpus/frames/mixkit_30011_0.jpg
+corpus/frames/mixkit_344_1.jpg
+corpus/frames/mixkit_3672_2.jpg
+corpus/frames/mixkit_26108_2.jpg
+corpus/frames/mixkit_41293_0.jpg
+corpus/frames/mixkit_42749_1.jpg
+corpus/frames/mixkit_39839_1.jpg
+corpus/frames/mixkit_9757_2.jpg
+corpus/frames/mixkit_4801_0.jpg
+corpus/frames/mixkit_48733_0.jpg
+corpus/frames/mixkit_3653_0.jpg
+corpus/frames/mixkit_4938_1.jpg
+corpus/frames/mixkit_40640_2.jpg
+corpus/frames/mixkit_4938_0.jpg
+corpus/frames/mixkit_3653_1.jpg
+corpus/frames/mixkit_48733_1.jpg
+corpus/frames/mixkit_4801_1.jpg
+corpus/frames/mixkit_4827_2.jpg
+corpus/frames/mixkit_39839_0.jpg
+corpus/frames/mixkit_42749_0.jpg
+corpus/frames/mixkit_28901_2.jpg
+corpus/frames/mixkit_41293_1.jpg
+corpus/frames/mixkit_31663_0.jpg
+corpus/frames/mixkit_39773_1.jpg
+corpus/frames/mixkit_42656_2.jpg
+corpus/frames/mixkit_1781_1.jpg
+corpus/frames/mixkit_4982_2.jpg
+corpus/frames/mixkit_40746_0.jpg
+corpus/frames/mixkit_31405_2.jpg
+corpus/frames/mixkit_8843_1.jpg
+corpus/frames/mixkit_144_2.jpg
+corpus/frames/mixkit_4907_2.jpg
+corpus/frames/mixkit_50114_0.jpg
+corpus/frames/mixkit_23962_2.jpg
+corpus/frames/mixkit_5595_2.jpg
+corpus/frames/mixkit_1704_1.jpg
+corpus/frames/mixkit_8843_2.jpg
+corpus/frames/mixkit_1704_2.jpg
+corpus/frames/mixkit_23962_1.jpg
+corpus/frames/mixkit_5595_1.jpg
+corpus/frames/mixkit_144_1.jpg
+corpus/frames/mixkit_4907_1.jpg
+corpus/frames/mixkit_41174_1.jpg
+corpus/frames/mixkit_4451_0.jpg
+corpus/frames/mixkit_40701_1.jpg
+corpus/frames/mixkit_48285_0.jpg
+corpus/frames/mixkit_39822_0.jpg
+corpus/frames/mixkit_5731_1.jpg
+corpus/frames/mixkit_41638_0.jpg
+corpus/frames/mixkit_50116_1.jpg
+corpus/frames/mixkit_5608_0.jpg
+corpus/frames/mixkit_5608_2.jpg
+corpus/frames/mixkit_41638_2.jpg
+corpus/frames/mixkit_39822_2.jpg
+corpus/frames/mixkit_39841_1.jpg
+corpus/frames/mixkit_48285_2.jpg
+corpus/frames/mixkit_247_1.jpg
+corpus/frames/mixkit_4451_2.jpg
+corpus/frames/mixkit_4477_1.jpg
+corpus/frames/mixkit_1704_0.jpg
+corpus/frames/mixkit_50114_1.jpg
+corpus/frames/mixkit_8843_0.jpg
+corpus/frames/mixkit_44143_2.jpg
+corpus/frames/mixkit_40746_1.jpg
+corpus/frames/mixkit_1781_0.jpg
+corpus/frames/mixkit_42343_2.jpg
+corpus/frames/mixkit_39773_0.jpg
+corpus/frames/mixkit_31663_1.jpg
+corpus/frames/mixkit_144_0.jpg
+corpus/frames/mixkit_5595_0.jpg
+corpus/frames/mixkit_23962_0.jpg
+corpus/frames/mixkit_44143_1.jpg
+corpus/frames/mixkit_40746_2.jpg
+corpus/frames/mixkit_31405_0.jpg
+corpus/frames/mixkit_42343_1.jpg
+corpus/frames/mixkit_4982_0.jpg
+corpus/frames/mixkit_31663_2.jpg
+corpus/frames/mixkit_42656_0.jpg
+corpus/frames/mixkit_28901_0.jpg
+corpus/frames/mixkit_42749_2.jpg
+corpus/frames/mixkit_39839_2.jpg
+corpus/frames/mixkit_4827_0.jpg
+corpus/frames/mixkit_9757_1.jpg
+corpus/frames/mixkit_40640_1.jpg
+corpus/frames/mixkit_4938_2.jpg
+corpus/frames/mixkit_48733_2.jpg
+corpus/frames/mixkit_40640_0.jpg
+corpus/frames/mixkit_3653_2.jpg
+corpus/frames/mixkit_4827_1.jpg
+corpus/frames/mixkit_9757_0.jpg
+corpus/frames/mixkit_4801_2.jpg
+corpus/frames/mixkit_41293_2.jpg
+corpus/frames/mixkit_28901_1.jpg
+corpus/frames/mixkit_42656_1.jpg
+corpus/frames/mixkit_39773_2.jpg
+corpus/frames/mixkit_4982_1.jpg
+corpus/frames/mixkit_42343_0.jpg
+corpus/frames/mixkit_1781_2.jpg
+corpus/frames/mixkit_31405_1.jpg
+corpus/frames/mixkit_44143_0.jpg
+corpus/frames/mixkit_25592_2.jpg
+corpus/frames/mixkit_4548_1.jpg
+corpus/frames/mixkit_206_2.jpg
+corpus/frames/mixkit_5434_0.jpg
+corpus/frames/mixkit_50112_0.jpg
+corpus/frames/mixkit_51602_0.jpg
+corpus/frames/mixkit_24344_1.jpg
+corpus/frames/mixkit_4283_2.jpg
+corpus/frames/mixkit_13168_1.jpg
+corpus/frames/mixkit_4708_0.jpg
+corpus/frames/mixkit_41268_1.jpg
+corpus/frames/mixkit_24063_2.jpg
+corpus/frames/mixkit_4984_2.jpg
+corpus/frames/mixkit_25589_1.jpg
+corpus/frames/mixkit_4281_0.jpg
+corpus/frames/mixkit_41375_1.jpg
+corpus/frames/mixkit_3428_0.jpg
+corpus/frames/yt_y8r-wbV-4kU_1.jpg
+corpus/frames/mixkit_5608_1.jpg
+corpus/frames/mixkit_50116_0.jpg
+corpus/frames/mixkit_41638_1.jpg
+corpus/frames/mixkit_39841_2.jpg
+corpus/frames/mixkit_39822_1.jpg
+corpus/frames/mixkit_5731_0.jpg
+corpus/frames/mixkit_40701_0.jpg
+corpus/frames/mixkit_247_2.jpg
+corpus/frames/mixkit_48285_1.jpg
+corpus/frames/mixkit_4477_2.jpg
+corpus/frames/mixkit_41174_0.jpg
+corpus/frames/mixkit_4451_1.jpg
+corpus/frames/mixkit_50114_2.jpg
+corpus/frames/mixkit_4907_0.jpg
+corpus/frames/mixkit_25589_0.jpg
+corpus/frames/mixkit_41375_0.jpg
+corpus/frames/mixkit_4281_1.jpg
+corpus/frames/mixkit_4805_2.jpg
+corpus/frames/mixkit_4708_1.jpg
+corpus/frames/mixkit_41268_0.jpg
+corpus/frames/mixkit_50109_2.jpg
+corpus/frames/mixkit_796_2.jpg
+corpus/frames/mixkit_24344_0.jpg
+corpus/frames/mixkit_13168_0.jpg
+corpus/frames/mixkit_28886_2.jpg
+corpus/frames/mixkit_51602_1.jpg
+corpus/frames/mixkit_50112_1.jpg
+corpus/frames/mixkit_5434_1.jpg
+corpus/frames/mixkit_4713_2.jpg
+corpus/frames/mixkit_4548_0.jpg
+corpus/frames/mixkit_51405_2.jpg
+corpus/frames/mixkit_204_1.jpg
+corpus/frames/mixkit_44147_0.jpg
+corpus/frames/mixkit_4079_0.jpg
+corpus/frames/mixkit_241_1.jpg
+corpus/frames/mixkit_4385_0.jpg
+corpus/frames/mixkit_36090_0.jpg
+corpus/frames/mixkit_4737_2.jpg
+corpus/frames/mixkit_36090_1.jpg
+corpus/frames/mixkit_4385_1.jpg
+corpus/frames/mixkit_23717_2.jpg
+corpus/frames/mixkit_44147_1.jpg
+corpus/frames/mixkit_204_0.jpg
+corpus/frames/mixkit_241_0.jpg
+corpus/frames/mixkit_4079_1.jpg
+corpus/frames/mixkit_45922_2.jpg
+corpus/frames/mixkit_4385_2.jpg
+corpus/frames/mixkit_4737_1.jpg
+corpus/frames/mixkit_36090_2.jpg
+corpus/frames/mixkit_4079_2.jpg
+corpus/frames/mixkit_45922_1.jpg
+corpus/frames/mixkit_44147_2.jpg
+corpus/frames/mixkit_25592_1.jpg
+corpus/frames/mixkit_51405_0.jpg
+corpus/frames/mixkit_4713_0.jpg
+corpus/frames/mixkit_4548_2.jpg
+corpus/frames/mixkit_206_1.jpg
+corpus/frames/mixkit_28886_0.jpg
+corpus/frames/mixkit_13168_2.jpg
+corpus/frames/mixkit_24344_2.jpg
+corpus/frames/mixkit_4283_1.jpg
+corpus/frames/mixkit_50109_0.jpg
+corpus/frames/mixkit_796_0.jpg
+corpus/frames/mixkit_4984_1.jpg
+corpus/frames/mixkit_41268_2.jpg
+corpus/frames/mixkit_24063_1.jpg
+corpus/frames/mixkit_4805_0.jpg
+corpus/frames/mixkit_41375_2.jpg
+corpus/frames/mixkit_25589_2.jpg
+corpus/frames/mixkit_918_0.jpg
+corpus/frames/mixkit_23938_0.jpg
+corpus/frames/yt_y8r-wbV-4kU_2.jpg
+corpus/frames/mixkit_4577_0.jpg
+corpus/frames/yt_y8r-wbV-4kU_0.jpg
+corpus/frames/mixkit_4577_2.jpg
+corpus/frames/mixkit_918_2.jpg
+corpus/frames/mixkit_23938_2.jpg
+corpus/frames/mixkit_3428_1.jpg
+corpus/frames/mixkit_4809_1.jpg
+corpus/frames/mixkit_43270_0.jpg
+corpus/frames/mixkit_49482_1.jpg
+corpus/frames/mixkit_42048_1.jpg
+corpus/frames/mixkit_51123_2.jpg
+corpus/frames/mixkit_48503_0.jpg
+corpus/frames/mixkit_4577_1.jpg
+corpus/frames/mixkit_3428_2.jpg
+corpus/frames/mixkit_23938_1.jpg
+corpus/frames/mixkit_918_1.jpg
+corpus/frames/mixkit_4281_2.jpg
+corpus/frames/mixkit_4805_1.jpg
+corpus/frames/mixkit_24063_0.jpg
+corpus/frames/mixkit_4708_2.jpg
+corpus/frames/mixkit_4984_0.jpg
+corpus/frames/mixkit_796_1.jpg
+corpus/frames/mixkit_50109_1.jpg
+corpus/frames/mixkit_51602_2.jpg
+corpus/frames/mixkit_28886_1.jpg
+corpus/frames/mixkit_4283_0.jpg
+corpus/frames/mixkit_50112_2.jpg
+corpus/frames/mixkit_5434_2.jpg
+corpus/frames/mixkit_206_0.jpg
+corpus/frames/mixkit_4713_1.jpg
+corpus/frames/mixkit_51405_1.jpg
+corpus/frames/mixkit_25592_0.jpg
+corpus/frames/mixkit_45922_0.jpg
+corpus/frames/mixkit_241_2.jpg
+corpus/frames/mixkit_204_2.jpg
+corpus/frames/mixkit_4737_0.jpg
+corpus/frames/mixkit_23717_0.jpg
+corpus/frames/mixkit_23717_1.jpg
+corpus/frames/mixkit_1728_1.jpg
+corpus/frames/yt__-SQ3B0oEQE_1.jpg
+corpus/frames/mixkit_30005_2.jpg
+corpus/frames/mixkit_40978_1.jpg
+corpus/frames/mixkit_46635_2.jpg
+corpus/frames/mixkit_40978_0.jpg
+corpus/frames/yt__-SQ3B0oEQE_0.jpg
+corpus/frames/mixkit_1728_0.jpg
+corpus/frames/mixkit_40047_1.jpg
+corpus/frames/mixkit_41183_0.jpg
+corpus/frames/mixkit_28893_0.jpg
+corpus/frames/mixkit_43269_1.jpg
+corpus/frames/mixkit_317_0.jpg
+corpus/frames/mixkit_43527_2.jpg
+corpus/frames/mixkit_34560_1.jpg
+corpus/frames/mixkit_41865_0.jpg
+corpus/frames/mixkit_810_0.jpg
+corpus/frames/mixkit_14861_1.jpg
+corpus/frames/mixkit_29997_1.jpg
+corpus/frames/mixkit_46750_2.jpg
+corpus/frames/mixkit_42136_2.jpg
+corpus/frames/mixkit_41858_0.jpg
+corpus/frames/mixkit_5518_2.jpg
+corpus/frames/mixkit_23215_2.jpg
+corpus/frames/mixkit_21594_1.jpg
+corpus/frames/mixkit_42897_0.jpg
+corpus/frames/mixkit_40961_1.jpg
+corpus/frames/mixkit_914_1.jpg
+corpus/frames/mixkit_4157_1.jpg
+corpus/frames/mixkit_16215_0.jpg
+corpus/frames/mixkit_5951_1.jpg
+corpus/frames/mixkit_36122_0.jpg
+corpus/frames/mixkit_4953_0.jpg
+corpus/frames/mixkit_4953_2.jpg
+corpus/frames/mixkit_4916_2.jpg
+corpus/frames/mixkit_48503_1.jpg
+corpus/frames/mixkit_42048_0.jpg
+corpus/frames/mixkit_41165_2.jpg
+corpus/frames/mixkit_43270_1.jpg
+corpus/frames/mixkit_49482_0.jpg
+corpus/frames/mixkit_4809_0.jpg
+corpus/frames/mixkit_36122_1.jpg
+corpus/frames/mixkit_39852_2.jpg
+corpus/frames/mixkit_16215_1.jpg
+corpus/frames/mixkit_5951_0.jpg
+corpus/frames/mixkit_4157_0.jpg
+corpus/frames/mixkit_914_0.jpg
+corpus/frames/mixkit_40961_0.jpg
+corpus/frames/mixkit_25585_2.jpg
+corpus/frames/mixkit_42897_1.jpg
+corpus/frames/mixkit_21594_0.jpg
+corpus/frames/mixkit_41858_1.jpg
+corpus/frames/mixkit_29997_0.jpg
+corpus/frames/mixkit_4720_2.jpg
+corpus/frames/mixkit_14861_0.jpg
+corpus/frames/mixkit_810_1.jpg
+corpus/frames/mixkit_41865_1.jpg
+corpus/frames/mixkit_34560_0.jpg
+corpus/frames/mixkit_317_1.jpg
+corpus/frames/mixkit_43269_0.jpg
+corpus/frames/mixkit_28893_1.jpg
+corpus/frames/mixkit_41183_1.jpg
+corpus/frames/mixkit_269_2.jpg
+corpus/frames/mixkit_40047_0.jpg
+corpus/frames/yt__-SQ3B0oEQE_2.jpg
+corpus/frames/mixkit_1728_2.jpg
+corpus/frames/mixkit_40978_2.jpg
+corpus/frames/mixkit_46635_0.jpg
+corpus/frames/mixkit_30005_1.jpg
+corpus/frames/mixkit_30005_0.jpg
+corpus/frames/mixkit_46635_1.jpg
+corpus/frames/mixkit_40047_2.jpg
+corpus/frames/mixkit_269_0.jpg
+corpus/frames/mixkit_43269_2.jpg
+corpus/frames/mixkit_43527_1.jpg
+corpus/frames/mixkit_34560_2.jpg
+corpus/frames/mixkit_14861_2.jpg
+corpus/frames/mixkit_5518_1.jpg
+corpus/frames/mixkit_42136_1.jpg
+corpus/frames/mixkit_4720_0.jpg
+corpus/frames/mixkit_29997_2.jpg
+corpus/frames/mixkit_46750_1.jpg
+corpus/frames/mixkit_21594_2.jpg
+corpus/frames/mixkit_23215_1.jpg
+corpus/frames/mixkit_25585_0.jpg
+corpus/frames/mixkit_40961_2.jpg
+corpus/frames/mixkit_5951_2.jpg
+corpus/frames/mixkit_914_2.jpg
+corpus/frames/mixkit_4157_2.jpg
+corpus/frames/mixkit_39852_0.jpg
+corpus/frames/mixkit_4809_2.jpg
+corpus/frames/mixkit_41165_0.jpg
+corpus/frames/mixkit_42048_2.jpg
+corpus/frames/mixkit_49482_2.jpg
+corpus/frames/mixkit_4916_0.jpg
+corpus/frames/mixkit_51123_1.jpg
+corpus/frames/mixkit_42620_2.jpg
+corpus/frames/mixkit_816_0.jpg
+corpus/frames/mixkit_4148_0.jpg
+corpus/frames/mixkit_41655_0.jpg
+corpus/frames/mixkit_28897_2.jpg
+corpus/frames/mixkit_47044_0.jpg
+corpus/frames/mixkit_24054_0.jpg
+corpus/frames/mixkit_23195_0.jpg
+corpus/frames/mixkit_4916_1.jpg
+corpus/frames/mixkit_48503_2.jpg
+corpus/frames/mixkit_4953_1.jpg
+corpus/frames/mixkit_51123_0.jpg
+corpus/frames/mixkit_43270_2.jpg
+corpus/frames/mixkit_41165_1.jpg
+corpus/frames/mixkit_36122_2.jpg
+corpus/frames/mixkit_39852_1.jpg
+corpus/frames/mixkit_16215_2.jpg
+corpus/frames/mixkit_25585_1.jpg
+corpus/frames/mixkit_23215_0.jpg
+corpus/frames/mixkit_42897_2.jpg
+corpus/frames/mixkit_4720_1.jpg
+corpus/frames/mixkit_46750_0.jpg
+corpus/frames/mixkit_5518_0.jpg
+corpus/frames/mixkit_41858_2.jpg
+corpus/frames/mixkit_42136_0.jpg
+corpus/frames/mixkit_810_2.jpg
+corpus/frames/mixkit_41865_2.jpg
+corpus/frames/mixkit_317_2.jpg
+corpus/frames/mixkit_43527_0.jpg
+corpus/frames/mixkit_28893_2.jpg
+corpus/frames/mixkit_269_1.jpg
+corpus/frames/mixkit_41183_2.jpg
+corpus/frames/mixkit_4830_0.jpg
+corpus/frames/mixkit_42620_1.jpg
+corpus/frames/mixkit_28897_1.jpg
+corpus/frames/mixkit_23195_1.jpg
+corpus/frames/mixkit_24054_1.jpg
+corpus/frames/mixkit_47044_1.jpg
+corpus/frames/mixkit_41655_1.jpg
+corpus/frames/mixkit_4148_1.jpg
+corpus/frames/mixkit_4830_2.jpg
+corpus/frames/mixkit_816_1.jpg
+corpus/frames/mixkit_4401_1.jpg
+corpus/frames/mixkit_32137_1.jpg
+corpus/frames/mixkit_41161_0.jpg
+corpus/frames/mixkit_39780_0.jpg
+corpus/frames/mixkit_4700_1.jpg
+corpus/frames/mixkit_3578_1.jpg
+corpus/frames/mixkit_48010_0.jpg
+corpus/frames/mixkit_39782_2.jpg
+corpus/frames/mixkit_308_0.jpg
+corpus/frames/mixkit_25251_0.jpg
+corpus/frames/mixkit_39854_2.jpg
+corpus/frames/mixkit_42639_2.jpg
+corpus/frames/mixkit_25251_1.jpg
+corpus/frames/mixkit_308_1.jpg
+corpus/frames/mixkit_48010_1.jpg
+corpus/frames/mixkit_3578_0.jpg
+corpus/frames/mixkit_4700_0.jpg
+corpus/frames/mixkit_1711_2.jpg
+corpus/frames/mixkit_39780_1.jpg
+corpus/frames/mixkit_4401_0.jpg
+corpus/frames/mixkit_41161_1.jpg
+corpus/frames/mixkit_32137_0.jpg
+corpus/frames/mixkit_4830_1.jpg
+corpus/frames/mixkit_32137_2.jpg
+corpus/frames/mixkit_4401_2.jpg
+corpus/frames/mixkit_1711_0.jpg
+corpus/frames/mixkit_4700_2.jpg
+corpus/frames/mixkit_3578_2.jpg
+corpus/frames/mixkit_39782_1.jpg
+corpus/frames/mixkit_39854_1.jpg
+corpus/frames/mixkit_42639_1.jpg
+corpus/frames/mixkit_42639_0.jpg
+corpus/frames/mixkit_39854_0.jpg
+corpus/frames/mixkit_25251_2.jpg
+corpus/frames/mixkit_308_2.jpg
+corpus/frames/mixkit_48010_2.jpg
+corpus/frames/mixkit_39782_0.jpg
+corpus/frames/mixkit_1711_1.jpg
+corpus/frames/mixkit_41161_2.jpg
+corpus/frames/mixkit_39780_2.jpg
+corpus/frames/mixkit_1610_2.jpg
+corpus/frames/mixkit_4813_1.jpg
+corpus/frames/mixkit_23195_2.jpg
+corpus/frames/mixkit_24054_2.jpg
+corpus/frames/mixkit_47044_2.jpg
+corpus/frames/mixkit_28897_0.jpg
+corpus/frames/mixkit_41655_2.jpg
+corpus/frames/mixkit_4148_2.jpg
+corpus/frames/mixkit_816_2.jpg
+corpus/frames/mixkit_42620_0.jpg
+corpus/frames/mixkit_47321_0.jpg
+corpus/frames/mixkit_26517_1.jpg
+corpus/frames/mixkit_4500_0.jpg
+corpus/frames/mixkit_4992_0.jpg
+corpus/frames/mixkit_23718_1.jpg
+corpus/frames/mixkit_4835_2.jpg
+corpus/frames/mixkit_42662_1.jpg
+corpus/frames/mixkit_5601_0.jpg
+corpus/frames/mixkit_4332_2.jpg
+corpus/frames/mixkit_209_1.jpg
+corpus/frames/mixkit_4872_0.jpg
+corpus/frames/mixkit_4547_2.jpg
+corpus/frames/mixkit_1800_1.jpg
+corpus/frames/mixkit_30386_2.jpg
+corpus/frames/mixkit_4954_2.jpg
+corpus/frames/mixkit_42133_1.jpg
+corpus/frames/mixkit_39836_1.jpg
+corpus/frames/mixkit_46755_1.jpg
+corpus/frames/mixkit_39855_2.jpg
+corpus/frames/mixkit_43935_1.jpg
+corpus/frames/mixkit_42638_2.jpg
+corpus/frames/mixkit_31413_2.jpg
+corpus/frames/mixkit_41160_0.jpg
+corpus/frames/mixkit_4956_0.jpg
+corpus/frames/mixkit_23742_2.jpg
+corpus/frames/mixkit_4701_1.jpg
+corpus/frames/mixkit_24217_2.jpg
+corpus/frames/mixkit_50998_1.jpg
+corpus/frames/mixkit_29990_0.jpg
+corpus/frames/mixkit_41801_2.jpg
+corpus/frames/mixkit_13218_0.jpg
+corpus/frames/mixkit_4478_1.jpg
+corpus/frames/mixkit_23458_1.jpg
+corpus/frames/mixkit_48746_2.jpg
+corpus/frames/mixkit_24055_1.jpg
+corpus/frames/mixkit_50748_2.jpg
+corpus/frames/mixkit_4876_0.jpg
+corpus/frames/mixkit_8743_1.jpg
+corpus/frames/mixkit_24540_0.jpg
+corpus/frames/mixkit_4607_2.jpg
+corpus/frames/mixkit_40654_1.jpg
+corpus/frames/mixkit_40654_0.jpg
+corpus/frames/mixkit_24540_1.jpg
+corpus/frames/mixkit_8743_0.jpg
+corpus/frames/yt_POdVJfYym7E_2.jpg
+corpus/frames/mixkit_4876_1.jpg
+corpus/frames/mixkit_24055_0.jpg
+corpus/frames/mixkit_41656_2.jpg
+corpus/frames/mixkit_4908_2.jpg
+corpus/frames/mixkit_41287_2.jpg
+corpus/frames/mixkit_23458_0.jpg
+corpus/frames/mixkit_4478_0.jpg
+corpus/frames/mixkit_42664_2.jpg
+corpus/frames/mixkit_13218_1.jpg
+corpus/frames/mixkit_8739_2.jpg
+corpus/frames/mixkit_46712_2.jpg
+corpus/frames/mixkit_29990_1.jpg
+corpus/frames/mixkit_50998_0.jpg
+corpus/frames/mixkit_39834_2.jpg
+corpus/frames/mixkit_4701_0.jpg
+corpus/frames/mixkit_4956_1.jpg
+corpus/frames/mixkit_41160_1.jpg
+corpus/frames/mixkit_40733_2.jpg
+corpus/frames/mixkit_46755_0.jpg
+corpus/frames/mixkit_43935_0.jpg
+corpus/frames/mixkit_39836_0.jpg
+corpus/frames/mixkit_42133_0.jpg
+corpus/frames/mixkit_46122_2.jpg
+corpus/frames/mixkit_4954_1.jpg
+corpus/frames/mixkit_46122_0.jpg
+corpus/frames/mixkit_30386_1.jpg
+corpus/frames/mixkit_43935_2.jpg
+corpus/frames/mixkit_46755_2.jpg
+corpus/frames/mixkit_39855_1.jpg
+corpus/frames/mixkit_42133_2.jpg
+corpus/frames/mixkit_39836_2.jpg
+corpus/frames/mixkit_40733_0.jpg
+corpus/frames/mixkit_31413_1.jpg
+corpus/frames/mixkit_42638_1.jpg
+corpus/frames/mixkit_50998_2.jpg
+corpus/frames/mixkit_46712_0.jpg
+corpus/frames/mixkit_4701_2.jpg
+corpus/frames/mixkit_39834_0.jpg
+corpus/frames/mixkit_24217_1.jpg
+corpus/frames/mixkit_23742_1.jpg
+corpus/frames/mixkit_8739_0.jpg
+corpus/frames/mixkit_41801_1.jpg
+corpus/frames/mixkit_42664_0.jpg
+corpus/frames/mixkit_23458_2.jpg
+corpus/frames/mixkit_4478_2.jpg
+corpus/frames/mixkit_48746_1.jpg
+corpus/frames/mixkit_41287_0.jpg
+corpus/frames/mixkit_4908_0.jpg
+corpus/frames/mixkit_41656_0.jpg
+corpus/frames/mixkit_50748_1.jpg
+corpus/frames/mixkit_24055_2.jpg
+corpus/frames/mixkit_8743_2.jpg
+corpus/frames/yt_POdVJfYym7E_0.jpg
+corpus/frames/mixkit_4607_1.jpg
+corpus/frames/mixkit_40654_2.jpg
+corpus/frames/mixkit_4607_0.jpg
+corpus/frames/mixkit_4876_2.jpg
+corpus/frames/yt_POdVJfYym7E_1.jpg
+corpus/frames/mixkit_24540_2.jpg
+corpus/frames/mixkit_50748_0.jpg
+corpus/frames/mixkit_41656_1.jpg
+corpus/frames/mixkit_41287_1.jpg
+corpus/frames/mixkit_4908_1.jpg
+corpus/frames/mixkit_48746_0.jpg
+corpus/frames/mixkit_42664_1.jpg
+corpus/frames/mixkit_13218_2.jpg
+corpus/frames/mixkit_41801_0.jpg
+corpus/frames/mixkit_8739_1.jpg
+corpus/frames/mixkit_24217_0.jpg
+corpus/frames/mixkit_39834_1.jpg
+corpus/frames/mixkit_23742_0.jpg
+corpus/frames/mixkit_29990_2.jpg
+corpus/frames/mixkit_46712_1.jpg
+corpus/frames/mixkit_4956_2.jpg
+corpus/frames/mixkit_41160_2.jpg
+corpus/frames/mixkit_31413_0.jpg
+corpus/frames/mixkit_40733_1.jpg
+corpus/frames/mixkit_42638_0.jpg
+corpus/frames/mixkit_39855_0.jpg
+corpus/frames/mixkit_4954_0.jpg
+corpus/frames/mixkit_46122_1.jpg
+corpus/frames/mixkit_30386_0.jpg
+corpus/frames/mixkit_1610_0.jpg
+corpus/frames/mixkit_4835_0.jpg
+corpus/frames/mixkit_42625_1.jpg
+corpus/frames/mixkit_4992_2.jpg
+corpus/frames/mixkit_4500_2.jpg
+corpus/frames/mixkit_47321_2.jpg
+corpus/frames/mixkit_4332_0.jpg
+corpus/frames/mixkit_33354_1.jpg
+corpus/frames/mixkit_24352_1.jpg
+corpus/frames/mixkit_5601_2.jpg
+corpus/frames/mixkit_4872_2.jpg
+corpus/frames/mixkit_4811_1.jpg
+corpus/frames/mixkit_4547_0.jpg
+corpus/frames/mixkit_28892_1.jpg
+corpus/frames/mixkit_4915_0.jpg
+corpus/frames/mixkit_1730_0.jpg
+corpus/frames/mixkit_14669_2.jpg
+corpus/frames/mixkit_28889_2.jpg
+corpus/frames/mixkit_16115_1.jpg
+corpus/frames/mixkit_41859_1.jpg
+corpus/frames/mixkit_23727_1.jpg
+corpus/frames/mixkit_917_2.jpg
+corpus/frames/mixkit_23288_2.jpg
+corpus/frames/mixkit_4422_0.jpg
+corpus/frames/mixkit_6754_0.jpg
+corpus/frames/mixkit_46878_1.jpg
+corpus/frames/mixkit_236_1.jpg
+corpus/frames/mixkit_808_0.jpg
+corpus/frames/mixkit_4808_0.jpg
+corpus/frames/mixkit_236_0.jpg
+corpus/frames/mixkit_46878_0.jpg
+corpus/frames/mixkit_4808_1.jpg
+corpus/frames/mixkit_808_1.jpg
+corpus/frames/mixkit_6754_1.jpg
+corpus/frames/mixkit_4422_1.jpg
+corpus/frames/mixkit_23727_0.jpg
+corpus/frames/mixkit_41859_0.jpg
+corpus/frames/mixkit_16115_0.jpg
+corpus/frames/mixkit_1730_1.jpg
+corpus/frames/mixkit_4915_1.jpg
+corpus/frames/mixkit_1800_2.jpg
+corpus/frames/mixkit_28892_0.jpg
+corpus/frames/mixkit_21573_2.jpg
+corpus/frames/mixkit_4547_1.jpg
+corpus/frames/mixkit_42662_2.jpg
+corpus/frames/mixkit_4811_0.jpg
+corpus/frames/mixkit_209_2.jpg
+corpus/frames/mixkit_24352_0.jpg
+corpus/frames/mixkit_33354_0.jpg
+corpus/frames/mixkit_26517_2.jpg
+corpus/frames/mixkit_4332_1.jpg
+corpus/frames/mixkit_23718_2.jpg
+corpus/frames/mixkit_42625_0.jpg
+corpus/frames/mixkit_4813_2.jpg
+corpus/frames/mixkit_4835_1.jpg
+corpus/frames/mixkit_1610_1.jpg
+corpus/frames/mixkit_4813_0.jpg
+corpus/frames/mixkit_42625_2.jpg
+corpus/frames/mixkit_23718_0.jpg
+corpus/frames/mixkit_4992_1.jpg
+corpus/frames/mixkit_4500_1.jpg
+corpus/frames/mixkit_26517_0.jpg
+corpus/frames/mixkit_47321_1.jpg
+corpus/frames/mixkit_5601_1.jpg
+corpus/frames/mixkit_33354_2.jpg
+corpus/frames/mixkit_24352_2.jpg
+corpus/frames/mixkit_4811_2.jpg
+corpus/frames/mixkit_42662_0.jpg
+corpus/frames/mixkit_4872_1.jpg
+corpus/frames/mixkit_209_0.jpg
+corpus/frames/mixkit_1800_0.jpg
+corpus/frames/mixkit_21573_0.jpg
+corpus/frames/mixkit_28892_2.jpg
+corpus/frames/mixkit_28889_1.jpg
+corpus/frames/mixkit_14669_1.jpg
+corpus/frames/mixkit_16115_2.jpg
+corpus/frames/mixkit_23727_2.jpg
+corpus/frames/mixkit_41859_2.jpg
+corpus/frames/mixkit_917_1.jpg
+corpus/frames/mixkit_23288_1.jpg
+corpus/frames/mixkit_46878_2.jpg
+corpus/frames/mixkit_236_2.jpg
+corpus/frames/mixkit_4808_2.jpg
+corpus/frames/mixkit_808_2.jpg
+corpus/frames/mixkit_6754_2.jpg
+corpus/frames/mixkit_4422_2.jpg
+corpus/frames/mixkit_23288_0.jpg
+corpus/frames/mixkit_917_0.jpg
+corpus/frames/mixkit_14669_0.jpg
+corpus/frames/mixkit_28889_0.jpg
+corpus/frames/mixkit_1730_2.jpg
+corpus/frames/mixkit_4915_2.jpg
+corpus/frames/mixkit_21573_1.jpg
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "sed -n '460,540p' /Users/harshitverma/Desktop/OpenMontage/AGENT_GUIDE.md; ls brief; cat brief/SHARED.md brief/WHAT_WE_WANT.md brief/RESEARCH_PAIN.md" in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ exited 1 in 0ms:
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.capability_catalog(), indent=2))"
+
+# See all tools grouped by provider (elevenlabs, openai, ffmpeg, etc.)
+python -c "from tools.tool_registry import registry; import json; registry.discover(); print(json.dumps(registry.provider_catalog(), indent=2))"
+```
+
+Key capability families to look for in the output:
+
+- **tts** — Text-to-speech providers. Route via `tts_selector`.
+- **video_generation** — Video generation providers (cloud, local GPU, stock). Route via `video_selector`.
+- **image_generation** — Image generation providers (cloud, local GPU, stock). Route via `image_selector`.
+- **music_generation** — Music and sound effect generation.
+- **video_post** — Composition, stitching, trimming (FFmpeg-based, always local).
+- **audio_processing** — Mixing, enhancement (FFmpeg-based, always local).
+- **analysis** — Transcription, scene detection, frame sampling.
+- **avatar** — Talking head and lip sync generation.
+- **character_animation** — Local character specs, SVG rigs, pose libraries, action timelines, previews, and QA.
+- **3d_world_generation** — Local semantic terrain, procedural biome scattering, explicit landmarks, diagnostic passes, and deterministic HyperFrames/Three.js camera fly-throughs. Route through `threejs_world` and read `skills/creative/3d-world-generation.md` plus `.agents/skills/threejs-world-generation/SKILL.md`.
+- **3d_asset_acquisition** — Rights-safe GLTF/GLB catalogs for production-tier Three.js worlds. Route through `threejs_asset_catalog`; never substitute blockout primitives for a requested detailed or reference-grade environment.
+- **3d_asset_generation** — Unique textured/PBR meshes from text or concept images. Route text-described hero assets through `atlas_3d`, image-conditioned assets and regional object extraction through `fal_3d`, and read `.agents/skills/3d-asset-generation/SKILL.md`. Announce provider/model/unit cost before every first paid call and sample before batching.
+- **3d_world_rendering** — Production assembly, terrain, lighting, materials, camera, and image-sequence rendering in Blender. Route through `blender_world`; use Three.js for interactive/blockout review, not as a substitute for Blender when reference-grade scene density is requested.
+- **enhancement** — Upscale, background removal, face enhance, color grading.
+
+Each tool in the registry declares `best_for`, `install_instructions`, `runtime` (LOCAL, API, LOCAL_GPU, HYBRID), and `status`. Read these fields — do not assume tool strengths from memory.
+
+### Tool Class Naming Convention
+
+All tool classes use **PascalCase without a "Tool" suffix**. When importing tools in Python:
+
+| Module | Class Name | NOT |
+|--------|-----------|-----|
+| `tools.audio.music_gen` | `MusicGen` | ~~MusicGenTool~~ |
+| `tools.video.video_compose` | `VideoCompose` | ~~VideoComposeTool~~ |
+| `tools.audio.audio_mixer` | `AudioMixer` | ~~AudioMixerTool~~ |
+| `tools.tts.elevenlabs_tts` | `ElevenLabsTTS` | ~~ElevenLabsTTSTool~~ |
+| `tools.analysis.transcriber` | `Transcriber` | ~~TranscriberTool~~ |
+| `tools.subtitle.subtitle_gen` | `SubtitleGen` | ~~SubtitleGenTool~~ |
+
+When in doubt, check: `grep "^class " tools/<path>.py`
+
+All tools call via `.execute(params_dict)` (returns `ToolResult` with `.success`, `.data`, `.error`), NOT `.run()`.
+
+### Selector Pattern
+
+Three selector tools abstract multi-provider capabilities. **Selectors auto-discover providers from the registry.** Adding a new provider tool automatically makes it available through the selector — no selector code changes needed.
+
+| Selector | Routes to | How it discovers |
+|----------|-----------|-----------------|
+| `tts_selector` | All tools with `capability="tts"` (ElevenLabs, Google TTS, OpenAI, Piper, Azure, fish.audio) | `registry.get_by_capability("tts")` |
+| `image_selector` | All tools with `capability="image_generation"` (FLUX, Google Imagen, GPT Image, Recraft, etc.) | `registry.get_by_capability("image_generation")` |
+| `video_selector` | All tools with `capability="video_generation"` | `registry.get_by_capability("video_generation")` |
+
+Selectors route based on: user preference > availability > discovery order. They adapt input schemas between providers transparently.
+
+## User-Facing Planning Protocol
+
+Before committing to execution, present:
+
+1. `4-5` concept directions when the brief is still open.
+2. Recommended pipeline.
+3. Recommended tool path.
+4. Alternative tool paths that are actually available.
+5. Cost estimate and quality tradeoffs.
+6. **Music plan** — mandatory for every pipeline that has audio. See below.
+7. Production plan by stage.
+8. Approval gate before asset generation.
+
+If a user prefers a specific vendor and that tool is available, surface it directly. Do not hide provider choice.
+
+### Music Plan (Mandatory)
+
+Music is a critical part of any video. **Surface the music situation to the user at proposal/idea time** — do not silently defer it to the asset stage where a failure becomes expensive.
+
+Check music availability in this order and present the options:
+
+1. **User music library:** Check `registry.get_by_capability("music_library")` and inspect `music_library/`. If tracks exist, list durations and let the user pick one.
+2. **Royalty-free search:** Check `registry.get_by_capability("music_search")` for configured search/download tools. Report licensing constraints and whether a key is required.
+3. **Music generation APIs:** Check `registry.get_by_capability("music_generation")`. Report status, quota, cost, and quality tradeoffs honestly.
+4. **Bring your own:** Note that the user can provide a track (for example from YouTube Audio Library or Jamendo) through the `music_library/` drop path.
+
+**Always present the user with explicit choices:**
+CANDIDATE_v30.md
+CANDIDATE_v31.md
+CONTEXT.md
+SCRIPT_v29.md
+clip_rank.py
+sound_mix_v28c.py
+sound_mix_v29.py
+sound_mix_v30.py
+sound_mix_v31.py
+cat: brief/SHARED.md: No such file or directory
+cat: brief/WHAT_WE_WANT.md: No such file or directory
+cat: brief/RESEARCH_PAIN.md: No such file or directory
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+mcp: mnemo/recall started
+mcp: mnemo/recall (completed)
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc "cat brief/CONTEXT.md; rg --files --hidden /Users/harshitverma/Desktop/OpenMontage/skills /Users/harshitverma/Desktop/OpenMontage/projects /Users/harshitverma/Desktop/OpenMontage/.agents -g 'SHARED.md' -g 'WHAT_WE_WANT.md' -g 'RESEARCH_PAIN.md' -g '*persona*' -g '"'!node_modules'"' -g '"'!.git'"'" in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ succeeded in 0ms:
+# ao-hook-remake: context
+
+**Started:** 2026-10-13.
+
+**Goal:** keep the colleague's V27 cut (63 s) and its script, flow and voiceover. Replace only the visuals of the hook (0–~23 s), the part before "Agentic Office." is introduced.
+
+**Sibling project:** `../agentic-office-false-promise`, the "Diffs" launch film (v14). Its asset bank can be reused here:
+- Canva Maya clips in `kling/`
+- Meta stills in `visuals/meta/`
+- critics in `brief/critics/`
+
+## Source
+- `visuals/source_cut_v27.mp4` is the WhatsApp copy at 848×480. It matches `~/Downloads/WhatsApp Video 2026-10-11 at 23.29.18*.mp4`.
+- The full-quality master is in the handoff folder, `~/Desktop/AgenticOffice_Video/agentic-office-launch-film-handoff-2026-10-12/`:
+  - `videos/agentic-office-launch-27.mp4`
+  - composition `AgenticOfficeLaunch22` in `film/src/Film22.tsx`
+  - VO stems in `audio/vo/v22/` (Kokoro `af_heart` 1.06; the email uses `bm_george`)
+  - final mix in `audio/mix-v27.wav`
+
+## Current hook (what we're replacing)
+The visuals are flat UI illustrations on a pale mint background, all labelled "ILLUSTRATION". There are no people, no place and no emotion.
+
+| t (s) | VO | Current picture |
+|---|---|---|
+| 0–6 | o1 "You ask a chatbot to update an agreement." o2 "It writes back: here's your revised agreement." | A generic chat card. The reply reads "Here's your revised agreement ✓". Super: "AI said it was done." |
+| 6–9 | o3b "Then you open the file… and the formatting's wrecked." | The Supply_Agreement doc with red tags for "Template gone" and "Numbering wrong" |
+| 9–12 | o4 "So you fix it by hand. Then, an email." o5f (George) "Please add the updated financial annexure and the presentation, before the meeting." | Doc stub plus a partner notification card |
+| 12–18 | o6 "Five tabs. Copy. Paste. Check. Repeat." | Stack of five window cards. Super: "The work had just begun." / "Copy. Paste. Check." |
+| 18–20 | (beat) | Files fanned out, "Meeting in 15 min", a red 8:52 |
+| 20–23 | o7 "What if AI could finish the work?" | Kinetic type |
+| 23+ | v05 "Meet Agentic Office…" | Logo, then the real UI. **Keep from here on.** |
+
+## Constraints (carried over)
+- Budget is $0. Picture sources:
+  - Canva AI, Qwen (about 1 clip per account per day), Meta AI stills and Gemini, driven through the logged-in browser
+  - stock from Pexels and Mixkit
+  - Remotion/HyperFrames for graphics
+- Never show the tracked-change author "Hermes".
+- Claims must pass the handoff's `brief/CLAIMS_AND_DECISIONS.md`. The user overrode its ban on AI-generated people for this campaign.
+- Keep every version as a new file. Never overwrite.
+/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/brief/WHAT_WE_WANT.md
+/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/brief/RESEARCH_PAIN.md
+/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/brief/critics/SHARED.md
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat ../agentic-office-false-promise/brief/critics/SHARED.md ../agentic-office-false-promise/brief/WHAT_WE_WANT.md ../agentic-office-false-promise/brief/RESEARCH_PAIN.md' in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ succeeded in 0ms:
+# Shared inputs and output contract (all critics)
+You are ONE of three independent critics evaluating a launch film for **Agentic Office** (an AI workspace that edits the real Word/Excel/PowerPoint files inside a folder together and lets the user review and accept or reject every change). The other critics judge other things; stay strictly in your lane.
+
+Inputs, in the working directory:
+- ../WHAT_WE_WANT.md: marketing brief, audience, rules, success test.
+- ../context/Agentic_Office_Strategy/strategy/07_PERSONAS.md: the target customer (Maya, an associate in fund finance; David, the CFO).
+- ../RESEARCH_PAIN.md: real public complaints (evidence of the customer's pain).
+- ../UI_REUSE.md: the real product footage that exists, and what must never be shown (the source of product truth and approved claims).
+- The CANDIDATE named in the task (a script, and in stage 2 also rendered frames with timestamps and a timeline).
+
+Product truth / approved claims: the app edits the native model, memo and deck in one workspace; it shows proposed changes (tracked changes, per-cell bars, a Changes panel with per-file groups); the user accepts or rejects; the demo task is DACH Q4 8.9 → 8.5 with the memo going from €71–73m to €74.6m and 10 of 10 changes accepted. NOT approved: time savings, speed benchmarks, privacy guarantees, "never wrong", fully autonomous sending, a recorded Reject result (not captured yet), the internal name "Hermes", real AI brand logos.
+
+Return ONLY a JSON object (no prose before or after) with this schema:
+{
+ "critic": "<craft|story|customer_psychology>",
+ "stage": "<script|animatic>",
+ "score": 0-100,
+ "dimension_scores": {"<dimension>": 0-100, ...},
+ "issues": [{"shot_id": "beat N or mm:ss", "category": "<snake_case>", "severity": 0.0-1.0, "confidence": 0.0-1.0, "evidence": "<what you saw, quote the script or frame>", "suggested_action": "<a concrete change to that beat>"}],
+ "constraint_failures": [{"rule": "<which hard rule>", "shot_id": "...", "evidence": "..."}],
+ "revision_scope": "<none|single_shot|shot_sequence|opening|product_demo|ending|whole>",
+ "top_revision": "<the single highest-impact change, in one sentence>"
+}
+Rules: every issue needs evidence and a concrete action. "Make it better" is not allowed. Judge only what a viewer would actually see and hear, not what the writer intended. List at most 8 issues, highest severity first. Low confidence means "verify", not "regenerate".
+# What we want: the Agentic Office launch film (v4 brief)
+
+*Written 2026-10-12, after v3 was rejected: "I can't understand where AI is causing the problem. The workflow is not shown."*
+
+## 1. Why v1–v3 didn't work
+- They showed **a stressed person**, not **the workflow** that stresses her.
+- "AI fails" was **abstract**: red marks, a cheerful man in orange. Nobody could say *what the AI did wrong*.
+- Messages flashed by too fast to read, so the story lived in text nobody saw.
+- The real pain from our deck never appeared: **AI answers in a chat, while the work sits in folders, so the human carries everything across.**
+
+## 2. The one insight the film must land
+> **Today, you drive and the AI suggests.**
+> You upload the files, explain the context, copy the answer, paste it into Word, fix the formatting, update the model by hand, rebuild the deck the chatbot "made", and check everything yourself.
+>
+> **With Agentic Office it's reversed: the AI drives and you approve.**
+> It works *inside* your folder (model, memo and deck together), shows every change, and you accept or reject.
+
+Everything in the film either shows the human doing the AI's job, or shows the AI doing the job while the human approves.
+
+## 3. Source of truth (our own material)
+| Source | What it gives the film |
+|---|---|
+| Deck slide 1: "The answer is in the chat" | The opening contradiction: the answer is ready, but **0 of 4 files changed** |
+| Deck slide 2: "The professional is the operating system" | The 7 manual steps and the 3 taxes: **context tax · execution gap · review tax** |
+| Deck slides 4–5 | Workspace context, native files, assistant + changes, review |
+| Strategy `07_PERSONAS.md` | **Maya** (associate, fund finance), **David** (CFO); her pains: copying 100+ numbers, re-cutting after the CFO changes one assumption, `LP_Q3_v11_final_MK.pptx` sprawl, formatting breaking |
+| Strategy README | Our wedge: **keeping multi-file packs (Excel → deck → memo) correct**. Single-file AI-in-Office now exists (ChatGPT for Word, Copilot), so we must show the whole pack |
+| Real app footage (demo Task 3) | DACH 8.9 → 8.5; memo €71–73m → €74.6m; 10 of 10 changes reviewed and accepted |
+
+## 4. Audience
+Fund-finance and portfolio-ops associates, FP&A, bankers and consultants who build recurring board or LP packs. Secondary: AI power users. Feed: LinkedIn, X, YouTube, Instagram.
+
+## 5. Rules
+1. **Show the workflow on screen**, at the pace a real person would read it. Every message holds for at least 2.5 s and is large enough to read on a phone.
+2. **One task, one number, start to finish:** "DACH Q4 to 8.5 → FY26 €74.6m (was €71–73m)."
+3. **The AI's failure must be specific and true to life:** an answer only in chat, files unchanged; a downloaded deck in the wrong template; pasted text with stray `**` markdown; three `_updated(2).pptx` files.
+4. **No real AI brand names or logos** ("AI chat", not ChatGPT or Claude). Narration may say "today's chatbots".
+5. **Product proof only from real app footage.** Prototype mockups are labelled as such or not used. Never show the internal name "Hermes", file paths, or the failed-step span.
+6. **Faces only where they add emotion**: Maya's reactions, not plot. If Dan the AI is used, every Dan beat must be paired with a screen showing exactly what the AI did (Version B).
+7. One ending, one line, one CTA.
+
+## 6. Versions we want
+| Version | Length | What it is |
+|---|---|---|
+| **A: "Role Reversal"** (main) | ~75 s, 16:9 | Screen-led truth plus Maya's reactions; narrator |
+| **B: "Dan"** | ~75 s | The same story, with the AI played by Dan for comedy; each Dan beat cuts to the screen showing what he actually did |
+| **C: Sound-off** | ~75 s | Version A with captions in place of narration (for feeds that autoplay muted) |
+| **D: 9:16 short** | ~30 s | The reversal only: "You drive, AI suggests" → "AI drives, you approve" |
+
+## 7. Success test
+Show it, with no explanation, to five people from the audience. They should be able to say:
+1. "She had to update one number across the model, memo and deck."
+2. "The chatbot only told her what to do, so she did it all by hand, and its deck was broken."
+3. "Agentic Office did it inside her files and she just approved the changes."
+4. They remember the name.
+# Research: real, public pain (for SCRIPT_v5)
+
+*Collected 2026-10-12. Quotes are 15 words or fewer; everything else is paraphrased. Reddit and Wall Street Oasis block automated reads, so Reddit-specific threads are not cited; the sources below are the ones that could be opened and checked. "Vendor" = the page sells a fix, so treat its framing with care.*
+
+## A. The AI only talks; the file never changes (execution gap)
+1. **Hacker News, ecshafer, 2026-05-15**, https://news.ycombinator.com/item?id=48151528
+   Asked an AI assistant for a slide. It made "an empty powerpoint slide with the default template", told them to download it, then gave separate text "to copy and paste it in".
+   → Film: the chat's answer arrives as a download plus text to paste. The human does the assembly.
+2. **Hacker News, deckar01, 2026-02-05**, https://news.ycombinator.com/item?id=46901034
+   "It's just a chatbot app… it still doesn't do anything but chat." Asked for a Word document, they got a download link to a template.
+   → Film: the chat says "Here's what to change", and the folder shows 0 of 4 files changed.
+
+## B. AI-made decks break the template, the chart and the content
+3. **Hacker News, irishcoffee, 2026-04-02**, https://news.ycombinator.com/item?id=47608376
+   Gave an LLM a Word doc and the company PowerPoint template. The deck came back with no text from the source, and six content slides "were identical, and empty."
+   → Film: the downloaded deck has the right slide count but the wrong content.
+4. **Microsoft Tech Community, "PowerPoint company branding", 2024-02-29**, https://techcommunity.microsoft.com/discussions/microsoft365copilot/powerpoint-company-branding/4072079
+   "the templates show in PowerPoint correct… copilot won't seem to utilize them." The poster had "spent tons of time" trying.
+   → Film: "template lost" is the most common and most believable failure.
+5. **Deckary blog, AI PowerPoint makers tested on a strategy deck, 2026-04-03**, https://deckary.com/blog/ai-powerpoint-presentation-maker *(vendor)*
+   The AI "defaulted to generic bar charts and bulleted lists"; the waterfall chart was not met; **35 minutes of reformatting** to fix it.
+   → Film: slide 4's chart becomes bullets; a red label reads "chart gone".
+6. **MindStudio blog, AI PowerPoint add-in limits, 2026-05-09**, https://www.mindstudio.ai/blog/claude-powerpoint-add-in-limitations-cant-see-slides-hallucination *(vendor)*
+   The AI reads a text version of the deck, not the picture, so when asked to update a chart it can "hallucinate those values".
+   → Film: the chat's deck shows a number nobody gave it. This motivates the cross-check by hand.
+7. **eesel blog, review of AI deck building, 2026-09-21**, https://www.eesel.ai/blog/claude-slides-review *(vendor)*
+   The add-in "crashes and fails mid generation, so you need to redo the whole thing"; output is a first draft that needs finishing by hand.
+   → Film: "Regenerate" leads to `_updated (1)`, then `_updated (2)`.
+
+## C. Pasting AI text into Word (stray markdown, wrong formatting)
+8. **Mac Power Users forum, cwc, 2025-04-13**, https://talk.macpowerusers.com/t/chatgpt-markdown-formatting-issue/40431
+   AI text "pastes as plain text with broken formatting" in many apps, and adds stray tabs.
+9. **Unmarkdown blog, "Why do asterisks appear when I paste from ChatGPT", 2025–26**, https://unmarkdown.com/blog/why-do-asterisks-appear-when-i-paste-from-chatgpt *(vendor)*
+   Paraphrase: the copy button puts raw markdown on the clipboard, and Word has no markdown detection, so `**bold**`, `##` and table pipes `|` arrive as literal characters.
+   → Film: the memo paragraph arrives as `**€74.6m**` in the wrong font, and the memo's Table 1 still says €71–73m.
+
+## D. Re-uploading context in every chat (context tax)
+10. **OpenAI Developer Community, GPT-4o memory regression thread, July 2025**, https://community.openai.com/t/bug-gpt-4o-memory-regression-context-loss-across-chats-and-inside-threads/1310926
+    "Asks to upload the same document every few minutes and forgets what we are doing." (2025-07-09)
+    "Every new chat starts from zero" (2025-07-29)
+    → Film: a new chat asks her to "upload the files again"; the upload chips crawl a second time.
+
+## E. Version sprawl (final_v7)
+11. **Hacker News, many authors, 2025–2026** (Algolia search for "final_final", e.g. https://news.ycombinator.com/item?id=46318564, https://news.ycombinator.com/item?id=47993179, https://news.ycombinator.com/item?id=48409590)
+    Real filenames people typed: `v1_final_FINAL_approved_v2.xlsx`, `Dissertation_final_final_v8.docx`, `assessment_framework_draft_v3_final_FINAL.docx`.
+    → Film: the Downloads list reads `Board_Deck_Q3_updated.pptx`, `…updated (1).pptx`, `…updated (2).pptx`, `Board Memo Q3 FINAL_v3.docx`. Our own persona file uses `LP_Q3_v11_final_MK.pptx`.
+
+## F. Late-night pack rework in finance
+12. **Hacker News, michaelochurch, 2011-11-22**, https://news.ycombinator.com/item?id=3263866, and **hncommenter13, 2013-09-13**, https://news.ycombinator.com/item?id=6379145 *(older than 2024; kept as background)*
+    "proof-reading pitch books at 3:00 am on a Sunday"; memos "largely written between 2 and 5 AM".
+13. **IBTimes, 2025**, https://www.ibtimes.com/junior-bankers-spend-hours-building-models-pitchbooks-openai-wants-chatgpt-do-that-work-3807391, and **Financial News via iTiger, 2025**, https://www.itiger.com/hans/news/2495549477
+    Paraphrase: banks are hiring ex-bankers to train AI on models and pitchbooks, and planning AI to remove "junior drudge work" such as correcting seniors' mark-ups, after renewed scrutiny of brutal hours.
+    → Film: the hour stamps (11:47 PM → 3:12 AM) and David's texts are the believable part, not an exaggeration.
+14. **Vault / Street of Walls, IB analyst day-in-the-life** (background), https://streetofwalls.com/articles/investment-banking/learn-the-basics/a-day-in-the-life-of-an-investment-banker/
+    Paraphrase: senior comments land after the client meetings end, so revisions run to 1–3 AM; a deck may change every night for two weeks.
+
+## Not found as a public quote (so the film keeps it generic)
+- A specific post where a board deck said one number and the memo another. Numbers that don't tie across files are well known in finance (and are in our persona file: "tie-out errors found by LPs"), but I could not open a citable thread. The film uses only our own numbers: €71–73m vs €74.6m.
+
+## The three most usable details
+1. **The AI hands you a download and "copy and paste this in"** (HN, 2026). It's the whole "you drive, it suggests" insight in one line.
+2. **Template ignored; chart turned into bullets; 35 minutes to fix** (MS forum 2024; Deckary 2026).
+3. **"Upload the same document every few minutes"** (OpenAI forum, 2025). It makes the context tax visible.
+
+hook: PostToolUse
+hook: PostToolUse Completed
+hook: PreToolUse
+hook: PreToolUse Completed
+exec
+/bin/zsh -lc 'cat ../agentic-office-false-promise/brief/context/Agentic_Office_Strategy/strategy/07_PERSONAS.md; cat brief/CANDIDATE_v31.md' in /Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake
+ succeeded in 0ms:
+# 07 — Personas
+
+*v1 · 2026-09-30. These are **hypothesis personas** built from public evidence (BLS wages, vendor case studies, job descriptions) and the founders' Project Atlas workflow. **None is based on an interview yet.** Every "PAINS", "PRODUCT MOMENT" and hours figure is [H] until validated (20_USER_RESEARCH). Economic value uses `models/09_MARKET_MODEL.xlsx › D_Value` (base: 25–35% time reduction, 1.3× loading, 46 weeks).*
+
+---
+
+## P1 — "Maya", Associate, Portfolio Operations & Fund Finance (primary user)
+**WHO**: 3–6 years' experience (ex-Big-4 or banking); mid-market PE or private-credit manager, $1–5B AUM, 30–150 staff; US/UK.
+**WORK**: Owns the quarterly LP report pack, monthly portfolio-monitoring deck and IC update memos. Touches Excel (fund model, portfolio KPIs, waterfall), PowerPoint (LP deck, IC deck), Word (LP letter, IC memo) and PDFs (portfolio-company management accounts, valuation reports, fund-admin statements). Heavy weeks around quarter-end (+45–60 days per ILPA guidance).
+**PAINS [H]**: copying 100+ numbers from model to deck and letter; re-cutting after the CFO changes one assumption; version sprawl (`LP_Q3_v11_final_MK.pptx`); tie-out errors found by LPs; chasing portfolio companies for data; rework when a valuation changes late.
+**CURRENT WORKAROUND**: Excel + PowerPoint + Word; think-cell/Macabacus links (fragile); portfolio-monitoring platform for KPI collection; ChatGPT/Claude for letter drafting; juniors or an offshore team for formatting.
+**ECONOMIC VALUE**: US financial analyst mean wage $116,800 (BLS) → loaded ≈ $73/hr. Vendor case studies report 60–180 hrs/quarter for LP reporting [F, Tier 3]. At 30 hrs/month per pack and 35% reduction, ≈ **$770/pack/month** of time value (PackPricing base); faster turnaround to LPs; fewer tie-out errors.
+**AI CONCERNS**: a wrong number reaching LPs; confidentiality of portfolio data; being unable to see what the AI changed; formatting breaking.
+**PRODUCT MOMENT [H]**: *"The CFO just changed the Q3 valuation of one portfolio company, and I have to update the model, 9 slides and 4 paragraphs of the letter tonight."* The product shows every dependent object, updates it, and she reviews a 23-item diff instead of re-checking 140 numbers.
+**BUYER**: Fund CFO/COO. **USER**: Maya + 1–3 analysts. **CHAMPION**: Maya or Head of Portfolio Ops. **BLOCKER**: CCO (data policy), IT (vendor security review), a partner who distrusts AI.
+
+## P2 — "David", CFO / COO of a mid-market fund (economic buyer)
+**WHO**: 15+ years; signs vendor contracts up to ~$100k without the investment committee.
+**WORK**: Reviews packs, owns LP relationships and the audit trail for valuations.
+**PAINS [H]**: team capacity crunch at quarter-end; errors that reach LPs; key-person risk (only Maya knows the pack); rising LP reporting demands (ILPA templates).
+**BUYING LOGIC**: an ROI story in hours plus risk reduction (tie-out, audit log); security posture (SOC 2, data residency, no training on data); does not want another platform to implement.
+**PRODUCT MOMENT [H]**: seeing a **tie-out report** ("147 numbers in the LP deck, 147 traced to the fund model; 2 mismatches flagged") and a **restore point** for the Q2 pack.
+**OBJECTIONS**: "Copilot is already included in our licence"; "our fund admin does this"; "what if you go out of business?" (answer: files stay native; no lock-in).
+
+## P3 — "Rahul", Senior Analyst, India-based production team (power user)
+**WHO**: 2–5 years; CA/MBA/CFA-track; Gurugram, Bengaluru or Mumbai; works in a 100–2,000-person research/analytics or fund-administration firm, or a captive GCC reporting team; serves 3–8 client packs per cycle.
+**WORK**: 10–12 hour days in Excel/PowerPoint/Word; follows client-specific templates and style guides; a QC reviewer checks every number.
+**PAINS [H]**: repetitive roll-forwards; client-specific formatting rules; QC rework; night shifts to match US deadlines; knowledge lost when analysts churn.
+**CURRENT WORKAROUND**: templates, macros, checklists, a second analyst doing QC, some internal Python/VBA; client-approved AI tools only (often none).
+**ECONOMIC VALUE**: wage ~₹8–20 LPA ($9–23k), but the firm bills ~$25–45/hr **[A]**. Value to the firm is **billable capacity**: 30 hrs/week of doc work at 35% reduction ≈ $12k/yr per analyst at $35/hr billing (D_Value last row).
+**AI CONCERNS**: client data leaving approved environments; being blamed for AI errors; job security.
+**PRODUCT MOMENT [H]**: *"Client sent revised numbers at 11pm IST; the pack is due at 9am New York."* A roll-forward with an automatic tie-out report replaces 3 hours of re-keying and QC.
+**BUYER**: Delivery head / COO. **CHAMPION**: Team lead / QC manager. **BLOCKER**: client contracts (AI usage clauses), InfoSec.
+
+## P4 — "Anita", Delivery Head / VP Operations, mid-tier production firm (channel buyer)
+**WHO**: 12–20 years; P&L owner for a practice of 50–300 analysts.
+**PAINS [H]**: clients demanding AI-driven price cuts; margin pressure; attrition; competing with Acuity and Evalueserve, which now market agent platforms.
+**BUYING LOGIC**: margin per FTE, turnaround-time SLAs, "AI-enabled delivery" as a sales story, and client-approvable deployment (private, BYO model, audit).
+**PRODUCT MOMENT [H]**: a client RFP that asks "what AI do you use, and how do you control it?"
+**DEAL SHAPE**: pilot on one client account (5–15 seats) → practice-wide; potential white-label.
+
+## P5 — "Sam", FP&A Manager, mid-market company (secondary hypothesis)
+**WHO**: 6–10 years; company with $50M–$1B revenue; FP&A team of 3–10; not on Datarails, Cube or Pigment.
+**WORK**: monthly management pack and quarterly board pack (Excel model → PowerPoint → Word commentary); lender compliance certificate.
+**PAINS [H]**: 2–3 days per cycle writing commentary (IBM FP&A trends cited 70–80% reduction with AI-first workflows [Tier 3]); last-minute changes after the CEO review; link breakage between Excel and PPT.
+**ECONOMIC VALUE**: US financial manager mean wage $186,910 → loaded ≈ $117/hr; 10 hrs/week of pack work at 35% reduction ≈ $19k/yr.
+**BUYER**: CFO. **BLOCKER**: "we're evaluating an FP&A platform instead".
+
+## P6 — "Leo", Credit Analyst, private-credit fund (adjacent)
+**WHO**: 2–6 years; mean US credit-analyst wage $100,850 (BLS).
+**WORK**: quarterly covenant-compliance packs and credit memo updates per borrower (20–60 borrowers).
+**PRODUCT MOMENT [H]**: borrower sends quarterly financials as a PDF, and 30 covenant tests, the memo and the portfolio deck must update.
+
+## P7 — "Neha", Engagement Manager, boutique strategy / transaction advisory (expansion)
+**WHO**: 5–8 years; firm of 20–200.
+**WORK**: client deliverable decks with backing models; iterative re-cuts during a project.
+**WHY LATER**: project-based rather than recurring (weaker retention); PowerPoint incumbents (think-cell, auxi) and platform agents are strong.
+
+## P8 — "IT/Security & Compliance" (blocker persona)
+**NEEDS**: SSO, SOC 2 Type I→II, data residency, no model training on customer data, BYO model endpoints (Azure OpenAI, Bedrock), audit log export, least-privilege file access, a vendor that can run inside their tenant or VPC.
+**IMPLICATION**: private deployment is not a year-3 feature for fund and delivery-firm buyers. A credible security story is needed by the first paid pilot (SOC 2 Type I by month ~12 in the plan).
+
+---
+
+## Persona-level economics (base case, from D_Value)
+| Persona | Cost basis | Doc hrs/week [H] | Value/yr at 25% reduction | WTP/mo at 10% capture |
+|---|---|---:|---:|---:|
+| US financial analyst (P1) | $116,800 wage | 15 | $12.6k | $105 |
+| US financial manager (P5) | $186,910 | 10 | $13.4k | $112 |
+| US credit analyst (P6) | $100,850 | 15 | $10.9k | $91 |
+| US management consultant (P7) | $123,080 | 15 | $13.3k | $111 |
+| India IB/PE analyst | ₹20 LPA | 25 | $4.1k | $34 |
+| India KPO research analyst | ₹8 LPA | 30 | $2.0k | $16 |
+| Offshore analyst valued at billing rate (P3) | $35/hr × 2,080 | 30 | $12.1k | $101 |
+
+**Takeaway**: price against US value or offshore *billing* value, never Indian salaries. That is why the channel ICP is framed as "production teams serving global clients", not "Indian professionals".
+PRODUCT: Agentic Office, an agentic workspace where Word, Excel and PowerPoint files live together. An assistant drafts edits across files as tracked changes/diffs; a person accepts or rejects each one. Audience: consultants, finance teams, lawyers. Approved truths: one request updated model (Revenue!E6 8.9→8.5), memo (€71–73m→€74.6m) and deck (Slide 4 title, Slide 2 TextBox 23 etc.); 10 changes across 3 files, all reviewable; real recording sped up. Do NOT claim time savings or unattended approval.
+FILM: "Done." V31, 85 s, 16:9, master -14 LUFS, VO-led ducking. Fictional illustration UIs (unbranded chatbot, Word/Excel/PowerPoint/PDF look-alikes, email client) in the first half; REAL product screenshots/recording in the second half (labelled). Real stock footage (Mixkit/Pexels): one protagonist (Black woman, striped shirt, blue night office) in 2 clips, plus hands/phone/mouse/sunrise inserts. Kokoro TTS draft narrator (af_heart) + one British male voice reading the partner's email.
+SHOTS (s): 0–4.5 FIRST FRAME: cards "FY26_Model.xlsx €74.6m" ≠ "Board_Presentation.pptx Slide 4 €71–73m" over the email to the partner with 3 attachments (Board_Memo_Q3.docx, FY26_Model.xlsx, Board_Presentation.pptx), cursor on Send, red clock 8:57 AM · BOARD AT 9:00 · 4.5–5 rewind glitch · 5–8 protagonist at desk (real), super "45 MINUTES EARLIER" · 8–11 chatbot: "Hi, how can I help?", prompt typed "Update the board memo with the new FY26 forecast", reply streams · 11–12.4 giant "✓ Done." (#1) · 12.4–15.6 Word-like window opens Board_Memo_Q3.docx, glitch on "wrecked", flags Template gone / Numbering wrong / Table shifted · 15.6–16.5 real hands typing insert · 16.5–23 fixing by hand; partner email notification enlarges and is read aloud · 23–24 protagonist head in hands (real) · 24–27.5 asks chatbot "Now update the board deck to match the memo" (night hands insert); "Generating presentation…" slide thumbnails fill · 27.5–28.3 "✓ Done. AGAIN." (#2) · 28.4–30.8 partner: "Revenue is now €74.6m, not €71–73m. Fix slide 2." stays on screen 2.4 s, ring on slide 2 · 30–35 re-prompt; "Regenerating all 12 slides… about 5 min left" progress crawl; red clock time-lapse 8:41→8:46; super "Five minutes. For one number."; insert: she scratches her head (real) · 34.5–35.2 "✓ Done. AND AGAIN." (#3, ghosted, shaking) · 35–37.4 deck regenerated: slide 2 ✓ but slide 4 reverted to €71–73m, ringed red; her frustrated reaction (real) · 37.4–41.6 whip pans across Word/Excel/PowerPoint/PDF/chat with giant words Copy. Paste. Check. Repeat.; windows pile up, notifications stack, clock 8:52→8:59 · 41.6–46 back at the email; notification "Are these the final files? The client is waiting." held 2.7 s; cursor drifts onto Send and STOPS; total silence; 44.55 insert: she drops her head onto the desk (real) · 46–49.6 black: "See exactly what changed. Decide what stays." · 49.6–55 logo reveal (real UI screenshots shown inside a blurred real office background, not on black), real Word/Excel/PowerPoint screenshots fan in and merge · 55–60 "It finds." real prompt typed in the real app, framed tight on the prompt text (no model picker in frame) ("Take DACH Q4 down to 8.5… make the memo and the deck match… Show me the diffs"), agent working, sped up · 60–64.4 "It fixes." real Excel bar "Revenue!E6 8.9 → 8.5 Reject/Accept", real memo tracked change €71–73m→€74.6m · 64.4–72.6 "You decide." cursor to Accept on the real bar; real "All changes reviewed · 10 of 10" list scrolls; red ring on "Slide 4 title €71–73m → €74.6m"; callout "The slide that slipped. Slide 4. Caught." · 72.6–76 back at the same email; real hand clicks mouse; "✓ Sent · Memo · model · deck · every change reviewed" (no clock) · 76–79 real sunrise through office window (warm grade, first warm shot) · 79–85 "AI said it was done." struck through → "This time, you checked." → logo, "See exactly what changed. Decide what stays.", "Request early access".
+AUDIO TIMELINE: cold open: buzz, bass pulse, fast heartbeat · rewind sfx · 5–17 light lounge bed (Mixkit "Hazy After Hours", licensed) + office room tone, typing, send pop · DONE CHIME (same sound) at 11.05 (soft), 27.5 (louder), 34.45 (loudest, echoed ×4) · glitch+static on "wrecked" · phone buzz on email, jazz dies, suspense bed from 17.3 · bass pulse from 28.3, slow heartbeat 30.8–35, clock ticking time-lapse, swell to Done #3 · whooshes per whip, impact on "Repeat.", riser into overload · 41.6 heartbeat only; 43.6 everything cuts to room tone (silence) under "The worst part…" · 46.2 a new soft identity tone · 49.6 calm confident electronic bed (Mixkit "Digital Clouds") · one UI tick per visible edit, soft pop on Accept · 72.6 music dips, heartbeat, mouse click at 74.55, identity tone on "Sent" · music returns under dawn with morning city ambience and birds, then end card. All music/SFX Mixkit free licence, footage Mixkit/Pexels licence, per-file provenance logged.
+
+VO LINES (exact): 0.4s Nine A.M. Board meeting. And the deck doesn't match the model. | 6.0s You ask a chatbot to update the board memo. | 11.0s It says it's done. | 12.5s Then you open the file... and the formatting's wrecked. | 15.55s So you fix it by hand. Then, an email. | 18.15s Please update the model and the board deck to match, before the meeting. | 24.0s So you ask it for the deck... and it builds one, in the chat. | 28.35s Then, one number changes. | 30.2s Prompt again. Wait again. Five minutes... for one number. | 34.6s Done. Except now... slide four changed. | 37.6s Five tabs. Copy. Paste. Check. Repeat. | 42.3s The worst part? You don't even know what's wrong anymore. | 46.3s See exactly what changed. Decide what stays. | 49.9s Meet Agentic Office. Your Word, Excel and PowerPoint, in one workspace. | 55.1s Tell it what changed. Once. | 57.0s It finds where that number lives: the model, the memo, the deck. | 60.45s And drafts each fix in place, for you to review. | 64.6s Every change is marked, in every file. You accept it, or reject it. | 69.6s Even slide four. | 75.2s Done. And this time, you've seen every change. | 82.6s Agentic Office.
+hook: PostToolUse
+hook: PostToolUse Completed
+codex
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "pain_specificity": 92,
+    "relatability": 86,
+    "emotional_authenticity": 65,
+    "product_pain_fit": 87,
+    "trust_credibility": 69,
+    "purchase_motivation": 62
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7,
+  "issues": [
+    {
+      "shot_id": "01:00–01:12",
+      "category": "review_is_not_completeness",
+      "severity": 0.78,
+      "confidence": 0.96,
+      "evidence": "The real Changes panel shows accepted edits, including 'Slide 4 title €71–73m → €74.6m'; the closing promise is 'This time, you checked.' I can see what was proposed, but cannot establish whether another occurrence was missed.",
+      "suggested_action": "Hold the captured three-file change summary long enough to inspect its scope, and describe the result as reviewing all 10 proposed changes rather than implying the entire pack has been verified."
+    },
+    {
+      "shot_id": "00:55–01:04",
+      "category": "financial_causality_unclear",
+      "severity": 0.7,
+      "confidence": 0.95,
+      "evidence": "The prompt takes DACH Q4 'down to 8.5', the cell changes '8.9 → 8.5', and the memo changes '€71–73m → €74.6m'. As a finance user, I need to understand why lowering an assumption accompanies a higher reported outlook.",
+      "suggested_action": "Use the existing real Excel view to show the resulting FY26 total of 74.6 alongside the changed DACH cell, then show that total replacing the stale memo and deck range."
+    },
+    {
+      "shot_id": "00:23–00:46",
+      "category": "overstated_distress",
+      "severity": 0.6,
+      "confidence": 0.9,
+      "evidence": "Frames 10 and 13 repeat the head-in-hands reaction; notifications pile up, and the supplied audio timeline adds escalating heartbeats and an echoed third Done chime. The VO says, 'You don't even know what's wrong anymore.'",
+      "suggested_action": "Remove one repeated reaction and reduce the echoed chime and heartbeat escalation; retain the stopped Send cursor as the main emotional payoff."
+    },
+    {
+      "shot_id": "00:12–00:17",
+      "category": "formatting_promise_unproven",
+      "severity": 0.55,
+      "confidence": 0.91,
+      "evidence": "The VO identifies 'the formatting's wrecked' as an early failure, but frame 6 shows a fairly orderly memorandum. The later real demo concentrates on numerical and textual diffs.",
+      "suggested_action": "Make the opening failure a clearly visible stale table value or one concrete formatting defect, and prioritize the cross-file inconsistency that the real product footage actually resolves."
+    },
+    {
+      "shot_id": "01:19–01:25",
+      "category": "trial_value_unspecified",
+      "severity": 0.43,
+      "confidence": 0.94,
+      "evidence": "The final card says 'Request early access' without telling me what I can evaluate before committing my team's reporting workflow.",
+      "suggested_action": "Add a short invitation to evaluate a model, memo and deck together using sample files, if that is an available early-access experience."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:28.4–00:30.8",
+      "evidence": "The supplied timeline gives 'Revenue is now €74.6m, not €71–73m. Fix slide 2.' a 2.4-second hold."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Make the real demo visibly connect the DACH edit to the resulting €74.6m total and the scoped review of 10 proposed changes across three files.",
+  "purchase_objections": [
+    "Can it find the relevant occurrences in my actual pack, including charts and tables, rather than only show the edits it happened to propose?",
+    "Will my firm's templates, formulas and native Office files survive the round trip?",
+    "Does using another workspace fit our existing Office and linked-reporting workflow?",
+    "Our team would need an approved data-handling arrangement before uploading client or portfolio files; this film provides no evidence about that.",
+    "I would need to test a representative pack before choosing this over our existing tools."
+  ],
+  "would_try": "yes — the real per-cell controls and cross-file Changes panel address my fear of invisible edits well enough to justify testing sample files.",
+  "buy_decision": "TRY_FIRST — a successful trial on one representative pack, with independently checked numbers and preserved formatting, would flip me to BUY."
+}
+hook: Stop
+hook: Stop Completed
+tokens used
+78,379

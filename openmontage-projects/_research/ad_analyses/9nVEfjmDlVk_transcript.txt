@@ -1,0 +1,57 @@
+[   5.8] Hi, I'm Noah from the Flow team.
+[   7.8] I'm going to give you a quick walkthrough of what Flow is and how it works.
+[  11.4] Flow is a generative video tool
+[  13.0] co-created with filmmakers to help them create better clips and scenes using AI.
+[  17.2] The entire tool is a combination of Google DeepMind's most advanced
+[  20.1] models Veo, Imagen, and Gemini.
+[  23.2] So let's jump right in.
+[  25.3] This is the project view where all of your projects live.
+[  28.0] It's really easy to scroll and look through everything you're working on.
+[  31.3] When you click into a project or start a new one,
+[  33.5] all of your generations for this project will appear as you make them.
+[  37.2] Let's focus here on the prompt box.
+[  39.5] By default, it is set to text to video.
+[  41.7] You can type something in and you'll get a video back.
+[  46.6] You'll
+[  46.8] see there's a dropdown menu where you can switch between different modes.
+[  49.9] Let's explore frames to video.
+[  51.8] In each mode, you'll see these little chips
+[  53.9] that give you specific options for that mode.
+[  56.0] You have the option to use the first frame, a last frame, or both.
+[  59.7] This chip opens your ingredients drawer, which is a collection
+[  62.2] of previously used frames that you can select to reuse.
+[  65.4] You can also either upload or generate an image to use as a frame.
+[  69.3] Another chip here is where you'll find camera controls.
+[  72.2] You can select the camera icon and add a camera
+[  74.4] move into your generation without having to describe it in the prompt.
+[  77.7] You also get a little preview of what that camera move is.
+[  83.5] Now let's take a look at ingredients to video mode.
+[  86.2] This is similar to frames to video,
+[  87.7] but instead of using the image as your first or last frame,
+[  90.5] you can select a few ingredients to combine in one scene
+[  93.5] and add a prompt of how you want them to interact in the clip.
+[  96.7] As you continue to use the same ingredients, you'll see how easy it is
+[ 100.0] to achieve character, location, and object consistency across shots.
+[ 104.5] Now that we have a clip that we like, let's bring it over to Scenebuilder
+[ 107.1] and make a little sequence.
+[ 108.4] You can hover over the clip to see the button that says "Add to Scene",
+[ 111.7] and that automatically moves you into the Scenebuilder.
+[ 114.2] Here we are in the Scenebuilder
+[ 115.3] where you can put multiple clips together to create a scene.
+[ 117.8] Let's take a look at some of the ways you can do that.
+[ 120.0] This feature is called Jump To.
+[ 122.1] It uses the power of Gemini to understand how your previous clip ended.
+[ 125.6] to seamlessly generate the next one in the sequence guided by your prompt.
+[ 130.5] You can use these
+[ 131.2] handles here to trim the clips in your scene.
+[ 134.4] Use this plus button and select "extend" and add a prompt
+[ 137.4] to extend the clip that you are working with
+[ 139.1] to make longer scenes.
+[ 142.5] There's another plus button
+[ 143.4] here above the playhead, which allows you to save a frame for later
+[ 146.5] in case you want to generate more clips starting or ending with that frame.
+[ 151.0] Once you have all of your clips generated,
+[ 152.8] you can also rearrange them in the sequence with this button.
+[ 156.5] Then you click here and download your scene.
+[ 160.4] So that is your quick introduction to getting started with Flow.
+[ 163.3] We're incredibly excited to see what you create.

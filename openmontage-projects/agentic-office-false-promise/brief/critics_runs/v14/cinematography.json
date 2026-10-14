@@ -1,0 +1,26 @@
+{"critic":"cinematography","stage":"animatic","score":54,
+"dimension_scores":{"lighting_shape":62,"lens_depth":58,"composition":52,"camera_movement":40,"frame_design_ui":50},
+"issues":[
+{"shot_id":"0:36 (f13)","category":"set_flip","severity":0.9,"confidence":0.9,"evidence":"Maya at a WHITE desk with a white laptop, lamp at frame-left edge, no blue window bokeh behind her; every other grind shot is dark walnut desk, brass lamp, blue night glass","suggested_action":"Replace with a still regenerated in the spine set: walnut desk, brass lamp camera-left as key, silver laptop, blue window bokeh behind"},
+{"shot_id":"0:12-0:42, 1:24 (f05-f15, f29)","category":"ots_identity_unreadable","severity":0.85,"confidence":0.75,"evidence":"Over-the-shoulder foreground figure shows short dark hair, ear and collar, no ponytail, no white blouse: reads as a man, not Maya; the same plate is reused 10 times","suggested_action":"Regenerate OTS with her low ponytail and blazer shoulder visible, lamp rim on the ponytail; vary to 2-3 angles (OTS, low screen-side, tight 85mm on screen)"},
+{"shot_id":"0:06, 1:27 (f03, f30)","category":"identity_and_light_mismatch","severity":0.8,"confidence":0.85,"evidence":"Canva face is lit cool from screen only, no brass lamp in frame, different bone structure from f16/f20/f37; reused verbatim as the 'reaction' at 1:27","suggested_action":"Relight to match: warm lamp key from frame-left 3/4, cool screen fill from below, 85mm f/2; do not reuse the 0:06 shot at 1:27"},
+{"shot_id":"0:09 (f04)","category":"stock_posing","severity":0.7,"confidence":0.85,"evidence":"Full-length catalogue walk with laptop and iced coffee, centred lamp, skirt suit; everything sharp","suggested_action":"Cut, or replace with a wide locked-off of the empty floor from block 3 with one lamp pool, 35mm, her small in the frame"},
+{"shot_id":"1:00-1:12 (f21-f24)","category":"flat_graphic_frames","severity":0.7,"confidence":0.9,"evidence":"12 s of cream cards with grey vignette, f23 is just 'INTRODUCING' on an empty field","suggested_action":"Put the turn line in her world: type it over the dark office or the laptop screen, drop the empty f23 state"},
+{"shot_id":"1:12-1:48 (f25-f28, f31-f36)","category":"ui_tilted_on_blur","severity":0.6,"confidence":0.8,"evidence":"Real UI tilted on a blurred dark plate with heavy letterbox; f28 Excel ribbon cropped mid-word 'nsert'; no light from her lamp falls on it","suggested_action":"Composite the UI into the laptop screen of the spine set at least once (f29 plate) then push in to full-frame; add lamp spill and screen glow"},
+{"shot_id":"1:48-1:53 (f37-f38)","category":"continuity_laptop","severity":0.5,"confidence":0.7,"evidence":"Silver open laptop at f37 becomes a dark grey laptop being closed at f38; her face reads younger than f20","suggested_action":"Regenerate close_laptop from the f37 frame as first frame so laptop and face hold"},
+{"shot_id":"overall","category":"no_camera_motion","severity":0.5,"confidence":0.7,"evidence":"Grind stills are static plates; f16=f17 identical, f08=f09 identical","suggested_action":"Add slow motivated pushes (push = realisation at f19/f20), handheld micro-drift at 2 AM shots"}],
+"constraint_failures":[
+{"rule":"identity or set flips across a cut","shot_id":"0:36 (f13)","evidence":"white desk/white laptop set vs walnut/brass/blue window spine"},
+{"rule":"identity or set flips across a cut","shot_id":"0:06/1:27 vs 0:45/0:57/1:48/1:54","evidence":"at least four different Maya faces"},
+{"rule":"unreadable composition","shot_id":"0:12-0:42","evidence":"OTS figure reads male; subject identity lost"}],
+"per_shot":[
+{"t":"0:36","grade_A_to_F":"F","fix":"regenerate in spine set: walnut desk, brass lamp key frame-left, blue glass behind, 50mm f/2"},
+{"t":"1:03","grade_A_to_F":"F","fix":"remove empty INTRODUCING state; never show a blank card"},
+{"t":"0:09","grade_A_to_F":"D","fix":"replace stock walk with locked wide of empty floor, one lamp pool, 35mm"},
+{"t":"0:54","grade_A_to_F":"D","fix":"put David's message on the f01 phone in her hand, not a floating card on blur; lamp rim on phone edge"},
+{"t":"1:21","grade_A_to_F":"D","fix":"Excel ribbon crop: reframe on the diff row only, inside the laptop screen"},
+{"t":"1:27","grade_A_to_F":"D","fix":"new reaction shot: lamp key frame-left, screen glow on face, 85mm f/1.8, eyes reading"},
+{"t":"0:12","grade_A_to_F":"C","fix":"OTS with her ponytail and blazer, lamp rim on hair, 50mm f/2.8"},
+{"t":"1:57","grade_A_to_F":"C","fix":"David: warm practical key from window frame-right, 85mm, push in to smile"}],
+"revision_scope":"shot_sequence",
+"top_revision":"Regenerate every Maya shot (f03, f04, f13, f18, f30, f37-39 and the OTS plate) from one reference face in one set, walnut desk, brass lamp keying from frame-left, blue window behind, so it reads as one woman and one room."}

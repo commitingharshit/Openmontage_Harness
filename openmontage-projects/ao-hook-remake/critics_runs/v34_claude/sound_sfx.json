@@ -1,0 +1,184 @@
+{
+ "critic": "sound_sfx",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "foley_coverage": 70,
+  "transition_design": 45,
+  "ui_sound_language": 75,
+  "sync_accuracy": 65,
+  "restraint": 72
+ },
+ "issues": [
+  {
+   "shot_id": "whole",
+   "category": "cuts_without_sound",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "cuts_on_sound_pct 37%; 29 of 46 cuts have no detected event, 15 of 25 in the urgent hook (5.07, 8.0, 12.3, 15.6, 16.5, 22.97, 24.87, 30.0, 31.83, 34.5, 36.77, 37.4, 40.3, 44.57, 45.63)",
+   "suggested_action": "Put a cut-synced transient (tick, whoosh tail, impact, paper/static) on every hook cut; take SFX off the VO sidechain so they survive"
+  },
+  {
+   "shot_id": "post 49",
+   "category": "masked_transitions",
+   "severity": 0.55,
+   "confidence": 0.65,
+   "evidence": "whooshes cued at 54.3, 64.35, 67.3, 103.9, 122.95, 126.15 at 0.20-0.22 gain, all inside the bed that is sidechain-ducked by VO (ratio 8) - onsets not detected at 54.4, 64.4, 104.0",
+   "suggested_action": "Route SFX to their own bus outside the duck, raise to ~0.35 and nudge to start 2-3 frames before each cut"
+  },
+  {
+   "shot_id": "00:44.57",
+   "category": "missing_key_foley",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "insert: she drops her head onto the desk; no thud/arm/chair sound in the cue list",
+   "suggested_action": "Soft forearm-on-desk thud + chair creak at 44.6, alone in the silence"
+  },
+  {
+   "shot_id": "00:22.97, 00:31, 00:36.8",
+   "category": "missing_human_foley",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "protagonist head-in-hands (22.97), head scratch, frustrated reaction (36.77) have no foley/breath",
+   "suggested_action": "Add exhale/sigh at 23.0, fabric/hair rustle at 31.1, chair shift at 36.8"
+  },
+  {
+   "shot_id": "00:49-00:52.6",
+   "category": "missing_action",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "real laptop dolly: whoosh2 at 49.0 and whoosh at 51.6 only; cuts at 49.0 and 52.6 undetected",
+   "suggested_action": "Low air-push swell over the dolly ending in a soft screen 'settle' tick at 52.6"
+  },
+  {
+   "shot_id": "01:36-01:43",
+   "category": "missing_ui_sounds",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Changes list scrolls and the red ring draws on Slide 4 (95.55 whoosh only); 'Caught.' callout has no accent",
+   "suggested_action": "Soft ring-draw swish + low confirm tick on 'Caught.'"
+  },
+  {
+   "shot_id": "02:16-02:19",
+   "category": "missing_transition",
+   "severity": 0.25,
+   "confidence": 0.7,
+   "evidence": "cuts 136.1 (sunrise) and 139.0 (end card) undetected; birds fade in at 136.1 with 0.4 s ramp",
+   "suggested_action": "Hard-start birds/air at 136.1; soft whoosh-out into the end card at 139.0"
+  },
+  {
+   "shot_id": "00:37-00:42",
+   "category": "restraint",
+   "severity": 0.2,
+   "confidence": 0.5,
+   "evidence": "5 whooshes + impact + 4 buzzes + clock + heartbeat + riser inside 5 s",
+   "suggested_action": "Keep the overload but drop 2 of the 4 buzzes so the impact at 39.7 reads"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": ">50% of cuts with no sound event in a film that claims urgency",
+   "shot_id": "whole",
+   "evidence": "63% of cuts without sound event (cuts_on_sound_pct 37%), 60% within the urgent hook"
+  },
+  {
+   "rule": "visible key action with no sound",
+   "shot_id": "00:44.57",
+   "evidence": "head drops onto the desk with no foley"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Move SFX off the VO-ducked bus and put a cut-synced transient on every unsounded cut, starting with the 15 in the hook.",
+ "spotting_list": [
+  {
+   "t": "5.07",
+   "event": "cut to protagonist after rewind",
+   "sound": "tape-stop tail / room swell",
+   "source": "Freesound 'tape stop short'"
+  },
+  {
+   "t": "8.0",
+   "event": "dark-to-light into chat",
+   "sound": "soft air swell",
+   "source": "Mixkit 'soft whoosh transition'"
+  },
+  {
+   "t": "12.3",
+   "event": "Word window opens",
+   "sound": "window open tick",
+   "source": "Freesound 'ui window open'"
+  },
+  {
+   "t": "22.97",
+   "event": "head in hands",
+   "sound": "exhale + fabric",
+   "source": "Freesound 'tired sigh woman'"
+  },
+  {
+   "t": "24.87",
+   "event": "night hands insert",
+   "sound": "keyboard start",
+   "source": "Mixkit 'laptop typing'"
+  },
+  {
+   "t": "30.0",
+   "event": "re-prompt cut",
+   "sound": "send tick",
+   "source": "Freesound 'ui send click'"
+  },
+  {
+   "t": "31.83",
+   "event": "head scratch insert",
+   "sound": "hair/fabric rustle",
+   "source": "Freesound 'hair scratch'"
+  },
+  {
+   "t": "36.77",
+   "event": "frustrated reaction",
+   "sound": "chair creak",
+   "source": "Freesound 'office chair creak'"
+  },
+  {
+   "t": "44.57",
+   "event": "head drops to desk",
+   "sound": "soft forearm thud",
+   "source": "Freesound 'head on desk thud'"
+  },
+  {
+   "t": "52.6",
+   "event": "push lands in workspace",
+   "sound": "screen settle tick",
+   "source": "Mixkit 'interface hint'"
+  },
+  {
+   "t": "86.2",
+   "event": "split-screen element badge",
+   "sound": "UI tick",
+   "source": "Mixkit 'click tick'"
+  },
+  {
+   "t": "104.0",
+   "event": "Room reveal",
+   "sound": "soft UI pop",
+   "source": "Mixkit 'notification pop'"
+  },
+  {
+   "t": "130.0",
+   "event": "dark laptop",
+   "sound": "low air swell",
+   "source": "Freesound 'room swell'"
+  },
+  {
+   "t": "136.1",
+   "event": "sunrise",
+   "sound": "window air + birds hard-in",
+   "source": "Pixabay 'morning birds city'"
+  },
+  {
+   "t": "139.0",
+   "event": "end card",
+   "sound": "soft whoosh out",
+   "source": "Mixkit 'airy whoosh'"
+  }
+ ]
+}

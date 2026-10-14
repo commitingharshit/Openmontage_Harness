@@ -1,0 +1,54 @@
+file,source_url,license,width,height,duration
+stock/mixkit_28886.mp4,https://mixkit.co/free-stock-video/28886/,Mixkit Free License,1920,1080,10.0
+stock/mixkit_28893.mp4,https://mixkit.co/free-stock-video/28893/,Mixkit Free License,1920,1080,13.0
+stock/mixkit_39841.mp4,https://mixkit.co/free-stock-video/39841/,Mixkit Free License,1920,1080,10.3
+stock/mixkit_39843.mp4,https://mixkit.co/free-stock-video/39843/,Mixkit Free License,1920,1080,8.6
+stock/mixkit_39852.mp4,https://mixkit.co/free-stock-video/39852/,Mixkit Free License,1080,1920,8.0
+stock/mixkit_39854.mp4,https://mixkit.co/free-stock-video/39854/,Mixkit Free License,1080,1920,12.0
+stock/pexels_29188239.mp4,https://www.pexels.com/video/29188239/,Pexels License,3840,2160,20.0
+stock/pexels_34771078.mp4,https://www.pexels.com/video/34771078/,Pexels License,3840,2160,13.7
+stock/pexels_35649915.mp4,https://www.pexels.com/video/35649915/,Pexels License,1920,1080,32.9
+stock/pexels_5483080.mp4,https://www.pexels.com/video/5483080/,Pexels License,4096,2160,13.6
+stock/pexels_5483203.mp4,https://www.pexels.com/video/5483203/,Pexels License,4096,2160,27.4
+stock/pexels_5483205.mp4,https://www.pexels.com/video/5483205/,Pexels License,4096,2160,27.2
+stock/pexels_6533037.mp4,https://www.pexels.com/video/6533037/,Pexels License,4096,2160,18.9
+stock/pexels_7054942.mp4,https://www.pexels.com/video/7054942/,Pexels License,3840,2160,8.3
+stock/pexels_7821643.mp4,https://www.pexels.com/video/7821643/,Pexels License,1920,1080,7.2
+stock/pexels_8369275.mp4,https://www.pexels.com/video/8369275/,Pexels License,4096,2160,49.4
+stock/pexels_8371031.mp4,https://www.pexels.com/video/8371031/,Pexels License,2732,1440,19.8
+stock/pexels_8371851.mp4,https://www.pexels.com/video/8371851/,Pexels License,2732,1440,30.6
+stock/pexels_9160920.mp4,https://www.pexels.com/video/9160920/,Pexels License,3840,2160,31.8
+
+file,source,license_status,use
+kling/qwen_g01_take1.mp4,"Qwen chat (chat.qwen.ai) text-to-video, account codingharshit1408",generated,Dan 'Done!' (v3)
+kling/qwen_g04_take1.mp4,"Qwen chat text-to-video, account harshit.iitd14",generated,Dan 'I also did the deck'
+kling/qwen_g08_coldopen.mp4,"Qwen chat text-to-video, account memoriesverma38810",generated,cold open v2
+kling/qwen_coldopen_v3.mp4,"Qwen chat text-to-video, account financeharshit1408",generated,cold open v3 (burned subtitle cropped)
+kling/qwen_n2_exhale.mp4,"Qwen chat text-to-video, account rockingharshit1408",generated,N2 exhale (retired v12: face mismatch)
+kling/canva_g02_take1.mp4,"Canva AI video clip, Canva account #1",generated,Maya flips agreement
+kling/canva_g03_take1.mp4,"Canva AI video clip, Canva account #1",generated,Dan stack
+kling/canva_maya_stack_react.mp4,"Canva AI video clip, Canva account #1",generated,"Maya looks up (g03r, v12 beat 4)"
+kling/canva_maya_close_laptop.mp4,"Canva AI video clip, Canva account #1",generated,Maya closes laptop (g05)
+kling/canva_maya_dawn_send.mp4,"Canva AI video clip, Canva account #1",generated,dawn send (g09)
+kling/canva_n6_jaw.mp4,"Canva AI video clip, Canva account #2",generated,N6 hurt reaction
+kling/canva_boardroom.mp4,"Canva AI video clip, Canva account #2",generated,boardroom (retired: wrong actor)
+kling/canva_david_nod.mp4,"Canva AI video clip, Canva account #2",generated,David 9:02 AM nod (board2)
+kling/canva_n8_gaze.mp4,"Canva AI video clip, Canva account #2",generated,N8 calm review
+kling/kling_4642.mp4,"Kling AI (user-supplied, 2026-10-11)",generated,early Scene 1 (retired)
+kling/gemini_85a93239.mp4,Gemini (user-supplied),generated,unused
+~/Desktop/AgenticOffice_Video/.../ui/recordings/agentic-office-demo.mp4,"Agentic Office real app recording (team, CAPTURE_LOG.md)",owned,real UI: ui3 = D 101–147.5; frames u3_*.png
+~/Desktop/AgenticOffice_Video/.../ui/recordings/collab-demo-take.mp4,"Agentic Office real app, simulated teammate (labelled)",owned,director's cut v3 collab
+"assets/music/*.mp3, assets/sfx/*.mp3",Mixkit (mixkit.co) Free License,licensed,music + SFX
+"voice/*, remotion public/aofp/vo/*","Kokoro TTS (local, kokoro-onnx v1.0)",generated,narration
+movie_refs/*,"YouTube film/TV clips (Prada, Office Space, Whiplash, The Office, Margin Call, Suits)",COPYRIGHTED — INTERNAL ONLY,reference cut only; never in public cuts
+visuals/meta/m01_ots.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+visuals/meta/m02_face34.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+visuals/meta/m03_hands.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+visuals/meta/m05_wide.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+visuals/meta/m06_dawn.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+visuals/meta/m08_topdown.png,meta.ai (Imagine; user's account; AI-generated person/scene),Meta AI generated image — check Meta AI terms before paid use,2048,1152,
+sfx/mixkit_1059.mp3,https://mixkit.co/free-sound-effects/clock/,Mixkit Free License,,,
+sfx/mixkit_2472.mp3,https://mixkit.co/free-sound-effects/birds/,Mixkit Free License,,,
+sfx/mixkit_1101.mp3,https://mixkit.co/free-sound-effects/paper/,Mixkit Free License,,,
+kling/canva_maya_phone_shock.mp4,Canva AI (user's account; AI-generated person),Canva AI generated — check Canva AI terms before paid use,1920,1080,5.9
+visuals/meta/v14_ots.png v14_eyes.png v14_dawn.png v14_phone.png v14_walk.png,meta.ai (user's account; AI-generated),Meta AI generated — check terms before paid use,2048,1152,

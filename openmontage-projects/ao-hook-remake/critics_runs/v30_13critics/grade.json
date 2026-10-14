@@ -1,0 +1,115 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 62,
+  "dimension_scores": {
+    "look_family_unity": 76,
+    "skin_tones": 62,
+    "contrast_curve_blacks": 56,
+    "shot_to_shot_match": 42,
+    "finish": 68
+  },
+  "issues": [
+    {
+      "shot_id": "00:05–00:37",
+      "category": "exposure_matching",
+      "severity": 0.9,
+      "confidence": 0.99,
+      "evidence": "The blue office repeatedly cuts to large, bright white interfaces. At 00:05.07→00:08, measured luma rises 36.5→202.8; at 00:29.60→00:30.13 it rises 30.6→194.6. Overall luma spread SD is 66.3. Frame #4's white chatbot dominates the screen beside the dark protagonist footage.",
+      "suggested_action": "Lower fictional UI paper whites toward 75–80 IRE with a soft highlight shoulder, and lift readable office midtones selectively; match these cuts by perceived brightness while retaining the night setting."
+    },
+    {
+      "shot_id": "00:24.07, 00:32.90, 01:14",
+      "category": "crushed_insert_shadows",
+      "severity": 0.83,
+      "confidence": 0.96,
+      "evidence": "Dark hand inserts measure luma/contrast 12.6/7.4 at 00:24.07, 11.9/5.2 at 00:32.90, and 15.4/15.6 at 01:14. These have substantially less tonal separation than the office establishing shot at 36.5/31.5.",
+      "suggested_action": "Recover hand and desk midtones with a gentle toe lift and local exposure correction, retaining a firm black floor; verify source detail before increasing contrast."
+    },
+    {
+      "shot_id": "00:05.07, 00:22.97, 00:29.60, 00:36.77",
+      "category": "skin_tone_contamination",
+      "severity": 0.77,
+      "confidence": 0.86,
+      "evidence": "Frames #3, #10 and #13 show the protagonist's face with subdued grey-blue midtones. Whole-frame saturation also varies from 109.5 at 00:05.07 to 57.3 at 00:22.97 and 105.6 at 00:36.77; these measurements support a changing surrounding grade, rather than measuring skin directly.",
+      "suggested_action": "Use a tracked skin isolation to restore warm brown midtones and modest facial exposure, then match every reaction to the establishing shot while leaving blue practical light on the room and rim highlights."
+    },
+    {
+      "shot_id": "00:55–01:12.60",
+      "category": "product_demo_white_matching",
+      "severity": 0.72,
+      "confidence": 0.98,
+      "evidence": "The real demo moves from luma 46.7 at 00:55 to 97.2 at 00:59.73, 167.8 at 01:02.20, then 29.0 at 01:06.60. Frame #26's nearly white memo is markedly brighter than the dark Changes panel in frames #28–29. Overall saturation spread SD is 27.8.",
+      "suggested_action": "Match the real memo and spreadsheet white points to a common restrained paper white, and gently raise dark-panel midtones; preserve original change colours, text edges and product content."
+    },
+    {
+      "shot_id": "00:08, 00:12.30, 01:02.20",
+      "category": "vignette_finish",
+      "severity": 0.58,
+      "confidence": 0.93,
+      "evidence": "Frames #4, #6 and #26 have visibly bright centres and heavily greyed corners. The stock office achieves darkness through scene lighting, so the UI's radial darkening reads as a separate finishing treatment.",
+      "suggested_action": "Reduce the UI vignette to a broad edge falloff of approximately 0.2 stops and obtain most brightness control through the tone curve; use the same restrained finishing envelope across UI composites and stock."
+    },
+    {
+      "shot_id": "00:11.10",
+      "category": "letterbox_consistency",
+      "severity": 0.42,
+      "confidence": 0.72,
+      "evidence": "Measured letterbox rows are 96 for the first 'Done.' shot, versus 0 for neighbouring shots; only 2.4% of shots are detected as letterboxed. The supplied frame shows a dark surround that could also explain the detection.",
+      "suggested_action": "Verify whether the 96 rows are actual bars or the designed dark surround; if actual bars, remove them and keep the full 16:9 aperture throughout."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Skin must not turn green or grey.",
+      "shot_id": "00:22.97–00:29.60",
+      "evidence": "The protagonist reaction frames #10 and #13 show grey-blue facial midtones with little warm brown separation."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Match screen whites and stock midtones across the night-office sequence to remove the repeated dark-to-white exposure shocks while preserving readable interfaces and natural skin.",
+  "grade_recipe": {
+    "problem_world": {
+      "look": "Cool blue-teal environment, neutral paper whites, natural warm brown skin.",
+      "lut_style_recipe": "Use a soft S-curve with black floor 2–3 IRE, shadow detail at 5–15 IRE, and paper whites at 75–80 IRE. Lift underexposed insert midtones by approximately 0.5–0.8 stops after checking source detail. Add only a subtle teal bias below 25 IRE; keep highlights neutral. Reduce oversaturated stock backgrounds by approximately 15%, protecting skin. Warm isolated skin midtones slightly and match reactions to the establishing shot."
+    },
+    "solution_world": {
+      "look": "Clean charcoal-teal surround with neutral, controlled product surfaces.",
+      "lut_style_recipe": "Set black floor near 2 IRE and preserve dark-panel separation at 8–20 IRE. Compress memo and spreadsheet whites to approximately 80–85 IRE with a smooth shoulder. Keep product UI colours neutral and unchanged in hue; apply teal only to the surrounding composition. Match dark-panel exposure locally rather than lifting the entire composite."
+    },
+    "dawn_world": {
+      "look": "Deliberate warm release.",
+      "lut_style_recipe": "Preserve amber and pink sky hues, roll highlights below approximately 95 IRE, and retain foreground silhouette blacks near 2–3 IRE. Avoid additional teal in the sky; keep saturation restrained enough that the sunrise retains cloud detail."
+    },
+    "shared_finish": {
+      "lut_style_recipe": "Maintain a full 16:9 aperture. Use a broad vignette no stronger than approximately 0.2 stops. Keep UI text crisp; add no grain to small text or diff controls. If grain is used, apply subtle fine luma grain to photographic footage and graphic backgrounds only. Restrict halation to bright photographic highlights."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:24.07",
+      "to": "00:24.87",
+      "issue": "Dark insert to bright chatbot: luma 12.6→187.7, contrast 7.4→95.5."
+    },
+    {
+      "from": "00:05.07",
+      "to": "00:08",
+      "issue": "Office to white chatbot: luma 36.5→202.8, saturation 109.5→12.7."
+    },
+    {
+      "from": "00:29.60",
+      "to": "00:30.13",
+      "issue": "Reaction to regeneration UI: luma 30.6→194.6."
+    },
+    {
+      "from": "01:12.60",
+      "to": "01:14",
+      "issue": "Email to mouse insert: luma 172.1→15.4."
+    },
+    {
+      "from": "01:04.40",
+      "to": "01:06.60",
+      "issue": "Bright spreadsheet review to dark Changes panel: luma 112.4→29.0."
+    }
+  ]
+}

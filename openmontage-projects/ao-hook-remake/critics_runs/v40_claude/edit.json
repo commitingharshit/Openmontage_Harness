@@ -1,0 +1,129 @@
+{
+ "critic": "edit",
+ "stage": "animatic",
+ "score": 60,
+ "dimension_scores": {
+  "rhythm_wave": 64,
+  "cut_motivation": 60,
+  "connectives": 55,
+  "economy": 55,
+  "transitions_quality": 62
+ },
+ "issues": [
+  {
+   "shot_id": "01:35.2",
+   "category": "dead_hold",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "Measured longest shot 11.1 s at 01:35.2-01:46.3 (reviewed list + Slide 4 ring), then 01:41.8-01:46.3 file tree shots (01:42.5, 01:45.0) with near-empty frame",
+   "suggested_action": "Split 01:35.2 into list (3 s) → ring punch-in (2 s); trim the file-tree hold at 01:45.0 to ≤1.5 s"
+  },
+  {
+   "shot_id": "00:49.0",
+   "category": "redundant_beat",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "'Not another chatbot. Your workspace.' caption appears on both 00:50.0 and 00:52.5 - same line across two shots",
+   "suggested_action": "Keep the caption on one shot only; let 00:52.6 carry 'Word, Excel and PowerPoint, together.'"
+  },
+  {
+   "shot_id": "01:07.4",
+   "category": "wide_repetition",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "Every product beat opens on the same wide warm-room laptop (00:50.0, 00:55.0, 01:05.0, 01:07.5, 01:15.0, 01:32.5) then pushes; 6 near-identical openings - formula becomes visible",
+   "suggested_action": "Keep the wide→push only for 00:49, 01:31.8 hero; start the others already pushed-in and cut on the UI action"
+  },
+  {
+   "shot_id": "00:58.4",
+   "category": "economy",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "58.4-64.4: two 3 s shots of hands typing over a memo page; the prompt is never readable in frame",
+   "suggested_action": "Merge into one 3 s shot ending on the readable prompt bubble"
+  },
+  {
+   "shot_id": "00:16.5",
+   "category": "no_burst_mid_hook",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "16.5-23.0 is one 3.9 s Word hold plus slow notification enlarge during the email read; the hook's frustration breathes where it should tighten",
+   "suggested_action": "Cut the email read into 3 punch-ins (sender, 'model', 'board deck') on VO words"
+  },
+  {
+   "shot_id": "00:37.4",
+   "category": "burst_ok_but_hard_cut",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Copy/Paste/Check/Repeat whip burst is the one true burst (shots 0.5-1.3 s) but 00:40.0 'Repeat.' lands as a hard text overlay on a progress bar",
+   "suggested_action": "Match-cut 'Repeat.' onto the email at 00:41.6 via the cursor, so the burst flows into the hold"
+  },
+  {
+   "shot_id": "01:24.8",
+   "category": "connective_missing",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Precision montage cells (01:25.0, 01:27.5, 01:30.0) are hard cuts with the same left chatbot card repeating",
+   "suggested_action": "Hold the chatbot card as a persistent left element and wipe only the right panel, on the 'cell / sentence / slide element' VO words"
+  },
+  {
+   "shot_id": "01:58.0",
+   "category": "end_length",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "Final card 01:55.3-02:02.6 is 7.3 s after a 2.9 s sunrise",
+   "suggested_action": "Trim end card to ~5 s; give 1 s back to the sunrise"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "three or more consecutive shots at the same size and angle",
+   "shot_id": "01:04.4-01:18.2",
+   "evidence": "64.4, 67.4, 74.2 each open on the same wide warm-room laptop angle with captions bottom-centre (01:05.0, 01:07.5, 01:15.0)"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Break the repeated wide-laptop→push formula in 00:54–01:18 (start most beats already pushed in, cut on UI action) and split the 11.1 s hold at 01:35.2.",
+ "recut_plan": [
+  {
+   "t": "00:52.6",
+   "edit": "remove duplicate caption; replace with 'Word, Excel and PowerPoint, together.'"
+  },
+  {
+   "t": "00:58.4",
+   "edit": "merge 58.4-64.4 into one 3.5 s shot ending on the readable prompt; give 2.5 s to the Room beat"
+  },
+  {
+   "t": "01:04.4",
+   "edit": "open already pushed-in on 'Reading your files'"
+  },
+  {
+   "t": "01:14.2",
+   "edit": "open plan steps at 1.6x, skip the wide"
+  },
+  {
+   "t": "01:35.2",
+   "edit": "split 11.1 s into list 3 s + Slide 4 ring punch-in 2 s + 'See every change' 2.5 s"
+  },
+  {
+   "t": "01:41.8",
+   "edit": "trim file-tree holds to 1.5 s each"
+  },
+  {
+   "t": "00:16.5",
+   "edit": "split the email-read hold into 3 punch-ins on VO words"
+  },
+  {
+   "t": "01:55.3",
+   "edit": "end card 7.3 s → 5 s"
+  }
+ ],
+ "target_shot_stats": {
+  "asl_s": 2.4,
+  "median_s": 2.0,
+  "pct_under_1s": 20,
+  "pct_over_4s": 10,
+  "longest_s": 5.0,
+  "note": "Codex-style holds in the product half (3-4 s), a16z-style bursts only in the hook's chaos section"
+ }
+}

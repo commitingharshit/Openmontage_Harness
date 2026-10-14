@@ -1,0 +1,24 @@
+{"critic":"sound_mix","stage":"animatic","score":67,
+"dimension_scores":{"loudness_spec":85,"vo_vs_bed_balance":60,"tonal_balance":55,"dynamics_arc":65,"transitions_bridges":55,"stereo_image":85},
+"issues":[
+{"shot_id":"whole","category":"dull_low_heavy_tonality","severity":0.5,"confidence":0.75,"evidence":"Spectral balance: sub 12.1%, low 37.7%, low-mid 30.7%, mid 13.3% (below the 15% target with VO nearly continuous), presence 3.1%, air 3.2%. The mix is dark, and the VO presence boost (+3 dB at 3 kHz) is not carrying.","suggested_action":"High-pass the beds and SFX at 40 Hz and shelve the sub/bass_pulse -3 dB; cut the beds -3 dB at 250-400 Hz and dip music 2-4 kHz by 3 dB under VO; add +2 dB on a 6 kHz shelf to the VO."},
+{"shot_id":"01:18-02:00","category":"flat_middle","severity":0.45,"confidence":0.7,"evidence":"dynamic_sections hold at -18.8 dBFS from 78 to 120 with no section break. The Accept-all at 92.3 reads -14.3 against -14.8 at 78.5. The loudest moment in the film is the hook overload at 40.0 (-10.8).","suggested_action":"Create contrast: drop the 102-117 section about 3 LU, then let 91-94 rise about 3 LU with VO clear, so that the hero is the product half's loudest moment."},
+{"shot_id":"whole","category":"overdeep_ducking","severity":0.4,"confidence":0.65,"evidence":"sidechaincompress threshold 0.02 ratio 8 attack 10 release 400 on all beds. Music volume changes (the .30 peak, the .26 Sent swell) land under VO and get flattened. vo_over_music_db_median was not measured.","suggested_action":"Duck about 6-8 dB (ratio 4, threshold 0.05, attack 15 ms, release 250 ms). Add vo_over_music_db_median to measure_audio.py and target 8-10 dB."},
+{"shot_id":"00:43.6","category":"hard_chops","severity":0.35,"confidence":0.6,"evidence":"At CUT=43.6, office.mp3 fades out in 0.05 s, bass_pulse in 0.02 s and heart_slow in 0.02 s, all in the middle of the VO line. That is near-hard truncation of three beds at once.","suggested_action":"Use 0.3-0.6 s fades; or, if the cut-off is intended, place it on a picture cut and let the room tone continue underneath."},
+{"shot_id":"whole","category":"weak_cut_transients","severity":0.35,"confidence":0.6,"evidence":"cuts_on_sound_pct 36; 32 cuts are listed without a sound event, including product cuts that have 0.12 key touches.","suggested_action":"Bring the SFX bus up 2-3 dB on transients, or parallel-compress it, so that cut ticks read under VO."},
+{"shot_id":"whole","category":"single_pass_norm","severity":0.25,"confidence":0.6,"evidence":"The chain is loudnorm I=-14.3 (single pass, dynamic mode), then +1.9 dB, then alimiter at 0.79, giving -14.5 LUFS, -1.7 dBTP, LRA 6.0 (the floor of the 6-11 window). The candidate header states -14.1 / -1.8, which does not match the measurement.","suggested_action":"Use two-pass linear loudnorm (measure, then apply measured_I/TP/LRA/thresh with linear=true) to -14.0 LUFS, TP -1.5. Remove the +1.9 dB makeup, keep the limiter at -1.5 dBTP, and correct the header numbers."},
+{"shot_id":"02:00.3","category":"bridge_collision","severity":0.2,"confidence":0.5,"evidence":"The Sent swell (120.3), the VO 'Done. And this time...' (120.3) and city ambience (121.3) all enter within 1 s.","suggested_action":"Stagger them: swell at 119.9, VO at 120.8, city J-cut fading in from 122.5 toward the 124.4 sunrise."}
+],
+"mix_recipe":{
+"ducking":"beds sidechained from the VO: threshold 0.05, ratio 4, attack 15 ms, release 250 ms, about 6-8 dB of gain reduction; SFX not ducked but transients +2 dB",
+"vo_chain":"HPF 90 Hz, -2 dB at 250 Hz, +3 dB at 3 kHz, +2 dB shelf at 6 kHz, de-ess at 6.5 kHz, 3:1 compression with 3-4 dB GR",
+"music_eq":"-3 dB bell at 2.5 kHz (Q 1.0) while VO is present (dynamic EQ keyed from VO); -3 dB at 300 Hz; HPF 35 Hz",
+"ambience":"HPF 120 Hz, LPF 10 kHz on room tones; levels -46 to -54 dBFS",
+"sfx":"HPF 40 Hz on impacts and thuds except the head-drop; whooshes -2 dB; cut ticks peak around -18 dBFS",
+"limiter":"true-peak limiter ceiling -1.5 dBTP, lookahead 5 ms, release 60 ms",
+"loudnorm":"pass 1: loudnorm=I=-14:TP=-1.5:LRA=9:print_format=json; pass 2: loudnorm=I=-14:TP=-1.5:LRA=9:measured_I=<>:measured_TP=<>:measured_LRA=<>:measured_thresh=<>:offset=<>:linear=true",
+"fades":"minimum 0.3 s on every bed exit unless it lands on a picture cut"
+},
+"constraint_failures":[],
+"revision_scope":"whole",
+"top_revision":"Re-balance the tonality and the ducking (beds HPF and -3 dB at 2.5 kHz under VO, VO +2 dB at 6 kHz, duck depth about 6-8 dB instead of ratio 8) so that VO clarity improves and the Accept-all hero becomes the loudest moment of the product half."}

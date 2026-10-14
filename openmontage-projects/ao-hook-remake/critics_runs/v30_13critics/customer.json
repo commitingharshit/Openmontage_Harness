@@ -1,0 +1,89 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 80,
+  "dimension_scores": {
+    "pain_specificity": 90,
+    "relatability": 85,
+    "emotional_authenticity": 65,
+    "product_pain_fit": 88,
+    "trust_credibility": 70,
+    "purchase_motivation": 70
+  },
+  "recognition": 9,
+  "resonance": 7,
+  "persuasion": 7,
+  "issues": [
+    {
+      "shot_id": "00:55–01:12.6",
+      "category": "proof_comprehension",
+      "severity": 0.8,
+      "confidence": 0.95,
+      "evidence": "The real prompt says 'Take DACH Q4 down to 8.5'; the cell bar shows '8.9 → 8.5'; the memo and deck show '€71–73m → €74.6m'. I see specific edits, but must assemble their relationship myself.",
+      "suggested_action": "Use the existing real footage to present one continuous review: the requested DACH cell change, the model's FY26 total, then the matching memo and deck proposals, with a persistent 'One request · 3 files · 10 proposed changes' caption."
+    },
+    {
+      "shot_id": "00:08–00:37.4",
+      "category": "competitor_comparison_credibility",
+      "severity": 0.7,
+      "confidence": 0.94,
+      "evidence": "The illustrated chatbot repeatedly says 'Done', damages agreement formatting, regenerates all 12 slides for one number, and leaves slide 4 wrong.",
+      "suggested_action": "Shorten the agreement detour and repeated completion beats; retain the concrete stale slide and manual cross-check so the comparison centers on coordinating a pack, the reason I would consider switching from my existing assistants."
+    },
+    {
+      "shot_id": "00:23–00:46",
+      "category": "emotional_overstatement",
+      "severity": 0.65,
+      "confidence": 0.9,
+      "evidence": "Frames 10 and 13 repeat the protagonist holding her temples; the supplied timeline adds another frustrated reaction, a head drop onto the desk, heartbeats, and a third Done chime echoed four times.",
+      "suggested_action": "Keep one restrained reaction and the cursor stopping on Send; replace the other reaction beats with her checking the conflicting values, and reduce the repeated alarm cues."
+    },
+    {
+      "shot_id": "01:19–01:25",
+      "category": "completion_overconfidence",
+      "severity": 0.62,
+      "confidence": 0.93,
+      "evidence": "The closing card strikes through 'AI said it was done.' and declares 'This time, it is.' The proof shows accepted proposals, which does not establish that every possible error was found.",
+      "suggested_action": "Replace the absolute completion line with 'Changes reviewed. You decide what stays.' and retain the real review count as the evidence supporting that reassurance."
+    },
+    {
+      "shot_id": "00:28.3–00:30",
+      "category": "pain_message_readability",
+      "severity": 0.55,
+      "confidence": 0.98,
+      "evidence": "The partner's pivotal message, 'Revenue is now €74.6m, not €71–73m. Fix slide 2.', occupies a 1.7-second beat that also contains a slide ring and reaction.",
+      "suggested_action": "Hold the notification unobstructed for at least 2.5 seconds before the reaction, borrowing time from a repeated Done beat."
+    },
+    {
+      "shot_id": "01:22–01:25",
+      "category": "trial_value_unclear",
+      "severity": 0.45,
+      "confidence": 0.95,
+      "evidence": "The final CTA is 'Request early access'; it does not say what I would evaluate after signing up.",
+      "suggested_action": "Add a short invitation beside the CTA: 'Evaluate a model, memo and deck together.' Keep deployment and availability details on the landing page, using only verified information."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:28.3–00:30",
+      "evidence": "The supplied candidate gives the revenue correction notification only 1.7 seconds."
+    },
+    {
+      "rule": "One task, one number, start to finish.",
+      "shot_id": "00:08–00:30",
+      "evidence": "The opening workflow starts with updating supply-agreement payment terms, then creating a board presentation, before introducing the revenue correction demonstrated by the product."
+    }
+  ],
+  "purchase_objections": [
+    "Can it preserve my existing formulas, charts and firm templates on a real pack?",
+    "Does the review list cover every relevant reference, or only the changes the assistant happened to propose?",
+    "Can I keep exchanging native files with colleagues who use Microsoft Office?",
+    "Will our IT and compliance teams approve how confidential documents are processed?",
+    "What would I pay beyond the assistants and Office tools we already license?"
+  ],
+  "would_try": "yes — the cross-file diffs and explicit approval controls address my fear of sending inconsistent numbers, enough to justify a trial with a non-confidential pack.",
+  "buy_decision": "TRY_FIRST — a successful trial on one of our existing packs, preserving formulas and templates while surfacing the relevant cross-file changes for review, would flip me to BUY.",
+  "revision_scope": "product_demo",
+  "top_revision": "Make the real demonstration a readable, continuous review of one assumption change across the model, memo and deck, so I can judge the workflow I would actually pay for."
+}

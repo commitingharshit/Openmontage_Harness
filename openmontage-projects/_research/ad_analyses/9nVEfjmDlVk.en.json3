@@ -1,0 +1,355 @@
+{
+  "wireMagic": "pb3",
+  "pens": [ {
+  
+  } ],
+  "wsWinStyles": [ {
+  
+  } ],
+  "wpWinPositions": [ {
+  
+  } ],
+  "events": [ {
+    "tStartMs": 5797,
+    "dDurationMs": 2002,
+    "segs": [ {
+      "utf8": "Hi, I'm Noah from the Flow team."
+    } ]
+  }, {
+    "tStartMs": 7799,
+    "dDurationMs": 3420,
+    "segs": [ {
+      "utf8": "I'm going to give you a quick walkthrough\nof what Flow is and how it works."
+    } ]
+  }, {
+    "tStartMs": 11386,
+    "dDurationMs": 1585,
+    "segs": [ {
+      "utf8": "Flow is a generative video tool"
+    } ]
+  }, {
+    "tStartMs": 12971,
+    "dDurationMs": 4087,
+    "segs": [ {
+      "utf8": "co-created with filmmakers to help them\ncreate better clips and scenes using AI."
+    } ]
+  }, {
+    "tStartMs": 17225,
+    "dDurationMs": 2920,
+    "segs": [ {
+      "utf8": "The entire tool is a combination of Google\nDeepMind's most advanced"
+    } ]
+  }, {
+    "tStartMs": 20145,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "models Veo, Imagen, and Gemini."
+    } ]
+  }, {
+    "tStartMs": 23189,
+    "dDurationMs": 2086,
+    "segs": [ {
+      "utf8": "So let's jump right in."
+    } ]
+  }, {
+    "tStartMs": 25275,
+    "dDurationMs": 2753,
+    "segs": [ {
+      "utf8": "This is the project view\nwhere all of your projects live."
+    } ]
+  }, {
+    "tStartMs": 28028,
+    "dDurationMs": 2961,
+    "segs": [ {
+      "utf8": "It's really easy to scroll and\nlook through everything you're working on."
+    } ]
+  }, {
+    "tStartMs": 31322,
+    "dDurationMs": 2169,
+    "segs": [ {
+      "utf8": "When you click into a project\nor start a new one,"
+    } ]
+  }, {
+    "tStartMs": 33491,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "all of your generations for this\nproject will appear as you make them."
+    } ]
+  }, {
+    "tStartMs": 37162,
+    "dDurationMs": 2335,
+    "segs": [ {
+      "utf8": "Let's focus here on the prompt box."
+    } ]
+  }, {
+    "tStartMs": 39497,
+    "dDurationMs": 2211,
+    "segs": [ {
+      "utf8": "By default, it is set to text to video."
+    } ]
+  }, {
+    "tStartMs": 41708,
+    "dDurationMs": 2169,
+    "segs": [ {
+      "utf8": "You can type something in\nand you'll get a video back."
+    } ]
+  }, {
+    "tStartMs": 46629,
+    "dDurationMs": 209,
+    "segs": [ {
+      "utf8": "You'll"
+    } ]
+  }, {
+    "tStartMs": 46838,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "see there's a dropdown menu where you can\nswitch between different modes."
+    } ]
+  }, {
+    "tStartMs": 49883,
+    "dDurationMs": 1960,
+    "segs": [ {
+      "utf8": "Let's explore frames to video."
+    } ]
+  }, {
+    "tStartMs": 51843,
+    "dDurationMs": 2044,
+    "segs": [ {
+      "utf8": "In each mode,\nyou'll see these little chips"
+    } ]
+  }, {
+    "tStartMs": 53887,
+    "dDurationMs": 2127,
+    "segs": [ {
+      "utf8": "that give you specific options\nfor that mode."
+    } ]
+  }, {
+    "tStartMs": 56014,
+    "dDurationMs": 3211,
+    "segs": [ {
+      "utf8": "You have the option to use\nthe first frame, a last frame, or both."
+    } ]
+  }, {
+    "tStartMs": 59684,
+    "dDurationMs": 2544,
+    "segs": [ {
+      "utf8": "This chip opens your ingredients drawer,\nwhich is a collection"
+    } ]
+  }, {
+    "tStartMs": 62228,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "of previously used frames\nthat you can select to reuse."
+    } ]
+  }, {
+    "tStartMs": 65356,
+    "dDurationMs": 3587,
+    "segs": [ {
+      "utf8": "You can also either upload or generate\nan image to use as a frame."
+    } ]
+  }, {
+    "tStartMs": 69277,
+    "dDurationMs": 2920,
+    "segs": [ {
+      "utf8": "Another chip here is where you'll find\ncamera controls."
+    } ]
+  }, {
+    "tStartMs": 72197,
+    "dDurationMs": 2210,
+    "segs": [ {
+      "utf8": "You can select the camera icon\nand add a camera"
+    } ]
+  }, {
+    "tStartMs": 74407,
+    "dDurationMs": 3087,
+    "segs": [ {
+      "utf8": "move into your generation without having\nto describe it in the prompt."
+    } ]
+  }, {
+    "tStartMs": 77702,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "You also get a little preview of what\nthat camera move is."
+    } ]
+  }, {
+    "tStartMs": 83500,
+    "dDurationMs": 2669,
+    "segs": [ {
+      "utf8": "Now let's take a look at ingredients\nto video mode."
+    } ]
+  }, {
+    "tStartMs": 86169,
+    "dDurationMs": 1501,
+    "segs": [ {
+      "utf8": "This is similar to frames to video,"
+    } ]
+  }, {
+    "tStartMs": 87670,
+    "dDurationMs": 2878,
+    "segs": [ {
+      "utf8": "but instead of using the image\nas your first or last frame,"
+    } ]
+  }, {
+    "tStartMs": 90548,
+    "dDurationMs": 2920,
+    "segs": [ {
+      "utf8": "you can select a few ingredients\nto combine in one scene"
+    } ]
+  }, {
+    "tStartMs": 93468,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "and add a prompt of how you want them\nto interact in the clip."
+    } ]
+  }, {
+    "tStartMs": 96679,
+    "dDurationMs": 3337,
+    "segs": [ {
+      "utf8": "As you continue to use the same\ningredients, you'll see how easy it is"
+    } ]
+  }, {
+    "tStartMs": 100016,
+    "dDurationMs": 4088,
+    "segs": [ {
+      "utf8": "to achieve character, location, and object\nconsistency across shots."
+    } ]
+  }, {
+    "tStartMs": 104479,
+    "dDurationMs": 2628,
+    "segs": [ {
+      "utf8": "Now that we have a clip that we like,\nlet's bring it over to Scenebuilder"
+    } ]
+  }, {
+    "tStartMs": 107107,
+    "dDurationMs": 1292,
+    "segs": [ {
+      "utf8": "and make a little sequence."
+    } ]
+  }, {
+    "tStartMs": 108399,
+    "dDurationMs": 3087,
+    "segs": [ {
+      "utf8": "You can hover over the clip\nto see the button that says \"Add to Scene\","
+    } ]
+  }, {
+    "tStartMs": 111694,
+    "dDurationMs": 2503,
+    "segs": [ {
+      "utf8": "and that automatically moves you\ninto the Scenebuilder."
+    } ]
+  }, {
+    "tStartMs": 114197,
+    "dDurationMs": 1126,
+    "segs": [ {
+      "utf8": "Here we are in the Scenebuilder"
+    } ]
+  }, {
+    "tStartMs": 115323,
+    "dDurationMs": 2461,
+    "segs": [ {
+      "utf8": "where you can put multiple clips together\nto create a scene."
+    } ]
+  }, {
+    "tStartMs": 117784,
+    "dDurationMs": 2210,
+    "segs": [ {
+      "utf8": "Let's take a look at some of the ways\nyou can do that."
+    } ]
+  }, {
+    "tStartMs": 119994,
+    "dDurationMs": 2086,
+    "segs": [ {
+      "utf8": "This feature is called Jump To."
+    } ]
+  }, {
+    "tStartMs": 122080,
+    "dDurationMs": 3336,
+    "segs": [ {
+      "utf8": "It uses the power of Gemini to understand\nhow your previous clip ended."
+    } ]
+  }, {
+    "tStartMs": 125583,
+    "dDurationMs": 3587,
+    "segs": [ {
+      "utf8": "to seamlessly generate the next one\nin the sequence guided by your prompt."
+    } ]
+  }, {
+    "tStartMs": 130547,
+    "dDurationMs": 667,
+    "segs": [ {
+      "utf8": "You can use these"
+    } ]
+  }, {
+    "tStartMs": 131214,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "handles here\nto trim the clips in your scene."
+    } ]
+  }, {
+    "tStartMs": 134384,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "Use this plus button and select \"extend\"\nand add a prompt"
+    } ]
+  }, {
+    "tStartMs": 137387,
+    "dDurationMs": 1668,
+    "segs": [ {
+      "utf8": "to extend the clip\nthat you are working with"
+    } ]
+  }, {
+    "tStartMs": 139055,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "to make longer scenes."
+    } ]
+  }, {
+    "tStartMs": 142475,
+    "dDurationMs": 959,
+    "segs": [ {
+      "utf8": "There's another plus button"
+    } ]
+  }, {
+    "tStartMs": 143434,
+    "dDurationMs": 3087,
+    "segs": [ {
+      "utf8": "here above the playhead, which allows you\nto save a frame for later"
+    } ]
+  }, {
+    "tStartMs": 146521,
+    "dDurationMs": 3754,
+    "segs": [ {
+      "utf8": "in case you want to generate more clips\nstarting or ending with that frame."
+    } ]
+  }, {
+    "tStartMs": 150984,
+    "dDurationMs": 1835,
+    "segs": [ {
+      "utf8": "Once you have all of your clips generated,"
+    } ]
+  }, {
+    "tStartMs": 152819,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "you can also rearrange them\nin the sequence with this button."
+    } ]
+  }, {
+    "tStartMs": 156489,
+    "dDurationMs": 3003,
+    "segs": [ {
+      "utf8": "Then you click here\nand download your scene."
+    } ]
+  }, {
+    "tStartMs": 160410,
+    "dDurationMs": 2878,
+    "segs": [ {
+      "utf8": "So that is your quick introduction\nto getting started with Flow."
+    } ]
+  }, {
+    "tStartMs": 163288,
+    "dDurationMs": 1877,
+    "segs": [ {
+      "utf8": "We're incredibly excited\nto see what you create."
+    } ]
+  } ]
+}

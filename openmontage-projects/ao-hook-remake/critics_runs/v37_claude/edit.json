@@ -1,0 +1,109 @@
+{
+ "critic": "edit",
+ "stage": "animatic",
+ "score": 54,
+ "dimension_scores": {
+  "rhythm_wave": 57,
+  "cut_motivation": 55,
+  "connectives": 57,
+  "economy": 46,
+  "transitions_quality": 52
+ },
+ "issues": [
+  {
+   "shot_id": "00:23–00:32",
+   "category": "repeated_take",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "23.75 and 31.25 show the same head-in-hands take at the same size/angle (candidate calls 31 'scratching head', frame is identical)",
+   "suggested_action": "Use a different take or angle at 31 (CU hand on mouse, or her eyes on the progress bar), or cut the second insert"
+  },
+  {
+   "shot_id": "01:41.8–01:46.3",
+   "category": "redundant_beat",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "'Your workspace. Your files, stored on your device.' (103.75) then 'Built around your local workspace.' (106.25) restate the same idea for 4.5 s over a static file tree",
+   "suggested_action": "Cut 105–106.3 and the second caption; go straight from 104.5 to the dark-room laptop"
+  },
+  {
+   "shot_id": "00:16.5–00:23, 00:24.9–00:31",
+   "category": "long_holds_in_grind",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "measured 6.47 s and 6.2 s single shots inside the problem act that claims urgency; frames 18.75/21.25 near-identical notification framing",
+   "suggested_action": "Split each into 3–4 shots: hand fixing table, numbering glitch insert, notification slam, her eyes"
+  },
+  {
+   "shot_id": "01:28.4–01:35",
+   "category": "over_hold",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "6.6 s on the Changes list; 88.75 and 91.25 nearly identical before the ring at 93.75",
+   "suggested_action": "Trim to ~3.5 s: start on the push already moving, land the ring at 89.5"
+  },
+  {
+   "shot_id": "01:52–02:01",
+   "category": "slow_tail",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "sunrise 2.9 s + text cards + end card 6.1 s ≈ 9 s after Sent; 118.75 tagline is barely visible mid-fade",
+   "suggested_action": "Overlap 'AI said it was done.' onto the sunrise; cut the end tail to ~5 s"
+  },
+  {
+   "shot_id": "00:54.4, 01:45",
+   "category": "message_too_short",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "'Templates, or a sentence.' on a 1.6 s shot; 'Built around your local workspace.' ~1.3 s",
+   "suggested_action": "Hold supers ≥2.5 s or drop them and let VO carry the line"
+  },
+  {
+   "shot_id": "00:45.6–00:49",
+   "category": "hard_cut_should_bridge",
+   "severity": 0.35,
+   "confidence": 0.65,
+   "evidence": "head-drop (44.57) cuts to a dim logo on black (46.25) with no match or sound bridge visible",
+   "suggested_action": "Match-cut the head drop to the logo rising from the same frame position, or J-cut the VO 'See exactly what changed' under her"
+  },
+  {
+   "shot_id": "00:37.4–00:41.6",
+   "category": "burst_underused",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Copy/Paste/Check/Repeat is 3 shots over 4.2 s (1.8/1.1/1.3 s) — the film's natural burst is not a burst",
+   "suggested_action": "Cut it as 8–10 shots of 0.3–0.5 s on the beat, one per word and window"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "a message cut off before 2.5 s",
+   "shot_id": "00:54.4",
+   "evidence": "'Templates, or a sentence.' super on a 1.6 s shot"
+  },
+  {
+   "rule": "a message cut off before 2.5 s",
+   "shot_id": "01:45.0",
+   "evidence": "'Built around your local workspace.' on screen ~1.3 s"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Turn the 37–42 s 'Copy. Paste. Check. Repeat.' into a true 0.3–0.5 s burst and spend the saved time trimming the 6+ s holds at 16.5, 24.9 and 88.4.",
+ "recut_plan": [
+  "00:37.4–00:41.6: re-cut as 9 shots at 0.4–0.5 s, one per word and window, cut on beats",
+  "00:16.5–00:23: split the 6.47 s hold into 4 shots (table glitch, hand fix, notification slam, her eyes)",
+  "00:24.9–00:31: split 6.2 s into 3 shots; keep the 2.6 s hold on the partner message only",
+  "00:31.07: replace the reused head-in-hands take with a different angle",
+  "00:44.57→00:46: match-cut the head drop to the logo; J-cut the VO under her",
+  "01:28.4: trim the Changes-list hold from 6.6 s to ~3.5 s",
+  "01:45–01:46.3: delete 'Built around your local workspace.'",
+  "01:52–02:01: overlap the first end line onto the sunrise; end tail ≈5 s"
+ ],
+ "target_shot_stats": {
+  "asl_s": 2.0,
+  "median_s": 1.8,
+  "pct_under_1s": 25,
+  "pct_over_4s": 8,
+  "note": "Codex-style holds in the product act, an a16z-style burst (0.3–0.5 s) in the grind and on Accept-all"
+ }
+}

@@ -1,0 +1,213 @@
+{
+  "critic": "sfx_foley",
+  "stage": "animatic",
+  "score": 61,
+  "dimension_scores": {
+    "foley_coverage": 60,
+    "transition_design": 38,
+    "ui_sound_language": 80,
+    "sync_accuracy": 62,
+    "restraint": 78
+  },
+  "issues": [
+    {
+      "shot_id": "00:05–01:19",
+      "category": "unscored_transitions",
+      "severity": 0.91,
+      "confidence": 0.99,
+      "evidence": "Measured cuts_on_sound_pct is 31.4%; 24 cuts lack a sound event, including 8.0, 12.3, 30.0, 37.4, 49.6, 59.73, 64.4 and 79.0.",
+      "suggested_action": "Spot restrained ticks, motion swishes and existing pulse accents onto the urgent cuts and product transitions; preserve the deliberate quiet passage around 43.6–46.2."
+    },
+    {
+      "shot_id": "00:24–00:31; 00:55–01:00",
+      "category": "typing_coverage",
+      "severity": 0.76,
+      "confidence": 0.78,
+      "evidence": "The candidate shows a night hands insert, re-prompting and the real prompt being typed. The timeline explicitly assigns typing only to 5–17 seconds; later 'UI tick per visible edit' does not identify keyboard foley.",
+      "suggested_action": "Verify the typing stems at each later input sequence and add short, irregular keyboard bursts where absent, synchronized to the displayed input rather than running continuously."
+    },
+    {
+      "shot_id": "00:05–00:08; 00:23; 00:31; 00:36; 00:44.57",
+      "category": "human_action_foley",
+      "severity": 0.72,
+      "confidence": 0.83,
+      "evidence": "Frame 3 shows her hand contacting the laptop; frames 10 and 13 show hands at her temples. The shot timeline also specifies scratching her head and dropping her head onto the desk. No corresponding contact or clothing cues are listed; 44.57 is a measured cut without a sound event.",
+      "suggested_action": "Add quiet laptop contact and clothing movement at the visible contacts, plus one muted desk contact at the head drop; keep the latter dry and small within the room-tone pause."
+    },
+    {
+      "shot_id": "00:28.4; 00:40.3; 00:41.6",
+      "category": "notification_coverage",
+      "severity": 0.68,
+      "confidence": 0.79,
+      "evidence": "Frame 12 shows 'Revenue is now €74.6m'; frame 17 shows four stacked notifications; frame 18 shows Elena Ruiz's message. The timeline names a buzz for the earlier partner email but gives no distinct arrival cues for these later cards.",
+      "suggested_action": "Verify notification stems, then reuse one restrained notification family for the correction and overload stack, ending arrivals before the intentional silence."
+    },
+    {
+      "shot_id": "00:34.5",
+      "category": "completion_chime_sync",
+      "severity": 0.65,
+      "confidence": 0.87,
+      "evidence": "Done #3 is scheduled at 34.45 seconds and its card starts at 34.5, but 34.5 appears in cuts_without_sound_event_s; nearby measured onsets are 34.1 and 35.05.",
+      "suggested_action": "Inspect the isolated chime stem and align its first transient to the actual Done card reveal; verify that its onset remains detectable in the final mix."
+    },
+    {
+      "shot_id": "00:34.45–00:35.2",
+      "category": "completion_chime_overuse",
+      "severity": 0.52,
+      "confidence": 0.9,
+      "evidence": "The timeline makes Done #3 the 'loudest, echoed ×4' while a swell and the line 'Done. Except now...' occupy the same beat.",
+      "suggested_action": "Keep the established completion timbre but shorten this cue to one degraded hit with a brief tail, allowing the spoken reversal to land clearly."
+    },
+    {
+      "shot_id": "01:04.4–01:12.6",
+      "category": "product_ui_event_mapping",
+      "severity": 0.42,
+      "confidence": 0.73,
+      "evidence": "Frame 27 shows the cursor on Accept; frames 28–29 show the review list and Slide 4 ring. The timeline provides 'soft pop on Accept' and generic edit ticks, but no explicit scroll or Slide 4 reveal cue; 64.4 is a cut without a sound event.",
+      "suggested_action": "Verify the Accept pop against the actual click, retain it as the signature approval sound, and add a subdued scroll texture and one related tick for the Slide 4 reveal if absent."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "More than 50% of cuts with no sound event in a film that claims urgency.",
+      "shot_id": "00:00–01:25",
+      "evidence": "Measured cuts_on_sound_pct is 31.4%, leaving 68.6% without a detected sound event; cuts_without_sound_event_s lists 24 timestamps."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Complete a frame-synchronized spotting pass that covers the urgent cuts and physical contacts while preserving the room-tone pause and distinctive Accept sound.",
+  "spotting_list": [
+    {
+      "t": "00:05.07–00:08",
+      "event": "Cut to protagonist; hand contacts laptop",
+      "sound": "Soft transition accent and dry laptop contact, timed to contact",
+      "source": "Freesound laptop lid handling plastic contact"
+    },
+    {
+      "t": "00:08",
+      "event": "Chatbot window appears",
+      "sound": "Short muted UI opening tick",
+      "source": "Mixkit minimal interface click"
+    },
+    {
+      "t": "00:12.3",
+      "event": "Word-like document opens",
+      "sound": "Compact window-opening swish, separate from the later glitch",
+      "source": "Mixkit short soft whoosh"
+    },
+    {
+      "t": "00:15.6; 00:16.5",
+      "event": "Cuts into typing and back to manual document fixing",
+      "sound": "Verify existing keyboard foley; align a key transient to each cut",
+      "source": "Freesound laptop keyboard irregular typing"
+    },
+    {
+      "t": "00:22.97–00:24.07",
+      "event": "Hands reach temples; cut to night hands insert",
+      "sound": "Quiet sleeve movement and verified keyboard contact",
+      "source": "Freesound cotton shirt movement keyboard typing"
+    },
+    {
+      "t": "00:24.87",
+      "event": "Generating-presentation card and thumbnails appear",
+      "sound": "Low UI opening tick and sparse thumbnail ticks",
+      "source": "Mixkit minimal interface notification"
+    },
+    {
+      "t": "00:28.4",
+      "event": "Partner correction notification appears",
+      "sound": "Verify arrival cue; reuse established notification sound",
+      "source": "Mixkit soft message notification"
+    },
+    {
+      "t": "00:30",
+      "event": "Re-prompt and regeneration interface",
+      "sound": "Verified keyboard burst followed by a restrained submit tick",
+      "source": "Freesound laptop typing enter key"
+    },
+    {
+      "t": "00:31.07",
+      "event": "Head-scratching reaction insert",
+      "sound": "Faint sleeve and hair movement at contact",
+      "source": "Freesound clothing rustle hand movement"
+    },
+    {
+      "t": "00:34.5",
+      "event": "Third Done card",
+      "sound": "Verify and realign existing completion chime",
+      "source": "Mixkit short digital completion chime"
+    },
+    {
+      "t": "00:36.77",
+      "event": "Frustrated reaction",
+      "sound": "Quiet clothing movement at visible hand contact",
+      "source": "Freesound cotton sleeve rustle"
+    },
+    {
+      "t": "00:37.4",
+      "event": "Copy montage begins",
+      "sound": "Align existing whip swish to the montage entrance",
+      "source": "Mixkit fast short whoosh"
+    },
+    {
+      "t": "00:40.3",
+      "event": "Windows pile up and notifications stack",
+      "sound": "One controlled cluster of arrival ticks and a window-placement accent",
+      "source": "Mixkit interface notification short click"
+    },
+    {
+      "t": "00:41.6",
+      "event": "Return to email and Elena notification",
+      "sound": "Verified soft notification arrival before the silence",
+      "source": "Mixkit soft message notification"
+    },
+    {
+      "t": "00:44.57",
+      "event": "Head drops onto desk",
+      "sound": "Single muted physical contact within room tone",
+      "source": "Freesound soft cloth thump wooden desk"
+    },
+    {
+      "t": "00:49.6",
+      "event": "Logo reveal and screenshots fan together",
+      "sound": "Soft tonal swell with a restrained merge accent",
+      "source": "Mixkit gentle logo reveal soft whoosh"
+    },
+    {
+      "t": "00:55–00:59.73",
+      "event": "Real prompt typed; agent begins working",
+      "sound": "Verified irregular key taps and one submit tick",
+      "source": "Freesound laptop keyboard typing enter"
+    },
+    {
+      "t": "00:59.73; 01:02.2",
+      "event": "Excel diff and memo tracked-change reveals",
+      "sound": "One consistent product tick at each reveal",
+      "source": "Mixkit subtle digital interface click"
+    },
+    {
+      "t": "01:04.4–01:12.6",
+      "event": "Accept action, review-list scroll and Slide 4 callout",
+      "sound": "Verify signature Accept pop; add quiet scroll texture and one callout tick if absent",
+      "source": "Mixkit soft confirmation pop; Freesound mouse wheel scroll"
+    },
+    {
+      "t": "01:12.6; 01:14",
+      "event": "Return to email and cut to mouse hand",
+      "sound": "Soft scene accent and slight hand-on-mouse contact; retain existing click at 74.55",
+      "source": "Freesound hand handling computer mouse"
+    },
+    {
+      "t": "01:16.1",
+      "event": "Cut to dawn",
+      "sound": "Align existing morning ambience entrance to the cut",
+      "source": "Freesound distant morning city birds"
+    },
+    {
+      "t": "01:19–01:25",
+      "event": "Closing text strike-through, logo and CTA reveal",
+      "sound": "Subtle stroke swish and one soft identity-family reveal accent",
+      "source": "Mixkit soft swipe gentle logo chime"
+    }
+  ]
+}

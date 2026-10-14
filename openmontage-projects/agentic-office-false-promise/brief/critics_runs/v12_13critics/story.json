@@ -1,0 +1,65 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 83,
+  "dimension_scores": {
+    "brief_adherence": 88,
+    "progression_causality": 82,
+    "pain_solution_link": 91,
+    "block_purpose_connectives": 79,
+    "proof_of_setup": 64,
+    "pacing_cta": 76
+  },
+  "issues": [
+    {
+      "shot_id": "01:04–01:14",
+      "category": "missing_payoff_proof",
+      "severity": 0.87,
+      "confidence": 1,
+      "evidence": "The failure at 00:26 is the slide 2 box still saying “FY26 outlook: €71–73m.” The demo identifies “Slide 2 · TextBox 23” and later shows “10 of 10 changes accepted,” but the visible post-acceptance document is the memo and table. The corrected slide 2 recording is pending.",
+      "suggested_action": "After acceptance, show real app footage of the same slide 2 box reading €74.6m, retaining its original template, before Maya closes the laptop."
+    },
+    {
+      "shot_id": "00:00–00:15",
+      "category": "unclear_task_chronology",
+      "severity": 0.62,
+      "confidence": 0.98,
+      "evidence": "The opening declares “Model updated” and displays Excel at €74.6m. David subsequently says “Set your model to 8.5,” followed by a manual Excel scene already displaying 8.5 and €74.6m. Without a temporal connective, the viewer sees the model finished before the instruction that motivates its update.",
+      "suggested_action": "Mark David's message as an earlier event, then show the manual model step changing 8.9 to 8.5 rather than only showing its completed state."
+    },
+    {
+      "shot_id": "00:31–00:38",
+      "category": "missing_replay_connective",
+      "severity": 0.5,
+      "confidence": 0.96,
+      "evidence": "After the partner flags the mismatch, “Introducing Diffs” leads into a request beginning “Research says 20% DACH growth is too aggressive.” The same 8.5 task returns, but the film does not explicitly establish whether this is a replay of the original job or another revision.",
+      "suggested_action": "Introduce the product request with “The same task. This time, inside her files,” then retain the existing request and demo."
+    },
+    {
+      "shot_id": "00:34–01:04",
+      "category": "demo_progression_drag",
+      "severity": 0.46,
+      "confidence": 0.94,
+      "evidence": "The product sequence spends roughly thirty seconds moving through the request, Word, Excel, deck, review panel, flagged text box, chart dependency and accept/reject controls before acceptance. “One request. Her real model, memo and deck” and three application labels repeatedly establish ownership.",
+      "suggested_action": "Compress the request highlighting and application introductions, preserving the essential chain: one request, changes across three files, the exact missed box and dependent chart, review, acceptance, corrected slide."
+    },
+    {
+      "shot_id": "01:11–01:19",
+      "category": "outcome_without_task_evidence",
+      "severity": 0.38,
+      "confidence": 0.96,
+      "evidence": "Maya closes her laptop, followed by “9:02 AM · Board meeting” and David holding a document. These establish that the meeting happened but show no readable pack content or action demonstrating that the original inconsistency was resolved.",
+      "suggested_action": "Shorten the board-meeting beat or pair it with the verified corrected slide so the outcome follows visible completion of the task."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Complete the causal payoff with real post-acceptance footage of the exact slide 2 box David flagged, now reading €74.6m in the original deck.",
+  "retell": [
+    "She needed to carry a revised DACH assumption and FY26 number across a model, memo and board deck.",
+    "The AI chat told her what to change, but she still did the edits herself, encountered broken output and missed an old number in the deck.",
+    "Agentic Office proposed changes across her actual files, including the missed text box and a dependent chart, and let her approve them.",
+    "The film showed all ten changes accepted and the memo corrected, then sent her to the board meeting without showing the corrected slide that caused the problem."
+  ],
+  "scroll_away_second": 47
+}

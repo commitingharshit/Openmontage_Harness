@@ -1,0 +1,84 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 76.6,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 78,
+    "subject_character_consistency": 92,
+    "motion_temporal_stability": 75,
+    "composition_camera_readability": 60,
+    "audio_editing": 78
+  },
+  "issues": [
+    {
+      "shot_id": "00:16.5–00:19",
+      "category": "product_readability",
+      "severity": 0.85,
+      "confidence": 0.98,
+      "evidence": "The 17.5 s Word frame clips both ends of the paragraph. The central €71–73m → €74.6m tracked change is small and soft, surrounded by unrelated document content.",
+      "suggested_action": "Reframe the real footage tightly around the complete changed phrase, keeping both values visible and readable at phone size for the full 2.5 seconds."
+    },
+    {
+      "shot_id": "00:14–00:16.5",
+      "category": "composition",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "At 15 s, the Excel toolbar occupies a large upper area and an empty H–L grid fills the lower half. The relevant inline diff is a narrow strip, with additional controls clipped at the right edge.",
+      "suggested_action": "Crop around the inline diff and its relevant worksheet context; enlarge Revenue!E6, 8.9 → 8.5, Reject and Accept while removing most toolbar and empty-grid area."
+    },
+    {
+      "shot_id": "00:11.5–00:14",
+      "category": "reading_time",
+      "severity": 0.7,
+      "confidence": 0.96,
+      "evidence": "The definition card contains 'Introducing Diffs' plus 21 explanatory words, all allocated 2.5 seconds while narration introduces the feature.",
+      "suggested_action": "Reduce the card to 'Introducing Diffs' and 'Every change, reviewable. Accept or reject each one.' so it can be read within the existing hold."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "phone_readability",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "At 1.5 s, the request, memo replacement and model/deck instructions sit in a shallow chat window. The model/deck line is substantially smaller than the headline.",
+      "suggested_action": "Enlarge the chat window vertically and simplify the response to two large lines showing the memo replacement and Revenue!E6 change."
+    },
+    {
+      "shot_id": "00:19–00:22",
+      "category": "overlay_placement",
+      "severity": 0.58,
+      "confidence": 0.98,
+      "evidence": "At 20.5 s, 'POWERPOINT · the box David flagged' crosses an unrelated memo change row, while the circled PowerPoint row appears considerably lower.",
+      "suggested_action": "Place the label in a dedicated clear band above a tighter crop of the Board Deck group and circled Slide 2 row."
+    },
+    {
+      "shot_id": "00:26–00:30",
+      "category": "feed_safe_area",
+      "severity": 0.42,
+      "confidence": 0.86,
+      "evidence": "At 28 s, 'Can make mistakes. You review every change.' sits near the bottom edge, where phone-feed interface elements can obscure it.",
+      "suggested_action": "Move the disclaimer beneath the CTA within the central content area and verify the card against the intended platforms' interface overlays."
+    },
+    {
+      "shot_id": "00:00–00:30",
+      "category": "temporal_audio_verification",
+      "severity": 0.3,
+      "confidence": 0.35,
+      "evidence": "The supplied evidence consists of 11 still frames and narration start times; it does not expose transition frames, actual voice delivery, music levels or the Accept-all click timing.",
+      "suggested_action": "Verify the continuous render on a phone with sound: check cut continuity, voice intelligibility, complete narration tails and the visible transition from pending changes to 10 of 10 accepted."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Workflow text must be large enough to read on a phone.",
+      "shot_id": "00:00–00:03",
+      "evidence": "The model/deck instruction line in the opening chat is too small relative to the 9:16 frame."
+    },
+    {
+      "rule": "Workflow text must be large enough to read on a phone.",
+      "shot_id": "00:16.5–00:19",
+      "evidence": "The Word proof clips the surrounding sentence and presents the tracked replacement at a small, soft scale."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the three real diff shots around their changed values and review controls, using consistent labels and crops that remain readable on a phone."
+}

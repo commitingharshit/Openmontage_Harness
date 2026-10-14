@@ -1,0 +1,112 @@
+{
+  "critic": "edit_rhythm",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "rhythm_wave": 85,
+    "cut_motivation": 81,
+    "connectives": 77,
+    "economy": 69,
+    "transitions_quality": 80
+  },
+  "issues": [
+    {
+      "shot_id": "00:46–00:55",
+      "category": "overlong_reveal",
+      "severity": 0.7,
+      "confidence": 0.95,
+      "evidence": "The reveal lasts 9.37 seconds, the longest measured shot. Frames show logo/tagline, three application windows, then a single spreadsheet window before the actionable prompt begins at 55 seconds.",
+      "suggested_action": "Compress the reveal to approximately 6 seconds: hold the identity for 2.5 seconds, fan in the files, and match the spreadsheet window directly into the real prompt."
+    },
+    {
+      "shot_id": "01:12.6–01:22.6",
+      "category": "resolution_delayed",
+      "severity": 0.64,
+      "confidence": 0.94,
+      "evidence": "After 'Slide 4. Caught.', the edit introduces 'Bring in your team.', 'Only a person says yes.', and 'Your workspace.' before returning to Send. These ten seconds interrupt the established mismatch-to-review-to-send chain.",
+      "suggested_action": "Shorten the Room sequence to one readable proposal-and-approval beat, retain the workspace disclosure, and return to the email sooner."
+    },
+    {
+      "shot_id": "00:23–00:37.4",
+      "category": "redundant_reaction_inserts",
+      "severity": 0.59,
+      "confidence": 0.96,
+      "evidence": "Frames 10 and 13 repeat the protagonist with both hands at her temples. Measured reaction/hand inserts at 24.07, 31.07, and 36.77 seconds last 0.8, 0.77, and 0.63 seconds, interrupting successive screen actions.",
+      "suggested_action": "Keep one reaction after the slide-four regression; remove the intervening repeated reaction and carry typing or notification audio across the screen cuts."
+    },
+    {
+      "shot_id": "00:35–00:37.4",
+      "category": "consequence_underheld",
+      "severity": 0.56,
+      "confidence": 0.91,
+      "evidence": "The regenerated deck showing corrected slide 2 beside stale slide 4 receives only 1.77 seconds before a 0.63-second reaction. Frame 15 requires comparing two separate thumbnails: 'Revenue €74.6m' and '€71–73m'.",
+      "suggested_action": "Transfer the reaction's duration into the deck shot, punch into slide 4 as the VO names it, and sustain that detail for at least 2.5 seconds before the overload burst."
+    },
+    {
+      "shot_id": "01:22.6–01:26",
+      "category": "action_bridge",
+      "severity": 0.39,
+      "confidence": 0.76,
+      "evidence": "The measured sequence separates email, mouse insert, and email into 1.4-, 1.0-, and 1.1-second shots. Frame 34 repeats the earlier cursor-on-Send composition, creating a strong opportunity for a precise action match.",
+      "suggested_action": "Match the mouse depression to the cursor click and immediate Sent confirmation; verify that the click sound lands here, since the supplied audio timeline also places a mouse click at 74.55 seconds."
+    },
+    {
+      "shot_id": "01:29–01:35.1",
+      "category": "ending_read_time",
+      "severity": 0.35,
+      "confidence": 0.58,
+      "evidence": "One 6.1-second ending contains the struck-through 'AI said it was done.', 'This time, you checked.', and a separate logo/tagline/CTA state in frames 37–38; individual fully settled text durations are not supplied.",
+      "suggested_action": "Verify the settled durations in playback, then allocate at least 2.5 seconds each to the closing statement and final CTA card, simplifying intermediate animation if needed."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Compress the nine-second brand reveal and secondary feature detour so the film moves more directly from overload through visible review to the matched Send payoff.",
+  "recut_plan": [
+    {
+      "timestamp": "00:23–00:25",
+      "edit": "Remove the redundant hands insert and bridge the partner's request into the deck prompt with continuing keyboard audio."
+    },
+    {
+      "timestamp": "00:31.07–00:31.83",
+      "edit": "Remove the repeated reaction and maintain uninterrupted progress-crawl tension."
+    },
+    {
+      "timestamp": "00:35–00:37.4",
+      "edit": "Replace the short reaction with a slide-four punch-in, extending the visible regression to at least 2.5 seconds."
+    },
+    {
+      "timestamp": "00:37.4–00:41.6",
+      "edit": "Preserve the subsecond Copy/Paste/Check burst and land Repeat on the existing impact before the email hold."
+    },
+    {
+      "timestamp": "00:46–00:55",
+      "edit": "Trim approximately three seconds from the reveal and match the central real spreadsheet into the prompt close-up."
+    },
+    {
+      "timestamp": "01:12.6–01:19.4",
+      "edit": "Combine team presence and the waiting proposal into one approximately four-second sequence, ending on Accept/Reject."
+    },
+    {
+      "timestamp": "01:22.6–01:26",
+      "edit": "Cut on mouse depression to the Send action and bridge the identity tone into the sunrise."
+    },
+    {
+      "timestamp": "01:29–01:35.1",
+      "edit": "Verify text exposure; hold the closing statement and CTA card for at least 2.5 seconds each."
+    }
+  ],
+  "target_shot_stats": {
+    "duration_s": 87,
+    "shots": 35,
+    "asl_s": 2.49,
+    "median_shot_s": 2.2,
+    "pct_shots_under_1s": 20,
+    "pct_shots_over_4s": 14,
+    "shortest_s": 0.5,
+    "longest_s": 6.5,
+    "urgency_burst_asl_s": 0.9,
+    "product_proof_hold_s": 3,
+    "minimum_message_hold_s": 2.5
+  }
+}

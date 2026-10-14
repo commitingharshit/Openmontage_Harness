@@ -1,0 +1,378 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 45,
+ "dimension_scores": {
+  "production_value": 45,
+  "photorealism_no_ai_tells": 62,
+  "cohesion_with_ref_look": 38,
+  "ui_and_graphics_finish": 40
+ },
+ "issues": [
+  {
+   "shot_id": "00:09–00:44",
+   "category": "slide_deck_ui",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "26.25, 28.75, 36.25, 11.25: flat illustrated UIs under a spotlight vignette; 36.25 a pptx card on black — nothing like the REF Genie/Codex UI-in-world frames",
+   "suggested_action": "Every hook UI beat on her laptop in her set, with screen glow and hands; drop the oval spotlight"
+  },
+  {
+   "shot_id": "00:06→00:08",
+   "category": "set_identity_drift",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "office/striped shirt protagonist vs sofa top-down with dark sleeves",
+   "suggested_action": "Use matching plates or re-shoot an insert on the office desk"
+  },
+  {
+   "shot_id": "00:53–01:46",
+   "category": "panel_on_bokeh_repetition",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "~20 frames of UI panels on a teal blur (63.75–106.25); REF product frames vary scale, angle and in-room context",
+   "suggested_action": "Alternate three treatments: screen in room, raked macro, floating plane"
+  },
+  {
+   "shot_id": "01:18–01:24",
+   "category": "split_screen_graphic",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "'THE CHATBOT' card vs real UI side by side, labels colliding (83.75)",
+   "suggested_action": "Replace with a wipe/match-cut between the two worlds"
+  },
+  {
+   "shot_id": "00:23.75 / 00:31.25",
+   "category": "stock_posing_reuse",
+   "severity": 0.35,
+   "confidence": 0.75,
+   "evidence": "identical head-in-hands stock gesture used twice",
+   "suggested_action": "Different, less stock-typical take"
+  },
+  {
+   "shot_id": "01:56–01:59",
+   "category": "type_card_tail",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "text cards on dark gradient with an illegible fade at 118.75",
+   "suggested_action": "Set the lines over the sunrise footage"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 44.3"
+  },
+  {
+   "rule": "a UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:36.25",
+   "evidence": "'Board_Presentation.pptx · regenerated' card floating on near-black"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Move the hook's illustrated UIs (09–44 s) into her lit set on her laptop screen, as 13.75 already does, so the first half stops reading as a slide deck.",
+ "frame_scores": [
+  {
+   "t": "00:01.25",
+   "score": 3,
+   "tell": "flat illustrated email, top clipped, spotlight vignette",
+   "fix": "composite on the real dark-room laptop"
+  },
+  {
+   "t": "00:03.75",
+   "score": 3,
+   "tell": "same flat email, cursor graphic",
+   "fix": "push into the Send button on the real screen"
+  },
+  {
+   "t": "00:06.25",
+   "score": 7,
+   "tell": "stock-posed but well lit, lamp practical",
+   "fix": "fine; desaturate to match night family"
+  },
+  {
+   "t": "00:08.75",
+   "score": 5,
+   "tell": "screen hot-spot glow; sofa set ≠ office",
+   "fix": "re-plate on her office desk"
+  },
+  {
+   "t": "00:11.25",
+   "score": 2,
+   "tell": "giant 'Done.' type card on a grey UI = slide",
+   "fix": "reflection on her screen / smaller in-world"
+  },
+  {
+   "t": "00:13.75",
+   "score": 6,
+   "tell": "plausible screen composite, slightly too clean",
+   "fix": "add screen glare + finger occlusion"
+  },
+  {
+   "t": "00:16.25",
+   "score": 5,
+   "tell": "soft focus throughout",
+   "fix": "sharper macro insert"
+  },
+  {
+   "t": "00:18.75",
+   "score": 3,
+   "tell": "blurred UI plus notification toast = graphic",
+   "fix": "on-screen in context, her face lit"
+  },
+  {
+   "t": "00:21.25",
+   "score": 3,
+   "tell": "same as previous, flat",
+   "fix": "cut or replace with her reaction"
+  },
+  {
+   "t": "00:23.75",
+   "score": 7,
+   "tell": "real stock, good low-key; slightly stock-posed",
+   "fix": "keep"
+  },
+  {
+   "t": "00:26.25",
+   "score": 2,
+   "tell": "flat chat screenshot under oval vignette",
+   "fix": "composite onto laptop in set"
+  },
+  {
+   "t": "00:28.75",
+   "score": 2,
+   "tell": "cropped chat screenshot, milky",
+   "fix": "composite onto laptop"
+  },
+  {
+   "t": "00:31.25",
+   "score": 6,
+   "tell": "repeated take",
+   "fix": "different take"
+  },
+  {
+   "t": "00:33.75",
+   "score": 3,
+   "tell": "UI + red clock + super stacked like a slide",
+   "fix": "one element per frame, in-world clock"
+  },
+  {
+   "t": "00:36.25",
+   "score": 2,
+   "tell": "screenshot card pasted on black",
+   "fix": "put on screen in set"
+  },
+  {
+   "t": "00:38.75",
+   "score": 3,
+   "tell": "big blurred 'Copy.' over spreadsheet",
+   "fix": "kinetic type in motion over real footage"
+  },
+  {
+   "t": "00:41.25",
+   "score": 4,
+   "tell": "floating window stack has some depth",
+   "fix": "add motion blur and room light"
+  },
+  {
+   "t": "00:43.75",
+   "score": 3,
+   "tell": "bright flat email crop",
+   "fix": "composite on screen, darken"
+  },
+  {
+   "t": "00:46.25",
+   "score": 4,
+   "tell": "logo on black, dim",
+   "fix": "fine for a sting, add texture/light"
+  },
+  {
+   "t": "00:48.75",
+   "score": 5,
+   "tell": "clean logo lockup",
+   "fix": "ok"
+  },
+  {
+   "t": "00:51.25",
+   "score": 6,
+   "tell": "warm room plate convincing; screen a touch flat",
+   "fix": "add reflections (V37 partly did)"
+  },
+  {
+   "t": "00:53.75",
+   "score": 4,
+   "tell": "flat real UI crop + caption",
+   "fix": "raked angle with falloff"
+  },
+  {
+   "t": "00:56.25",
+   "score": 4,
+   "tell": "floating window on blur",
+   "fix": "ok-ish; add light wrap"
+  },
+  {
+   "t": "00:58.75",
+   "score": 6,
+   "tell": "real top-down, convincing",
+   "fix": "keep"
+  },
+  {
+   "t": "01:01.25",
+   "score": 6,
+   "tell": "same plate continued",
+   "fix": "keep"
+  },
+  {
+   "t": "01:03.75",
+   "score": 5,
+   "tell": "UI panel on bokeh, nice depth",
+   "fix": "keep"
+  },
+  {
+   "t": "01:06.25",
+   "score": 5,
+   "tell": "panel crop + caption",
+   "fix": "keep"
+  },
+  {
+   "t": "01:08.75",
+   "score": 4,
+   "tell": "flat deck screenshot with '8x speed' badge",
+   "fix": "in-room or angled"
+  },
+  {
+   "t": "01:11.25",
+   "score": 5,
+   "tell": "plan panel on bokeh",
+   "fix": "ok"
+  },
+  {
+   "t": "01:13.75",
+   "score": 5,
+   "tell": "memo page bright white, flat",
+   "fix": "roll off white, angle the page"
+  },
+  {
+   "t": "01:16.25",
+   "score": 5,
+   "tell": "glowing chip is a premium touch",
+   "fix": "ok"
+  },
+  {
+   "t": "01:18.75",
+   "score": 4,
+   "tell": "split-screen comparison reads as deck slide",
+   "fix": "full-frame wipe instead"
+  },
+  {
+   "t": "01:21.25",
+   "score": 4,
+   "tell": "split continued",
+   "fix": "same"
+  },
+  {
+   "t": "01:23.75",
+   "score": 3,
+   "tell": "label collides with list text",
+   "fix": "fix overlap"
+  },
+  {
+   "t": "01:26.25",
+   "score": 6,
+   "tell": "warm laptop hero, plausible",
+   "fix": "keep"
+  },
+  {
+   "t": "01:28.75",
+   "score": 5,
+   "tell": "changes panel on blur",
+   "fix": "ok"
+  },
+  {
+   "t": "01:31.25",
+   "score": 5,
+   "tell": "near-identical hold",
+   "fix": "trim"
+  },
+  {
+   "t": "01:33.75",
+   "score": 5,
+   "tell": "red ring annotation is ad-hoc",
+   "fix": "one annotation system"
+  },
+  {
+   "t": "01:36.25",
+   "score": 4,
+   "tell": "caption over ribbon",
+   "fix": "clear zone"
+  },
+  {
+   "t": "01:38.75",
+   "score": 5,
+   "tell": "Room panel crop",
+   "fix": "ok"
+  },
+  {
+   "t": "01:41.25",
+   "score": 5,
+   "tell": "Accept ring, caption overlap",
+   "fix": "clear zone"
+  },
+  {
+   "t": "01:43.75",
+   "score": 4,
+   "tell": "tiny file tree + slide-like text",
+   "fix": "put on a screen in the room"
+  },
+  {
+   "t": "01:46.25",
+   "score": 3,
+   "tell": "near-empty panel + caption = slide",
+   "fix": "cut"
+  },
+  {
+   "t": "01:48.75",
+   "score": 6,
+   "tell": "warm room plate, Sent toast a bit graphic",
+   "fix": "shrink toast"
+  },
+  {
+   "t": "01:51.25",
+   "score": 6,
+   "tell": "same",
+   "fix": "ok"
+  },
+  {
+   "t": "01:53.75",
+   "score": 7,
+   "tell": "real sunrise, good",
+   "fix": "keep"
+  },
+  {
+   "t": "01:56.25",
+   "score": 4,
+   "tell": "text card",
+   "fix": "over footage"
+  },
+  {
+   "t": "01:58.75",
+   "score": 3,
+   "tell": "illegible faded text",
+   "fix": "hold at full contrast"
+  },
+  {
+   "t": "02:01.25",
+   "score": 5,
+   "tell": "clean end card",
+   "fix": "ok"
+  }
+ ],
+ "real_film_index": 44.3,
+ "closest_ref": "Codex 'It's time to fly' (night office, laptop glow, warm practicals) — but Codex keeps people and real rooms in nearly every frame, while this film spends ~65% of its frames on flat or floating UI panels.",
+ "top_3_upgrades": [
+  "Composite every hook UI onto her screen in one continuous office set with face spill",
+  "Vary product-shot treatment (in-room laptop / raked macro / floating plane) and fix caption-UI overlaps",
+  "Unify grade to one night-teal and one warm family with true blacks and shared grain"
+ ]
+}

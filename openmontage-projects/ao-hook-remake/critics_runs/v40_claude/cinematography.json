@@ -1,0 +1,139 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 57,
+ "dimension_scores": {
+  "lighting_shape": 62,
+  "lens_depth": 60,
+  "composition": 52,
+  "camera_movement": 55,
+  "frame_design_ui": 50
+ },
+ "issues": [
+  {
+   "shot_id": "00:10.0",
+   "category": "flat_ui_fullframe",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "Hook illustrations at 00:02.5, 00:10.0, 00:15.0, 00:17.5, 00:27.5, 00:35.0, 00:40.0, 00:42.5 are full-frame flat UI with only a grey vignette - no space, no light source, no depth; ~40% of the first 46 s reads as screen capture",
+   "suggested_action": "Composite every hook UI onto the OTS laptop plate (as at 00:12.5) or into a lit monitor in her blue office; keep flat UI only for <1 s punch-ins"
+  },
+  {
+   "shot_id": "00:25.0",
+   "category": "blown_screen",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "OTS plates at 00:25.0 and 00:30.0 show a near-white empty screen; the composited UI is so low-contrast it disappears, and at 01:47.5 the click shot is a white rectangle (luma 126, sharp 5.3)",
+   "suggested_action": "Drop screen exposure ~1 stop, raise UI contrast inside the matte, add a faint screen reflection so the prompt reads"
+  },
+  {
+   "shot_id": "01:30.0",
+   "category": "text_collision",
+   "severity": 0.55,
+   "confidence": 0.9,
+   "evidence": "'AGENTIC OFFICE · ONE SLIDE ELEMENT' header overlaps the list row 'Replaces \"€71–73m\" with \"…' at top of frame",
+   "suggested_action": "Crop the list to start at 'Slide 2 · TextBox 23' and move the label 40 px above the panel"
+  },
+  {
+   "shot_id": "00:07.5",
+   "category": "text_vs_image",
+   "severity": 0.45,
+   "confidence": 0.85,
+   "evidence": "Super '45 MINUTES EARLIER' sits behind/under the desk lamp and plant, half unreadable",
+   "suggested_action": "Move the super to the empty upper-left wall area over the dark monitors"
+  },
+  {
+   "shot_id": "01:02.5",
+   "category": "push_not_landing",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "At 01:00.0/01:02.5 the 'sent prompt' beat frames the memo page; the assistant panel with the prompt is a sliver at frame-right, unreadable",
+   "suggested_action": "Re-aim the push to end on the assistant panel's prompt bubble, 1.8x, prompt on the right third"
+  },
+  {
+   "shot_id": "01:45.0",
+   "category": "dead_composition",
+   "severity": 0.4,
+   "confidence": 0.8,
+   "evidence": "File-tree strip alone in the centre-left of a blurred dark field, ~80% empty frame, no caption visible",
+   "suggested_action": "Cut it or reframe as a tight push on 'Local · Default Approvals' status bar with the line beside it"
+  },
+  {
+   "shot_id": "00:57.5",
+   "category": "blur_dominates",
+   "severity": 0.35,
+   "confidence": 0.8,
+   "evidence": "Whole-app PowerPoint shot: the centre of frame is a large blurred slide photo; the real badges are tiny at top-left",
+   "suggested_action": "Replace slide photo with a cleared/licensed image or push to the 'New element added' badge so blur is out of frame"
+  },
+  {
+   "shot_id": "01:50.0",
+   "category": "set_flip",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Payoff 'Sent' plays on a candle-lit warm-room laptop, not her blue night office/OTS plate where the email was set up at 00:00.0",
+   "suggested_action": "Play the Send/lights-on payoff on the same OTS plate as the cold open, regraded warm"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "no motivated light source",
+   "shot_id": "00:10.0, 00:15.0, 00:27.5, 00:35.0, 00:40.0, 00:42.5, 01:27.5, 01:37.5, 01:45.0",
+   "evidence": "flat UI on vignette/blurred-dark fields with no light in scene"
+  },
+  {
+   "rule": "unreadable composition",
+   "shot_id": "01:30.0",
+   "evidence": "header text overlapping list item"
+  },
+  {
+   "rule": "set flip across story",
+   "shot_id": "01:50.0",
+   "evidence": "payoff in a different room from the setup email"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Put every hook illustration onto the real OTS laptop plate (lit by the screen, her hair/hands occluding) so the first 46 s stops reading as flat screen capture.",
+ "per_shot": [
+  {
+   "t": "00:10.0",
+   "grade_A_to_F": "D",
+   "fix": "composite chatbot onto OTS laptop, screen as key on her face side, 50mm f/2"
+  },
+  {
+   "t": "00:40.0",
+   "grade_A_to_F": "D",
+   "fix": "'Repeat.' over a whip-blurred real desk, not over a UI progress bar"
+  },
+  {
+   "t": "01:47.5",
+   "grade_A_to_F": "D",
+   "fix": "expose screen down 1.5 stops so the €74.6m = €74.6m email is legible behind her finger"
+  },
+  {
+   "t": "01:45.0",
+   "grade_A_to_F": "D",
+   "fix": "cut, or tight push on the status bar"
+  },
+  {
+   "t": "01:30.0",
+   "grade_A_to_F": "D",
+   "fix": "fix label/list overlap, crop list"
+  },
+  {
+   "t": "00:02.5",
+   "grade_A_to_F": "C-",
+   "fix": "keep email on the laptop plate with depth instead of a flat card"
+  },
+  {
+   "t": "00:25.0",
+   "grade_A_to_F": "C",
+   "fix": "reduce screen bloom, make 'Update the deck' legible"
+  },
+  {
+   "t": "00:57.5",
+   "grade_A_to_F": "C",
+   "fix": "push to badges, keep blurred photo out of frame"
+  }
+ ]
+}

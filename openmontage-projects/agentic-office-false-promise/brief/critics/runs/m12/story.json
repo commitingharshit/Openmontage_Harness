@@ -1,0 +1,69 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 82,
+  "dimension_scores": {
+    "brief_message_adherence": 86,
+    "narrative_progression_coherence": 81,
+    "pain_solution_connection": 85,
+    "shot_purpose_sequencing": 77,
+    "product_demo_benefit_clarity": 79,
+    "pacing_cta": 73
+  },
+  "issues": [
+    {
+      "shot_id": "01:04–01:16",
+      "category": "missing_payoff_proof",
+      "severity": 0.9,
+      "confidence": 1.0,
+      "evidence": "00:26 singles out slide 2's stale €71–73m box; 00:55 identifies its TextBox 23 diff. After '10 of 10 changes accepted', 01:08 proves the corrected memo and table, but the corrected slide 2 never appears. David reading a printed pack does not establish that this specific error was fixed.",
+      "suggested_action": "Insert the pending real post-acceptance slide 2 recording immediately after the corrected memo, framing the same formerly circled box at €74.6m."
+    },
+    {
+      "shot_id": "00:08–00:38",
+      "category": "unclear_assumption_causality",
+      "severity": 0.76,
+      "confidence": 0.98,
+      "evidence": "David initially says 'My scenario gives FY26 €74.6m, with DACH Q4 revenue at €8.5m.' The manual model shows 8.5 alongside 8.1. Later the product request says 'Take DACH Q4 down to 8.5', and the real diff reveals 8.9 → 8.5. The viewer has not previously seen the starting assumption that makes 'down' meaningful.",
+      "suggested_action": "Establish DACH Q4 8.9 → 8.5 in the initial scenario message and manual edit, then explicitly identify €74.6m as the revised scenario total replacing the old published range."
+    },
+    {
+      "shot_id": "00:30–00:40",
+      "category": "delayed_role_reversal",
+      "severity": 0.69,
+      "confidence": 1.0,
+      "evidence": "The feature definition arrives around 00:31, followed by two request highlights at 00:34 and 00:37. The first visible native-file diff appears around 00:40. The opening already communicates the execution gap by 00:04.",
+      "suggested_action": "Shorten the setup and combine the request highlights into one readable hold, bringing the first native-file diff forward and using 'AI makes the changes. You approve.' at the turn."
+    },
+    {
+      "shot_id": "00:48–00:51",
+      "category": "interrupted_product_causality",
+      "severity": 0.56,
+      "confidence": 1.0,
+      "evidence": "The PowerPoint view at 00:47 shows 'Board Pack Q3', then the film cuts to Maya at 00:49 before 'Changes ready for review' at 00:52. Her starting to review is not established by the visible action in the supplied frame.",
+      "suggested_action": "Show the review panel first, then place a shorter Maya reaction after an observable review or acceptance action."
+    },
+    {
+      "shot_id": "01:11–01:19",
+      "category": "redundant_ending",
+      "severity": 0.52,
+      "confidence": 0.98,
+      "evidence": "The corrected memo is followed by Maya closing her laptop, David reading the pack under '9:02 AM · Board meeting', and then the Diffs end card. The board scene adds a second outcome without showing the corrected number.",
+      "suggested_action": "Use the corrected memo and slide as the outcome, retain one brief Maya reaction, and proceed directly to the feature name and early-access CTA."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Faces only where they add emotion: Maya's reactions, not plot.",
+      "shot_id": "01:13–01:16",
+      "evidence": "The new David board-meeting scene introduces next-morning delivery as a plot outcome; no visible corrected figure connects his printed pack to the demonstrated changes."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "After acceptance, show the same slide 2 box David flagged now reading €74.6m in real product footage, completing the film's central cause-and-effect chain.",
+  "retell": "She had a model with the revised forecast, but her memo and deck still carried the old number. The chatbot told her what to change, so she transferred the answer manually, damaged the memo formatting, and missed a box in the deck that David later flagged. Agentic Office proposed changes inside her existing model, memo and deck, including that box and dependent chart data, and let her review and accept them. The memo and table ended at €74.6m and the film implied a successful board meeting, although I never saw the flagged slide corrected.",
+  "scroll_away_second": 34,
+  "purchase_decision": "NOT",
+  "purchase_reason": "I would try it, but the film leaves its defining cross-file correction incompletely proved.",
+  "single_buy_flip": "A trial that reproduces this workflow in my own native pack and visibly corrects the flagged slide box, dependent chart, memo and table through reviewable changes would make me pay."
+}

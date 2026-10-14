@@ -1,0 +1,76 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 77,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 82,
+    "subject_character_consistency": 90,
+    "motion_temporal_stability": 80,
+    "composition_camera_readability": 57,
+    "audio_editing": 74
+  },
+  "issues": [
+    {
+      "shot_id": "00:38–01:04",
+      "category": "source_resolution",
+      "severity": 0.85,
+      "confidence": 0.98,
+      "evidence": "The real Word diff, Excel bar and Changes panel are visibly soft after enlargement. At 00:50.5, 'Slide 2 · TextBox 23' is readable, but its €71–73m → €74.6m detail is blurred. The 1920×1080 output does not restore that missing source detail.",
+      "suggested_action": "Replace these crops with higher-resolution captures of the same approved actions, recording the relevant document or panel at a larger UI scale; preserve the real controls and values."
+    },
+    {
+      "shot_id": "00:00–00:03.2",
+      "category": "mobile_readability",
+      "severity": 0.76,
+      "confidence": 0.98,
+      "evidence": "The opening presents a two-line headline plus three simultaneous file tiles. Filenames, app labels and the Word quotation are much smaller than the headline, while the entire composition holds for only 3.2 seconds.",
+      "suggested_action": "Remove filenames and secondary labels from the opening tiles, enlarge each app name and FY26 value, and reveal the two stale values together after the updated Excel value."
+    },
+    {
+      "shot_id": "00:28.2–00:31.2",
+      "category": "text_density",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The introduction card contains approximately 30 words: 'Introducing Diffs in Agentic Office. Every AI change across your model, memo and deck — shown in your own files, yours to accept or reject.' The timeline gives the card three seconds.",
+      "suggested_action": "Keep 'Introducing Diffs in Agentic Office' and 'Every change, reviewable' on the card; move the remaining explanation into narration over the following footage."
+    },
+    {
+      "shot_id": "00:31.2–00:36.2",
+      "category": "request_crop_readability",
+      "severity": 0.61,
+      "confidence": 0.96,
+      "evidence": "The request crops at 00:32.4 and 00:35.0 enlarge visibly blurred text. Yellow rectangles enclose several lines, while a separate quotation and 'One request. Her real model, memo and deck.' compete below.",
+      "suggested_action": "Use a sharper request capture, highlight one readable clause per crop, and retain only one supporting caption beneath it."
+    },
+    {
+      "shot_id": "00:18",
+      "category": "detail_hierarchy",
+      "severity": 0.54,
+      "confidence": 0.97,
+      "evidence": "The pasted '**€74.6m**' is prominent, but the stale 'Table 1 · Key figures FY26 outlook €71–73m' appears as a small line far below it. That secondary error is difficult to read at phone size.",
+      "suggested_action": "Punch into the pasted paragraph and stale table value together, enlarging the table row and briefly outlining its unchanged €71–73m."
+    },
+    {
+      "shot_id": "00:28.2–00:36.2",
+      "category": "narration_timing_verification",
+      "severity": 0.35,
+      "confidence": 0.55,
+      "evidence": "The timeline marks the approximately 30-word introduction as narrated, but allocates only three seconds before the request crops. Frames cannot establish whether that narration extends cleanly across the next shots.",
+      "suggested_action": "Verify playback through this transition; allow the introduction narration to finish over the request footage without overlapping the quoted request, or shorten it to the approved concise wording."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message must be large enough to read on a phone.",
+      "shot_id": "00:00–00:03.2",
+      "evidence": "The three-tile opening uses small filenames, app labels and a multiline Word quotation beneath a much larger headline."
+    },
+    {
+      "rule": "Show the workflow at the pace a real person would read it.",
+      "shot_id": "00:28.2–00:31.2",
+      "evidence": "Approximately 30 words appear on a single introduction card held for three seconds."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Rebuild the screen sequences around sharper captures and fewer, larger text elements so the changed values and review controls remain readable on a phone."
+}

@@ -1,0 +1,23 @@
+{"critic":"customer","stage":"animatic","score":69,
+"dimension_scores":{"pain_specificity":82,"relatability":74,"emotional_authenticity":62,"product_pain_fit":76,"trust_credibility":55,"purchase_motivation":55},
+"recognition":8,"resonance":6,"persuasion":6,
+"purchase_objections":[
+"Your hero beat is 'Accept all' — that is exactly how I'd miss something; show me reviewing, not bulk-accepting.",
+"After '10 of 10 reviewed' the memo table still says €71–73m and a teammate's assistant proposes the same fix — so did it actually catch everything?",
+"The chatbot is a strawman: 'Regenerating all 12 slides… about 5 min left' to change one number is not what Copilot in PowerPoint does for me today.",
+"'Your files, stored on your device' sits next to 'Cloud AI may process document content' — my compliance team will ask which provider sees client data.",
+"Does it open my existing files from SharePoint/Drive and keep my firm's templates, or do I migrate into a new app?",
+"Evidence panel is from a lender-deck demo and the teammate is simulated; I'm seeing a staged demo, not a workflow like mine.",
+"Early access only, no price or integration info."],
+"would_try":"maybe — the cell/sentence/slide-element diff list with 'Revenue!E6 8.9 → 8.5' and 'Slide 4 title €71–73m → €74.6m' is the first AI-for-Office thing I've seen that looks auditable, but I'd want it on my own files before trusting it.",
+"buy_decision":"TRY_FIRST — flips to BUY if I see it on a real messy pack (linked charts, my template, a footnote) with each change reviewed one by one and a clear statement of which cloud model processes the content.",
+"issues":[
+{"shot_id":"01:31-01:42","category":"accept_all_undercuts_control","severity":0.55,"confidence":0.75,"evidence":"Hero is 'Accept all' → 'All changes reviewed 10 of 10' (f_37-f_38) while the film's promise is 'This time, you checked.'","suggested_action":"Show one change being inspected and one Rejected (e.g. Slide 4 TextBox 9 wording) before accepting the rest."},
+{"shot_id":"01:45","category":"visible_stale_number","severity":0.5,"confidence":0.7,"evidence":"Memo table 'FY26 outlook €71–73m' still visible with 'Priya's Assistant proposes 1 edit' (f_43-f_44) after all changes were reviewed; also f_34 shows the sentence tracked to €74.6m while the table beside it still reads €71–73m.","suggested_action":"Use captures where the table is either in the diff or already updated; a finance viewer reads the table first."},
+{"shot_id":"00:28-00:35","category":"strawman_competitor","severity":0.4,"confidence":0.6,"evidence":"'Sure! I'll regenerate the presentation… Regenerating all 12 slides… about 5 min left' (f_14).","suggested_action":"Make the chatbot's failure subtler and truer: it edits slide 2 but silently misses slide 4 and the chart data, no regen timer needed."},
+{"shot_id":"01:54-01:58","category":"privacy_claim_ambiguity","severity":0.35,"confidence":0.65,"evidence":"'Your files, stored on your device.' with smaller 'Cloud AI may process document content.' (f_47).","suggested_action":"State it plainly in VO/super: 'Files stay local. Only the text you ask about goes to the model you choose.' if true."},
+{"shot_id":"00:23","category":"melodrama","severity":0.25,"confidence":0.55,"evidence":"Head-in-hands shots twice (f_10, f_13) plus head-on-desk at 44 s; stock emoting reads less true than the number mismatch itself.","suggested_action":"Keep one reaction; replace another with a quiet, specific action (zooming into slide 4, squinting at the number)."},
+{"shot_id":"01:48","category":"demo_off_story","severity":0.25,"confidence":0.7,"evidence":"Evidence list cites 'New lender deck' and 'Lender Covenant Pack' (f_45).","suggested_action":"Show sources for the board-pack change (Model Revenue!E6, Memo §2)."}],
+"constraint_failures":[],
+"revision_scope":"product_demo",
+"top_revision":"Replace the 'Accept all' hero with one change opened and one rejected, then accept the rest, and make sure no later shot shows €71–73m still in the memo."}

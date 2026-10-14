@@ -1,0 +1,52 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 86.35,
+  "dimension_scores": {
+    "pain_specificity_salience": 90,
+    "target_relatability": 88,
+    "emotional_authenticity_progression": 85,
+    "product_pain_fit": 85,
+    "trust_transformation_credibility": 82,
+    "purchase_motivation_cta": 84
+  },
+  "recognition": 9,
+  "resonance": 8.7,
+  "persuasion": 8.1,
+  "issues": [
+    {
+      "shot_id": "01:03–01:09",
+      "category": "unclosed_trust_payoff",
+      "severity": 0.62,
+      "confidence": 0.98,
+      "evidence": "At 00:30.5, David flags the stale slide 2 textbox. At 00:56, the product proposes fixing that exact textbox. After acceptance, 01:06 proves the memo paragraph and table match, then 01:09 shows her closing the laptop. I never see the corrected slide that caused the embarrassment.",
+      "suggested_action": "When the pending recording exists, insert the real accepted slide 2 with its corrected textbox immediately before the relief shot. Until then, retain the memo proof and explicitly caption the accepted panel 'Model, memo and deck: 10 changes accepted' so the fallback connects acceptance to the whole pack without fabricating a result."
+    },
+    {
+      "shot_id": "00:24–00:47",
+      "category": "financial_task_ambiguity",
+      "severity": 0.48,
+      "confidence": 0.96,
+      "evidence": "The chat's deck at 00:24 calls 8.5 'DACH Q4 growth'; the real request says growth is too aggressive and Q4 should go 'down to 8.5'; the real memo at 00:47 identifies the input as DACH Q4 revenue of €8.5m. Meanwhile, the FY26 outlook rises from €71–73m to €74.6m. As a finance user, I pause to reconcile the terminology and direction.",
+      "suggested_action": "Change the synthetic deck bullet to 'DACH Q4 revenue: €8.5m' and make David's scenario text identify €8.5m as revenue. Preserve the distinction between the supplied scenario total and the stale pack outlook rather than implying that lowering one input explains the higher total."
+    },
+    {
+      "shot_id": "00:00–00:25",
+      "category": "incumbent_comparison_credibility",
+      "severity": 0.4,
+      "confidence": 0.88,
+      "evidence": "The opening says 'The answer is in the chat' and '0 of 3 files changed'; the comparison then shows oversized pasted markdown and a default white deck. I recognise these failures, but I already use AI inside Office, so this can feel like a comparison against my least capable workflow. The exact slide 2 textbox proposal at 00:56 is the more convincing distinction.",
+      "suggested_action": "Add a brief line at the product turn that names the actual advantage: 'One request. Changes across your existing files.' Keep the specific paste and template failures, but anchor the persuasion in coordinated pack editing rather than suggesting that AI assistance generally stops at chat."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the exact slide 2 mismatch with real post-acceptance footage before Maya closes the laptop, completing the trust payoff established by David's message.",
+  "purchase_objections": [
+    "The memo result is convincing, but I still want to see the flagged deck textbox corrected after acceptance.",
+    "How do I verify that it found every relevant reference, rather than just approving the changes it happened to propose?",
+    "I already have Copilot and AI add-ins; coordinated changes across my existing pack are what would justify trying another workspace.",
+    "I would need our firm's data-policy approval before using a live fund pack."
+  ],
+  "would_try": "yes — I would request early access and test a sanitised quarterly pack because the grouped diffs and matching memo paragraph and table provide credible evidence of useful work."
+}

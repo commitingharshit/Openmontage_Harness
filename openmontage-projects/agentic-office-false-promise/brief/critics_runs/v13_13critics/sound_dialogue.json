@@ -1,0 +1,108 @@
+{
+  "critic": "sound_dialogue",
+  "stage": "animatic",
+  "score": 74,
+  "dimension_scores": {
+    "intelligibility": 76,
+    "performance_casting": 70,
+    "writing_for_the_ear": 88,
+    "pacing": 63,
+    "placement": 70
+  },
+  "issues": [
+    {
+      "shot_id": "00:31.5 and 01:16.6",
+      "category": "brand_pronunciation",
+      "severity": 0.95,
+      "confidence": 0.98,
+      "evidence": "Measured transcripts hear 'introducing difs in a gentec office' and 'change, reviewable in a gentec office.' Both brand mentions become 'a gentec office'; line matches are 0.89 and 0.88 despite overall intelligibility of 0.94.",
+      "suggested_action": "Correct the spoken pronunciation of Agentic Office in both lines using 'uh-JEN-tick Office' as synthesis guidance, then verify the brand in fresh final-mix transcription."
+    },
+    {
+      "shot_id": "00:03.3",
+      "category": "rushed_exposition",
+      "severity": 0.82,
+      "confidence": 1,
+      "evidence": "'AI gave you the answer. You still have a board pack to fix.' measures 4.25 words/s; 'board pack' is heard as 'board packed.' The corresponding frame also displays both sentences over the laptop workflow.",
+      "suggested_action": "Shorten the line to 'AI answered. Your board pack still needs fixing.' and deliver it at approximately 2.6 words/s within this shot."
+    },
+    {
+      "shot_id": "00:40.0–00:48.8",
+      "category": "demo_vo_alignment",
+      "severity": 0.63,
+      "confidence": 0.88,
+      "evidence": "The VO says 'Tracked changes in Word. Diffs in Excel and PowerPoint. Accept or reject each one.' At 00:45 the sampled picture is still Excel; at 00:47.5 it is PowerPoint with the caption 'POWERPOINT · still her own deck,' while the actual review controls receive their extended sequence at 00:51.3–00:63.3.",
+      "suggested_action": "Align the Word, Excel and PowerPoint phrases individually to their corresponding cuts, and move 'Accept or reject each one' onto the later review panel showing those controls."
+    },
+    {
+      "shot_id": "01:04.4",
+      "category": "compressed_role_reversal",
+      "severity": 0.58,
+      "confidence": 0.97,
+      "evidence": "'It drives. You approve.' measures 3.45 words/s and is transcribed as 'drives, you approve.' This is the payoff line over the acceptance sequence.",
+      "suggested_action": "Deliver the four words over approximately 1.6 seconds, retaining a clear pause between the clauses and placing the approval phrase after the acceptance click."
+    },
+    {
+      "shot_id": "01:16.6",
+      "category": "tagline_onset_loss",
+      "severity": 0.54,
+      "confidence": 0.96,
+      "evidence": "Expected 'Every change, reviewable. In Agentic Office.' is heard as 'change, reviewable in a gentec office.' The end-card rate is already calm at 2.29 words/s, so rate alone does not explain the missing 'Every.'",
+      "suggested_action": "Verify the opening word against the isolated VO and final mix; preserve its full onset and move the end-card chime outside that onset if masking is confirmed."
+    },
+    {
+      "shot_id": "00:34.5",
+      "category": "request_pacing",
+      "severity": 0.36,
+      "confidence": 0.97,
+      "evidence": "'One request across the model, memo and deck.' measures 3.17 words/s while the frame asks the viewer to read 'Take DACH Q4 down to 8.5 in the model' and the underlying request.",
+      "suggested_action": "Slow this line to approximately 2.6 words/s with a small pause after 'request,' using the available five-second request sequence."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Brand or product name misheard",
+      "shot_id": "00:31.5",
+      "evidence": "Expected 'Agentic Office'; measured heard text is 'a gentec office.'"
+    },
+    {
+      "rule": "Brand or product name misheard",
+      "shot_id": "01:16.6",
+      "evidence": "Expected 'Agentic Office'; measured heard text again is 'a gentec office.'"
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Correct and verify both spoken Agentic Office mentions so the reveal and ending communicate the brand unambiguously.",
+  "line_fixes": [
+    {
+      "t": "00:31.5",
+      "issue": "Brand heard as 'a gentec office.'",
+      "fix": "Use phonetic synthesis guidance 'uh-JEN-tick Office,' preserve the displayed spelling, and verify the final-mix transcript."
+    },
+    {
+      "t": "00:03.3",
+      "issue": "Exposition measures 4.25 words/s.",
+      "fix": "Replace with 'AI answered. Your board pack still needs fixing.' at approximately 2.6 words/s."
+    },
+    {
+      "t": "00:34.5",
+      "issue": "3.17 words/s competes with reading the request.",
+      "fix": "Slow to approximately 2.6 words/s and pause briefly after 'request.'"
+    },
+    {
+      "t": "00:40.0",
+      "issue": "The control instruction precedes the sustained review-panel demonstration.",
+      "fix": "Keep application names on their corresponding cuts; move 'Accept or reject each one' to the review controls after 00:51.3."
+    },
+    {
+      "t": "01:04.4",
+      "issue": "3.45 words/s; opening 'It' is absent from the measured transcript.",
+      "fix": "Allow approximately 1.6 seconds for 'It drives. You approve.' with a distinct clause break."
+    },
+    {
+      "t": "01:16.6",
+      "issue": "'Every' is missing and the brand is misheard.",
+      "fix": "Verify and preserve the opening-word onset, separate any masking chime, and pronounce the brand 'uh-JEN-tick Office.'"
+    }
+  ]
+}

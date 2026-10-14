@@ -1,0 +1,23 @@
+{"critic":"customer","stage":"animatic","score":70,
+"dimension_scores":{"pain_specificity":86,"relatability":76,"emotional_authenticity":58,"product_pain_fit":80,"trust_credibility":60,"purchase_motivation":50},
+"recognition":8,"resonance":6,"persuasion":6,
+"purchase_objections":[
+"Does it edit my real .xlsx/.pptx without breaking formulas, linked charts and corporate templates? The film never shows the formatting it claimed chatbots wreck being preserved.",
+"'Cloud AI may process document content.' (f_42) - board/client material leaving the device is a compliance stop for my firm; no word on data handling, retention or deployment.",
+"The hero is 'Accept all' (f_39) - that is what I do when I don't check; it weakens 'This time, you checked.'",
+"Team feature is a 'DEMO SESSION, SIMULATED TEAMMATE' (f_29) - reads as not real yet.",
+"Composite glitches look staged: memo floats off the laptop screen with an empty grey band and a haloed finger (f_33-f_34); blank white screen at the Send click (f_44).",
+"'Request early access' with no price, platform or integration (Office/SharePoint) info.",
+"'Can make mistakes' status - I still need proof it finds every place the number lives (it found slide 7 too, good, but how do I know it found all?)."],
+"would_try":"maybe - the slide-4-reverted pain is exactly my 8:55 AM, and the per-element diff list (Slide 2 TextBox 23, Slide 4 title, chart data) is credible, but cloud processing of board docs needs IT sign-off first.",
+"buy_decision":"TRY_FIRST - flips to BUY if it shows my own template-heavy deck and model edited with formatting intact and a clear statement of where document content is processed (e.g. enterprise/private model option).",
+"issues":[
+{"shot_id":"91.8-95","category":"review_undercut","severity":0.5,"confidence":0.75,"evidence":"f_39 'All changes reviewed · 10 of 10 changes accepted' via Accept all","suggested_action":"Show her opening the Slide 4 title change, seeing the slide, accepting it, then Accept all for the rest."},
+{"shot_id":"78.2-84.8","category":"credibility_composite","severity":0.45,"confidence":0.7,"evidence":"f_33/f_34: memo page floats tilted at the top of the screen, lower 2/3 of screen empty grey, white matte halo on her finger","suggested_action":"Re-track the screen insert or use a straight screen-capture push for this beat."},
+{"shot_id":"101.8-106.3","category":"trust_data_handling","severity":0.45,"confidence":0.65,"evidence":"'Your files, stored on your device.' next to 'Cloud AI may process document content.' (f_42)","suggested_action":"Add one concrete line on what leaves the device and under what controls, or drop the local claim's emphasis so it doesn't feel contradicted."},
+{"shot_id":"12.5-16.5 / 78-85","category":"pain_not_resolved","severity":0.4,"confidence":0.65,"evidence":"Formatting pain 'Template gone', numbering broken (f_07) is never shown solved","suggested_action":"Show the real memo with letterhead/numbering intact around the tracked change."},
+{"shot_id":"44.5-45 / 23-24","category":"melodrama","severity":0.3,"confidence":0.6,"evidence":"f_19: stock plate of her head down on the desk while colleagues mill around a projected screen behind her","suggested_action":"Replace with a smaller, truer beat (she stares at Send, hand hovers, exhales)."},
+{"shot_id":"67.4-74.2","category":"simulated_feature","severity":0.3,"confidence":0.6,"evidence":"'DEMO SESSION, SIMULATED TEAMMATE' label on the Room/Priya shots (f_29-f_30)","suggested_action":"Shorten or move the team beat late; keep the core proof on her own single request."}],
+"constraint_failures":[],
+"revision_scope":"product_demo",
+"top_revision":"Make the hero a real review moment (open Slide 4 title, see it, accept) and show the memo template intact, so 'you checked' and 'keeps everything else' are proven rather than asserted."}

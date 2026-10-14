@@ -1,0 +1,76 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 77,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 78,
+    "subject_character_consistency": 82,
+    "motion_temporal_stability": 80,
+    "composition_camera_readability": 62,
+    "audio_editing": 84
+  },
+  "issues": [
+    {
+      "shot_id": "00:40",
+      "category": "request_readability",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "The frame displays the entire multi-line request bubble in soft, enlarged footage, rather than the script's three sequential phrase crops. The bottom caption adds a second reading target.",
+      "suggested_action": "Use three fixed crops of the unaltered request, each held for 2.5 seconds, isolating the model instruction, the memo/deck instruction, and 'Show me the diffs.'"
+    },
+    {
+      "shot_id": "00:47",
+      "category": "diff_readability",
+      "severity": 0.82,
+      "confidence": 0.99,
+      "evidence": "The memo appears as almost a full page, including header, table and subsequent paragraphs. The struck-out €71–73m and replacement €74.6m occupy a tiny portion of the frame.",
+      "suggested_action": "Crop the freeze tightly to paragraph 2 and hold the changed revenue line at phone-readable size for at least 2.5 seconds."
+    },
+    {
+      "shot_id": "00:50",
+      "category": "composition_readability",
+      "severity": 0.7,
+      "confidence": 0.99,
+      "evidence": "The full application window includes ribbon, file tree, slide, notes and Assistant panel. 'Still your deck.' is readable, but the native slide and file identity are much smaller.",
+      "suggested_action": "Crop around the teal slide and its document tab, retaining the speed disclosure whenever accelerated source motion is shown."
+    },
+    {
+      "shot_id": "00:56–01:06",
+      "category": "source_resolution",
+      "severity": 0.66,
+      "confidence": 0.96,
+      "evidence": "The Changes-panel punch-ins have visibly soft text and icons. At 01:01.5, adjacent descriptions are truncated to 'Midpoint shown → R...' and 'mid-market growth ...'.",
+      "suggested_action": "Re-extract these crops from the highest-resolution original recording, avoid additional raster enlargement, and frame each target row with enough context to keep its relevant text intact."
+    },
+    {
+      "shot_id": "00:16",
+      "category": "graphic_layout",
+      "severity": 0.52,
+      "confidence": 0.99,
+      "evidence": "The spreadsheet summary label reads as the merged string 'SummaryFY26'; column E has no visible quarter heading, while the highlighted 8.5 sits under it.",
+      "suggested_action": "Separate Summary and FY26 into clearly aligned cells and give the highlighted input a legible, unambiguous row and column label."
+    },
+    {
+      "shot_id": "00:12.5 / 01:09",
+      "category": "character_shot_continuity",
+      "severity": 0.4,
+      "confidence": 0.95,
+      "evidence": "The acknowledged stand-in shows Maya holding and reading a sheet of paper; the closing shot shows her at the silver laptop with the brass lamp and files. The opening face shot is substantially darker.",
+      "suggested_action": "Replace the stand-in with the pending exhale clip, then verify wardrobe, hair, desk placement and skin exposure against the closing shot before locking the edit."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message must be large enough to read on a phone; long text is split into sequential crops.",
+      "shot_id": "00:40",
+      "evidence": "The entire dense request bubble remains visible at once in enlarged, soft footage instead of the prescribed phrase crops."
+    },
+    {
+      "rule": "Show the workflow at phone-readable size.",
+      "shot_id": "00:47",
+      "evidence": "The central tracked revenue change is embedded in an almost full-page memo view and is too small for reliable phone reading."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the product demonstration into sharp, tightly isolated request phrases and change rows, with each essential reading target held clearly for at least 2.5 seconds."
+}

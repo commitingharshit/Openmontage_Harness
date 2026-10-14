@@ -1,0 +1,51 @@
+[   5.5] Hi, I'm Reed from the Flow team at Google, and I'm going to give a quick walkthrough
+[   9.9] of what Flow is and how it works.
+[  12.4] Flow is your AI creative studio, where you can generate and refine images
+[  15.9] and videos in whatever style you can dream up.
+[  19.6] Designed to support your entire creative journey, Flow helps creatives explore
+[  23.1] what's possible, from previsualization or proof of concept to a final creation.
+[  29.6] Under the hood, it's powered by a combination
+[  31.6] of Google DeepMind's most advanced models, Veo, Nano Banana, and Gemini.
+[  36.8] So let's jump right in.
+[  38.3] When you enter Flow, you land on your Projects page,
+[  41.1] where you can scroll and look through everything that you're working on.
+[  45.3] Here, you can start a new project or click on an existing one where you'll see
+[  49.1] all of your assets appear in a grid.
+[  52.8] This grid was designed to help simplify the way you manage your assets.
+[  57.3] As your project grows, you can group assets into custom
+[  59.9] collections, search, and filter.
+[  62.4] This makes it easier to organize images and videos as you build out your story.
+[  68.0] Now, let's focus on the prompt bar.
+[  70.2] Just type a prompt in and Flow will generate an image.
+[  73.3] To help you stay organized, you can also name your image generations
+[  76.4] just like you would with your working files.
+[  79.9] If you'd like to refine your image, you can simply prompt for a new version,
+[  83.8] or use one of the editing options like the Lasso tool for more precision.
+[  88.3] Just outline the area you want to change, add a prompt,
+[  91.5] and flow updates that specific spot while keeping the rest of your image the same.
+[  96.3] In the prompt bar, you'll also find a Model Selector.
+[  99.9] This is where you can switch between generating images and videos and adjust
+[ 103.2] various settings like orientation, output quantity, or model.
+[ 106.6] Let's choose Video.
+[ 108.4] Ready to bring your ideas to life?
+[ 110.2] You can use images you've created or upload your own as
+[ 112.6] ingredients for your video.
+[ 113.8] Just drag them into the prompt bar, use the @ tag to pull in a named asset,
+[ 118.3] or mix and match both.
+[ 120.9] Prompt how they should be used together and hit Generate.
+[ 127.1] Now let's explore Frames to Video.
+[ 129.4] When using Frames to Video, you'll see these little chips that give
+[ 132.5] you the option to use the first frame, a last frame, or both.
+[ 136.3] You can generate a frame with Nana Banana Pro directly in Flow,
+[ 139.6] upload new frames from your device, or simply drop frames in from your grid.
+[ 150.0] You'll also notice a few buttons pop up below the prompt bar.
+[ 153.5] These features help you refine your clips after you generate them
+[ 156.6] to get them just right.
+[ 157.9] For example, with the insert feature, you're able to add elements to your clip
+[ 161.6] without generating an entirely new one.
+[ 166.7] You can also shift the perspective of your clip by using Camera Control without
+[ 170.3] needing to describe it in your prompt.
+[ 173.2] And if you like where your clip was going and you'd like to continue the story,
+[ 176.4] you can extend the length of your clip.
+[ 180.6] That's a quick look at how to get started with Flow.
+[ 183.2] We can't wait to see what you create.

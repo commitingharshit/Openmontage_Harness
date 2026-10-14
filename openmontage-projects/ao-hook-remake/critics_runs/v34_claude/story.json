@@ -1,0 +1,100 @@
+{
+ "critic": "story",
+ "stage": "animatic",
+ "score": 68,
+ "dimension_scores": {
+  "brief_adherence": 72,
+  "progression_causality": 74,
+  "pain_solution_link": 72,
+  "block_purpose_connectives": 60,
+  "proof_of_setup": 65,
+  "pacing_cta": 58
+ },
+ "retell": [
+  "A finance woman is about to send the board pack at 8:57 and the deck doesn't match the model.",
+  "Earlier, a chatbot kept saying 'Done' but wrecked her memo, rebuilt the deck in the chat and still left slide 4 wrong.",
+  "Agentic Office reads her model, memo and deck, changes just the one cell, sentence and slide, and lists all 10 changes so she catches slide 4.",
+  "She sends the files and the tagline says this time you checked."
+ ],
+ "scroll_away_second": 54,
+ "issues": [
+  {
+   "shot_id": "00:12.5",
+   "category": "setup_contradiction",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "f_06: the 'wrecked' memo table already shows 'FY26 outlook €74.6m', while the real demo (f_22, f_34) shows the memo at '€71–73m' being changed to €74.6m",
+   "suggested_action": "Make the illustrated memo read €71–73m (or the stale value) so the problem state matches the before-state the product fixes."
+  },
+  {
+   "shot_id": "01:26-01:31",
+   "category": "proof_mismatch",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "f_36/f_37 'ONE SLIDE ELEMENT' shows a boardroom photo with 'New element added' and 'Speaker notes updated', not the €71–73m → €74.6m slide number the story set up",
+   "suggested_action": "Replace with the real slide diff of 'Slide 4 title €71–73m → €74.6m' or 'Slide 2 TextBox 23' so the deck proof is the same number."
+  },
+  {
+   "shot_id": "01:55-02:03",
+   "category": "off_story_proof",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "f_47-f_49 Evidence panel lists 'New lender deck · Five slides including cover' and 'Lender Covenant Pack', a different task from the DACH update",
+   "suggested_action": "Use the evidence panel from the DACH session, or crop to the FY26 Model / Board Memo rows only."
+  },
+  {
+   "shot_id": "00:54-00:58, 01:44-01:55",
+   "category": "feature_tour_detour",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "'Templates, or a sentence.' (f_23) and the team/Room block (f_43-f_46, Priya's assistant doing '§3 runway') add features the pain never set up",
+   "suggested_action": "Cut the templates block and compress the team block to the one Accept/Reject card; hand the time to the hero review."
+  },
+  {
+   "shot_id": "01:31-01:44",
+   "category": "claim_picture_conflict",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "f_38 shows 'Accept all' clicked (0 of 10 → 10 of 10) while the caption says 'Choose what stays' and the end says 'This time, you checked.'",
+   "suggested_action": "Show one or two individual Accepts (Slide 4, Revenue!E6) before Accept all, or replace Accept all with per-item review."
+  },
+  {
+   "shot_id": "00:30-00:35",
+   "category": "vo_picture_mismatch",
+   "severity": 0.3,
+   "confidence": 0.8,
+   "evidence": "f_14 progress says 'about 2 min left' while the super and VO say 'Five minutes. For one number.'",
+   "suggested_action": "Change the progress label to 'about 5 min left' as the brief specifies."
+  },
+  {
+   "shot_id": "01:07-01:11",
+   "category": "caption_picture_mismatch",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "f_28/f_29 caption 'One request. A team of assistants.' over a single 'Agentic Office' plan with 3 steps",
+   "suggested_action": "Hold the caption until the Room thread with Priya's Assistant appears, or reword to 'One request. Every file.'"
+  },
+  {
+   "shot_id": "02:10-02:19",
+   "category": "setting_continuity",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "f_54 'Sent' happens on a laptop in a candle-lit home room, not her blue office; then a sunrise (f_55) after a 9 A.M. deadline",
+   "suggested_action": "Keep the Send in her office (or on the same laptop) and use morning light rather than sunrise to close the time logic."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "pain → solution must use the same object",
+   "shot_id": "01:26-01:31",
+   "evidence": "Deck proof shows an added boardroom image, not the €74.6m slide value set up at 28-37 s"
+  },
+  {
+   "rule": "problem state must match the demo before-state",
+   "shot_id": "00:12.5",
+   "evidence": "Illustrated memo already reads €74.6m; real memo reads €71–73m"
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Replace the 'ONE SLIDE ELEMENT' boardroom image with the real Slide 4 €71–73m → €74.6m diff and cut the templates block, so every proof beat pays off the exact number and slide the story set up."
+}

@@ -1,0 +1,95 @@
+{
+  "critic": "claims_rights",
+  "stage": "animatic",
+  "score": 61,
+  "dimension_scores": {
+    "claim_accuracy": 45,
+    "ui_authenticity": 85,
+    "rights_provenance": 55,
+    "numeric_consistency": 65
+  },
+  "issues": [
+    {
+      "shot_id": "00:57–01:04",
+      "category": "unsupported_exhaustive_claim",
+      "severity": 0.95,
+      "confidence": 1,
+      "evidence": "VO: “It finds every place that number lives. And fixes each one, in place. Nothing regenerated.” The approved evidence establishes one recorded task with 10 proposed changes across three files, not exhaustive discovery or guaranteed correction.",
+      "suggested_action": "Replace with: “One request. Ten proposed changes across the model, memo and deck. Ready for your review.”"
+    },
+    {
+      "shot_id": "01:15–01:22",
+      "category": "unsupported_certainty",
+      "severity": 0.9,
+      "confidence": 0.98,
+      "evidence": "VO: “Done. And this time, you know it.” Frame 33 states “This time, it is.” Acceptance proves human review, not guaranteed correctness.",
+      "suggested_action": "Replace the VO and closing headline with “Reviewed. Accepted. Ready to send.”"
+    },
+    {
+      "shot_id": "00:30–00:35",
+      "category": "implied_speed_comparison",
+      "severity": 0.85,
+      "confidence": 0.95,
+      "evidence": "Frame 14 and VO state “Five minutes. For one number.” This quantified fictional delay precedes a compressed successful product demonstration, implying a time advantage beyond the approved claims.",
+      "suggested_action": "Remove the five-minute claim and elapsed-time clock animation; retain “Prompt again. Wait again.” and the visible regeneration failure."
+    },
+    {
+      "shot_id": "00:55–01:00",
+      "category": "prohibited_ai_brand_name",
+      "severity": 0.8,
+      "confidence": 1,
+      "evidence": "Frame 23 visibly displays “gpt-5.5” in the real assistant’s model selector. WHAT_WE_WANT.md prohibits real AI brand names and logos.",
+      "suggested_action": "Reframe the authentic recording to exclude the model selector without repainting product controls."
+    },
+    {
+      "shot_id": "00:00–01:25",
+      "category": "incomplete_rights_provenance",
+      "severity": 0.8,
+      "confidence": 0.96,
+      "evidence": "PROVENANCE.csv groups footage as “pexels_*.mp4” with placeholder source URLs and unmapped IDs. LICENSE.txt gives only a blanket Mixkit assertion. The mix uses inherited “v11-jazz-rolls.wav”; the handoff explicitly says inherited audio rights remain unresolved.",
+      "suggested_action": "Verify each used asset and record its exact source, applicable license, attribution and clearance evidence, including the inherited jazz and voice assets; hold public release until the ledger is complete."
+    },
+    {
+      "shot_id": "00:40–01:15",
+      "category": "inconsistent_clock_numbers",
+      "severity": 0.65,
+      "confidence": 1,
+      "evidence": "Frame 17 combines “Meeting in 15 min,” “MEETING AT 9:00” and “8:58.” The concluding send confirmation reads “8:58 AM” after the opening email clock showed 8:59.",
+      "suggested_action": "Change the notification to “Meeting in 2 min” and use a final send time consistent with the established chronology."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Claims must remain within the approved recorded demonstration; no unsupported certainty.",
+      "shot_id": "00:57–01:04",
+      "evidence": "“Every place” and “fixes each one” generalize beyond the verified 10-change task."
+    },
+    {
+      "rule": "No certainty unless approved.",
+      "shot_id": "01:15–01:22",
+      "evidence": "“This time, it is” asserts completion as certain."
+    },
+    {
+      "rule": "No implied speed or time savings.",
+      "shot_id": "00:30–00:35",
+      "evidence": "“Five minutes. For one number” establishes a quantified comparison against the sped-up product sequence."
+    },
+    {
+      "rule": "No real AI brand names or logos.",
+      "shot_id": "00:55–01:00",
+      "evidence": "The model selector exposes “gpt-5.5.”"
+    },
+    {
+      "rule": "Used footage and audio require verifiable provenance and clearance.",
+      "shot_id": "00:00–01:25",
+      "evidence": "Wildcard footage records and blanket audio assertions do not resolve asset-specific provenance or the inherited jazz clearance."
+    },
+    {
+      "rule": "Numbers must be consistent everywhere.",
+      "shot_id": "00:40–01:15",
+      "evidence": "A 9:00 meeting is simultaneously 15 minutes away at 8:58; the final send time precedes the opening clock."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Fail the release gate until the product narration and ending describe the demonstrated 10 reviewable changes without exhaustive discovery, speed or correctness guarantees."
+}

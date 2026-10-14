@@ -1,0 +1,386 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 48,
+ "dimension_scores": {
+  "production_value": 45,
+  "photorealism_no_ai_tells": 62,
+  "cohesion_with_ref_look": 40,
+  "ui_and_graphics_finish": 40
+ },
+ "issues": [
+  {
+   "shot_id": "00:09.8-00:41.6",
+   "category": "slideshow_ui",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "f_05, f_11, f_12, f_14, f_15, f_16: full-frame grey-washed illustrated UI with giant words; nothing in the REF sheets looks like this (Codex shows UI only on screens in lit rooms)",
+   "suggested_action": "Show the illustrated UIs on her laptop in the night office, Codex-style, with 1-2 full-screen beats max"
+  },
+  {
+   "shot_id": "00:22.5 / 00:30",
+   "category": "plate_artifact",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "black bands top and right on the head-in-hands plate, same take twice, soft (sharp 1.8)",
+   "suggested_action": "Re-scale to fill and source a second reaction take"
+  },
+  {
+   "shot_id": "01:17.5-01:22.5",
+   "category": "deck_like_graphics",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "split card 'THE CHATBOT' vs panel; labels printed over the document and list (f_33, f_34)",
+   "suggested_action": "Genie-style: dark canvas, one UI panel with depth and glow, labels outside"
+  },
+  {
+   "shot_id": "00:35",
+   "category": "screenshot_on_black",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "f_15 thumbnail strip floating on a near-black field",
+   "suggested_action": "Put the strip on the in-room screen or add depth, light and motion"
+  },
+  {
+   "shot_id": "00:07.5 / 00:57.5",
+   "category": "composite_tell",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "f_04 screen has a centred white hotspot brighter than the room could produce; top-down plate reused in both worlds",
+   "suggested_action": "Match screen luminance to the room and use a different plate for the product half"
+  },
+  {
+   "shot_id": "01:55-02:01",
+   "category": "end_cards_plain",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "f_47-f_49 plain Helvetica-like text on dark gradient; f_48 unreadable mid-fade",
+   "suggested_action": "Hard cuts, a typeface with character, grain and halation to match the film"
+  },
+  {
+   "shot_id": "00:52.5 / 01:07.5",
+   "category": "overlay_crowding",
+   "severity": 0.35,
+   "confidence": 0.8,
+   "evidence": "provenance label, caption box and '8x speed' badge stack over the UI",
+   "suggested_action": "One lower-third zone: label left, caption centre, nothing else"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 41.6"
+  },
+  {
+   "rule": "a UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:35",
+   "evidence": "f_15 thumbnail strip on near-black field"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Replace the full-frame grey illustrated UI block (9.8-41.6 s) with her laptop screen in the lit night office, so the problem half reads like Codex footage instead of a slide deck.",
+ "frame_scores": [
+  {
+   "t": "00:00",
+   "score": 3,
+   "tell": "flat illustrated email on a vignette",
+   "fix": "put it on the real laptop screen in the room"
+  },
+  {
+   "t": "00:02.5",
+   "score": 3,
+   "tell": "slide-like cards over raw UI",
+   "fix": "same"
+  },
+  {
+   "t": "00:05",
+   "score": 7,
+   "tell": "stock posing, centred super",
+   "fix": "fine; move super off the laptop"
+  },
+  {
+   "t": "00:07.5",
+   "score": 6,
+   "tell": "screen hotspot glow looks composited; set flip",
+   "fix": "match screen brightness to room, same location"
+  },
+  {
+   "t": "00:10",
+   "score": 2,
+   "tell": "grey 'Done.' over murky UI, slideshow",
+   "fix": "on-screen in room, lit by screen"
+  },
+  {
+   "t": "00:12.5",
+   "score": 6,
+   "tell": "comp ok",
+   "fix": "-"
+  },
+  {
+   "t": "00:15",
+   "score": 4,
+   "tell": "mushy upscaled insert (sharp 1.2)",
+   "fix": "sharper insert or 1.0x scale"
+  },
+  {
+   "t": "00:17.5",
+   "score": 3,
+   "tell": "static notification on blur",
+   "fix": "cut to face"
+  },
+  {
+   "t": "00:20",
+   "score": 3,
+   "tell": "same",
+   "fix": "same"
+  },
+  {
+   "t": "00:22.5",
+   "score": 5,
+   "tell": "soft, black border top/right",
+   "fix": "re-scale to fill"
+  },
+  {
+   "t": "00:25",
+   "score": 2,
+   "tell": "grey-washed flat UI",
+   "fix": "monitor-in-room"
+  },
+  {
+   "t": "00:27.5",
+   "score": 2,
+   "tell": "clipped text, overlapping layers",
+   "fix": "reframe"
+  },
+  {
+   "t": "00:30",
+   "score": 5,
+   "tell": "repeat clip, black border",
+   "fix": "new angle"
+  },
+  {
+   "t": "00:32.5",
+   "score": 2,
+   "tell": "clutter, ghost clock over labels",
+   "fix": "one text layer"
+  },
+  {
+   "t": "00:35",
+   "score": 3,
+   "tell": "thumbnail strip pasted on black",
+   "fix": "place in space"
+  },
+  {
+   "t": "00:37.5",
+   "score": 3,
+   "tell": "giant word over spreadsheet",
+   "fix": "separate type from plate"
+  },
+  {
+   "t": "00:40",
+   "score": 4,
+   "tell": "window pile has some depth",
+   "fix": "add motion blur and light"
+  },
+  {
+   "t": "00:42.5",
+   "score": 3,
+   "tell": "raw white UI",
+   "fix": "grade into night"
+  },
+  {
+   "t": "00:45",
+   "score": 2,
+   "tell": "dim logo mid-fade",
+   "fix": "hard cut"
+  },
+  {
+   "t": "00:47.5",
+   "score": 3,
+   "tell": "plain logo card",
+   "fix": "add light/texture"
+  },
+  {
+   "t": "00:50",
+   "score": 7,
+   "tell": "warm room, practicals, real screen",
+   "fix": "-"
+  },
+  {
+   "t": "00:52.5",
+   "score": 5,
+   "tell": "letterbox band, label over doc text",
+   "fix": "clean lower third"
+  },
+  {
+   "t": "00:55",
+   "score": 4,
+   "tell": "screenshot on blur",
+   "fix": "angle and depth"
+  },
+  {
+   "t": "00:57.5",
+   "score": 6,
+   "tell": "real top-down, reused plate",
+   "fix": "new angle"
+  },
+  {
+   "t": "01:00",
+   "score": 6,
+   "tell": "same",
+   "fix": "same"
+  },
+  {
+   "t": "01:02.5",
+   "score": 5,
+   "tell": "UI in space on blur, large empty area",
+   "fix": "tighter, rim light"
+  },
+  {
+   "t": "01:05",
+   "score": 5,
+   "tell": "same",
+   "fix": "-"
+  },
+  {
+   "t": "01:07.5",
+   "score": 4,
+   "tell": "'8x speed' badge, caption over UI",
+   "fix": "drop badge to label row"
+  },
+  {
+   "t": "01:10",
+   "score": 5,
+   "tell": "panel on blur",
+   "fix": "-"
+  },
+  {
+   "t": "01:12.5",
+   "score": 5,
+   "tell": "raw paper white",
+   "fix": "grade"
+  },
+  {
+   "t": "01:15",
+   "score": 5,
+   "tell": "chip ok",
+   "fix": "-"
+  },
+  {
+   "t": "01:17.5",
+   "score": 4,
+   "tell": "split screen reads as slide",
+   "fix": "depth offset"
+  },
+  {
+   "t": "01:20",
+   "score": 3,
+   "tell": "label over document",
+   "fix": "label outside"
+  },
+  {
+   "t": "01:22.5",
+   "score": 3,
+   "tell": "label over list",
+   "fix": "label outside"
+  },
+  {
+   "t": "01:25",
+   "score": 7,
+   "tell": "warm-room hero, real UI",
+   "fix": "-"
+  },
+  {
+   "t": "01:27.5",
+   "score": 5,
+   "tell": "panel on blur",
+   "fix": "-"
+  },
+  {
+   "t": "01:30",
+   "score": 5,
+   "tell": "stray red dot",
+   "fix": "remove"
+  },
+  {
+   "t": "01:32.5",
+   "score": 5,
+   "tell": "ring + caption ok",
+   "fix": "-"
+  },
+  {
+   "t": "01:35",
+   "score": 4,
+   "tell": "title box over UI, labels crowd",
+   "fix": "-"
+  },
+  {
+   "t": "01:37.5",
+   "score": 4,
+   "tell": "tooltip artifact 'Cha'",
+   "fix": "clean capture"
+  },
+  {
+   "t": "01:40",
+   "score": 5,
+   "tell": "ring ok",
+   "fix": "-"
+  },
+  {
+   "t": "01:42.5",
+   "score": 4,
+   "tell": "file tree + text card, deck-like",
+   "fix": "-"
+  },
+  {
+   "t": "01:45",
+   "score": 3,
+   "tell": "redundant card",
+   "fix": "cut"
+  },
+  {
+   "t": "01:47.5",
+   "score": 6,
+   "tell": "candle-lit room, flat white screen comp",
+   "fix": "grade screen"
+  },
+  {
+   "t": "01:50",
+   "score": 6,
+   "tell": "locked, identical to previous",
+   "fix": "slow push"
+  },
+  {
+   "t": "01:52.5",
+   "score": 6,
+   "tell": "real sunrise, soft (28.5)",
+   "fix": "sharper plate"
+  },
+  {
+   "t": "01:55",
+   "score": 2,
+   "tell": "plain text card",
+   "fix": "-"
+  },
+  {
+   "t": "01:57.5",
+   "score": 1,
+   "tell": "unreadable mid-fade",
+   "fix": "hard cut"
+  },
+  {
+   "t": "02:00",
+   "score": 3,
+   "tell": "plain end card",
+   "fix": "-"
+  }
+ ],
+ "real_film_index": 41.6,
+ "closest_ref": "OpenAI Codex 'It's time to fly': the real-room laptop shots (50 s, 85 s, 107.5 s) are close, but about half the frames are flat full-frame UI and text cards that Codex never cuts to.",
+ "top_3_upgrades": [
+  "Stage the illustrated problem UI on the in-room laptop with screen-as-key light",
+  "Give product UI Genie-level finish: one panel with depth and glow on dark, labels outside, no raw white",
+  "Fix plate defects: black borders and the reused head-in-hands take; sharper inserts"
+ ]
+}

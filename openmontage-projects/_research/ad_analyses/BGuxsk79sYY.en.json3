@@ -1,0 +1,19 @@
+{
+  "wireMagic": "pb3",
+  "pens": [ {
+  
+  } ],
+  "wsWinStyles": [ {
+  
+  } ],
+  "wpWinPositions": [ {
+  
+  } ],
+  "events": [ {
+    "tStartMs": 0,
+    "dDurationMs": 58611,
+    "segs": [ {
+      "utf8": "[music]"
+    } ]
+  } ]
+}

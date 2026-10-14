@@ -1,0 +1,28 @@
+{"critic":"sound_sfx","stage":"animatic","score":65,
+"dimension_scores":{"foley_coverage":70,"transition_design":50,"ui_sound_language":75,"sync_accuracy":68,"restraint":70},
+"issues":[
+{"shot_id":"00:00-00:46 (hook)","category":"unsounded_cuts","severity":0.6,"confidence":0.65,"evidence":"cuts_without_sound_event_s lists 21 hook cuts (1.2, 5.07, 8.0, 9.8, 13.93, 15.6, 16.5, 22.97, 24.07, 24.87, 30.0, 31.83, 34.5, 35.0, 36.77, 37.4, 38.8, 39.7, 40.3, 44.57, 45.63). Some have cues within 50 ms (whoosh 37.35, impact 39.7, thud 44.57) that the detector did not register, which means they are soft or masked.","suggested_action":"Give each hook cut a transient with a fast attack (a tick, hit or cut swish), placed 0-30 ms before the frame, at a level that clears the beds by 6 dB."},
+{"shot_id":"00:52.6-01:58.3","category":"inaudible_product_touches","severity":0.45,"confidence":0.6,"evidence":"The 'soft touch on every product cut' is key.mp3 at vol 0.12, mostly under continuous VO. The detector still lists 52.6, 54.4, 61.4, 64.4 and 71.4 as without sound, and the whoosh2/pop at 0.2-0.28 next to them did not register either.","suggested_action":"Raise the touches to about 0.25 and give them a crisper transient (a short glass or felt tick), or high-pass them above 2 kHz so that they cut through VO."},
+{"shot_id":"00:44.57","category":"key_action_underplayed","severity":0.4,"confidence":0.6,"evidence":"The head-drop thud is impact.mp3 at 0.22, starting 0.2 s into the file, under the VO 42.3-45.4 s. It was not detected as an onset (nearest 44.4).","suggested_action":"Use a dry desk-body thud (wood plus fabric) at about 0.5, with no source offset, and clear the VO first (see Dialogue)."},
+{"shot_id":"00:05-00:08, 00:23, 00:32, 00:36.8","category":"missing_human_foley","severity":0.35,"confidence":0.6,"evidence":"The protagonist opens her laptop lid (frame at ~5-8 s) and has head-in-hands, head-scratch and frustrated-reaction inserts. The cue list has only whoosh2 at 23.7 for these; there is no lid, cloth, chair or breath foley.","suggested_action":"Add a laptop-lid open at the lid move, a cloth rustle and chair creak on head-in-hands, a hair scratch at about 32, and an exhale on her reaction at 36.8."},
+{"shot_id":"01:18-01:31","category":"edit_count_mismatch","severity":0.3,"confidence":0.45,"evidence":"The split shows three edits (ONE CELL, ONE SENTENCE, ONE SLIDE ELEMENT), but only key.mp3 at 82.2 and 86.2 mark them. The third reveal and the 'All changes reviewed 10 of 10' state have no tick.","suggested_action":"Spot one identical precise tick per edit reveal, including the slide element (~89-90), plus a two-note confirm on '10 of 10'."},
+{"shot_id":"whole","category":"one_sample_for_everything","severity":0.25,"confidence":0.6,"evidence":"key.mp3 serves typing apps, plan steps, cut touches, file-tree ticks and edits. whoosh2.mp3 is used about 15 times post-reveal.","suggested_action":"Split it into a family: 'edit marked' tick, 'step complete' tick, 'accept' pop_long (already distinct), and keep whooshes only for camera pushes."},
+{"shot_id":"01:59.3-01:59.9","category":"sync_verify","severity":0.2,"confidence":0.4,"evidence":"The hand-click shot is 119.3-119.9; click.mp3 sits at 119.65 (remapped from 131.35) and the cut at 119.3 is unsounded.","suggested_action":"Check the click frame-accurately against the finger contact. Add a light room-shift at the 119.3 cut."}
+],
+"spotting_list":[
+{"t":"5.5","event":"she opens the laptop lid","sound":"laptop lid open, hinge","source":"Freesound 'laptop lid open'"},
+{"t":"23.0","event":"head into hands","sound":"cloth rustle + chair creak + exhale","source":"Freesound 'cloth rustle', 'office chair creak'"},
+{"t":"31.9","event":"she scratches her head","sound":"hair scratch, soft","source":"Freesound 'hair scratch foley'"},
+{"t":"36.8","event":"frustrated reaction","sound":"short exhale, chair shift","source":"Freesound 'frustrated sigh'"},
+{"t":"44.57","event":"head drops to the desk","sound":"dry desk thud, body weight","source":"Freesound 'head hit desk', 'wood thud soft'"},
+{"t":"89.5","event":"slide element edit revealed","sound":"tick (same as the cell and sentence)","source":"Mixkit 'interface click'"},
+{"t":"93.0","event":"'All changes reviewed 10 of 10'","sound":"two-note confirm","source":"Mixkit 'positive notification'"},
+{"t":"119.3","event":"cut to her hand at the mouse","sound":"chair shift / room tone change","source":"Freesound 'room tone change'"},
+{"t":"119.9","event":"lights come on","sound":"light switch + fluorescent tink","source":"Freesound 'light switch on'"},
+{"t":"hook cuts (see issues)","event":"unsounded cuts","sound":"short tick/hit transients","source":"Mixkit 'whoosh short', 'glitch transition'"}
+],
+"constraint_failures":[
+{"rule":"more than 50% of cuts with no sound event in a film that claims urgency","shot_id":"whole (hook 0-46)","evidence":"cuts_on_sound_pct 36 (32 of about 50 cuts without a sound event), 21 of them in the urgent hook"}
+],
+"revision_scope":"opening",
+"top_revision":"Re-spot the hook's 21 unsounded cuts with fast-attack transients placed 0-30 ms before each cut and clearing the beds, and raise the post-reveal cut touches from 0.12 to about 0.25 so that they register under VO."}

@@ -1,0 +1,254 @@
+{
+  "critic": "real_film_benchmark",
+  "stage": "animatic",
+  "score": 55,
+  "dimension_scores": {
+    "production_value": 54,
+    "photorealism_no_ai_tells": 66,
+    "cohesion_with_ref_look": 56,
+    "ui_and_graphics_finish": 40
+  },
+  "issues": [
+    {
+      "shot_id": "00:51–01:07",
+      "category": "screenshot_on_black",
+      "severity": 0.92,
+      "confidence": 0.99,
+      "evidence": "At 00:52.5, the enlarged Changes panel occupies the left side while the right side is empty black; subsequent frames continue with tightly cropped panel rows.",
+      "suggested_action": "Re-record the real review interaction at higher resolution and compose a continuous move from the complete workspace into the selected diff, keeping app context visible."
+    },
+    {
+      "shot_id": "00:34.5–00:37.5",
+      "category": "magnified_soft_ui",
+      "severity": 0.87,
+      "confidence": 0.99,
+      "evidence": "The request text is visibly blurred beneath a yellow rectangle, with a quoted subtitle and a second explanatory caption below it.",
+      "suggested_action": "Capture the request at a larger native UI scale, remove the duplicate quotation, and highlight the relevant phrase directly in the sharp recording."
+    },
+    {
+      "shot_id": "00:00.5–00:08.5",
+      "category": "slide_deck_graphics",
+      "severity": 0.84,
+      "confidence": 0.98,
+      "evidence": "The opening uses three equal bordered file cards, a centered two-line headline, then a chat panel and two floating message rectangles on the same dark background.",
+      "suggested_action": "Replace the sequence of centered layouts with one bespoke workspace composition that reveals the model update and the two stale files through coordinated motion and changing emphasis."
+    },
+    {
+      "shot_id": "00:40–01:08.5",
+      "category": "inconsistent_capture_finish",
+      "severity": 0.82,
+      "confidence": 0.98,
+      "evidence": "The memo at 00:40 is cropped through sentences at the right edge; 00:44 shows a detached Excel ribbon and diff bar; 00:47 shows nearly the full app; 00:55.5 magnifies soft panel text.",
+      "suggested_action": "Use one capture resolution and UI scale, then establish consistent framing margins and move between full-app context and readable detail without cutting through relevant text."
+    },
+    {
+      "shot_id": "00:15–00:26.5",
+      "category": "schematic_ui_finish",
+      "severity": 0.77,
+      "confidence": 0.98,
+      "evidence": "The spreadsheet is a sparse floating grid, the deck is four plain bars, and the warning uses a bright red hand-drawn oval; these frames resemble explanatory presentation slides.",
+      "suggested_action": "Give the illustrative failure sequence coherent window chrome, precise typography and cursor-led actions, then replace the oval with a restrained focus treatment."
+    },
+    {
+      "shot_id": "00:12.2, 00:29.4, 00:49.9, 01:11.5",
+      "category": "portrait_texture_and_stock_staging",
+      "severity": 0.65,
+      "confidence": 0.78,
+      "evidence": "Maya's portraits have uniformly smooth facial texture, soft clothing detail and repeated blue-window office staging; the laptop-and-folder arrangement reads as a polished stock setup.",
+      "suggested_action": "Verify these shots at native resolution and in motion for facial texture, gaze and hand continuity; retain stronger takes and introduce more specific task-related framing where the setup feels generic."
+    },
+    {
+      "shot_id": "00:31.5, 01:19",
+      "category": "generic_launch_titles",
+      "severity": 0.61,
+      "confidence": 0.97,
+      "evidence": "The introduction is centered white text on black; the ending repeats a centered product name, explanatory sentence and outlined CTA without a distinctive visual motif.",
+      "suggested_action": "Build a single typographic system around the diff motif and carry its reveal, spacing and accent treatment through both title moments."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "real_film_index must be at least 60",
+      "shot_id": "whole",
+      "evidence": "The 27 supplied candidate frames average 5.56/10, producing a real_film_index of 55.56."
+    },
+    {
+      "rule": "No UI frame that looks like a screenshot pasted on black",
+      "shot_id": "00:52.5",
+      "evidence": "The cropped Changes panel is enlarged against a substantial empty black area, with no integrated workspace framing."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Rebuild the screen-led sequences around sharp, consistently framed real app recordings and one bespoke motion system, replacing floating slide layouts and magnified screenshot crops.",
+  "frame_scores": [
+    {
+      "t": "00:00.5",
+      "score": 6,
+      "tell": "Clean but presentation-like headline and three-card arrangement.",
+      "fix": "Reveal the mismatch within a coherent workspace composition."
+    },
+    {
+      "t": "00:01.8",
+      "score": 6,
+      "tell": "Almost identical to 00:00.5; the samples show little visual development.",
+      "fix": "Verify intervening motion and add a meaningful shift in focus if static."
+    },
+    {
+      "t": "00:04.5",
+      "score": 5,
+      "tell": "Dimmed chat panel with a separate large caption block.",
+      "fix": "Integrate the message reveal and caption hierarchy."
+    },
+    {
+      "t": "00:08.5",
+      "score": 6,
+      "tell": "Readable messages, but generic floating rectangles.",
+      "fix": "Establish a consistent messaging treatment and spatial context."
+    },
+    {
+      "t": "00:12.2",
+      "score": 7,
+      "tell": "Plausible cinematic lighting; smooth texture and stock desk staging.",
+      "fix": "Verify native-resolution face and hand detail."
+    },
+    {
+      "t": "00:15.0",
+      "score": 5,
+      "tell": "Sparse schematic spreadsheet with detached explanatory labels.",
+      "fix": "Add credible app framing and cursor-led action."
+    },
+    {
+      "t": "00:18.0",
+      "score": 4,
+      "tell": "Flat document illustration and crude pasted formatting.",
+      "fix": "Preserve the intentional markdown error within a convincingly finished document interface."
+    },
+    {
+      "t": "00:21.0",
+      "score": 5,
+      "tell": "Side-by-side slide comparison resembles a training presentation.",
+      "fix": "Show the downloaded deck opening and expose the template difference through motion."
+    },
+    {
+      "t": "00:23.5",
+      "score": 5,
+      "tell": "Plain four-bar graphic and floating instruction chip.",
+      "fix": "Use a more credible slide design and animate the actual title edit."
+    },
+    {
+      "t": "00:26.5",
+      "score": 5,
+      "tell": "Bright red oval and message rectangle feel editorial rather than cinematic.",
+      "fix": "Use a restrained focus cue tied to the incoming message."
+    },
+    {
+      "t": "00:29.4",
+      "score": 7,
+      "tell": "Believable close-up, though skin and image detail are soft.",
+      "fix": "Verify gaze and skin texture in the moving source."
+    },
+    {
+      "t": "00:31.5",
+      "score": 5,
+      "tell": "Generic centered title on black.",
+      "fix": "Introduce a distinctive diff-based typographic reveal."
+    },
+    {
+      "t": "00:34.5",
+      "score": 4,
+      "tell": "Blurred enlarged request with stacked explanatory overlays.",
+      "fix": "Re-capture at readable native scale and remove redundant text."
+    },
+    {
+      "t": "00:37.5",
+      "score": 4,
+      "tell": "The same soft request crop persists beneath a large highlight box.",
+      "fix": "Advance the real interaction while maintaining sharp text."
+    },
+    {
+      "t": "00:40.0",
+      "score": 5,
+      "tell": "Real tracked changes, but oversized crop truncates the document.",
+      "fix": "Frame the complete changed sentence at higher capture resolution."
+    },
+    {
+      "t": "00:44.0",
+      "score": 5,
+      "tell": "Detached ribbon, diff bar and mostly empty grid.",
+      "fix": "Include the affected cell and enough worksheet context."
+    },
+    {
+      "t": "00:47.0",
+      "score": 6,
+      "tell": "Credible app context; large bottom caption competes with the slide.",
+      "fix": "Move the label into a consistent unobtrusive caption area."
+    },
+    {
+      "t": "00:49.9",
+      "score": 7,
+      "tell": "Cohesive night-office lighting, with very soft face and clothing detail.",
+      "fix": "Verify source sharpness and preserve natural texture."
+    },
+    {
+      "t": "00:52.5",
+      "score": 7,
+      "tell": "Useful real diff detail, undermined by screenshot-on-black framing.",
+      "fix": "Keep the surrounding workspace visible during the punch-in."
+    },
+    {
+      "t": "00:55.5",
+      "score": 6,
+      "tell": "Magnified soft panel text and rough red oval.",
+      "fix": "Re-capture larger UI text and replace the oval with a precise focus cue."
+    },
+    {
+      "t": "00:58.5",
+      "score": 5,
+      "tell": "Soft enlarged rows and visibly truncated descriptions.",
+      "fix": "Expand the panel before capture and frame complete relevant labels."
+    },
+    {
+      "t": "01:01.5",
+      "score": 5,
+      "tell": "Low-detail controls beneath a yellow rectangle.",
+      "fix": "Capture the controls sharply and show a deliberate cursor approach."
+    },
+    {
+      "t": "01:04.5",
+      "score": 5,
+      "tell": "Acceptance status is readable but visibly blurred by enlargement.",
+      "fix": "Record the accepted state at the final framing scale."
+    },
+    {
+      "t": "01:08.5",
+      "score": 6,
+      "tell": "Clean document result, but soft capture and heavy caption treatment.",
+      "fix": "Use a sharper document view and a lighter caption."
+    },
+    {
+      "t": "01:11.5",
+      "score": 6,
+      "tell": "Plausible laptop-close pose; fingers and sleeve detail are too soft to verify.",
+      "fix": "Check hand continuity through the full closing action."
+    },
+    {
+      "t": "01:14.6",
+      "score": 7,
+      "tell": "Plausible daylight portrait, but generic boardroom staging.",
+      "fix": "Use a more specific reaction or document interaction."
+    },
+    {
+      "t": "01:19.0",
+      "score": 6,
+      "tell": "Tidy typography and CTA, without a distinctive launch-film finish.",
+      "fix": "Carry the established diff motif into the final lockup."
+    }
+  ],
+  "real_film_index": 55.56,
+  "closest_ref": "REF_bJcA23ckzcY_sheet_01.jpg, OpenAI Codex 'It's time to fly': the blue office lighting and human-to-screen alternation are closest, but the candidate lacks its tactile detail, varied framing and integration between cinematic footage and product imagery.",
+  "top_3_upgrades": [
+    "Re-record product footage at a larger native UI scale so every hero crop remains sharp and retains workspace context.",
+    "Replace the floating cards, yellow rectangles and red ovals with one bespoke visual system built around changes appearing inside files.",
+    "Verify the human footage in motion for skin texture, gaze and hand continuity, then favor specific task-related coverage over repeated stock office portraits."
+  ]
+}

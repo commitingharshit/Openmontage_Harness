@@ -1,0 +1,133 @@
+{
+ "critic": "edit",
+ "stage": "animatic",
+ "score": 56,
+ "dimension_scores": {
+  "rhythm_wave": 60,
+  "cut_motivation": 58,
+  "connectives": 62,
+  "economy": 48,
+  "transitions_quality": 54
+ },
+ "issues": [
+  {
+   "shot_id": "00:16.5-00:23",
+   "category": "dead_hold",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "one 6.47 s shot; f_08 and f_09 identical (notification over blurred Word)",
+   "suggested_action": "Split into notification (2.5 s) -> her eyes reading (1.5 s) -> highlight on 'board deck' (1.5 s)"
+  },
+  {
+   "shot_id": "01:18-01:25",
+   "category": "montage_not_a_burst",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "the 'precision montage' is 2 shots (4.6 s + 2.4 s); f_32-f_34 are the same split layout with a swapped right panel",
+   "suggested_action": "Cut it as a burst: cell / sentence / slide element at ~0.8 s each, synced to the score lift, then hold the slide element 2 s"
+  },
+  {
+   "shot_id": "01:01.4-01:11.4",
+   "category": "same_size_run",
+   "severity": 0.55,
+   "confidence": 0.75,
+   "evidence": "61.4, 64.4, 67.0, 68.73: four consecutive tight pushes on the assistant panel with blurred right side (f_26, f_27, f_29)",
+   "suggested_action": "Interleave a wide (warm-room laptop or the top-down hands) between 'Reading your files' and 'plan steps'"
+  },
+  {
+   "shot_id": "01:41.8-01:46.3",
+   "category": "redundant_beat",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "f_42 'Your workspace. Your files, stored on your device.' then f_43 'Built around your local workspace.' on the same file-tree plate",
+   "suggested_action": "Cut 105-106.3 entirely; go from 104.5 straight to the dark-room email"
+  },
+  {
+   "shot_id": "00:22.5 / 00:30",
+   "category": "repeated_clip",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "f_10 and f_13 are the same head-in-hands take",
+   "suggested_action": "Use the scratch-head or a different angle for the second reaction"
+  },
+  {
+   "shot_id": "00:45.6-00:49",
+   "category": "slow_reveal",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "f_19 logo still dim at 45 s, 3.37 s logo fade after the head-drop",
+   "suggested_action": "Hold black 0.6 s after the thud, then hard-cut the logo in on the VO 'See exactly what changed'; trim to 2.4 s"
+  },
+  {
+   "shot_id": "01:55-01:58",
+   "category": "transition_unreadable",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "f_48 'This time, you checked.' nearly invisible mid-crossfade",
+   "suggested_action": "Hard cut or 6-frame dissolve between the end-card lines"
+  },
+  {
+   "shot_id": "01:28.4-01:35",
+   "category": "long_hold",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "6.6 s on the reviewed list (f_36-f_38)",
+   "suggested_action": "Cut at the ring landing on 'Slide 4 title' (~3.5 s) then go to Room"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "three or more consecutive shots at the same size and angle",
+   "shot_id": "01:01.4-01:11.4",
+   "evidence": "four tight assistant-panel push-ins in a row"
+  },
+  {
+   "rule": "a message cut off before 2.5 s",
+   "shot_id": "01:45-01:46.3",
+   "evidence": "'Built around your local workspace.' on screen ~1.3 s"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Turn 78-85 into a real three-hit burst (cell, sentence, slide element at ~0.8 s each on the score lift) and pay for it by cutting the 6.5 s notification hold at 16.5 and the redundant 105-106.3 file-tree card.",
+ "recut_plan": [
+  {
+   "t": "00:16.5-00:23",
+   "edit": "split 6.47 s hold into 3 shots (notification / her face / highlighted words)"
+  },
+  {
+   "t": "00:30",
+   "edit": "replace repeated head-in-hands with the scratch-head take"
+  },
+  {
+   "t": "00:45.6",
+   "edit": "0.6 s black after thud, logo hard-cut on VO, trim logo to 2.4 s"
+  },
+  {
+   "t": "01:04.4",
+   "edit": "insert 1.2 s warm-room wide between the panel push-ins"
+  },
+  {
+   "t": "01:18-01:25",
+   "edit": "burst: 3 x 0.8 s product hits, then 2 s hold on slide element"
+  },
+  {
+   "t": "01:28.4",
+   "edit": "trim reviewed-list hold from 6.6 s to ~3.8 s"
+  },
+  {
+   "t": "01:45",
+   "edit": "cut the 'Built around your local workspace.' card"
+  },
+  {
+   "t": "01:55",
+   "edit": "hard cut between 'AI said it was done.' and 'This time, you checked.'"
+  }
+ ],
+ "target_shot_stats": {
+  "asl_s": 2.1,
+  "median_shot_s": 1.9,
+  "pct_under_1s": 25,
+  "pct_over_4s": 8,
+  "note": "between SMITH (1.27) and Codex (4.5): bursts in the hook and the 78-85 montage, 3-4 s holds only on the reveal, the hero accept and the sunrise"
+ }
+}

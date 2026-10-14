@@ -1,0 +1,74 @@
+{
+  "critic": "story",
+  "stage": "script",
+  "score": 81,
+  "dimension_scores": {
+    "brief_message_adherence": 88,
+    "narrative_progression_coherence": 78,
+    "pain_solution_connection": 85,
+    "shot_purpose_sequencing": 80,
+    "product_demo_benefit_clarity": 82,
+    "pacing_cta": 62
+  },
+  "issues": [
+    {
+      "shot_id": "beat 5",
+      "category": "number_relationship_unclear",
+      "severity": 0.82,
+      "confidence": 0.98,
+      "evidence": "She changes E6 to 8.5, sees 'FY26 €71–73m, unmoved,' then 'types €74.6m over it by hand.' The viewer receives no source for €74.6m beyond the chatbot's answer. The later production note asks what these numbers mean, but that explanation is absent from the film.",
+      "suggested_action": "Verify the numbers' relationship, then put the verified explanation on screen before the manual edits. If the range is stale, identify it as an old summary estimate and show the model's actual FY26 source for €74.6m; avoid depicting an unexplained overwrite of a model result."
+    },
+    {
+      "shot_id": "beat 7 through beat 14",
+      "category": "solution_arrives_late",
+      "severity": 0.76,
+      "confidence": 0.95,
+      "evidence": "The main cut runs 106 seconds, with Agentic Office introduced at 52 seconds and its workspace first appearing at 55 seconds. After the manual-work thesis lands at 12 seconds, another deadline, a download, a comparison, sending, a correction, a receipt and a reaction precede the solution.",
+      "suggested_action": "Make the approximately 75-second version the primary film. Remove beat 7, shorten the repeated receipt/reaction sequence, and bring the explicit replay and workspace forward while preserving the manual paste, broken deck and missed-box consequence."
+    },
+    {
+      "shot_id": "beat 19 and beat 22",
+      "category": "fallback_weakens_payoff",
+      "severity": 0.72,
+      "confidence": 0.98,
+      "evidence": "Beat 19's fallback is 'cut this beat'; beat 22's fallback shows the title slide with 'Still your template.' Together these remove both the model's source result and the corrected slide that answers David's circled error. Beat 21 still supplies a proposed text-box change, and beat 23 supplies acceptance, so the fallback remains understandable but offers weaker outcome proof.",
+      "suggested_action": "Prioritize P1 and P2 for the primary cut. If both are unavailable, retain the full text-box change row immediately before Accept all and describe it as a proposed correction; do not use the title slide as the resolution of David's specific slide-2 complaint."
+    },
+    {
+      "shot_id": "beat 17 through beat 23",
+      "category": "approval_sequence_ambiguous",
+      "severity": 0.62,
+      "confidence": 0.86,
+      "evidence": "P3 inserts a single Excel Accept before the model result, memo diff and Changes-panel review, followed later by Accept all and '10 of 10 accepted.' In the fallback, the bar is not clicked, but beat 18 still shows her finger clicking. These alternatives do not clearly communicate the same approval sequence.",
+      "suggested_action": "Verify how a single Accept affects the later panel and count. Place the single Accept after the relevant review, and use the actual subsequent count; in the unclicked fallback, remove beat 18's click and let beat 23 provide the visible approval action."
+    },
+    {
+      "shot_id": "beat 1",
+      "category": "opening_information_overload",
+      "severity": 0.59,
+      "confidence": 0.95,
+      "evidence": "The three-second opening streams a heading and three instructions containing a cell address, two monetary values and a slide reference, while narration introduces the chat/files distinction. The task itself arrives only in beat 3.",
+      "suggested_action": "Open on 'Here's what to change' and one short instruction, then cut to '0 of 3 files changed.' Introduce the remaining instructions as pinned receipts in their corresponding manual-edit beats."
+    },
+    {
+      "shot_id": "75 s cut beat 10; 30 s cut 17–21 and 26–30",
+      "category": "short_cut_information_timing",
+      "severity": 0.58,
+      "confidence": 0.98,
+      "evidence": "The 75-second cut gives beat 10 four seconds despite its specified three-second title edit and 2.5-second sent confirmation. The 30-second cut gives the request plus inline bar four seconds, and compresses the six-second end card into four seconds.",
+      "suggested_action": "Retiming the shorts must preserve each essential message's 2.5-second hold. Remove the sent confirmation from the 75-second cut, show a shortened static request before the inline bar in the vertical cut, and display the product name, thesis and CTA together on its final four-second card."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "30 s cut 17–21",
+      "evidence": "The request and inline change bar share four seconds, leaving insufficient time for both essential messages to hold for 2.5 seconds."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Build the primary cut around a verified numerical source and an earlier replay, ending the demo on the same corrected slide that David flagged.",
+  "retell": "Maya needs to update a model, memo and deck for a board pack. The chatbot gives instructions and a replacement deck, but she carries the edits across herself and sends a slide containing an old number. She replays the task in Agentic Office, which proposes edits inside the same files and lets her accept them. Agentic Office promises that the AI drives while she approves, although I cannot explain where the €74.6m figure came from.",
+  "scroll_away_second": 25
+}

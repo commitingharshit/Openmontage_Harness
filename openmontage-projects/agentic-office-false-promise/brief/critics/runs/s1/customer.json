@@ -1,0 +1,69 @@
+{
+  "critic": "customer_psychology",
+  "stage": "script",
+  "score": 80,
+  "dimension_scores": {
+    "pain_specificity_salience": 88,
+    "target_relatability": 81,
+    "emotional_authenticity_progression": 78,
+    "product_pain_fit": 86,
+    "trust_transformation_credibility": 65,
+    "purchase_motivation_cta": 72
+  },
+  "recognition": 8.8,
+  "resonance": 7.8,
+  "persuasion": 6.5,
+  "issues": [
+    {
+      "shot_id": "beats 3, 5 and 19",
+      "category": "financial_credibility",
+      "severity": 0.78,
+      "confidence": 0.96,
+      "evidence": "The request lowers DACH Q4 to 8.5, but beat 5 shows FY26 moving from €71–73m to €74.6m, which Maya types over the Summary by hand. The script asks the team to clarify what these numbers mean, but that clarification is absent from the viewer-facing story.",
+      "suggested_action": "Verify the relationship between the input and forecast before locking these beats; put the confirmed explanation in David's message and show Maya correcting the actual stale reference or source rather than overwriting an unexplained model summary."
+    },
+    {
+      "shot_id": "beats 18–23",
+      "category": "review_trust_gap",
+      "severity": 0.7,
+      "confidence": 0.94,
+      "evidence": "Beat 18 shows her eyes moving and a nod; beat 21 shows three proposed changes; beat 23 ends with '10 of 10 accepted.' P1 supplies a visible model source, but its fallback deletes that beat. As Maya, I can see what changed more clearly than I can see why the changes are right.",
+      "suggested_action": "Use P1's real source inspection as the review action before acceptance. If P1 is unavailable, replace the face-only checking beat with available real source-to-diff inspection and avoid implying that the displayed change list itself establishes correctness."
+    },
+    {
+      "shot_id": "beats 10–13",
+      "category": "professional_identification",
+      "severity": 0.61,
+      "confidence": 0.9,
+      "evidence": "Maya follows 'slide 2 title → €74.6m,' sends the pack with a stale text box, and the film concludes 'It never mentioned this box' and 'You're not using the AI. You're its hands.' I recognise the missed reference, but I also know that checking the pack remains my responsibility.",
+      "suggested_action": "Replace the receipt label with 'One number. Another place to check.' and the narration with 'You still have to carry it through the pack,' keeping the partner's message and restrained reaction."
+    },
+    {
+      "shot_id": "beats 2, 14–16",
+      "category": "incumbent_comparison",
+      "severity": 0.53,
+      "confidence": 0.88,
+      "evidence": "The contrast begins with '0 of 3 files changed' in a generic chat and resolves with 'It works inside your files.' Because I already know AI tools that edit Office documents, that line alone does not establish why I need another workspace; the three-file Changes panel provides the stronger distinction later.",
+      "suggested_action": "Change beat 16's narration to 'One request across the model, memo and deck,' while retaining the real folder and request footage, so the reason to try this product is explicit before the review panel."
+    },
+    {
+      "shot_id": "beat 22",
+      "category": "fallback_resolution",
+      "severity": 0.43,
+      "confidence": 0.95,
+      "evidence": "P2 shows the exact text box that the partner flagged corrected in the original slide. Its fallback shows a title slide labelled 'Still your template.' Beat 21 still proves the proposed text-box change, but the fallback does not show the finished object that caused Maya's embarrassment.",
+      "suggested_action": "Prioritise P2 for the main cut. If it is unavailable, keep the real TextBox 23 diff adjacent to the template footage so the fallback retains both the numerical correction and template reassurance."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Make the reversal prove a financially coherent source-to-model-to-memo-to-deck update that Maya visibly checks before accepting.",
+  "purchase_objections": [
+    "Why does the forecast rise when the DACH input falls, and what establishes €74.6m as correct?",
+    "Does reviewing proposed changes help me find omitted references, or do I still need to check the whole pack?",
+    "Will it preserve my actual charts, formulas and template beyond this example?",
+    "Is the coordinated three-file workflow enough of an advantage over the Office AI tools I already use?",
+    "Can my firm approve it for portfolio data? The film leaves that unanswered without making an unsupported privacy promise."
+  ],
+  "would_try": "yes — I would request early access and test a sanitised pack because coordinated native-file edits with visible approval address my workflow, although this demo would not yet earn my trust for a live board submission."
+}

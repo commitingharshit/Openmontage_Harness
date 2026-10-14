@@ -1,0 +1,85 @@
+{
+ "critic": "customer",
+ "stage": "animatic",
+ "score": 68,
+ "dimension_scores": {
+  "pain_specificity": 82,
+  "relatability": 76,
+  "emotional_authenticity": 60,
+  "product_pain_fit": 70,
+  "trust_credibility": 55,
+  "purchase_motivation": 55
+ },
+ "recognition": 8,
+ "resonance": 6,
+ "persuasion": 5,
+ "purchase_objections": [
+  "The hero review clicks 'Accept all' (f_38); that is the same blind trust the film mocks, so 'you checked' rings hollow.",
+  "The deck proof is an added boardroom photo (f_36), an edit I never asked for, which contradicts 'leaves the rest alone'.",
+  "The Evidence panel cites a 'New lender deck' and covenant pack (f_47), not my DACH change, so I can't tell if the evidence is for this edit.",
+  "'Cloud AI may process document content' (f_50): as a lawyer or deal team I need to know where client data goes before anything else.",
+  "Formatting wrecked was pain #1, but I never see my firm's template survive a round-trip back to real PowerPoint/Word.",
+  "The chatbot villain regenerates a whole deck three times; I'd just edit slide 4 by hand, and Copilot already edits inside PowerPoint. The comparison feels like a straw man."
+ ],
+ "would_try": "maybe: the cross-file tracked-change list catching slide 4 is the first AI-office pitch that matches how I actually get burned, but I'd only try it on a non-client file until data handling is clear.",
+ "buy_decision": "TRY_FIRST: it flips to BUY if I see it on a real firm-template deck and model, with each change reviewed individually and the file opening intact in PowerPoint, plus a clear statement of what leaves my machine.",
+ "issues": [
+  {
+   "shot_id": "01:31-01:44",
+   "category": "trust_undermined",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "f_38: 'Accept all' clicked, '10 of 10 changes accepted', then the end card says 'This time, you checked.'",
+   "suggested_action": "Show her opening the Slide 4 diff and accepting it individually; keep Accept all off screen."
+  },
+  {
+   "shot_id": "01:26-01:31",
+   "category": "product_pain_fit",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "f_36 'ONE SLIDE ELEMENT' shows 'New element added' (a boardroom photo) instead of the number fix",
+   "suggested_action": "Show the real Slide 4 title diff €71–73m → €74.6m as the slide proof."
+  },
+  {
+   "shot_id": "01:55-02:03",
+   "category": "credibility",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "f_47 Evidence: 'New lender deck · Five slides including cover; finalized and validated.'",
+   "suggested_action": "Use evidence rows that cite FY26 Model Revenue!E6 and Board Memo §2 for this change."
+  },
+  {
+   "shot_id": "02:03-02:06",
+   "category": "data_trust",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "f_50 'Your files, stored on your device.' with small 'Cloud AI may process document content.'",
+   "suggested_action": "State plainly what is sent and whether a private or enterprise model option exists; legal and finance buyers will stop here."
+  },
+  {
+   "shot_id": "00:23-00:44",
+   "category": "melodrama",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Head-in-hands stock shot used twice (f_10, f_13), then head on desk; three escalating 'Done.' supers",
+   "suggested_action": "Keep one real reaction and cut the repeat; restraint reads as truer to a professional audience."
+  },
+  {
+   "shot_id": "00:24-00:37",
+   "category": "straw_man",
+   "severity": 0.3,
+   "confidence": 0.55,
+   "evidence": "'Regenerating all 12 slides… about 2 min left' to change one number",
+   "suggested_action": "Make the competitor failure the more realistic one: an in-app AI edits slide 2 but silently misses slide 4, which the review then catches."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "Do not imply unattended approval; a person accepts or rejects each change",
+   "shot_id": "01:31-01:44",
+   "evidence": "The hero review shows a single 'Accept all' click taking 0 of 10 to 10 of 10"
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Replace 'Accept all' in the hero review with her opening and accepting the Slide 4 €71–73m → €74.6m change individually, so 'This time, you checked' is something the viewer actually sees."
+}

@@ -1,0 +1,67 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "pain_specificity_salience": 88,
+    "target_relatability": 87,
+    "emotional_authenticity_progression": 81,
+    "product_pain_fit": 76,
+    "trust_transformation_credibility": 68,
+    "purchase_motivation_cta": 64
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7,
+  "purchase_objections": [
+    "I recognise the pack mismatch, but I want to see the corrected slide retain my template before trusting this with a board pack.",
+    "Does it show enough context to judge each change, or will I still need to hunt through the original files?",
+    "I already use AI inside Office; the cross-file review advantage needs clearer proof."
+  ],
+  "would_try": "maybe — I would test it on a copy of a pack, but the film does not yet show enough of the repaired files to earn my trust.",
+  "issues": [
+    {
+      "shot_id": "00:11.5–00:19",
+      "category": "feature_value_delayed",
+      "severity": 0.79,
+      "confidence": 0.98,
+      "evidence": "“Introducing Diffs” accompanies three spotlights on the request: “Take DACH Q4 down to 8.5,” “then make the memo and the deck match,” and “Show me the diffs.” The feature launch spends 7.5 seconds showing instructions before showing the changes.",
+      "suggested_action": "Condense the request into one readable beat, then use the recovered time to show the Excel 8.9 → 8.5 change, the memo replacement, and the deck change under “Every change, reviewable.”"
+    },
+    {
+      "shot_id": "00:19–00:26",
+      "category": "trust_payoff_incomplete",
+      "severity": 0.75,
+      "confidence": 0.97,
+      "evidence": "The circled “Slide 2 · TextBox 23” row identifies the exact stale box, and the film reaches “10 of 10 changes accepted,” but the supplied sequence never returns to David’s slide with that box corrected.",
+      "suggested_action": "After acceptance, show the same native slide with the flagged box reading €74.6m and its existing design intact; carry “It drives. You approve.” over that result."
+    },
+    {
+      "shot_id": "00:22–00:26",
+      "category": "approval_without_judgment",
+      "severity": 0.64,
+      "confidence": 0.95,
+      "evidence": "The visible action is “Accept all” followed by “All changes reviewed.” One memo diff is expanded, but the sequence does not demonstrate an individual review decision.",
+      "suggested_action": "Hold the expanded before-and-after replacement long enough to inspect it and explicitly caption “Accept or reject each change” before the captured Accept all action."
+    },
+    {
+      "shot_id": "00:00–00:08",
+      "category": "incumbent_objection",
+      "severity": 0.59,
+      "confidence": 0.94,
+      "evidence": "“The answer is in the chat,” “0 of 3 files changed,” and the generic replacement deck establish a believable chatbot problem, but my current alternatives also include assistants inside Office.",
+      "suggested_action": "Make the launch’s distinction explicit over the real per-file Changes groups: “One review across your model, memo and deck.”"
+    },
+    {
+      "shot_id": "00:05.5–00:08",
+      "category": "pain_recognition_requires_decoding",
+      "severity": 0.46,
+      "confidence": 0.96,
+      "evidence": "The comparison says “Not your deck.” Its small labels read “Hers · slide 2” and “The chat’s · slide 2”; the lost chart and template carry the actual reason I should care.",
+      "suggested_action": "Replace the repeated lower “Not your deck.” caption with “Your template. Your chart. Gone.” so the familiar reformatting burden registers immediately on a phone."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Replace two of the request spotlights with readable cross-file diffs, then close the proof on David’s original slide with the flagged box corrected to €74.6m."
+}

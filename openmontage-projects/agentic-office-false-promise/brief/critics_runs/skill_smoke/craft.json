@@ -1,0 +1,76 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 68,
+  "dimension_scores": {
+    "visual_quality_grade": 72,
+    "character_set_consistency": 62,
+    "readability_phone": 57,
+    "composition_camera": 76,
+    "audio_edit": 73
+  },
+  "issues": [
+    {
+      "shot_id": "00:34–01:05",
+      "category": "enlargement_blur",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "The enlarged request, Word changes and Changes panel have visibly soft lettering. At 00:58.5, secondary descriptions truncate to 'Midpoint shown → R...' and 'mid-market growth ...'.",
+      "suggested_action": "Recapture the real app with larger document zoom and a wider Changes panel, then use shallower crops that retain crisp, complete before-and-after values."
+    },
+    {
+      "shot_id": "00:12.2 → 00:29.4 → 00:49.9",
+      "category": "character_continuity",
+      "severity": 0.78,
+      "confidence": 0.94,
+      "evidence": "Maya at 00:12.2 has a broader face, nose and fuller lips than Maya at 00:29.4 and 00:49.9. The navy blazer and tied-back hair match, but her facial identity changes.",
+      "suggested_action": "Replace the first reaction with a take matching the later Maya, or remove that insert and extend the adjacent screen beat."
+    },
+    {
+      "shot_id": "00:09.2–00:11.2",
+      "category": "message_hold_duration",
+      "severity": 0.75,
+      "confidence": 0.98,
+      "evidence": "The edit schedules David's second message 2.5 seconds into a 4.5-second shot, leaving only two seconds before the cut.",
+      "suggested_action": "Extend the shot so the second message holds fully settled for at least 2.5 seconds, excluding its entrance animation."
+    },
+    {
+      "shot_id": "00:16.7–00:22.2; 01:16.2–01:22",
+      "category": "phone_readability",
+      "severity": 0.71,
+      "confidence": 0.99,
+      "evidence": "The stale memo table is tiny at 00:18.0, and the comparison slide's bullets and chart labels are small at 00:21.0. Source typography includes 26–38 px for these details; the ending uses 38 px explanatory copy, a 40 px CTA and a 32 px footer.",
+      "suggested_action": "Enlarge essential text to at least 42 px at delivery resolution; isolate the stale memo value and show the comparison slides sequentially at larger scale."
+    },
+    {
+      "shot_id": "00:04.5; 00:12.2",
+      "category": "contrast_grade",
+      "severity": 0.49,
+      "confidence": 0.94,
+      "evidence": "The chat answer at 00:04.5 is heavily dimmed behind the headline, and Maya's first reaction is substantially darker than the later blue-lit close-up.",
+      "suggested_action": "Increase contrast on the chat's essential instructions and lift the first reaction's facial midtones to match the later night-office shots."
+    },
+    {
+      "shot_id": "00:48.7–00:51.2; 01:13.2–01:16.2",
+      "category": "audio_mastering_joins",
+      "severity": 0.46,
+      "confidence": 0.79,
+      "evidence": "The rendered mix measures approximately −14 LUFS integrated with a 0.0 dBFS true peak. The timeline inserts separate music excerpts beneath the reaction and board-meeting shots without explicit crossfades.",
+      "suggested_action": "Limit the final mix to a true-peak ceiling of −1 dBTP and verify these music joins in playback; align their musical position and crossfade any audible discontinuities."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:09.2–00:11.2",
+      "evidence": "David's second message has only two seconds before the cut, including its entrance."
+    },
+    {
+      "rule": "Essential text must be at least 42 px and readable on a phone.",
+      "shot_id": "00:18–00:21; 01:19",
+      "evidence": "The memo table, comparison bullets, ending explanation, CTA and footer use typography below 42 px at 1920×1080 delivery."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Recapture the product demo at larger native UI scale so every highlighted change stays crisp, complete and readable on a phone."
+}

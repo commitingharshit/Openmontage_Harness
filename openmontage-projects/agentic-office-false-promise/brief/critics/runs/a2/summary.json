@@ -1,0 +1,19 @@
+{
+ "round": "a2",
+ "C": 82,
+ "S": 87.15,
+ "P": 86.35,
+ "Q": 85.5,
+ "constraint_failures": [
+  {
+   "rule": "Essential text must be phone-readable; SCRIPT_v10 specifies at least 42 px at 1080p.",
+   "shot_id": "00:47",
+   "evidence": "The tracked-change amounts and assumption text remain below the specified visual size in the full-document view."
+  },
+  {
+   "rule": "Show the workflow with messages and essential values large enough to read on a phone.",
+   "shot_id": "00:30.5",
+   "evidence": "The stale \u20ac71\u201373m value inside the circled slide text box is substantially smaller than the surrounding message."
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+   0.1-   3.0 Hello, Peter. What's happening?
+   3.0-   6.0 Uh, we have sort of a problem here.
+   6.0-  11.1 Yeah, you apparently didn't put one of the new cover sheets on your TPS reports.
+  11.1-  15.1 Oh, yeah. I'm sorry about that. I forgot.
+  15.1-  21.1 Mmm, yeah. You see, we're putting the cover sheets on all TPS reports now before they go out.
+  21.1-  24.1 Did you see the memo about this?
+  24.1-  29.1 Yeah. Yeah, yeah, I have the memo right here. I just, uh, forgot.
+  29.1-  31.1 What's happening?
+  31.1-  33.0 We need to talk about your TPS reports.
+  33.0-  37.0 Yeah, the cover sheet, I know. I know. Uh, Bill talked to me about it.
+  37.0-  40.0 Yeah. Did you get that memo?
+  40.0-  45.0 Yeah, I got the memo, and I understand the policy, and the problem is just that I forgot the one time,
+  45.0-  49.0 and I've already taken care of it, so it's not even really a problem anymore.
+  49.0-  56.0 Ah, yeah. It's just we're putting new cover sheets on all the TPS reports before they go out now,
+  56.0-  61.0 so if you could go ahead and try to remember to do that from now on, that'd be great.
+  61.0-  66.2 All right. Peter Gibbons.
+  66.2-  72.1 Yes, I have the memo.
+  72.1-  76.1 Hey, and speaking of problems, what's this I hear about you having problems with your TPS reports?
+  76.1-  79.1 Yeah. Didn't you get that memo?
+  79.1-  86.1 Uh, Peter, would you be a good sport and indulge us and just tell us a little more?
+  86.1-  90.1 Oh, yeah. Let me tell you something about TPS reports.
+  90.1-  98.6 And I'm just not sure that he's the caliber person that we would want for upper management.
+  98.6- 103.6 He's also been having some problems with his TPS reports.
+ 103.6- 107.6 Yeah, Bill, let me ask you a real quick question here.
+ 107.6- 112.6 How much time would you say you spend each week dealing with these TPS reports?
+ 112.6- 128.1 Yeah. Okay.
+ 128.1- 132.1 So, Peter, what's happening?
+ 132.1- 139.4 Now, are you going to go ahead and have those TPS reports for us this afternoon?
+ 139.4- 140.4 No.

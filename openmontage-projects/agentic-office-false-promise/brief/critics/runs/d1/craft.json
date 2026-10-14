@@ -1,0 +1,76 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 80,
+    "subject_character_consistency": 83,
+    "motion_temporal_stability": 82,
+    "composition_camera_readability": 72,
+    "audio_editing": 92
+  },
+  "issues": [
+    {
+      "shot_id": "00:45–00:48.5",
+      "category": "product_footage_readability",
+      "severity": 0.8,
+      "confidence": 0.99,
+      "evidence": "At 47.0 s, the memo is enlarged until sentences and the table extend beyond the right edge; the tracked deletion and replacement are soft and crowded together. This is the frame captioned 'A diff, in her own memo.'",
+      "suggested_action": "Use a wider crop that contains the complete revised paragraph, with an editorial callout isolating €71–73m → €74.6m; use a higher-resolution real capture if available."
+    },
+    {
+      "shot_id": "00:51.5–01:04.5",
+      "category": "source_resolution",
+      "severity": 0.7,
+      "confidence": 0.99,
+      "evidence": "The Changes panel at 53.0, 56.0, 59.0 and 63.0 s has visibly blurred letter edges after extreme enlargement, unlike the crisp graphics in the first half. Several row descriptions truncate to 'R...' or 'mid-market growth ...'.",
+      "suggested_action": "Reduce the enlargement and add crisp captions for the exact row being reviewed, while retaining the unaltered real panel; replace with a higher-resolution capture where available."
+    },
+    {
+      "shot_id": "00:22.5–00:25.5",
+      "category": "mobile_readability",
+      "severity": 0.64,
+      "confidence": 0.98,
+      "evidence": "At 24.0 s, the side-by-side slides make 'FY26 revenue: €74.6m', 'DACH Q4 revenue: €8.5m' and the original outlook box substantially smaller than the surrounding captions.",
+      "suggested_action": "Enlarge the two relevant content areas and remove surplus slide margins so the original chart and replacement bullets remain readable at phone width."
+    },
+    {
+      "shot_id": "00:45–00:46",
+      "category": "speed_label_visibility",
+      "severity": 0.61,
+      "confidence": 0.96,
+      "evidence": "The timeline uses moving ui3 footage from 24.9 s with a tight memo crop; that crop excludes the speed badge and contains no added 'sped up' label. The later deck shot does display 'Real app · sped up'.",
+      "suggested_action": "Add a readable 'Real app · sped up' label throughout this one-second moving memo segment."
+    },
+    {
+      "shot_id": "01:10.5–01:16",
+      "category": "end_card_typography",
+      "severity": 0.48,
+      "confidence": 0.99,
+      "evidence": "At 73.0 s, 'Diffs' is clear, but the two-line feature description is comparatively small. The rendered layout specifies 38 px at 1080p, below the script's 42 px minimum for message text.",
+      "suggested_action": "Increase the description to at least 42 px, preferably 48 px, and adjust its width and spacing to preserve the CTA and caution footer."
+    },
+    {
+      "shot_id": "00:12.5 / 01:09",
+      "category": "character_set_continuity",
+      "severity": 0.37,
+      "confidence": 0.77,
+      "evidence": "The opening reaction has a darker, tighter face view and a broad brass lampshade; the closing reaction has a brighter, wider view and a different-looking lamp silhouette. Wardrobe and hair remain broadly consistent.",
+      "suggested_action": "Verify the two clips in motion side by side, then match exposure and color and crop the lamp out of the opening reaction if its design mismatch persists."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Keep the speed badge visible on sped-up product motion, or add a 'sped up' label.",
+      "shot_id": "00:45–00:46",
+      "evidence": "The moving memo segment crops out the source badge and adds no replacement label."
+    },
+    {
+      "rule": "Messages must be phone-readable; SCRIPT_v10 specifies at least 42 px at 1080p.",
+      "shot_id": "01:10.5–01:16",
+      "evidence": "The end-card feature description is rendered at 38 px."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the real product proof with less enlargement, complete readable diff text, and crisp editorial callouts so its visual quality matches the opening graphics."
+}

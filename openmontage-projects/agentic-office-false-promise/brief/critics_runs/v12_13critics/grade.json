@@ -1,0 +1,111 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 64,
+  "dimension_scores": {
+    "look_family_unity": 73,
+    "skin_tones": 82,
+    "contrast_curve_blacks": 65,
+    "shot_to_shot_match": 43,
+    "finish": 58
+  },
+  "issues": [
+    {
+      "shot_id": "00:38.7–00:45.7",
+      "category": "ui_exposure_jump",
+      "severity": 0.9,
+      "confidence": 0.99,
+      "evidence": "The dark request screen cuts to the nearly full-white 'Q3 performance and revised FY26 outlook' page. Measured luma rises from 28.2 to 229.7, then falls to 110.8 and 62.3 across the following Excel and PowerPoint shots. Overall luma spread SD is 64.8.",
+      "suggested_action": "Compress document whites to approximately 80–85 IRE and place the recordings within a consistent dark surround; match the apparent brightness of the Word, Excel and PowerPoint proof shots while preserving text contrast."
+    },
+    {
+      "shot_id": "01:03.2–01:10.2",
+      "category": "ui_to_film_match",
+      "severity": 0.87,
+      "confidence": 0.99,
+      "evidence": "'All changes reviewed' has measured luma 44.5; the accepted memo jumps to 234.5; Maya's night-office shot returns to 38.8. Saturation changes from 32.4 to 3.3 to 179.1. The white memo produces a conspicuous flash between dark images.",
+      "suggested_action": "Apply the same restrained paper-white treatment and dark surround to the accepted memo as to the earlier document proof, then match its exit brightness to Maya's office shot."
+    },
+    {
+      "shot_id": "00:48.7",
+      "category": "night_office_exposure_match",
+      "severity": 0.72,
+      "confidence": 0.95,
+      "evidence": "Maya's face and navy jacket are substantially darker here than in the other night-office frames. Measured luma is 15.4 and contrast 23.3, versus luma 41.0/contrast 48.3 at 00:11.2 and luma 38.8/contrast 38.1 at 01:10.2.",
+      "suggested_action": "Raise face midtones selectively by roughly 0.5–0.8 stop and recover jacket separation with a gentle toe adjustment; retain the dark window background and match skin brightness against the 00:11.2 office shot."
+    },
+    {
+      "shot_id": "00:13.7–00:19.7",
+      "category": "problem_world_match",
+      "severity": 0.68,
+      "confidence": 0.98,
+      "evidence": "The dark spreadsheet has luma 21.4/contrast 23.1, while the pasted memo has luma 137.9/contrast 117.2. The next slide comparison falls to luma 60.9. These changes occur within the same manual-work sequence.",
+      "suggested_action": "Bring the memo paper into the same controlled highlight range as the other screen inserts and use a consistent surround so the sequence changes content without repeatedly changing the viewer's exposure adaptation."
+    },
+    {
+      "shot_id": "00:11.2–01:10.2",
+      "category": "finish_consistency",
+      "severity": 0.56,
+      "confidence": 0.88,
+      "evidence": "The office shots have soft, photographic texture, while the synthetic screen inserts have crisp edges and clean gradients. Measured sharpness is 6.3 at 00:11.2 and 5.2 at 01:10.2, versus 405.4 for the spreadsheet insert. A common grain or highlight finish is not visibly established.",
+      "suggested_action": "Match source noise first, then apply a subtle common monochromatic grain pass at final resolution; keep grain weaker over UI text and limit halation to photographic practical lights."
+    },
+    {
+      "shot_id": "00:00–01:22",
+      "category": "black_floor_and_framing",
+      "severity": 0.42,
+      "confidence": 0.72,
+      "evidence": "The 'Introducing Diffs in Agentic Office' card uses pure black, while opening and ending graphics use blue-black backgrounds. Letterbox detection reports only 9.5% of shots, including 196 rows at 00:00 and 360 at 00:30.7; those readings may include intentionally empty graphic areas.",
+      "suggested_action": "Verify actual frame edges before changing framing; standardize the graphic black floor near RGB 8/11/16 and use one full-frame or letterbox policy throughout, excluding intentional empty space from letterbox checks."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "UI frames left raw and white beside graded film",
+      "shot_id": "00:38.7 and 01:07.2",
+      "evidence": "Near-full-frame white Word pages measure luma 229.7 and 234.5, surrounded by dark blue UI and night-office imagery; the accepted memo cuts directly to an office shot measuring luma 38.8."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Unify every screen insert with controlled paper whites and a consistent dark surround, then match the night-office face exposure to remove the largest brightness jumps.",
+  "grade_recipe": {
+    "night_office": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Anchor to 00:11.2: black floor 2–3 IRE, gentle S-curve with retained jacket detail, face midtones approximately 40–55 IRE, soft highlight shoulder above 80 IRE; cool shadows toward blue-cyan, protect warm skin with a hue qualifier, reduce overall saturation about 8%, and lift 00:48.7 face exposure locally by 0.5–0.8 stop."
+    },
+    "screens_and_graphics": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Use RGB 8/11/16 surrounds; remap paper white to 80–85 IRE with a soft shoulder, retain near-neutral document whites and dark text, preserve semantic red/green/blue UI colours, and avoid a global teal tint. Standardize graphic whites around 90 IRE. Apply restrained grain beneath text overlays."
+    },
+    "morning_boardroom": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Keep the deliberate daylight change: neutral-warm white balance, black floor 3 IRE, gentle midtone contrast, highlights capped near 92 IRE; reduce yellow-green background saturation about 10% while protecting skin, and use the same subtle grain scale as the office footage."
+    },
+    "common_finish": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Normalize source noise before adding approximately 0.5–0.8% RMS monochromatic grain at delivery resolution; keep vignette below 0.15 stop and consistent across photographic shots, with no vignette obscuring UI. Verify scopes after grading rather than forcing equal whole-frame luma across different compositions."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:36.2",
+      "to": "00:38.7",
+      "issue": "Dark request screen to white memo: luma 28.2 → 229.7, a rise of 201.5."
+    },
+    {
+      "from": "01:03.2",
+      "to": "01:07.2",
+      "issue": "Dark review panel to accepted memo: luma 44.5 → 234.5, a rise of 190.0."
+    },
+    {
+      "from": "01:07.2",
+      "to": "01:10.2",
+      "issue": "White memo to night office: luma 234.5 → 38.8 and saturation 3.3 → 179.1."
+    },
+    {
+      "from": "00:13.7",
+      "to": "00:16.7",
+      "issue": "Spreadsheet to pasted memo: luma 21.4 → 137.9 and contrast 23.1 → 117.2."
+    }
+  ]
+}

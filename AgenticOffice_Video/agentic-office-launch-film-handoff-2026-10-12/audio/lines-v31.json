@@ -1,0 +1,10 @@
+[
+ {"id": "z1", "text": "You ask a chatbot to update the board memo."},
+ {"id": "z5f", "text": "Please update the model and the board deck to match, before the meeting.", "voice": "bm_george", "speed": 1.2},
+ {"id": "k3b", "text": "It says it's done.", "speed": 0.95},
+ {"id": "n2b", "text": "Then, one number changes.", "speed": 0.95},
+ {"id": "a3b", "text": "It finds where that number lives: the model, the memo, the deck."},
+ {"id": "a4b", "text": "And drafts each fix in place, for you to review."},
+ {"id": "a7b", "text": "Done. And this time, you've seen every change.", "speed": 0.97},
+ {"id": "a8b", "text": "Agentic Office.", "speed": 0.82}
+]

@@ -1,0 +1,28 @@
+hook 73 · story 78 · cinematography 68 · grade 62 · edit 81 · realfilm 60 · sound_dialogue 64 · sound_music 75 · sound_sfx 61 · sound_ambience 80 · sound_mix 67 · customer 80 · claims 61
+→ Q 73.8 · Visual 67.8 · Sound 69.4 · real_film_index 50.88 · constraint failures 24
+hook_2s 5 · scroll-away 30s · R/R/P 9/7/7
+BUY: TRY_FIRST — a successful trial on one of our existing packs, preserving formulas and templates while surfacing the relevant cross-file changes for review, would flip me to BUY.
+GATE: REVISE
+  CF[hook] The first frame must contain a legible image or text of the  | 00:00 | The supplied timeline describes only a phone buzzing on a desk, with no concrete pain or desire spec
+  CF[story] Do NOT claim time savings. | 01:12.6–01:16 | Successful sending at 8:58 AM is staged against the opening unsuccessful workflow at 8:59 AM, implyi
+  CF[grade] Skin must not turn green or grey. | 00:22.97–00:29.60 | The protagonist reaction frames #10 and #13 show grey-blue facial midtones with little warm brown se
+  CF[edit] Every message must remain visible for at least 2.5 s. | 00:28.3–00:29.6 | The partner’s revenue correction is interrupted by the reaction cut at 29.6; its enclosing screen sh
+  CF[edit] Every message must remain visible for at least 2.5 s. | 00:41.6–00:44 | “Are these the final files? The client is waiting.” occupies the 2.4 s email shot before the protago
+  CF[realfilm] real_film_index must be at least 60 | whole | The 34 supplied candidate frames average 5.0882/10, producing a real_film_index of 50.88.
+  CF[realfilm] No UI frame that looks like a screenshot pasted on black | 00:49.6–01:12.6 | f_22 shows a screenshot fan on a dark field; f_25 shows a floating spreadsheet rectangle; f_28 shows
+  CF[sound_dialogue] Brand or product name misheard | 01:22.6 | “Agentic Office” transcribes as “office”; match 0.60.
+  CF[sound_dialogue] Any line with match < 0.85 | 00:11 | “It says: done.” has measured match 0.73.
+  CF[sound_dialogue] Any line with match < 0.85 | 00:28.35 | “Then one number changes.” has measured match 0.78.
+  [hook] Keep the deadline mismatch and rewind, but show a brief real, reviewable three-file change within the first 25 seconds so the opening promises a credible payoff.
+  [story] Center the setup and demonstration on one forecast correction across the model, memo and deck, using the missed Slide 4 value as the explicit failure that human-reviewed diffs resolve.
+  [cinematography] Unify the white illustration UIs and dark live-action inserts through consistent screen-motivated exposure, retaining readable hands, faces and interface focal points.
+  [grade] Match screen whites and stock midtones across the night-office sequence to remove the repeated dark-to-white exposure shocks while preserving readable interfaces and natural skin.
+  [edit] Remove repeated frustration inserts and shorten the logo reveal to give the partner correction, stopped Send and reviewed-file confirmation uninterrupted reading time.
+  [realfilm] Rebuild the screen sequences as one coherent cinematic screen environment, preserving the real product evidence while replacing floating rectangles, heavy vignettes and inconsistent annotations.
+  [sound_dialogue] Restore the complete closing brand read, then shorten the rushed narration and verify isolated line boundaries so every line clears the intelligibility threshold.
+  [sound_music] Re-edit the existing score's attacks to land on the overload cuts and the 49.6 product reveal while preserving the measured quiet trough before the reveal.
+  [sound_sfx] Re-spot the existing transition effects to the rendered boundaries and fill visible hand-action foley gaps while preserving the deliberate quiet Send hesitation.
+  [sound_ambience] Restore the office's acoustic world around the final Send sequence and transition it into restrained morning city ambience at the sunrise.
+  [sound_mix] Rebuild the master from unclipped stems with VO-led ducking, then deliver −14 LUFS integrated with a verified ceiling of −1.5 dBTP.
+  [customer] Make the real demonstration a readable, continuous review of one assumption change across the model, memo and deck, so I can judge the workflow I would actually pay for.
+  [claims] Fail the release gate until the product narration and ending describe the demonstrated 10 reviewable changes without exhaustive discovery, speed or correctness guarantees.

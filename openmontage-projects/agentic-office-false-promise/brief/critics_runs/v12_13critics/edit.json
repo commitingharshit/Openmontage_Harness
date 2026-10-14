@@ -1,0 +1,128 @@
+{
+  "critic": "edit_rhythm",
+  "stage": "animatic",
+  "score": 62,
+  "dimension_scores": {
+    "rhythm_wave": 48,
+    "cut_motivation": 72,
+    "connectives": 60,
+    "economy": 60,
+    "transitions_quality": 80
+  },
+  "issues": [
+    {
+      "shot_id": "00:13.7–00:28.2",
+      "category": "missing_rhythmic_burst",
+      "severity": 0.9,
+      "confidence": 1,
+      "evidence": "The manual workflow advances through 'Step 1 of 3, by hand', pasted memo text, 'Not your deck', and the stale slide box. Measured shortest shot is 2.5 s; 0% of shots are under 1 s despite the overnight deadline.",
+      "suggested_action": "Keep readable document holds, then insert a three-cut burst of already-established actions—cell entry, paste, slide-title edit—at 0.6–0.8 s each before holding on David's complaint."
+    },
+    {
+      "shot_id": "00:54.2–01:03.2",
+      "category": "uniform_demo_pacing",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "The measured nine-second shot stays within the Changes list: 'Slide 2 · TextBox 23', 'Chart data, slide 4', then the accept/reject controls. Changing highlights provide emphasis but little rhythmic release.",
+      "suggested_action": "Break the list passage into a readable flagged-box hold, a short chart-detail insert, and an approval-control hold; synchronize the last move with 'Accept or reject each one.'"
+    },
+    {
+      "shot_id": "01:03.2–01:10.2",
+      "category": "missing_visual_payoff_connection",
+      "severity": 0.79,
+      "confidence": 1,
+      "evidence": "'10 of 10 changes accepted' leads to 'Memo and table: €74.6m.' The earlier red-circled slide box receives no matching corrected-slide payoff in the supplied frames; its recording is pending.",
+      "suggested_action": "After acceptance, match-cut to a real recording of the same slide-2 box now showing €74.6m, using the earlier crop and position, then show the corrected memo."
+    },
+    {
+      "shot_id": "00:33.7–00:38.7",
+      "category": "repeated_framing",
+      "severity": 0.68,
+      "confidence": 0.96,
+      "evidence": "The 00:34.5 and 00:37.5 frames repeat the same tight request view, moving a yellow rectangle between clauses while 'One request. Her real model, memo and deck.' remains below.",
+      "suggested_action": "Use one continuous five-second request hold with the highlight traveling between clauses, then pull back to establish the workspace before cutting into the files."
+    },
+    {
+      "shot_id": "00:48.7–00:51.2",
+      "category": "demo_interruption",
+      "severity": 0.62,
+      "confidence": 0.95,
+      "evidence": "After 'POWERPOINT · still her own deck', the film cuts to Maya looking down at her laptop for 2.5 s, then returns to 'Changes ready for review'.",
+      "suggested_action": "Move this reaction after approval or shorten it to a brief eyeline insert with the product audio continuing across it."
+    },
+    {
+      "shot_id": "01:10.2–01:16.2",
+      "category": "extended_resolution",
+      "severity": 0.57,
+      "confidence": 0.98,
+      "evidence": "A three-second laptop-closing shot is followed by a three-second boardroom shot labeled '9:02 AM · Board meeting', after the corrected memo has already resolved the task.",
+      "suggested_action": "Trim the laptop close to its decisive action, retain at least 2.5 s for the boardroom label, and bridge the night-to-morning cut with the laptop-close sound."
+    },
+    {
+      "shot_id": "00:25.0–00:30.7",
+      "category": "punch_hold_length",
+      "severity": 0.48,
+      "confidence": 0.75,
+      "evidence": "The music stops around 25 s, measured silence starts at 25.742531 s, David's 'Which is it?' appears at 26.5 s, and a separate 2.5-second face reaction precedes the product title.",
+      "suggested_action": "Verify the full audio tail, preserve at least 2.5 s for David's message, and trim the following reaction to the moment her expression changes."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A film over 45 s that claims urgency must include a shot under 1 s.",
+      "shot_id": "00:00–01:22",
+      "evidence": "Duration is 82 s, shortest shot is 2.5 s, and shots under 1 s are 0%; the deadline message says 'fix the memo and deck by 9.'"
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Create a brief action burst within the manual workflow, then give the corrected slide box a matched, readable payoff after approval.",
+  "recut_plan": [
+    {
+      "timestamp": "00:13.7–00:24.7",
+      "edit": "Retain the readable workflow holds, trim their tails, and add three 0.6–0.8 s action inserts using the already-established cell, paste, and slide-title operations."
+    },
+    {
+      "timestamp": "00:24.7–00:30.7",
+      "edit": "Land the buzz and music stop on David's complaint; hold the complete message for at least 2.5 s, then shorten Maya's reaction to about 1 s."
+    },
+    {
+      "timestamp": "00:33.7–00:38.7",
+      "edit": "Merge the two request crops into one continuous readable hold with a traveling highlight and a workspace pullback."
+    },
+    {
+      "timestamp": "00:38.7–00:48.7",
+      "edit": "Carry the confident cue continuously across Word, Excel, and PowerPoint; cut each file change on its visible UI action rather than an arbitrary elapsed duration."
+    },
+    {
+      "timestamp": "00:48.7–00:51.2",
+      "edit": "Remove the standalone reaction here and proceed directly from the deck to the Changes panel."
+    },
+    {
+      "timestamp": "00:54.2–01:03.2",
+      "edit": "Replace the nine-second list passage with a 3 s flagged-box hold, a 0.8 s established chart-detail insert, and a 3 s approval-control hold aligned to the narration."
+    },
+    {
+      "timestamp": "01:03.2–01:10.2",
+      "edit": "After the accepted counter, insert the pending real corrected-slide recording in the same framing as David's circled box, then hold the corrected memo."
+    },
+    {
+      "timestamp": "01:10.2–01:22",
+      "edit": "Trim the laptop close to about 1.2 s, bridge its sound into a 2.5 s morning boardroom hold, and preserve the final CTA for about 5 s."
+    }
+  ],
+  "target_shot_stats": {
+    "duration_s": 75,
+    "shots": 27,
+    "asl_s": 2.78,
+    "median_shot_s": 2.8,
+    "shortest_s": 0.6,
+    "longest_s": 5.5,
+    "pct_shots_under_1s": 15,
+    "pct_shots_over_4s": 11,
+    "minimum_message_hold_s": 2.5
+  },
+  "evaluation_limits": {
+    "reference_techniques": "The requested ../references/TECHNIQUES.md was not found; reference comparisons use the supplied measured statistics.",
+    "transition_observation": "Frames and the supplied audio timeline support structural judgments; exact motion and sound tails require playback verification."
+  }
+}

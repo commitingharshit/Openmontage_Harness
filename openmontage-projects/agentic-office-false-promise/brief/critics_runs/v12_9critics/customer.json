@@ -1,0 +1,75 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 83,
+  "dimension_scores": {
+    "pain_specificity": 93,
+    "relatability": 89,
+    "emotional_authenticity": 85,
+    "product_pain_fit": 84,
+    "trust_credibility": 69,
+    "purchase_motivation": 70
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7,
+  "issues": [
+    {
+      "shot_id": "01:04–01:11",
+      "category": "missing_outcome_proof",
+      "severity": 0.86,
+      "confidence": 1,
+      "evidence": "“10 of 10 changes accepted” is followed by the corrected memo and table. The slide 2 box that triggered “Partner flagged this” is never shown corrected in the supplied frames.",
+      "suggested_action": "Add the pending real post-acceptance slide 2 recording, holding on the same flagged box now reading €74.6m with the original slide design preserved."
+    },
+    {
+      "shot_id": "00:55–01:04",
+      "category": "review_burden_unresolved",
+      "severity": 0.64,
+      "confidence": 0.96,
+      "evidence": "The panel lists “Slide 2 · TextBox 23” and “Chart data, slide 4”; accept/reject controls are highlighted, then every change is accepted. I see permission controls, but little evidence that evaluating a change is easier than checking the pack myself.",
+      "suggested_action": "Show one real selection opening the flagged object in context, its before/after values, and an individual acceptance before the remaining batch is accepted."
+    },
+    {
+      "shot_id": "00:34–00:58",
+      "category": "financial_provenance_gap",
+      "severity": 0.59,
+      "confidence": 0.95,
+      "evidence": "The request says “Take DACH Q4 down to 8.5,” while the memo outlook increases from €71–73m to €74.6m. The CFO's earlier message supplies the result, but the product sequence does not show how the model establishes it.",
+      "suggested_action": "Insert real model footage showing Revenue!E6 changing from 8.9 to 8.5 alongside the recalculated FY26 summary of €74.6m before showing dependent memo and deck changes."
+    },
+    {
+      "shot_id": "00:21",
+      "category": "competitor_comparison_credibility",
+      "severity": 0.43,
+      "confidence": 0.9,
+      "evidence": "“The chat's · slide 2” is a default white slide with “Click to add title,” bullets, and “Chart data (see model).” As someone already using AI and Office tools, this looks like an especially weak output chosen for comparison.",
+      "suggested_action": "Show the generic slide arriving as a separate download that Maya must reconcile with her existing deck; make the extra assembly work the comparison's central evidence."
+    },
+    {
+      "shot_id": "01:19",
+      "category": "trial_conversion_friction",
+      "severity": 0.38,
+      "confidence": 0.98,
+      "evidence": "The ending says “Request early access,” but the supplied frame gives no destination or concrete next step.",
+      "suggested_action": "Add a readable early-access URL beneath the existing CTA and connect it to a trial using the customer's own model, memo, and deck."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "One task, one number, start to finish",
+      "shot_id": "01:04–01:11",
+      "evidence": "The accepted memo is visible, but the corrected slide 2 box responsible for the escalation remains absent; its post-acceptance recording is explicitly pending."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the demo with real footage of the exact slide 2 box David flagged now reading €74.6m in the preserved deck.",
+  "purchase_objections": [
+    "Does it find every dependent reference, or only the ten changes it proposes?",
+    "Can I verify the model calculation and chart values without repeating the whole tie-out?",
+    "Will it preserve our actual templates, formulas, and existing links?",
+    "Does it fit our approved data environment and justify another tool alongside our current Office workflow?"
+  ],
+  "would_try": "yes — the late assumption change, stale memo table, and overlooked deck box are recognizably my work; reviewing changes inside my existing files merits a trial.",
+  "buy_decision": "TRY_FIRST — a successful trial on my own recurring pack, with independently verified dependent values and preserved formatting, would flip me to BUY."
+}

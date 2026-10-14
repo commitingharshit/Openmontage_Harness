@@ -1,0 +1,76 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "pain_specificity": 92,
+    "relatability": 86,
+    "emotional_authenticity": 65,
+    "product_pain_fit": 87,
+    "trust_credibility": 69,
+    "purchase_motivation": 62
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7,
+  "issues": [
+    {
+      "shot_id": "01:00–01:12",
+      "category": "review_is_not_completeness",
+      "severity": 0.78,
+      "confidence": 0.96,
+      "evidence": "The real Changes panel shows accepted edits, including 'Slide 4 title €71–73m → €74.6m'; the closing promise is 'This time, you checked.' I can see what was proposed, but cannot establish whether another occurrence was missed.",
+      "suggested_action": "Hold the captured three-file change summary long enough to inspect its scope, and describe the result as reviewing all 10 proposed changes rather than implying the entire pack has been verified."
+    },
+    {
+      "shot_id": "00:55–01:04",
+      "category": "financial_causality_unclear",
+      "severity": 0.7,
+      "confidence": 0.95,
+      "evidence": "The prompt takes DACH Q4 'down to 8.5', the cell changes '8.9 → 8.5', and the memo changes '€71–73m → €74.6m'. As a finance user, I need to understand why lowering an assumption accompanies a higher reported outlook.",
+      "suggested_action": "Use the existing real Excel view to show the resulting FY26 total of 74.6 alongside the changed DACH cell, then show that total replacing the stale memo and deck range."
+    },
+    {
+      "shot_id": "00:23–00:46",
+      "category": "overstated_distress",
+      "severity": 0.6,
+      "confidence": 0.9,
+      "evidence": "Frames 10 and 13 repeat the head-in-hands reaction; notifications pile up, and the supplied audio timeline adds escalating heartbeats and an echoed third Done chime. The VO says, 'You don't even know what's wrong anymore.'",
+      "suggested_action": "Remove one repeated reaction and reduce the echoed chime and heartbeat escalation; retain the stopped Send cursor as the main emotional payoff."
+    },
+    {
+      "shot_id": "00:12–00:17",
+      "category": "formatting_promise_unproven",
+      "severity": 0.55,
+      "confidence": 0.91,
+      "evidence": "The VO identifies 'the formatting's wrecked' as an early failure, but frame 6 shows a fairly orderly memorandum. The later real demo concentrates on numerical and textual diffs.",
+      "suggested_action": "Make the opening failure a clearly visible stale table value or one concrete formatting defect, and prioritize the cross-file inconsistency that the real product footage actually resolves."
+    },
+    {
+      "shot_id": "01:19–01:25",
+      "category": "trial_value_unspecified",
+      "severity": 0.43,
+      "confidence": 0.94,
+      "evidence": "The final card says 'Request early access' without telling me what I can evaluate before committing my team's reporting workflow.",
+      "suggested_action": "Add a short invitation to evaluate a model, memo and deck together using sample files, if that is an available early-access experience."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:28.4–00:30.8",
+      "evidence": "The supplied timeline gives 'Revenue is now €74.6m, not €71–73m. Fix slide 2.' a 2.4-second hold."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Make the real demo visibly connect the DACH edit to the resulting €74.6m total and the scoped review of 10 proposed changes across three files.",
+  "purchase_objections": [
+    "Can it find the relevant occurrences in my actual pack, including charts and tables, rather than only show the edits it happened to propose?",
+    "Will my firm's templates, formulas and native Office files survive the round trip?",
+    "Does using another workspace fit our existing Office and linked-reporting workflow?",
+    "Our team would need an approved data-handling arrangement before uploading client or portfolio files; this film provides no evidence about that.",
+    "I would need to test a representative pack before choosing this over our existing tools."
+  ],
+  "would_try": "yes — the real per-cell controls and cross-file Changes panel address my fear of invisible edits well enough to justify testing sample files.",
+  "buy_decision": "TRY_FIRST — a successful trial on one representative pack, with independently checked numbers and preserved formatting, would flip me to BUY."
+}

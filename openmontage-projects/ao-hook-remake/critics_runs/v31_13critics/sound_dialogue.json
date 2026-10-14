@@ -1,0 +1,169 @@
+{
+  "critic": "dialogue_vo",
+  "stage": "animatic",
+  "score": 70,
+  "dimension_scores": {
+    "intelligibility": 65,
+    "performance_casting": 68,
+    "writing_for_the_ear": 88,
+    "pacing": 48,
+    "placement": 78
+  },
+  "issues": [
+    {
+      "shot_id": "00:49.9 / 01:22.6",
+      "category": "brand_pronunciation",
+      "severity": 1,
+      "confidence": 1,
+      "evidence": "Expected 'Agentic Office'; measured heard text is 'a genteck office' at 49.9s and 'genteck office' at 82.6s. The closing identification loses the opening syllable.",
+      "suggested_action": "Correct both brand reads with an explicit pronunciation cue, preserve the initial vowel, and verify the isolated lines and final mix."
+    },
+    {
+      "shot_id": "00:55.1",
+      "category": "line_intelligibility",
+      "severity": 0.9,
+      "confidence": 1,
+      "evidence": "Expected 'Tell it what changed. Once.'; heard 'it what changed once. it finds where'; match is 0.67.",
+      "suggested_action": "Restore a clearly articulated 'Tell', give 'Once' its own beat, and verify the line with a tightly bounded transcription window."
+    },
+    {
+      "shot_id": "00:57.0–01:04.4",
+      "category": "rushed_product_explanation",
+      "severity": 0.85,
+      "confidence": 1,
+      "evidence": "'It finds where that number lives: the model, the memo, the deck' measures 3.92 words/s; 'And drafts each fix in place, for you to review' measures 4.35 words/s while the real prompt, Excel diff, and memo changes are shown.",
+      "suggested_action": "Shorten these lines to 'It finds the number across your files' and 'Drafts the fixes. You review them'; deliver at 2.6–3.0 words/s and align each clause with its visible proof."
+    },
+    {
+      "shot_id": "00:06.0–00:24.0",
+      "category": "rushed_delivery",
+      "severity": 0.8,
+      "confidence": 1,
+      "evidence": "Measured rates are 4.13 words/s at 6.0s, 3.98 at 12.5s, 4.13 at 15.55s, 3.71 for the partner email, and 4.58 at 24.0s.",
+      "suggested_action": "Trim explanatory clauses and render these reads near 2.8 words/s; slow the partner email enough to sound like a person addressing a colleague."
+    },
+    {
+      "shot_id": "00:11.0 / 00:15.55 / 00:28.35",
+      "category": "failed_line_matches",
+      "severity": 0.75,
+      "confidence": 1,
+      "evidence": "Line matches are 0.78 for 'It says it's done', 0.83 for 'So you fix it by hand. Then, an email', and 0.78 for 'Then, one number changes'. Each measured transcript includes words from the following line.",
+      "suggested_action": "Verify isolated clip boundaries first, then remeasure the final mix; adjust articulation or spacing only where the failure persists."
+    },
+    {
+      "shot_id": "00:42.3",
+      "category": "rushed_emotional_beat",
+      "severity": 0.7,
+      "confidence": 1,
+      "evidence": "'The worst part? You don't even know what's wrong anymore' measures 3.79 words/s over the Send hesitation and the planned sound drop at 43.6s.",
+      "suggested_action": "Use 'The worst part? You no longer know what's wrong', with a pause after the question and a slower finish before the black transition."
+    },
+    {
+      "shot_id": "00:34.6",
+      "category": "ambiguous_spoken_copy",
+      "severity": 0.5,
+      "confidence": 0.95,
+      "evidence": "VO says 'Done. Except now... slide four changed'; the picture shows slide four retaining or reverting to the incorrect €71–73m figure.",
+      "suggested_action": "Say 'Done. Except slide four is wrong again' so the spoken consequence matches the visible error."
+    },
+    {
+      "shot_id": "00:06.0–01:22.6",
+      "category": "performance_verification",
+      "severity": 0.4,
+      "confidence": 0.55,
+      "evidence": "The narrator is identified as a Kokoro af_heart draft, with repeated delivery above 3.5 words/s. Transcript and timing data cannot establish naturalness, warmth, or premium casting.",
+      "suggested_action": "Verify a performance sample containing the opening, 'The worst part', and the brand reveal; direct distinct emotional beats and restrained emphasis before approving the final voice."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Brand or product name must not be misheard.",
+      "shot_id": "00:49.9",
+      "evidence": "Expected 'Agentic Office'; measured heard 'a genteck office'."
+    },
+    {
+      "rule": "Brand or product name must not be misheard.",
+      "shot_id": "01:22.6",
+      "evidence": "Expected 'Agentic Office'; measured heard 'genteck office'."
+    },
+    {
+      "rule": "Every VO line must have match >= 0.85.",
+      "shot_id": "00:11.0",
+      "evidence": "Measured match 0.78."
+    },
+    {
+      "rule": "Every VO line must have match >= 0.85.",
+      "shot_id": "00:15.55",
+      "evidence": "Measured match 0.83."
+    },
+    {
+      "rule": "Every VO line must have match >= 0.85.",
+      "shot_id": "00:28.35",
+      "evidence": "Measured match 0.78."
+    },
+    {
+      "rule": "Every VO line must have match >= 0.85.",
+      "shot_id": "00:55.1",
+      "evidence": "Measured match 0.67; opening 'Tell' is absent from the heard transcript."
+    }
+  ],
+  "line_fixes": [
+    {
+      "t": "00:49.9 / 01:22.6",
+      "issue": "Brand misheard.",
+      "fix": "Cue 'Agentic' as 'uh-JEN-tick', preserve the first syllable, and verify both brand reads."
+    },
+    {
+      "t": "00:55.1",
+      "issue": "Opening imperative missing; match 0.67.",
+      "fix": "Articulate 'Tell it what changed', pause, then 'Once'; verify clip boundaries."
+    },
+    {
+      "t": "00:06.0",
+      "issue": "4.13 words/s.",
+      "fix": "Shorten to 'You ask a chatbot to update the memo'; slow to approximately 2.8 words/s."
+    },
+    {
+      "t": "00:12.5",
+      "issue": "3.98 words/s.",
+      "fix": "Use 'You open it. The formatting is wrecked'; leave a beat before 'wrecked'."
+    },
+    {
+      "t": "00:15.55",
+      "issue": "4.13 words/s and match 0.83.",
+      "fix": "Use 'You fix it. Then, an email'; verify separation from the partner read."
+    },
+    {
+      "t": "00:18.15",
+      "issue": "Partner email reads at 3.71 words/s.",
+      "fix": "Slow toward 2.8 words/s within the notification hold; emphasize 'model' and 'board deck' lightly."
+    },
+    {
+      "t": "00:24.0",
+      "issue": "4.58 words/s.",
+      "fix": "Use 'You ask for the deck. It builds one in chat'; slow toward 2.8 words/s."
+    },
+    {
+      "t": "00:34.6",
+      "issue": "'Changed' obscures the regression.",
+      "fix": "Use 'Done. Except slide four is wrong again'."
+    },
+    {
+      "t": "00:42.3",
+      "issue": "Emotional turn delivered at 3.79 words/s.",
+      "fix": "Use 'The worst part? You no longer know what's wrong'; pause after the question."
+    },
+    {
+      "t": "00:57.0",
+      "issue": "Product explanation at 3.92 words/s.",
+      "fix": "Use 'It finds the number across your files'; slow to 2.6–3.0 words/s."
+    },
+    {
+      "t": "01:00.45",
+      "issue": "Review promise delivered at 4.35 words/s.",
+      "fix": "Use 'Drafts the fixes. You review them'; land 'review' on the visible tracked change."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Re-edit the VO with fewer words and 2.6–3.0 words/s delivery, correcting both brand pronunciations and verifying every failed line match."
+}

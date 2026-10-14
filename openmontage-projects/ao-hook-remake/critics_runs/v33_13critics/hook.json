@@ -1,0 +1,67 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 80,
+  "dimension_scores": {
+    "stop_scroll": 81,
+    "three_second_comprehension": 79,
+    "thats_me": 88,
+    "part1_attractor": 85,
+    "part2_curiosity_gap": 87,
+    "part3_proof_roadmap": 43,
+    "framework_fit": 86,
+    "open_loop": 91
+  },
+  "framework_detected": "In Medias Res, followed by PAS: the mismatched board pack opens at the crisis, then rewinds into escalating chatbot failures before the solution. The crisis and eventual payoff are strong; proof and roadmap are missing from the 12–25-second opening window.",
+  "framework_recommended": "In Medias Res: the imminent board meeting makes a concrete cross-file error emotionally relevant, and the later Slide 4 diff pays off the opening precisely. Keep the rewind, but preview real reviewable changes within 12–25 seconds.",
+  "hook_2s": 8,
+  "issues": [
+    {
+      "shot_id": "00:12–00:25",
+      "category": "missing_proof_roadmap",
+      "severity": 0.78,
+      "confidence": 0.99,
+      "evidence": "This window contains the broken memo, manual fixing, the partner's request and another chatbot prompt. The first real product screenshots arrive at 00:50.2; reviewable edits appear at approximately 01:00.",
+      "suggested_action": "Insert a brief, labelled real-product glimpse within 00:12–00:25 showing the three file groups and proposed changes, with the line 'One request. Three files. Every change for review.' Then return to the unresolved Send moment."
+    },
+    {
+      "shot_id": "00:00–00:04.5",
+      "category": "sound_off_context",
+      "severity": 0.48,
+      "confidence": 0.96,
+      "evidence": "The large text is '€74.6m' and '€71–73m'; the identifying labels 'FY26_Model.xlsx · FY26 revenue' and 'Board_Presentation.pptx · Slide 4' are much smaller. The explicit explanation 'the deck doesn't match the model' is supplied by VO.",
+      "suggested_action": "Make 'MODEL' and 'DECK · SLIDE 4' large labels above the figures and add a short headline, 'Board in 3 minutes. Two different numbers.', keeping the cursor and Send button visible."
+    },
+    {
+      "shot_id": "00:05–00:11",
+      "category": "opening_momentum",
+      "severity": 0.36,
+      "confidence": 0.94,
+      "evidence": "After the urgent mismatch, the film spends 00:05–00:08 at the desk under '45 MINUTES EARLIER', then shows 'Hi, how can I help?' and prompt entry. The next decisive event is 'Done.' at 00:11.",
+      "suggested_action": "Shorten the desk establishing beat and enter the chat with the complete request already legible, preserving the rewind caption while bringing 'Done.' and its contradiction forward."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Preview real, reviewable changes across the model, memo and deck within the first 25 seconds so the strong deadline hook promises a credible destination.",
+  "hook_alternatives": [
+    {
+      "framework": "In Medias Res",
+      "first_3s_visual": "Cursor hovering over Send; large MODEL €74.6m and DECK €71–73m cards; red 'BOARD IN 3 MINUTES'.",
+      "line": "The board starts at nine. Which number are you sending?",
+      "why": "Turns the mismatch into an immediate professional decision and opens a question the later reviewed Send can answer."
+    },
+    {
+      "framework": "PAS",
+      "first_3s_visual": "A giant chatbot 'Done.' beside the model's €74.6m and the deck's unchanged €71–73m, labelled 'ILLUSTRATION'.",
+      "line": "AI said done. Your deck still has the old number.",
+      "why": "Names the concrete execution failure immediately and makes the target viewer recognize the cleanup burden."
+    },
+    {
+      "framework": "BAB",
+      "first_3s_visual": "The mismatched figures cut to the real Changes panel, with model, memo and deck groups and visible Accept / Reject controls.",
+      "line": "From conflicting files to changes you can review.",
+      "why": "Shows the painful before and a credible after immediately, making the remaining film explain the bridge."
+    }
+  ]
+}

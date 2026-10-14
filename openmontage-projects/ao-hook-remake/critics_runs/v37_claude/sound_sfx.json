@@ -1,0 +1,165 @@
+{
+ "critic": "sound_sfx",
+ "stage": "animatic",
+ "score": 60,
+ "dimension_scores": {
+  "foley_coverage": 74,
+  "transition_design": 42,
+  "ui_sound_language": 62,
+  "sync_accuracy": 68,
+  "restraint": 66
+ },
+ "issues": [
+  {
+   "shot_id": "whole film",
+   "category": "cuts_without_sound",
+   "severity": 0.75,
+   "confidence": 0.9,
+   "evidence": "31 of about 45 cuts (69%) have no measured sound event, including the urgent hook cuts 1.2, 5.07, 8.0, 13.93, 15.6, 16.5, 22.97, 24.07, 24.87, 31.07, 31.83, 34.5, 35.0, 36.77, 37.4, 39.2 and 40.3. The script adds whoosh2 at 0.18 to every \"silent hook cut\", but the onset detector still does not see them, so they are inaudible under the beds and VO.",
+   "suggested_action": "Replace the 0.18 whoosh2 on the hook cuts with short transient-led sounds (tight swish or a film-cut tick at 0.35–0.45), placed so the transient falls 1 frame before the cut. Put soft UI ticks on the post-reveal push-ins at 52.6, 54.4, 61.4, 64.4 and 71.4."
+  },
+  {
+   "shot_id": "00:05–00:08",
+   "category": "missing_foley_protagonist",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "Frame at about 5 s shows her at the desk handling the laptop (super \"45 MINUTES EARLIER\"). The only cues are rewind (4.45) and room tone. There is no laptop or desk foley.",
+   "suggested_action": "Add a laptop-lid creak and set-down thump at the moment the laptop touches the desk, plus a chair creak."
+  },
+  {
+   "shot_id": "00:23–00:24 / 00:33",
+   "category": "missing_foley_reactions",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Head in hands (23–24 s) has only whoosh2 at 23.7. Her head-scratch insert around 31–35 s has no cloth or body sound.",
+   "suggested_action": "Add a soft exhale and a sleeve rustle at 23.2, and a hair scratch plus a breath at the scratch insert."
+  },
+  {
+   "shot_id": "01:47.3–01:47.9",
+   "category": "click_sync",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "The candidate says \"107.3–107.9 real hand clicks\". The click is cued at 107.65; the cut at 107.3 has no sound event, and the nearest onsets are 107.55 and 107.85.",
+   "suggested_action": "Frame-match the click to the finger-down frame in the 107.3 insert, and add a trackpad tap body sound so the decisive \"Send\" reads."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "ui_sound_family",
+   "severity": 0.35,
+   "confidence": 0.75,
+   "evidence": "key.mp3 does every job: real keystrokes (70), plan-step ticks (68.5–70.7), \"soft touch on every product cut\", the three apps landing, the 10-of-10 tick and the team list. The signature accept is pop_long (86.3) and the \"done\" is identity.mp3, so the keyboard foley and the product UI share one sound.",
+   "suggested_action": "Keep key.mp3 for keyboard foley only. Build a three-sound product UI family (tick for a step, a two-tone accept for Accept all and Accept, identity for done) and use it consistently in 61–106 s."
+  },
+  {
+   "shot_id": "00:37.4–00:41.6",
+   "category": "overload_stacking",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "In 4.2 s the script stacks a whoosh, 4 alternating whooshes, an impact (39.7), 4 buzzes (40.4–41.0), clock_fast, heart_fast and a riser. Cuts 37.4, 39.2 and 40.3 are still flagged without a sound event, so the density is masking the cut accents.",
+   "suggested_action": "Thin the overload: one whoosh per whip timed to the motion peak, drop two of the four buzzes, and let the impact at 39.7 stand alone."
+  },
+  {
+   "shot_id": "01:52.0",
+   "category": "lights_on_no_foley",
+   "severity": 0.25,
+   "confidence": 0.5,
+   "evidence": "\"Real lights come on\" (107.9–112.4) is carried only by identity.mp3 at 107.95. No in-world switch or room change is heard.",
+   "suggested_action": "Add a soft light-switch click or a gentle electrical hum swell as the lights come up, under the identity sound."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "More than 50% of cuts with no sound event in a film that claims urgency",
+   "shot_id": "00:00–00:46 hook",
+   "evidence": "cuts_on_sound_pct 31.1; 31 cuts listed in cuts_without_sound_event_s, 17 of them inside the 0–41.6 s urgency section"
+  }
+ ],
+ "spotting_list": [
+  {
+   "t": "1.2",
+   "event": "cut from the cold-open laptop to the email",
+   "sound": "short film-cut swish",
+   "source": "Mixkit \"fast swoosh transition\""
+  },
+  {
+   "t": "5.07",
+   "event": "cut into the protagonist at her desk",
+   "sound": "laptop set-down and lid creak",
+   "source": "Freesound \"laptop close desk\""
+  },
+  {
+   "t": "8.0",
+   "event": "eased dark-to-light into the chat",
+   "sound": "soft airy rise",
+   "source": "Mixkit \"soft whoosh rise\""
+  },
+  {
+   "t": "13.93",
+   "event": "Word file opens",
+   "sound": "UI window open blip",
+   "source": "Freesound \"UI window open\""
+  },
+  {
+   "t": "15.6",
+   "event": "hands-typing insert",
+   "sound": "cut-tick on the transient of the first key",
+   "source": "Freesound \"keyboard typing mechanical\""
+  },
+  {
+   "t": "23.2",
+   "event": "head in hands",
+   "sound": "exhale and sleeve rustle",
+   "source": "Freesound \"frustrated sigh female\""
+  },
+  {
+   "t": "31.07",
+   "event": "head-scratch insert",
+   "sound": "hair scratch and breath",
+   "source": "Freesound \"scratching head foley\""
+  },
+  {
+   "t": "35.0",
+   "event": "deck regenerated, slide 4 reverted",
+   "sound": "low error thud",
+   "source": "Mixkit \"error notification low\""
+  },
+  {
+   "t": "49.0",
+   "event": "push into the real laptop",
+   "sound": "soft air push",
+   "source": "Mixkit \"cinematic whoosh soft\""
+  },
+  {
+   "t": "61.4",
+   "event": "push to the sent prompt",
+   "sound": "UI tick",
+   "source": "Freesound \"ui tick soft\""
+  },
+  {
+   "t": "71.4",
+   "event": "tracked change appears",
+   "sound": "two-tone UI chime",
+   "source": "Mixkit \"interface positive\""
+  },
+  {
+   "t": "101.8",
+   "event": "file tree / local status",
+   "sound": "UI tick",
+   "source": "Freesound \"ui click subtle\""
+  },
+  {
+   "t": "107.3",
+   "event": "hand clicks Send",
+   "sound": "trackpad tap, synced to the finger-down frame",
+   "source": "Freesound \"trackpad click\""
+  },
+  {
+   "t": "107.9",
+   "event": "lights come on",
+   "sound": "light switch and hum swell",
+   "source": "Freesound \"light switch on room\""
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Replace the inaudible 0.18 hook-cut whooshes with transient-led cut sounds that the measurement registers, bringing cuts-on-sound above 60% in the 0–46 s hook."
+}

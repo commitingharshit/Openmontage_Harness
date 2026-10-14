@@ -1,0 +1,83 @@
+{
+ "critic": "hook",
+ "stage": "animatic",
+ "score": 72,
+ "dimension_scores": {
+  "stop_scroll": 66,
+  "three_second_comprehension": 84,
+  "thats_me": 80,
+  "part1_attractor": 60,
+  "part2_curiosity_gap": 76,
+  "part3_proof_roadmap": 70,
+  "framework_fit": 74,
+  "open_loop": 72
+ },
+ "framework_detected": "PAS (Problem-Agitate-Solve), well executed: problem super at 0s, agitation via chat 'Done' + '0 of 3 files updated' by 0:24, solve at 1:06. Open loop ('by 9') paid off at 9:02.",
+ "framework_recommended": "In Medias Res inside PAS: open on the 2:41 AM 'Partner flagged this... Which is it?' with the ringed box, then rewind to 11:47 PM. The highest-stakes, most finance-specific frame is buried at 0:54.",
+ "hook_2s": 6,
+ "issues": [
+  {
+   "shot_id": "0:00-0:04",
+   "category": "static_attractor",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "f_01/f_02 identical: a still phone on a desk, no motion, text 'One number changed. Three files to fix.' The phone notification itself is too small to read on mobile.",
+   "suggested_action": "Make the 3 files the attractor: the line, then three file icons snap in and each flips to 'unchanged', or open on the ringed slide (In Medias Res)."
+  },
+  {
+   "shot_id": "0:03-0:10.5",
+   "category": "dead_air",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "audio_v14: loudness -46 to -52 dBFS from 3.0 s to 10.5 s, no onset between 2.7 s and 10.85 s; the second buzz arrives after the cut it was meant for",
+   "suggested_action": "Keep a pulse under 4-10 s (second buzz at 4.5 s on the text push-in, HVAC + low drone at audible level)."
+  },
+  {
+   "shot_id": "0:09-0:12",
+   "category": "atmosphere_block",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "f_04: Maya walking with coffee past the lamp, '11:52 PM'. No new information in the hook window.",
+   "suggested_action": "Cut it; go straight from her reading the text to her typing into the AI chat."
+  },
+  {
+   "shot_id": "0:00",
+   "category": "thats_me_label",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Super says 'Three files' but never names them in the first 3 s; 'model, memo and deck' is only in the tiny phone text",
+   "suggested_action": "Super: 'One number changed. Model, memo, deck: all wrong.' or show the three filenames."
+  },
+  {
+   "shot_id": "0:18-0:27",
+   "category": "payoff_of_hook_too_slow",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "The real contradiction ('Done ✓' in chat vs '0 of 3 files updated') arrives at 0:24, 8 s after the hook stopped moving",
+   "suggested_action": "Pull the chat 'Done ✓' + '0 of 3' contrast to by 0:10 by cutting blocks 2-3."
+  }
+ ],
+ "constraint_failures": [],
+ "hook_alternatives": [
+  {
+   "framework": "In Medias Res",
+   "first_3s_visual": "2:41 AM, phone: slide with '€71–73m' ringed red, 'Partner flagged this. Memo says €74.6m. Which is it?'",
+   "line": "2:41 AM. One box she missed.",
+   "why": "The most specific finance fear, legible, and it creates 'how did this happen?'"
+  },
+  {
+   "framework": "Everything-You-Know-Is-Wrong",
+   "first_3s_visual": "AI chat bubble 'Done ✓' slams in; hard cut to folder with three files stamped 'unchanged'",
+   "line": "The AI said 'Done.' Nothing was done.",
+   "why": "Lands the whole insight (answer lives in the chat) in 3 s, works sound-off"
+  },
+  {
+   "framework": "BAB",
+   "first_3s_visual": "Split screen: left, her copying numbers at 1:14 AM; right, the Diffs list '10 of 10 accepted'",
+   "line": "Same change. Three hours, or one review.",
+   "why": "Shows the reversal immediately for short-attention feeds (careful: needs approved time claim)"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Cut block 3 (walking) and the dead 3-10 s, and open on either the ringed 2:41 AM slide or a moving 'Done ✓ / 0 of 3 files updated' contrast so the first 2 s carry motion and the specific failure."
+}

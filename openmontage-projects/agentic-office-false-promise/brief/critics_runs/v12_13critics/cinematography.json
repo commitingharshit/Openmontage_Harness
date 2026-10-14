@@ -1,0 +1,129 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 66,
+  "dimension_scores": {
+    "lighting_shape": 73,
+    "lens_depth": 77,
+    "composition": 68,
+    "camera_movement": 60,
+    "frame_design_ui": 48
+  },
+  "issues": [
+    {
+      "shot_id": "00:52–01:04",
+      "category": "ui_capture_softness",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "The enlarged Changes panel has visibly soft lettering at 00:52.5 and 01:04.5. Measured sharpness is 29.9 at 51.2 and 14.5 at 63.2.",
+      "suggested_action": "Recapture the real panel at higher resolution with increased application zoom, then frame it at native pixel scale."
+    },
+    {
+      "shot_id": "00:40",
+      "category": "unreadable_crop",
+      "severity": 0.82,
+      "confidence": 0.99,
+      "evidence": "The memo's sentences run beyond frame-right, and the FY26 outlook table column and its revenue value are cut off.",
+      "suggested_action": "Pull back to include the full paragraph and outlook column, then make a separate close insert of the tracked replacement."
+    },
+    {
+      "shot_id": "00:38–00:44; 01:07–01:08",
+      "category": "luminance_discontinuity",
+      "severity": 0.73,
+      "confidence": 0.99,
+      "evidence": "Dark interface frames cut to nearly full-frame white documents; measured mean luma rises from 28.2 to 229.7, and later from 44.5 to 234.5.",
+      "suggested_action": "Contain the genuine document captures within a consistent dark surround and reduce paper-white intensity while preserving text contrast."
+    },
+    {
+      "shot_id": "00:34–00:37",
+      "category": "ui_framing",
+      "severity": 0.69,
+      "confidence": 0.97,
+      "evidence": "The prompt is enlarged into blurred text spanning most of the frame, with a yellow rectangle, a quoted caption and a second caption stacked below.",
+      "suggested_action": "Capture the prompt sharply at readable application zoom, retain one highlight and place one caption in a reserved lower margin."
+    },
+    {
+      "shot_id": "00:44",
+      "category": "composition_hierarchy",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "The ribbon occupies much of the upper frame, empty spreadsheet columns fill the bottom, and 'Accept all' is clipped at frame-right.",
+      "suggested_action": "Reframe around the complete diff bar and affected cell, reducing ribbon and empty-grid coverage."
+    },
+    {
+      "shot_id": "00:00–00:09; 00:15–00:26",
+      "category": "flat_graphic_staging",
+      "severity": 0.61,
+      "confidence": 0.98,
+      "evidence": "Cards, messages and application windows sit front-on against a dark gradient; separation comes mostly from outlines rather than spatial depth.",
+      "suggested_action": "Introduce restrained layer depth, consistent contact shadows and a subtle motivated screen glow while keeping text planes frontal and readable."
+    },
+    {
+      "shot_id": "01:14",
+      "category": "flat_face_lighting",
+      "severity": 0.48,
+      "confidence": 0.92,
+      "evidence": "David's face is evenly filled against bright windows, with less cheek shadow and separation than Maya's night-office coverage.",
+      "suggested_action": "Use window-side key with negative fill on the opposite cheek and lower background exposure to restore facial shape."
+    },
+    {
+      "shot_id": "00:54–01:03",
+      "category": "camera_movement_verification",
+      "severity": 0.44,
+      "confidence": 0.48,
+      "evidence": "The 9-second shot is represented by successive tight panel crops at 00:55.5, 00:58.5 and 01:01.5; sampled frames cannot establish smooth movement or natural motion blur.",
+      "suggested_action": "Verify playback for stepping or abrupt crop changes; if present, replace them with one eased vertical move that settles on each selected diff."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "No unreadable composition",
+      "shot_id": "00:40",
+      "evidence": "The memo paragraph and FY26 outlook column extend beyond frame-right, hiding part of the displayed content."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Recapture and reframe the real product demo at readable native resolution, with complete target objects and a consistent dark surround.",
+  "per_shot": [
+    {
+      "t": "00:40",
+      "grade_A_to_F": "D",
+      "fix": "Pull back to retain the full changed paragraph and FY26 table column."
+    },
+    {
+      "t": "01:04",
+      "grade_A_to_F": "D",
+      "fix": "Recapture the acceptance panel sharply at increased application zoom."
+    },
+    {
+      "t": "00:52",
+      "grade_A_to_F": "D",
+      "fix": "Use a higher-resolution capture instead of enlarging the soft panel."
+    },
+    {
+      "t": "00:34",
+      "grade_A_to_F": "D",
+      "fix": "Capture sharp prompt text and reduce the stacked annotations."
+    },
+    {
+      "t": "00:37",
+      "grade_A_to_F": "D",
+      "fix": "Reserve a lower caption margin and keep the highlighted prompt unobstructed."
+    },
+    {
+      "t": "00:44",
+      "grade_A_to_F": "C",
+      "fix": "Show the complete diff controls and target cell with less ribbon coverage."
+    },
+    {
+      "t": "01:08",
+      "grade_A_to_F": "C",
+      "fix": "Contain the white page in a dark surround and move the caption below its text."
+    },
+    {
+      "t": "01:01",
+      "grade_A_to_F": "C",
+      "fix": "Capture the review controls sharply and verify the move settles before selection."
+    }
+  ]
+}

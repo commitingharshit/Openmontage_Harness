@@ -1,0 +1,11 @@
+[
+ {"id": "z1s", "text": "You ask a chatbot to update the board memo.", "speed": 0.96},
+ {"id": "o3s", "text": "Then you open the file... and the formatting's wrecked.", "speed": 1.0},
+ {"id": "o4s", "text": "So you fix it by hand. Then, an email.", "speed": 0.92},
+ {"id": "n1s", "text": "So you ask it for the deck... and it builds one, in the chat.", "speed": 0.98},
+ {"id": "n3s", "text": "Prompt again. Wait again. Five minutes... for one number.", "speed": 0.94},
+ {"id": "k4s", "text": "Done. Except now... slide four changed.", "speed": 0.92},
+ {"id": "b1", "text": "Agentic Office.", "speed": 0.8},
+ {"id": "b2", "text": "Agentic... Office.", "speed": 0.85},
+ {"id": "b3", "text": "This is Agentic Office.", "speed": 0.88}
+]

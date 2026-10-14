@@ -1,0 +1,103 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 65,
+ "dimension_scores": {
+  "room_tone_continuity": 85,
+  "world_building": 50,
+  "sound_perspective": 50,
+  "diegetic_logic": 65,
+  "designed_silence": 82
+ },
+ "issues": [
+  {
+   "shot_id": "00:05-01:46",
+   "category": "one_room_for_every_location",
+   "severity": 0.55,
+   "confidence": 0.7,
+   "evidence": "office.mp3 is the bed for the blue night office (5.05-43.6 @0.10), the warm-room product shots (49-106 @0.035), the dark-room laptop (106.3 @0.07) and the end (112 @0.045); only a 3.6 s ticktock marks the warm room",
+   "suggested_action": "Give each location its own bed: night office = HVAC + distant traffic + faint far-desk murmur; warm room = quiet domestic air, lamp hum, clock; dawn = window, birds, city"
+  },
+  {
+   "shot_id": "00:00-00:05",
+   "category": "no_air_in_cold_open",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Room tone starts at 5.05; 0-4.5 is bass_pulse + heart_fast + buzz over a real dark-room laptop",
+   "suggested_action": "Run the dark-room tone (-48 dBFS HVAC/fridge hum) from frame 0 and reuse it at 106.3 so the bookends match"
+  },
+  {
+   "shot_id": "00:49-01:32",
+   "category": "no_perspective_on_push_ins",
+   "severity": 0.35,
+   "confidence": 0.55,
+   "evidence": "Every product shot starts wide (window floating in the room) and pushes in up to 1.9x; room bed stays a constant 0.035",
+   "suggested_action": "Automate a high-shelf cut and -3 dB on the room as each push lands on the screen, then reopen on the next wide"
+  },
+  {
+   "shot_id": "00:18",
+   "category": "email_voice_no_perspective",
+   "severity": 0.25,
+   "confidence": 0.45,
+   "evidence": "Partner email read by a British male on the VO bus with the same EQ/high-pass as the narrator",
+   "suggested_action": "Treat the email voice as an inner read: slightly narrower, dryer, -2 dB, with the room bed audible under it"
+  },
+  {
+   "shot_id": "00:44",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.7,
+   "evidence": "loudness at 44.0/45.5 s: -48.5/-47.2 dBFS, office.mp3 room tone at 0.07 under it, soft impact at 44.57; digital_silence_windows_s empty",
+   "suggested_action": "Keep; let one exhale sit at ~45.0 so the beat reads as human, not a pause"
+  }
+ ],
+ "constraint_failures": [],
+ "ambience_plan": [
+  {
+   "location": "dark room, cold open 0-4.5 and 106.3-107.9",
+   "layers": [
+    "HVAC/fridge hum",
+    "faint street hush"
+   ],
+   "level_dbfs": "-48 to -45"
+  },
+  {
+   "location": "blue night office 5-46",
+   "layers": [
+    "HVAC",
+    "distant traffic",
+    "faint far-desk murmur",
+    "fluorescent buzz"
+   ],
+   "level_dbfs": "-42 (-48 in the 43.6-46.2 silence)"
+  },
+  {
+   "location": "warm room / product 49-106",
+   "layers": [
+    "quiet domestic air",
+    "lamp hum",
+    "soft clock"
+   ],
+   "level_dbfs": "-50"
+  },
+  {
+   "location": "lights on / dawn 107.9-115.3",
+   "layers": [
+    "window air",
+    "city waking",
+    "birds"
+   ],
+   "level_dbfs": "-38 rising to -34"
+  },
+  {
+   "location": "end card 115.3-121.4",
+   "layers": [
+    "birds tail",
+    "window air"
+   ],
+   "level_dbfs": "-50, fade to the last frame"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Replace the single office.mp3 bed with a distinct ambience per location (night office, warm room, dark room, dawn) so every location change is heard."
+}

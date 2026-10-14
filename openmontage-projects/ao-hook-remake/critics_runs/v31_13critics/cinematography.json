@@ -1,0 +1,123 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 68,
+  "dimension_scores": {
+    "lighting_shape": 72,
+    "lens_depth": 70,
+    "composition": 73,
+    "camera_movement": 60,
+    "frame_design_ui": 61
+  },
+  "issues": [
+    {
+      "shot_id": "00:08–00:15",
+      "category": "screen_light_discontinuity",
+      "severity": 0.78,
+      "confidence": 0.96,
+      "evidence": "The blue office at 00:05 has shaped shadows and practical light; the chatbot and Word frames become nearly full-frame white rectangles. Measured mean luma jumps from 46.4 to 202.9.",
+      "suggested_action": "Place these windows within a consistent dark monitor surround, preserve neutral document whites, and carry a subtle frame-left practical reflection across both screen shots."
+    },
+    {
+      "shot_id": "00:55",
+      "category": "magnified_capture_softness",
+      "severity": 0.75,
+      "confidence": 0.95,
+      "evidence": "The tight real-app prompt crop shows visibly softened letters in 'Research says 20% DACH growth'; measured sharpness is 56.4.",
+      "suggested_action": "Recapture the same prompt at a larger native UI scale and render the crop without enlarging capture pixels."
+    },
+    {
+      "shot_id": "01:06–01:12",
+      "category": "ui_crop_and_hierarchy",
+      "severity": 0.71,
+      "confidence": 0.97,
+      "evidence": "The Changes panel is a narrow central strip with its top cropped and several entries truncated, including 'Slide 4 · TextBox 6'; broad empty areas surround it.",
+      "suggested_action": "Use a wider native capture, retain the full file-group header, and frame the Slide 4 row on the left third with the callout occupying the right third."
+    },
+    {
+      "shot_id": "00:15",
+      "category": "insert_focus",
+      "severity": 0.68,
+      "confidence": 0.93,
+      "evidence": "The typing insert is dominated by the back of a hand, while fingers and keys lack a clear focal anchor; measured sharpness is 3.5.",
+      "suggested_action": "Select a sharper source moment or alternate typing insert with focus on a fingertip contacting a key and matching cool monitor-side illumination."
+    },
+    {
+      "shot_id": "00:49–00:55",
+      "category": "product_overview_scale",
+      "severity": 0.64,
+      "confidence": 0.96,
+      "evidence": "The three real product windows form a small horizontal fan beneath the logo; their document content and assistant panels become miniature texture.",
+      "suggested_action": "Enlarge the central window and reduce the side windows to partial silhouettes, using restrained perspective and one consistent contact-shadow direction."
+    },
+    {
+      "shot_id": "00:05",
+      "category": "foreground_occlusion",
+      "severity": 0.55,
+      "confidence": 0.98,
+      "evidence": "The desk lamp shade crosses the protagonist's lower face and the plant obscures her torso and working hand; the large monitor also dominates frame-left.",
+      "suggested_action": "Choose a nearby source moment or alternate crop that separates her face from the lamp while retaining the practical as the lighting motivation."
+    },
+    {
+      "shot_id": "00:24–00:37",
+      "category": "repeated_screen_geometry",
+      "severity": 0.52,
+      "confidence": 0.96,
+      "evidence": "The generation, correction and regeneration frames repeatedly show a frontal rounded white window with similar sidebar geometry; scale changes provide most of the visual variation.",
+      "suggested_action": "Alternate a contextual monitor view with tighter detail views of the notification, progress bar and revised slide, maintaining a consistent screen axis."
+    },
+    {
+      "shot_id": "00:37–00:41",
+      "category": "movement_verification",
+      "severity": 0.43,
+      "confidence": 0.48,
+      "evidence": "The sampled overload frame shows tilted overlapping windows and stacked notifications; frames and shot durations cannot establish whether the described whip pans have continuous spatial direction or natural motion blur.",
+      "suggested_action": "Verify playback frame by frame; adjust only pans that reverse direction without motivation, snap their endpoints, or lack shutter-like blur during fast travel."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Give the screen sequences a consistent monitor-space treatment with motivated light, controlled white luminance, and deliberate wide-to-detail framing.",
+  "per_shot": [
+    {
+      "t": "00:08",
+      "grade_A_to_F": "C",
+      "fix": "Keep the chatbot inside a dark monitor surround with a restrained practical reflection and controlled white luminance."
+    },
+    {
+      "t": "00:12",
+      "grade_A_to_F": "C",
+      "fix": "Match the preceding monitor axis and lighting while framing the memo as a focused document detail."
+    },
+    {
+      "t": "00:15",
+      "grade_A_to_F": "D",
+      "fix": "Replace the soft hand-dominated insert with a fingertip-and-key focal plane under cool monitor light."
+    },
+    {
+      "t": "00:24",
+      "grade_A_to_F": "C",
+      "fix": "Use a contextual screen angle before cutting into the presentation thumbnails."
+    },
+    {
+      "t": "00:31",
+      "grade_A_to_F": "C",
+      "fix": "Tighten the progress-bar composition and separate the clock and caption from the window edge."
+    },
+    {
+      "t": "00:49",
+      "grade_A_to_F": "C",
+      "fix": "Enlarge the central product window and give the flanking windows consistent perspective and contact shadows."
+    },
+    {
+      "t": "00:55",
+      "grade_A_to_F": "D",
+      "fix": "Recapture the prompt at larger native UI scale so the tight framing preserves crisp text."
+    },
+    {
+      "t": "01:06",
+      "grade_A_to_F": "C",
+      "fix": "Widen the Changes panel crop, preserve its header, and balance the selected row against the right-side callout."
+    }
+  ]
+}

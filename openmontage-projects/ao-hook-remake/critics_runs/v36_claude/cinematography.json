@@ -1,0 +1,134 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 50,
+ "dimension_scores": {
+  "lighting_shape": 50,
+  "lens_depth": 55,
+  "composition": 46,
+  "camera_movement": 52,
+  "frame_design_ui": 45
+ },
+ "issues": [
+  {
+   "shot_id": "00:05 -> 00:07.5",
+   "category": "set_flip",
+   "severity": 0.75,
+   "confidence": 0.8,
+   "evidence": "f_03 she is at an office desk in a striped shirt, glasses, blue practical lamp; f_04 cuts to a top-down laptop on a bed/sofa beside a pillow, hands in dark long sleeves",
+   "suggested_action": "Replace the top-down hands plate with a desk-level over-shoulder of the same striped-shirt protagonist at the same desk, or establish the sofa location before 'You ask a chatbot'"
+  },
+  {
+   "shot_id": "00:09.8-00:41.6 (illustrated UI block)",
+   "category": "unmotivated_light",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "f_05, f_08, f_11, f_14, f_16: full-frame flat UI under a grey wash and a centred elliptical vignette, no source, no falloff from a screen or lamp (measured contrast 15-23 at 9.8, 16.5, 24.87)",
+   "suggested_action": "Put these UIs back on her laptop screen in the night office (screen as the only key, cool spill on keys and hands), or at minimum light the window as a monitor in space with a bright edge and dark room around it"
+  },
+  {
+   "shot_id": "00:22.5 and 00:30",
+   "category": "frame_edge_artifact",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "f_10 and f_13: head-in-hands clip shows a black band across the top and down the right edge; the same clip is used twice",
+   "suggested_action": "Re-scale to fill (1.05x crop) and use a second, different reaction angle for the 30 s beat"
+  },
+  {
+   "shot_id": "00:27.5",
+   "category": "composition_clipped",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "f_12: 'Here's your updated memo' cut by the top edge, partner notification sits on top of the 'Update the deck to' bubble, sidebar crops left",
+   "suggested_action": "Reframe the push so the slide-thumbnail row sits on the lower third and park the notification in clear space top-right"
+  },
+  {
+   "shot_id": "00:32.5",
+   "category": "text_collision",
+   "severity": 0.5,
+   "confidence": 0.85,
+   "evidence": "f_14: ghosted red '8:45' and 'MEETING AT 9:00' overlap the 'You' avatar and the ILLUSTRATION label bottom-left",
+   "suggested_action": "Move the clock to an empty quadrant (top-left) at full opacity or drop it from this shot"
+  },
+  {
+   "shot_id": "00:37.5",
+   "category": "text_over_image",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "f_16: giant grey 'Copy.' printed across spreadsheet cells, same value as the grid behind it",
+   "suggested_action": "Separate type from plate: darken and defocus the sheet behind the word, or put the word on the whip-pan blur frame"
+  },
+  {
+   "shot_id": "01:17.5-01:22.5",
+   "category": "label_collision",
+   "severity": 0.45,
+   "confidence": 0.85,
+   "evidence": "f_33 'AGENTIC OFFICE · ONE SENTENCE' printed over the document heading; f_34 'ONE SLIDE ELEMENT' over the first list row",
+   "suggested_action": "Place the panel label above the panel, outside its bounds"
+  },
+  {
+   "shot_id": "00:16.5-00:23",
+   "category": "static_hold",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "f_08 and f_09 are near-identical: notification over a blurred Word page for 6.47 s with no visible move",
+   "suggested_action": "Add a slow 8-10% push to the notification, or cut to her face reading it"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "identity or set flips across a cut",
+   "shot_id": "00:05 -> 00:07.5",
+   "evidence": "office desk, striped shirt, glasses -> bed/sofa top-down, dark sleeves"
+  },
+  {
+   "rule": "shot with no motivated light source",
+   "shot_id": "00:10, 00:17.5, 00:25, 00:32.5",
+   "evidence": "full-frame illustrated UI under an arbitrary centred vignette, no screen, room or practical motivating it"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Re-stage the 9.8-41.6 s illustrated block on her laptop in the same night office (screen as key light, over-shoulder and insert angles) instead of full-frame grey-washed UI, which also fixes the desk-to-bed set flip at 7.5 s.",
+ "per_shot": [
+  {
+   "t": "00:10",
+   "grade_A_to_F": "D",
+   "fix": "put 'Done.' on her laptop screen, screen light on her face, 50mm f/2 over-shoulder"
+  },
+  {
+   "t": "00:25",
+   "grade_A_to_F": "D",
+   "fix": "monitor-in-room framing, screen as key, dark falloff, slow push"
+  },
+  {
+   "t": "00:27.5",
+   "grade_A_to_F": "D",
+   "fix": "reframe so nothing clips the top edge; notification in clear space"
+  },
+  {
+   "t": "00:32.5",
+   "grade_A_to_F": "D",
+   "fix": "clear bottom-left, clock top-left, one text layer only"
+  },
+  {
+   "t": "00:35",
+   "grade_A_to_F": "D",
+   "fix": "thumbnail strip on a lit screen in space, not floating on black"
+  },
+  {
+   "t": "00:17.5",
+   "grade_A_to_F": "D",
+   "fix": "push in 8% over the hold or cut to her reading it"
+  },
+  {
+   "t": "00:42.5",
+   "grade_A_to_F": "C",
+   "fix": "pull the raw white window into the night room: screen in frame, cool key, dark surround"
+  },
+  {
+   "t": "01:20",
+   "grade_A_to_F": "C",
+   "fix": "labels outside panels; give the split a shared light direction and depth offset"
+  }
+ ]
+}

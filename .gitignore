@@ -1,0 +1,12 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.remotion/
+.DS_Store
+.env*
+!.env.example
+*.ok
+# OpenMontage framework clone (upstream: github.com/calesthio/OpenMontage)
+/OpenMontage/

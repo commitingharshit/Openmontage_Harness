@@ -1,0 +1,70 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "pain_specificity": 92,
+    "relatability": 87,
+    "emotional_authenticity": 80,
+    "product_pain_fit": 84,
+    "trust_credibility": 62,
+    "purchase_motivation": 54
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 6,
+  "issues": [
+    {
+      "shot_id": "01:04–01:11",
+      "category": "missing_outcome_proof",
+      "severity": 0.88,
+      "confidence": 1,
+      "evidence": "The panel says '10 of 10 changes accepted', and the memo and table show €74.6m. The accepted slide 2 box previously flagged by David is never shown.",
+      "suggested_action": "Insert the pending real post-acceptance slide 2 recording, holding on the formerly stale box now showing €74.6m before Maya closes her laptop."
+    },
+    {
+      "shot_id": "00:55–01:04",
+      "category": "review_completeness_uncertainty",
+      "severity": 0.76,
+      "confidence": 0.98,
+      "evidence": "The panel lists 'Slide 2 · TextBox 23' and 'Chart data, slide 4', followed by 'All changes reviewed'. This proves proposed edits exist, but does not show how I check whether another reference was missed.",
+      "suggested_action": "Pair the selected slide 2 diff with its actual location in the deck, then show the updated chart after acceptance; keep the promise about reviewable changes rather than implying a complete correctness check."
+    },
+    {
+      "shot_id": "00:21–00:31",
+      "category": "competitor_comparison_relevance",
+      "severity": 0.59,
+      "confidence": 0.95,
+      "evidence": "'The chat’s · slide 2' is a blank-template bullet slide labelled 'Not your deck.' As a customer already using Office add-ins and linked charts, I can dismiss this as a weak chatbot example.",
+      "suggested_action": "Shorten the blank-template comparison and give the preserved slide’s missed €71–73m box more emphasis, making cross-file consistency the reason to switch."
+    },
+    {
+      "shot_id": "00:00–00:15",
+      "category": "workflow_state_confusion",
+      "severity": 0.48,
+      "confidence": 0.96,
+      "evidence": "The opening says 'Model updated' and shows Excel at €74.6m; later Excel becomes 'Step 1 of 3, by hand.' I cannot immediately tell whether this is a rewind or another update.",
+      "suggested_action": "Add a brief 'Earlier that night' cue at the CFO request, or open with the stale pack and show the model changing once."
+    },
+    {
+      "shot_id": "01:19",
+      "category": "trial_value_unclear",
+      "severity": 0.46,
+      "confidence": 0.99,
+      "evidence": "The only next step is 'Request early access'. It does not tell me what I can test before asking my CFO to consider another tool.",
+      "suggested_action": "Keep the single CTA and make the adjacent copy invite testing the model–memo–deck workflow on a sample pack, if that trial is available."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Show the real accepted slide 2 with David’s previously flagged box corrected to €74.6m, closing the exact failure that made me care.",
+  "purchase_objections": [
+    "I see ten proposed changes, but I still need to establish whether important references were missed.",
+    "The corrected memo is visible; the corrected slide that caused the escalation is not.",
+    "I already use Office AI and linked charts, so the incremental benefit must hold on my existing pack.",
+    "I need to test preservation of formulas, charts and formatting on a representative pack.",
+    "Confidentiality, deployment requirements and pricing remain purchase questions; the ad provides no answers."
+  ],
+  "would_try": "yes — the stale textbox, memo table and dependent chart are recognizably my problem; I would test this on a sanitized pack.",
+  "buy_decision": "TRY_FIRST — a successful pilot on my own recurring pack, demonstrating complete propagation of the changed assumption while preserving formulas and layout, would flip me to BUY."
+}

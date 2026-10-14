@@ -1,0 +1,88 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 75.65,
+  "dimension_scores": {
+    "stop_scroll": 78,
+    "three_second_comprehension": 87,
+    "thats_me": 93,
+    "part1_attractor": 75,
+    "part2_curiosity_gap": 74,
+    "part3_proof_roadmap": 35,
+    "framework_fit": 84,
+    "open_loop": 70
+  },
+  "framework_detected": "PAS: concrete cross-file mismatch establishes Problem, late-night manual work and the CFO's correction deliver Agitation, and Diffs supplies Solution. Execution is strong overall, but the opening lacks an early proof preview or roadmap.",
+  "framework_recommended": "PAS, with an early proof preview: this audience recognizes mismatched board-pack numbers immediately; briefly showing the real review mechanism would give them a reason to stay through the agitation.",
+  "hook_2s": 8,
+  "evaluation_limitations": [
+    "Frames were located and inspected using absolute paths under the project artifacts directory.",
+    "SHARED.md was read; ../references/HOOKS.md could not be located, so framework timing was assessed using the supplied three-part contract.",
+    "Sound-on wording was assessed from the supplied timeline and local audio transcription report; audio playback was not independently auditioned."
+  ],
+  "issues": [
+    {
+      "shot_id": "00:03–00:13",
+      "category": "delayed_proof_roadmap",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "The opening proceeds from 'AI gave you the answer. You still have a board pack to fix.' to CFO instructions and Maya's reaction. 'Introducing Diffs' arrives at 31.3 seconds, with real tracked-change proof after 39.3 seconds.",
+      "suggested_action": "Insert a brief real Word tracked-change preview within the first 10 seconds, captioned 'One request. Changes across three files. You approve.' Then return to the manual-work story."
+    },
+    {
+      "shot_id": "00:07–00:11",
+      "category": "opening_state_confusion",
+      "severity": 0.57,
+      "confidence": 0.94,
+      "evidence": "The first frame says 'Model updated,' but David subsequently instructs 'Set your model to 8.5 and fix the memo and deck by 9.' Without a flashback cue, the opening appears to reverse the model's completed state.",
+      "suggested_action": "Label David's instruction 'Earlier that night' or place it before the mismatch card so the viewer understands how the opening situation arose."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "weak_visual_interrupt",
+      "severity": 0.43,
+      "confidence": 0.95,
+      "evidence": "The first frame presents three evenly arranged file tiles beneath 'Model updated. Memo and deck still wrong.' The pain is clear, but the composition resembles a conventional software explainer card.",
+      "suggested_action": "Open tightly on the conflicting €74.6m and €71–73m values, then reveal their Excel, Word and PowerPoint contexts beneath the existing headline."
+    },
+    {
+      "shot_id": "00:03–00:07",
+      "category": "execution_gap_readability",
+      "severity": 0.4,
+      "confidence": 0.88,
+      "evidence": "The large super explains the problem, while the laptop's 'Here's what to change' response and file instructions occupy a much smaller angled area. The specific evidence that AI only suggested edits is harder to read than the assertion.",
+      "suggested_action": "Push closer to the chat response and hold 'Here's what to change' at phone-readable size alongside a clear view of the unchanged memo and deck."
+    },
+    {
+      "shot_id": "00:25–00:28 → 01:07–01:10",
+      "category": "incomplete_visual_loop_closure",
+      "severity": 0.39,
+      "confidence": 0.96,
+      "evidence": "David flags the slide's €71–73m box. Later, 'The exact box David flagged' identifies its proposed diff and '10 of 10 changes accepted' confirms acceptance, but the visible final document proof shows the memo rather than the corrected slide.",
+      "suggested_action": "After acceptance, show a real recording of slide 2 with the formerly ringed box reading €74.6m to close the opening's mismatch visually."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Preview a real cross-file diff and the user's approval within the first 10 seconds so the recognizable pain immediately carries a credible promise of resolution.",
+  "hook_alternatives": [
+    {
+      "framework": "In Medias Res",
+      "first_3s_visual": "David's 2:41 AM message appears over a tight crop of the slide's conflicting €74.6m heading and €71–73m box.",
+      "line": "Memo says €74.6m. Which is it?",
+      "why": "Starts inside a concrete professional failure and makes the viewer want to see how the mismatch happened and gets fixed."
+    },
+    {
+      "framework": "Everything-You-Know-Is-Wrong",
+      "first_3s_visual": "A readable 'Here's what to change' chat answer sits beside the memo and deck still showing €71–73m.",
+      "line": "AI answered. Your files didn't change.",
+      "why": "Challenges the feeling that receiving an AI answer means the task is finished, using visible evidence of the execution gap."
+    },
+    {
+      "framework": "Before–After–Bridge",
+      "first_3s_visual": "A mismatched memo value cuts to its real tracked change from €71–73m to €74.6m, with the review controls visible.",
+      "line": "From fixing every file to reviewing every change.",
+      "why": "Shows the desired role reversal immediately and establishes the product mechanism before asking viewers to follow the longer story."
+    }
+  ]
+}

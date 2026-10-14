@@ -1,0 +1,68 @@
+{
+  "critic": "craft",
+  "stage": "script",
+  "score": 86.05,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 90,
+    "subject_character_consistency": 85,
+    "motion_temporal_stability": 86,
+    "composition_camera_readability": 83,
+    "audio_editing": 85
+  },
+  "issues": [
+    {
+      "shot_id": "director's cut, after beat 8",
+      "category": "message_hold_duration",
+      "severity": 0.65,
+      "confidence": 1.0,
+      "evidence": "The 4 s insert specifies three successive filenames: “Board_Deck_Q3_updated.pptx → (1) → (2)”. Three sequential messages cannot each hold for 2.5 s within four seconds.",
+      "suggested_action": "Show all three filenames together from the first frame and hold the completed Downloads list for four seconds."
+    },
+    {
+      "shot_id": "beat 13; vertical 11.5–19",
+      "category": "source_crop_readability",
+      "severity": 0.55,
+      "confidence": 0.95,
+      "evidence": "The script specifies three sentence-fragment crops of an unaltered request bubble. In u3_24.6, “Take DACH Q4 down” begins halfway through a line, and the subsequent fragments share lines with adjoining text. Rectangular crops cannot isolate the quoted fragments cleanly.",
+      "suggested_action": "Define crops around complete source lines, allowing adjacent words to remain visible, and use an editorial outline to guide attention; verify each crop at the required phone-readable size in both aspect ratios."
+    },
+    {
+      "shot_id": "beat 13, optional composer opening",
+      "category": "message_hold_duration",
+      "severity": 0.5,
+      "confidence": 1.0,
+      "evidence": "The optional 0.5 s composer opening is explicitly “taken from crop 1's time”, reducing its specified 2.5 s hold to two seconds.",
+      "suggested_action": "Omit the optional composer opening in both cuts, preserving all three complete 2.5 s request holds."
+    },
+    {
+      "shot_id": "beat 11",
+      "category": "narration_timing",
+      "severity": 0.4,
+      "confidence": 0.9,
+      "evidence": "“You still have to carry it through the pack.” is ten words assigned to a three-second beat, requiring 200 words per minute before pauses despite the direction “quiet” and the narrator's “Calm, dry” delivery.",
+      "suggested_action": "Shorten the line to “You still carry it through the pack.” and verify the synthesized delivery fits within three seconds without acceleration."
+    },
+    {
+      "shot_id": "director's cut, P3 replacement and beat 20",
+      "category": "source_continuity",
+      "severity": 0.35,
+      "confidence": 0.9,
+      "evidence": "P3 ends with “1 of 10”, followed by “beat 20 as is”; beat 20 uses the existing ui3 39.4–40.8 Accept all sequence, whose preceding review state is zero accepted.",
+      "suggested_action": "If P3 is recorded, use its specified subsequent Accept all capture for beat 20 as well, preserving the progression from one accepted change to ten. Without P3, the existing controls hold and Accept all fallback remains usable."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "director's cut, after beat 8",
+      "evidence": "Three successive filename states are allocated only four seconds."
+    },
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "beat 13, optional composer opening",
+      "evidence": "Taking 0.5 seconds from the first 2.5-second request crop leaves a two-second hold; this failure applies only if the optional opening is used."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Specify request crops using the real bubble's line breaks and preserve a full 2.5-second readable hold for each crop in both aspect ratios."
+}

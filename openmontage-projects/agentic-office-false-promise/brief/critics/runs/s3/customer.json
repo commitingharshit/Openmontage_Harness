@@ -1,0 +1,74 @@
+{
+  "critic": "customer_psychology",
+  "stage": "script",
+  "score": 87,
+  "dimension_scores": {
+    "pain_specificity_salience": 94,
+    "target_relatability": 91,
+    "emotional_authenticity_progression": 87,
+    "product_pain_fit": 88,
+    "trust_transformation_credibility": 77,
+    "purchase_motivation_cta": 77
+  },
+  "recognition": 9.4,
+  "resonance": 8.8,
+  "persuasion": 7.8,
+  "issues": [
+    {
+      "shot_id": "beats 17–21",
+      "category": "outcome_proof",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "The payoff shows the proposed “TextBox 23 · €71–73m → €74.6m” row, then “10 of 10 changes accepted,” then Maya closes the laptop. The corrected slide itself remains optional recording P2.",
+      "suggested_action": "Use P2 to replace beat 15: show the accepted €74.6m in the original teal slide, placing that shot after beat 20 and before Maya's relief. The existing row-plus-accepted-status fallback works, but gives me less confidence that the actual deliverable is fixed."
+    },
+    {
+      "shot_id": "beats 12–16",
+      "category": "native_workspace_differentiation",
+      "severity": 0.58,
+      "confidence": 0.93,
+      "evidence": "“One request across the model, memo and deck” accompanies tight request crops; subsequent shots isolate a memo paragraph, a deck and review rows. No specified product shot establishes all three native files together in their folder.",
+      "suggested_action": "Begin beat 13 with a legible real workspace view containing the three files, then retain the request crops; change the narration to “One request edits your model, memo and deck in the same workspace.”"
+    },
+    {
+      "shot_id": "beats 4–8",
+      "category": "comparison_credibility",
+      "severity": 0.43,
+      "confidence": 0.88,
+      "evidence": "“So you drive. The AI suggests” leads into literal markdown pasted into Word and a downloaded deck reduced to a default slide with bullets.",
+      "suggested_action": "Change the narration to “The chat answers. You carry it into the files.” Keep the specific failures, but frame the comparison around this chat-to-file workflow so I do not hear a blanket claim that my existing Office assistants cannot edit documents."
+    },
+    {
+      "shot_id": "beat 22",
+      "category": "trial_motivation",
+      "severity": 0.29,
+      "confidence": 0.86,
+      "evidence": "The CTA is simply “Request early access,” following a very specific board-pack problem.",
+      "suggested_action": "Replace the CTA with “Request early access for your next board pack” so I connect signing up with a concrete recurring task."
+    },
+    {
+      "shot_id": "director's cut, insert after beat 8",
+      "category": "pain_recognition_readability",
+      "severity": 0.25,
+      "confidence": 0.95,
+      "evidence": "The four-second sprawl insert specifies “Regenerate twice” and three successive filenames: “Board_Deck_Q3_updated.pptx → (1) → (2).”",
+      "suggested_action": "Show all three filenames together from the first frame and hold the list for four seconds; drop the sequential regenerations so I can recognise the version mess."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "director's cut, insert after beat 8",
+      "evidence": "Three successive filename states and two regenerations are allocated only four seconds; the specified sequence cannot give each state a 2.5-second hold."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the product demonstration with the corrected €74.6m visible in Maya's original slide after acceptance, so her relief follows proof of the finished deliverable.",
+  "purchase_objections": [
+    "I already use Copilot and ChatGPT for Word; I need to understand why this handles the whole pack better.",
+    "Accepted changes do not establish that every dependent reference was found; I still own the tie-out.",
+    "I need to see that the original files and template survive, rather than receiving another generated deck.",
+    "Before using confidential fund files, my firm would need to assess deployment and data handling."
+  ],
+  "would_try": "maybe — I recognise the late-night pack rework immediately and would request access for a test pack, but I would verify the native-file result before trusting a live board or LP deliverable."
+}

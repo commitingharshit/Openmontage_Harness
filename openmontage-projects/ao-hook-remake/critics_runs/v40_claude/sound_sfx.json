@@ -1,0 +1,157 @@
+{
+ "critic": "sound_sfx",
+ "stage": "animatic",
+ "score": 60,
+ "dimension_scores": {
+  "foley_coverage": 68,
+  "transition_design": 45,
+  "ui_sound_language": 64,
+  "sync_accuracy": 70,
+  "restraint": 58
+ },
+ "issues": [
+  {
+   "shot_id": "whole",
+   "category": "cut_transients_not_heard",
+   "severity": 0.65,
+   "confidence": 0.75,
+   "evidence": "cuts_without_sound_event_s lists 25 of 45 cuts (55.6%); hook 14 of 26. The V39 fill only adds click+whoosh when NO non-VO cue lies within 0.25 s, and fading-in beds count: 54.4/64.4/91.8 (ticktock, 0.4 s fade-in), 106.3 (office + heart_slow fade-ins), 112.4 (birds 0.4 s fade), 115.3 (birds 0.6 s fade), 52.6 (key at 0.12). In the hook, whoosh2 at 0.18 under VO (16.5, 22.97, 36.77, 45.63) is not detected.",
+   "suggested_action": "Exclude beds/fade-ins (ticktock, office, birds, city, heart_, bass_pulse) from the 'already covered' test and require a cue with fi==0 and vol >= 0.25 within 60 ms before the cut; raise hook cut whooshes to 0.3 and high-pass them at 300 Hz so they read over beds."
+  },
+  {
+   "shot_id": "00:37.35-00:41.7",
+   "category": "overload_masks_vo",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "whoosh 0.5, whoosh 0.45, whoosh2 0.45, whoosh 0.45, whoosh2 0.45, riser 0.55, impact 0.55, buzz x4 0.35, clock 0.55, buzz 0.5 + bell in 4.3 s; VO 'Five tabs. Copy. Paste.' measures -0.9 dB under it.",
+   "suggested_action": "Keep the density but sync one whoosh per spoken word (Copy/Paste/Check/Repeat) and pull each -5 dB while the VO is speaking."
+  },
+  {
+   "shot_id": "00:20.4 / 00:23.8 / 00:30.9",
+   "category": "missing_body_foley",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "Real inserts of her head in hands (20.4-21.3, 23.8) and scratching her head (~30.9) get only the generic click+whoosh cut fill; no cloth rustle, chair creak or breath.",
+   "suggested_action": "Add a sleeve/cloth rustle and an exhale at 20.45, a chair creak at 23.85, a hair scratch at 30.95 (-24 dBFS)."
+  },
+  {
+   "shot_id": "01:47.9",
+   "category": "lights_on_no_diegetic",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "'real lights come on' at 107.9 is covered only by identity.mp3 (non-diegetic) after the Send click 107.65.",
+   "suggested_action": "Add a soft wall-switch click + room-air lift at 107.9 under the sting."
+  },
+  {
+   "shot_id": "00:51.8-01:17.5",
+   "category": "key_sound_overloaded",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "key.mp3 is used for real keystrokes AND for UI ticks (plan steps 68.2/68.8/69.4, 75.3/76.4/77.5, apps landing, cut 'soft touches' at 0.12), so the product UI has no own voice distinct from typing.",
+   "suggested_action": "Give UI events one family (soft glass tick for steps, pop_long for Accept, identity for done) and reserve key.mp3 for hands on keyboard."
+  },
+  {
+   "shot_id": "00:08.4-00:31.3",
+   "category": "typing_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "One click per real keystroke from typing_keys.json (70 clicks, randomised 0.16-0.26), phone buzz+bell on each partner email (17.1, 28.3, 41.7), Accept pop_long+impact at 93.1, Send click 107.65.",
+   "suggested_action": "Keep."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "more than 50% of cuts with no sound event in a film that claims urgency",
+   "shot_id": "whole (hook 14/26)",
+   "evidence": "25 of 45 cuts (55.6%) in cuts_without_sound_event_s; cuts_on_sound_pct 44.4"
+  }
+ ],
+ "spotting_list": [
+  {
+   "t": "0:16.5",
+   "event": "cut to fixing by hand",
+   "sound": "short whoosh 0.3, HPF 300 Hz",
+   "source": "Mixkit 'fast whoosh transition'"
+  },
+  {
+   "t": "0:20.45",
+   "event": "head in hands",
+   "sound": "cloth rustle + exhale",
+   "source": "Freesound 'sleeve rustle', 'tired sigh female'"
+  },
+  {
+   "t": "0:23.85",
+   "event": "head in hands (real)",
+   "sound": "chair creak",
+   "source": "Freesound 'office chair creak'"
+  },
+  {
+   "t": "0:30.95",
+   "event": "scratches head",
+   "sound": "hair scratch",
+   "source": "Freesound 'scratching hair'"
+  },
+  {
+   "t": "0:36.77",
+   "event": "cut to slide 4 reverted",
+   "sound": "error tick / UI thunk",
+   "source": "Mixkit 'interface error'"
+  },
+  {
+   "t": "0:45.63",
+   "event": "cut out of head-drop",
+   "sound": "air swell / soft whoosh",
+   "source": "Mixkit 'soft air whoosh'"
+  },
+  {
+   "t": "0:52.6",
+   "event": "cut to workspace",
+   "sound": "UI glass tick 0.25",
+   "source": "Mixkit 'soft ui click'"
+  },
+  {
+   "t": "0:54.4",
+   "event": "cut to templates",
+   "sound": "UI glass tick",
+   "source": "Mixkit 'soft ui click'"
+  },
+  {
+   "t": "1:04.4",
+   "event": "cut to Reading your files",
+   "sound": "short data whoosh",
+   "source": "Pixabay 'digital swipe'"
+  },
+  {
+   "t": "1:31.8",
+   "event": "cut into hero",
+   "sound": "push-in whoosh",
+   "source": "Mixkit 'cinematic whoosh'"
+  },
+  {
+   "t": "1:46.3",
+   "event": "cut to payoff room",
+   "sound": "soft low hit",
+   "source": "Mixkit 'soft impact'"
+  },
+  {
+   "t": "1:47.9",
+   "event": "lights come on",
+   "sound": "wall switch + air lift",
+   "source": "Freesound 'light switch click'"
+  },
+  {
+   "t": "1:52.4",
+   "event": "cut to sunrise",
+   "sound": "airy swell",
+   "source": "Pixabay 'morning swell'"
+  },
+  {
+   "t": "1:55.3",
+   "event": "cut to end card",
+   "sound": "soft paper/text reveal",
+   "source": "Mixkit 'text reveal whoosh'"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Fix the transient-fill test so fading-in beds no longer count as a cut sound, and place an audible (>= 0.25, no fade-in) transient within 60 ms before each of the 25 listed silent cuts."
+}

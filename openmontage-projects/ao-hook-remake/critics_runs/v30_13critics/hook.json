@@ -1,0 +1,81 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 73,
+  "dimension_scores": {
+    "stop_scroll": 74,
+    "three_second_comprehension": 66,
+    "thats_me": 88,
+    "part1_attractor": 70,
+    "part2_curiosity_gap": 85,
+    "part3_proof_roadmap": 25,
+    "framework_fit": 84,
+    "open_loop": 91
+  },
+  "framework_detected": "In Medias Res, substantially executed: conflicting attachments at the deadline, rewind, escalating failures, and a return to Send. PAS supports the middle, but proof and roadmap arrive outside the opening window.",
+  "framework_recommended": "In Medias Res: the imminent wrong-number email makes a familiar professional risk concrete and creates a strong question; retain it while adding a brief glimpse of reviewable product changes within 12–25 seconds.",
+  "hook_2s": 5,
+  "issues": [
+    {
+      "shot_id": "00:12–00:25",
+      "category": "missing_proof_roadmap",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "The required 12–25-second proof window contains the Word-like document, manual fixing, the partner notification and a frustrated reaction. The promise 'See exactly what changed. Decide what stays.' arrives at 46 seconds; real product proof follows later.",
+      "suggested_action": "Insert a brief real Changes-panel glimpse within 12–25 seconds, showing edits grouped across three files and Accept/Reject, with 'Every change. Yours to review.' Then resume the unresolved email story."
+    },
+    {
+      "shot_id": "00:00–00:01",
+      "category": "generic_first_frame",
+      "severity": 0.75,
+      "confidence": 0.8,
+      "evidence": "The supplied timeline opens with 'real phone buzzing on desk'; it specifies no visible deadline, conflicting number or task. Muted, the buzz cannot communicate the board-pack problem. This shot is absent from the supplied frame samples.",
+      "suggested_action": "Verify the actual first frame; if it is only the phone, start on the conflicting figures beside Send and carry the phone buzz over that image."
+    },
+    {
+      "shot_id": "00:01–00:04.5",
+      "category": "sound_off_comprehension",
+      "severity": 0.7,
+      "confidence": 0.94,
+      "evidence": "The first supplied email frame foregrounds body copy and three small attachment filenames. The next frame makes '€74.6m ≠ €71–73m' large, but the file labels and 'BOARD AT 9:00' remain small.",
+      "suggested_action": "Make the two conflicting figures visible together immediately, label them simply 'Excel' and 'Slide 4', and enlarge 'Board meeting in 1 minute'; hold that comparison through the first three seconds."
+    },
+    {
+      "shot_id": "00:08–00:23",
+      "category": "opening_task_detour",
+      "severity": 0.61,
+      "confidence": 0.97,
+      "evidence": "After the revenue mismatch, the opening rewinds to 'Update the supply agreement with the new payment terms' and a document-formatting failure. The financial annexure and presentation return through a later partner notification.",
+      "suggested_action": "Shorten the agreement setup to one failure beat and bring the annexure/deck request forward, keeping the opening anchored to the number that threatens the email."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "The first frame must contain a legible image or text of the pain or desire.",
+      "shot_id": "00:00",
+      "evidence": "The supplied timeline describes only a phone buzzing on a desk, with no concrete pain or desire specified; verify against the unsampled opening frame."
+    }
+  ],
+  "revision_scope": "opening",
+  "top_revision": "Keep the deadline mismatch and rewind, but show a brief real, reviewable three-file change within the first 25 seconds so the opening promises a credible payoff.",
+  "hook_alternatives": [
+    {
+      "framework": "In Medias Res",
+      "first_3s_visual": "Send button beneath two large attachment callouts: 'Excel €74.6m' and 'Slide 4 €71–73m'; red 'Board in 1 minute'; cursor freezes.",
+      "line": "One minute to the board. Two different numbers.",
+      "why": "Makes the deadline and professional risk readable while muted and opens the question of whether she can safely send."
+    },
+    {
+      "framework": "PAS",
+      "first_3s_visual": "A large chatbot 'Done.' beside the model showing €74.6m and the deck still showing €71–73m.",
+      "line": "AI said done. Your files still disagree.",
+      "why": "Names the exact frustration immediately and connects the AI response to unfinished cross-file work."
+    },
+    {
+      "framework": "BAB",
+      "first_3s_visual": "Conflicting model and deck figures cut to the real Changes panel grouped across three files, with Accept/Reject visible.",
+      "line": "From conflicting files to changes you can review.",
+      "why": "Shows both the pain and the credible destination early, creating curiosity about how the product bridges them."
+    }
+  ]
+}

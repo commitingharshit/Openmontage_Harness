@@ -1,0 +1,305 @@
+{
+  "critic": "real_film_benchmark",
+  "stage": "animatic",
+  "score": 60,
+  "dimension_scores": {
+    "production_value": 54,
+    "photorealism_no_ai_tells": 85,
+    "cohesion_with_ref_look": 45,
+    "ui_and_graphics_finish": 44
+  },
+  "issues": [
+    {
+      "shot_id": "00:49.6–00:55 / f_22",
+      "category": "pasted_screenshot_presentation",
+      "severity": 0.94,
+      "confidence": 0.99,
+      "evidence": "Three rectangular product captures fan beneath the Agentic Office logo against a near-black teal background; the surrounding office is not visually recognizable. The captures read as pasted screenshots.",
+      "suggested_action": "Present the real captures in one large, coherent workspace view with a clearly visible office environment and restrained camera movement; remove the three-window screenshot fan."
+    },
+    {
+      "shot_id": "00:08–00:41.6 / f_04, f_06, f_11, f_14, f_16",
+      "category": "slide_deck_ui_finish",
+      "severity": 0.87,
+      "confidence": 0.98,
+      "evidence": "Large white application panels, schematic ribbon controls, placeholder document lines and miniature slide thumbnails dominate the frames. The centered giant 'Done.' and 'Copy.' overlays resemble presentation slides.",
+      "suggested_action": "Give the illustrated screens a consistent, detailed application design, then frame individual actions tightly with deliberate transitions instead of repeatedly presenting entire windows beneath oversized words."
+    },
+    {
+      "shot_id": "00:55–01:12.6 / f_23–f_29",
+      "category": "capture_resolution_and_framing",
+      "severity": 0.83,
+      "confidence": 0.98,
+      "evidence": "The prompt close-up has visibly soft enlarged lettering; the Excel view loses its left edge; the narrow changes panel occupies a vertical strip surrounded by broad empty margins. Small truncated labels remain visible.",
+      "suggested_action": "Recapture the real app at higher resolution and increased application zoom, then use consistent crops that preserve the relevant file identifier, changed value and review control together."
+    },
+    {
+      "shot_id": "00:00–01:25 / f_01, f_08, f_14, f_26, f_34",
+      "category": "uniform_overlay_treatment",
+      "severity": 0.77,
+      "confidence": 0.97,
+      "evidence": "White screens repeatedly have gray darkened corners, soft halos and heavy floating-card shadows, while the ending repeats centered white/cyan type over a teal glow.",
+      "suggested_action": "Reduce the persistent vignette and glow, keep screen whites clean, and establish a restrained hierarchy of typography, shadows and accent colors across the UI and title cards."
+    },
+    {
+      "shot_id": "00:23 and 00:31 / f_10, f_13",
+      "category": "stock_reaction_repetition",
+      "severity": 0.73,
+      "confidence": 0.96,
+      "evidence": "Both supplied reaction frames show the same frontal head-in-hands pose, striped shirt and blue office composition. Their similarity makes the emotional coverage feel recycled beside the varied human coverage in REF_bJcA23ckzcY.",
+      "suggested_action": "Keep the strongest head-in-hands beat and replace the other with a distinct action from the same protagonist's footage, preserving wardrobe and office continuity."
+    },
+    {
+      "shot_id": "00:35–00:41.6 / f_15, f_17",
+      "category": "generic_graphic_compositing",
+      "severity": 0.71,
+      "confidence": 0.98,
+      "evidence": "The regenerated deck is a floating thumbnail strip with generic bars and gray placeholder lines; the overload frame stacks tilted application rectangles and four matching notification cards.",
+      "suggested_action": "Make the Slide 4 problem a precise close-up of a credible slide, then build overload through successive motivated file changes with fewer overlapping windows and more controlled perspective."
+    },
+    {
+      "shot_id": "01:09 / f_29",
+      "category": "annotation_finish",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "A broad glowing red ellipse crosses the 'Slide 4 title' row beside 'THE SLIDE THAT SLIPPED / Slide 4. Caught.' The ellipse and glow resemble an explanatory markup layer.",
+      "suggested_action": "Replace the ellipse with a restrained row highlight and a fine connector to a compact callout, leaving the actual diff fully legible."
+    },
+    {
+      "shot_id": "00:15.6 / f_07",
+      "category": "insert_quality",
+      "severity": 0.59,
+      "confidence": 0.94,
+      "evidence": "The typing insert is dominated by a soft hand with barely resolved keyboard detail; measured sharpness at 15.6 seconds is 3.5. Its warm skin and shallow focus differ markedly from the blue protagonist coverage.",
+      "suggested_action": "Use a sharper typing take with visible key contact and match its lighting to the office coverage; verify the moving source before deciding whether the softness is intentional motion blur."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "real_film_index must be at least 60",
+      "shot_id": "whole",
+      "evidence": "The 34 supplied candidate frames average 5.4706 out of 10, yielding a real_film_index of 54.71."
+    },
+    {
+      "rule": "No UI frame that looks like a screenshot pasted on black",
+      "shot_id": "00:49.6–00:55 / f_22",
+      "evidence": "The three product screenshots appear as detached rectangles against a near-black field; the described office background does not visibly integrate them into a photographed environment."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Replace the recurring floating-window presentation with a coherent, high-resolution screen treatment that integrates the real product captures into the office film.",
+  "frame_scores": [
+    {
+      "t": "f_01 / opening",
+      "score": 5,
+      "tell": "Floating comparison cards and heavy vignette dominate a flat email illustration.",
+      "fix": "Tighten the email framing and reduce card shadows."
+    },
+    {
+      "t": "f_02 / opening",
+      "score": 5,
+      "tell": "Cursor near Send adds action, but the composition remains a graphic explainer.",
+      "fix": "Use a motivated screen close-up with cleaner lighting."
+    },
+    {
+      "t": "f_03 / 00:05–00:08",
+      "score": 8,
+      "tell": "Credible skin, hands, practical light and environmental depth; no obvious facial AI tell.",
+      "fix": "Preserve this as the live-action visual anchor."
+    },
+    {
+      "t": "f_04 / 00:08–00:11",
+      "score": 5,
+      "tell": "Sparse chatbot illustration with darkened edges and large unused white space.",
+      "fix": "Frame the prompt action more tightly."
+    },
+    {
+      "t": "f_05 / 00:11",
+      "score": 4,
+      "tell": "Giant checkmark and 'Done.' over a dimmed screenshot feel like a slide.",
+      "fix": "Integrate completion into the application's visual language."
+    },
+    {
+      "t": "f_06 / 00:12–00:15",
+      "score": 5,
+      "tell": "Schematic ribbon and gray document placeholder lines expose the illustration.",
+      "fix": "Finish the document and application detail."
+    },
+    {
+      "t": "f_07 / 00:15.6",
+      "score": 6,
+      "tell": "Natural hand anatomy, but very soft focus and unmatched lighting.",
+      "fix": "Choose a sharper, cooler typing insert."
+    },
+    {
+      "t": "f_08 / 00:16.5–00:23",
+      "score": 6,
+      "tell": "Readable notification, but excessive background blur and shadow.",
+      "fix": "Reduce the floating-card treatment."
+    },
+    {
+      "t": "f_09 / 00:16.5–00:23",
+      "score": 6,
+      "tell": "Cyan emphasis is clear but adds another explanatory overlay.",
+      "fix": "Use subtler emphasis within the notification."
+    },
+    {
+      "t": "f_10 / 00:23",
+      "score": 7,
+      "tell": "Photographic face and hands; familiar stock stress pose.",
+      "fix": "Keep only one use of this reaction."
+    },
+    {
+      "t": "f_11 / 00:25–00:27",
+      "score": 5,
+      "tell": "Tiny schematic thumbnails inside an oversized white chatbot window.",
+      "fix": "Frame the generation card at a useful scale."
+    },
+    {
+      "t": "f_12 / 00:28–00:30",
+      "score": 5,
+      "tell": "Notification crowds the top edge while miniature slides remain illustrative.",
+      "fix": "Compose the message and affected slide as one deliberate detail shot."
+    },
+    {
+      "t": "f_13 / 00:31",
+      "score": 7,
+      "tell": "Natural face, but nearly repeats f_10's pose and composition.",
+      "fix": "Use a different action from matching footage."
+    },
+    {
+      "t": "f_14 / 00:32–00:35",
+      "score": 4,
+      "tell": "Clock, progress panel and bottom headline compete like slide elements.",
+      "fix": "Create one focal point per moment."
+    },
+    {
+      "t": "f_15 / 00:35–00:37",
+      "score": 4,
+      "tell": "Detached thumbnail strip and generic chart graphics.",
+      "fix": "Show a detailed close-up of the affected slide."
+    },
+    {
+      "t": "f_16 / 00:37.4",
+      "score": 4,
+      "tell": "Giant 'Copy.' over a schematic spreadsheet reads as a presentation.",
+      "fix": "Show a precise copy action and smaller integrated typography."
+    },
+    {
+      "t": "f_17 / 00:40",
+      "score": 4,
+      "tell": "Tilted window pile and uniform notifications look composited.",
+      "fix": "Simplify the overlap and use consistent perspective."
+    },
+    {
+      "t": "f_18 / 00:41.6–00:44.6",
+      "score": 5,
+      "tell": "Oversized cursor, glowing Send button and mostly empty panel.",
+      "fix": "Use restrained cursor scale and a more purposeful email crop."
+    },
+    {
+      "t": "f_19 / 00:46",
+      "score": 6,
+      "tell": "Neutral black transition; no AI tell, little standalone production evidence.",
+      "fix": "Verify its transition timing in motion."
+    },
+    {
+      "t": "f_20 / 00:46–00:49.6",
+      "score": 6,
+      "tell": "Clean type but familiar centered cyan-glow title treatment.",
+      "fix": "Refine spacing and reduce glow."
+    },
+    {
+      "t": "f_21 / 00:49.6",
+      "score": 6,
+      "tell": "Legible logo lockup with generic glow.",
+      "fix": "Use a more restrained brand reveal."
+    },
+    {
+      "t": "f_22 / 00:49.6–00:55",
+      "score": 4,
+      "tell": "Small product screenshots pasted into a dark fan composition.",
+      "fix": "Replace with a large integrated workspace view."
+    },
+    {
+      "t": "f_23 / 00:55–00:60",
+      "score": 5,
+      "tell": "Enlarged capture text is soft and the crop lacks spatial context.",
+      "fix": "Recapture at higher resolution and application zoom."
+    },
+    {
+      "t": "f_24 / 00:55–00:60",
+      "score": 5,
+      "tell": "Document is cut off at left; prompt panel and headline feel loosely assembled.",
+      "fix": "Align the crop around the actual working area."
+    },
+    {
+      "t": "f_25 / 01:00–01:02",
+      "score": 6,
+      "tell": "Authentic review controls, but the spreadsheet's left edge is clipped.",
+      "fix": "Preserve file context while emphasizing the diff bar."
+    },
+    {
+      "t": "f_26 / 01:02–01:04",
+      "score": 6,
+      "tell": "Real tracked changes provide detail; vignette and floating page weaken finish.",
+      "fix": "Keep the page crisp and reduce edge shading."
+    },
+    {
+      "t": "f_27 / 01:04–01:06",
+      "score": 6,
+      "tell": "Clear Accept action, but enlarged cursor and soft capture edges are conspicuous.",
+      "fix": "Use a sharper capture and restrained cursor emphasis."
+    },
+    {
+      "t": "f_28 / 01:06–01:12",
+      "score": 5,
+      "tell": "Narrow truncated changes list sits between large empty margins.",
+      "fix": "Show the list within a wider, contextual workspace composition."
+    },
+    {
+      "t": "f_29 / 01:09",
+      "score": 5,
+      "tell": "Glowing red ellipse resembles presentation markup.",
+      "fix": "Use a precise row highlight and restrained callout."
+    },
+    {
+      "t": "f_30 / 01:12.6–01:14",
+      "score": 5,
+      "tell": "Repeated isolated Send button crop and broad empty panel.",
+      "fix": "Frame the email and attachments as a complete action."
+    },
+    {
+      "t": "f_31 / 01:16–01:19",
+      "score": 7,
+      "tell": "Natural dawn light and real environmental texture; composition feels incidental.",
+      "fix": "Choose the strongest dawn framing and gently match contrast."
+    },
+    {
+      "t": "f_32 / 01:16–01:19",
+      "score": 7,
+      "tell": "Credible photographic sunrise, nearly identical to f_31.",
+      "fix": "Treat both as one continuous photographed beat."
+    },
+    {
+      "t": "f_33 / 01:19–01:25",
+      "score": 6,
+      "tell": "Clean readable headline, but another centered gradient title card.",
+      "fix": "Refine the strike-through and typography hierarchy."
+    },
+    {
+      "t": "f_34 / ending",
+      "score": 6,
+      "tell": "Orderly logo and CTA; conventional glowing SaaS end card.",
+      "fix": "Reduce glow and refine lockup spacing."
+    }
+  ],
+  "real_film_index": 54.71,
+  "closest_ref": "REF_bJcA23ckzcY_sheet_01.jpg, OpenAI Codex: the blue office footage approaches its photographic palette, but the candidate's dominant floating UI panels lack the reference's integrated screens, varied coverage and controlled practical lighting.",
+  "top_3_upgrades": [
+    "Replace detached screenshot fans and repeated whole-window illustrations with one coherent, detailed screen treatment integrated into the office setting.",
+    "Recapture the real product at higher resolution and application zoom, preserving file context alongside each diff and approval action.",
+    "Use distinct protagonist coverage and sharper matching inserts, then reduce pervasive vignette, glow and heavy compositing shadows."
+  ],
+  "evaluation_notes": "Frame scores cover all 34 supplied candidate images; filenames are retained because exact sampling timestamps were not supplied. No obvious facial AI tell is visible. Temporal flicker, identity drift and vocal realism cannot be verified from stills and a written audio timeline. SHARED.md was read from the sibling project's critic folder; CINEMATOGRAPHY.md was not located in the searched project paths."
+}

@@ -1,0 +1,77 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 80,
+  "dimension_scores": {
+    "pain_specificity_salience": 92,
+    "target_relatability": 89,
+    "emotional_authenticity_progression": 83,
+    "product_pain_fit": 78,
+    "trust_transformation_credibility": 64,
+    "purchase_motivation_cta": 65
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 6,
+  "hook_2s": "9: Model updated. Memo and deck still wrong. names a familiar tie-out problem immediately; the three file tiles make it understandable with sound off.",
+  "purchase_objections": [
+    "I see accepted changes, but I do not see the flagged slide corrected inside the original deck.",
+    "Does it find every dependent reference, or only the obvious text replacements?",
+    "Why does reducing DACH Q4 from 8.9 to 8.5 produce an FY26 outlook above the old range?",
+    "Will my existing charts and formatting survive the edits?",
+    "Is the coordination across my actual files enough to justify another tool alongside the AI tools I already use?"
+  ],
+  "would_try": "yes — The real cross-file changes and visible approval controls earn a trial on a copy of one of my packs.",
+  "buy_decision": "TRY_FIRST — I am not yet convinced enough to pay after a trial because the film proves approval of proposed edits without showing that the original flagged slide is now correct.",
+  "issues": [
+    {
+      "shot_id": "00:22–00:26",
+      "category": "outcome_proof_gap",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "At 00:25 the panel says All changes reviewed and 10 of 10 changes accepted, but the slide with David's circled €71–73m box never returns corrected.",
+      "suggested_action": "Once the pending recording exists, replace part of the acceptance hold with the real original slide showing its title and flagged box both at €74.6m; retain enough of the panel to establish acceptance."
+    },
+    {
+      "shot_id": "00:14–00:19",
+      "category": "financial_causality_gap",
+      "severity": 0.75,
+      "confidence": 0.98,
+      "evidence": "The Excel bar shows Revenue!E6 8.9 → 8.5, while Word replaces €71–73m with €74.6m. No visible request identifies DACH Q4 or explains how these changes belong to one task.",
+      "suggested_action": "Use the captured request before the diffs and a readable caption identifying DACH Q4 8.9 → 8.5 and revised model outlook €74.6m; avoid implying that the reduction alone explains the higher outlook."
+    },
+    {
+      "shot_id": "00:11.5–00:22",
+      "category": "differentiation_underexplained",
+      "severity": 0.68,
+      "confidence": 0.96,
+      "evidence": "Introducing Diffs promises changes across your files, followed by separate Excel, Word and PowerPoint crops. The shared workspace is never clearly established; sound off, these could look like three separate add-ins.",
+      "suggested_action": "Replace part of the definition card with a real workspace view containing the three file tabs and grouped Changes panel, captioned Your model, memo and deck. One workspace."
+    },
+    {
+      "shot_id": "00:05.5–00:08",
+      "category": "customer_identification_friction",
+      "severity": 0.47,
+      "confidence": 0.97,
+      "evidence": "Not your deck. is followed by Hers and The chat's, although no woman has been introduced. I have to decode whose files these are instead of immediately recognising my own template problem.",
+      "suggested_action": "Label the comparison Your existing deck and The chat's download, with a headline such as Now rebuild your deck."
+    },
+    {
+      "shot_id": "00:26–00:30",
+      "category": "trial_motivation_weak",
+      "severity": 0.43,
+      "confidence": 0.95,
+      "evidence": "The closing Request early access follows another accept-or-reject definition. It gives me a signup action but little sense of what I would evaluate first.",
+      "suggested_action": "Keep the single Request early access CTA and replace the repeated definition with Bring your model, memo and deck. Review the changes together."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "One task, one number, start to finish: DACH Q4 to 8.5 → FY26 €74.6m.",
+      "shot_id": "00:14–00:26",
+      "evidence": "The visible Excel change is identified as Revenue!E6 rather than DACH Q4; the initiating request is absent, and the sequence ends on acceptance status rather than the corrected flagged slide."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Close David's specific complaint with a real post-acceptance view of the same original slide, showing the circled outlook corrected to €74.6m."
+}

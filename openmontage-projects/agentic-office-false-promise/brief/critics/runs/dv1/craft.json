@@ -1,0 +1,71 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 75.3,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 80,
+    "subject_character_consistency": 95,
+    "motion_temporal_stability": 75,
+    "composition_camera_readability": 54,
+    "audio_editing": 70
+  },
+  "issues": [
+    {
+      "shot_id": "00:05.5–00:08",
+      "category": "phone_readability",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "The 00:06.5 frame puts two slides side by side, each approximately 242 pixels wide in the supplied 540-pixel-wide image. The labels, chart years, original outlook and replacement bullets are very small. The large headline and lower caption both say 'Not your deck.'",
+      "suggested_action": "Replace the simultaneous miniature comparison with two large stacked slide crops, enlarge the relevant template and outlook details, and remove the duplicate lower caption."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "information_scale",
+      "severity": 0.77,
+      "confidence": 0.98,
+      "evidence": "At 00:01.5, the chat window spans almost the full width, but 'Model: Revenue!E6 → 8.5 · Deck: slide 2 title → €74.6m' is a small secondary line. Much of the window is empty, with additional large gaps above and below it.",
+      "suggested_action": "Crop the chat window tightly around the request and response, increase the response detail type, and split model, memo and deck into three short readable rows."
+    },
+    {
+      "shot_id": "00:11.5–00:19",
+      "category": "spotlight_alignment",
+      "severity": 0.65,
+      "confidence": 0.97,
+      "evidence": "At 00:12.5, the highlighted request crop ends with 'then make the', while the overlaid quotation ends with 'model,'. At 00:15, the next highlight starts with 'to 8.5 in the model', while its quotation starts with 'then make the memo'. The yellow boxes do not isolate the phrases shown in the captions.",
+      "suggested_action": "Align each spotlight with its complete quoted clause, using separate line-level masks where the clause crosses source lines; keep each complete clause visible for at least 2.5 seconds."
+    },
+    {
+      "shot_id": "00:11.5–00:26",
+      "category": "raster_quality",
+      "severity": 0.6,
+      "confidence": 0.95,
+      "evidence": "The source UI in the 00:12.5–00:17.5 frames is visibly soft, especially the request text. At 00:23, the enlarged panel has truncated file names and the expanded diff continues beyond the bottom edge. These crops contrast with the crisp opening graphics and end card.",
+      "suggested_action": "Use the highest-resolution original capture, crop around only the necessary request or diff, and fit the complete before-and-after pair inside the frame. Keep added captions sharp without enlarging the capture beyond its useful resolution."
+    },
+    {
+      "shot_id": "00:26–00:30",
+      "category": "feed_safe_area",
+      "severity": 0.43,
+      "confidence": 0.86,
+      "evidence": "At 00:28, 'Can make mistakes. You review every change.' sits near the bottom of the frame, around y=890 of 960, where phone-feed controls or captions can overlap it.",
+      "suggested_action": "Move the disclaimer immediately below the CTA and verify the end card against the intended platforms' interface overlays."
+    },
+    {
+      "shot_id": "00:00–00:30",
+      "category": "motion_audio_verification",
+      "severity": 0.35,
+      "confidence": 0.99,
+      "evidence": "The supplied evidence contains eleven still frames and narration start times, but no playable render or audio. It cannot establish transition smoothness, intervening black frames, actual readable hold durations, voice quality, clipping or music balance.",
+      "suggested_action": "Verify the existing final render continuously at phone size with sound, checking full-opacity message holds, crop movements, narration completion before cuts and audio peaks; revise only defects found in playback."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message must be large enough to read on a phone.",
+      "shot_id": "00:05.5–00:08",
+      "evidence": "The side-by-side slide details and labels in the 00:06.5 frame are too small for comfortable phone-feed reading during the 2.5-second comparison."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Reframe the opening and comparison around larger, tightly cropped text and slide details so the essential numbers remain readable at phone-feed size."
+}

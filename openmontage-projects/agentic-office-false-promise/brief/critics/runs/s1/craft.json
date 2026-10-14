@@ -1,0 +1,97 @@
+{
+  "critic": "craft",
+  "stage": "script",
+  "score": 69,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 84,
+    "subject_character_consistency": 65,
+    "motion_temporal_stability": 66,
+    "composition_camera_readability": 56,
+    "audio_editing": 72
+  },
+  "issues": [
+    {
+      "shot_id": "beat 16",
+      "category": "source_duration_mismatch",
+      "severity": 0.9,
+      "confidence": 1.0,
+      "evidence": "The beat allocates 6 seconds to 'D 101–120, 1×', a 19-second source interval, while showing the real request being typed. Beat 23 similarly allocates 4 seconds to D 140–147 at 1×.",
+      "suggested_action": "Specify exact source subranges that fit each slot: show a short typing tail followed by the completed request for at least 2.5 seconds, and select an uninterrupted Accept-all click-to-status excerpt. Extend the slots if those excerpts cannot fit at 1×. If P1 is omitted, explicitly ripple all subsequent timestamps."
+    },
+    {
+      "shot_id": "beats 1, 5 and 11",
+      "category": "insufficient_reading_holds",
+      "severity": 0.83,
+      "confidence": 0.95,
+      "evidence": "Beat 1 streams a heading and three detailed instructions inside 3 seconds. Beat 5 fits typing, Enter, a sheet cut, an unchanged result, a label and another edit into 5 seconds. Beat 11 introduces an image and then a message, specifying only 'Hold still for the last 2 s.'",
+      "suggested_action": "Make the opening answer fully present from the first frame; split beat 5 into an input edit and a separate Summary hold; introduce beat 11's message early enough to hold the complete image-and-message composition for at least 2.5 seconds."
+    },
+    {
+      "shot_id": "beat 18",
+      "category": "generated_action_overload",
+      "severity": 0.8,
+      "confidence": 1.0,
+      "evidence": "N8 asks for 'She leans in', eyes moving 'left to right ... and back', 'a small decisive nod', and a trackpad tap in one generated 5-second clip, used for only 3 seconds.",
+      "suggested_action": "Reduce N8 to one controlled gaze shift with a calm expression. Put the click in the adjacent real UI shot when P3 exists; use the static inline-bar fallback otherwise."
+    },
+    {
+      "shot_id": "beats 4, 13, 18 and 24",
+      "category": "unsupported_reference_continuity",
+      "severity": 0.77,
+      "confidence": 1.0,
+      "evidence": "The new-clip prefix requires 'refs/maya_ref.png as the reference image', although the production constraint permits text prompts only. The final instruction merely says to match the lamp, wardrobe and window direction to g05.",
+      "suggested_action": "Remove the reference-upload requirement. Inspect g05 and encode its visible face, hair, wardrobe, lamp position, window direction and lighting in a single shared text prefix used verbatim for every new take; verify continuity against g05 before selecting takes."
+    },
+    {
+      "shot_id": "30 s cut, 17–21 s and 26–30 s",
+      "category": "short_cut_timing_conflict",
+      "severity": 0.76,
+      "confidence": 1.0,
+      "evidence": "The 17–21-second slot contains both 'the request, then the inline bar' in 4 seconds. The 26–30-second slot imports an end card whose main-cut sequence requires a 3.5-second identity hold followed by a 2.5-second CTA hold.",
+      "suggested_action": "Give the request and inline bar at least 2.5 seconds each by shortening another shot. Build a short-specific end card showing the name, tagline and CTA together for the full 4 seconds."
+    },
+    {
+      "shot_id": "beat 21",
+      "category": "mobile_readability",
+      "severity": 0.68,
+      "confidence": 0.87,
+      "evidence": "The deck row contains 'Board Deck Q3.pptx · Slide 2 · TextBox 23: €71–73m → €74.6m', held for 3 seconds with a circle animation. The script simultaneously requires large phone-readable text and unedited real row wording.",
+      "suggested_action": "Verify a portrait crop using the actual row. If its filename and numeric change cannot remain legible together, use two sequential crops of the same unaltered footage, each held at least 2.5 seconds, and finish the circle before the numeric reading hold."
+    },
+    {
+      "shot_id": "beats 17, 19, 22 and 23",
+      "category": "capture_fallback_editing",
+      "severity": 0.57,
+      "confidence": 0.88,
+      "evidence": "P3 introduces an individual Accept before beat 23 reuses the existing '10 of 10 accepted' recording. P1 is deleted if unavailable, while P2 falls back to a title slide labelled 'Still your template'.",
+      "suggested_action": "Verify that P3's cell state and review count connect cleanly to the existing Accept-all shot; capture a matching final review sequence if they differ. The static P3 fallback and P2 title-slide fallback are usable as specified. Prepare a separate retimed fallback edit with beat 19 removed."
+    },
+    {
+      "shot_id": "beat 23",
+      "category": "unavailable_source_audio",
+      "severity": 0.43,
+      "confidence": 1.0,
+      "evidence": "The sound instruction is 'the app’s own click', but UI_REUSE.md identifies D as 'no audio'.",
+      "suggested_action": "Add a restrained editorial click synchronized to the real Accept-all interaction, or capture its actual sound separately; remove the claim that this sound comes from the existing recording."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Character continuity relies on text prompts; no reference upload.",
+      "shot_id": "NEW CLIPS",
+      "evidence": "The prefix explicitly specifies 'refs/maya_ref.png as the reference image'."
+    },
+    {
+      "rule": "Each generated face shot must contain one emotion and one action.",
+      "shot_id": "beat 18",
+      "evidence": "N8 combines leaning, scanning back and forth, nodding and tapping."
+    },
+    {
+      "rule": "Every message must hold for at least 2.5 seconds.",
+      "shot_id": "30 s cut, 17–21 s",
+      "evidence": "The request and inline-bar message share a sequential 4-second slot, below the 5-second minimum needed for both."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Rebuild the screen-shot timing around exact usable source excerpts and complete 2.5-second reading holds, then derive separate timings for both short cuts."
+}

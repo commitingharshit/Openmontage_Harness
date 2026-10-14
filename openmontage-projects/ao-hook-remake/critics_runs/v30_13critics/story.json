@@ -1,0 +1,74 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 78,
+  "dimension_scores": {
+    "brief_adherence": 78,
+    "progression_causality": 78,
+    "pain_solution_link": 88,
+    "block_purpose_connectives": 74,
+    "proof_of_setup": 72,
+    "pacing_cta": 68
+  },
+  "issues": [
+    {
+      "shot_id": "00:08–00:23",
+      "category": "unresolved_setup",
+      "severity": 0.78,
+      "confidence": 0.95,
+      "evidence": "The first request updates a supply agreement, followed by 'Template gone / Numbering wrong / Table shifted'; the real demonstration later updates a revenue model, board memo and deck.",
+      "suggested_action": "Shorten the agreement detour and establish the model, memo and deck as the central task before the first 'Done'; reserve formatting failure for a film whose demonstration proves its resolution."
+    },
+    {
+      "shot_id": "01:12.6–01:16",
+      "category": "chronology_implies_time_savings",
+      "severity": 0.75,
+      "confidence": 0.94,
+      "evidence": "The opening email is at '8:59 AM', while the successful return to the same email specifies 'Sent · 3 files · reviewed · 8:58 AM'.",
+      "suggested_action": "Remove the successful-send timestamp and explicitly introduce the product sequence as an alternative workflow before returning to the reviewed email."
+    },
+    {
+      "shot_id": "00:55–01:04.4",
+      "category": "missing_causal_bridge",
+      "severity": 0.66,
+      "confidence": 0.93,
+      "evidence": "The setup asks 'Change the revenue on slide 2 to €74.6m'; the product request instead starts 'Take DACH Q4 down to 8.5', with a real diff of 'Revenue!E6 8.9 → 8.5'.",
+      "suggested_action": "Introduce the DACH forecast correction as the source of the revised €74.6m total, then show that total propagating into the memo and deck."
+    },
+    {
+      "shot_id": "00:35–00:37.4",
+      "category": "unsupported_regression",
+      "severity": 0.58,
+      "confidence": 0.96,
+      "evidence": "The earlier deck already displays 'Revenue €71–73m'; the regenerated deck fixes slide 2 to '€74.6m' while 'Cash & covenants' still shows '€71–73m'. No supplied frame establishes that slide 4 was previously correct.",
+      "suggested_action": "Describe slide 4 as a missed related occurrence, and connect its unchanged value directly to the opening mismatch."
+    },
+    {
+      "shot_id": "00:24–00:55",
+      "category": "delayed_solution",
+      "severity": 0.55,
+      "confidence": 0.95,
+      "evidence": "Deck generation, a correction request, regeneration, another 'Done', the missed slide, 'Copy. Paste. Check. Repeat.', and a second stopped-send scene all precede the real product request at 55 seconds.",
+      "suggested_action": "Compress generation and regeneration into one failure sequence, retain the missed slide and stopped-send consequence, and bring the real cross-file request forward."
+    },
+    {
+      "shot_id": "01:16–01:25",
+      "category": "atmosphere_only_block",
+      "severity": 0.3,
+      "confidence": 0.98,
+      "evidence": "Two supplied frames show only the sunrise; the completed-send beat is followed by sunrise, 'This time, it is.', and another logo/tagline before 'Request early access'.",
+      "suggested_action": "Shorten the sunrise to a transition and move directly from the human-reviewed send to the final proposition and CTA."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Do NOT claim time savings.",
+      "shot_id": "01:12.6–01:16",
+      "evidence": "Successful sending at 8:58 AM is staged against the opening unsuccessful workflow at 8:59 AM, implying an earlier finish."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Center the setup and demonstration on one forecast correction across the model, memo and deck, using the missed Slide 4 value as the explicit failure that human-reviewed diffs resolve.",
+  "retell": "A professional is about to send board files whose revenue figures disagree. Earlier, a chatbot declared work done, but its outputs needed manual repair and a deck correction left another slide inconsistent. Agentic Office proposes related edits across a spreadsheet, memo and presentation, and the person reviews them. The person catches the missed Slide 4 figure, approves the changes and sends the files.",
+  "scroll_away_second": 30
+}

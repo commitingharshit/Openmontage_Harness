@@ -1,0 +1,111 @@
+{
+ "critic": "edit",
+ "stage": "animatic",
+ "score": 59,
+ "dimension_scores": {
+  "rhythm_wave": 63,
+  "cut_motivation": 57,
+  "connectives": 58,
+  "economy": 54,
+  "transitions_quality": 60
+ },
+ "issues": [
+  {
+   "shot_id": "01:01.4-01:11.4",
+   "category": "same_size_run",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "Four consecutive tight assistant-panel crops at the same flat front angle (62.5 prompt, 65 'Reading your files', 67.5, 70 plan) - the 'plan' section reads as one long screenshot scroll.",
+   "suggested_action": "Split with a cutaway: at 67.0 cut to the top-down laptop or a wide of the full window, then back in; or collapse 64.4-71.4 into a 2.5 s three-cut burst."
+  },
+  {
+   "shot_id": "00:16.5-00:23",
+   "category": "long_hold_in_urgency",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "Fix-by-hand shot runs 6.47 s (17.5 and 20 frames are near identical notification-over-Word) while the VO says 'So you fix it by hand. Then, an email.'",
+   "suggested_action": "Cut a 4-shot burst of manual fixes (0.4-0.6 s each, one per flag) before the notification lands, then hold the notification 2 s."
+  },
+  {
+   "shot_id": "00:54.4-00:58.4",
+   "category": "picture_vo_mismatch",
+   "severity": 0.45,
+   "confidence": 0.55,
+   "evidence": "VO at 54.7 'Start from your templates' but the 55.0 frame already shows the slide with 'Something new? Every new element is marked.'; the templates beat (1.6 s) never reads, and the 56.0 shot is 2.4 s for a dense window plus a two-clause super.",
+   "suggested_action": "Verify the cut points: give templates 2 s clean, then the new-element window 3 s with its super entering on the VO."
+  },
+  {
+   "shot_id": "00:22.5/00:30",
+   "category": "redundant_beat",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "Same head-in-hands setup used at 22.97 and 30-31.07; the second repeats rather than escalates.",
+   "suggested_action": "Drop the second insert or replace with a different reaction (eyes to the clock) cut on the 'Wait again' line."
+  },
+  {
+   "shot_id": "01:42-01:46.3",
+   "category": "redundant_beat",
+   "severity": 0.35,
+   "confidence": 0.75,
+   "evidence": "'Your workspace. Your files, stored on your device.' (102.5) then 'Built around your local workspace.' (105) - two beats saying the same thing on the same file-tree shot inside an 11.1 s single shot (95.2-106.3).",
+   "suggested_action": "Cut 105-106.3 and move directly to the dark-room laptop; split the 11.1 s shot with a hard cut at 101.8."
+  },
+  {
+   "shot_id": "01:55.3-02:01.4",
+   "category": "dead_air",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "117.5 is a near-black frame between the struck line and the end card.",
+   "suggested_action": "Morph the struck line straight into the logo (match on the text baseline), no black gap."
+  },
+  {
+   "shot_id": "00:44.57-00:46",
+   "category": "missing_bridge",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "Head drop (44.57, 1.07 s, soft) hard-cuts to a dim logo at 45.63 - no match or sound bridge visible in frames.",
+   "suggested_action": "Match-cut her head hitting the desk to the logo slamming in (L-cut the thud under the logo)."
+  },
+  {
+   "shot_id": "01:20-01:25",
+   "category": "split_screen_static",
+   "severity": 0.25,
+   "confidence": 0.7,
+   "evidence": "80 and 82.5: chatbot card left vs real UI right, the left card only changes 11% -> 17%; little cutting inside the 4.7 s shot.",
+   "suggested_action": "Cut the three precision examples on the VO nouns 'cell / sentence / slide element' at ~0.8 s each."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "three or more consecutive shots at the same size and angle",
+   "shot_id": "01:01.4-01:11.4",
+   "evidence": "62.5, 65, 67.5, 70 all tight front-on assistant-panel crops"
+  },
+  {
+   "rule": "a message cut off before 2.5 s",
+   "shot_id": "00:56.0",
+   "evidence": "'Something new? Every new element is marked.' over a dense window held 2.4 s; templates super 1.6 s"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Break the 61.4-71.4 panel-crop run and the 16.5-23 hold into short motivated bursts so the product half breathes-bursts-holds instead of scrolling.",
+ "recut_plan": [
+  "16.5-23.0: split into 4x0.5 s manual-fix burst + 2.0 s notification hold",
+  "30.0: replace repeated head-in-hands with eyes-to-clock CU, cut on 'Wait again'",
+  "44.57->45.63: match the head drop to the logo slam, L-cut the thud",
+  "54.4-58.4: templates 2.0 s, then new-element window 3.0 s, super on VO",
+  "64.4-71.4: compress reading+plan to a 3-cut 2.5 s burst with a wide window cutaway at 67.0",
+  "78.0-85.0: cut on 'cell'/'sentence'/'slide element' at ~0.8 s each",
+  "101.8-106.3: hard cut at 101.8, drop 'Built around your local workspace.'",
+  "115.3-117.9: morph the struck line into the logo, remove the black gap"
+ ],
+ "target_shot_stats": {
+  "shots": 55,
+  "asl_s": 2.2,
+  "median_s": 1.8,
+  "pct_under_1s": 22,
+  "pct_over_4s": 8,
+  "longest_s": 5.0,
+  "note": "Codex-style holds on the hero review, a16z-style bursts in the hook chaos and precision montage"
+ }
+}

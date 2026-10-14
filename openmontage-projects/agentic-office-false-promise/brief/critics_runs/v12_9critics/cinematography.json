@@ -1,0 +1,129 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 61,
+  "dimension_scores": {
+    "lighting_shape": 75,
+    "lens_depth": 73,
+    "composition": 62,
+    "camera_movement": 50,
+    "frame_design_ui": 27
+  },
+  "issues": [
+    {
+      "shot_id": "00:40–01:08",
+      "category": "ui_frame_design",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "The memo, Excel toolbar and Changes panel fill the frame as flat, enlarged screen crops; the cinematic depth visible in Maya's office disappears.",
+      "suggested_action": "Recompose the real captures within a consistent screen plane against the dark office palette, retaining readable text and using restrained, purposeful reframing between review targets."
+    },
+    {
+      "shot_id": "00:40",
+      "category": "composition_clipping",
+      "severity": 0.82,
+      "confidence": 0.99,
+      "evidence": "The tracked paragraph runs beyond frame-right after '20% grow…'; the FY26 table column and its value are also cut off.",
+      "suggested_action": "Pull back enough to contain the complete changed paragraph and relevant table value, then isolate those regions in separate readable inserts."
+    },
+    {
+      "shot_id": "00:52–01:04",
+      "category": "ui_resolution",
+      "severity": 0.79,
+      "confidence": 0.99,
+      "evidence": "The enlarged Changes panel has visibly soft lettering, especially 'All changes reviewed' at 01:04; measured sharpness is 29.9 at 51.2 s and 14.5 at 63.2 s.",
+      "suggested_action": "Recapture the panel at higher source resolution or larger native UI scale, then use a crop that preserves crisp text without additional enlargement."
+    },
+    {
+      "shot_id": "00:34–00:37",
+      "category": "graphic_depth",
+      "severity": 0.7,
+      "confidence": 0.98,
+      "evidence": "A blurred, enlarged prompt occupies almost the entire image, with a yellow rectangle, a large white quotation and a second white caption competing below it.",
+      "suggested_action": "Keep the selected prompt sharp, reduce the duplicate quotation treatment to one caption, and retain a visible screen boundary to establish spatial context."
+    },
+    {
+      "shot_id": "00:47",
+      "category": "overlay_composition",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "'POWERPOINT · still her own deck' sits across the lower slide area while the oversized deck crop cuts away much of the application context.",
+      "suggested_action": "Place the caption in a reserved margin outside the slide and widen the capture enough to show the deck within its application."
+    },
+    {
+      "shot_id": "00:49",
+      "category": "subject_separation",
+      "severity": 0.56,
+      "confidence": 0.93,
+      "evidence": "Maya's navy shoulder and frame-right silhouette merge into the dark office; her face is substantially dimmer than in the 00:12 office shot.",
+      "suggested_action": "Match the earlier motivated lamp key and add a restrained cool window rim to separate her shoulder while preserving the night exposure."
+    },
+    {
+      "shot_id": "01:14",
+      "category": "flat_portrait_lighting",
+      "severity": 0.51,
+      "confidence": 0.91,
+      "evidence": "David is centered against a bright window with broad facial illumination and little cheek shadow compared with Maya's shaped night portraits.",
+      "suggested_action": "Use negative fill on the camera-side cheek and a more lateral window key; offset him slightly while preserving his gaze toward the unseen meeting participants."
+    },
+    {
+      "shot_id": "00:00–00:11; 00:54–01:03",
+      "category": "camera_movement_verification",
+      "severity": 0.45,
+      "confidence": 0.42,
+      "evidence": "The supplied opening samples repeat the same frontal card layout, and the review samples remain tight frontal panel crops. Still frames cannot establish move smoothness, jitter or shutter blur.",
+      "suggested_action": "Verify these intervals in motion; retain deliberate locked holds for reading and ensure any reframing follows the selected change with a smooth settle."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "No unreadable composition",
+      "shot_id": "00:40",
+      "evidence": "The crop excludes the right end of the tracked paragraph and the relevant FY26 table value, preventing a complete visual read of the featured document change."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the product sequence using crisp real captures, complete review targets and one consistent cinematic screen treatment.",
+  "per_shot": [
+    {
+      "t": "00:40",
+      "grade_A_to_F": "D",
+      "fix": "Pull back to contain the changed paragraph and FY26 table value, then use separate readable inserts."
+    },
+    {
+      "t": "01:04",
+      "grade_A_to_F": "D",
+      "fix": "Recapture the accepted-state panel at higher resolution and reduce enlargement."
+    },
+    {
+      "t": "00:52",
+      "grade_A_to_F": "D",
+      "fix": "Increase native UI scale during capture and frame the complete change card sharply."
+    },
+    {
+      "t": "00:34",
+      "grade_A_to_F": "D",
+      "fix": "Sharpen the selected prompt and remove the redundant quotation layer."
+    },
+    {
+      "t": "00:37",
+      "grade_A_to_F": "D",
+      "fix": "Show the prompt within a visible screen boundary with one caption and restrained background falloff."
+    },
+    {
+      "t": "00:47",
+      "grade_A_to_F": "C",
+      "fix": "Widen to establish the application and move the caption outside the slide."
+    },
+    {
+      "t": "00:55",
+      "grade_A_to_F": "C",
+      "fix": "Use a sharper, less enlarged panel capture and keep the annotation clear of neighboring rows."
+    },
+    {
+      "t": "00:44",
+      "grade_A_to_F": "C",
+      "fix": "Reduce the oversized ribbon crop and compose the diff bar with its associated cell in the same frame."
+    }
+  ]
+}

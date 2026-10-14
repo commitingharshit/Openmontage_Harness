@@ -1,0 +1,117 @@
+{
+  "critic": "edit_and_rhythm",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "rhythm_wave": 88,
+    "cut_motivation": 80,
+    "connectives": 82,
+    "economy": 69,
+    "transitions_quality": 82
+  },
+  "issues": [
+    {
+      "shot_id": "00:28.3–00:30.1",
+      "category": "message_cut_off",
+      "severity": 0.85,
+      "confidence": 0.97,
+      "evidence": "The notification says “Revenue is now €74.6m, not €71–73m. Fix slide 2.” The screen shot ends at 29.6, followed by a 0.53 s reaction insert; even the enclosing measured shot lasts only 2.07 s.",
+      "suggested_action": "Hold the complete notification continuously for at least 2.5 s, taking time from the subsequent repeated reaction inserts."
+    },
+    {
+      "shot_id": "00:30.1–00:37.4",
+      "category": "redundant_reaction_coverage",
+      "severity": 0.67,
+      "confidence": 0.95,
+      "evidence": "The regeneration sequence interrupts its progress screen with reactions or hands at 31.07, 32.9 and 36.77. Frames 10 and 13 repeat essentially the same head-in-hands composition.",
+      "suggested_action": "Keep one reaction at the regeneration setback; remove the intervening reactions so the clock, progress crawl and third Done chime form a continuous escalation."
+    },
+    {
+      "shot_id": "00:46–00:55",
+      "category": "pivot_overextended",
+      "severity": 0.62,
+      "confidence": 0.94,
+      "evidence": "The 3.6 s promise card is followed by a 5.4 s logo/screenshots reveal, creating nine seconds between the stalled Send and the real task demonstration.",
+      "suggested_action": "Preserve the promise-card hold, shorten the logo fan-in to approximately 3 s, and carry the identity tone into the real prompt."
+    },
+    {
+      "shot_id": "00:41.6–00:46",
+      "category": "hold_fragmented",
+      "severity": 0.6,
+      "confidence": 0.96,
+      "evidence": "The stalled email lasts 2.4 s, then cuts to a 1.4 s protagonist insert and a 0.6 s insert before black. “Are these the final files? The client is waiting.” disappears with the email.",
+      "suggested_action": "Hold the email and stopped cursor for at least 2.5 s; use only one brief reaction afterward, with room tone bridging into black."
+    },
+    {
+      "shot_id": "00:66.6–00:72.6",
+      "category": "proof_hold_without_clear_punctuation",
+      "severity": 0.48,
+      "confidence": 0.84,
+      "evidence": "One measured shot lasts 6 s while the changes list scrolls and the Slide 4 title receives a red ring and “Slide 4. Caught.” callout.",
+      "suggested_action": "Divide the passage into a readable review-list overview and a settled Slide 4 detail; stop scrolling before the ring and hold that detail for at least 2.5 s."
+    },
+    {
+      "shot_id": "00:72.6–00:79",
+      "category": "resolution_timing",
+      "severity": 0.45,
+      "confidence": 0.91,
+      "evidence": "The Sent result receives a 1.1 s shot at 75.0, followed by 2.9 s of sunrise atmosphere.",
+      "suggested_action": "Move approximately 1 s from sunrise to the Sent confirmation, preserving the mouse-click action cut and music return."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message must remain visible for at least 2.5 s.",
+      "shot_id": "00:28.3–00:29.6",
+      "evidence": "The partner’s revenue correction is interrupted by the reaction cut at 29.6; its enclosing screen shot is only 2.07 s."
+    },
+    {
+      "rule": "Every message must remain visible for at least 2.5 s.",
+      "shot_id": "00:41.6–00:44",
+      "evidence": "“Are these the final files? The client is waiting.” occupies the 2.4 s email shot before the protagonist insert."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Remove repeated frustration inserts and shorten the logo reveal to give the partner correction, stopped Send and reviewed-file confirmation uninterrupted reading time.",
+  "recut_plan": [
+    {
+      "timestamp": "00:28.3–00:32.9",
+      "edit": "Extend the complete revenue notification to 2.5 s; remove the 29.6 and 31.07 reaction inserts to fund the extension."
+    },
+    {
+      "timestamp": "00:30.1–00:37.4",
+      "edit": "Keep regeneration, clock and Done #3 connected; retain only the reaction after Slide 4 reverts."
+    },
+    {
+      "timestamp": "00:37.4–00:41.6",
+      "edit": "Preserve the existing burst and land Repeat on its impact; maintain directional continuity through the window whip pans."
+    },
+    {
+      "timestamp": "00:41.6–00:46",
+      "edit": "Extend the stalled email hold to approximately 3 s and consolidate the two following inserts into one reaction."
+    },
+    {
+      "timestamp": "00:49.6–00:55",
+      "edit": "Trim the logo/screenshots reveal to approximately 3 s and bridge its identity tone into the real prompt."
+    },
+    {
+      "timestamp": "00:66.6–00:72.6",
+      "edit": "Split the scrolling overview from the Slide 4 detail; settle the list and hold the circled correction for at least 2.5 s."
+    },
+    {
+      "timestamp": "00:75–00:79",
+      "edit": "Extend Sent from 1.1 s to approximately 2.1 s by trimming one second from sunrise."
+    }
+  ],
+  "target_shot_stats": {
+    "duration_s": 82,
+    "shots": 39,
+    "asl_s": 2.1,
+    "median_shot_s": 1.5,
+    "pct_shots_under_1s": 23,
+    "pct_shots_over_4s": 10,
+    "shortest_s": 0.5,
+    "longest_s": 5.5,
+    "minimum_message_hold_s": 2.5
+  }
+}

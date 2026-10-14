@@ -1,0 +1,36 @@
+  !! sound_music failed after 3 tries
+  !! realfilm failed after 3 tries
+  !! sound_dialogue failed after 3 tries
+  !! sound_sfx failed after 3 tries
+  !! story failed after 3 tries
+  !! claims failed after 3 tries
+  !! sound_mix failed after 3 tries
+  !! sound_ambience failed after 3 tries
+  !! customer failed after 3 tries
+!! story failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/story.json'
+!! realfilm failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/realfilm.json'
+!! sound_dialogue failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/sound_dialogue.json'
+!! sound_music failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/sound_music.json'
+!! sound_sfx failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/sound_sfx.json'
+!! sound_ambience failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/sound_ambience.json'
+!! sound_mix failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/sound_mix.json'
+!! customer failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/customer.json'
+!! claims failed: [Errno 2] No such file or directory: '/Users/harshitverma/Desktop/OpenMontage/projects/ao-hook-remake/critics_runs/v33_13critics/claims.json'
+hook 80 · story 0 · cinematography 72 · grade 68 · edit 79 · realfilm 0 · sound_dialogue 0 · sound_music 0 · sound_sfx 0 · sound_ambience 0 · sound_mix 0 · customer 0 · claims 0
+→ Q 21.7 · Visual 54.8 · Sound 0.0 · real_film_index None · constraint failures 0
+hook_2s 8 · scroll-away Nones · R/R/P None/None/None
+BUY: None
+GATE: REVISE
+  [hook] Preview real, reviewable changes across the model, memo and deck within the first 25 seconds so the strong deadline hook promises a credible destination.
+  [story] 
+  [cinematography] Reframe the real product sequence around large, readable UI details with consistent directional screen light and spatial depth.
+  [grade] Match UI paper whites and stock midtones within each world to reduce exposure jolts while preserving the deliberate warm dawn.
+  [edit] Compress the nine-second brand reveal and secondary feature detour so the film moves more directly from overload through visible review to the matched Send payoff.
+  [realfilm] 
+  [sound_dialogue] 
+  [sound_music] 
+  [sound_sfx] 
+  [sound_ambience] 
+  [sound_mix] 
+  [customer] 
+  [claims] 

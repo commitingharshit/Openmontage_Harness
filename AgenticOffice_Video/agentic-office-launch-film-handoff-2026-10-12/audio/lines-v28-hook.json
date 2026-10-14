@@ -1,0 +1,5 @@
+[
+ {"id": "n1", "text": "So you ask it for the deck... and it builds one, in the chat."},
+ {"id": "n2", "text": "Then one number changes."},
+ {"id": "n3", "text": "Prompt again. Wait again. Five minutes... for one number.", "speed": 1.0}
+]

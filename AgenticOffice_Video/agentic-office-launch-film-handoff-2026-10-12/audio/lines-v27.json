@@ -1,0 +1,12 @@
+[
+ {"id": "o1", "text": "You ask a chatbot to update an agreement."},
+ {"id": "o2", "text": "It writes back: here's your revised agreement."},
+ {"id": "o3b", "text": "Then you open the file... and the formatting's wrecked.", "speed": 1.1},
+ {"id": "o4", "text": "So you fix it by hand. Then, an email."},
+ {"id": "o5f", "text": "Please add the updated financial annexure and the presentation, before the meeting.", "voice": "bm_george", "speed": 1.25},
+ {"id": "o6", "text": "Five tabs. Copy. Paste. Check. Repeat."},
+ {"id": "o7", "text": "What if AI could finish the work?"},
+ {"id": "v05", "text": "Meet Agentic Office. Your Word, Excel and PowerPoint files in one workspace, with an assistant that does the fixing."},
+ {"id": "v08b", "text": "Bring in your team. It's one agentic, collaborative workspace: people and their assistants, on the same files. Only a person says yes.", "speed": 1.08},
+ {"id": "c3", "text": "Agentic Office. Agents that work with your work... not against it.", "speed": 1.0}
+]

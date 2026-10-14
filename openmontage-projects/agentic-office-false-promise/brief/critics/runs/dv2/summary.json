@@ -1,0 +1,24 @@
+{
+ "round": "dv2",
+ "C": 76.6,
+ "S": 80,
+ "P": 81.1,
+ "Q": 79.6,
+ "constraint_failures": [
+  {
+   "rule": "Workflow text must be large enough to read on a phone.",
+   "shot_id": "00:00\u201300:03",
+   "evidence": "The model/deck instruction line in the opening chat is too small relative to the 9:16 frame."
+  },
+  {
+   "rule": "Workflow text must be large enough to read on a phone.",
+   "shot_id": "00:16.5\u201300:19",
+   "evidence": "The Word proof clips the surrounding sentence and presents the tracked replacement at a small, soft scale."
+  },
+  {
+   "rule": "Show the workflow on screen: the human carries the chat answer into the files.",
+   "shot_id": "00:03\u201300:11.5",
+   "evidence": "Unchanged files, a replacement deck and a partially updated original slide are shown, but the manual transfer connecting these states is omitted."
+  }
+ ]
+}

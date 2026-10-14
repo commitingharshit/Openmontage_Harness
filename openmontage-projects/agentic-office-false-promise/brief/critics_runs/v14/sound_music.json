@@ -1,0 +1,130 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 58,
+ "dimension_scores": {
+  "arc_serves_story": 60,
+  "hit_points": 45,
+  "genre_and_emotion_fit": 62,
+  "motif": 50,
+  "ending": 62
+ },
+ "issues": [
+  {
+   "shot_id": "01:32\u201301:52",
+   "category": "no_swell_at_payoff",
+   "severity": 0.75,
+   "confidence": 0.75,
+   "evidence": "The loudness curve is flat at -17 to -18 dBFS from about 90 s to 115 s. Accept all (10 of 10, ~104 s) and the laptop close (~112 s) get no measurable swell, lift or resolve. The script promises 'music swell' and 'music resolves'.",
+   "suggested_action": "Pull the bed down to about -24 dBFS from 86\u2013100, swell to a +6 dB downbeat exactly on the 'All changes reviewed' cut, then let it resolve to a held chord under the laptop close at 112."
+  },
+  {
+   "shot_id": "global",
+   "category": "cuts_off_beat",
+   "severity": 0.7,
+   "confidence": 0.8,
+   "evidence": "cuts_on_sound_pct is 41.9. 18 cuts have no sound event, including 73.2, 76.2 and 86.2 in the proof, and the 102.2 and 106.2 payoff cuts.",
+   "suggested_action": "Conform the proof and payoff cuts to the score's bar lines (or move music accents onto them). At minimum, put hits on 76.2 (Word diff), 86.2 (match-cut ring) and 102.2."
+  },
+  {
+   "shot_id": "00:04\u201300:11",
+   "category": "dead_bed",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "RMS is -43.5 dBFS for 7 s with no onsets from 2.7 to 10.85. The 'low drone' of block 1 dies after the hook, so David's text and the empty floor have no musical tension.",
+   "suggested_action": "Carry a low sustained drone (about -28 dBFS, 55\u201380 Hz pad plus a pulse at 70 bpm) from 0 to 31 and let it thicken into the grind."
+  },
+  {
+   "shot_id": "00:31\u201300:57",
+   "category": "grind_not_building",
+   "severity": 0.55,
+   "confidence": 0.6,
+   "evidence": "The grind holds about -19.7 RMS throughout with no climbing curve. The clock goes 12:31\u21922:31 but the music doesn't tighten.",
+   "suggested_action": "Add an ostinato that gains a layer at each clock stamp (33, 37, 47, 51) and cut it dead at 57.2 on the phone buzz."
+  },
+  {
+   "shot_id": "01:04\u201301:09",
+   "category": "reveal_hit_late_soft",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "The loudest event is at 69.5 (-11.5); the 'Introducing' VO starts at 67.4. The riser and impact are not tied to the Diffs card cut.",
+   "suggested_action": "Land the impact on the frame where the Diffs wordmark appears and start score B on that downbeat. Riser from 64 to the hit."
+  },
+  {
+   "shot_id": "global",
+   "category": "no_motif",
+   "severity": 0.45,
+   "confidence": 0.55,
+   "evidence": "The timeline only promises the 'chime leitmotif' at the end card. Nothing ties the 92 s accept chime to the 120 s button or to the reveal.",
+   "suggested_action": "Make one 3-note accept chime (e.g. E5\u2013B5\u2013E6). Use it at the reveal (68), on Accept all (~103) and as the button at 125."
+  }
+ ],
+ "cue_sheet": [
+  {
+   "act": "hook+world 0\u201313",
+   "feel": "cold, suspended",
+   "bpm": "70 (pulse only)",
+   "instrumentation": "sub drone, filtered piano single notes, room",
+   "hits": "0.1 buzz, 4.5 text push-in"
+  },
+  {
+   "act": "problem 13\u201331",
+   "feel": "uneasy, procedural",
+   "bpm": "70",
+   "instrumentation": "drone plus muted pizzicato ostinato",
+   "hits": "18 'Done' tick, 24 '0 of 3' low thud"
+  },
+  {
+   "act": "grind 31\u201357",
+   "feel": "tightening, exhausted",
+   "bpm": "70\u219292 accelerando or added 16ths",
+   "instrumentation": "ostinato, ticking hi-hat, heartbeat sub from 51",
+   "hits": "each clock stamp adds a layer; cut to silence at 57.2"
+  },
+  {
+   "act": "climax 57\u201362",
+   "feel": "void",
+   "bpm": "\u2014",
+   "instrumentation": "silence over room tone",
+   "hits": "buzz + low impact on the phone"
+  },
+  {
+   "act": "turn+reveal 62\u201371",
+   "feel": "inhale \u2192 lift",
+   "bpm": "96",
+   "instrumentation": "reverse-swell riser into a warm synth-pad + piano chord",
+   "hits": "impact on the Diffs wordmark (~68.6)"
+  },
+  {
+   "act": "proof 71\u201392",
+   "feel": "confident, clean",
+   "bpm": "96",
+   "instrumentation": "light pulse synth, felt piano, soft kick",
+   "hits": "76.2, 79.9, 82.9, 86.2 ring"
+  },
+  {
+   "act": "payoff 92\u2013112",
+   "feel": "relief, warmth",
+   "bpm": "96",
+   "instrumentation": "strings or pads open up, motif on Accept",
+   "hits": "swell on 10/10, resolve on the laptop close at 112"
+  },
+  {
+   "act": "end 112\u2013128",
+   "feel": "assured button",
+   "bpm": "\u2014",
+   "instrumentation": "motif chime plus a held tail",
+   "hits": "button on the CTA, tail out by 127"
+  }
+ ],
+ "free_source_suggestions": [
+  "Pixabay: 'tension drone minimal'",
+  "Pixabay: 'corporate inspiring piano build'",
+  "Mixkit: 'cinematic riser'",
+  "YouTube Audio Library: mood 'Inspirational', genre 'Cinematic', 'piano pulse'",
+  "Pixabay: 'heartbeat low tension'"
+ ],
+ "constraint_failures": [],
+ "revision_scope": "whole",
+ "top_revision": "Re-score the payoff: drop the bed to about -24 dBFS through the proof, then swell +6 dB on 'All changes reviewed' (~104) and resolve on the laptop close (112), instead of the flat -17 dBFS wall from 90\u2013115 s."
+}

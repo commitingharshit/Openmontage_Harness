@@ -1,0 +1,336 @@
+[
+ {
+  "slide": 9,
+  "type": "bar",
+  "data": [
+   {
+    "name": "Weighted score",
+    "labels": [
+     "Recurring Office packs",
+     "Offshore production teams",
+     "Document-estate changes",
+     "IB / PE front office",
+     "Consulting teams",
+     "Developer infrastructure",
+     "India litigation",
+     "Individual prosumers"
+    ],
+    "values": [
+     3.86,
+     3.48,
+     3.4,
+     3.14,
+     3.12,
+     2.98,
+     2.8,
+     2.3
+    ]
+   }
+  ],
+  "opts": {
+   "x": 7.1,
+   "y": 2.6,
+   "w": 5.7,
+   "h": 4.2,
+   "barDir": "bar",
+   "catAxisOrientation": "maxMin",
+   "chartColors": [
+    "3157F6",
+    "B9B6AE",
+    "B9B6AE",
+    "B9B6AE",
+    "B9B6AE",
+    "B9B6AE",
+    "B9B6AE",
+    "B9B6AE"
+   ],
+   "varyColors": false,
+   "showValue": true,
+   "dataLabelPosition": "outEnd",
+   "dataLabelFontSize": 9,
+   "dataLabelFontFace": "Helvetica Neue",
+   "dataLabelColor": "1B1B1A",
+   "catAxisLabelFontSize": 9.5,
+   "catAxisLabelFontFace": "Helvetica Neue",
+   "catAxisLabelColor": "1B1B1A",
+   "valAxisHidden": true,
+   "valGridLine": {
+    "style": "none"
+   },
+   "catGridLine": {
+    "style": "none"
+   },
+   "valAxisMinVal": 0,
+   "valAxisMaxVal": 5,
+   "showLegend": false,
+   "showTitle": true,
+   "title": "Wedge scoring, 10 weighted criteria (1–5)",
+   "titleFontSize": 10,
+   "titleColor": "7A776F",
+   "titleFontFace": "Helvetica Neue",
+   "barGapWidthPct": 45
+  }
+ },
+ {
+  "slide": 11,
+  "type": "bar",
+  "data": [
+   {
+    "name": "Gross margin",
+    "labels": [
+     "$60 seat · light user",
+     "$60 seat · typical user",
+     "$60 seat · heavy user",
+     "$250 pack · base usage"
+    ],
+    "values": [
+     0.76,
+     0.42,
+     -0.27,
+     0.74
+    ]
+   }
+  ],
+  "opts": {
+   "x": 6.7,
+   "y": 1.9,
+   "w": 6.1,
+   "h": 4.6,
+   "barDir": "col",
+   "chartColors": [
+    "B9B6AE",
+    "B9B6AE",
+    "B3261E",
+    "3157F6"
+   ],
+   "varyColors": true,
+   "showValue": true,
+   "dataLabelPosition": "outEnd",
+   "dataLabelFormatCode": "0%",
+   "dataLabelFontSize": 11,
+   "dataLabelFontFace": "Helvetica Neue",
+   "valAxisHidden": true,
+   "valAxisMinVal": -0.4,
+   "valAxisMaxVal": 1,
+   "valGridLine": {
+    "style": "none"
+   },
+   "catGridLine": {
+    "style": "none"
+   },
+   "catAxisLabelFontSize": 10,
+   "catAxisLabelFontFace": "Helvetica Neue",
+   "catAxisLabelColor": "1B1B1A",
+   "showLegend": false,
+   "showTitle": true,
+   "title": "Gross margin by pricing unit (base cost scenario)",
+   "titleFontSize": 10,
+   "titleColor": "7A776F",
+   "titleFontFace": "Helvetica Neue",
+   "barGapWidthPct": 60
+  }
+ },
+ {
+  "slide": 18,
+  "type": "line",
+  "data": [
+   {
+    "name": "Conservative",
+    "labels": [
+     "2027",
+     "2028",
+     "2029",
+     "2030",
+     "2031"
+    ],
+    "values": [
+     0.04,
+     0.24,
+     0.63,
+     1.2,
+     2.47
+    ]
+   },
+   {
+    "name": "Base",
+    "labels": [
+     "2027",
+     "2028",
+     "2029",
+     "2030",
+     "2031"
+    ],
+    "values": [
+     0.17,
+     0.78,
+     2.21,
+     4.82,
+     9.58
+    ]
+   },
+   {
+    "name": "Aggressive",
+    "labels": [
+     "2027",
+     "2028",
+     "2029",
+     "2030",
+     "2031"
+    ],
+    "values": [
+     0.42,
+     2.14,
+     6.98,
+     17.96,
+     33.39
+    ]
+   }
+  ],
+  "opts": {
+   "x": 0.5,
+   "y": 2.6,
+   "w": 7.2,
+   "h": 4.2,
+   "chartColors": [
+    "B9B6AE",
+    "3157F6",
+    "1B1B1A"
+   ],
+   "lineSize": 2,
+   "lineDataSymbol": "circle",
+   "lineDataSymbolSize": 5,
+   "showLegend": true,
+   "legendPos": "b",
+   "legendFontSize": 10,
+   "legendFontFace": "Helvetica Neue",
+   "catAxisLabelFontFace": "Helvetica Neue",
+   "catAxisLabelFontSize": 10,
+   "valAxisLabelFontFace": "Helvetica Neue",
+   "valAxisLabelFontSize": 9,
+   "valAxisLabelFormatCode": "$0\"M\"",
+   "valGridLine": {
+    "color": "E6E3DC",
+    "size": 0.5
+   },
+   "catGridLine": {
+    "style": "none"
+   },
+   "showTitle": true,
+   "title": "Exit ARR by year, $M",
+   "titleFontSize": 10,
+   "titleColor": "7A776F",
+   "titleFontFace": "Helvetica Neue"
+  }
+ },
+ {
+  "slide": 20,
+  "type": "bar",
+  "data": [
+   {
+    "name": "$k",
+    "labels": [
+     "Engineering & product",
+     "Go-to-market team",
+     "Customer COGS",
+     "Security & legal",
+     "Travel, marketing, tools",
+     "R&D compute & evals",
+     "G&A"
+    ],
+    "values": [
+     363,
+     246,
+     60,
+     81,
+     75,
+     36,
+     36
+    ]
+   }
+  ],
+  "opts": {
+   "x": 0.5,
+   "y": 2.6,
+   "w": 6.6,
+   "h": 3.9,
+   "barDir": "bar",
+   "catAxisOrientation": "maxMin",
+   "chartColors": [
+    "3157F6"
+   ],
+   "showValue": true,
+   "dataLabelPosition": "outEnd",
+   "dataLabelFormatCode": "\"$\"0\"k\"",
+   "dataLabelFontSize": 9.5,
+   "dataLabelFontFace": "Helvetica Neue",
+   "valAxisHidden": true,
+   "valGridLine": {
+    "style": "none"
+   },
+   "catGridLine": {
+    "style": "none"
+   },
+   "catAxisLabelFontSize": 10,
+   "catAxisLabelFontFace": "Helvetica Neue",
+   "catAxisLabelColor": "1B1B1A",
+   "showLegend": false,
+   "showTitle": true,
+   "title": "18-month gross spend ≈ $0.90M (≈$0.26M funded by revenue)",
+   "titleFontSize": 10,
+   "titleColor": "7A776F",
+   "titleFontFace": "Helvetica Neue",
+   "barGapWidthPct": 45
+  }
+ },
+ {
+  "slide": 24,
+  "type": "bar",
+  "data": [
+   {
+    "name": "Founders combined",
+    "labels": [
+     "Founding",
+     "Pre-seed + pool",
+     "Seed",
+     "Series A",
+     "Series B"
+    ],
+    "values": [
+     0.9,
+     0.6975,
+     0.522,
+     0.3974,
+     0.3259
+    ]
+   }
+  ],
+  "opts": {
+   "x": 0.5,
+   "y": 1.8,
+   "w": 6.8,
+   "h": 4.6,
+   "barDir": "col",
+   "chartColors": [
+    "3157F6"
+   ],
+   "valAxisHidden": true,
+   "showValue": true,
+   "dataLabelPosition": "outEnd",
+   "dataLabelFormatCode": "0%",
+   "dataLabelFontSize": 11,
+   "dataLabelFontFace": "Helvetica Neue",
+   "valAxisMinVal": 0,
+   "valAxisMaxVal": 1,
+   "valGridLine": {
+    "style": "none"
+   },
+   "catGridLine": {
+    "style": "none"
+   },
+   "catAxisLabelFontSize": 10,
+   "catAxisLabelFontFace": "Helvetica Neue",
+   "showLegend": false,
+   "barGapWidthPct": 50
+  }
+ }
+]

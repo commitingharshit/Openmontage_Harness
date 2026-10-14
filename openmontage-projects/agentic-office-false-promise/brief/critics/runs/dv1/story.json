@@ -1,0 +1,60 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 76,
+  "dimension_scores": {
+    "brief_message_adherence": 78,
+    "narrative_progression_coherence": 80,
+    "pain_solution_connection": 84,
+    "shot_purpose_sequencing": 73,
+    "product_demo_benefit_clarity": 68,
+    "pacing_cta": 64
+  },
+  "issues": [
+    {
+      "shot_id": "11.5–19",
+      "category": "feature_definition_delayed",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "“Introducing Diffs” accompanies three crops of the instruction, rather than proposed changes. The explicit definition, “Every change across your model, memo and deck. Accept or reject each one,” arrives at 26 seconds.",
+      "suggested_action": "Define Diffs at the introduction with “Every change, reviewable,” then immediately show the real before/after proposal and its accept/reject controls."
+    },
+    {
+      "shot_id": "3–11.5",
+      "category": "missing_causal_bridge",
+      "severity": 0.76,
+      "confidence": 0.97,
+      "evidence": "The folder says “0 of 3 files changed,” but David subsequently sees a native-looking slide with its title updated to €74.6m and its callout still at €71–73m. No intervening action explains who partially updated it.",
+      "suggested_action": "Replace part of the “Not your deck” comparison with a brief manual title update that leaves the old callout behind, establishing how carrying the chat answer into files creates David’s mismatch."
+    },
+    {
+      "shot_id": "11.5–19",
+      "category": "demonstration_pacing",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The film spends 7.5 seconds spotlighting “Take DACH Q4 down to 8.5,” “then make the memo and the deck match,” and “Show me the diffs.” Concrete change proposals do not become the focus until 19 seconds.",
+      "suggested_action": "Consolidate the request into one readable three-second beat and use the recovered time for the Excel cell proposal, Word tracked change, and PowerPoint change."
+    },
+    {
+      "shot_id": "19–26",
+      "category": "unresolved_visual_payoff",
+      "severity": 0.66,
+      "confidence": 0.96,
+      "evidence": "“The exact box David flagged” identifies Slide 2 · TextBox 23, and the review reaches “10 of 10 changes accepted,” but the film never returns to David’s slide with the conflicting callout corrected.",
+      "suggested_action": "After acceptance, show a verified native-slide result with both the title and callout reading €74.6m; obtain a clean capture if that result is unavailable."
+    },
+    {
+      "shot_id": "26–30",
+      "category": "launch_availability_ambiguity",
+      "severity": 0.32,
+      "confidence": 0.94,
+      "evidence": "The narration says “Diffs. Now in Agentic Office,” while the CTA says “Request early access.” The feature is clearly introduced as new, but its availability is less clear.",
+      "suggested_action": "Align the closing narration with the CTA, such as “Introducing Diffs in Agentic Office. Request early access.”"
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Replace the extended request spotlight sequence with an immediate definition of Diffs and real change proposals across Excel, Word and PowerPoint, ending on the corrected slide David flagged.",
+  "retell": "A chatbot tells someone how to update a financial pack, but the files remain unchanged. Its replacement deck is unsuitable, and a later slide contains conflicting FY26 numbers that David flags. Agentic Office introduces Diffs, showing proposed changes including the exact slide box with the stale number. The user accepts all ten changes and is invited to request early access.",
+  "scroll_away_second": 15
+}

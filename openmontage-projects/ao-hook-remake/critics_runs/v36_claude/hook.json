@@ -1,0 +1,33 @@
+{
+ "critic": "hook",
+ "stage": "animatic",
+ "score": 66,
+ "dimension_scores": {
+  "stop_scroll": 62,
+  "three_second_comprehension": 76,
+  "thats_me": 72,
+  "part1_attractor": 55,
+  "part2_curiosity_gap": 76,
+  "part3_proof_roadmap": 45,
+  "framework_fit": 72,
+  "open_loop": 75
+ },
+ "framework_detected": "In medias res (8:57, Send hovered, model ≠ deck) rewinding into PAS. Fully executed as a structure: climax, '45 MINUTES EARLIER', then three escalating failures. The Solve leg arrives only at 46 s, so PAS is front-loaded on Agitate.",
+ "framework_recommended": "In medias res into a compressed PAS. It is the right pick for an anxious finance/legal buyer whose pain is a deadline, but the agitate leg should end by ~30 s and a 1-2 s glimpse of the real diff should be teased inside the first 12 s, so the viewer knows relief is coming.",
+ "hook_2s": 6,
+ "hook_alternatives": [
+  {"framework": "Everything-You-Know-Is-Wrong", "first_3s_visual": "Real chatbot-style green check 'Done.' fills frame, then hard cut to the deck slide 4 still reading €71–73m, ringed red", "line": "'Done' is the most expensive word in AI.", "why": "The film's whole thesis in one contradiction; legible sound-off, and the '≠' becomes the visual punchline instead of a static card."},
+  {"framework": "BAB", "first_3s_visual": "Split frame: left, three files with €74.6m / €71–73m / €71–73m in red; right, the real Changes panel '10 of 10 reviewed', all €74.6m", "line": "One number. Three files. Ten places it lives.", "why": "Shows the real product proof in second 1, solving the 46 s wait for credibility, and uses the approved 10-of-10 truth."},
+  {"framework": "High-Stakes Challenge", "first_3s_visual": "Real footage: her finger over the trackpad, Send glowing, wall clock 8:57, VO silent; super 'Would you send this?'", "line": "Board in three minutes. Would you send this?", "why": "Makes the viewer the protagonist and the decision the hook; a human face and a real room stop the scroll better than a flat email UI."}
+ ],
+ "issues": [
+  {"shot_id": "00:00–00:04.5", "category": "flat_illustration_first_frame", "severity": 0.6, "confidence": 0.7, "evidence": "f_01 (0.0 s) and f_02 (2.5 s) are the same flat grey email illustration with floated cards and an 'ILLUSTRATION' tag; the promised real laptop cold open is not visible in either sampled frame, and nothing moves except the cursor reaching Send.", "suggested_action": "Verify the 0–1.2 s laptop shot exists; if so lengthen it to ~2 s and make it the first frame (real room, her hand, screen glow) with the ≠ cards tracked above, then push into the email."},
+  {"shot_id": "00:00–00:46", "category": "proof_too_late", "severity": 0.55, "confidence": 0.8, "evidence": "The product first appears at 46 s (f_20, logo + 'See exactly what changed'); 0–46 s is all failure. For a 121 s ad the proof/roadmap window is 12–25 s.", "suggested_action": "Insert a 1.5 s flash-forward around 10–12 s of the real Changes panel row 'Slide 4 title €71–73m → €74.6m' with no logo, so the viewer is promised the payoff; or cut one of the three 'Done' cycles."},
+  {"shot_id": "00:00.4", "category": "clever_card_vs_concrete_pain", "severity": 0.35, "confidence": 0.6, "evidence": "VO 'And the deck doesn't match the model' is concrete, but the on-screen cards are small, top-right, and compete with the large white email body; at feed size the ≠ reads as decoration.", "suggested_action": "Make the two numbers the dominant element (60% of frame), dim the email body, and let the red '≠' snap in on a hit at 0.4 s."},
+  {"shot_id": "00:05–00:08", "category": "timeline_clock_contradiction", "severity": 0.3, "confidence": 0.65, "evidence": "Opening clock reads 8:57, yet the flashback later shows 8:58 (f_17) before we return to the same email, so 'Forty-five minutes earlier' does not hold up for an attentive viewer.", "suggested_action": "Set the cold-open clock to 8:59 or cap the montage clock at 8:56 so the loop closes cleanly."},
+  {"shot_id": "00:22.5–00:30", "category": "attractor_frame_defect", "severity": 0.25, "confidence": 0.75, "evidence": "f_10 and f_13: the head-in-hands clip shows a black band across the top and down the right edge.", "suggested_action": "Scale the clip to fill the frame (~112%) so the human reaction beat reads as cinema, not a mis-sized insert."}
+ ],
+ "constraint_failures": [],
+ "revision_scope": "opening",
+ "top_revision": "Open on 2 s of the real laptop/her hand over Send with the two numbers dominating the frame, and plant a 1.5 s flash of the real 'Slide 4 title €71–73m → €74.6m' diff by ~12 s so the hook promises its payoff long before 46 s."
+}

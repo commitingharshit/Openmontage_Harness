@@ -1,0 +1,378 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 50,
+ "dimension_scores": {
+  "production_value": 50,
+  "photorealism_no_ai_tells": 58,
+  "cohesion_with_ref_look": 44,
+  "ui_and_graphics_finish": 46
+ },
+ "issues": [
+  {
+   "shot_id": "00:00-00:42.5",
+   "category": "slideshow_ui",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "Roughly 12 of the first 18 frames are flat illustrated UI plates under a vignette (0, 10, 17.5, 25, 27.5, 35, 42.5); no REF reel has a minute of grey mock screens.",
+   "suggested_action": "Put the illustrated UI on her monitor in the night office with foreground lamp bokeh and parallax; keep full-screen mocks to <1 s inserts."
+  },
+  {
+   "shot_id": "01:32.5",
+   "category": "hero_unreadable",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "Payoff hero frame shows a cropped panel and an orange smear, no laptop.",
+   "suggested_action": "Shoot/comp a true wide of the warm-room laptop and push in."
+  },
+  {
+   "shot_id": "00:07.5",
+   "category": "composite_tell",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "Laptop screens have a radial white centre bloom and hands in a different room/wardrobe from the protagonist.",
+   "suggested_action": "Flatten screen bloom, match the set."
+  },
+  {
+   "shot_id": "00:35.0",
+   "category": "screenshot_on_black",
+   "severity": 0.45,
+   "confidence": 0.85,
+   "evidence": "Deck slide strip floating on near-black.",
+   "suggested_action": "Place on a display in the room or add a lit depth plane."
+  },
+  {
+   "shot_id": "00:52.5",
+   "category": "raw_screenshot",
+   "severity": 0.35,
+   "confidence": 0.8,
+   "evidence": "Letterboxed raw Word screenshot with a hard edge.",
+   "suggested_action": "Float the window in the room like 56.0, remove bars."
+  },
+  {
+   "shot_id": "01:57.5",
+   "category": "dead_frame",
+   "severity": 0.2,
+   "confidence": 0.7,
+   "evidence": "Near-black frame with faint text.",
+   "suggested_action": "Remove."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 47.3"
+  },
+  {
+   "rule": "a UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:35.0",
+   "evidence": "Board_Presentation.pptx regenerated strip on black"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Move the illustrated-UI half off flat full-screen plates and onto real displays inside her night office so the first 45 s stops reading as a slide deck between good stock shots.",
+ "frame_scores": [
+  {
+   "t": "00:00.0",
+   "score": 4,
+   "tell": "flat illustrated email on black, deck look",
+   "fix": "put the email on her monitor in the room"
+  },
+  {
+   "t": "00:02.5",
+   "score": 4,
+   "tell": "same flat plate",
+   "fix": "as above"
+  },
+  {
+   "t": "00:05.0",
+   "score": 7,
+   "tell": "real stock, good practicals",
+   "fix": "none"
+  },
+  {
+   "t": "00:07.5",
+   "score": 5,
+   "tell": "composited screen bloom; set/wardrobe mismatch",
+   "fix": "flatten screen, same desk"
+  },
+  {
+   "t": "00:10.0",
+   "score": 3,
+   "tell": "grey slide 'Done.' card, milky",
+   "fix": "in-room overlay with blacks"
+  },
+  {
+   "t": "00:12.5",
+   "score": 5,
+   "tell": "composite bloom",
+   "fix": "screen falloff"
+  },
+  {
+   "t": "00:15.0",
+   "score": 5,
+   "tell": "total defocus",
+   "fix": "rack to focus"
+  },
+  {
+   "t": "00:17.5",
+   "score": 3,
+   "tell": "flat Word mock under vignette",
+   "fix": "monitor in space"
+  },
+  {
+   "t": "00:20.0",
+   "score": 3,
+   "tell": "near duplicate of 17.5",
+   "fix": "cut it"
+  },
+  {
+   "t": "00:22.5",
+   "score": 7,
+   "tell": "real stock reaction",
+   "fix": "none"
+  },
+  {
+   "t": "00:25.0",
+   "score": 3,
+   "tell": "flat chatbot mock",
+   "fix": "depth plane"
+  },
+  {
+   "t": "00:27.5",
+   "score": 3,
+   "tell": "flat mock",
+   "fix": "depth plane"
+  },
+  {
+   "t": "00:30.0",
+   "score": 6,
+   "tell": "repeat of 22.5",
+   "fix": "new setup"
+  },
+  {
+   "t": "00:32.5",
+   "score": 4,
+   "tell": "mock + clock super, slide-deck feel",
+   "fix": "integrate clock in room"
+  },
+  {
+   "t": "00:35.0",
+   "score": 3,
+   "tell": "slide strip pasted on black",
+   "fix": "place on monitor"
+  },
+  {
+   "t": "00:37.5",
+   "score": 4,
+   "tell": "mock Excel with ghost word",
+   "fix": "faster whip blur"
+  },
+  {
+   "t": "00:40.0",
+   "score": 5,
+   "tell": "stacked windows have some depth",
+   "fix": "add motion blur"
+  },
+  {
+   "t": "00:42.5",
+   "score": 4,
+   "tell": "flat email crop",
+   "fix": "room context"
+  },
+  {
+   "t": "00:45.0",
+   "score": 4,
+   "tell": "dim logo card",
+   "fix": "fine as transition"
+  },
+  {
+   "t": "00:47.5",
+   "score": 6,
+   "tell": "clean logo card",
+   "fix": "none"
+  },
+  {
+   "t": "00:50.0",
+   "score": 7,
+   "tell": "real warm room, practicals",
+   "fix": "none"
+  },
+  {
+   "t": "00:52.5",
+   "score": 4,
+   "tell": "raw screenshot, letterboxed",
+   "fix": "float in room"
+  },
+  {
+   "t": "00:55.0",
+   "score": 5,
+   "tell": "screenshot on bokeh",
+   "fix": "add light"
+  },
+  {
+   "t": "00:57.5",
+   "score": 5,
+   "tell": "composite bloom",
+   "fix": "screen falloff"
+  },
+  {
+   "t": "01:00.0",
+   "score": 5,
+   "tell": "composite",
+   "fix": "as above"
+  },
+  {
+   "t": "01:02.5",
+   "score": 5,
+   "tell": "panel crop on bokeh",
+   "fix": "depth/light"
+  },
+  {
+   "t": "01:05.0",
+   "score": 5,
+   "tell": "panel crop",
+   "fix": "depth"
+  },
+  {
+   "t": "01:07.5",
+   "score": 5,
+   "tell": "UI crop with '8x speed' tag",
+   "fix": "fine"
+  },
+  {
+   "t": "01:10.0",
+   "score": 5,
+   "tell": "panel crop",
+   "fix": "depth"
+  },
+  {
+   "t": "01:12.5",
+   "score": 5,
+   "tell": "memo crop",
+   "fix": "fine"
+  },
+  {
+   "t": "01:15.0",
+   "score": 6,
+   "tell": "glowing chip has finish",
+   "fix": "none"
+  },
+  {
+   "t": "01:17.5",
+   "score": 4,
+   "tell": "split cards, deck-like",
+   "fix": "motion"
+  },
+  {
+   "t": "01:20.0",
+   "score": 4,
+   "tell": "split cards",
+   "fix": "motion"
+  },
+  {
+   "t": "01:22.5",
+   "score": 5,
+   "tell": "list on bokeh",
+   "fix": "fine"
+  },
+  {
+   "t": "01:25.0",
+   "score": 4,
+   "tell": "busy screenshot with super over toolbar",
+   "fix": "reframe"
+  },
+  {
+   "t": "01:27.5",
+   "score": 5,
+   "tell": "panel crop",
+   "fix": "fine"
+  },
+  {
+   "t": "01:30.0",
+   "score": 5,
+   "tell": "ring over UI",
+   "fix": "fine"
+  },
+  {
+   "t": "01:32.5",
+   "score": 3,
+   "tell": "hero unreadable, orange smear",
+   "fix": "true wide of laptop"
+  },
+  {
+   "t": "01:35.0",
+   "score": 5,
+   "tell": "list on bokeh",
+   "fix": "fine"
+  },
+  {
+   "t": "01:37.5",
+   "score": 5,
+   "tell": "ring, list",
+   "fix": "fine"
+  },
+  {
+   "t": "01:40.0",
+   "score": 5,
+   "tell": "same",
+   "fix": "fine"
+  },
+  {
+   "t": "01:42.5",
+   "score": 5,
+   "tell": "file tree + type",
+   "fix": "fine"
+  },
+  {
+   "t": "01:45.0",
+   "score": 4,
+   "tell": "redundant tree",
+   "fix": "cut"
+  },
+  {
+   "t": "01:47.5",
+   "score": 6,
+   "tell": "real laptop, email composite slightly flat",
+   "fix": "screen falloff"
+  },
+  {
+   "t": "01:50.0",
+   "score": 6,
+   "tell": "same",
+   "fix": "none"
+  },
+  {
+   "t": "01:52.5",
+   "score": 7,
+   "tell": "real dawn",
+   "fix": "none"
+  },
+  {
+   "t": "01:55.0",
+   "score": 5,
+   "tell": "type on grey",
+   "fix": "fine"
+  },
+  {
+   "t": "01:57.5",
+   "score": 3,
+   "tell": "near-black dead frame",
+   "fix": "remove"
+  },
+  {
+   "t": "02:00.0",
+   "score": 6,
+   "tell": "clean end card",
+   "fix": "none"
+  }
+ ],
+ "real_film_index": 47.3,
+ "closest_ref": "DeepMind Genie (UI cards on dark plus real-world inserts); the gap is that Genie's UI is sparse, lit and in motion, while this film's UI is dense, grey and static, and its real footage is stock that doesn't match the hands/screens.",
+ "top_3_upgrades": [
+  "Composite all illustrated UI onto the monitor in the protagonist's office with lamp bokeh and parallax",
+  "Replace the 92.5 hero and the 7.5 hands with matched-set wides/inserts (same desk, same wardrobe, true screen falloff)",
+  "Unify finish: grain + halation + highlight roll-off on every UI shot; remove the stray letterbox and the black dead frame"
+ ]
+}

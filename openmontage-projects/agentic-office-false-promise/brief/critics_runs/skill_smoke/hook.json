@@ -1,0 +1,47 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 86,
+  "dimension_scores": {
+    "stop_scroll": 84,
+    "three_second_comprehension": 90,
+    "thats_me": 89,
+    "sound_off_legibility": 76
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–00:03",
+      "category": "execution_gap_not_named",
+      "severity": 0.4,
+      "confidence": 0.96,
+      "evidence": "At 00:00.5 and 00:01.8, “Model updated. Memo and deck still wrong.” clearly names inconsistent files, but the opening contains no visible AI chat or indication that the viewer must carry its answer into the files.",
+      "suggested_action": "Use “AI gave you the number. You still have three files to fix.” above a compact chat answer and the three unchanged file cards, making the manual execution burden visible within two seconds."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "mobile_detail_density",
+      "severity": 0.3,
+      "confidence": 0.92,
+      "evidence": "Three side-by-side cards contain application labels, filenames, quoted memo text and competing values: “€74.6m” versus “€71–73m.” The headline reads readily, but the supporting comparison requires scanning several small text areas.",
+      "suggested_action": "Keep the large headline; remove filenames and quoted prose, and enlarge one FY26 value per card beneath short labels “Model,” “Memo” and “Deck.”"
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Connect the recognizable file mismatch to AI’s answer-only workflow within the opening two seconds.",
+  "hook_alternatives": [
+    {
+      "line": "AI gave you the number. You still have three files to fix.",
+      "visual": "A chat answer showing €74.6m above Model, Memo and Deck cards still displaying their old values."
+    },
+    {
+      "line": "One assumption changed. Now fix the whole board pack.",
+      "visual": "A single highlighted Excel input followed by enlarged stale values in the memo and deck."
+    },
+    {
+      "line": "Your model says €74.6m. Your board deck doesn’t.",
+      "visual": "A large split comparison: green €74.6m in the model and red €71–73m in the board slide."
+    }
+  ],
+  "hook_2s": 8
+}

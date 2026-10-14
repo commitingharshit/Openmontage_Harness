@@ -1,0 +1,9 @@
+[
+ {"id": "v1", "text": "Not another chatbot. Your workspace: Word, Excel and PowerPoint, together."},
+ {"id": "v2", "text": "Start from your templates, or just describe it."},
+ {"id": "v3", "text": "Tell it what changed, once. It finds where that number lives: the model, the memo, the deck."},
+ {"id": "v4", "text": "Assistants plan the work, check it, and hand it off. The validated number travels with them."},
+ {"id": "v5", "text": "No regenerating. It edits the cell, the sentence, the slide element, and leaves the rest alone."},
+ {"id": "v6", "text": "Every change is marked, in every file. Accept it, or reject it. Even slide four.", "speed": 1.0},
+ {"id": "v8", "text": "And every change comes with its evidence, so you can check it before you trust it."}
+]

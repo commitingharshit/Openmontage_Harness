@@ -1,0 +1,19 @@
+{
+ "round": "m11",
+ "C": 77,
+ "S": 83.65,
+ "P": 83,
+ "Q": 81.7,
+ "constraint_failures": [
+  {
+   "rule": "Every message must be large enough to read on a phone.",
+   "shot_id": "00:00\u201300:03.2",
+   "evidence": "The three-tile opening uses small filenames, app labels and a multiline Word quotation beneath a much larger headline."
+  },
+  {
+   "rule": "Show the workflow at the pace a real person would read it.",
+   "shot_id": "00:28.2\u201300:31.2",
+   "evidence": "Approximately 30 words appear on a single introduction card held for three seconds."
+  }
+ ]
+}

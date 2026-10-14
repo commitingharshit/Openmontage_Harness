@@ -1,0 +1,73 @@
+{
+ "critic": "sound_mix",
+ "stage": "animatic",
+ "score": 66,
+ "dimension_scores": {
+  "loudness_spec": 88,
+  "vo_vs_bed_balance": 55,
+  "tonal_balance": 45,
+  "dynamics_arc": 75,
+  "transitions_bridges": 50,
+  "stereo_image": 85
+ },
+ "issues": [
+  {
+   "shot_id": "01:58-02:01",
+   "category": "brand_line_buried",
+   "severity": 0.75,
+   "confidence": 0.75,
+   "evidence": "Final VO 'Agentic Office.' heard 'office.' (0.60); identity sting (117.9, SFX bus, never ducked) plus music at .18 with a 2.0 s fade-out under it; loudness at 120 s -23.5",
+   "suggested_action": "Put the sting on the ducked bus or end it before 118.6; automate music -10 dB for the brand read; +2 dB on that one VO clip"
+  },
+  {
+   "shot_id": "all",
+   "category": "dark_spectrum_vo_presence",
+   "severity": 0.6,
+   "confidence": 0.7,
+   "evidence": "spectral_balance: mid 1-4k 12.7% (< 15% target with near-continuous VO), presence 3.1%, air 3.1%, sub+low 51.7%, below 1 kHz 81%",
+   "suggested_action": "High-pass beds/heartbeats/bass_pulse at 80-100 Hz, cut music -3 dB at 1.5-4 kHz while VO is active, +2 dB shelf at 5 kHz on VO"
+  },
+  {
+   "shot_id": "all",
+   "category": "no_vo_over_music_measure",
+   "severity": 0.4,
+   "confidence": 0.5,
+   "evidence": "vo_over_music_db_median absent; sidechain threshold 0.03 ratio 5 only; SFX bus never ducks (buzzes, whooshes, impacts land on VO in 37-41 s)",
+   "suggested_action": "Measure stem VO-vs-bed; target >= 8 dB; light 3 dB duck of the SFX bus under VO"
+  },
+  {
+   "shot_id": "00:46-01:18",
+   "category": "act_contrast_inverted",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "dynamic_sections: hook 0-22 s -16.1 dBFS, product 46-76 s -19.9; the release act is 3.8 dB quieter than the grind",
+   "suggested_action": "Bring the product bed up ~2 dB from 49 and pull the hook beds down ~1.5 dB so the resolve feels bigger, not smaller"
+  },
+  {
+   "shot_id": "master",
+   "category": "single_pass_loudnorm",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Chain is one-pass loudnorm I=-14.3 TP=-2 then +1.9 dB and alimiter 0.79; result TP -1.6 dBTP (only 0.1 dB inside the -1.5 spec); candidate text claims -14.1/-1.8, measured -14.3/-1.6",
+   "suggested_action": "Two-pass linear loudnorm (measured_I/TP/LRA/thresh fed back, linear=true), then a true-peak limiter at -2.0 dBTP; drop the +1.9 dB post-gain"
+  },
+  {
+   "shot_id": "00:01-01:55",
+   "category": "cut_transitions",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "cuts_without_sound_event_s: 30 cuts; no J/L-cuts listed apart from the room tone carrying across 43.6",
+   "suggested_action": "Pre-lap the next scene's ambience 6-10 frames before the cuts at 5.07, 49.0, 106.3, 112.4"
+  }
+ ],
+ "constraint_failures": [],
+ "mix_recipe": {
+  "ducking": "music + ambience sidechain from VO: threshold -30 dBFS, ratio 4, attack 10 ms, release 300 ms, ~-9 dB depth; SFX bus -3 dB under VO; sting/music -10 dB under 'Agentic Office.'",
+  "eq": "music: -3 dB bell 2.5 kHz Q 1 while VO is active; beds/heartbeat/bass_pulse: HPF 90 Hz, -2 dB at 200 Hz; ambience HPF 120 Hz; VO HPF 90 Hz, +2 dB high shelf 5 kHz, -2 dB at 250 Hz",
+  "limiter": "true-peak limiter ceiling -2.0 dBTP, 1.5 ms lookahead, release 60 ms",
+  "loudnorm": "pass 1: loudnorm=I=-14:TP=-2:LRA=9:print_format=json; pass 2: loudnorm=I=-14:TP=-2:LRA=9:measured_I=<>:measured_TP=<>:measured_LRA=<>:measured_thresh=<>:offset=<>:linear=true",
+  "targets": "integrated -14 LUFS, TP <= -1.8 dBTP, LRA 7-9, mid 1-4k >= 15%"
+ },
+ "revision_scope": "whole",
+ "top_revision": "Clear the last 3 s so 'Agentic Office.' reads (sting off the read, beds -10 dB), then brighten the VO band (mid 12.7% -> 15%+) with music EQ carve and HPF on the low beds."
+}

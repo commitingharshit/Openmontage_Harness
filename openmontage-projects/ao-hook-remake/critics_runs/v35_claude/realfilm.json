@@ -1,0 +1,408 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 42,
+ "dimension_scores": {
+  "production_value": 42,
+  "photorealism_no_ai_tells": 55,
+  "cohesion_with_ref_look": 38,
+  "ui_and_graphics_finish": 36
+ },
+ "issues": [
+  {
+   "shot_id": "00:40–01:55 (f_17–f_47)",
+   "category": "ui_reads_as_slide_deck",
+   "severity": 0.75,
+   "confidence": 0.8,
+   "evidence": "~30 of 54 frames are full-screen UI screenshots or illustrations with caption pills and small mono labels ('PRODUCT UI · REAL SCREENSHOTS'); next to Genie's UI-in-black with real camera footage, or Codex's practical-lit rooms, these read as a product walkthrough, not a film.",
+   "suggested_action": "Halve full-screen UI time; put the key 4 product moments (cell, tracked change, Slide 4 ring, Accept) on a physical screen in the warm room with real lens and light."
+  },
+  {
+   "shot_id": "00:00, 00:40 (f_01,f_18)",
+   "category": "screenshot_on_black",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "f_18 is a white email window with Send button on a near-black field; f_01 a grey email cropped by frame with floating cards.",
+   "suggested_action": "Composite onto the real dark-room laptop (f_48 plate) with screen glow and reflection."
+  },
+  {
+   "shot_id": "01:02.5–01:52.5",
+   "category": "mid_word_crops",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "f_26 'ised FY26 outlook', f_29 'k Q3', f_38 'd FY26 outlook', f_45/46 'date' — reads as an auto-zoom tool, not an operated camera.",
+   "suggested_action": "Hand-place end-frames; land on one value per push."
+  },
+  {
+   "shot_id": "00:05–00:30 (f_03,f_10,f_13)",
+   "category": "identity_and_framing",
+   "severity": 0.45,
+   "confidence": 0.55,
+   "evidence": "Protagonist has glasses in f_03, none in f_10/f_13; f_10 has a black band on the right/top edge.",
+   "suggested_action": "Verify same talent; fill frame."
+  },
+  {
+   "shot_id": "01:57.5–02:05 (f_48–f_51)",
+   "category": "strongest_frames",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "Warm lamp/candle laptop (f_49) and sunrise silhouette (f_51) are the only frames that could sit in the Codex reel, but the set changes from f_48.",
+   "suggested_action": "Shoot/choose dark and lit versions of the same desk."
+  },
+  {
+   "shot_id": "whole",
+   "category": "no_ai_face_tells",
+   "severity": 0.1,
+   "confidence": 0.7,
+   "evidence": "All people are real stock; no waxy skin, no hand errors seen. Stock posing is mild (f_03 laptop-close gesture).",
+   "suggested_action": "None."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index = 42.0"
+  },
+  {
+   "rule": "UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:40, 00:35, 01:52.5",
+   "evidence": "f_18 email window on black; f_15 thumbnail strip on black; f_46 slide crop on black."
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Move the product's key moments off full-screen screenshots and onto a real laptop screen in the lit room, with lens depth and light, for at least half the 49–117 s run.",
+ "frame_scores": [
+  {
+   "t": "00:00.0",
+   "score": 4,
+   "tell": "flat grey UI cropped by frame, no device",
+   "fix": "put it on the real laptop in a room"
+  },
+  {
+   "t": "00:02.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:05.0",
+   "score": 7,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "00:07.5",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "00:10.0",
+   "score": 3,
+   "tell": "'✓ Done.' slide over grey chat — slide-deck look",
+   "fix": "cut the slide; let the reply land on her screen"
+  },
+  {
+   "t": "00:12.5",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "00:15.0",
+   "score": 5,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:17.5",
+   "score": 3,
+   "tell": "blurred Word page with notification card — pasted overlay",
+   "fix": "show it on the laptop, rack focus to the toast"
+  },
+  {
+   "t": "00:20.0",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:22.5",
+   "score": 5,
+   "tell": "black band down right/top edge; soft, top-lit",
+   "fix": "fill frame, regrade"
+  },
+  {
+   "t": "00:25.0",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:27.5",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:30.0",
+   "score": 5,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:32.5",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:35.0",
+   "score": 3,
+   "tell": "thumbnail strip floating on black",
+   "fix": "place on a screen plane with light"
+  },
+  {
+   "t": "00:37.5",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:40.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:42.5",
+   "score": 3,
+   "tell": "white window + Send button on black — screenshot pasted on black",
+   "fix": "tilt into space on her laptop"
+  },
+  {
+   "t": "00:45.0",
+   "score": 3,
+   "tell": "logo fading in on empty teal gradient",
+   "fix": "logo over real plate"
+  },
+  {
+   "t": "00:47.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:50.0",
+   "score": 7,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "00:52.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:55.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "00:57.5",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "01:00.0",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "01:02.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:05.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:07.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:10.0",
+   "score": 3,
+   "tell": "push crops text mid-word ('k Q3')",
+   "fix": "end move on the changed value"
+  },
+  {
+   "t": "01:12.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:15.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:17.5",
+   "score": 3,
+   "tell": "split screen with static card — template layout",
+   "fix": "drift + depth, fewer labels"
+  },
+  {
+   "t": "01:20.0",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:22.5",
+   "score": 3,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:25.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:27.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:30.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:32.5",
+   "score": 3,
+   "tell": "toolbar + mid-word crop 'd FY26 outlook'",
+   "fix": "reframe"
+  },
+  {
+   "t": "01:35.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:37.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:40.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:42.5",
+   "score": 3,
+   "tell": "flat screenshot with caption pill",
+   "fix": "UI in space with falloff"
+  },
+  {
+   "t": "01:45.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:47.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:50.0",
+   "score": 3,
+   "tell": "cropped 'date' wordmark, screenshot on black",
+   "fix": "reframe to one source card"
+  },
+  {
+   "t": "01:52.5",
+   "score": 3,
+   "tell": "big blue empty slide, 'date' crop",
+   "fix": "reframe"
+  },
+  {
+   "t": "01:55.0",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "01:57.5",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "02:00.0",
+   "score": 7,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "02:02.5",
+   "score": 7,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "02:05.0",
+   "score": 6,
+   "tell": "real stock, decent light",
+   "fix": "—"
+  },
+  {
+   "t": "02:07.5",
+   "score": 4,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "02:10.0",
+   "score": 5,
+   "tell": "flat UI frame, slide-like",
+   "fix": "add depth/plane/light, grain"
+  },
+  {
+   "t": "02:12.5",
+   "score": 5,
+   "tell": "black",
+   "fix": "—"
+  }
+ ],
+ "real_film_index": 42.0,
+ "closest_ref": "Closest to the Codex 'It's time to fly' reel (night office, laptop glow, warm room) — but Codex never leaves the room for a full-screen UI, while this film spends ~60% of its frames in flat screenshots.",
+ "top_3_upgrades": [
+  "Track the four key product moments onto the real laptop in the warm room (with reflections, 50mm, f/2 focus fall-off) instead of full-screen pushes.",
+  "Rebuild the hook UI beats (0–4.5, 17–41.6) on her laptop in the blue office so the problem world is filmed, not slid.",
+  "One finishing pass (grain, halation, consistent vignette, no mid-word crops, no black bands) across stock, illustration and product."
+ ]
+}

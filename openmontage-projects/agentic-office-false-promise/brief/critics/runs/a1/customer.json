@@ -1,0 +1,74 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 82.75,
+  "dimension_scores": {
+    "pain_specificity_salience": 94,
+    "target_relatability": 88,
+    "emotional_authenticity_progression": 82,
+    "product_pain_fit": 84,
+    "trust_transformation_credibility": 65,
+    "purchase_motivation_cta": 75
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 6.8,
+  "issues": [
+    {
+      "shot_id": "00:47",
+      "category": "unresolved_consistency_anxiety",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "The real memo shows the paragraph changing to €74.6m while its visible Key figures table still says €71–73m. This repeats the exact kind of inconsistency that David flagged in the first half.",
+      "suggested_action": "Follow the proposed-change view with a verified post-acceptance memo view showing both the paragraph and the table at €74.6m; if that result is not captured, verify and capture it before using it."
+    },
+    {
+      "shot_id": "00:50–01:09",
+      "category": "missing_resolution_proof",
+      "severity": 0.76,
+      "confidence": 0.98,
+      "evidence": "The preserved-template shot shows the Board Pack Q3 cover. The circled Slide 2 · TextBox 23 proposal appears at 00:56, but '10 of 10 changes accepted' cuts to Maya closing her laptop without showing the corrected slide that caused the escalation.",
+      "suggested_action": "Replace part of the cover or closing reaction with a real post-acceptance view of slide 2 showing its title and formerly stale text box both at €74.6m."
+    },
+    {
+      "shot_id": "00:16–00:33",
+      "category": "skeptical_comparison_response",
+      "severity": 0.58,
+      "confidence": 0.9,
+      "evidence": "The chat explicitly says 'Deck: slide 2 title → €74.6m'; Maya changes the title and leaves another visible value unchanged. The later receipt highlights that narrow instruction. As a daily AI user, I can read this partly as an incomplete instruction being followed rather than proof that my existing tools cannot handle the pack.",
+      "suggested_action": "Make Maya's original request to update the entire existing model, memo and deck visible before the chat checklist, so the missed reference is clearly a failure to carry out the requested scope."
+    },
+    {
+      "shot_id": "00:47",
+      "category": "proof_comprehension",
+      "severity": 0.53,
+      "confidence": 0.98,
+      "evidence": "The tracked-change paragraph occupies a small part of a nearly full-page memo view. Unlike the large manual paste at 00:19, the product's actual replacement is difficult to inspect at phone size.",
+      "suggested_action": "Use the planned paragraph-only crop and hold it long enough to read the old and new values, then show the verified table result separately."
+    },
+    {
+      "shot_id": "01:01–01:06",
+      "category": "approval_as_verification",
+      "severity": 0.42,
+      "confidence": 0.93,
+      "evidence": "'Each change: accept or reject' shows controls beside a truncated 'Midpoint shown → R...' summary, followed by '10 of 10 changes accepted.' I see permission controls, but little evidence of how I would judge an ambiguous change before approving it.",
+      "suggested_action": "Use the existing review duration to show one fully legible proposed change and its document context before the controls and Accept all, without inventing a single-row click."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Show the workflow at a readable size on a phone; long text must be cropped rather than shrunk.",
+      "shot_id": "00:47",
+      "evidence": "The memo replacement is shown within a nearly full-page document instead of the specified paragraph-only crop, leaving the key product proof substantially smaller than the surrounding headline captions."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the trust loop with verified post-acceptance footage showing the exact stale slide text box and memo table corrected to €74.6m before Maya closes her laptop.",
+  "purchase_objections": [
+    "Does it find every repeated number, or can a table remain stale while the paragraph changes?",
+    "Can I inspect why each change is correct before accepting it?",
+    "What does this handle across my existing pack that my Word AI and Copilot workflow does not?",
+    "Would my firm approve using it with confidential fund data?"
+  ],
+  "would_try": "maybe — The late-night tie-out failure feels familiar and the cross-file review is compelling, but I would want to see the corrected pack before trusting it with a live board deadline."
+}

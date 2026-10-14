@@ -1,0 +1,84 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "brief_adherence": 72,
+    "progression_causality": 76,
+    "pain_solution_link": 86,
+    "block_purpose_connectives": 77,
+    "proof_of_setup": 87,
+    "pacing_cta": 72
+  },
+  "issues": [
+    {
+      "shot_id": "00:08–00:23",
+      "category": "missing_workflow_cause",
+      "severity": 0.8,
+      "confidence": 0.96,
+      "evidence": "The chatbot says “Here's your updated memo,” followed by “Done.” and a Word window. The supplied Word frame shows a structured memorandum; the hands insert establishes typing, but neither frame shows copying the chatbot output into the file. VO supplies “the formatting's wrecked” and “you fix it by hand.”",
+      "suggested_action": "Show her copying the chat output, pasting it into the existing memo, and repairing one visible formatting defect before the partner's message."
+    },
+    {
+      "shot_id": "00:08–00:30",
+      "category": "assumption_change_disconnect",
+      "severity": 0.73,
+      "confidence": 0.98,
+      "evidence": "The first memo already displays €74.6m, but the later VO says “Then, one number changes” over “Revenue is now €74.6m, not €71–73m.” The actual initiating change, DACH Q4 8.9→8.5, first appears in the product demonstration.",
+      "suggested_action": "Introduce DACH Q4 8.9→8.5 in the first chatbot request, and replace “Then, one number changes” with a line explaining that the generated deck still contains the old forecast."
+    },
+    {
+      "shot_id": "00:35–00:37.4",
+      "category": "regression_not_established",
+      "severity": 0.65,
+      "confidence": 0.97,
+      "evidence": "The regenerated strip shows slide 2 at “Revenue €74.6m” and slide 4 at “€71–73m.” Earlier thumbnails label slide 4 “Cash & covenants” without establishing its previous value, while VO says “Except now... slide four changed.”",
+      "suggested_action": "Describe slide 4 as an overlooked reference—“But slide four still has the old number”—or show its correct value before regeneration if regression is essential."
+    },
+    {
+      "shot_id": "00:37.4–00:41.6",
+      "category": "manual_transfer_not_demonstrated",
+      "severity": 0.58,
+      "confidence": 0.96,
+      "evidence": "“Copy. Paste. Check. Repeat.” accompanies an Excel window and a pile of overlapping applications. The frames establish multiple files but do not show a number moving between them.",
+      "suggested_action": "Replace part of the window pileup with one legible transfer of €74.6m from the model into a deck reference, followed by discovering another stale reference."
+    },
+    {
+      "shot_id": "00:05–00:49.6",
+      "category": "delayed_solution",
+      "severity": 0.48,
+      "confidence": 0.96,
+      "evidence": "The product is named at 49.9 seconds after memo repair, deck generation, another correction, regeneration, tab overload, and a stopped Send action. Several beats repeat the same point that “Done” does not mean the pack is correct.",
+      "suggested_action": "Compress the repeated generation and reaction beats so the workspace and its review mechanism arrive roughly ten seconds earlier, retaining the opening mismatch and slide 4 payoff."
+    },
+    {
+      "shot_id": "01:16–01:25",
+      "category": "atmosphere_only_block",
+      "severity": 0.25,
+      "confidence": 0.99,
+      "evidence": "The sunrise occupies 76–79 seconds between the reviewed-send resolution and “This time, you checked.” It adds no task information or product proof.",
+      "suggested_action": "Cut directly from the reviewed send to “This time, you checked,” then hold the final brand and early-access CTA longer."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "One task, one number, start to finish: DACH Q4 to 8.5 → FY26 €74.6m.",
+      "shot_id": "00:08–00:30",
+      "evidence": "The illustrative workflow requests a generic “new FY26 forecast” and later treats €74.6m as a new change despite already displaying it in the memo; DACH Q4 to 8.5 is introduced only in the real demo."
+    },
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:28.4–00:30.8",
+      "evidence": "The supplied timeline explicitly holds “Revenue is now €74.6m, not €71–73m. Fix slide 2.” for 2.4 seconds."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Make DACH Q4 8.9→8.5 the initiating request in both halves, and show the manual transfer that leaves slide 4 stale before the real product exposes that exact reference for approval.",
+  "retell": [
+    "She needs to send a board pack, but the deck and model disagree.",
+    "The chatbot says it has finished, yet she still repairs the memo and repeatedly updates the deck.",
+    "Agentic Office proposes changes across the model, memo and deck, including the missed slide 4 reference, and lets her review them.",
+    "She approves the changes, sends the pack, and the film asks me to request early access."
+  ],
+  "scroll_away_second": 35
+}

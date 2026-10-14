@@ -1,0 +1,110 @@
+{
+ "critic": "edit_rhythm",
+ "stage": "animatic",
+ "score": 60,
+ "dimension_scores": {
+  "rhythm_wave": 62,
+  "cut_motivation": 58,
+  "connectives": 68,
+  "economy": 50,
+  "transitions_quality": 58
+ },
+ "issues": [
+  {
+   "shot_id": "01:18–01:42 (78.0–102.0)",
+   "category": "mid_film_sag",
+   "severity": 0.7,
+   "confidence": 0.8,
+   "evidence": "Three of the four longest shots sit back to back: 78.0 (8.2 s), 86.2 (4.8 s), 94.1 (7.9 s). f_32–f_36 are the same split layout five samples running; f_39–f_41 the same ringed list three samples running.",
+   "suggested_action": "Cut the split to 4.5 s as a 3-hit burst (cell / sentence / slide element, 1.2 s each, cut on the chatbot % ticking), and the hero hold to ~4 s ending on the Slide 4 ring."
+  },
+  {
+   "shot_id": "00:52.6–01:11.4",
+   "category": "same_treatment_run",
+   "severity": 0.55,
+   "confidence": 0.75,
+   "evidence": "Seven shots in a row are 1.7–3.0 s 'wide app → slow push' (52.6, 54.4, 56.4, 61.4, 64.4, 67.0, 68.73) at the same size, angle and speed; ASL here ≈2.4 s with no burst and no hold.",
+   "suggested_action": "Make 61.4–71.4 one continuous move (prompt → reading → plan) or a 0.5 s-per-step burst, then hold 2 s on the plan checks."
+  },
+  {
+   "shot_id": "00:54.4–00:58.4",
+   "category": "message_too_short",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "'Templates, or a sentence.' lives on a 2.0 s shot; the 56.4–58.4 sample (f_24, 57.5 s) shows a top-down laptop with no 'Something new? Every new element is marked.' caption visible — the line either never lands or is <2 s.",
+   "suggested_action": "Drop the templates/new-element pair (off-message for 'one number') or merge into one 3 s shot."
+  },
+  {
+   "shot_id": "01:57.5–02:02.5 (f_49,f_50)",
+   "category": "dead_air_static",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "119.9 shot is 4.5 s of an unchanging frame (f_49 = f_50).",
+   "suggested_action": "Trim to 2.5 s and cut to sunrise on the 'Sent' toast settle."
+  },
+  {
+   "shot_id": "00:37.4–00:41.6",
+   "category": "burst_works",
+   "severity": 0.2,
+   "confidence": 0.7,
+   "evidence": "Copy./Paste./Check. whip burst (0.6–1.4 s shots) then 2.97 s + 3.37 s hold on Send and silence: the one true burst→hold in the film.",
+   "suggested_action": "Keep; tighten the 41.6 hold to land the head-drop exactly on the 'anymore' VO tail."
+  },
+  {
+   "shot_id": "00:46–00:49 (f_19,f_20)",
+   "category": "logo_too_early",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Logo + promise at 46–49 then product, then logo again at 130.9: two full logo beats.",
+   "suggested_action": "Replace the 46 s logo with a hard cut to black + promise line only; save the mark for the end."
+  },
+  {
+   "shot_id": "01:42–01:57.5",
+   "category": "connective_missing",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Room (102) → Priya proposal (106) → Evidence (108.8) → file tree (113.8) are hard cuts between unrelated UI with no motif carrying across; the €74.6m chip that lifted out at 71.4 never reappears.",
+   "suggested_action": "Carry the €74.6m chip as a match-cut object through Priya's proposal and into the end-card '='."
+  },
+  {
+   "shot_id": "00:00–00:08",
+   "category": "bookend_good",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "≠ cards (f_01) return as = cards on the laptop (f_48): a real motif bookend; 'Done.' x3 motif escalates cleanly.",
+   "suggested_action": "Keep; make the 118.3 '=' shot a direct match cut on the same card positions as 0 s."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "three or more consecutive shots at the same size and angle",
+   "shot_id": "01:01.4–01:11.4",
+   "evidence": "61.4, 64.4, 67.0, 68.73: identical wide-to-push UI treatment, same angle."
+  },
+  {
+   "rule": "message cut off before 2.5 s",
+   "shot_id": "00:54.4",
+   "evidence": "'Templates, or a sentence.' on a 2.0 s shot."
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Cut 78–102 from 24 s to ~13 s: a 3-hit burst for cell/sentence/slide, then one 4 s hold on the Slide 4 catch.",
+ "recut_plan": [
+  "00:54.4–00:58.4: cut templates + new-element shots (−4 s); the VO line moves under 52.6.",
+  "01:01.4–01:11.4: replace four pushes with one continuous move prompt→reading→plan (single 6 s shot).",
+  "01:18.0–01:26.2: split 8.2 s into three 1.3 s hits (cell, sentence, slide element) cut on the chatbot % tick; hold 1.5 s on 'Keep everything else.'",
+  "01:31.0–01:42.0: trim hero 11 s → 6 s; land the ring on Slide 4 on the music peak (92.3).",
+  "01:42.0–01:53.8: match-cut the €74.6m chip from the Room into Priya's proposal; trim Evidence 5.0 → 3.0 s.",
+  "01:59.9–02:04.4: trim static 'Sent' laptop 4.5 → 2.5 s.",
+  "00:46.0–00:49.0: replace mid-film logo with promise on black, 2 s.",
+  "01:58.3: match-cut '=' cards to the exact screen positions of the 0 s '≠' cards."
+ ],
+ "target_shot_stats": {
+  "shots": "58–64",
+  "asl_s": "2.0–2.2",
+  "median_s": "1.8",
+  "pct_under_1s": "25",
+  "pct_over_4s": "8–10",
+  "longest_s": "≤5 (except one deliberate 4–5 s hold at the Send silence)"
+ }
+}

@@ -1,0 +1,123 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 72,
+  "dimension_scores": {
+    "lighting_shape": 75,
+    "lens_depth": 71,
+    "composition": 78,
+    "camera_movement": 68,
+    "frame_design_ui": 64
+  },
+  "issues": [
+    {
+      "shot_id": "00:50–00:55",
+      "category": "ui_subject_scale",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "The three real application windows occupy a narrow horizontal band beneath the logo; the subsequent isolated spreadsheet remains small within extensive dark space. Document content and assistant panels become miniature textures.",
+      "suggested_action": "Enlarge the central application to roughly three quarters of frame width, keep the flanking windows behind it, and finish the merge on a readable detail rather than the entire application."
+    },
+    {
+      "shot_id": "00:08–00:15",
+      "category": "flat_ui_lighting",
+      "severity": 0.7,
+      "confidence": 0.97,
+      "evidence": "The chatbot and Word-like window are predominantly frontal white rectangles. Their surrounding vignette adds darkness at the edges but little directional light or spatial depth; measured luma rises from 46.4 at 00:05 to 202.9 at 00:08.",
+      "suggested_action": "Give these windows a consistent slight viewing angle, directional screen spill onto the surrounding office, and restrained edge reflections; preserve clean exposure around the active text."
+    },
+    {
+      "shot_id": "00:15",
+      "category": "focus_without_anchor",
+      "severity": 0.68,
+      "confidence": 0.98,
+      "evidence": "The typing insert has soft fingers and soft keyboard keys, with no clearly resolved focal anchor; measured sharpness at 00:15.6 is 3.5.",
+      "suggested_action": "Choose a portion of the existing insert where the active fingertips or contacted keys resolve sharply, and match its neutral skin lighting to the blue office."
+    },
+    {
+      "shot_id": "00:55–01:00",
+      "category": "ui_crop_and_softness",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "The tight prompt frame leaves a large empty area on the left and places the text-entry box against the bottom edge; the following frame cuts the memo into a narrow strip. This shot's measured sharpness is 57.9 and contrast is 22.7.",
+      "suggested_action": "Reframe from the highest-resolution recording so the complete active prompt box sits inside safe margins, then move to a balanced document-and-assistant composition with one clear focal target."
+    },
+    {
+      "shot_id": "01:02",
+      "category": "competing_text_planes",
+      "severity": 0.62,
+      "confidence": 0.97,
+      "evidence": "The memo fills nearly the entire frame with dense body copy, a table, and small purple tracked changes; the 'It fixes.' plaque occupies another visual plane at the upper left.",
+      "suggested_action": "Crop to the changed paragraph and one adjacent document landmark, enlarge the diff, and place the plaque in the surrounding negative space."
+    },
+    {
+      "shot_id": "01:06–01:12",
+      "category": "low_contrast_ui",
+      "severity": 0.59,
+      "confidence": 0.96,
+      "evidence": "The tall Changes panel presents gray text on dark gray against a dark background; measured contrast for the sequence is 22.7. The red ellipse crosses the same narrow band as 'Slide 4 title' and its numeric change.",
+      "suggested_action": "Lift the panel's midtones locally and frame fewer rows at a larger scale; move the ellipse outside the text baselines while retaining the right-side callout."
+    },
+    {
+      "shot_id": "00:23 and 00:31",
+      "category": "repeated_reaction_framing",
+      "severity": 0.48,
+      "confidence": 0.94,
+      "evidence": "Both supplied reaction frames use almost the same frontal head-in-hands composition, blue background screen, and downward eyeline; measured sharpness is 7.6 and 7.7 respectively.",
+      "suggested_action": "Use the wider reaction framing once and select a distinctly tighter, sharper moment for the later insert, preserving screen direction and the existing blue rim."
+    },
+    {
+      "shot_id": "00:46–00:55",
+      "category": "camera_movement_verification",
+      "severity": 0.4,
+      "confidence": 0.55,
+      "evidence": "The supplied reveal frames show centered logo states followed by a screenshot fan and isolated window; still samples do not establish the smoothness or motion blur of this 9.37-second continuous shot.",
+      "suggested_action": "Verify the rendered sequence at playback speed and frame-step its fan-to-merge transition; maintain one continuous movement trajectory and remove any abrupt scale or velocity changes."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the real product sequence around large, readable UI details with consistent directional screen light and spatial depth.",
+  "per_shot": [
+    {
+      "t": "00:50",
+      "grade_A_to_F": "D",
+      "fix": "Enlarge the central application and retain the side windows as receding depth layers."
+    },
+    {
+      "t": "00:15",
+      "grade_A_to_F": "D",
+      "fix": "Select a typing moment with sharp fingertips or keys and match its light to the blue office."
+    },
+    {
+      "t": "00:55",
+      "grade_A_to_F": "C",
+      "fix": "Keep the complete prompt box within safe margins and use a sharper source crop."
+    },
+    {
+      "t": "00:08",
+      "grade_A_to_F": "C",
+      "fix": "Add directional screen spill and a slight viewing angle while protecting text exposure."
+    },
+    {
+      "t": "00:12",
+      "grade_A_to_F": "C",
+      "fix": "Frame the document as a screen in the office with edge separation and one active detail."
+    },
+    {
+      "t": "01:02",
+      "grade_A_to_F": "C",
+      "fix": "Enlarge the tracked paragraph and move the title plaque into negative space."
+    },
+    {
+      "t": "01:06",
+      "grade_A_to_F": "C",
+      "fix": "Lift panel midtones and show fewer change rows at a larger scale."
+    },
+    {
+      "t": "00:31",
+      "grade_A_to_F": "C",
+      "fix": "Use a sharper, tighter reaction moment distinct from the earlier frontal shot."
+    }
+  ]
+}

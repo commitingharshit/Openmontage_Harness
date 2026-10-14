@@ -1,0 +1,67 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "stop_scroll": 82,
+    "three_second_comprehension": 77,
+    "thats_me": 91,
+    "part1_attractor": 85,
+    "part2_curiosity_gap": 89,
+    "part3_proof_roadmap": 43,
+    "framework_fit": 80,
+    "open_loop": 94
+  },
+  "framework_detected": "In Medias Res opening inside a PAS arc: the imminent Send, conflicting figures and board deadline establish danger immediately; the rewind explains the problem and agitation. The opening lacks an early proof or roadmap beat. Its Slide 4 loop is paid off by the later review demonstration.",
+  "framework_recommended": "In Medias Res with a brief proof flash: retain the imminent-send dilemma, then glimpse the real reviewable Slide 4 correction before rewinding, giving viewers a concrete reason to stay through the backstory.",
+  "hook_2s": 8,
+  "issues": [
+    {
+      "shot_id": "00:04–00:12",
+      "category": "missing_early_proof_roadmap",
+      "severity": 0.76,
+      "confidence": 0.97,
+      "evidence": "The mismatch cuts to '45 MINUTES EARLIER', then 'Hi, how can I help?' and 'Done.' The review promise arrives at 46 seconds; real product proof follows after 55 seconds.",
+      "suggested_action": "Before the rewind, insert a brief, labelled real-product glimpse of 'Slide 4 title €71–73m → €74.6m' with the line 'Every change visible. You decide.' Then return to the backstory."
+    },
+    {
+      "shot_id": "00:00–00:04",
+      "category": "sound_off_context_hierarchy",
+      "severity": 0.52,
+      "confidence": 0.94,
+      "evidence": "The large figures '€74.6m' and '€71–73m' are readable, but their file identities and 'Slide 4' are small. '8:57' dominates its smaller 'AM · BOARD AT 9:00' qualifier. The VO supplies the clearer explanation: 'the deck doesn't match the model.'",
+      "suggested_action": "Add a large opening caption, 'Board in 3 minutes. The deck doesn’t match the model.', and simplify the card labels to prominent 'MODEL' and 'DECK · SLIDE 4'."
+    },
+    {
+      "shot_id": "00:05–00:11",
+      "category": "post_attractor_momentum_drop",
+      "severity": 0.43,
+      "confidence": 0.91,
+      "evidence": "After the dangerous Send moment, the sequence spends three seconds on the desk shot, then shows a mostly empty chatbot screen headed 'Hi, how can I help?' with a partially typed prompt.",
+      "suggested_action": "Shorten the desk transition and enter the chatbot shot with the complete request already legible, carrying a small 'How the pack fell out of sync' caption through the rewind."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Keep the imminent-send mismatch, but add a brief real Slide 4 diff before the rewind so the opening promises visible, human-controlled review as well as danger.",
+  "hook_alternatives": [
+    {
+      "framework": "In Medias Res",
+      "first_3s_visual": "Cursor stops over Send; large MODEL €74.6m and DECK · SLIDE 4 €71–73m cards collide beneath 'BOARD IN 3 MINUTES'.",
+      "line": "Three minutes to the board. Which number are you sending?",
+      "why": "Turns the existing mismatch into an immediate decision and opens a specific loop the Slide 4 review can resolve."
+    },
+    {
+      "framework": "Everything-You-Know-Is-Wrong",
+      "first_3s_visual": "A giant chatbot '✓ Done.' splits apart to reveal the model and deck showing conflicting revenue figures.",
+      "line": "“Done” doesn’t mean the files agree.",
+      "why": "Challenges a familiar AI reassurance with a concrete contradiction and establishes why reviewing changes matters."
+    },
+    {
+      "framework": "BAB",
+      "first_3s_visual": "Before: conflicting model and deck figures. After: a labelled real Slide 4 diff, '€71–73m → €74.6m', beside visible Accept and Reject controls.",
+      "line": "From conflicting files to changes you can review.",
+      "why": "Shows the desired review state immediately, then lets the film explain the bridge through one request across the pack."
+    }
+  ]
+}

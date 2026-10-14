@@ -1,0 +1,24 @@
+{"critic":"sound_dialogue","stage":"animatic","score":64,
+"dimension_scores":{"intelligibility":66,"performance_casting":62,"writing_for_the_ear":72,"pacing":58,"placement":60},
+"issues":[
+{"shot_id":"01:07.4 and 02:01.5","category":"brand_mispronounced","severity":0.9,"confidence":0.85,"evidence":"measure: 'Introducing Diffs, in Agentic Office' heard 'introducing difs in a genteck office'; end line heard '...in a genteck office'. The brand is misheard twice, including the final line.","suggested_action":"Re-render both lines with a phonetic override ('uh-JEN-tick OFF-iss') and a 120 ms pause after 'Agentic'; re-run ASR until it hears 'agentic office'."},
+{"shot_id":"01:03.9","category":"rushed_line_runs_into_next","severity":0.8,"confidence":0.85,"evidence":"'What if it did the work, and you just approved it?' is 4.91 w/s and ASR runs straight on into 'introducing difs'. There is no breath before the reveal.","suggested_action":"Slow it to about 2.7 w/s (stretch to ~3.9 s, starting at 63.2) and leave 0.6 s of air before 'Introducing'. Move 'Introducing' to land on the Diffs card cut, about 68.6."},
+{"shot_id":"00:15.7","category":"clipped_onset","severity":0.6,"confidence":0.8,"evidence":"Expected 'She asks the AI...'; heard 'asks the ai...'. match 0.84 is below the 0.85 floor and 'She' is lost. It also bleeds into 'but it lives'.","suggested_action":"Pre-roll the clip by 150 ms so 'She' survives, and put a 0.4 s gap before the 21.3 line."},
+{"shot_id":"02:01.5","category":"clipped_onset","severity":0.6,"confidence":0.8,"evidence":"End line heard 'change, reviewable...'. 'Every' is lost on the tagline (match 0.87).","suggested_action":"Start the clip 200 ms earlier; check that the end-card chime is not masking the first word."},
+{"shot_id":"00:21.3","category":"rushed","severity":0.5,"confidence":0.8,"evidence":"'But it lives in the chat. Not one of her files has changed.' runs 3.76 w/s.","suggested_action":"Slow it to 2.8 w/s; the 0 of 3 shot holds until 27.5, so there is room."},
+{"shot_id":"00:59.4–01:02","category":"vo_over_wrong_picture","severity":0.55,"confidence":0.7,"evidence":"'Today, AI answers. You do the work.' starts at 59.4, while the cut to the cream card is at 59.2. It follows the 'She missed one' face by only about 2 s, so the climax gets no air before the narrator returns.","suggested_action":"Hold the face plus room tone to about 61.5, then start the VO 0.3 s after the card cut."},
+{"shot_id":"00:21–00:27","category":"super_vo_mismatch","severity":0.35,"confidence":0.75,"evidence":"Super says 'Her files haven't changed' and VO says 'Not one of her files has changed'. At 18–21 the super says 'The AI has the answer.' while VO says 'The answer comes back in seconds'.","suggested_action":"Make the supers and VO say the same words, or drop the super under VO."},
+{"shot_id":"01:43.0","category":"vo_buried","severity":0.5,"confidence":0.75,"evidence":"'It does the work. You approve.': RMS during VO is -15.2 dBFS against -14.9 for the bed alone just before. The payoff line sits inside the music.","suggested_action":"Duck the bed 8–10 dB under this line (see mix)."}],
+"line_fixes":[
+{"t":"67.4","issue":"'Agentic' heard as 'a genteck'","fix":"phonetic 'uh-JEN-tick Office', +120 ms pause, re-verify ASR"},
+{"t":"121.5","issue":"'Every' dropped; brand misheard","fix":"pre-roll 200 ms; phonetic 'uh-JEN-tick'; slow to 2.2 w/s"},
+{"t":"63.9","issue":"4.91 w/s, bleeds into the reveal","fix":"stretch to ~2.7 w/s, end by 67.8, 0.6 s air"},
+{"t":"15.7","issue":"'She' clipped, match 0.84","fix":"pre-roll 150 ms"},
+{"t":"21.3","issue":"3.76 w/s","fix":"slow to 2.8 w/s"},
+{"t":"59.4","issue":"steps on the climax silence","fix":"move to ~61.8, after 2.5 s of held silence"}],
+"constraint_failures":[
+{"rule":"brand or product name misheard","shot_id":"01:07.4, 02:01.5","evidence":"heard 'a genteck office' twice"},
+{"rule":"any line with match < 0.85","shot_id":"00:15.7","evidence":"match 0.84, 'She' clipped"},
+{"rule":"VO stepping on another VO line","shot_id":"01:03.9→01:07.4","evidence":"ASR merges 'approved it? introducing difs' with no gap"}],
+"revision_scope":"shot_sequence",
+"top_revision":"Re-voice 'Agentic Office' phonetically at 67.4 and 121.5 and slow the 63.9 'What if' line to ~2.7 w/s with 0.6 s of air before 'Introducing'."}

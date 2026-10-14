@@ -1,0 +1,254 @@
+{
+  "critic": "real_film_benchmark",
+  "stage": "animatic",
+  "score": 51,
+  "dimension_scores": {
+    "production_value": 52,
+    "photorealism_no_ai_tells": 62,
+    "cohesion_with_ref_look": 49,
+    "ui_and_graphics_finish": 34
+  },
+  "issues": [
+    {
+      "shot_id": "00:51–01:07",
+      "category": "ui_capture_resolution",
+      "severity": 0.95,
+      "confidence": 0.99,
+      "evidence": "The enlarged Changes panel has visibly soft lettering and truncated labels: 'Board Deck Q3.p...', 'Midpoint shown → R...'. Measured sharpness is 29.9 at 51.2s and 14.5 at 63.2s.",
+      "suggested_action": "Recapture the real app with larger interface text and tighter source framing, then present the panel without enlarging low-resolution pixels."
+    },
+    {
+      "shot_id": "00:34–00:38",
+      "category": "screenshot_presentation",
+      "severity": 0.92,
+      "confidence": 0.99,
+      "evidence": "A blurry chat screenshot fills the background while a yellow rectangle, a large quoted subtitle, and 'One request. Her real model, memo and deck.' repeat its content.",
+      "suggested_action": "Use a sharp real-app capture with one restrained highlight and one caption; remove the duplicate quotation layer."
+    },
+    {
+      "shot_id": "00:00–00:27",
+      "category": "slide_deck_graphics",
+      "severity": 0.86,
+      "confidence": 0.98,
+      "evidence": "The opening uses three outlined file cards with check/cross symbols; subsequent frames use centered floating windows, message cards, and a red oval around the stale value.",
+      "suggested_action": "Rebuild this sequence around a continuous file workspace with consistent typography, fewer containers, and precise transitions between the affected objects."
+    },
+    {
+      "shot_id": "00:12, 00:29, 00:50, 01:11",
+      "category": "synthetic_portrait_finish",
+      "severity": 0.73,
+      "confidence": 0.77,
+      "evidence": "Maya's close-ups show unusually smooth cheek and forehead texture and a uniformly composed expression; the desk portraits have little of the imperfect texture and environmental activity visible in REF_bJcA23ckzcY.",
+      "suggested_action": "Verify the moving footage for skin texture, blinks, and expression continuity; replace only takes that retain this synthetic finish with textured, motivated reaction coverage."
+    },
+    {
+      "shot_id": "00:40–01:09",
+      "category": "crop_and_annotation_finish",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The memo is cropped through its right-hand text, the Excel frame cuts off 'Accept all', and repeated green captions sit in dark rounded boxes over the captured interface.",
+      "suggested_action": "Frame complete target regions with consistent margins and move app labels into one compact, consistent caption treatment."
+    },
+    {
+      "shot_id": "00:12–01:15",
+      "category": "visual_cohesion",
+      "severity": 0.67,
+      "confidence": 0.98,
+      "evidence": "Deep blue office portraits alternate with nearly white document screens and flat black title cards; measured luma spread is 64.8 and saturation spread is 56.6.",
+      "suggested_action": "Unify screen surrounds, black levels, accent colors, and transition exposure while preserving the real documents' readable whites."
+    },
+    {
+      "shot_id": "00:00–00:11",
+      "category": "opening_visual_development",
+      "severity": 0.63,
+      "confidence": 0.96,
+      "evidence": "The 00:00.5 and 00:01.8 frames show the same headline and file-card layout; the measured opening shot lasts 11.2 seconds.",
+      "suggested_action": "Stage the contradiction through successive file and chat reveals within the opening, keeping each essential message readable instead of relying on one graphic setup."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "real_film_index must be at least 60",
+      "shot_id": "whole",
+      "evidence": "The 27 candidate frames average 4.963/10, producing a real_film_index of 49.63."
+    },
+    {
+      "rule": "No UI frame that looks like a screenshot pasted on black",
+      "shot_id": "00:34.5, 00:37.5",
+      "evidence": "The chat capture is presented against a dark surround with a yellow selection rectangle and stacked explanatory text, visibly resembling an annotated screenshot."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Recapture and redesign the screen sequences as sharp, consistently framed real-app footage with restrained annotations and continuous visual development.",
+  "frame_scores": [
+    {
+      "t": "00:00.5",
+      "score": 4,
+      "tell": "Outlined cards and oversized verdict headline read as presentation graphics.",
+      "fix": "Introduce the mismatch through a connected workspace composition."
+    },
+    {
+      "t": "00:01.8",
+      "score": 4,
+      "tell": "Same static-looking card arrangement as the preceding sample.",
+      "fix": "Develop the composition through successive file reveals."
+    },
+    {
+      "t": "00:04.5",
+      "score": 4,
+      "tell": "Dim floating chat window and large two-line caption compete.",
+      "fix": "Sharpen the chat and reduce the caption to one visual hierarchy."
+    },
+    {
+      "t": "00:08.5",
+      "score": 5,
+      "tell": "Readable but generic message cards suspended on a dark background.",
+      "fix": "Connect the messages visually to Maya's actual workspace."
+    },
+    {
+      "t": "00:12.2",
+      "score": 7,
+      "tell": "Convincing lighting and desk depth; skin texture looks softened.",
+      "fix": "Verify skin and hand continuity in motion and preserve natural texture."
+    },
+    {
+      "t": "00:15.0",
+      "score": 4,
+      "tell": "Simplified spreadsheet window resembles an explanatory slide.",
+      "fix": "Add credible interaction and refine grid spacing and application framing."
+    },
+    {
+      "t": "00:18.0",
+      "score": 3,
+      "tell": "Large blank page area and mixed pasted typography feel like a staged document graphic.",
+      "fix": "Show the paste interaction within a consistently framed document editor."
+    },
+    {
+      "t": "00:21.0",
+      "score": 4,
+      "tell": "Side-by-side slides and 'Not your deck.' form a presentation comparison.",
+      "fix": "Reveal the downloaded deck through a file-opening transition."
+    },
+    {
+      "t": "00:23.5",
+      "score": 4,
+      "tell": "Floating chart slide with a detached instruction strip.",
+      "fix": "Keep the deck inside a credible editing context."
+    },
+    {
+      "t": "00:26.5",
+      "score": 5,
+      "tell": "Red oval and stacked message card resemble annotated training material.",
+      "fix": "Use one precise highlight and a cleaner message hierarchy."
+    },
+    {
+      "t": "00:29.4",
+      "score": 7,
+      "tell": "Strong close-up composition; very smooth facial texture.",
+      "fix": "Verify natural blinking and expression development in the source take."
+    },
+    {
+      "t": "00:31.5",
+      "score": 5,
+      "tell": "Plain centered title and subtitle lack distinctive launch-film finish.",
+      "fix": "Use the ending's typographic system and a deliberate reveal."
+    },
+    {
+      "t": "00:34.5",
+      "score": 4,
+      "tell": "Soft screenshot with yellow rectangle and duplicated quotation.",
+      "fix": "Recapture sharply and retain one annotation layer."
+    },
+    {
+      "t": "00:37.5",
+      "score": 4,
+      "tell": "Same soft screenshot treatment with another large quotation.",
+      "fix": "Continue a clean capture move rather than restacking explanatory text."
+    },
+    {
+      "t": "00:40.0",
+      "score": 5,
+      "tell": "Document text is enlarged and cut through the right edge.",
+      "fix": "Capture the whole changed paragraph at readable scale."
+    },
+    {
+      "t": "00:44.0",
+      "score": 5,
+      "tell": "Authentic diff bar, but awkward toolbar crop and caption overlay.",
+      "fix": "Frame the complete diff controls with intentional margins."
+    },
+    {
+      "t": "00:47.0",
+      "score": 6,
+      "tell": "Real app context helps; caption block covers slide content.",
+      "fix": "Place the app label outside the slide's content area."
+    },
+    {
+      "t": "00:49.9",
+      "score": 7,
+      "tell": "Plausible portrait lighting, but face remains unusually polished.",
+      "fix": "Verify texture and reaction continuity in motion."
+    },
+    {
+      "t": "00:52.5",
+      "score": 5,
+      "tell": "Changes panel is visibly soft after enlargement.",
+      "fix": "Recapture at a larger native UI scale."
+    },
+    {
+      "t": "00:55.5",
+      "score": 4,
+      "tell": "Blurred labels, truncated filename, and large hand-drawn oval.",
+      "fix": "Use a sharp complete target row and restrained emphasis."
+    },
+    {
+      "t": "00:58.5",
+      "score": 4,
+      "tell": "Soft magnified panel text and truncated change descriptions.",
+      "fix": "Capture expanded, readable descriptions without aggressive enlargement."
+    },
+    {
+      "t": "01:01.5",
+      "score": 4,
+      "tell": "Soft controls with another yellow annotation box.",
+      "fix": "Show the real hover or click affordance in a sharp capture."
+    },
+    {
+      "t": "01:04.5",
+      "score": 5,
+      "tell": "Review result is legible but strongly pixel-soft.",
+      "fix": "Capture the acceptance result at final presentation scale."
+    },
+    {
+      "t": "01:08.5",
+      "score": 5,
+      "tell": "White document abruptly dominates; caption obscures lower text.",
+      "fix": "Use consistent document framing and move the caption below the proof area."
+    },
+    {
+      "t": "01:11.5",
+      "score": 7,
+      "tell": "Good desk composition; laptop hand contact needs motion verification.",
+      "fix": "Verify finger geometry and contact throughout the closing action."
+    },
+    {
+      "t": "01:14.6",
+      "score": 7,
+      "tell": "Believable daylight portrait, though posing feels stock-like.",
+      "fix": "Use a specific boardroom action and a less held expression."
+    },
+    {
+      "t": "01:19.0",
+      "score": 6,
+      "tell": "Clean typography, but generic CTA capsule and sparse hierarchy.",
+      "fix": "Carry a distinctive brand typography and accent system into the end card."
+    }
+  ],
+  "real_film_index": 49.63,
+  "closest_ref": "REF_bJcA23ckzcY_sheet_01.jpg (Codex 'It's time to fly'): the night-office lighting is closest, but the candidate lacks its textured performances, varied coverage, and integrated screen presentation.",
+  "top_3_upgrades": [
+    "Recapture the real product UI at readable native scale and eliminate blurry digital enlargement.",
+    "Replace floating cards and repeated annotation boxes with one cohesive, deliberately animated graphic system.",
+    "Verify portrait motion and preserve natural skin texture, purposeful reactions, and convincing hand contact."
+  ]
+}

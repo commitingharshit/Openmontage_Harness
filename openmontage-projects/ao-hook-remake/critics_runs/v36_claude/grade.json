@@ -1,0 +1,125 @@
+{
+ "critic": "grade",
+ "stage": "animatic",
+ "score": 47,
+ "dimension_scores": {
+  "look_family_unity": 48,
+  "skin_tones": 65,
+  "contrast_curve_blacks": 44,
+  "shot_to_shot_match": 38,
+  "finish": 45
+ },
+ "issues": [
+  {
+   "shot_id": "00:40.3 -> 00:41.6 -> 00:44.57",
+   "category": "raw_white_ui_in_night_world",
+   "severity": 0.8,
+   "confidence": 0.9,
+   "evidence": "f_18 email window near-white; measured luma 64.9 -> 131.5 -> 42.1, contrast 45.7 -> 110.0 -> 34.4, inside the same night scene",
+   "suggested_action": "Apply the night grade to 41.6-44.57: gain down ~35%, white point ~200, cool WB, same vignette as 37.4-41.6"
+  },
+  {
+   "shot_id": "00:09.8-00:41.6",
+   "category": "milky_blacks",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "f_05, f_08, f_11, f_15: lifted grey wash, no true black; measured contrast 23.1 (9.8), 22.5 (16.5), 15.1 (22.97), 21.1 (24.87)",
+   "suggested_action": "Pull lift to 0 and add an S-curve so screen whites sit ~200 and surround reaches ~10; keep the cool tint in the mids"
+  },
+  {
+   "shot_id": "00:01.2 -> 00:04.5 -> 00:05.07",
+   "category": "exposure_sat_jump",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "luma 107.5/sat 31.0 -> 20.6/78.9 -> 46.4/118.3 across three cuts in the opening 6 s",
+   "suggested_action": "Bring the cold-open email to luma ~70 and sat ~60, and the protagonist plate's sat down to ~85"
+  },
+  {
+   "shot_id": "01:08.73 -> 01:11.4",
+   "category": "exposure_jump",
+   "severity": 0.5,
+   "confidence": 0.85,
+   "evidence": "luma 50.9 -> 128.4, contrast 51.8 -> 107.4 into the white memo page (f_30)",
+   "suggested_action": "Grade the white page down (gain 0.82) and add a soft vignette so the paper reads as lit, not as a raw screenshot"
+  },
+  {
+   "shot_id": "01:47.3 -> 01:47.9",
+   "category": "sat_spike",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "luma 18.8 -> 82.1, sat 63.1 -> 141.4 at the 'lights on' cut (f_44): motivated, but the orange is the most saturated frame in the film",
+   "suggested_action": "Keep the luma lift, cap sat at ~110 and roll the orange highlights toward amber"
+  },
+  {
+   "shot_id": "whole",
+   "category": "look_family_spread",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "measured luma spread SD 29.0, sat spread SD 30.8 across 46 shots; post-reveal mixes warm-room orange, teal-black UI panels and paper-white docs",
+   "suggested_action": "Define two worlds only (night: teal-grey, low sat; solution: warm amber room + neutral UI at gain 0.85) and match every shot to one"
+  },
+  {
+   "shot_id": "01:55-02:01",
+   "category": "finish_inconsistent",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "grain visible on stock (f_07, f_46) but none on UI/end cards; vignette heavy on illustrations, absent on real-UI panels; only one shot letterboxed (52.6, 22 rows)",
+   "suggested_action": "One finishing pass over the whole timeline: same grain, same vignette strength, remove the single letterbox"
+  },
+  {
+   "shot_id": "00:22.5",
+   "category": "skin_under_blue",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "f_10/f_13 skin slightly grey-blue in the shadows",
+   "suggested_action": "Key the skin and pull it 5 degrees warm, keep the background blue"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:40.3 -> 00:41.6",
+   "evidence": "night-world montage at luma 64.9 cuts to the raw white email at luma 131.5, contrast 110"
+  },
+  {
+   "rule": "UI frames left raw and white beside graded film",
+   "shot_id": "00:41.6-00:44.57",
+   "evidence": "f_18 bright-white email window between graded night plates"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Grade the 41.6-44.57 s email and the 71.4 s memo page into their worlds (gain down, real blacks) and pull lift to zero across the illustrated night block to end the milky grey wash.",
+ "grade_recipe": {
+  "night_problem_world": "eq=gamma=0.95:contrast=1.18:brightness=-0.04:saturation=0.75, colorbalance=rs=-0.04:bs=0.06:rm=-0.02:bm=0.04, curves=master='0/0 0.25/0.18 0.75/0.78 1/0.88', vignette=PI/5, noise=alls=6:allf=t",
+  "solution_warm_room": "eq=contrast=1.08:saturation=0.9, colorbalance=rh=0.05:gh=0.02:bh=-0.04:bs=0.03 (teal shadows/amber highlights), curves=master='0/0.02 0.5/0.5 1/0.92', noise=alls=5:allf=t",
+  "real_ui_panels": "eq=brightness=-0.06:contrast=1.05, colorlevels=rimax=0.86:gimax=0.86:bimax=0.88 (paper white to ~220), same vignette=PI/6 and grain as warm room",
+  "end_cards": "match night world blacks (floor ~8), grain alls=5"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:40.3",
+   "to": "00:41.6",
+   "issue": "luma 64.9 -> 131.5, contrast 45.7 -> 110"
+  },
+  {
+   "from": "00:04.5",
+   "to": "00:05.07",
+   "issue": "luma 20.6 -> 46.4, sat 78.9 -> 118.3"
+  },
+  {
+   "from": "01:08.73",
+   "to": "01:11.4",
+   "issue": "luma 50.9 -> 128.4 into raw paper white"
+  },
+  {
+   "from": "01:47.3",
+   "to": "01:47.9",
+   "issue": "sat 63.1 -> 141.4"
+  },
+  {
+   "from": "01:25.0",
+   "to": "01:28.4",
+   "issue": "luma 63.3 -> 32.6, sat 109.7 -> 72.5"
+  }
+ ]
+}

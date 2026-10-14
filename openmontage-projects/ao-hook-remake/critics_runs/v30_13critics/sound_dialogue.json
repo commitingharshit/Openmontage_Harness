@@ -1,0 +1,156 @@
+{
+  "critic": "dialogue_vo",
+  "stage": "animatic",
+  "score": 64,
+  "dimension_scores": {
+    "intelligibility": 55,
+    "performance_casting": 66,
+    "writing_for_the_ear": 83,
+    "pacing": 42,
+    "placement": 78
+  },
+  "issues": [
+    {
+      "shot_id": "01:22.6",
+      "category": "brand_intelligibility",
+      "severity": 1,
+      "confidence": 1,
+      "evidence": "Expected “Agentic Office.”; measured heard “office.” Match 0.60; delivery 5.56 words/s.",
+      "suggested_action": "Verify the isolated line and final mix for a truncated first word; restore the complete brand name at about 2.6 words/s, with clear space before and after."
+    },
+    {
+      "shot_id": "00:55.1",
+      "category": "missing_word",
+      "severity": 0.85,
+      "confidence": 1,
+      "evidence": "Expected “Tell it what changed. Once.”; heard “it what changed. once, it finds every”. Match 0.67.",
+      "suggested_action": "Verify the clip start and transcription window; restore “Tell” and separate “Once” from the following sentence with a brief pause."
+    },
+    {
+      "shot_id": "00:06–00:27",
+      "category": "rushed_delivery",
+      "severity": 0.8,
+      "confidence": 1,
+      "evidence": "Measured rates reach 4.30 words/s at 6.0, 3.95 at 12.5, 4.09 at 15.55, and 4.86 at 24.0.",
+      "suggested_action": "Shorten these lines to “You ask it to update an agreement,” “You open it. The formatting’s wrecked,” “You fix it by hand. An email arrives,” and “You ask for the deck. It builds one.” Deliver at 2.6–3.0 words/s."
+    },
+    {
+      "shot_id": "00:11",
+      "category": "line_match_failure",
+      "severity": 0.7,
+      "confidence": 1,
+      "evidence": "Expected “It says: done.”; heard “it says done. then you”. Match 0.73.",
+      "suggested_action": "Verify phrase-isolated alignment because the extra words belong to the next line; give “Done” a clean ending and a brief hold before “Then you open…”."
+    },
+    {
+      "shot_id": "00:28.35",
+      "category": "line_match_failure",
+      "severity": 0.7,
+      "confidence": 1,
+      "evidence": "Expected “Then one number changes.”; heard “then one number changes. prompt again,”. Match 0.78.",
+      "suggested_action": "Verify the measurement window and clip boundaries; preserve a distinct pause before “Prompt again” and remeasure the isolated line."
+    },
+    {
+      "shot_id": "00:42.3",
+      "category": "emotional_pacing",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "“The worst part? You don't even know what's wrong anymore.” runs at 3.73 words/s during the cursor stop and transition to room tone.",
+      "suggested_action": "Use “The worst part? You don’t know what’s wrong.” at about 2.6 words/s, with a pause after the question and room tone remaining after the final word."
+    },
+    {
+      "shot_id": "00:18.15",
+      "category": "spoken_text_alignment",
+      "severity": 0.35,
+      "confidence": 1,
+      "evidence": "The British male reads “Please add the updated financial annexure and the presentation, before the meeting”; the visible notification says “Please include the updated financial annexure and the presentation before the meeting.”",
+      "suggested_action": "Make the spoken email match the visible notification verbatim; retain its measured 2.76 words/s delivery."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Brand or product name misheard",
+      "shot_id": "01:22.6",
+      "evidence": "“Agentic Office” transcribes as “office”; match 0.60."
+    },
+    {
+      "rule": "Any line with match < 0.85",
+      "shot_id": "00:11",
+      "evidence": "“It says: done.” has measured match 0.73."
+    },
+    {
+      "rule": "Any line with match < 0.85",
+      "shot_id": "00:28.35",
+      "evidence": "“Then one number changes.” has measured match 0.78."
+    },
+    {
+      "rule": "Any line with match < 0.85",
+      "shot_id": "00:55.1",
+      "evidence": "“Tell it what changed. Once.” has measured match 0.67."
+    },
+    {
+      "rule": "Any line with match < 0.85",
+      "shot_id": "01:22.6",
+      "evidence": "“Agentic Office.” has measured match 0.60."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Restore the complete closing brand read, then shorten the rushed narration and verify isolated line boundaries so every line clears the intelligibility threshold.",
+  "line_fixes": [
+    {
+      "t": "01:22.6",
+      "issue": "Brand first word missing; 5.56 words/s.",
+      "fix": "Verify truncation; pronounce Agentic as “uh-JEN-tick” and deliver the complete name at about 2.6 words/s."
+    },
+    {
+      "t": "00:55.1",
+      "issue": "“Tell” missing; next sentence enters the measured transcription.",
+      "fix": "Verify clip boundaries; restore “Tell it what changed. Once.” with a short pause before the next line."
+    },
+    {
+      "t": "00:06",
+      "issue": "4.30 words/s.",
+      "fix": "“You ask it to update an agreement.” Deliver at 2.6–3.0 words/s."
+    },
+    {
+      "t": "00:11",
+      "issue": "Match 0.73 includes next-line words.",
+      "fix": "Verify isolated alignment; hold briefly after “Done.”"
+    },
+    {
+      "t": "00:12.5",
+      "issue": "3.95 words/s.",
+      "fix": "“You open it. The formatting’s wrecked.” Deliver at about 2.8 words/s."
+    },
+    {
+      "t": "00:15.55",
+      "issue": "4.09 words/s.",
+      "fix": "“You fix it by hand. An email arrives.” Deliver at about 3.0 words/s."
+    },
+    {
+      "t": "00:18.15",
+      "issue": "Read-aloud wording differs from the notification.",
+      "fix": "Read “Please include the updated financial annexure and the presentation before the meeting.”"
+    },
+    {
+      "t": "00:24",
+      "issue": "4.86 words/s.",
+      "fix": "“You ask for the deck. It builds one.” Deliver at about 2.8 words/s."
+    },
+    {
+      "t": "00:28.35",
+      "issue": "Match 0.78 includes “Prompt again”.",
+      "fix": "Verify isolated alignment and leave a distinct pause before the next sentence."
+    },
+    {
+      "t": "00:42.3",
+      "issue": "3.73 words/s compresses the emotional stop.",
+      "fix": "“The worst part? You don’t know what’s wrong.” Deliver at about 2.6 words/s."
+    },
+    {
+      "t": "00:57",
+      "issue": "3.57 words/s during the product demonstration.",
+      "fix": "“It finds that number across your files.” Deliver at about 2.6 words/s."
+    }
+  ]
+}

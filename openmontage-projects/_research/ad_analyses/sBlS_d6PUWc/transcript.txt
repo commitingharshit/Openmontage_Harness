@@ -1,0 +1,181 @@
+[00:00] I just made a 30-second AI video where the rain, the thunder, and the character's voice
+[00:04] were all generated with the footage.
+[00:19] And if you're still adding your sound afterwards in an editor, you're doing a job the generation
+[00:23] handles on its own.
+[00:24] So in this video, I'm gonna walk you through the exact workflow from the first step to
+[00:28] the finished video so you can do it for any scene you want.
+[00:31] Let's start with the first thing we need, which is a reference image of the character
+[00:34] we want in our videos.
+[00:36] And by the way, everything I'm creating here happens inside Higgs Field, which is an all-in-one
+[00:40] AI platform, with the top image and video generation models in one place.
+[00:44] The link is down in the description if you want to follow along.
+[00:47] First I'll click into Image in the top navigation bar.
+[00:50] Then I'll hit the plus icon on the left side of the prompt box and upload a photo of the
+[00:54] character I want in this video.
+[00:56] The model is set to Nano Banana Pro, which is the one we want.
+[00:59] Next I'll set the aspect ratio to 16 by 9, then I'll take the quality from 1k up
+[01:03] to 2k.
+[01:04] We will be generating our videos at 1080p, so 2k is already more than enough, and there's
+[01:08] no point going all the way up to 4k and wasting credits.
+[01:11] And the photo I'm using is one I made earlier, which is basically 3 angles of me, the front,
+[01:16] the side, and a close-up of my face.
+[01:18] But I need to change the outfit, because our video is set out in the ocean during a
+[01:22] storm, so I want to be in something you'd actually wear on a boat.
+[01:25] So I'll paste in this prompt and hit generate.
+[01:28] And so far, the only thing that's changed is my outfit, which is now a light blue
+[01:31] short sleeve shirt and a pair of khaki shorts.
+[01:34] Everything else is exactly the same, even my face and my body, because I specifically
+[01:38] told it in the prompt not to touch any of that.
+[01:40] And if you're wondering what this reference sheet has to do with our video, it's because
+[01:44] if you just paste a description of your character into a video generation model, you'll get a
+[01:48] different version of them in every single video, even inside one continuous shot.
+[01:53] The model can change them little by little, so by the end, they will not look the same.
+[01:57] But if we upload a reference image first and tell the video generation model to follow
+[02:01] it, then it has something to copy from instead of recreating them every time.
+[02:05] Now, if you don't already have a sheet like this, there are three ways to make one.
+[02:09] The first is writing a detailed prompt describing what your character looks like and generating
+[02:13] them once so their look is locked in from the start.
+[02:16] But if you want a real person in your videos, you take a couple of photos of them from
+[02:20] the angles you want, upload those into the image section here, and tell the model to
+[02:24] make a reference sheet out of them.
+[02:25] And if your character is fictional or it's somebody you can't photograph, you can find
+[02:29] images of them online and upload those instead.
+[02:32] The last thing I'll do here is save this as an element.
+[02:34] An element in Higgs Field is a saved reference you can pull into any prompt box on the platform,
+[02:39] so you don't have to upload it again every single time you make something new.
+[02:43] So our character reference is done, and every video from here on gets my face from this
+[02:47] exact image instead of redrawing me from a description.
+[02:50] But right now, I'm standing on a plain white background, and we need an actual location
+[02:54] to put myself in.
+[02:55] So now, let's create it.
+[02:57] I'll keep all the settings exactly the same, paste in the prompt for the location,
+[03:00] and generate.
+[03:01] Not the vibe I wanted, but honestly this looks more cartoonish than photorealistic.
+[03:05] The water is way too smooth, and the whole thing just looks like bad CGI.
+[03:09] Now the normal reaction here is to go back into the prompt and add more words about
+[03:13] realism.
+[03:14] The actual problem is that nothing in there told the model what the wrong version looks
+[03:18] like.
+[03:19] So instead of asking for realism again, I'll name the exact things I don't want
+[03:22] in the image.
+[03:23] The first one is an old wooden sailboat with a torn sail, which is the kind of
+[03:26] thing you'd see in an old oil painting.
+[03:28] I've swapped it out for a modern motorboat that's sinking and on fire, and
+[03:31] the last change I want is to get rid of the lightning bolt we've got here.
+[03:35] An image can't show you a flash that only lasts a split second, so it just
+[03:38] shows up as a bright shape in the sky, so I'll save it for the videos instead.
+[03:42] For now, I'll paste in this prompt and generate.
+[03:44] This looks much better than the previous one.
+[03:46] The colors are much closer to what I wanted, with a teal bluish tint to them.
+[03:50] Also, the modern boat is sinking and on fire, exactly like I asked for.
+[03:54] And the reason I'm making a location image is simple.
+[03:56] I upload a picture of the exact place I want to be in, so I'm the one
+[04:00] deciding what the scene looks like instead of the model guessing.
+[04:03] It's the exact same idea as the character reference.
+[04:05] And if you want, you can upload real photos of a location instead of generating
+[04:09] one like I did here.
+[04:11] It's completely up to you, and either way, you're in control of both the
+[04:14] character and the location.
+[04:16] So when a generation comes back looking wrong, or just not the way you
+[04:19] wanted it, don't go back and add more words about realism.
+[04:22] Name the exact thing you don't want, and the model finally has something
+[04:25] specific to avoid.
+[04:27] But there's one problem left, and it's the raft.
+[04:29] Because this image only shows it from one angle.
+[04:31] And it looks tiny in our shot, with a good part of it under the water.
+[04:34] So the model has no real idea how the raft is built.
+[04:37] So I'll make a separate reference image just for the raft.
+[04:40] Same settings again, so I'll paste in this prompt and generate.
+[04:43] I've kept this one really plain, just the raft on a flat gray background
+[04:47] so there's nothing else in the frame for the model to look at.
+[04:49] And I've made it look worn out and dirty, like something someone's
+[04:52] actually been using to stay alive out there.
+[04:54] I've also told it not to generate multiple angles of the raft, because
+[04:57] this one image is enough for a video model to follow.
+[05:00] A character needs three angles because a face and body have a lot more
+[05:03] going on from every side.
+[05:04] The raft is a simple shape, so one clear photo of it does the job.
+[05:08] So if something shows up in more than one video, give it its own
+[05:11] reference image.
+[05:12] And it comes out looking the same in every generation.
+[05:14] But three still images don't tell the model anything about what any
+[05:17] of this is supposed to sound like.
+[05:19] So now let's put all of them into an actual video.
+[05:21] I'll head over to the video tab and stay on create video.
+[05:24] The model is already on cdance 2.5.
+[05:26] I'll leave the preset on general, then I'll set the duration to 24 seconds.
+[05:30] For the aspect ratio, I'll go with 16 by 9 and the resolution to 1080p.
+[05:35] Native 4k is coming to cdance 2.5 soon, but for now, 1080p is as far as it goes.
+[05:41] Next I'll put the bitrate on high, because I want as much detail as possible in my video.
+[05:45] And the audio toggle next to the prompt box is already on, which is the whole reason
+[05:49] we're doing this here.
+[05:50] Then I'll paste in my prompt and make sure our elements are tagged in there by name
+[05:53] with an at symbol.
+[05:55] As you can see, all three of them load straight into the prompt box without me having to upload
+[05:59] anything.
+[06:00] Next I'll generate and see what I get.
+[06:17] I've made the video start on a close up shot of me and then slowly zoom out, which makes
+[06:21] it look a lot more cinematic and real.
+[06:23] And all the little details like the water droplets on my face and the way the physics
+[06:27] behave when the wave crashes into the raft look realistic.
+[06:30] And if you notice, I've also added thunder in the background, which makes the whole
+[06:34] thing feel so much better.
+[06:35] Now if you take a look at our prompt, it's built a bit differently from the image prompts.
+[06:39] I've split every part of the video into separate blocks, and by writing out specific instructions
+[06:44] in each block, I control the camera moves, the cuts, and the framing.
+[06:47] And for the audio, I've added a separate block where I wrote out exactly what I want
+[06:51] running through the whole shot, which is what our model followed in the video.
+[06:54] The last thing in my prompt is a negative block, where I've specifically mentioned
+[06:58] what I don't want in my shot.
+[07:00] So in the prompt, give every part of the video its own block with specific instructions
+[07:04] for each one.
+[07:05] The more specific and detailed each block is, the more control you have over the output
+[07:09] you end up with.
+[07:10] But even with all that sound in there, the rain, the thunder, and the crash, there's
+[07:13] still not a single line of dialogue in it.
+[07:16] So I'll generate a second video that continues from where the first one ended.
+[07:19] I'll paste in the prompt, and make sure the same three elements are tagged in it.
+[07:23] And the only thing I'll change here is the duration, which I'll slide up to 30.
+[07:27] Next I'll hit generate.
+[07:57] I've made it start on a silent underwater shot, with me swimming back up to the raft,
+[08:01] and everything in here looks exactly the same as it did in the first video, from myself
+[08:06] to the location, because the model had references to copy instead of recreating them.
+[08:10] This time, I scream as well, and I've made it sound like it echoes out over the storm.
+[08:14] If you take a look at our prompt, it's built the exact same way as before.
+[08:18] In the audio block, I've written out everything, from no underwater sound at the start, to
+[08:21] the scream I make at the end.
+[08:23] I even wrote in the faint fabric rustle as I take my phone out of my pocket.
+[08:26] So the more detailed and specific you are here, the more control you have over what
+[08:30] you get back.
+[08:31] One thing to watch out for here, is that underwater shot.
+[08:34] If it runs longer than a couple of seconds, the model muffles the sound as if you're
+[08:38] actually underwater, and it keeps doing that even after I come back up.
+[08:42] So the rain, the thunder, and my voice would all have ended up sounding muffled for the
+[08:46] rest of the video.
+[08:47] That's why I keep the underwater part down to 2 seconds.
+[08:50] You still see me swimming up, and the model never gets going with the muffled sound
+[08:53] in the first place.
+[08:54] The model will also skip small actions if you don't describe them properly.
+[08:58] If I wrote that, I take out my phone in the prompt.
+[09:00] The phone would just suddenly appear in my hand.
+[09:02] So instead, I've written out the whole movement.
+[09:05] My hand going down to my pocket, digging in, and pulling the phone out, plus the sound
+[09:08] of my hand rubbing the fabric.
+[09:10] Do that with any small movement, and it actually shows it happening.
+[09:13] Next I'll put the two videos together, and I'm using CapCut for this, but any
+[09:16] editor works the same way.
+[09:18] I'll drop both of them into CapCut, and put them on the timeline in order.
+[09:21] Then I'll hit export in the top right.
+[09:23] For the resolution, I will go with 1080p to match what we generated.
+[09:27] Save the frame rate where the project is, and put the bitrate on higher.
+[09:30] There's no point exporting at 4K when everything in the timeline is 1080p.
+[09:34] All you get is a bigger file.
+[10:18] So both videos came out with the Storm, the effects, and my voice already in them, and
+[10:22] I never had to add a single sound afterwards.
+[10:25] With this workflow, you can make long AI videos on any scene you want, with the sound
+[10:29] and the dialogue already inside them.
+[10:31] And with Higgsfield, you can do all of it under one single platform, from the reference
+[10:35] images to the finished video.
+[10:37] So if you want to start making your own long AI videos with sound, click the link in the
+[10:41] description to sign up to Higgsfield.
+[10:43] Thanks for watching, and I'll see you in the next one.

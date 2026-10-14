@@ -1,0 +1,370 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 47,
+ "dimension_scores": {
+  "production_value": 52,
+  "photorealism_no_ai_tells": 62,
+  "cohesion_with_ref_look": 45,
+  "ui_and_graphics_finish": 42
+ },
+ "issues": [
+  {
+   "shot_id": "00:10.0-00:42.5",
+   "category": "slide_deck_ui",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "14 of 18 hook frames are flat illustrated UI on grey vignette; REF films (Codex, SMITH) never show UI without the world around it",
+   "suggested_action": "Put all hook UI on the real OTS laptop plate or real monitors"
+  },
+  {
+   "shot_id": "01:25.0-01:45.0",
+   "category": "keynote_look",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "Product lists and montage float on blurred navy with red ellipse ring - reads like a keynote slide, not Genie/Linear finish",
+   "suggested_action": "Composite onto the warm-room laptop with depth, or design a premium 3D UI space with light"
+  },
+  {
+   "shot_id": "01:47.5",
+   "category": "blown_screen",
+   "severity": 0.45,
+   "confidence": 0.85,
+   "evidence": "white screen with hand, nothing legible",
+   "suggested_action": "Re-expose / re-composite the email"
+  },
+  {
+   "shot_id": "01:30.0",
+   "category": "garbled_text",
+   "severity": 0.4,
+   "confidence": 0.9,
+   "evidence": "header and list row overlap",
+   "suggested_action": "fix layout"
+  },
+  {
+   "shot_id": "00:07.5",
+   "category": "stock_posing",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "stock-office plate with posed extras; super partially hidden",
+   "suggested_action": "tighter crop on her, move super"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 46.9"
+  },
+  {
+   "rule": "UI frame looks like a screenshot pasted on black",
+   "shot_id": "00:35.0, 01:37.5, 01:45.0",
+   "evidence": "floating UI card/list on dark blurred field"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Replace the hook's flat illustrated UI frames with on-plate composites on the real laptop so the first half matches the real-footage second half and the REF look.",
+ "frame_scores": [
+  {
+   "t": "00:00.0",
+   "score": 6,
+   "tell": "composited UI cards sit flat on real plate",
+   "fix": "track cards to screen plane with light falloff"
+  },
+  {
+   "t": "00:02.5",
+   "score": 4,
+   "tell": "flat email UI on grey vignette",
+   "fix": "keep on the laptop plate"
+  },
+  {
+   "t": "00:05.0",
+   "score": 4,
+   "tell": "graphic streaks + UI card, motion-design look",
+   "fix": "fine as flash-forward; shorten"
+  },
+  {
+   "t": "00:07.5",
+   "score": 7,
+   "tell": "stock posing, super hidden by lamp",
+   "fix": "move super"
+  },
+  {
+   "t": "00:10.0",
+   "score": 3,
+   "tell": "slide-deck flat UI",
+   "fix": "composite into the room"
+  },
+  {
+   "t": "00:12.5",
+   "score": 6,
+   "tell": "plausible OTS composite, screen slightly glowy",
+   "fix": "reduce bloom"
+  },
+  {
+   "t": "00:15.0",
+   "score": 3,
+   "tell": "flat Word mock",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:17.5",
+   "score": 3,
+   "tell": "flat Word mock + toast",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:20.0",
+   "score": 3,
+   "tell": "flat Word mock",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:22.5",
+   "score": 3,
+   "tell": "blurred flat UI",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:25.0",
+   "score": 5,
+   "tell": "blank washed-out screen",
+   "fix": "expose screen down"
+  },
+  {
+   "t": "00:27.5",
+   "score": 3,
+   "tell": "flat chat mock",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:30.0",
+   "score": 5,
+   "tell": "blank screen + pasted toast",
+   "fix": "expose, toast on screen plane"
+  },
+  {
+   "t": "00:32.5",
+   "score": 3,
+   "tell": "flat UI + clipped red clock",
+   "fix": "clock on real wall"
+  },
+  {
+   "t": "00:35.0",
+   "score": 3,
+   "tell": "floating card on navy",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:37.5",
+   "score": 3,
+   "tell": "flat Word mock",
+   "fix": "whip on real desk"
+  },
+  {
+   "t": "00:40.0",
+   "score": 3,
+   "tell": "text slapped over progress bar",
+   "fix": "separate text from UI"
+  },
+  {
+   "t": "00:42.5",
+   "score": 3,
+   "tell": "flat email mock",
+   "fix": "on-plate"
+  },
+  {
+   "t": "00:45.0",
+   "score": 6,
+   "tell": "real but crushed",
+   "fix": "lift shadows"
+  },
+  {
+   "t": "00:47.5",
+   "score": 4,
+   "tell": "logo on gradient - template look",
+   "fix": "add light/texture"
+  },
+  {
+   "t": "00:50.0",
+   "score": 7,
+   "tell": "real warm room, believable",
+   "fix": "-"
+  },
+  {
+   "t": "00:52.5",
+   "score": 5,
+   "tell": "UI crop with duplicated caption",
+   "fix": "drop caption"
+  },
+  {
+   "t": "00:55.0",
+   "score": 6,
+   "tell": "real room, UI soft",
+   "fix": "-"
+  },
+  {
+   "t": "00:57.5",
+   "score": 4,
+   "tell": "big blurred rectangle centre",
+   "fix": "reframe"
+  },
+  {
+   "t": "01:00.0",
+   "score": 6,
+   "tell": "real hands, UI composite convincing",
+   "fix": "-"
+  },
+  {
+   "t": "01:02.5",
+   "score": 6,
+   "tell": "real hands, prompt unreadable",
+   "fix": "land push on prompt"
+  },
+  {
+   "t": "01:05.0",
+   "score": 7,
+   "tell": "good practical light",
+   "fix": "-"
+  },
+  {
+   "t": "01:07.5",
+   "score": 6,
+   "tell": "screen too dark to read",
+   "fix": "raise UI"
+  },
+  {
+   "t": "01:10.0",
+   "score": 5,
+   "tell": "UI legible but flat crop",
+   "fix": "-"
+  },
+  {
+   "t": "01:12.5",
+   "score": 5,
+   "tell": "same",
+   "fix": "-"
+  },
+  {
+   "t": "01:15.0",
+   "score": 6,
+   "tell": "wide room ok",
+   "fix": "-"
+  },
+  {
+   "t": "01:17.5",
+   "score": 5,
+   "tell": "tight crop, tilted",
+   "fix": "-"
+  },
+  {
+   "t": "01:20.0",
+   "score": 5,
+   "tell": "tilted page with chip feels animated",
+   "fix": "subtler tilt"
+  },
+  {
+   "t": "01:22.5",
+   "score": 5,
+   "tell": "chip lift is motion-graphic",
+   "fix": "-"
+  },
+  {
+   "t": "01:25.0",
+   "score": 4,
+   "tell": "panels on blurred dark - keynote look",
+   "fix": "-"
+  },
+  {
+   "t": "01:27.5",
+   "score": 4,
+   "tell": "same",
+   "fix": "-"
+  },
+  {
+   "t": "01:30.0",
+   "score": 3,
+   "tell": "overlapping header text",
+   "fix": "fix collision"
+  },
+  {
+   "t": "01:32.5",
+   "score": 7,
+   "tell": "hero room shot good",
+   "fix": "-"
+  },
+  {
+   "t": "01:35.0",
+   "score": 5,
+   "tell": "panel cropped by bezel",
+   "fix": "reframe"
+  },
+  {
+   "t": "01:37.5",
+   "score": 4,
+   "tell": "list floating on blur",
+   "fix": "-"
+  },
+  {
+   "t": "01:40.0",
+   "score": 4,
+   "tell": "red ellipse feels slide-deck",
+   "fix": "subtler ring"
+  },
+  {
+   "t": "01:42.5",
+   "score": 4,
+   "tell": "text on blur, deck-like",
+   "fix": "-"
+  },
+  {
+   "t": "01:45.0",
+   "score": 3,
+   "tell": "empty frame, file tree strip",
+   "fix": "cut"
+  },
+  {
+   "t": "01:47.5",
+   "score": 3,
+   "tell": "blown white screen",
+   "fix": "expose"
+  },
+  {
+   "t": "01:50.0",
+   "score": 7,
+   "tell": "warm room Sent, believable",
+   "fix": "-"
+  },
+  {
+   "t": "01:52.5",
+   "score": 8,
+   "tell": "real sunrise, cinematic",
+   "fix": "-"
+  },
+  {
+   "t": "01:55.0",
+   "score": 8,
+   "tell": "real sunrise",
+   "fix": "-"
+  },
+  {
+   "t": "01:57.5",
+   "score": 4,
+   "tell": "text card",
+   "fix": "-"
+  },
+  {
+   "t": "02:00.0",
+   "score": 4,
+   "tell": "end card template",
+   "fix": "add texture/light"
+  }
+ ],
+ "real_film_index": 46.9,
+ "closest_ref": "Closest to OpenAI Codex 'It's time to fly' (night office, laptop, warm practicals); the gap is that Codex never cuts to flat UI - its screens live in lit rooms - while ~45% of these frames are UI on vignette/blur.",
+ "top_3_upgrades": [
+  "Composite every hook UI onto the real OTS laptop or office monitors",
+  "Give the 01:25-01:45 product lists a real room or a lit 3D UI space instead of blurred navy",
+  "Fix blown screens (00:25.0, 00:30.0, 01:47.5) and the 01:30.0 text collision"
+ ]
+}

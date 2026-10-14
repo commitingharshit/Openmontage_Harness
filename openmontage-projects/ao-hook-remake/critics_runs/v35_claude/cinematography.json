@@ -1,0 +1,139 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 50,
+ "dimension_scores": {
+  "lighting_shape": 55,
+  "lens_depth": 45,
+  "composition": 50,
+  "camera_movement": 50,
+  "frame_design_ui": 48
+ },
+ "issues": [
+  {
+   "shot_id": "01:02.5–01:15 (f_26,f_29,f_38,f_44,f_46)",
+   "category": "push_in_crops_ui_mid_word",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "Push-ins end on arbitrary crops: f_26 reads 'ised FY26 outlook', f_29 'k Q3 / evised FY26 outlook', f_38 'Q3 / d FY26 outlook', f_46 'date' + '· Covenant' at frame edge. The camera lands on nothing; the subject of the shot (the changed number) is not in frame.",
+   "suggested_action": "Re-target every push to end on the changed value (Revenue!E6 8.5, the €74.6m tracked change, the Slide 4 row) placed on a thirds intersection; cap scale so whole words stay in frame."
+  },
+  {
+   "shot_id": "00:00–00:04.5 (f_01,f_02)",
+   "category": "flat_screenshot_opening",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "At 0.0 s and 2.5 s the frame is a flat grey email window cropped by the frame edge, cards floated on top, no device, no room, no light source. The brief says a real laptop opens the film; it is not visible in either sampled frame.",
+   "suggested_action": "Hold the dark-room laptop (as in f_48) for the first 1.5 s with the email tracked onto its screen and the ≠ cards above, key from the screen glow only; then push in."
+  },
+  {
+   "shot_id": "00:22.5–00:30 (f_10,f_13)",
+   "category": "framing_defect_border",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "f_10 and f_13: the head-in-hands clip does not fill the frame — a black band runs down the right ~10% and across the top; her face sits dead centre under a flat top light.",
+   "suggested_action": "Scale to fill (crop 112%), reframe her to left third with lead room toward the world-map practical on frame-left."
+  },
+  {
+   "shot_id": "00:17.5–00:45 (f_08,f_09,f_11,f_12,f_14,f_16,f_18)",
+   "category": "illustrated_ui_flat_front_light",
+   "severity": 0.55,
+   "confidence": 0.75,
+   "evidence": "Illustrated Word/chat/Excel/email windows are front-on, frame-filling, evenly lit grey with a vignette; no plane, no depth, no motivated light. f_18 is a white window with a Send button in the lower-left and empty space.",
+   "suggested_action": "Put each illustrated window back on her laptop in the night office (as f_04/f_06 do) or on a 10–15° tilted plane with screen-glow falloff and a soft-focus foreground edge."
+  },
+  {
+   "shot_id": "01:57.5–02:02.5 (f_48→f_49,f_50)",
+   "category": "set_flip_and_static_hold",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "f_48 is a dark-room laptop on a bare desk; f_49/f_50 (5 s later, the 'lights come on' payoff) is a different laptop in a candle-and-rattan-lamp room. f_49 and f_50 are pixel-identical framing: no move for ~4.5 s.",
+   "suggested_action": "Use the same laptop/desk for the dark→lit payoff (practical lamp clicks on frame-right), and add a slow 3–5% push to the 'Sent' toast."
+  },
+  {
+   "shot_id": "00:05–00:30 (f_03 vs f_10)",
+   "category": "protagonist_continuity",
+   "severity": 0.45,
+   "confidence": 0.55,
+   "evidence": "f_03 protagonist wears glasses, short-side key from a desk lamp; f_10/f_13 no glasses, hard top light, different background (world-map projection). Reads as two women.",
+   "suggested_action": "Verify both clips are the same talent; if not, replace one with another clip from the f_03 session or cut the glasses clip to a back/over-shoulder angle."
+  },
+  {
+   "shot_id": "01:20–01:32.5 (f_33–f_37)",
+   "category": "split_layout_static",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Split frames f_33,f_34,f_35,f_36 are the same locked composition with a small chatbot card top-left and a product panel right; header text 'AGENTIC OFFICE · ONE SLIDE ELEMENT' collides with the list row 'Replaces \"€71–73m\" with' (f_35/f_36).",
+   "suggested_action": "Give the split a slow lateral drift and depth (chatbot side defocused); move the header above the panel so it never overlaps UI text."
+  },
+  {
+   "shot_id": "02:10–02:12.5 (f_53,f_54)",
+   "category": "end_card_no_light",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "End card is centred text on a flat teal gradient; then black.",
+   "suggested_action": "Hold the logo over the sunrise plate (f_51) at 20% exposure or with the window light raking the type."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "shot with no motivated light source",
+   "shot_id": "00:00–00:04.5, 00:40–00:45",
+   "evidence": "f_01/f_02 and f_18: flat grey/white UI with no device, room or practical in frame."
+  },
+  {
+   "rule": "identity or set flip across a cut",
+   "shot_id": "01:57.5→02:00",
+   "evidence": "Payoff laptop changes from a dark bare desk (f_48) to a candle-lit room with a rattan lamp (f_49)."
+  },
+  {
+   "rule": "unreadable composition",
+   "shot_id": "01:02.5, 01:10, 01:32.5, 01:52.5",
+   "evidence": "Push-ins crop text mid-word ('ised FY26 outlook', 'k Q3', 'date') so the subject is lost."
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Re-target every product push-in to land on the one changed value framed on a third, never on a mid-word crop of the page.",
+ "per_shot": [
+  {
+   "t": "00:00",
+   "grade_A_to_F": "D",
+   "fix": "open on the real dark-room laptop, screen glow as key, email tracked on screen, 35mm, slow push"
+  },
+  {
+   "t": "00:40",
+   "grade_A_to_F": "D",
+   "fix": "tilt the email window into space on her laptop; Send button on lower-third intersection, cursor as eyeline target"
+  },
+  {
+   "t": "01:12.5",
+   "grade_A_to_F": "D",
+   "fix": "end the push on the FY26 outlook cell, not 'k Q3'; whole words in frame"
+  },
+  {
+   "t": "01:52.5",
+   "grade_A_to_F": "D",
+   "fix": "reframe Evidence panel so 'date' wordmark crop is gone; land on one source card"
+  },
+  {
+   "t": "00:20",
+   "grade_A_to_F": "D",
+   "fix": "defocused Word page with notification: place on her laptop in the blue office, foreground screen bezel soft"
+  },
+  {
+   "t": "00:22.5",
+   "grade_A_to_F": "C",
+   "fix": "fill frame (remove black band), subject to left third, rim from the map projection"
+  },
+  {
+   "t": "02:00",
+   "grade_A_to_F": "C",
+   "fix": "same desk as the dark shot; motivated lamp switch-on; 3% push"
+  },
+  {
+   "t": "01:22.5",
+   "grade_A_to_F": "C",
+   "fix": "split: drift + defocus the chatbot side; header clear of UI rows"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{"critic":"grade","stage":"animatic","score":45,
+"dimension_scores":{"look_family_unity":45,"skin_tones":60,"contrast_curve_blacks":50,"shot_to_shot_match":30,"finish":40},
+"issues":[
+{"shot_id":"0:57-1:12","category":"exposure_jump","severity":0.9,"confidence":0.95,"evidence":"Measured luma 33.3 (f20 'She missed one', sat 201.6) hard-cuts to 221.4 (cream cards, sat 11.2) for 12 s; global luma_spread_sd 50.8, sat_spread_sd 51.8","suggested_action":"Grade cards to warm paper ~luma 170 with 4% grain and dip from her face through a 6-frame exposure ramp, or set the turn line on a dark frame"},
+{"shot_id":"0:07.5, 0:52.2, 0:57.2, 1:49","category":"oversaturated_teal","severity":0.75,"confidence":0.9,"evidence":"sat 185.2, 198.7, 201.6, 183.1 on night office shots; window bokeh is electric cyan, not night blue","suggested_action":"Pull sat to ~120-135 in the night world; hue-shift window blues from cyan toward 220°; keep the lamp at 3200K amber"},
+{"shot_id":"1:12-1:48","category":"ui_world_unmatched","severity":0.65,"confidence":0.85,"evidence":"UI shots luma 139.5/143.0 white pages (f26/f36, contrast 100) beside 19-27 luma navy panels; letterbox only on these (25% of shots)","suggested_action":"Pull UI whites to 85% (IRE ~215), add the night-world grain and 0.15 halation; apply the 2.39 letterbox to all film shots or none"},
+{"shot_id":"0:06, 1:27","category":"shot_match_canva","severity":0.6,"confidence":0.8,"evidence":"Canva face shots are cold blue-black with no warm lamp, unlike f16/f20 where brass lamp is warm amber","suggested_action":"Add a warm window on the face side (+0.08 red in mids, frame-left), match black level to f20"},
+{"shot_id":"1:54","category":"world_jump_dawn","severity":0.4,"confidence":0.7,"evidence":"Dawn f39 is golden saturated, sat 98, bright; deliberate world change but lamp still on and set differs","suggested_action":"Keep the warm dawn but lower highlight roll-off and match grain; this is the earned colour change, it can stay"},
+{"shot_id":"0:12-0:42","category":"soft_shots","severity":0.4,"confidence":0.8,"evidence":"13 shots under sharpness 60 incl. 7.5, 27.5, 36.7 (6.3), 49.7 (7.5), 86.2 (1.5)","suggested_action":"Ensure the softness is intended DOF and not upscale mush; sharpen subject plane, add grain to mask"}],
+"constraint_failures":[
+{"rule":"UI frames left raw and white beside graded film","shot_id":"1:16, 1:46","evidence":"luma 139.5/143.0, contrast ~100, white document pages vs navy night"},
+{"rule":"hard grade jump inside one scene","shot_id":"0:57->0:59","evidence":"luma 33 -> 221, sat 202 -> 11"}],
+"grade_recipe":{
+"night_office":"eq=saturation=0.75:gamma=0.95, colorbalance=rs=0.04:bs=-0.02:rh=0.06:bh=-0.04 (warm highlights from lamp, blues held in shadows only), curves lift 0.04 black, gain 0.92, grain 6 (noise=alls=6:allf=t), vignette PI/5",
+"ui_inserts":"curves white point 0.85, colorbalance bh=0.03 (cool screen), same grain 6, glow/halation 0.15 on highlights, no separate letterbox",
+"cards":"cream to luma ~170, grain 4, no grey ellipse vignette; or invert to ink #161616 field with cream type",
+"dawn":"colorbalance rh=0.08:gh=0.03, saturation 0.9, highlight roll-off, grain 6"},
+"worst_jumps":[
+{"from":"0:57","to":"0:59","issue":"luma 33->221, sat 202->11: dark crying face to white card"},
+{"from":"1:13","to":"1:16","issue":"luma 19->140, contrast 28->100 inside the proof block"},
+{"from":"1:43","to":"1:46","issue":"luma 27->143 navy panel to white memo page"},
+{"from":"0:52","to":"0:53.7","issue":"sat 199->132 and a 32-row letterbox appears for one shot only"}],
+"revision_scope":"whole",
+"top_revision":"Apply one night LUT (sat 0.75, warm lamp highlights, grain 6, single letterbox policy) across all film AND UI shots and replace the 221-luma white cards with paper-tone or dark cards so luma spread SD drops below 30."}

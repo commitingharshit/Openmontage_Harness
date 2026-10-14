@@ -1,0 +1,134 @@
+{
+ "critic": "grade",
+ "stage": "animatic",
+ "score": 55,
+ "dimension_scores": {
+  "look_family_unity": 60,
+  "skin_tones": 68,
+  "contrast_curve_blacks": 50,
+  "shot_to_shot_match": 42,
+  "finish": 55
+ },
+ "issues": [
+  {
+   "shot_id": "00:04.5",
+   "category": "luma_jump",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "Measured luma 107.5 (00:02.4 email) → 14.5 (00:04.5 glitch) → 41.8; sat 30.9 → 124.2. Overall luma SD 24.1, sat SD 30.2 - very wide for a 2-world film",
+   "suggested_action": "Bring the flash-forward to luma ~40 and pull sat to ~80 so it reads as a cut, not a strobe"
+  },
+  {
+   "shot_id": "00:22.97",
+   "category": "sat_spike",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "Glitch/transition shots at 00:22.97 (sat 143.5, luma 25.8), 00:44.57 (sat 145.6), 01:47.9 (sat 140.5) are ~2x film mean sat 75",
+   "suggested_action": "Cap transition saturation at 95 and match their black level to neighbours"
+  },
+  {
+   "shot_id": "01:47.3",
+   "category": "blown_white",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "Click insert luma 126.2, contrast 82.5, white laptop screen clipping between warm 48 and 81 luma shots",
+   "suggested_action": "Pull screen gain to luma ~70, warm WB to match the 01:50.0 candle room"
+  },
+  {
+   "shot_id": "00:10.0",
+   "category": "ui_grey_milky",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "Night-graded illustrated UI (00:10.0, 00:15.0, 00:40.0, 00:42.5) is a lifted milky grey (contrast 22-23) with a heavy grey vignette, unlike the deep teal blacks of the real office plate at 00:07.5",
+   "suggested_action": "Lower lift, add blue-teal tint in shadows and 1.2 gamma so UI matches the real night office"
+  },
+  {
+   "shot_id": "00:45.0",
+   "category": "crushed_blacks",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "Head-on-desk shot luma 24.7: face and arms mostly crushed into navy",
+   "suggested_action": "Lift shadows +4, keep a rim on her shoulder from the desk lamp"
+  },
+  {
+   "shot_id": "01:25.0",
+   "category": "world_mismatch",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Precision montage and reviewed-list shots (01:25.0-01:45.0) sit in a cold blue-black world while surrounding product shots are amber candle room - third look in the solution half",
+   "suggested_action": "Warm the blurred background to the amber room (or composite onto the laptop) so the solution world is one family"
+  },
+  {
+   "shot_id": "00:52.6",
+   "category": "desaturated_outlier",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "Measured sat 23.7, contrast 78.1 at 00:52.6 and sat 19.6 at 01:18.2 inside warm shots of sat ~75",
+   "suggested_action": "Add the warm-room amber spill on the UI crop (sat ~55)"
+  },
+  {
+   "shot_id": "01:00.0",
+   "category": "finish_inconsistent",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Real plates show grain/softness; flat UI cards (00:02.5, 01:37.5) and end card are clean digital",
+   "suggested_action": "Apply one grain pass (strength 6) and halation to UI cards too"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:02.4→00:04.5",
+   "evidence": "luma 107.5→14.5, sat 30.9→124.2"
+  },
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "01:46.3→01:47.3→01:47.9",
+   "evidence": "luma 48→126→81, sat 88→27→140"
+  },
+  {
+   "rule": "UI frames left raw beside graded film",
+   "shot_id": "01:37.5, 01:45.0",
+   "evidence": "flat UI lists on blue-black next to amber room laptop shots"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Normalise the outlier shots (glitches sat >140, 01:47.3 white screen, 00:04.5 black) to within ±15 luma / ±20 sat of their scene and warm the 01:25–01:45 UI world to the amber room.",
+ "grade_recipe": {
+  "night_problem_world": "real plates: lift -0.02, gamma 0.95, gain 1.0, shadows toward teal (b+0.04), highlights neutral, sat 0.9; illustrated UI: curves=all='0/0.04 0.5/0.42 1/0.88', colorbalance=bs=0.08:gs=0.02, eq=saturation=0.85, vignette PI/5, grain noise=alls=6:allf=t",
+  "warm_solution_world": "lift 0.0, gamma 1.0, gain 1.05, colortemperature=4300 on mids, highlights amber (rh+0.05), sat 1.0, halation glow 3% on practicals, same grain alls=6; UI composites get the room's amber spill (colorbalance=rm=0.04)",
+  "dawn_end": "keep sunrise as-is; end card background warm-teal gradient matched to sunrise shadow tone, grain alls=4"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:02.4",
+   "to": "00:04.5",
+   "issue": "luma 107→15, sat 31→124"
+  },
+  {
+   "from": "00:21.3",
+   "to": "00:22.97",
+   "issue": "sat 73→144, sharp 72→2"
+  },
+  {
+   "from": "00:42.5",
+   "to": "00:44.57",
+   "issue": "sat 77→146"
+  },
+  {
+   "from": "01:46.3",
+   "to": "01:47.3",
+   "issue": "luma 48→126 white screen"
+  },
+  {
+   "from": "01:47.3",
+   "to": "01:47.9",
+   "issue": "sat 27→141"
+  },
+  {
+   "from": "01:22.5",
+   "to": "01:25.0",
+   "issue": "amber room → cold blue-black UI montage"
+  }
+ ]
+}

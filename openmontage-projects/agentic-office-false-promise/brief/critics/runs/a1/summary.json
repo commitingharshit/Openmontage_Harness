@@ -1,0 +1,29 @@
+{
+ "round": "a1",
+ "C": 77,
+ "S": 80.45,
+ "P": 82.75,
+ "Q": 80.6,
+ "constraint_failures": [
+  {
+   "rule": "Every message must be large enough to read on a phone; long text is split into sequential crops.",
+   "shot_id": "00:40",
+   "evidence": "The entire dense request bubble remains visible at once in enlarged, soft footage instead of the prescribed phrase crops."
+  },
+  {
+   "rule": "Show the workflow at phone-readable size.",
+   "shot_id": "00:47",
+   "evidence": "The central tracked revenue change is embedded in an almost full-page memo view and is too small for reliable phone reading."
+  },
+  {
+   "rule": "Show every message at a size and pace readable on a phone; split long text into sequential crops.",
+   "shot_id": "00:40",
+   "evidence": "The full multi-line research and update request appears together, rather than the three short, sequential crops specified for this message."
+  },
+  {
+   "rule": "Show the workflow at a readable size on a phone; long text must be cropped rather than shrunk.",
+   "shot_id": "00:47",
+   "evidence": "The memo replacement is shown within a nearly full-page document instead of the specified paragraph-only crop, leaving the key product proof substantially smaller than the surrounding headline captions."
+  }
+ ]
+}

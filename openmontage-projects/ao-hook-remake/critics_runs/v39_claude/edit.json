@@ -1,0 +1,26 @@
+{"critic":"edit","stage":"animatic","score":60,
+"dimension_scores":{"rhythm_wave":62,"cut_motivation":60,"connectives":55,"economy":58,"transitions_quality":62},
+"issues":[
+{"shot_id":"01:01.4-01:11.4","category":"flat_rhythm","severity":0.6,"confidence":0.8,"evidence":"Measured 61.4 (3.0 s), 64.4 (2.6 s), 67.0 (1.73 s), 68.73 (2.67 s): f_26, f_27, f_29 are the same assistant-panel crop at the same size and angle, text scrolling inside it - no burst, no hold, just reading","suggested_action":"Collapse 61.4-71.4 to a 4-cut burst (prompt sent 1.2 s / 'Reading your files' 0.8 s / three plan ticks 0.4 s each) then hold 2 s on 'Verify and show diffs'"},
+{"shot_id":"01:35.2-01:46.3","category":"overlong_hold","severity":0.55,"confidence":0.75,"evidence":"Measured longest shot 11.1 s at 95.2: one scrolling changes column (f_39-f_42) carrying 'Slide 4. Caught.', 'See every change' and 'Your workspace' supers","suggested_action":"Split at 101.8: end the review on the Slide 4 ring at ~99.5, hard cut to the file tree on the VO 'Your workspace' downbeat"},
+{"shot_id":"00:16.5-00:23.0","category":"dead_air","severity":0.45,"confidence":0.7,"evidence":"16.5 runs 3.9 s on the dim Word page with the partner notification (f_08); 20.4 and 22.97 then reuse the same head-in-hands take twice within 2.6 s, and again at 30.93","suggested_action":"Trim 16.5 to 2.6 s, keep one head-in-hands at 20.4, and replace the 30.93 repeat with the scratch-head insert"},
+{"shot_id":"01:17.5-01:28.0","category":"redundant_beat","severity":0.4,"confidence":0.7,"evidence":"Precision montage repeats the identical 'THE CHATBOT Regenerating all 12 slides' card in three consecutive panels (4%, 11%, 17%) while only the right side changes; measured 80.3 runs 8.7 s","suggested_action":"Show the chatbot card once, then cut the three real panels as a 0.8 s / 0.8 s / 1.2 s burst on 'cell / sentence / slide element'"},
+{"shot_id":"00:52.6-00:56.4","category":"message_too_short","severity":0.4,"confidence":0.75,"evidence":"'Not another chatbot. Your workspace.' at 52.6 lasts 1.8 s; 'Templates, or a sentence.' at 54.4 lasts 1.6 s - both under 2.5 s while new UI also has to be read","suggested_action":"Merge 52.6 and 54.4 into one 3.4 s shot carrying one super, or drop the templates beat"},
+{"shot_id":"00:45.63-00:49.0","category":"missing_bridge","severity":0.35,"confidence":0.6,"evidence":"Head-on-desk (44.57) hard-cuts to a dim logo (f_19) then the promise card; no match from the Send cursor to the product","suggested_action":"Match-cut the stopped Send cursor (43.6) to the logo mark position, or J-cut the VO 'See exactly what changed' 0.5 s under the head drop"},
+{"shot_id":"01:55.3-02:01.4","category":"slow_end","severity":0.3,"confidence":0.65,"evidence":"115.3 runs 6.1 s on an end card whose first line ('This time, you checked.') is barely visible at 117.5","suggested_action":"Trim the end card to 4.5 s and cut the strike-through on the VO beat"},
+{"shot_id":"00:37.4-00:41.6","category":"burst_works","severity":0.15,"confidence":0.7,"evidence":"Copy/Paste/Check/Repeat whip burst (37.4 1.8 s, 39.2 1.1 s, 40.3 1.3 s) is the film's one true burst and lands","suggested_action":"Shorten 37.4 to 1.1 s so the burst accelerates rather than holds on 'Copy.'"}],
+"constraint_failures":[
+{"rule":"three or more consecutive shots at the same size and angle","shot_id":"01:01.4, 01:04.4, 01:07.0","evidence":"f_26, f_27, f_29: same right-side assistant-panel crop"},
+{"rule":"message cut off before 2.5 s","shot_id":"00:52.6, 00:54.4","evidence":"supers held 1.8 s and 1.6 s"}],
+"recut_plan":[
+{"t":"00:16.5","edit":"trim to 2.6 s; let the notification pop on the cut"},
+{"t":"00:30.93","edit":"swap repeat head-in-hands for the scratch-head insert"},
+{"t":"00:37.4","edit":"trim 'Copy.' to 1.1 s to accelerate the burst"},
+{"t":"00:44.57","edit":"J-cut the reveal VO 0.5 s early; match Send cursor to logo mark"},
+{"t":"00:52.6","edit":"merge with 54.4 into one 3.4 s shot with one super"},
+{"t":"01:01.4","edit":"collapse 61.4-71.4 into a 4-cut burst then 2 s hold on 'Verify and show diffs'"},
+{"t":"01:20.3","edit":"chatbot card once, then 0.8/0.8/1.2 s burst of the three real panels"},
+{"t":"01:41.8","edit":"split the 11.1 s review shot at the Slide 4 ring; hard cut on 'Your workspace'"}],
+"target_shot_stats":{"shots":55,"asl_s":2.2,"median_s":1.6,"pct_under_1s":25,"pct_over_4s":8,"longest_s":5.0},
+"revision_scope":"product_demo",
+"top_revision":"Collapse the 61.4-71.4 assistant-panel run into a fast motivated burst and split the 11.1 s review hold at the Slide 4 ring so the product half breathes, bursts and holds instead of scrolling."}

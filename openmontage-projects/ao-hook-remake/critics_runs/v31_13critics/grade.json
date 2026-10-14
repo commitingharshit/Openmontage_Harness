@@ -1,0 +1,107 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 63,
+  "dimension_scores": {
+    "look_family_unity": 72,
+    "skin_tones": 73,
+    "contrast_curve_blacks": 64,
+    "shot_to_shot_match": 42,
+    "finish": 65
+  },
+  "issues": [
+    {
+      "shot_id": "00:05–00:16",
+      "category": "exposure_match",
+      "severity": 0.88,
+      "confidence": 0.98,
+      "evidence": "The blue office cuts to the near-white 'Hi, how can I help?' screen. Luma rises from 46.4 to 202.9 and saturation falls from 118.3 to 12.8. The Word screen then measures luma 198.5 before the typing insert drops to 66.4. Global luma SD is 64.7; saturation SD is 30.5, although those totals also include deliberate world changes.",
+      "suggested_action": "Match the night UI paper whites to a restrained screen highlight level, lower UI midtones and give them the office's subtle cool bias; preserve black text and match the adjoining inserts before applying the shared look."
+    },
+    {
+      "shot_id": "00:24–00:32",
+      "category": "insert_exposure",
+      "severity": 0.82,
+      "confidence": 0.97,
+      "evidence": "At 24.07 the insert measures luma 16.5 and contrast 9.7, followed by UI luma 187.8 at 24.87. At 30.00 the UI measures 184.4, followed by the reaction at 31.07 measuring 33.4. These cuts alternate bright screens with very dark footage inside the same problem world.",
+      "suggested_action": "Lift the dark inserts' lower midtones locally and reduce the adjacent UI exposure; match visible keyboard and face detail without raising the black floor across the whole frame."
+    },
+    {
+      "shot_id": "01:00–01:13",
+      "category": "product_grade_match",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "The solution demo alternates the pale Excel bar, white memo and dark Changes panel: luma 98.5 at 59.73, 168.2 at 62.20, 112.1 at 64.40 and 31.4 at 66.60. The return email rises to 172.2 at 72.60. The memo's white page dominates frame #26 beside the subdued teal surroundings.",
+      "suggested_action": "Use a neutral product grade with a common paper-white ceiling and stable surrounding background exposure; selectively open the Changes panel midtones and compress memo/email highlights while retaining the real UI colors."
+    },
+    {
+      "shot_id": "00:05 / 00:23 / 00:37",
+      "category": "skin_tone_match",
+      "severity": 0.56,
+      "confidence": 0.84,
+      "evidence": "The protagonist's face in frames #10 and #13 looks muted and cooler than the naturally warm typing hand in frame #7. Office-shot saturation varies from 118.3 at 5.07 to 64.2 at 22.97 and 113.0 at 36.77; these are whole-frame measurements, not skin measurements.",
+      "suggested_action": "Verify face and hand regions on a vectorscope, then use a tracked skin qualifier to restore a consistent natural hue and modest midtone warmth while leaving the motivated blue rim light intact."
+    },
+    {
+      "shot_id": "00:08 / 00:55 / 01:02",
+      "category": "vignette_finish",
+      "severity": 0.51,
+      "confidence": 0.9,
+      "evidence": "Frames #4 and #26 have bright central whites with strongly darkened edges, while the dark prompt crop in frame #23 has little equivalent highlight structure. The vignette is visible, but its effect changes substantially with the source material.",
+      "suggested_action": "Normalize source exposure first, then apply one gentle frame-relative vignette with identical geometry across UI and stock; reduce edge darkening on document shots so the finish does not resemble a spotlight."
+    },
+    {
+      "shot_id": "00:11 / 00:46",
+      "category": "letterbox_consistency",
+      "severity": 0.35,
+      "confidence": 0.72,
+      "evidence": "The detector reports letterboxing on only 5.6% of shots: 96 rows at 11.10 and 57 rows at 45.63, with zero elsewhere. Dark graphic backgrounds could produce false positives.",
+      "suggested_action": "Verify these two shots against the full render; if actual bars are present, remove them to retain the specified full-frame 16:9 finish."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "No hard grade jump inside one scene.",
+      "shot_id": "00:05.07 → 00:08.00",
+      "evidence": "Within the night workflow, the office-to-chat cut changes mean luma by +156.5 and saturation by -105.5; the visible screen whites are substantially brighter than the preceding office."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Match UI paper whites and live-action midtones within each world before applying a shared finish, starting with the office-to-chat cut at eight seconds.",
+  "grade_recipe": {
+    "problem_night": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Normalize each source first. Preserve a 2–3 IRE black floor, open shadow detail without lifting all blacks, compress screen whites to 80–85 IRE, and use a soft highlight shoulder. Apply teal-blue primarily below 30 IRE; keep skin and paper midtones close to neutral. Reduce office cyan saturation about 15%; match skin with a separate qualifier. Add fine monochrome grain at approximately 0.5% opacity and a gentle 0.15-stop edge vignette."
+    },
+    "product_solution": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Use neutral midtones, a 2–3 IRE black floor and paper whites capped around 88–90 IRE. Open dark panel text locally without lifting the teal background. Keep Accept green, change highlights and red annotations faithful to the recording; avoid a global teal LUT. Use the same fine grain and vignette as the night world, with minimal halation restricted to bright highlights."
+    },
+    "dawn": {
+      "type": "LUT-style starting recipe",
+      "recipe": "Retain the deliberate warm sky, protect orange-yellow highlights below approximately 95 IRE and gently open desk silhouettes only where detail exists. Keep shadow saturation restrained and use the same grain and vignette geometry as the rest of the film."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:05.07",
+      "to": "00:08.00",
+      "issue": "Office to chat: luma 46.4 → 202.9; saturation 118.3 → 12.8."
+    },
+    {
+      "from": "00:24.07",
+      "to": "00:24.87",
+      "issue": "Dark insert to presentation UI: luma 16.5 → 187.8; contrast 9.7 → 95.5."
+    },
+    {
+      "from": "00:30.00",
+      "to": "00:31.07",
+      "issue": "Regeneration UI to reaction: luma 184.4 → 33.4; saturation 14.4 → 66.8."
+    },
+    {
+      "from": "01:06.60",
+      "to": "01:12.60",
+      "issue": "Dark Changes panel to white email: luma 31.4 → 172.2."
+    }
+  ]
+}

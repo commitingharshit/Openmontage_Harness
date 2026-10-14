@@ -1,0 +1,22 @@
+{"critic":"sound_mix","stage":"animatic","score":60,
+"dimension_scores":{"loudness_spec":82,"vo_vs_bed_balance":38,"tonal_balance":55,"dynamics_arc":58,"transitions_bridges":50,"stereo_image":85},
+"issues":[
+{"shot_id":"01:43 / 01:17 / 02:01","category":"vo_not_ducked","severity":0.85,"confidence":0.8,"evidence":"astats: bed alone 101.5–102.9 is -14.9 RMS and with VO 103.0–104.8 is -15.2, so VO adds nothing over the music. At 75.5 vs 77.0 it is -18.3 vs -15.7 (+2.6 dB), and at 119.5 vs 121.5 it is -19.5 vs -16.8. VO over bed is about 0–4 dB, well below 8.","suggested_action":"Sidechain-duck music by 9 dB under VO (attack 30 ms, release 350 ms, threshold set to the VO bus), plus a static 2.5 dB dip at 2.5 kHz (Q 1.2) on music."},
+{"shot_id":"global","category":"dark_muddy_tonal_balance","severity":0.6,"confidence":0.8,"evidence":"Spectral: sub 14.3%, low 33.5%, low-mid 29.7%, mid 14.5%, presence 4.5%, air 3.6%. That is 77.5% below 1 kHz; the mid is under 15% with VO present, and presence and air are starved.","suggested_action":"High-pass music at 35 Hz and ambience at 80 Hz, cut 2 dB at 250–350 Hz on the music bus, and add a +2 dB presence shelf at 4–6 kHz on VO."},
+{"shot_id":"01:02.0–01:03.8","category":"hard_drop_to_digital_zero","severity":0.6,"confidence":0.9,"evidence":"The mix drops to -inf for 1.79 s (curve -180 dBFS), then jumps to -16 dBFS at 64. That is a hard chop, not a designed fade.","suggested_action":"Keep a room-tone floor of -48 dBFS; fade in the riser from 62 so the re-entry is a ramp."},
+{"shot_id":"01:30–01:55","category":"no_dynamic_contrast_in_payoff","severity":0.55,"confidence":0.75,"evidence":"The 0.5 s curve sits at -15 to -18 dBFS from 90 to 115 s with no dip before the accept or the resolve; the noise floor is about -20 dBFS (92–121).","suggested_action":"Automate the bed: -6 dB from 86–100, +4 dB swell at 104, -8 dB under the laptop close at 112, end-card bed at -24 under VO."},
+{"shot_id":"00:04–00:11","category":"level_hole","severity":0.5,"confidence":0.8,"evidence":"RMS is -43.5 dBFS for 7 s right after a -16 dBFS hook, a 27 dB hole on a social platform. On phone speakers it reads as broken.","suggested_action":"Raise the bed and ambience to about -28 dBFS short-term here."},
+{"shot_id":"global","category":"cuts_unbridged","severity":0.45,"confidence":0.7,"evidence":"cuts_on_sound_pct 41.9; 18 cuts have no event. The payoff location changes (106.2 dawn, 109.2 boardroom) have no J- or L-cut.","suggested_action":"J-cut the dawn birds 0.5 s before 106.2 and the boardroom room tone 0.4 s before 109.2; crossfade ambiences over 300 ms."},
+{"shot_id":"global","category":"loudness_marginal","severity":0.25,"confidence":0.9,"evidence":"I = -14.5 LUFS (in spec), TP = -1.5 dBTP, exactly at the ceiling with no margin, LRA 8.2 (good). Segment peaks reach -1.4 dBFS at 119.5.","suggested_action":"Use a two-pass loudnorm to I=-14, TP=-2.0, LRA=9 after the ducking changes, so the louder VO doesn't push TP over."}],
+"mix_recipe":{
+"vo_bus":"HPF 80 Hz; -2 dB at 300 Hz; +2 dB shelf at 5 kHz; de-ess 6–8 kHz -4 dB; comp 3:1, 10 ms/120 ms, 4–6 dB GR",
+"music_ducking":"sidechain from VO: -9 dB depth, attack 30 ms, release 350 ms, hold 150 ms; plus a static -2.5 dB bell at 2.5 kHz, Q 1.2, under VO",
+"music_eq":"HPF 35 Hz; -2 dB at 250–350 Hz",
+"ambience":"HPF 80 Hz, LPF 10 kHz; floor never below -50 dBFS; crossfade 300 ms at location changes",
+"sfx":"phone buzz and impacts peak at -6 dBFS before the limiter; UI ticks -18 dBFS",
+"limiter":"ceiling -2.0 dBTP, lookahead 5 ms, release 60 ms",
+"loudnorm_pass1":"ffmpeg -i mix.wav -af loudnorm=I=-14:TP=-2.0:LRA=9:print_format=json -f null -",
+"loudnorm_pass2":"loudnorm=I=-14:TP=-2.0:LRA=9:measured_I=<>:measured_TP=<>:measured_LRA=<>:measured_thresh=<>:offset=<>:linear=true"},
+"constraint_failures":[],
+"revision_scope":"whole",
+"top_revision":"Sidechain-duck the music 9 dB under every VO line (it currently sits at 0–4 dB below the VO, worst at 103 s where VO adds nothing over the bed) and dip music 2.5 dB at 2.5 kHz."}

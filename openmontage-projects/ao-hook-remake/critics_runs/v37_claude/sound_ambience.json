@@ -1,0 +1,127 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 63,
+ "dimension_scores": {
+  "room_tone_continuity": 64,
+  "world_building": 55,
+  "sound_perspective": 55,
+  "diegetic_logic": 68,
+  "designed_silence": 84
+ },
+ "issues": [
+  {
+   "shot_id": "01:55.0–01:55.5",
+   "category": "dead_air_at_end_card_cut",
+   "severity": 0.5,
+   "confidence": 0.85,
+   "evidence": "Loudness drops to -68.0 dBFS in the 115.0–115.5 s window, and silencedetect starts at 115.14 s. The city bed fades out from 114.0, the birds from 114.4, the end-card birds only fade in from 115.3 (0.6 s) and the music from 115.6 (0.8 s). It is under 0.5 s and not -∞, so not a formal fail, but it is effectively dead air on a cut.",
+   "suggested_action": "Overlap the dawn birds and the end-card birds by 0.5 s (start the end-card birds at 114.8), and keep the floor at about -45 dBFS through the cut."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "ambience_ducked_by_vo",
+   "severity": 0.5,
+   "confidence": 0.9,
+   "evidence": "In sound_mix_v36.py, office, city_, birds_ and ticktock are in the BED list, so they go through sidechaincompress (ratio 5, release 350 ms) keyed by the VO. The room tone therefore pumps down every time the narrator speaks, which breaks diegetic continuity.",
+   "suggested_action": "Route ambience on its own bus that is not keyed by the VO (or ducked by at most 2 dB), and duck only the music."
+  },
+  {
+   "shot_id": "00:00–00:05",
+   "category": "cold_open_no_air",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "0–5.05 s (real laptop in a dark room, email, red clock) carries only bass_pulse, heart_fast, a phone buzz, keys and an impact. The office room tone starts at 5.05 s.",
+   "suggested_action": "Put a dark-room night tone under the cold open (HVAC hum and a faint fridge or electrical buzz at about -48 dBFS) so the location exists before the rewind."
+  },
+  {
+   "shot_id": "00:49–01:46",
+   "category": "one_room_tone_for_every_place",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "The blue night office (5–49), the warm candlelit room (49–106, frames 20 and 43–44), and the dark-room laptop (106.3) all use the same office.mp3, varied only by level (0.10, 0.035, 0.07) and source offset. Only the clock (49–52.6) and city/birds at dawn are new layers.",
+   "suggested_action": "Give each place its own signature. Night office: HVAC and distant traffic. Warm room: a quiet domestic room with a slow clock throughout and a faint candle or lamp. Dark room before the lights: very close and dry. Dawn: city and birds."
+  },
+  {
+   "shot_id": "00:49–01:46",
+   "category": "perspective_static",
+   "severity": 0.3,
+   "confidence": 0.55,
+   "evidence": "Every product shot \"starts WIDE … and pushes in, max ~1.9×\", yet room tone sits at a fixed 0.035 for 57 s.",
+   "suggested_action": "Automate the room tone about 3 dB down and slightly low-passed as each push goes into the screen, then restore it on the next wide shot."
+  },
+  {
+   "shot_id": "00:43.6–00:46",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.85,
+   "evidence": "After the VO finishes, only room tone (0.07) and a heartbeat remain, measured at -48.6 and -47.2 dBFS, with the soft thud at 44.57. This is a deliberate, breathing silence before the turn.",
+   "suggested_action": "Keep it as is. It is the best ambience moment in the film."
+  }
+ ],
+ "constraint_failures": [],
+ "ambience_plan": [
+  {
+   "location": "Dark room cold open 0–5",
+   "layers": [
+    "HVAC hum",
+    "faint electrical buzz",
+    "distant night traffic"
+   ],
+   "level_dbfs": "-48"
+  },
+  {
+   "location": "Blue night office 5–46",
+   "layers": [
+    "HVAC air",
+    "distant city at night",
+    "occasional far-off elevator or door"
+   ],
+   "level_dbfs": "-42 (not VO-ducked)"
+  },
+  {
+   "location": "Designed silence 43.6–46",
+   "layers": [
+    "same office air",
+    "heartbeat"
+   ],
+   "level_dbfs": "-48"
+  },
+  {
+   "location": "Warm room with real laptop 49–106",
+   "layers": [
+    "quiet domestic room tone",
+    "slow clock tick throughout",
+    "faint lamp hum"
+   ],
+   "level_dbfs": "-45, -3 dB on push-ins"
+  },
+  {
+   "location": "Dark room at Send 106.3–107.9",
+   "layers": [
+    "close dry room",
+    "breath"
+   ],
+   "level_dbfs": "-46"
+  },
+  {
+   "location": "Lights on and dawn 107.9–115.3",
+   "layers": [
+    "city waking",
+    "birds",
+    "window air"
+   ],
+   "level_dbfs": "-40, crossfading into the end card"
+  },
+  {
+   "location": "End card 115.3–121.4",
+   "layers": [
+    "soft birds",
+    "air"
+   ],
+   "level_dbfs": "-46 to the last frame"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Take ambience off the VO sidechain and give each location its own bed, crossfading the dawn into the end card so the floor never drops below about -45 dBFS."
+}

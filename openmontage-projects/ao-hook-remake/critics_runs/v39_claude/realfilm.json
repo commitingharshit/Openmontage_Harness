@@ -1,0 +1,378 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 49,
+ "dimension_scores": {
+  "production_value": 50,
+  "photorealism_no_ai_tells": 60,
+  "cohesion_with_ref_look": 45,
+  "ui_and_graphics_finish": 42
+ },
+ "issues": [
+  {
+   "shot_id": "00:10.0-00:42.5",
+   "category": "slide_deck_ui",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "f_05, f_11, f_12, f_14, f_15, f_16, f_18: full-frame illustrated UI under a grey wash with an oval vignette and giant words ('Done.', 'Copy.') - next to Codex REF (UI on real monitors in lit rooms) this reads as keynote slides",
+   "suggested_action": "Composite these beats onto the over-the-shoulder laptop plate already used at 7.5/12.5 so every illustrated UI lives on a physical screen"
+  },
+  {
+   "shot_id": "00:20.0 / 00:22.5 / 00:30.0",
+   "category": "repeated_stock_plate",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "Same head-in-hands stock take appears three times; f_09 and f_13 show a hard black bar on the right ~7% of frame",
+   "suggested_action": "Fill the frame and use a different take (or the scratch-head insert) for the second and third appearances"
+  },
+  {
+   "shot_id": "01:02.5-01:42.5",
+   "category": "ui_on_blur",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "f_26-f_42: product crops floating on an out-of-focus teal blur; f_33 memo strip fills 20% of an empty dark panel, f_35/f_36 show a stray 'Cha' tooltip; Genie REF frames UI on deep black with intent, these look like a screen recording with a blur plate",
+   "suggested_action": "Give the post-reveal one physical anchor: alternate warm-room laptop angles (as at 50.0 and 92.5) with the crops, and remove empty containers/tooltips"
+  },
+  {
+   "shot_id": "00:52.5 / 00:55.0",
+   "category": "raw_screenshot",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "f_22 is a raw app screenshot crop with black margins; f_23 shows the whole app flat with a large blurred photo slab in the middle of the slide",
+   "suggested_action": "Present 52.5 on the warm-room laptop; replace the blurred slide photo with a licensed or generated image so the centre of frame is not a blur block"
+  },
+  {
+   "shot_id": "01:55.0-01:57.5",
+   "category": "weak_end",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "f_47 grey quote on gradient; f_48 'This time, you checked.' nearly invisible",
+   "suggested_action": "Land the end lines over the sunrise plate at readable contrast"
+  },
+  {
+   "shot_id": "00:05.0 / 01:47.5 / 01:52.5",
+   "category": "strong_real",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "Night office (f_03), warm candle room (f_44, f_45), sunrise (f_46) and dark hands (f_07) sit plausibly beside the Codex REF",
+   "suggested_action": "Build more of the film from these plates"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 42.9"
+  },
+  {
+   "rule": "UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:52.5, 01:20.0",
+   "evidence": "f_22 raw screenshot crop with black margins; f_33 memo strip on an empty dark panel"
+  }
+ ],
+ "frame_scores": [
+  {
+   "t": "00:00.0",
+   "score": 3,
+   "tell": "stock-to-UI cut",
+   "fix": "open on the real dark-room laptop with cards over it"
+  },
+  {
+   "t": "00:02.5",
+   "score": 3,
+   "tell": "flat grey email full-frame, cards look like a slide",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:05.0",
+   "score": 7,
+   "tell": "stock office, slightly posed but convincing night practicals",
+   "fix": "keep"
+  },
+  {
+   "t": "00:07.5",
+   "score": 6,
+   "tell": "good OTS composite; screen slightly too clean",
+   "fix": "keep"
+  },
+  {
+   "t": "00:10.0",
+   "score": 2,
+   "tell": "'Done.' typography on grey-washed screenshot - slide-deck look",
+   "fix": "put 'Done.' on her laptop screen in the OTS plate"
+  },
+  {
+   "t": "00:12.5",
+   "score": 6,
+   "tell": "good OTS composite on real hands",
+   "fix": "keep"
+  },
+  {
+   "t": "00:15.0",
+   "score": 7,
+   "tell": "real hands, convincing",
+   "fix": "keep"
+  },
+  {
+   "t": "00:17.5",
+   "score": 3,
+   "tell": "notification over grey flat UI",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:20.0",
+   "score": 5,
+   "tell": "plate offset - black edge on right",
+   "fix": "fill frame (scale 110%)"
+  },
+  {
+   "t": "00:22.5",
+   "score": 6,
+   "tell": "same take reused; saturated cyan map wall",
+   "fix": "keep"
+  },
+  {
+   "t": "00:25.0",
+   "score": 2,
+   "tell": "flat chat screenshot under grey wash",
+   "fix": "composite chat onto OTS laptop plate"
+  },
+  {
+   "t": "00:27.5",
+   "score": 2,
+   "tell": "flat chat screenshot, no depth",
+   "fix": "composite onto laptop, screen spill on her face"
+  },
+  {
+   "t": "00:30.0",
+   "score": 5,
+   "tell": "third reuse of same take, black edge",
+   "fix": "replace with scratch-head take"
+  },
+  {
+   "t": "00:32.5",
+   "score": 3,
+   "tell": "clock text collides with window edge",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:35.0",
+   "score": 3,
+   "tell": "deck strip floating on empty teal",
+   "fix": "put deck strip on screen in her eyeline"
+  },
+  {
+   "t": "00:37.5",
+   "score": 3,
+   "tell": "Excel screenshot + giant word, keynote look",
+   "fix": "whip across real screen, not full-frame"
+  },
+  {
+   "t": "00:40.0",
+   "score": 4,
+   "tell": "tilted window pile reads as motion-graphics template",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:42.5",
+   "score": 3,
+   "tell": "flat send button full-frame",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:45.0",
+   "score": 4,
+   "tell": "dim logo on gradient",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:47.5",
+   "score": 4,
+   "tell": "logo card on gradient",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:50.0",
+   "score": 7,
+   "tell": "real warm room, believable screen",
+   "fix": "keep"
+  },
+  {
+   "t": "00:52.5",
+   "score": 4,
+   "tell": "raw screenshot crop on black",
+   "fix": "float the window in a room with light"
+  },
+  {
+   "t": "00:55.0",
+   "score": 4,
+   "tell": "whole app flat, blurred photo slab in centre",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "00:57.5",
+   "score": 6,
+   "tell": "real OTS product recording, good",
+   "fix": "keep"
+  },
+  {
+   "t": "01:00.0",
+   "score": 6,
+   "tell": "real OTS, good falloff",
+   "fix": "keep"
+  },
+  {
+   "t": "01:02.5",
+   "score": 4,
+   "tell": "panel crop on blur, UI-video look",
+   "fix": "show panel on the warm-room laptop at 3/4 angle"
+  },
+  {
+   "t": "01:05.0",
+   "score": 4,
+   "tell": "panel crop on blur",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:07.5",
+   "score": 4,
+   "tell": "screenshot with '8x speed' badge",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:10.0",
+   "score": 4,
+   "tell": "panel crop on blur",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:12.5",
+   "score": 4,
+   "tell": "memo crop on blur",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:15.0",
+   "score": 5,
+   "tell": "glowing chip helps",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:17.5",
+   "score": 3,
+   "tell": "split-screen card on blur, deck-like",
+   "fix": "fill panels, drop empty containers"
+  },
+  {
+   "t": "01:20.0",
+   "score": 3,
+   "tell": "memo crop fills 20% of empty panel",
+   "fix": "scale memo crop to fill its panel"
+  },
+  {
+   "t": "01:22.5",
+   "score": 3,
+   "tell": "cropped text collides with label",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:25.0",
+   "score": 4,
+   "tell": "stray 'Cha' tooltip over UI",
+   "fix": "remove stray tooltip"
+  },
+  {
+   "t": "01:27.5",
+   "score": 4,
+   "tell": "stray tooltip, crop",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:30.0",
+   "score": 5,
+   "tell": "ring on Accept works",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:32.5",
+   "score": 5,
+   "tell": "warm laptop, but very tight",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:35.0",
+   "score": 4,
+   "tell": "single column on blur",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:37.5",
+   "score": 5,
+   "tell": "ring + super, decent",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:40.0",
+   "score": 4,
+   "tell": "same column held",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:42.5",
+   "score": 4,
+   "tell": "file tree on blur",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:45.0",
+   "score": 3,
+   "tell": "dim sliver of file tree, empty frame",
+   "fix": "fill frame or cut"
+  },
+  {
+   "t": "01:47.5",
+   "score": 6,
+   "tell": "real warm room, believable",
+   "fix": "keep"
+  },
+  {
+   "t": "01:50.0",
+   "score": 6,
+   "tell": "real warm room",
+   "fix": "keep"
+  },
+  {
+   "t": "01:52.5",
+   "score": 7,
+   "tell": "real sunrise",
+   "fix": "keep"
+  },
+  {
+   "t": "01:55.0",
+   "score": 4,
+   "tell": "text on gradient",
+   "fix": "add depth/light: place on a real screen in a room"
+  },
+  {
+   "t": "01:57.5",
+   "score": 2,
+   "tell": "text nearly invisible",
+   "fix": "raise text contrast"
+  },
+  {
+   "t": "02:00.0",
+   "score": 5,
+   "tell": "clean end card, generic",
+   "fix": "add depth/light: place on a real screen in a room"
+  }
+ ],
+ "real_film_index": 42.9,
+ "closest_ref": "OpenAI Codex 'It's time to fly' - the night-office and warm-room plates match its look, but Codex keeps every UI on a real screen inside a lit room while this film spends ~60% of its runtime on flat full-frame UI over grey wash or teal blur.",
+ "top_3_upgrades": [
+  "Move all hook illustrated UI (10-42.5 s) onto the over-the-shoulder laptop plate with screen spill on her face.",
+  "Anchor the post-reveal crops in the warm-room laptop (alternate angles) instead of floating on teal blur; remove empty panels and stray tooltips.",
+  "Fix the reused/offset head-in-hands plate and set the end lines over the sunrise at readable contrast."
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Put every illustrated and product UI beat onto a real screen inside the night office or warm room so the film stops cutting between good stock and slide-deck flats."
+}

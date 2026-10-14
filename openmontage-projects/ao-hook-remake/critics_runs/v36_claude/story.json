@@ -1,0 +1,32 @@
+{
+ "critic": "story",
+ "stage": "animatic",
+ "score": 72,
+ "dimension_scores": {
+  "brief_adherence": 80,
+  "progression_causality": 68,
+  "pain_solution_link": 84,
+  "block_purpose_connectives": 65,
+  "proof_of_setup": 70,
+  "pacing_cta": 55
+ },
+ "retell": [
+  "At 8:57 she's about to send the board pack and the deck number doesn't match the model.",
+  "Earlier, a chatbot kept saying 'Done' while wrecking the memo, regenerating the whole deck for one number, and letting slide 4 slip back.",
+  "Agentic Office takes one request, edits the exact cell, sentence and slide elements across the model, memo and deck, and lists all 10 changes for her to accept, including slide 4.",
+  "She sends the files at dawn, and the tagline says this time you checked."
+ ],
+ "scroll_away_second": 35,
+ "issues": [
+  {"shot_id": "01:12–01:25 (f_30–f_33)", "category": "proof_contradicts_setup", "severity": 0.6, "confidence": 0.75, "evidence": "On the memo shots captioned 'One request. Planned, then checked.' and 'Change what matters. Keep everything else.', the paragraph shows €71–73m→€74.6m but Table 1 'FY26 outlook' still reads '€71–73m' in plain text. The story's pain was a number left behind; the proof shows one left behind.", "suggested_action": "Use a frame where the table cell's tracked change is also visible, or ring the table change with a label; otherwise crop to the paragraph only."},
+  {"shot_id": "00:05–00:46", "category": "pacing_agitate_too_long", "severity": 0.5, "confidence": 0.75, "evidence": "Three full 'Done.' cycles (11 s, 27.5 s, 34.5 s) plus the Copy/Paste montage and the silent Send beat take 46 s of 121 s before the product appears; the third Done repeats the second's lesson.", "suggested_action": "Merge 'Done. AGAIN.' and 'Done. AND AGAIN.' into one regenerate-and-slip beat (save ~6 s) and bring the reveal to ~40 s."},
+  {"shot_id": "01:39–01:42 (f_40–f_41)", "category": "continuity_regression", "severity": 0.4, "confidence": 0.7, "evidence": "After 'All changes reviewed 10 of 10' (f_36), the Room shot shows the memo table and paragraph back at '€71–73m' and Priya's Assistant proposing the same replacement again.", "suggested_action": "Frame the Room beat as a different section/file, or add a super 'Another file, same flow'; at minimum crop out the €71–73m table."},
+  {"shot_id": "00:05 / 00:37–00:42", "category": "timeline_logic", "severity": 0.35, "confidence": 0.7, "evidence": "Cold open clock 8:57, super '45 MINUTES EARLIER', but the montage clock runs to 8:58–8:59 (f_17) before returning to the 8:57 email.", "suggested_action": "Cap the montage clock at 8:56 or set the cold open to 8:59."},
+  {"shot_id": "01:46–01:55 (f_44–f_46)", "category": "protagonist_not_resolved", "severity": 0.35, "confidence": 0.7, "evidence": "Her arc ends with her head on the desk at 44.5 s; the resolution is an empty warm living room with candles (f_44) and a sunrise office (f_46). Different place, no person: the relief is told, not shown.", "suggested_action": "Return to her in the same blue office for 1.5 s as she clicks Send and exhales; then go to sunrise."},
+  {"shot_id": "00:52–01:00", "category": "atmosphere_only_block", "severity": 0.3, "confidence": 0.6, "evidence": "'Templates, or a sentence.' (f_23) and new-element diffs are feature tour beats unrelated to the 8.5 / €74.6m problem the story set up.", "suggested_action": "Cut the templates beat or reduce it to under 1 s; spend the time on the slide-4 catch."},
+  {"shot_id": "01:46", "category": "payoff_detail", "severity": 0.2, "confidence": 0.5, "evidence": "The 'Sent' email (f_44) shows only the Board_Memo_Q3.docx chip, while the super says 'memo · model · deck'.", "suggested_action": "Show all three attachment chips on the sent email so the payoff mirrors the opening frame."}
+ ],
+ "constraint_failures": [],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Make the proof match the setup: fix the memo shots so no €71–73m survives on screen after the change (table and Room beat), and compress the second and third 'Done' cycles into one so the reveal lands by ~40 s."
+}

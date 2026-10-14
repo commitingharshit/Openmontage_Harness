@@ -1,0 +1,28 @@
+   0.0-   4.5 Today, smoking is going to save lives.
+   4.5-   9.4 Oh, my God!
+   9.4-  10.4 OK, it's happening.
+  10.4-  11.4 Everybody stay calm.
+  11.4-  12.4 What's the procedure, everyone?
+  12.4-  13.4 What's the procedure?
+  13.4-  14.4 Stay f***ing calm!
+  14.4-  15.4 Go away.
+  15.4-  17.4 Have you ever seen a gun victim?
+  17.4-  30.6 Save me!
+  30.6-  31.6 OK, I am not dying here.
+  31.6-  39.2 The fire's shooting at us!
+  39.2-  40.2 There is no fire.
+  40.2-  41.6 It was only a simulation.
+  41.6-  42.6 What?
+  42.6-  44.8 Oh, come on.
+  44.8-  45.8 It's not real, Stanley.
+  45.8-  46.8 Oh, my God.
+  46.8-  47.8 Don't have a heart attack.
+  47.8-  48.8 No, no, no, no, no.
+  48.8-  49.8 Stanley!
+  49.8-  50.8 Barack is president!
+  51.0-  53.0 You are black, Stanley!
+  53.0-  54.0 I'm fine.
+  54.0-  55.0 Leave me alone.
+  55.0-  56.0 I can do it alone.
+  56.0-  57.0 Save me!
+  57.0-  59.6 How could you possibly think this is a good idea?

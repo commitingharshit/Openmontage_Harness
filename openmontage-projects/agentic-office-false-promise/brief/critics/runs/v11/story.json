@@ -1,0 +1,79 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 76,
+  "dimension_scores": {
+    "brief_message_adherence": 78,
+    "narrative_progression_coherence": 72,
+    "pain_solution_connection": 80,
+    "shot_purpose_sequencing": 76,
+    "product_demo_benefit_clarity": 72,
+    "pacing_cta": 72
+  },
+  "issues": [
+    {
+      "shot_id": "00:22–00:26",
+      "category": "missing_outcome_proof",
+      "severity": 0.85,
+      "confidence": 1.0,
+      "evidence": "The story culminates in 'All changes reviewed · 10 of 10 changes accepted', but never returns to the slide whose €71–73m box David circled.",
+      "suggested_action": "Once the pending recording exists, show the accepted Slide 2 box reading €74.6m immediately after acceptance, then cut to the CTA."
+    },
+    {
+      "shot_id": "00:11.5–00:19",
+      "category": "missing_task_bridge",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "'Introducing Diffs' cuts to Revenue!E6 changing 8.9 → 8.5. The opening established FY26 €74.6m, but no visible request explains how the DACH change relates to that outlook or asks the app to update all three files.",
+      "suggested_action": "Introduce the demo with a readable request: 'DACH Q4 to €8.5m. Make the model, memo and deck match.' Keep FY26 €74.6m visible as the resulting outlook."
+    },
+    {
+      "shot_id": "00:03.2–00:08",
+      "category": "execution_gap_asserted",
+      "severity": 0.72,
+      "confidence": 0.98,
+      "evidence": "'AI gave you the answer. You still have a board pack to fix' states the problem, while 'Hers' versus 'The chat’s' shows a replacement deck. Neither shows the human carrying the answer into her existing files.",
+      "suggested_action": "Replace the comparison beat with one explicit transfer step: the AI chat supplies €74.6m and Maya pastes it into her existing deck while the old €71–73m box remains."
+    },
+    {
+      "shot_id": "00:08–00:11.5",
+      "category": "unexplained_state_change",
+      "severity": 0.64,
+      "confidence": 1.0,
+      "evidence": "The opening memo says €71–73m. David then says 'Memo says €74.6m', and the slide title also reads €74.6m, although neither update has been shown.",
+      "suggested_action": "Show the partial manual update before David’s message, or change his message to 'Model says €74.6m. Which is it?' and retain the original slide title."
+    },
+    {
+      "shot_id": "00:05.5–00:14",
+      "category": "delayed_product_payoff",
+      "severity": 0.58,
+      "confidence": 0.93,
+      "evidence": "After the opening already establishes mismatched files, the film adds a deck comparison, David’s mismatch, and a definition card; real product proof begins only at 14 seconds.",
+      "suggested_action": "Combine the comparison and David beats into one escalation, bringing the first native-file diff forward to approximately 10 seconds."
+    },
+    {
+      "shot_id": "00:03.2–00:05.5",
+      "category": "reading_time",
+      "severity": 0.42,
+      "confidence": 1.0,
+      "evidence": "The two-line message 'AI gave you the answer. You still have a board pack to fix.' holds for 2.3 seconds in the supplied timeline.",
+      "suggested_action": "Extend this message to at least 2.5 seconds, taking the additional time from the redundant comparison beat."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:03.2–00:05.5",
+      "evidence": "The supplied timeline gives the answer/board-pack card 2.3 seconds."
+    },
+    {
+      "rule": "One task, one number, start to finish: DACH Q4 to 8.5 → FY26 €74.6m.",
+      "shot_id": "00:00–00:19",
+      "evidence": "FY26 €74.6m anchors the opening, but DACH 8.9 → 8.5 appears later without an explicit connection to the original task."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Close the loop on David’s exact circled box by showing its proposed €71–73m → €74.6m change, acceptance, and the recorded corrected slide.",
+  "retell": "The model has a new forecast, but the memo and deck still contain the old number. A chatbot supplies an inadequate replacement deck, and the CFO flags a conflicting number in the existing slide. Diffs shows proposed changes across Excel, Word and PowerPoint, and the user accepts all ten. Agentic Office offers early access, although I never see the flagged slide after it is fixed.",
+  "scroll_away_second": 8
+}

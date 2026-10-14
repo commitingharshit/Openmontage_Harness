@@ -1,0 +1,52 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 87.15,
+  "dimension_scores": {
+    "brief_message_adherence": 92,
+    "narrative_progression_coherence": 88,
+    "pain_solution_connection": 88,
+    "shot_purpose_sequencing": 85,
+    "product_demo_benefit_clarity": 82,
+    "pacing_cta": 80
+  },
+  "issues": [
+    {
+      "shot_id": "00:56–01:06",
+      "category": "incomplete_payoff",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "The central failure is the circled stale slide-2 text box at 00:30.5. At 00:56 the product proposes its correction, but after acceptance the visible document proof is the memo and its table at €74.6m. The fallback demonstrates a completed memo correction, while the exact deck error receives only a proposed-change view and an aggregate acceptance count.",
+      "suggested_action": "When the pending recording is available, insert the real corrected slide-2 text box immediately after '10 of 10 changes accepted', retaining the memo proof afterward. Until then, keep the fallback but treat the deck-row proposal and acceptance count as the extent of the visible deck proof."
+    },
+    {
+      "shot_id": "00:24",
+      "category": "task_unit_ambiguity",
+      "severity": 0.56,
+      "confidence": 0.99,
+      "evidence": "The chatbot's slide says 'DACH Q4 growth: 8.5', whereas the real memo at 00:47 and 01:06 identifies the assumption as 'DACH Q4 revenue of €8.5m'. The same task changes meaning between the pain and solution sequences.",
+      "suggested_action": "Change the synthetic chatbot slide bullet to 'DACH Q4 revenue: €8.5m', preserving the wrong template and missing chart as its demonstrated failures."
+    },
+    {
+      "shot_id": "00:32–00:35",
+      "category": "redundant_exposition",
+      "severity": 0.46,
+      "confidence": 0.94,
+      "evidence": "After the manual title edit and David's circled mismatch establish the execution and review problem, the film returns to the same chat instruction with 'One number. Another place to check.' Agentic Office arrives only at 00:35.",
+      "suggested_action": "Replace this receipt shot with the 'Same request. This time, Agentic Office.' transition, carrying 'You still have to carry it through the pack' across that transition and bringing the product sequence forward three seconds."
+    },
+    {
+      "shot_id": "00:37.5–00:50",
+      "category": "workspace_orientation",
+      "severity": 0.38,
+      "confidence": 0.91,
+      "evidence": "The product introduction moves through three close crops of the request and then a memo diff. The first broad app view at 00:50 shows the model, memo and deck tabs, but its caption is only 'Still your deck.' The shared workspace is visible without being explicitly connected to the opening folder of unchanged files.",
+      "suggested_action": "Use the existing broad app shot to establish all three named file tabs before the close-up edits, with the caption 'Your model, memo and deck. One workspace.' Retain the deck-template comparison afterward."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Close the central stale-text-box storyline with genuine post-acceptance footage of corrected slide 2 when the pending recording becomes available.",
+  "retell": "She asked an AI chat to update the model, memo and deck, but it only supplied instructions and left her files unchanged. She carried the changes across by hand, received a deck in the wrong template, and missed an old forecast in her own slide. Agentic Office took the same task inside her files and proposed changes, including the text box she had missed. She accepted all ten changes, saw the memo and table agree at €74.6m, and was invited to request early access.",
+  "scroll_away_second": 32
+}

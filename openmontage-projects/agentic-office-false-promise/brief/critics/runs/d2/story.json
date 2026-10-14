@@ -1,0 +1,52 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 84,
+  "dimension_scores": {
+    "brief_message_adherence": 88,
+    "narrative_progression_coherence": 84,
+    "pain_solution_connection": 86,
+    "shot_purpose_sequencing": 80,
+    "product_demo_benefit_clarity": 82,
+    "pacing_cta": 73
+  },
+  "issues": [
+    {
+      "shot_id": "01:03–01:09",
+      "category": "incomplete_payoff",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The original failure is slide 2's circled €71–73m textbox at 00:30.5. The solution shows that textbox's proposed diff and '10 of 10 changes accepted', then proves the corrected memo at 01:06; the corrected slide 2 never appears.",
+      "suggested_action": "When the pending recording becomes available, place the accepted slide 2 with its textbox reading €74.6m immediately after acceptance, before the corrected memo and laptop close."
+    },
+    {
+      "shot_id": "00:35–00:45",
+      "category": "delayed_feature_demonstration",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "The 00:36.2 card now clearly defines Diffs, but the next 7.5 seconds spotlight three parts of the request. The first actual diff arrives around 00:45, after the viewer has already watched the same task performed manually.",
+      "suggested_action": "Keep the launch definition, compress the request to one readable task excerpt, and move directly into the memo diff followed by the model and flagged slide 2 rows."
+    },
+    {
+      "shot_id": "00:35–00:41",
+      "category": "comparison_reset_unclear",
+      "severity": 0.54,
+      "confidence": 0.93,
+      "evidence": "The first half already shows Maya setting the model to 8.5 and changing the memo. After 'Introducing Diffs in Agentic Office', the real request again says 'Take DACH Q4 down to 8.5', without explicitly establishing that this is a replay of the original task.",
+      "suggested_action": "Add 'The same task, with Diffs' over the request excerpt so the transition establishes a comparison before showing the original 8.9 → 8.5 proposal."
+    },
+    {
+      "shot_id": "00:48–00:51",
+      "category": "weak_intermediate_proof",
+      "severity": 0.4,
+      "confidence": 0.98,
+      "evidence": "The 'Still your deck' shot at 00:50 shows the Board Pack Q3 cover, whereas the earlier template failure and missed number both concern slide 2.",
+      "suggested_action": "Shorten the cover shot and give its time to the real slide 2 textbox diff, connecting preservation of the existing deck to correction of the exact object David flagged."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the exact failure loop by showing the accepted slide 2 textbox at €74.6m in the original deck before Maya closes her laptop.",
+  "retell": "A CFO asks an associate to update the model, memo and deck for an FY26 outlook of €74.6m. The chatbot gives instructions, so she carries them into the files herself, gets a replacement deck in the wrong template, and misses an old number in her own slide. Agentic Office introduces Diffs, showing proposed changes across the existing files, including the textbox she missed, with accept or reject controls. She accepts all ten changes, the memo and its table agree at €74.6m, and the film invites viewers to request early access.",
+  "scroll_away_second": 38
+}

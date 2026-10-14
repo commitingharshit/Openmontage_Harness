@@ -1,0 +1,55 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 86,
+  "dimension_scores": {
+    "stop_scroll": 82,
+    "three_second_comprehension": 91,
+    "thats_me": 88,
+    "sound_off_legibility": 83
+  },
+  "hook_2s": 9,
+  "issues": [
+    {
+      "shot_id": "00:00–00:03",
+      "category": "missing_personal_stakes",
+      "severity": 0.34,
+      "confidence": 0.96,
+      "evidence": "The headline reads “Model updated. Memo and deck still wrong.” It names the mismatch, but gives no deadline or immediate consequence.",
+      "suggested_action": "Test “Model updated. Board pack still wrong. Due at 9.” with the same three-file comparison."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "mobile_detail_density",
+      "severity": 0.28,
+      "confidence": 0.91,
+      "evidence": "Three side-by-side cards include application labels, filenames, quoted memo text and competing figures: “€74.6m” versus “€71–73m”. The headline is much easier to read than the supporting details.",
+      "suggested_action": "Remove filenames and shorten each card to its document type and one large figure, preserving the green check and red crosses."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "ai_context_delayed",
+      "severity": 0.23,
+      "confidence": 0.95,
+      "evidence": "Both the opening text and VO say “Model updated. Memo and deck… still wrong.” Neither identifies AI within the first three seconds.",
+      "suggested_action": "Test an opening headline that names the execution gap directly: “AI gave you the number. Your board pack still needs fixing.”"
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Keep the concrete mismatch, add “Due at 9,” and simplify the three cards to document labels and large conflicting figures.",
+  "hook_alternatives": [
+    {
+      "line": "Model updated. Board pack still wrong. Due at 9.",
+      "visual": "Three large cards: Excel €74.6m with a green check; memo and deck €71–73m with red crosses; a small deadline badge."
+    },
+    {
+      "line": "One number changed. Now fix three files.",
+      "visual": "A changed Excel figure connects to an unchanged Word paragraph and PowerPoint callout, each showing the old figure."
+    },
+    {
+      "line": "AI gave you the number. You still have to fix the pack.",
+      "visual": "A chat answer showing €74.6m above the unchanged memo and deck, both still showing €71–73m."
+    }
+  ]
+}

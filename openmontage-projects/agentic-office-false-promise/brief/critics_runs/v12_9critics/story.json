@@ -1,0 +1,63 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 84,
+  "dimension_scores": {
+    "brief_adherence": 88,
+    "progression_causality": 84,
+    "pain_solution_link": 90,
+    "block_purpose_connectives": 80,
+    "proof_of_setup": 70,
+    "pacing_cta": 77
+  },
+  "issues": [
+    {
+      "shot_id": "00:64–00:71",
+      "category": "missing_setup_payoff",
+      "severity": 0.85,
+      "confidence": 1.0,
+      "evidence": "The failure is the slide 2 box saying “€71–73m,” explicitly flagged by David. The solution shows “10 of 10 changes accepted” and the corrected memo, but never shows that same slide 2 box corrected.",
+      "suggested_action": "Insert the pending real post-acceptance slide 2 recording immediately after acceptance, showing the previously flagged box now reading €74.6m in the original deck."
+    },
+    {
+      "shot_id": "00:00–00:15",
+      "category": "unmarked_chronology",
+      "severity": 0.48,
+      "confidence": 0.94,
+      "evidence": "The opening says “Model updated,” then David instructs “Set your model to 8.5,” and the film subsequently shows the model being updated as “Step 1 of 3, by hand.”",
+      "suggested_action": "Mark the opening as the resulting mismatch and add a brief “Earlier that night” connective when David’s initial request appears."
+    },
+    {
+      "shot_id": "00:40–00:49",
+      "category": "demo_block_without_proof",
+      "severity": 0.45,
+      "confidence": 0.96,
+      "evidence": "Word shows tracked edits and Excel shows “8.9 → 8.5,” but the PowerPoint beat shows the “Board Pack Q3” cover beneath “POWERPOINT · still her own deck.”",
+      "suggested_action": "Replace the cover-slide hold with real footage of the relevant outlook slide or its proposed change, retaining only enough tab navigation to establish that it is her existing deck."
+    },
+    {
+      "shot_id": "00:70–00:79",
+      "category": "extended_resolution",
+      "severity": 0.38,
+      "confidence": 0.97,
+      "evidence": "After the accepted changes and corrected memo, the film adds Maya closing her laptop, a “9:02 AM · Board meeting” shot, and then the final product card; these beats introduce no further visible pack verification.",
+      "suggested_action": "Keep a brief laptop-close reaction after the corrected slide, then move directly to the final name and early-access CTA; remove or substantially shorten the board-meeting beat."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "One task, one number, start to finish.",
+      "shot_id": "00:64–00:71",
+      "evidence": "The specific slide 2 mismatch that triggers David’s escalation is proposed for correction in the Changes panel, but its corrected state is absent from the rendered ending."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "After acceptance, show the exact slide 2 box David flagged now reading €74.6m in her original deck, completing the film’s central cause-and-effect chain.",
+  "retell": [
+    "She needs DACH Q4 revenue set to 8.5 and the model, memo and deck to agree on FY26 €74.6m.",
+    "The chatbot tells her what to change, so she carries the answer into the files herself and leaves an old number in the deck.",
+    "Agentic Office proposes changes across those same files and lets her review and accept them.",
+    "The changes are accepted and the memo is corrected, although I never see the flagged deck box fixed; the film asks me to request early access."
+  ],
+  "scroll_away_second": 47
+}

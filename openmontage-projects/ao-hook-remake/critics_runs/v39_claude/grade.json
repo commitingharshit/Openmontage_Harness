@@ -1,0 +1,27 @@
+{"critic":"grade","stage":"animatic","score":57,
+"dimension_scores":{"look_family_unity":58,"skin_tones":66,"contrast_curve_blacks":55,"shot_to_shot_match":50,"finish":56},
+"issues":[
+{"shot_id":"00:00.0-00:05.47","category":"exposure_jump","severity":0.7,"confidence":0.85,"evidence":"Measured: 0.0 luma 48.1/sat 88.1 -> 1.2 luma 107.5/sat 31.0 -> 4.5 luma 14.5/sat 124.5 -> 5.47 luma 41.9/sat 120.1; a 2.2x luma jump then a 7x drop inside the first 5.5 s, the white email (f_01) reads milky grey","suggested_action":"Pull the 1.2 email plate to luma ~65 with lifted-black floor at 12 and sat ~60 so it belongs to the same night world as the 0.0 laptop and 5.47 office"},
+{"shot_id":"00:12.47-00:16.5","category":"exposure_jump","severity":0.6,"confidence":0.8,"evidence":"12.47 luma 60.9 -> 13.93 luma 104.6/sat 36.3 -> 15.6 luma 50.7; the Word page flares bright between two night shots","suggested_action":"Apply the same night wash as 16.5 (luma ~55, gain 0.75) to the 13.93 Word plate"},
+{"shot_id":"00:22.97 / 00:44.57","category":"saturation_spike","severity":0.55,"confidence":0.75,"evidence":"Stock inserts measure sat 141.6 and 145.6 at luma ~25 against neighbouring UI at sat ~70; f_10 shows a saturated cyan world-map wall behind her","suggested_action":"Desaturate these two inserts to sat <=95 and pull the cyan wall toward the teal of the UI wash (hue -10, sat 0.7)"},
+{"shot_id":"00:10.0-00:41.6","category":"milky_blacks","severity":0.5,"confidence":0.75,"evidence":"Illustrated UI flats (f_05, f_11, f_12, f_16) have contrast 21-23 at 9.8, 16.5, 21.3 and 25.1: grey-on-grey with no black anchor, a fog rather than a night grade","suggested_action":"Add an S-curve on these flats: blacks to 6, whites capped at 190, keep the vignette; target contrast >=40"},
+{"shot_id":"00:49.0-00:58.4","category":"world_mismatch","severity":0.45,"confidence":0.7,"evidence":"49.0 warm room sat 96.6 -> 52.6 real workspace sat 23.8/contrast 78.1 with 22 letterbox rows -> 54.4 sat 50.1 -> 56.0 sat 24.9; letterbox appears on one shot only (2.1%)","suggested_action":"Remove the stray letterbox at 52.6 and give the product-UI world one teal-shadow treatment (sat ~45, blacks 10) across 52.6-89"},
+{"shot_id":"01:46.3-01:47.9","category":"exposure_jump","severity":0.4,"confidence":0.7,"evidence":"106.3 luma 48/sat 88 -> 107.3 luma 71.7/sat 19.5 (hand click, sharpness 19.6) -> 107.9 luma 81/sat 140","suggested_action":"Grade the 107.3 hand insert warm (sat ~100) so the dark-room to lights-on transition is one gradient, not a grey flash"},
+{"shot_id":"01:52.4-02:01.4","category":"crushed_end","severity":0.35,"confidence":0.7,"evidence":"115.3 luma 23.1; f_48 'This time, you checked.' is near-black on near-black","suggested_action":"Lift end-card text to luma >=180 and the background to 20-25 with grain to avoid banding"},
+{"shot_id":"whole","category":"finish_inconsistent","severity":0.3,"confidence":0.6,"evidence":"Laptop composites carry grain/halation/reflections (f_04, f_21, f_44) but full-frame UI and montage panels (f_32-f_42) are clean digital with blurred-background bokeh","suggested_action":"Apply one shared grain (strength 6) and soft halation to every UI frame so stock, composites and screenshots share a finish"}],
+"constraint_failures":[
+{"rule":"hard grade jump inside one scene","shot_id":"00:01.2 -> 00:04.5","evidence":"luma 107.5 -> 14.5 within the cold open"},
+{"rule":"UI frames left raw and white beside graded film","shot_id":"00:13.93","evidence":"luma 104.6/sat 36.3 Word page between night shots at 60.9 and 50.7"}],
+"grade_recipe":{
+"night_problem_world":"eq=gamma=0.85:contrast=1.25:brightness=-0.04:saturation=0.75, colorbalance=bs=0.08:bm=0.04:rh=-0.02, curves=all='0/0.03 0.25/0.18 0.75/0.70 1/0.82', noise=alls=6:allf=t, vignette=PI/5; target luma 45-60, sat 60-95, contrast >=40",
+"product_ui_world":"eq=contrast=1.1:saturation=0.85, colorbalance=bs=0.05:hs=-0.02, curves blacks 0.04 whites 0.9, noise=alls=5; shared teal shadow, target luma 55-75",
+"warm_resolution_world":"colorbalance=rm=0.06:bm=-0.05:rh=0.04, eq=saturation=0.95, glow/halation on practicals, target sat <=120 (currently 140)",
+"end_card":"background luma 22 with grain 6, text luma >=180"},
+"worst_jumps":[
+{"from":"00:01.2","to":"00:04.5","issue":"luma 107.5 -> 14.5, sat 31 -> 124.5"},
+{"from":"00:12.47","to":"00:13.93","issue":"luma 60.9 -> 104.6 white Word page in night scene"},
+{"from":"00:21.3","to":"00:22.97","issue":"sat 73.2 -> 141.6 stock insert"},
+{"from":"00:49.0","to":"00:52.6","issue":"sat 96.6 -> 23.8 plus one-shot letterbox"},
+{"from":"01:46.3","to":"01:47.3","issue":"sat 87.7 -> 19.5 grey hand insert"}],
+"revision_scope":"whole",
+"top_revision":"Normalise the night problem world to one curve (luma 45-60, sat <=95, contrast >=40) so the 1.2 email, the 13.93 Word page and the 22.97/44.57 stock inserts stop jumping 2x against their neighbours."}

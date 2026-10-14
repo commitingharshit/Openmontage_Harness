@@ -1,0 +1,111 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 65.6,
+  "dimension_scores": {
+    "look_family_unity": 76,
+    "skin_tones": 78,
+    "contrast_curve_blacks": 65,
+    "shot_to_shot_match": 49,
+    "finish": 58
+  },
+  "issues": [
+    {
+      "shot_id": "00:36.8–00:42.8",
+      "category": "exposure_jump",
+      "severity": 0.86,
+      "confidence": 0.98,
+      "evidence": "The dim request plane cuts to a large luminous Word page. Measured luma jumps 20.0→139.0, contrast 32.3→98.6, and saturation 97.3→49.7. Overall luma spread SD is 37.3; saturation spread SD is 40.0. Document area explains part of this spread, but the visible brightness discontinuity remains.",
+      "suggested_action": "Compress the Word page highlights and raise the request's text midtones; match document-white luminance across Word and Excel while preserving diff colours and readable black text."
+    },
+    {
+      "shot_id": "01:03.3–01:07.3",
+      "category": "exposure_jump",
+      "severity": 0.82,
+      "confidence": 0.98,
+      "evidence": "The dark '10 of 10 changes accepted' panel cuts to an almost frame-filling white memo. Luma rises 28.2→143.9 and contrast 43.8→99.5 within the same product sequence.",
+      "suggested_action": "Apply the same restrained document-white ceiling used for the Word diff to the accepted memo, and lift the acceptance panel's midtones enough to reduce the cut's brightness shock."
+    },
+    {
+      "shot_id": "00:48.8",
+      "category": "shadow_density_mismatch",
+      "severity": 0.77,
+      "confidence": 0.96,
+      "evidence": "Maya's reviewing face is substantially darker than her preceding laptop shot and earlier reaction: luma 14.5 versus 49.7 at 45.8 and 35.5 at 28.8; contrast is only 22.9. Her hair and jacket merge into the background, and facial shadow detail is weak.",
+      "suggested_action": "Lift face midtones locally by approximately 0.6–0.8 stop, recover jacket separation with a gentle toe, and retain the existing blue background and warm skin balance."
+    },
+    {
+      "shot_id": "01:10.3–01:13.3",
+      "category": "daylight_white_balance_match",
+      "severity": 0.58,
+      "confidence": 0.89,
+      "evidence": "The dawn wide has amber sunlight and cool neutral windows; David's boardroom shot has a yellow-green haze and flatter separation. Measured luma changes 92.4→130.9, saturation 76.3→56.0, and contrast 72.0→63.0. His skin remains recognisable rather than clearly green.",
+      "suggested_action": "Neutralise the boardroom's green bias with a small magenta correction, restore a modest contrast curve, and match neutral shirts and window highlights to the dawn shot while retaining the later daylight setting."
+    },
+    {
+      "shot_id": "00:13.7–01:13.3",
+      "category": "finish_texture_mismatch",
+      "severity": 0.56,
+      "confidence": 0.94,
+      "evidence": "The hand insert retains crisp skin texture, while generated reaction and boardroom frames look smooth and smeared. Measured sharpness is 288.4 for the opening laptop shot, 1.9 at 28.8, 1.5 at 48.8, and 13.1 at 73.3. These numbers also reflect framing and focus, so they do not establish a grading defect alone.",
+      "suggested_action": "Verify the moving source clips at delivery resolution, then apply one subtle grain treatment after compositing and reduce excessive crispness in inserts; avoid sharpening the smooth faces aggressively."
+    },
+    {
+      "shot_id": "00:34.3–01:03.3",
+      "category": "ui_black_curve",
+      "severity": 0.51,
+      "confidence": 0.92,
+      "evidence": "The request and review planes have dim grey text against dense dark panels, while Word and Excel whites dominate their frames. Request contrast measures 29.1–32.3 and the long review segment 26.1, compared with Word's 98.6.",
+      "suggested_action": "Give dark UI footage its own gentle midtone lift before the shared display transform, protecting black backgrounds and coloured diff indicators; match it to the document shots using text and neutral patches rather than whole-frame means."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A hard grade jump inside one scene",
+      "shot_id": "00:45.8–00:48.8",
+      "evidence": "Within the night-office review scene, the laptop shot cuts to a markedly underexposed reaction: measured luma 49.7→14.5 and contrast 45.6→22.9, with visibly lost face and jacket separation."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Match the product sequence through one display transform, balancing dark-panel text and document whites, then lift Maya's reviewing face to the established night-office exposure.",
+  "grade_recipe": {
+    "night_office": {
+      "style": "Deep navy shadows, restrained amber practicals, warm neutral skin.",
+      "recipe": "LUT-style starting point: lift RGB (0.000, 0.002, 0.006), gamma RGB (1.01, 1.00, 0.99), gain RGB (1.01, 1.00, 0.98), saturation 0.92; gentle toe preserving shadow detail and soft highlight shoulder. Correct individual shots before this look. At 48.8, add a feathered face exposure lift of 0.6–0.8 stop."
+    },
+    "product_ui_in_night_office": {
+      "style": "Neutral readable UI integrated into the night-office world.",
+      "recipe": "Use a separate neutral UI transform before compositing: map normalised luma 0→0, 0.08→0.10, 0.25→0.30, 0.50→0.52, 0.90→0.80, 1.00→0.88. Treat these as starting points; preserve red, green and purple diff hues. Reduce the existing darkening on request/review text and use identical white handling for both memo shots."
+    },
+    "dawn_and_boardroom": {
+      "style": "Warm daylight highlights with neutral skin and cool architectural shadows.",
+      "recipe": "LUT-style starting point: lift RGB (0.000, 0.001, 0.003), gamma RGB (1.01, 1.00, 0.99), gain RGB (1.02, 1.00, 0.98), saturation 0.90. For David, first correct the green bias with approximately +3 magenta tint and apply a mild S-curve; match shirt and window neutrals to the dawn wide."
+    },
+    "shared_finish": {
+      "recipe": "Apply restrained monochrome grain after compositing, approximately 0.5–0.8% RMS at delivery resolution; feathered edge vignette no greater than 0.15 stop. Keep bloom on practical lights, excluding UI text. Maintain the supplied 16:9 presentation. Verify actual borders before changing mattes: the detector reports 19.2% letterboxed shots, but several flagged frames contain dark scenery rather than clear letterbox bars."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:36.8",
+      "to": "00:39.3",
+      "issue": "Dark request to bright Word page: luma +119.0; saturation −47.6; contrast +66.3."
+    },
+    {
+      "from": "01:03.3",
+      "to": "01:07.3",
+      "issue": "Acceptance panel to white memo: luma +115.7; contrast +55.7."
+    },
+    {
+      "from": "00:39.3",
+      "to": "00:42.8",
+      "issue": "Word to Excel: luma −68.9, largely caused by the change in white-page coverage."
+    },
+    {
+      "from": "00:45.8",
+      "to": "00:48.8",
+      "issue": "Laptop to reviewing face: luma −35.2; contrast −22.7; facial shadows become excessively dense."
+    }
+  ],
+  "assessment_limits": "All 33 frames and measure_v13.json were inspected. The requested ../references/CINEMATOGRAPHY.md was not found. Frame samples cannot establish temporal grain consistency or every short-insert cut; global saturation statistics are not skin-specific measurements."
+}

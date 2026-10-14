@@ -1,0 +1,80 @@
+{
+  "critic": "customer_psychology",
+  "stage": "script",
+  "score": 85.05,
+  "dimension_scores": {
+    "pain_specificity_salience": 90,
+    "target_relatability": 87,
+    "emotional_authenticity_progression": 88,
+    "product_pain_fit": 85,
+    "trust_transformation_credibility": 76,
+    "purchase_motivation_cta": 80
+  },
+  "recognition": 9,
+  "resonance": 8.8,
+  "persuasion": 7.6,
+  "issues": [
+    {
+      "shot_id": "beats 16–17",
+      "category": "review_control_credibility",
+      "severity": 0.65,
+      "confidence": 0.97,
+      "evidence": "The primary shows two change rows, then immediately clicks “Accept all.” The explicit “Each change: accept or reject” demonstration appears only in the director's cut.",
+      "suggested_action": "Move the existing three-second per-row-control insert into the primary before Accept all, with the caption “Each change: accept or reject”; fund it by shortening the relief shot. Show the controls without clicking Reject. This fallback works without the optional single-Accept recording."
+    },
+    {
+      "shot_id": "beat 13 and 30 s cut 15.5–18.5",
+      "category": "solution_comprehension",
+      "severity": 0.6,
+      "confidence": 0.98,
+      "evidence": "The complete 33-word request, beginning “Research says 20% DACH growth is too aggressive,” holds for only 2.5 seconds in the primary and three seconds in the short. It carries the explanation of the cross-file task.",
+      "suggested_action": "Keep the real request unchanged, but focus the crop on its model/memo/deck instruction and add a concise caption, “Update the model, memo and deck. Show the diffs.” Give that crop a clean readable hold in both cuts."
+    },
+    {
+      "shot_id": "beats 3, 8 and 13",
+      "category": "task_ownership_ambiguity",
+      "severity": 0.48,
+      "confidence": 0.91,
+      "evidence": "David says “I've run it: the model gives FY26 €74.6m,” while Maya's primary-film manual workflow shows only memo and deck edits. Agentic Office subsequently receives an instruction to change the model to 8.5.",
+      "suggested_action": "Clarify David's text to “My scenario gives FY26 €74.6m. Set the pack's DACH Q4 to 8.5,” and move the existing brief E6 manual-edit insert into the primary. I should understand that the saved model also needs updating."
+    },
+    {
+      "shot_id": "beats 15–18",
+      "category": "finished_pack_confidence",
+      "severity": 0.38,
+      "confidence": 0.94,
+      "evidence": "“Still your deck” shows the template before acceptance; after acceptance, only the corrected memo is opened. The corrected slide is an optional P2 recording.",
+      "suggested_action": "Use P2 after acceptance if filmed. Otherwise retain the real TextBox 23 diff and chart-data row long enough to establish both proposed deck corrections before accepting. The existing panel fallback supports the claim, but offers weaker reassurance than opening the finished slide."
+    },
+    {
+      "shot_id": "30 s cut 26–30",
+      "category": "trust_caveat_omission",
+      "severity": 0.35,
+      "confidence": 0.99,
+      "evidence": "The primary end card includes “Can make mistakes. You review every change.” The short end card lists only the name, slogan and early-access CTA.",
+      "suggested_action": "Carry the same readable review caveat onto the short end card for its full four-second hold."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Show the workflow at the pace a real person would read it.",
+      "shot_id": "beat 13 and 30 s cut 15.5–18.5",
+      "evidence": "The complete 33-word request is allotted 2.5 seconds in the primary and three seconds in the short. Meeting the minimum hold does not make this message readable."
+    },
+    {
+      "rule": "UI_REUSE.md: Keep “Can make mistakes”.",
+      "shot_id": "30 s cut 26–30",
+      "evidence": "The specified short end card omits the caveat that is present in the primary."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Show a readable per-change accept-or-reject choice in the primary before Accept all so I believe I retain control over the pack.",
+  "purchase_objections": [
+    "Can I inspect and reject individual changes before committing the whole pack?",
+    "Will it preserve our actual formulas, charts and templates on a more complicated pack?",
+    "Does it find every relevant reference, or will I still need a full manual tie-out?",
+    "Is its cross-file workflow enough to justify another tool alongside the Office AI tools I already use?",
+    "Could our fund approve it for portfolio data?"
+  ],
+  "would_try": "yes — The specific missed deck number and real cross-file diffs would get me to request early access for a test pack, while I would still verify the outputs myself."
+}

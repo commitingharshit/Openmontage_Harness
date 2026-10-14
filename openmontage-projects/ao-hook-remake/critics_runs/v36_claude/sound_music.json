@@ -1,0 +1,129 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 66,
+ "dimension_scores": {
+  "arc_serves_story": 74,
+  "hit_points": 50,
+  "genre_and_emotion_fit": 68,
+  "motif": 70,
+  "ending": 62
+ },
+ "issues": [
+  {
+   "shot_id": "01:25.8–01:29.5",
+   "category": "volume_step_not_downbeat",
+   "severity": 0.6,
+   "confidence": 0.6,
+   "evidence": "The 'Accept-all downbeat' is a volume jump on the same loop (music_digital_clouds src 36.8 s, gain .21→.34) plus pop_long and impact at 86.3. A measured onset sits at 85.9, but nothing shows that src 36.8 is a bar line in the track, so the musical 'drop' may land mid-phrase.",
+   "suggested_action": "Find the nearest true downbeat in the track (beat-track it) and offset the src so that the bar-1 hit falls at exactly 86.3. Cut out the bar before it so that the lift has a breath."
+  },
+  {
+   "shot_id": "whole film",
+   "category": "cuts_off_the_grid",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "cuts_on_sound_pct is 31.1, and 31 of 45 cuts have no sound event, including product cuts 49.0, 52.6, 54.4, 61.4, 64.4, 71.4, 78.0. The bed is one looped cue whose bars are not aligned to the edit.",
+   "suggested_action": "Conform the 49–85 cuts to the track's beat grid (175-track, ±1 frame), or add soft tonal hits (reverse piano, mallet) on the 6 product cuts that carry new information."
+  },
+  {
+   "shot_id": "01:58.8",
+   "category": "ending_collision",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "The end-card identity sting (118.8, 0.30) fires under the VO 'Agentic Office.' (118.9), which measured as misheard (0.32). The score then fades over 2 s to -65 dBFS at 120.5, so the button is a fade, not a sting.",
+   "suggested_action": "Make the sting the button after the brand name (≈120.0), then let the music ring out on a held chord rather than a fade."
+  },
+  {
+   "shot_id": "00:05–00:17",
+   "category": "helpful_ai_cue",
+   "severity": 0.35,
+   "confidence": 0.5,
+   "evidence": "'Hazy after hours' jazz at 0.17 sits under the 'helpful chatbot' act and under 4 VO lines at 4 words/s. Ducked at ratio 5, it probably reads as a murmur, so the joke of a cheerful cue that dies when the email lands is weak (the measured 22 s section is only -24.8 dBFS).",
+   "suggested_action": "Bring up the jazz between lines (duck depth about 6 dB), then stop it on a hard cut, not a fade, at the email buzz at 17.1, so that the mood death is audible."
+  },
+  {
+   "shot_id": "01:12–01:18",
+   "category": "mid_product_sag",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "A measured dip of -23.6 / -26.0 dBFS at 72–78 s sits under the memo tracked change and the €74.6m chip lift, which is the proof beat. The music sags exactly where confidence should hold.",
+   "suggested_action": "Keep the bed steady at 72–78 and put the dip only after 104, before Sent, where it already is."
+  },
+  {
+   "shot_id": "00:46–00:49",
+   "category": "reveal_entry",
+   "severity": 0.25,
+   "confidence": 0.5,
+   "evidence": "The reveal at 46 has only the identity sting plus room tone, and the score fades in over 1.5 s from 49.0. The change of state is real but soft.",
+   "suggested_action": "Start the score at 46.3 on a single sustained pad note under the promise, and let the full bed enter at 49.0 on the cut."
+  }
+ ],
+ "constraint_failures": [],
+ "cue_sheet": [
+  {
+   "act": "cold open 0–5",
+   "feel": "dread, pulse",
+   "tempo_bpm": "60–70 heartbeat",
+   "instrumentation": "sub pulse, heartbeat, filtered clock",
+   "hits": "impact on ≠ at 3.1, rewind at 4.45"
+  },
+  {
+   "act": "helpful AI 5–17",
+   "feel": "breezy, falsely reassuring",
+   "tempo_bpm": "95–110",
+   "instrumentation": "light lo-fi jazz, brushed kit, Rhodes",
+   "hits": "chime on each 'Done.'; hard stop at the 17.1 email buzz"
+  },
+  {
+   "act": "grind 17–43.6",
+   "feel": "tightening suspense",
+   "tempo_bpm": "rising 80→120",
+   "instrumentation": "ostinato strings or synth pulse, ticking, riser",
+   "hits": "riser to impact at 39.7, cut to room tone at 43.6"
+  },
+  {
+   "act": "silence 43.6–46",
+   "feel": "empty",
+   "tempo_bpm": "—",
+   "instrumentation": "room tone only, head-drop thud",
+   "hits": "none"
+  },
+  {
+   "act": "product 46–85",
+   "feel": "calm confidence",
+   "tempo_bpm": "100–110",
+   "instrumentation": "clean electronic bed, plucks, soft kick entering at 78",
+   "hits": "cuts on bar lines; lift at 78"
+  },
+  {
+   "act": "hero 85–95",
+   "feel": "release",
+   "tempo_bpm": "same",
+   "instrumentation": "full bed, kick and bass",
+   "hits": "bar-1 downbeat at 86.3 (Accept all)"
+  },
+  {
+   "act": "team/local 95–107.9",
+   "feel": "settled",
+   "tempo_bpm": "same",
+   "instrumentation": "bed minus drums, dip at 105",
+   "hits": "none"
+  },
+  {
+   "act": "payoff/end 107.9–121.4",
+   "feel": "relief, dawn",
+   "tempo_bpm": "rubato",
+   "instrumentation": "swell at Sent, near-silence on dawn with birds, single chord plus sting after the brand name",
+   "hits": "swell 107.9; button ≈120.0"
+  }
+ ],
+ "free_source_suggestions": [
+  "Pixabay: 'corporate tension pulse', 'suspense ticking clock'",
+  "Mixkit: 'lo-fi jazz chill', 'tech inspiration'",
+  "YouTube Audio Library: Cinematic + Calm, 'ambient electronic build'",
+  "Pixabay: 'logo sting soft piano'"
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Edit the product score to the cuts: align the track's bar lines to the 49–85 edit and to a true bar-1 downbeat at 86.3 for Accept-all, so that the reveal-to-climax hits are musical rather than volume steps."
+}

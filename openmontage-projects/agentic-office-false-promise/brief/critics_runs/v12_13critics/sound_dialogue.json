@@ -1,0 +1,97 @@
+{
+  "critic": "dialogue_vo",
+  "stage": "animatic",
+  "score": 74,
+  "dimension_scores": {
+    "intelligibility": 72,
+    "performance_casting": 70,
+    "writing_for_the_ear": 86,
+    "pacing": 63,
+    "placement": 82
+  },
+  "issues": [
+    {
+      "shot_id": "00:30.8",
+      "category": "brand_product_pronunciation",
+      "severity": 0.95,
+      "confidence": 1.0,
+      "evidence": "Expected 'Introducing Diffs, in Agentic Office'; measured heard text is 'introducing deps in a gentec office. one', with match 0.84. At 01:16.3, 'Agentic Office' again becomes 'a gentec office'.",
+      "suggested_action": "Retake both name-bearing lines with explicit pronunciation guidance for 'Diffs' and 'Agentic Office', distinct consonants and a pause after 'Diffs'; verify both with isolated-line transcription."
+    },
+    {
+      "shot_id": "00:03.3",
+      "category": "rushed_delivery",
+      "severity": 0.78,
+      "confidence": 1.0,
+      "evidence": "'AI gave you the answer. You still have a board pack to fix.' measures 4.28 words/s, exceeding the 3.5 rushed threshold.",
+      "suggested_action": "Slow the line to approximately 2.7 words/s and hold its matching chat picture through approximately 00:08.1, moving the CFO-message beat later."
+    },
+    {
+      "shot_id": "01:00.3",
+      "category": "review_instruction_placement",
+      "severity": 0.53,
+      "confidence": 0.92,
+      "evidence": "'Every change, as a diff. Accept or reject each one.' contains 11 words at 2.72 words/s, implying roughly four seconds of speech; 'All changes reviewed' begins at 01:03.2, before the instruction finishes. The timeline places the Accept-all click around 01:01.1.",
+      "suggested_action": "Keep the unaccepted review panel visible until the instruction ends around 01:04.4, then place the acceptance click and reviewed-state cut."
+    },
+    {
+      "shot_id": "00:33.9",
+      "category": "compressed_vo_rhythm",
+      "severity": 0.4,
+      "confidence": 1.0,
+      "evidence": "'One request across the model, memo and deck.' measures 3.28 words/s; 'It drives. You approve.' at 01:04.3 measures 3.17 words/s. Both exceed the supplied calm-premium range of 2.3–3.0.",
+      "suggested_action": "Retake the request line at approximately 2.7 words/s, allowing it to bridge the two request crops; deliver 'It drives. You approve.' at approximately 2.5 words/s with a deliberate pause between the clauses."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Any VO line with match below 0.85",
+      "shot_id": "00:30.8",
+      "evidence": "The introduction has measured match 0.84."
+    },
+    {
+      "rule": "Brand or product name misheard",
+      "shot_id": "00:30.8",
+      "evidence": "'Diffs' is transcribed as 'deps'; 'Agentic Office' as 'a gentec office'."
+    },
+    {
+      "rule": "Brand or product name misheard",
+      "shot_id": "01:16.3",
+      "evidence": "The closing brand mention is transcribed as 'a gentec office', despite overall line match 0.93."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Retake and verify both product-name lines so viewers clearly hear 'Diffs' and 'Agentic Office' at the introduction and close.",
+  "line_fixes": [
+    {
+      "t": "00:30.8",
+      "issue": "Product and brand misheard; match 0.84.",
+      "fix": "Guide 'Diffs' as 'diffs' with a clear final /fs/, and 'Agentic' as 'uh-JEN-tick'; pause after 'Diffs' and verify an isolated transcription."
+    },
+    {
+      "t": "00:03.3",
+      "issue": "4.28 words/s rushes the opening explanation.",
+      "fix": "Slow to 2.7 words/s and extend the matching chat beat to approximately 00:08.1."
+    },
+    {
+      "t": "00:33.9",
+      "issue": "3.28 words/s compresses the three-file proposition.",
+      "fix": "Slow to 2.7 words/s, lightly separating 'model, memo and deck', across both request crops."
+    },
+    {
+      "t": "01:00.3",
+      "issue": "Review instruction continues into the completed-review state.",
+      "fix": "Hold the pending panel through approximately 01:04.4 and move acceptance immediately after the line."
+    },
+    {
+      "t": "01:04.3",
+      "issue": "3.17 words/s gives the reversal little breathing room.",
+      "fix": "Move after the revised acceptance beat; slow to 2.5 words/s with a deliberate pause after 'drives'."
+    },
+    {
+      "t": "01:16.3",
+      "issue": "Closing brand name is again misheard.",
+      "fix": "Use the verified 'uh-JEN-tick Office' pronunciation at approximately 2.7 words/s, preserving the final consonant before 'Office'."
+    }
+  ]
+}

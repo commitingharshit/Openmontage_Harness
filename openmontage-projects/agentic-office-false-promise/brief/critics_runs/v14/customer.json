@@ -1,0 +1,78 @@
+{
+ "critic": "customer",
+ "stage": "animatic",
+ "score": 66,
+ "dimension_scores": {
+  "pain_specificity": 82,
+  "relatability": 74,
+  "emotional_authenticity": 60,
+  "product_pain_fit": 78,
+  "trust_credibility": 52,
+  "purchase_motivation": 56
+ },
+ "recognition": 8,
+ "resonance": 6,
+ "persuasion": 5,
+ "issues": [
+  {
+   "shot_id": "0:33-0:57",
+   "category": "implausible_grind",
+   "severity": 0.55,
+   "confidence": 0.7,
+   "evidence": "Clock runs 12:31 → 1:14 → 2:06 → 2:41 AM to push one assumption through one model cell, one memo paragraph and two slides. I'd do that in 30-40 minutes; three hours reads as a junior who can't use links.",
+   "suggested_action": "Either make the pack bigger on screen (e.g. 'Model · Memo · Deck · LP letter · 14 references') or shrink the clock to a believable 50 minutes and make the pain the miss, not the hours."
+  },
+  {
+   "shot_id": "1:33",
+   "category": "proof_doesnt_match_my_miss",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "The ringed box is on the chart slide; Diffs rings 'Slide 2 · TextBox 23'. As someone who checks decks for a living, I notice.",
+   "suggested_action": "Same slide, same textbox in both."
+  },
+  {
+   "shot_id": "0:12-1:57",
+   "category": "identity_drift",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Maya's face and set change: f_03 (dark room), f_13 (white desk, different laptop), f_18 (phone, different face), f_30, f_37 and f_39 read as 3-4 different women. Feels stock, not a person.",
+   "suggested_action": "Lock one face for all close-ups; use hands/over-shoulder where the generator can't hold her."
+  },
+  {
+   "shot_id": "1:24",
+   "category": "mock_ui_undercuts_trust",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "'3 of 3 files changed · waiting for her' over a generated laptop with a mock folder list. Next to the sped-up real UI it looks staged.",
+   "suggested_action": "Replace with a real recording of the workspace file list showing pending changes."
+  },
+  {
+   "shot_id": "whole",
+   "category": "enterprise_objections_unaddressed",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "No hint of where files live (SharePoint/local), whether data leaves the firm, or Excel→PPT links",
+   "suggested_action": "One end-card line: 'Works on your files, where they live.' (only if approved)."
+  },
+  {
+   "shot_id": "1:51",
+   "category": "payoff_flat",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "David isn't visibly pleased (f_40, reading)",
+   "suggested_action": "Show his 'Perfect.' text on her phone at 9:02."
+  }
+ ],
+ "purchase_objections": [
+  "Copilot in Excel/Word and think-cell/Macabacus links already cover part of this",
+  "Where do my files go? Data residency/compliance not shown",
+  "Does it work on a 40-slide pack with linked charts, not a 3-file demo?",
+  "'Can make mistakes' — how do I know it found ALL the references (what did it miss)?",
+  "No price, no firm-IT story; 'early access' only"
+ ],
+ "would_try": "maybe — the 'Done ✓ but 0 of 3 files updated' and the missed box are exactly my week, and one review list across model, memo and deck is the right fix; but I'd need to see it on my own pack first",
+ "buy_decision": "TRY_FIRST — flips to BUY if I see it find every reference to the number across a realistic (bigger, messier) pack, including one I would have missed, with a clear statement of where my files stay",
+ "constraint_failures": [],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Make the missed box and the caught box provably the same object, and make the grind believable (shorter clock or bigger pack), so a finance associate trusts the story enough to request access."
+}

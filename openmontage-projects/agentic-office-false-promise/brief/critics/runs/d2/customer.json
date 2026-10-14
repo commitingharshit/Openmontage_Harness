@@ -1,0 +1,61 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 85.25,
+  "dimension_scores": {
+    "pain_specificity_salience": 94,
+    "target_relatability": 90,
+    "emotional_authenticity_progression": 86,
+    "product_pain_fit": 85,
+    "trust_transformation_credibility": 75,
+    "purchase_motivation_cta": 73
+  },
+  "recognition": 9.4,
+  "resonance": 8.8,
+  "persuasion": 7.9,
+  "issues": [
+    {
+      "shot_id": "01:03–01:09",
+      "category": "unresolved_customer_fear",
+      "severity": 0.65,
+      "confidence": 0.98,
+      "evidence": "The failure is the stale €71–73m box on slide 2. The solution shows its proposed change and '10 of 10 changes accepted', then the corrected memo and Maya closing her laptop. I never see that specific slide box corrected.",
+      "suggested_action": "When the pending recording is available, insert the real post-acceptance slide 2 with the formerly circled box reading €74.6m before Maya closes her laptop; shorten the relief shot to accommodate it."
+    },
+    {
+      "shot_id": "00:01–00:05",
+      "category": "incumbent_comparison_credibility",
+      "severity": 0.48,
+      "confidence": 0.9,
+      "evidence": "'Here's what to change' followed by '0 of 3 files changed' is recognisable, but as someone already using AI inside Office, I can dismiss this as a comparison against a basic chatbot. The distinctive advantage becomes concrete only later, across the three files.",
+      "suggested_action": "Add a short contextual caption to the folder shot, 'One revision across the whole pack', to establish the multi-file problem immediately while retaining the specific chatbot failure."
+    },
+    {
+      "shot_id": "00:57–01:03",
+      "category": "review_burden_uncertainty",
+      "severity": 0.43,
+      "confidence": 0.93,
+      "evidence": "The chart row is readable, but the highlighted accept/reject controls sit beside 'Slide 4 · TextBox 6' and a truncated 'Midpoint shown → R...'. I understand that controls exist; I cannot assess the change they control. The subsequent bulk acceptance leaves me wondering how much checking remains.",
+      "suggested_action": "Use an unaltered real-frame crop that shows a complete before/after value and its available review controls together, then hold it with 'Each diff: accept or reject'. Keep the recorded Accept all action and do not simulate a single-row decision."
+    },
+    {
+      "shot_id": "01:13",
+      "category": "trial_motivation",
+      "severity": 0.29,
+      "confidence": 0.88,
+      "evidence": "The ending clearly names 'Diffs in Agentic Office' and offers 'Request early access', but its supporting sentence repeats review functionality rather than connecting the trial to my next board-pack revision.",
+      "suggested_action": "Replace the supporting sentence with 'Review AI changes across your next model, memo and deck.' Retain the single early-access CTA and the mistakes caution."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the exact fear raised by David’s message with real footage of the corrected slide 2 box after acceptance, before showing Maya’s relief.",
+  "purchase_objections": [
+    "Does it find every relevant reference in my actual pack, including chart data and secondary text boxes?",
+    "Can I understand each proposed change without opening and checking every object myself?",
+    "How does the workflow handle my existing formulas, links and company templates?",
+    "Would our firm approve using it with confidential board and LP materials?"
+  ],
+  "would_try": "yes — I would request early access and test a sanitised pack because the cross-file changes and visible review controls address a problem I recognise.",
+  "recognition_resonance_persuasion_summary": "I recognise the manual copying, formatting damage and embarrassment of a number that does not tie. The restrained reactions feel credible. The new definition makes Diffs understandable, and 'Introducing' establishes the launch; the real proposed changes make me interested, although the missing corrected slide leaves the strongest trust transformation incomplete."
+}

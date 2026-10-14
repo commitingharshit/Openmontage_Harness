@@ -1,0 +1,58 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 80,
+  "dimension_scores": {
+    "brief_message_adherence": 84,
+    "narrative_progression_coherence": 76,
+    "pain_solution_connection": 84,
+    "shot_purpose_sequencing": 80,
+    "product_demo_benefit_clarity": 72,
+    "pacing_cta": 78
+  },
+  "issues": [
+    {
+      "shot_id": "00:08–00:11.5",
+      "category": "missing_causal_bridge",
+      "severity": 0.76,
+      "confidence": 0.98,
+      "evidence": "The folder says '0 of 3 files changed.' The next deck has a revised title, 'FY26 outlook: €74.6m', but an unchanged box, '€71–73m'. No visible action explains how the title changed or how the memo acquired €74.6m.",
+      "suggested_action": "Replace part of the deck comparison with a brief copy-and-paste action into her existing slide title, leaving the old box visible, then cut to David's message."
+    },
+    {
+      "shot_id": "00:22–00:26",
+      "category": "unresolved_payoff",
+      "severity": 0.7,
+      "confidence": 0.99,
+      "evidence": "The demo identifies 'Slide 2 · TextBox 23 €71–73m → €74.6m' and ends with '10 of 10 changes accepted', but never returns to the slide containing the discrepancy David flagged.",
+      "suggested_action": "When the pending recording is available, replace the final second of the acceptance panel with the actual accepted slide showing €74.6m in the flagged box."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "task_setup_clarity",
+      "severity": 0.59,
+      "confidence": 0.98,
+      "evidence": "The opening request is 'Update my model, memo and deck to the new FY26 number.' DACH Q4 appears later in the comparison, while the real Excel bar shows only 'Revenue!E6' and '8.9 → 8.5'. The initiating assumption is never clearly stated.",
+      "suggested_action": "Use the opening request 'Set DACH Q4 to €8.5m. Update FY26 to €74.6m across my model, memo and deck', and retain a short DACH Q4 label over the Excel proof."
+    },
+    {
+      "shot_id": "00:14–00:22",
+      "category": "demo_explanation_gap",
+      "severity": 0.48,
+      "confidence": 0.96,
+      "evidence": "The three real diffs are labelled 'her own model', 'her own memo' and 'the box David flagged', but narration goes silent between 'Introducing Diffs' at 11.7 seconds and 'It drives. You approve.' at 23.5 seconds. Viewers must independently connect a cell change, tracked text and a Changes row as one coordinated proposal.",
+      "suggested_action": "Add one concise narration line across the three proofs: 'One request. Changes in your model, memo and deck. Each one yours to review.'"
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Show the workflow on screen: the human carries the chat answer into the files.",
+      "shot_id": "00:03–00:11.5",
+      "evidence": "Unchanged files, a replacement deck and a partially updated original slide are shown, but the manual transfer connecting these states is omitted."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Show her manually pasting €74.6m into the original slide title and missing the old box, then close the product demonstration on the real corrected box after acceptance.",
+  "retell": "A chatbot tells someone how to update a financial pack, but her three files remain unchanged. Its replacement deck loses her existing design, and David later flags conflicting FY26 numbers in her original slide. Agentic Office introduces Diffs, showing proposed changes in Excel, Word and PowerPoint that she can review and accept. She accepts all ten changes and is invited to request early access, although we never see the corrected slide itself.",
+  "scroll_away_second": 7
+}

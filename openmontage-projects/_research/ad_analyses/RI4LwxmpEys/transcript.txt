@@ -1,0 +1,210 @@
+[00:00] If I could learn only one AI skill right now to actually get results,
+[00:04] I'd learn how to make long-form videos without hesitating.
+[00:06] And the timing is almost perfect.
+[00:08] A few months ago, this market felt more saturated,
+[00:11] but YouTube has changed some rules to push back against low-value uploads,
+[00:14] and that made a lot of people abandon their projects.
+[00:17] What those people didn't understand is that YouTube doesn't care if you use AI to create content.
+[00:22] What YouTube cares about is whether that content gives value to the viewer.
+[00:26] It has to be useful, entertaining, or teach something.
+[00:29] So in this video, I'm going to show you how to create videos longer than 10 minutes,
+[00:33] in any language and any category, using only completely free and unlimited AI tools.
+[00:38] But better tools could come out tomorrow,
+[00:40] so if you don't want to miss them, subscribe and leave a like.
+[00:42] First, we need a text AI.
+[00:44] You can use any free version, and we're going to add this first prompt.
+[00:48] Here, you can fill in a specific topic if you already know what kind of video you want to make,
+[00:52] and if you don't have a base idea yet, you can leave it blank.
+[00:54] When you send it, the AI will research which topics have the most potential right now.
+[00:59] In other words, topics that are getting views, but do not have too much competition yet,
+[01:03] so we can create AI videos around them.
+[01:05] It will give you several results, and from here, choose the one that gets your attention the most.
+[01:09] Then, save this full text selection, because we're going to use it in the next step.
+[01:13] I'll leave all the links for the tools I'm using today,
+[01:15] plus free text and image AI tools you can use on my website in the description.
+[01:19] I'll show you exactly where to find everything at the end of the video.
+[01:22] Now we're going to add this second master prompt.
+[01:25] In these boxes, first write how long you want the video to be,
+[01:28] and in this other section, paste the selection we copied before.
+[01:31] The AI will give you several video ideas inside the topic we chose,
+[01:35] and these are ideas that have a better chance of working.
+[01:37] Now tell it which idea you liked the most, and how long you want the video to be.
+[01:41] After that, it will give you this full structure divided into blocks.
+[01:45] Each block includes a narration line of around 5 seconds, an image prompt,
+[01:48] and a prompt to turn that image into video.
+[01:51] It is also numbered, so we can follow the order without getting lost.
+[01:54] The next step is turning this into video clips,
+[01:57] using the narration line above each block, with free AI tools.
+[02:00] The prompt has already made sure that the story is not only original and eye-catching,
+[02:04] but also entertaining for the viewer.
+[02:06] That is what helps us avoid uploading the same, low-value AI content everyone else is making.
+[02:12] First, we need tools to generate images and videos.
+[02:15] I researched several options, and the best one I found had one problem.
+[02:18] The watermark was too annoying for a serious video.
+[02:21] But inside that same platform, I found a way to fix it and generate the clips cleanly.
+[02:25] Let's go into Meta AI.
+[02:27] Inside this platform, we can do almost the entire process,
+[02:30] but we need to follow the right order so we don't run into the problem from before.
+[02:34] Start with a new chat, click Create Image,
+[02:36] and now go back to the text AI from the beginning.
+[02:39] Open the first block, copy the image prompt, return to Meta AI, and paste it here.
+[02:44] When you send it, my favorite part is that Meta AI gives you four good-quality variations,
+[02:49] with enough variety to choose the one that is actually worth turning into video.
+[02:52] We'll leave the video part for later.
+[02:54] Now go to block number two, copy the next image prompt, and send it again.
+[02:58] Keep doing this, one block after another, until all the images are ready.
+[03:02] Don't worry, because this tool is completely free and unlimited.
+[03:05] There is no section to buy subscriptions or pay for credits,
+[03:08] so depending on how long you want your video to be,
+[03:11] you'll need to generate more images, but you can keep doing it without a limit.
+[03:14] Just be patient until you have everything.
+[03:16] Once all the images are ready, we need to turn them into video.
+[03:22] Good background videos are only half of the work.
+[03:25] After this, we still need to follow a few more steps so the final video feels complete,
+[03:29] and so it doesn't look like the low-value content everyone else is creating.
+[03:33] Let's go step by step.
+[03:35] To turn these images into video, I thought we were going to need another tool.
+[03:39] But right now, free AI video generators are in a rough spot.
+[03:42] Most of them are either starting to move behind paid plans, like Grok,
+[03:45] or their limits are too tight, like Google Flow,
+[03:48] which can work for a few individual clips, but is not useful for bigger projects.
+[03:53] So the option that remains is Meta AI.
+[03:56] But, as you already saw, it has that annoying moving watermark problem.
+[04:00] Luckily, I found a solution inside Meta, without using external platforms or illegal methods.
+[04:05] Go to the first image we generated for Block 1, and return to the text AI.
+[04:10] In Block 1, under the image prompt we just used, there is also a video prompt.
+[04:14] Copy that video prompt.
+[04:16] Then, inside Meta AI, click the image you like the most out of the four versions.
+[04:21] Scroll a little, and click Custom Animate.
+[04:23] This panel will open, and here you paste the video prompt.
+[04:27] When you send it, a few seconds later, the image becomes a 5-second video clip with clean motion.
+[04:32] Now, repeat the same process.
+[04:34] Go back to the text AI, copy the second video prompt, go to the second image, and turn it into video.
+[04:40] You can do what I did, first generate all the images, and then turn all of them into video.
+[04:45] Or, you can generate each image and animate it right after.
+[04:48] The important thing is to save the videos in the same order you're going to download them.
+[04:52] But if we download them like this, we get the same problem from before.
+[04:56] To fix that, first finish generating all the videos.
+[04:59] If one of them comes out wrong, just generate it again.
+[05:02] This part is completely unlimited, so use that advantage.
+[05:05] At this point, the clips are 5 seconds long, and they do not have audio.
+[05:10] We're going to solve both of those problems later.
+[05:12] But for everyone who wants to generate much higher quality videos that already come with audio,
+[05:17] I want to show you how to create something like this.
+[05:34] I created this video inside Higgsfield.
+[05:37] In this platform, you get the best AI tools for video, images,
+[05:41] audio, and a lot more in one place, without having to pay for several different subscriptions.
+[05:46] And I'm not talking about weaker models that try to imitate them.
+[05:49] I'm talking about GPT Image 2, SeaDance 2.0, which is currently the top video model
+[05:55] in the rankings I checked, and many other tools that you can use inside the same platform.
+[05:59] To create a video like the one we saw before, go first to the images section.
+[06:04] I'm going to use GPT Image 2, and I'll add several image prompts until I get the perfect
+[06:08] image to turn into video.
+[06:10] The images are generated in 4K, and they do not have any kind of watermark.
+[06:15] Once you have the image you like, click turn to video.
+[06:18] This takes you into the video generator section, where we're going to choose SeaDance 2.0,
+[06:23] although there are many other models available too.
+[06:25] Upload the image again, and add a prompt.
+[06:28] Unlike most other video generators, these videos can be 15 seconds long,
+[06:32] and they can also include scene changes, camera changes, and sound.
+[06:36] And from the research I've done, Higgsfield is the most accessible place I've found to use
+[06:40] SeaDance 2.0.
+[06:42] If you want to try it yourself, I'll leave the link in the description and in the pinned comment.
+[06:47] Thanks to Higgsfield for sponsoring this video.
+[06:49] Now, if we want to stay inside Meta AI, I'll show you how to solve the download problem from before.
+[06:54] Once all the videos are generated, click the one you want to download.
+[06:58] Right-click and choose this option here.
+[07:00] When this window opens, look at this button on the left side of the menu.
+[07:04] Click it, move the mouse over the video, and click again.
+[07:07] Now, on the right side, this block will be selected.
+[07:10] Double-click this part, copy it, paste it into a new tab, and press enter.
+[07:14] The video will open here.
+[07:16] It plays without the error from before, and if you click the three dots, you can download it.
+[07:25] Now the problem is solved, and we can keep generating for free and without limits.
+[07:29] But this is still not enough, because nice videos alone will not make someone stay and watch.
+[07:34] We need someone to narrate them.
+[07:35] And since I know many of you do not want to record your own voice, I have a very good solution.
+[07:40] Go to the Pinocchio website.
+[07:41] The Pinocchio link, the tools, and the prompts we're using today
+[07:44] will be on my website in the description, so you can get everything without searching manually.
+[07:49] Once you're on the Pinocchio website, click download,
+[07:51] choose your operating system, and start the download.
+[07:54] Pinocchio is a platform where you can install AI models and use them for free and without limits.
+[07:59] Once the models are installed, you can even use them without an internet connection.
+[08:03] When you're inside, go to the top right and click explore.
+[08:06] In the search bar, type quen3-tts.
+[08:09] Choose the one that says featured and install it.
+[08:11] Just keep clicking through the steps, and Pinocchio will handle the installation.
+[08:15] Once you're inside, you'll have several useful options for creating the narrator.
+[08:19] I already have a specific video talking about this model and several others inside Pinocchio,
+[08:23] so I'll leave it in the card above in case you want to watch it after this one.
+[08:27] But the basic setup is this.
+[08:29] In the model section, first choose this option under type, and for the size,
+[08:33] always choose this one.
+[08:34] Then click download.
+[08:36] Do the same with the other two options that remain, base and custom voice,
+[08:40] and the model will be ready.
+[08:41] Now you'll have different ways to generate your narrator.
+[08:44] In voice design, you can write how you want the voice to sound,
+[08:47] and if you go back to the text guide from the beginning, before all the blocks,
+[08:50] it already gave us a line describing what kind of voice would fit this video best.
+[08:54] Copy that line into voice description.
+[08:56] Then, in the text to speech box, paste the narration lines from each block.
+[09:00] When you turn it into audio, you'll get a strong result.
+[09:03] And if you don't like it, you can keep changing the voice description
+[09:06] until it matches what you're looking for.
+[09:08] A signal leaves a living world.
+[09:10] It travels farther than any voice.
+[09:13] Then, somewhere, something hears it.
+[09:16] A civilization goes dark in seconds.
+[09:19] You can also use voice clone to upload the voice of someone you have permission to use,
+[09:22] and make that voice narrate any text you write here.
+[09:25] Or, inside custom voice, you'll have a list of preset voices you can test,
+[09:30] in case one of them fits the video better.
+[09:32] With Quen, there's no limit, so use it freely.
+[09:35] Just keep in mind that if you use voice design,
+[09:37] it does not generate very long audio files in one single attempt,
+[09:40] so you'll need to generate the narration in parts.
+[09:43] Once we have all the voiceovers, go to the Son Auto website.
+[09:46] Here, we're going to create AI songs to use in the background of our videos.
+[09:50] Go to Create in the menu on the left, and in this menu, choose Simple.
+[09:54] Now go back to the text AI from the beginning.
+[09:57] Right before the blocks, near the tone section,
+[09:59] it gives you a song description that fits the video we're creating.
+[10:02] Copy that description, paste it into Simple, and click Generate.
+[10:06] When the song is ready, download it.
+[10:08] Now open any video editor.
+[10:10] I'm going to use the free version of CapCut, which you can download easily.
+[10:14] First, add all the videos we generated in Meta AI in order,
+[10:18] and match each one with the narration from the same block.
+[10:20] The narration and the clips may not match perfectly in length,
+[10:24] so adjust the speed of each video until it lines up with the dialog line from that block.
+[10:28] When that is ready, add the song we just created underneath everything.
+[10:32] I also recommend checking the transitions and effects that do not have the diamond icon
+[10:36] in the top menus, because those can be used for free,
+[10:39] and they help the video feel more finished.
+[10:41] And with that, the video is done.
+[10:43] A signal leaves a living world.
+[10:45] It travels farther than any voice.
+[10:48] Then, somewhere.
+[10:50] Something hears it.
+[10:51] A civilization goes dark in seconds.
+[10:54] Maybe the universe is not empty.
+[10:57] Maybe it is waiting.
+[10:58] This is not a proven truth.
+[11:00] It is a terrifying possibility.
+[11:02] The question begins with silence.
+[11:05] Billions of worlds may exist.
+[11:07] Some...
+[11:08] We created the whole thing using 100% free and unlimited tools.
+[11:12] To get the prompts, the direct links, and access to the free AI tools,
+[11:16] go to my website in the description.
+[11:17] Open PDF Guides, and you'll find the guides for the videos I have published so far.
+[11:21] You can download them and access the information from each video,
+[11:24] so you can copy the prompts and links without wasting time writing everything manually.
+[11:28] You'll also find the free AI chat there.
+[11:31] You can ask questions without paying,
+[11:32] so it is useful if you want a free chat option for prompts, questions, or quick tests.
+[11:37] We also added a model that generates very high-quality images.
+[11:41] You only need to sign in and start using it.
+[11:43] See you in the next one, and thanks for watching.

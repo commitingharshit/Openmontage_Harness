@@ -1,0 +1,25 @@
+{"critic":"edit","stage":"animatic","score":52,
+"dimension_scores":{"rhythm_wave":45,"cut_motivation":55,"connectives":60,"economy":45,"transitions_quality":50},
+"issues":[
+{"shot_id":"0:59-1:11","category":"dead_air_cards","severity":0.85,"confidence":0.9,"evidence":"Measured 12.0 s single shot of cream cards (longest in film), f23 shows only 'INTRODUCING' on an empty field","suggested_action":"Cut to 5 s total: one card 'AI answers. You do the work.' 2 s, hard cut to 'Diffs' 2.5 s; delete the empty build state"},
+{"shot_id":"0:12-0:45","category":"no_burst","severity":0.8,"confidence":0.85,"evidence":"Only 1 of 32 shots under 1 s (3.1%); the 'by hand' grind is 4 slow OTS plates of the same angle (f08=f09, f11, f12, f14, f15)","suggested_action":"Make the grind a burst: 8-10 cuts of 0.4-0.8 s (keys, cell 8.9->8.5, memo line, slide title, clock 12:31/1:14/2:06, cold coffee) cut on keystrokes"},
+{"shot_id":"0:12-0:45","category":"repeated_angle","severity":0.75,"confidence":0.9,"evidence":"Same OTS plate at 0:12, 0:15, 0:18, 0:21, 0:24, 0:30, 0:33, 0:39, 0:42 - same size, same angle","suggested_action":"Interleave inserts and her face; never three OTS in a row"},
+{"shot_id":"1:32-1:42","category":"overlong_proof","severity":0.6,"confidence":0.85,"evidence":"10.0 s single shot scrolling the review list (f33-f34)","suggested_action":"Split: ring match cut 1.5 s, then three 1 s accept clicks on beat, out"},
+{"shot_id":"0:57","category":"match_cut_setup_weak","severity":0.55,"confidence":0.7,"evidence":"Red ring at 0:54 is on a floating chart card, not on 'slide 2' text; at 1:33 the ring is on a list row - shapes differ (ellipse vs wide sweep)","suggested_action":"Hold the same ellipse geometry and screen position across both cuts; morph ring 0:54 -> 1:33 frame-matched"},
+{"shot_id":"1:27","category":"redundant_reuse","severity":0.5,"confidence":0.8,"evidence":"0:06 Canva face reused at 1:27 with no new action","suggested_action":"Replace with a reaction to the 3 of 3 counter or cut it"},
+{"shot_id":"1:57-2:08","category":"ending_drag","severity":0.45,"confidence":0.8,"evidence":"Ending runs 128 s vs the 120 s plan; end card 6.8 s plus f41 empty build","suggested_action":"Trim end card to 4 s, start the logo on the David smile's last beat"}],
+"constraint_failures":[
+{"rule":"three or more consecutive shots at the same size and angle","shot_id":"0:12-0:33","evidence":"OTS laptop plate repeated across consecutive cuts"},
+{"rule":"no shot under 1 s in a film > 45 s that claims urgency","shot_id":"whole","evidence":"one 0.7 s shot only (3.1%); grind has no burst despite 'clock climbs' urgency"}],
+"recut_plan":[
+"0:27-0:45: replace 4 OTS holds with a 6 s burst of 10 shots (0.4-0.8 s) on keystroke hits",
+"0:45-0:52: hold f16 rubbing eyes 2.5 s with clock tick - the breathe after the burst",
+"0:57-0:59: hold silence on f20 2.5 s, then cut straight to card 'AI answers. You do the work.'",
+"0:59-1:11: compress cards from 12 s to 5 s; delete empty INTRODUCING frame",
+"1:12: L-cut her typing sound under the Agentic Office prompt to bridge back into her world",
+"1:33: frame-matched ring morph from 0:54 to the Slide 2 row",
+"1:32-1:42: split the 10 s scroll into 3 beats + accept-all click on the chime",
+"1:57-2:08: trim end card to 4 s; total to ~118 s"],
+"target_shot_stats":{"asl_s":3.0,"median_shot_s":2.5,"pct_under_1s":20,"pct_over_4s":12,"longest_s":5},
+"revision_scope":"shot_sequence",
+"top_revision":"Turn the 0:27-0:45 grind into a true burst of 10 sub-second cuts with the climbing clock, and compress the 12 s card block to 5 s."}

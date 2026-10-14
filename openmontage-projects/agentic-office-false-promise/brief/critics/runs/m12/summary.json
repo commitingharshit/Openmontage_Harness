@@ -1,0 +1,19 @@
+{
+ "round": "m12",
+ "C": 73,
+ "S": 82,
+ "P": 83.1,
+ "Q": 80.2,
+ "constraint_failures": [
+  {
+   "rule": "Every message holds for at least 2.5 seconds.",
+   "shot_id": "00:09.2\u201300:11.2",
+   "evidence": "David's second message enters at approximately 00:09.2 and the shot ends at 00:11.2, allowing only two seconds including its entrance."
+  },
+  {
+   "rule": "Faces only where they add emotion: Maya's reactions, not plot.",
+   "shot_id": "01:13\u201301:16",
+   "evidence": "The new David board-meeting scene introduces next-morning delivery as a plot outcome; no visible corrected figure connects his printed pack to the demonstrated changes."
+  }
+ ]
+}

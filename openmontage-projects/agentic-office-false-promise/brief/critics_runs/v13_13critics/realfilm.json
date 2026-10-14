@@ -1,0 +1,139 @@
+{
+  "critic": "real_film_benchmark",
+  "stage": "animatic",
+  "score": 52,
+  "dimension_scores": {
+    "production_value": 56,
+    "photorealism_no_ai_tells": 49,
+    "cohesion_with_ref_look": 55,
+    "ui_and_graphics_finish": 45
+  },
+  "assessment_limits": "Inspected all 33 recovered candidate frames. Timestamps follow the supplied 2.5-second sampling convention; some pictured scenes differ from the stated timeline. Temporal flicker and continuous motion were not verified. CINEMATOGRAPHY.md was not found.",
+  "issues": [
+    {
+      "shot_id": "00:55–01:05",
+      "category": "soft_ui_capture",
+      "severity": 0.93,
+      "confidence": 0.99,
+      "evidence": "The enlarged 'Slide 2 · TextBox 23', accept/reject icons and '10 of 10 changes accepted' have visibly soft edges, while the overlaid captions remain sharp.",
+      "suggested_action": "Recapture the real review panel at higher resolution with increased application zoom, then frame it without enlarging low-resolution pixels."
+    },
+    {
+      "shot_id": "00:30, 00:50",
+      "category": "face_ai_tells",
+      "severity": 0.9,
+      "confidence": 0.92,
+      "evidence": "Maya's reaction close-ups show smoothed, waxy facial detail and glassy eyes; her facial proportions and blouse neckline also differ between the earlier desk shot and the reviewing shot.",
+      "suggested_action": "Replace these reactions with footage using one consistent performer or identity reference, preserving skin texture, wardrobe and matching eye-line."
+    },
+    {
+      "shot_id": "00:35–00:42.5, 00:52.5–01:07.5",
+      "category": "detached_ui_planes",
+      "severity": 0.86,
+      "confidence": 0.98,
+      "evidence": "The request, memo and Changes panel appear as large rectangular crops over a nearly black blurred office; slight perspective does not establish a physical display or a finished graphic environment.",
+      "suggested_action": "Use one coherent presentation system: matched laptop inserts for physical scenes and crisp, deliberately composed full-frame app views for product detail."
+    },
+    {
+      "shot_id": "00:02.5–00:05, 00:15–00:22.5, 00:45–00:47.5",
+      "category": "screen_composite_finish",
+      "severity": 0.78,
+      "confidence": 0.94,
+      "evidence": "The repeated shoulder view contains an unusually black, clean screen plane with little visible reflection; the inserted UI has a different texture from the surrounding laptop and actor.",
+      "suggested_action": "Match screen exposure, reflections, lens softness and grain to the plate, and verify screen tracking throughout each moving shot."
+    },
+    {
+      "shot_id": "00:00, 00:07.5, 00:25–00:27.5",
+      "category": "presentation_graphics",
+      "severity": 0.74,
+      "confidence": 0.97,
+      "evidence": "Three outlined status tiles, oversized white message rectangles and a centered chart with a red ellipse dominate the frame like presentation slides.",
+      "suggested_action": "Reduce graphic chrome, establish a consistent type hierarchy and connect the messages to a visible phone or a purposefully designed messaging treatment."
+    },
+    {
+      "shot_id": "01:10",
+      "category": "screen_geometry",
+      "severity": 0.73,
+      "confidence": 0.98,
+      "evidence": "The dawn laptop shows a dark application rectangle inset inside a bright white display, making the app look pasted into a second screen.",
+      "suggested_action": "Fit the real app capture to the laptop's active display and match its perspective, brightness and reflections."
+    },
+    {
+      "shot_id": "01:12.5–01:15",
+      "category": "stock_performance",
+      "severity": 0.65,
+      "confidence": 0.85,
+      "evidence": "David is centered against soft city windows, holding a document and giving a restrained approving expression; the frame lacks the environmental specificity and incidental behavior of the Codex reference.",
+      "suggested_action": "Show approval within a wider boardroom interaction, with motivated eye-lines and other participants rather than an isolated portrait."
+    },
+    {
+      "shot_id": "00:32.5, 01:17.5–01:20",
+      "category": "title_card_finish",
+      "severity": 0.59,
+      "confidence": 0.96,
+      "evidence": "The reveal uses several centered text lines over an empty office; the ending stacks the feature, product, sentence, pill CTA and disclaimer, with 'one.' wrapping onto its own line.",
+      "suggested_action": "Refine the lockup and line breaks, shorten the supporting copy and give the product name and CTA clearer visual priority."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "real_film_index must be at least 60",
+      "shot_id": "whole",
+      "evidence": "The mean of 33 frame scores is 5.06/10, yielding a real_film_index of 50.61."
+    },
+    {
+      "rule": "No frame showing an obvious AI tell on a face",
+      "shot_id": "00:30, 00:50",
+      "evidence": "Maya's close-ups show waxy facial smoothing, glassy eyes and inconsistent facial appearance."
+    },
+    {
+      "rule": "No UI frame that looks like a screenshot pasted on black",
+      "shot_id": "00:35–00:37.5, 00:52.5–01:05",
+      "evidence": "Enlarged rectangular app crops float against a predominantly black background with little convincing integration."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Rebuild the product sequence from crisp real captures using consistent full-frame app views and convincingly matched laptop inserts.",
+  "frame_scores": [
+    {"t":"00:00.0","score":5,"tell":"Outlined tiles and large centered headline read as a presentation slide.","fix":"Simplify the opening graphic hierarchy and integrate it with the office scene."},
+    {"t":"00:02.5","score":7,"tell":"Convincing lighting and shoulder composition; screen remains conspicuously flat and black.","fix":"Match display reflections and exposure to the plate."},
+    {"t":"00:05.0","score":7,"tell":"Strong physical setting; inserted chat lacks the surrounding image texture.","fix":"Match lens softness and grain across the screen composite."},
+    {"t":"00:07.5","score":5,"tell":"Large white message slabs dominate an indistinct background.","fix":"Use a more refined messaging treatment connected to the phone."},
+    {"t":"00:10.0","score":5,"tell":"Soft actor detail and generic staged office pose.","fix":"Use a consistent performer with more specific task behavior."},
+    {"t":"00:12.5","score":7,"tell":"Useful tactile hand insert; no obvious anatomical failure visible in this sample.","fix":"Verify finger motion and keyboard contact in the clip."},
+    {"t":"00:15.0","score":6,"tell":"Sparse spreadsheet graphic sits inside a black screen plane.","fix":"Improve display integration and application context."},
+    {"t":"00:17.5","score":6,"tell":"Memo has physical context, but looks like a flat page insert.","fix":"Match screen texture and avoid excessive black display margins."},
+    {"t":"00:20.0","score":5,"tell":"Side-by-side slides occupy a detached dark panel.","fix":"Compose the comparison as a deliberate app view with sharper visual hierarchy."},
+    {"t":"00:22.5","score":6,"tell":"Repeat shoulder plate and flat slide graphic limit film specificity.","fix":"Use a closer, differently composed screen insert with matched reflections."},
+    {"t":"00:25.0","score":5,"tell":"Centered chart, red ellipse and white message resemble a slide deck.","fix":"Refine the annotation and messaging composition."},
+    {"t":"00:27.5","score":5,"tell":"Same diagram-led composition lacks physical grounding.","fix":"Connect the flagged slide to a visible device or clean app presentation."},
+    {"t":"00:30.0","score":3,"tell":"Waxy facial smoothing and glassy eyes expose synthetic appearance.","fix":"Replace the reaction with identity-consistent footage retaining natural skin detail."},
+    {"t":"00:32.5","score":6,"tell":"Office depth helps, but the centered multi-line reveal is conventional.","fix":"Create a stronger feature/product lockup with less supporting text."},
+    {"t":"00:35.0","score":4,"tell":"Soft enlarged request crop floats on near-black surroundings.","fix":"Recapture at readable application zoom and use a coherent app framing."},
+    {"t":"00:37.5","score":4,"tell":"Blurred request text, highlight box and duplicate caption compete.","fix":"Use a crisp capture and a single readable emphasis system."},
+    {"t":"00:40.0","score":5,"tell":"Tracked changes are visible, but the angled page is detached and clipped.","fix":"Show a sharper, intentionally framed document view."},
+    {"t":"00:42.5","score":5,"tell":"Oversized ribbon crop and cut-off controls feel like an enlarged screenshot.","fix":"Recapture the diff bar at larger native UI scale with complete controls."},
+    {"t":"00:45.0","score":7,"tell":"Real app on the laptop supplies useful context; display texture remains mismatched.","fix":"Match reflections and grain while retaining the real recording."},
+    {"t":"00:47.5","score":7,"tell":"Physical screen framing works better than the floating panels.","fix":"Verify tracking and preserve readable screen detail."},
+    {"t":"00:50.0","score":3,"tell":"Soft, glassy-eyed face and changed facial appearance weaken identity continuity.","fix":"Replace with a matching performer or verified consistent identity."},
+    {"t":"00:52.5","score":4,"tell":"Changes panel is soft, partially cropped and surrounded by dark empty space.","fix":"Use a sharper capture and crop away unrelated empty UI."},
+    {"t":"00:55.0","score":3,"tell":"Pixel-soft review text and oversized red ellipse look unfinished.","fix":"Recapture at higher UI zoom and use a restrained precise highlight."},
+    {"t":"00:57.5","score":3,"tell":"Enlarged panel text is blurred and row content is truncated.","fix":"Capture the relevant rows at readable native scale."},
+    {"t":"01:00.0","score":3,"tell":"Soft accept/reject icons sit beneath a translucent highlight rectangle.","fix":"Recapture complete controls and use a clean focus treatment."},
+    {"t":"01:02.5","score":4,"tell":"Large accept controls and heading remain visibly soft.","fix":"Replace the enlarged crop with a high-resolution recording."},
+    {"t":"01:05.0","score":4,"tell":"Acceptance confirmation is legible but lacks premium image clarity.","fix":"Show the confirmation from a sharper source at appropriate scale."},
+    {"t":"01:07.5","score":5,"tell":"Accepted memo is cleaner, but still floats as an angled page crop.","fix":"Unify its framing with the preceding app sequence."},
+    {"t":"01:10.0","score":6,"tell":"Attractive dawn lighting; dark app rectangle is inset inside a white laptop display.","fix":"Fit and integrate the capture across the actual active screen."},
+    {"t":"01:12.5","score":5,"tell":"Soft centered executive portrait resembles generic corporate stock.","fix":"Place the reaction within a specific boardroom interaction."},
+    {"t":"01:15.0","score":5,"tell":"Approving portrait remains soft and conventionally staged.","fix":"Use motivated eye-lines and contextual meeting coverage."},
+    {"t":"01:17.5","score":6,"tell":"Clean end card, but stacked copy and an orphaned 'one.' reduce polish.","fix":"Refine line breaks, spacing and brand priority."},
+    {"t":"01:20.0","score":6,"tell":"Readable restrained card lacks a distinctive final lockup.","fix":"Use a concise feature/product lockup and more deliberate CTA placement."}
+  ],
+  "real_film_index": 50.61,
+  "closest_ref": "REF_bJcA23ckzcY_sheet_01.jpg, OpenAI Codex 'It's time to fly': the desk setting and warm/cool lighting are closest, but synthetic reactions, repetitive shoulder coverage and soft detached UI crops leave a substantial production-value gap.",
+  "top_3_upgrades": [
+    "Recapture the product at higher native UI scale and eliminate visibly enlarged, soft review-panel crops.",
+    "Replace Maya's synthetic reaction close-ups with consistent, naturally textured performance footage.",
+    "Unify screen composites, app views and typography into one polished visual system with matched exposure, reflections and grain."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "arc_serves_story": 65,
+  "hit_points": 40,
+  "genre_and_emotion_fit": 70,
+  "motif": 80,
+  "ending": 55
+ },
+ "issues": [
+  {
+   "shot_id": "00:49-02:09.8",
+   "category": "flat_post_reveal_bed",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "one cue (Digital Clouds) at constant 0.20 gain for 80.8 s, only shaped by VO ducking; no lift at the hero review (91) or the team section (104) - dynamic_sections 78 s -17.3 then 110 s -22.1 (it gets quieter into the proof)",
+   "suggested_action": "Build the bed in 3 states: sparse 49-78, add drums/pulse at 'No regenerating' 78.4, full confidence at Accept-all 92.3, strip back for evidence 115"
+  },
+  {
+   "shot_id": "whole",
+   "category": "hits_miss_cuts",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "cuts_on_sound_pct 37%; cuts without event include 49.0, 52.6, 78.0-adjacent 86.2, 104.0, 130.0, 136.1, 139.0",
+   "suggested_action": "Edit the bed so bar downbeats fall on 49.0, 78.0, 91.0, 104.0 and 136.1 (sunrise), or add score hits there"
+  },
+  {
+   "shot_id": "02:12-02:25",
+   "category": "no_silence_before_tagline",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "music returns at 132.0 at 0.24 and runs under 'This time, you checked.' and 'Agentic Office' (142.6), fading only from 143",
+   "suggested_action": "Cut music to room tone at 139.0, let the strike-through and 'This time, you checked.' sit in near-silence, then one sting/identity chord on the logo at 142.5"
+  },
+  {
+   "shot_id": "02:10-02:16",
+   "category": "weak_payoff",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "Sent/lights-on resolve is the same bed at +0.04 gain (0.20->0.24) after a 2 s dip",
+   "suggested_action": "Make 131.65 the musical resolution: a new section or swell entering on the click, major lift as the lights come on"
+  },
+  {
+   "shot_id": "00:05-00:17",
+   "category": "genre_ok",
+   "severity": 0.2,
+   "confidence": 0.5,
+   "evidence": "'hazy after hours' jazz under the helpful chatbot until the email lands at 17.3, then suspense",
+   "suggested_action": "Keep; let the jazz cut dead on the glitch at 14.47 instead of running to 17.4 for a sharper turn"
+  },
+  {
+   "shot_id": "00:41.6-00:49",
+   "category": "reveal_state_change",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "suspense ends 41.6, near-silence 44.5-45.5 (-34.6/-49.9 dBFS), identity tone 46.2, bed in at 49.0",
+   "suggested_action": "Keep; consider bringing the bed in on the logo at 46.2 rather than 2.8 s later"
+  }
+ ],
+ "constraint_failures": [],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Replace the flat 80 s post-reveal bed with a three-state build that peaks on Accept-all (92.3) and drops to near-silence at 139 s so the tagline lands on one sting.",
+ "cue_sheet": [
+  {
+   "act": "cold open 0-5",
+   "feel": "dread pulse",
+   "tempo_bpm": "60 heartbeat",
+   "instrumentation": "sub pulse, heartbeat",
+   "hits": "impact on the ≠ at 3.1, rewind 4.45"
+  },
+  {
+   "act": "false help 5-14.5",
+   "feel": "breezy, slightly ironic",
+   "tempo_bpm": "90",
+   "instrumentation": "lo-fi jazz keys",
+   "hits": "done chime 11.05; cut dead at glitch 14.47"
+  },
+  {
+   "act": "grind 17-44",
+   "feel": "rising tension",
+   "tempo_bpm": "110-120",
+   "instrumentation": "ticking synth ostinato, low strings, riser",
+   "hits": "Done chimes 27.5/34.45, impact 39.7, cut to silence 44.5"
+  },
+  {
+   "act": "reveal 46-78",
+   "feel": "calm, precise",
+   "tempo_bpm": "100",
+   "instrumentation": "soft electronic pads, plucks",
+   "hits": "identity tone 46.2, downbeat 49.0, pluck per plan step"
+  },
+  {
+   "act": "proof 78-115",
+   "feel": "confidence building",
+   "tempo_bpm": "100",
+   "instrumentation": "add kick/pulse at 78.4, full at 92.3",
+   "hits": "78.0, 91.0, Accept-all 92.3, 104.0"
+  },
+  {
+   "act": "resolve 130-145.5",
+   "feel": "warm release then silence",
+   "tempo_bpm": "rubato",
+   "instrumentation": "swell on click, piano/pads at sunrise, cut out 139",
+   "hits": "131.35 click, 136.1 sunrise, sting 142.5"
+  }
+ ],
+ "free_source_suggestions": [
+  "Mixkit: 'tech corporate building', 'inspiring electronic'",
+  "Pixabay: 'minimal tech build-up', 'logo sting soft'",
+  "YouTube Audio Library: Cinematic + Calm, 'ambient corporate uplift'",
+  "Pixabay: 'suspense ticking clock'"
+ ]
+}

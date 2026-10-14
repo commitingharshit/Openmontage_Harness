@@ -1,0 +1,29 @@
+{
+ "round": "s1",
+ "C": 69,
+ "S": 81,
+ "P": 80,
+ "Q": 77.5,
+ "constraint_failures": [
+  {
+   "rule": "Character continuity relies on text prompts; no reference upload.",
+   "shot_id": "NEW CLIPS",
+   "evidence": "The prefix explicitly specifies 'refs/maya_ref.png as the reference image'."
+  },
+  {
+   "rule": "Each generated face shot must contain one emotion and one action.",
+   "shot_id": "beat 18",
+   "evidence": "N8 combines leaning, scanning back and forth, nodding and tapping."
+  },
+  {
+   "rule": "Every message must hold for at least 2.5 seconds.",
+   "shot_id": "30 s cut, 17\u201321 s",
+   "evidence": "The request and inline-bar message share a sequential 4-second slot, below the 5-second minimum needed for both."
+  },
+  {
+   "rule": "Every message holds for at least 2.5 seconds.",
+   "shot_id": "30 s cut 17\u201321",
+   "evidence": "The request and inline change bar share four seconds, leaving insufficient time for both essential messages to hold for 2.5 seconds."
+  }
+ ]
+}

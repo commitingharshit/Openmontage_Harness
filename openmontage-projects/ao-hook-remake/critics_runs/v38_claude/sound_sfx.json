@@ -1,0 +1,179 @@
+{
+ "critic": "sound_sfx",
+ "stage": "animatic",
+ "score": 58,
+ "dimension_scores": {
+  "foley_coverage": 70,
+  "transition_design": 40,
+  "ui_sound_language": 60,
+  "sync_accuracy": 70,
+  "restraint": 55
+ },
+ "issues": [
+  {
+   "shot_id": "00:01-00:46",
+   "category": "silent_cuts_in_urgent_hook",
+   "severity": 0.8,
+   "confidence": 0.8,
+   "evidence": "cuts_without_sound_event_s lists 30 of 45 cuts (cuts_on_sound 31.8%); 18 are in the hook (1.2, 5.07, 8.0, 13.93, 15.6, 16.5, 22.97, 24.07, 24.87, 31.07, 31.83, 34.5, 35.0, 36.77, 37.4, 39.2, 40.3, 45.63). The 'soft whoosh on every silent hook cut' is whoosh2 at vol 0.18 and does not register",
+   "suggested_action": "Raise the hook cut whooshes to 0.35-0.45 with a short low thump on hard cuts, and vary the family (air whoosh, tape stop, paper swipe) so each is audible over VO"
+  },
+  {
+   "shot_id": "00:27, 00:30, 00:38",
+   "category": "cue_list_vs_picture_drift",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "sound_mix_v38.py CUTS includes 27.53, 30.0, 38.8, 39.7, which are not measured cuts; measured cuts 36.77, 39.2 and 67.0 have no cue",
+   "suggested_action": "Rebuild CUTS from measure_v38.json per_shot and re-spot the touches to the real boundaries"
+  },
+  {
+   "shot_id": "01:01-01:32",
+   "category": "inaudible_product_cut_touches",
+   "severity": 0.45,
+   "confidence": 0.65,
+   "evidence": "key.mp3 at vol 0.12 on the product cuts 61.4, 64.4; whoosh2 0.22 at 77.9 and the hero entry 91.8 are still in cuts_without_sound_event_s (61.4, 64.4, 78.0, 89.0, 91.8)",
+   "suggested_action": "Use one soft 'glass push' whoosh (0.3) for each wide→push-in product shot, synced to the push start"
+  },
+  {
+   "shot_id": "00:23, 00:31, 00:36",
+   "category": "missing_foley_protagonist",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "Real inserts: head in hands (22.97), scratches her head (31.83), frustrated reaction (35.0-36.8): no cloth/hand/breath foley; they are among the silent cuts",
+   "suggested_action": "Add cloth rustle + exhale on 22.97, hair/scalp scratch on 31.9, chair creak + sigh on 35.1"
+  },
+  {
+   "shot_id": "00:49-01:46",
+   "category": "ui_language_overloaded",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "key.mp3 is used for real keystrokes, plan-step ticks (68.5/69.6/70.7), 'three apps land', review ticks and cut touches",
+   "suggested_action": "Reserve key.mp3 for typing; make a separate soft UI tick for plan steps/review rows and keep pop_long+impact as the one 'accept' signature"
+  },
+  {
+   "shot_id": "01:48",
+   "category": "lights_on_no_foley",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "107.9-112.4 'real lights come on': only identity sting + city; no switch or lamp hum",
+   "suggested_action": "Add a soft lamp click/hum swell at the lights-on frame, then the city"
+  },
+  {
+   "shot_id": "00:37-00:41",
+   "category": "restraint",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "In 4 s: 5 whooshes, impact, 4 buzzes, clock_fast, riser, heart_fast, under VO 'Five tabs. Copy. Paste. Check. Repeat.'",
+   "suggested_action": "Keep one whoosh per whip and one impact on 'Repeat'; drop two of the four buzzes"
+  },
+  {
+   "shot_id": "00:00, 00:17",
+   "category": "diegesis_mismatch",
+   "severity": 0.2,
+   "confidence": 0.45,
+   "evidence": "Phone-vibrate buzz.mp3 used for laptop email notifications (0.05, 17.1, 28.3, 41.7)",
+   "suggested_action": "Use a mail-client notification ping for on-laptop email; keep the buzz only if a phone is in frame"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "more than 50% of cuts with no sound event in a film that claims urgency",
+   "shot_id": "00:00-00:46",
+   "evidence": "cuts_on_sound_pct 31.8; 18 of ~26 hook cuts silent"
+  }
+ ],
+ "spotting_list": [
+  {
+   "t": "1.2",
+   "event": "cold open -> cards",
+   "sound": "low air whoosh + tick",
+   "source": "Freesound 'soft whoosh transition'"
+  },
+  {
+   "t": "5.07",
+   "event": "cut to protagonist, '45 MINUTES EARLIER'",
+   "sound": "tape-stop tail / room bloom",
+   "source": "Mixkit 'tape stop'"
+  },
+  {
+   "t": "8.0",
+   "event": "dark-to-light into chat",
+   "sound": "soft glass swell",
+   "source": "Freesound 'glass swell short'"
+  },
+  {
+   "t": "13.93",
+   "event": "Word window cut",
+   "sound": "paper swipe",
+   "source": "Freesound 'paper swipe'"
+  },
+  {
+   "t": "22.97",
+   "event": "head in hands (real)",
+   "sound": "cloth rustle + exhale",
+   "source": "Freesound 'cloth rustle sigh'"
+  },
+  {
+   "t": "24.07",
+   "event": "night hands insert",
+   "sound": "low thump",
+   "source": "Mixkit 'cinematic hit low'"
+  },
+  {
+   "t": "31.83",
+   "event": "scratches head",
+   "sound": "hair scratch foley",
+   "source": "Freesound 'hair scratch'"
+  },
+  {
+   "t": "35.0",
+   "event": "slide 4 reverted reveal",
+   "sound": "dissonant sting",
+   "source": "Mixkit 'error sting'"
+  },
+  {
+   "t": "36.77",
+   "event": "frustrated reaction",
+   "sound": "chair creak + sigh",
+   "source": "Freesound 'office chair creak'"
+  },
+  {
+   "t": "39.2",
+   "event": "whip pan",
+   "sound": "whip whoosh",
+   "source": "Mixkit 'whip pan whoosh'"
+  },
+  {
+   "t": "61.4/64.4/67.0",
+   "event": "wide→push product shots",
+   "sound": "soft glass push",
+   "source": "Freesound 'ui transition airy'"
+  },
+  {
+   "t": "89.0/91.8",
+   "event": "proposal / hero cut",
+   "sound": "soft glass push",
+   "source": "Freesound 'ui transition airy'"
+  },
+  {
+   "t": "107.9",
+   "event": "lights come on",
+   "sound": "lamp click + hum",
+   "source": "Freesound 'light switch lamp'"
+  },
+  {
+   "t": "112.4",
+   "event": "sunrise",
+   "sound": "air swell",
+   "source": "Mixkit 'morning ambience swell'"
+  },
+  {
+   "t": "115.3",
+   "event": "end card / strike-through",
+   "sound": "pen strike",
+   "source": "Freesound 'marker strike'"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Make the hook's cut sounds audible (0.35-0.45, spotted to the measured cut list), taking cuts_on_sound from 32% to over 70%."
+}

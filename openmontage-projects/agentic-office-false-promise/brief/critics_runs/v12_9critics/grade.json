@@ -1,0 +1,100 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 64,
+  "dimension_scores": {
+    "look_family_unity": 74,
+    "skin_tones": 80,
+    "contrast_curve_blacks": 64,
+    "shot_to_shot_match": 43,
+    "finish": 64
+  },
+  "issues": [
+    {
+      "shot_id": "00:38.7–00:42.2",
+      "category": "ui_white_level_mismatch",
+      "severity": 0.9,
+      "confidence": 0.99,
+      "evidence": "The dark request view cuts to a nearly full-frame white memo: luma 28.2 → 229.7, saturation 73.6 → 6.0; the following Excel view drops to luma 110.8. The memo looks untreated beside the surrounding dark footage.",
+      "suggested_action": "Apply a dedicated UI transform that rolls document whites down to approximately 0.85 normalized output, preserves dark text, and presents the memo inside the same charcoal surround as the other captures."
+    },
+    {
+      "shot_id": "01:03.2–01:10.2",
+      "category": "exposure_jump",
+      "severity": 0.88,
+      "confidence": 0.99,
+      "evidence": "The accepted-changes panel, white memo, and night-office shot measure luma 44.5 → 234.5 → 38.8, with saturation 32.4 → 3.3 → 179.1. The white memo creates two conspicuous brightness jumps within the solution sequence.",
+      "suggested_action": "Match this memo to the earlier corrected UI white level and surround, then trim the night-office shot to retain readable facial midtones after the bright document."
+    },
+    {
+      "shot_id": "00:48.7",
+      "category": "night_scene_match",
+      "severity": 0.72,
+      "confidence": 0.95,
+      "evidence": "Maya's solution reaction is markedly darker than the other night-office views: luma 15.4 and contrast 23.3 versus luma 41.0/contrast 48.3 at 00:11.2 and luma 38.8/contrast 38.1 at 01:10.2. Her jacket and room merge into black.",
+      "suggested_action": "Raise this shot's midtones and gently open lower shadows using the 01:10.2 office view as the matching reference; protect the black floor and warm facial highlights."
+    },
+    {
+      "shot_id": "00:16.7",
+      "category": "problem_world_white_level",
+      "severity": 0.66,
+      "confidence": 0.98,
+      "evidence": "The model-to-memo cut changes luma 21.4 → 137.9 and contrast 23.1 → 117.2. The large white page interrupts the otherwise charcoal, blue, and teal problem-world palette.",
+      "suggested_action": "Give the mock memo a restrained off-white paper tone and the same highlight shoulder used for real document captures, keeping the red error highlight distinct."
+    },
+    {
+      "shot_id": "00:12.2 / 00:29.4 / 00:49.9 / 01:11.5",
+      "category": "finish_consistency",
+      "severity": 0.46,
+      "confidence": 0.78,
+      "evidence": "The office inserts have soft photographic texture and strong edge falloff, while title cards and UI use cleaner, harder edges. Measured sharpness is 6.3, 1.9, 1.6, and 5.2 for the night inserts versus 272.3–748.2 for several adjacent graphics and captures.",
+      "suggested_action": "Verify the inserts at delivery resolution, then standardize their vignette and fine grain; use a very light shared finishing texture on graphic surrounds without blurring UI text."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "UI frames left raw and white beside graded film",
+      "shot_id": "00:38.7 / 01:07.2",
+      "evidence": "Full-frame white memo captures measure luma 229.7 and 234.5, compared with surrounding dark UI and office shots at 15.4–62.3; the supplied frames visibly retain stark white document backgrounds."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Unify all document captures with a restrained UI white-level transform and charcoal surround, then match Maya's dark solution reaction to the other night-office shots.",
+  "grade_recipe": {
+    "night_office": {
+      "recipe": "LUT-style starting point: normalized luma curve (0,0), (0.05,0.045), (0.18,0.21), (0.50,0.53), (0.85,0.84), (1,0.96); saturation multiplier 0.90; subtle blue-cyan bias restricted to shadows below 0.20; preserve neutral highlights and warm skin with a skin matte. Add 0.4% fine luma grain and at most 0.10-stop edge falloff.",
+      "shot_trim": "At 00:48.7, start with approximately +0.4-stop midtone exposure and match facial brightness to 01:10.2 rather than matching whole-frame means."
+    },
+    "graphics_and_product_ui": {
+      "recipe": "LUT-style starting point: neutral RGB curve (0,0), (0.10,0.10), (0.50,0.48), (0.80,0.73), (1,0.85); saturation multiplier 0.95, with semantic red/green diff colors protected. Keep charcoal surrounds consistent; no teal cast on document whites, no halation, and no grain over small text.",
+      "shot_trim": "Apply the same paper-white ceiling to mock and real memo views; preserve text contrast and retain the app's original semantic colors."
+    },
+    "daylight_boardroom": {
+      "recipe": "LUT-style starting point: neutral black floor, gamma 1.00, highlight gain 0.96, saturation multiplier 0.92; selectively reduce yellow-green background saturation by 10% while protecting skin. Use the night footage's 0.4% fine grain and restrained edge falloff.",
+      "shot_trim": "Preserve the deliberate daylight change at 01:13.2; do not force its luma 143.3 to match the night-office mean."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:36.2",
+      "to": "00:38.7",
+      "issue": "Dark request to white memo: luma +201.5, saturation −67.6."
+    },
+    {
+      "from": "01:03.2",
+      "to": "01:07.2",
+      "issue": "Accepted panel to white memo: luma +190.0, saturation −29.1."
+    },
+    {
+      "from": "01:07.2",
+      "to": "01:10.2",
+      "issue": "White memo to night office: luma −195.7, saturation +175.8."
+    },
+    {
+      "from": "00:13.7",
+      "to": "00:16.7",
+      "issue": "Dark model to mock memo: luma +116.5, contrast +94.1."
+    }
+  ],
+  "assessment_limits": "CINEMATOGRAPHY.md was absent from the requested location and repository search. Overall luma SD 64.8 and saturation SD 56.6 include deliberate scene and content changes, so they are not treated as proof of grading errors by themselves. Letterbox detection on title cards is not reliable evidence of actual framing inconsistency."
+}

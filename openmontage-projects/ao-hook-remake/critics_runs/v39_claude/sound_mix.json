@@ -1,0 +1,75 @@
+{
+ "critic": "sound_mix",
+ "stage": "animatic",
+ "score": 69,
+ "dimension_scores": {
+  "loudness_spec": 88,
+  "vo_vs_bed_balance": 60,
+  "tonal_balance": 50,
+  "dynamics_arc": 75,
+  "transitions_bridges": 55,
+  "stereo_image": 85
+ },
+ "issues": [
+  {
+   "shot_id": "whole",
+   "category": "dull_top_end",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "spectral_balance_pct presence 4-8k 3.2%, air >8k 3.2% (6.4% total) while sub <60 is 13.4%; the mix is dark and bass-heavy for a VO-led ad.",
+   "suggested_action": "High-pass beds and SFX at 40 Hz, shelve sub −3 dB on bass_pulse/heartbeat/impact, add a gentle +2 dB high shelf at 6 kHz on the VO bus and +1.5 dB at 10 kHz on the master."
+  },
+  {
+   "shot_id": "whole",
+   "category": "vo_band_borderline",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "mid 1-4k 14.9% (rubric wants >=15% with VO present); vo_over_music_db_median not measured because no stems were passed; brand read at 119.3 not recognised.",
+   "suggested_action": "Export VO/music stems and measure vo_over_music; carve music −4 dB at 2-3 kHz (currently −3 dB at 2 kHz on beds only) and deepen ducking to −8 dB (threshold 0.02, ratio 6, attack 10 ms, release 300 ms)."
+  },
+  {
+   "shot_id": "hook",
+   "category": "hard_cuts_without_bridges",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "28 measured cuts without a sound event (61%); 1.2, 5.47, 22.97, 25.1, 30.93 etc.",
+   "suggested_action": "Add J-cuts: let the next shot's ambience or SFX lead by 3-6 frames on the hook cuts; crossfade beds 50 ms."
+  },
+  {
+   "shot_id": "01:59-02:01",
+   "category": "ending_crush",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "Music fades out over the last 2.0 s exactly under the brand read (119.3-121.26); curve 120.5 = -14.5 then 121.0 = -24.7 then -15.8.",
+   "suggested_action": "Hold the end-card music at a fixed −10 dB under the read, end the file with 0.8 s of air after the last word."
+  },
+  {
+   "shot_id": "whole",
+   "category": "master_chain",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "Single-pass loudnorm I=-14.3 TP=-2, then +1.9 dB, then alimiter 0.79; result -14.3 LUFS, -1.7 dBTP, LRA 6.3: in spec, but LRA sits at the floor of 6-11.",
+   "suggested_action": "Two-pass loudnorm (measure, then linear=true with measured_I/TP/LRA/thresh) to −14.0 LUFS, TP −1.5, limiter ceiling −1.5 dBTP; keep more act contrast (LRA ~8)."
+  },
+  {
+   "shot_id": "00:43.6-00:46",
+   "category": "dynamics_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "dynamic_range 12.7 dB; sections 44 = -34.6, 112 = -34.7 against -16 to -20 elsewhere; no digital silence, no clipping (0 samples), stereo correlation 0.837.",
+   "suggested_action": "Keep the two breaths."
+  }
+ ],
+ "constraint_failures": [],
+ "mix_recipe": {
+  "ducking": "sidechain on music+tension beds keyed by VO: threshold 0.02, ratio 6, attack 10 ms, release 300 ms, target −8 dB under speech; room ambience stays un-ducked",
+  "music_eq_under_vo": "bed bus −4 dB bell at 2.5 kHz Q 1.2, −2 dB at 1 kHz Q 1",
+  "vo_eq": "high-pass 90 Hz, −2.5 dB at 250 Hz, +3 dB at 2.5 kHz, +2 dB high shelf at 6 kHz",
+  "low_end": "high-pass 40 Hz on beds/SFX, −3 dB shelf below 60 Hz on bass_pulse, heartbeat, impact",
+  "ambience": "high-pass 120 Hz, −45 dBFS average",
+  "master": "two-pass loudnorm I=-14.0 TP=-1.5 LRA=8 linear=true, alimiter limit=0.84 (−1.5 dBTP) attack 2 ms release 60 ms",
+  "end": "music held at −10 dB under brand read, 0.8 s air after last word"
+ },
+ "revision_scope": "whole",
+ "top_revision": "Open up the top end and the VO band (sub −3 dB, +2 dB shelf at 6 kHz on VO, −4 dB at 2.5 kHz on beds) and measure VO-over-music from stems, so the narrator and the brand read sit clearly above a currently dark, bass-heavy bed."
+}

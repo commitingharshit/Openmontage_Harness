@@ -1,0 +1,51 @@
+{
+  "critic": "claims_rights",
+  "stage": "animatic",
+  "score": 86,
+  "dimension_scores": {
+    "claim_accuracy": 80,
+    "ui_authenticity": 78,
+    "rights_provenance": 98,
+    "numeric_consistency": 100
+  },
+  "issues": [
+    {
+      "shot_id": "01:00",
+      "category": "unapproved_claim_wording",
+      "severity": 0.7,
+      "confidence": 1,
+      "evidence": "VO says 'Every change, as a diff.' The approved wording distinguishes tracked changes in Word from diffs in PowerPoint and Excel.",
+      "suggested_action": "Replace the VO with 'Every change, reviewable. Tracked changes in Word, diffs in PowerPoint and Excel — accept or reject each one.'"
+    },
+    {
+      "shot_id": "00:40–00:47",
+      "category": "speed_disclosure",
+      "severity": 0.65,
+      "confidence": 0.85,
+      "evidence": "The Word and Excel proof frames at 00:40 and 00:44 have no visible speed disclosure; only the PowerPoint frame at 00:47 shows 'Real app · sped up'. UI_REUSE.md identifies this work sequence as accelerated and requires a 'sped up' label.",
+      "suggested_action": "Verify playback rates and keep 'Real app · sped up' visible throughout every accelerated product excerpt, including cropped Word and Excel views."
+    },
+    {
+      "shot_id": "01:04–01:09",
+      "category": "incomplete_outcome_verification",
+      "severity": 0.55,
+      "confidence": 1,
+      "evidence": "The film shows '10 of 10 changes accepted' and the corrected memo, but no corrected slide 2; the task explicitly states that its post-acceptance recording is pending.",
+      "suggested_action": "Capture the actual post-acceptance slide 2 and show the formerly flagged box reading €74.6m before the board-meeting payoff."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Claims and VO must stay within approved wording.",
+      "shot_id": "01:00",
+      "evidence": "'Every change, as a diff' replaces the approved distinction between Word tracked changes and PowerPoint/Excel diffs."
+    },
+    {
+      "rule": "Accelerated product footage must retain a visible 'sped up' label.",
+      "shot_id": "00:40–00:44",
+      "evidence": "The supplied Word and Excel frames omit the disclosure required for the accelerated work sequence documented in UI_REUSE.md."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Clear the claims gate by using the approved review wording and maintaining a visible speed disclosure throughout accelerated product footage."
+}

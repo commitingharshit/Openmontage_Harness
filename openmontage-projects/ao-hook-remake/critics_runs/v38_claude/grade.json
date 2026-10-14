@@ -1,0 +1,120 @@
+{
+ "critic": "grade",
+ "stage": "animatic",
+ "score": 56,
+ "dimension_scores": {
+  "look_family_unity": 60,
+  "skin_tones": 68,
+  "contrast_curve_blacks": 50,
+  "shot_to_shot_match": 48,
+  "finish": 55
+ },
+ "issues": [
+  {
+   "shot_id": "00:13.93",
+   "category": "exposure_jump",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "Inside the 'fix by hand' scene luma goes 53.5 (12.47) -> 104.6 (13.93) -> 39.9 (15.6) -> 52.7 (16.5): a 2x brightness jump and drop in 2.5 s.",
+   "suggested_action": "Pull the 13.93 Word shot down to luma ~55-60 with the same night grade (gain -0.9 stop, lift -0.02)."
+  },
+  {
+   "shot_id": "00:01.2-00:05.07",
+   "category": "exposure_jump",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "Opening: luma 48 (0) -> 107.5 (1.2) -> 14.4 (4.5) -> 46.4 (5.07); sat 88 -> 31 -> 125 -> 118. The illustrated email reads as an ungraded grey-white plate before the teal office.",
+   "suggested_action": "Bring the 1.2 email to luma ~60, sat ~60, with the same cool lift as the office clip; let the rewind be the only exposure event."
+  },
+  {
+   "shot_id": "00:10.0",
+   "category": "milky_blacks",
+   "severity": 0.5,
+   "confidence": 0.85,
+   "evidence": "'Done.' card at 9.8: luma 51, contrast 23.4 - all mid-grey, no black anywhere; same lifted haze on 16.5 (contrast 22.8) and 24.87 (21.5).",
+   "suggested_action": "Re-anchor blacks: levels black point +12, gamma 0.95, keep a vignette but let corners hit true black."
+  },
+  {
+   "shot_id": "00:44.57",
+   "category": "saturation_spike",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "Head-drop insert at 44.57: sat 145.6 vs 70.5 on the email before it and 102 on the logo after; 22.97 also sat 141.8.",
+   "suggested_action": "Desaturate the stock inserts ~30% (sat 0.7) and cap them at the problem-world mean (~90)."
+  },
+  {
+   "shot_id": "00:50-01:47.5",
+   "category": "two_looks_one_world",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "Solution world splits between teal-navy bokeh product UI (luma 42-89, sat ~30-50) and candle-orange rooms (49.0 sat 96.6, 107.9 sat 140.3); 92.5 shows an orange smear bleeding into the navy UI shot.",
+   "suggested_action": "Tie them: carry a faint warm practical bloom into the product UI backgrounds (sat ~60) and pull the warm room down to sat ~100."
+  },
+  {
+   "shot_id": "01:01.4-01:18",
+   "category": "hot_white_pages",
+   "severity": 0.35,
+   "confidence": 0.75,
+   "evidence": "Real UI pages run hot beside dark footage: 61.4 luma 72.5/contrast 75.8, 64.4 luma 88.4/contrast 90, 78.0 contrast 92.8 after 58.4 at luma 41.7.",
+   "suggested_action": "Roll off UI whites to ~85% (gain 0.88) and add the same screen softness as the laptop composites."
+  },
+  {
+   "shot_id": "00:52.6",
+   "category": "finish_inconsistent",
+   "severity": 0.3,
+   "confidence": 0.85,
+   "evidence": "Only shot with letterbox (22 rows, 2.2% of shots); no grain visible on product UI while stock carries texture.",
+   "suggested_action": "Remove the stray letterbox or apply 2.39 bars to every shot; add 3-4% grain to all UI shots."
+  },
+  {
+   "shot_id": "01:57.5",
+   "category": "dead_black",
+   "severity": 0.2,
+   "confidence": 0.6,
+   "evidence": "117.5 frame is near-black with a barely visible line of text.",
+   "suggested_action": "Hold the struck line at readable contrast until the logo fades up."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:12.47-00:15.6",
+   "evidence": "luma 53.5 -> 104.6 -> 39.9 within the fix-by-hand scene"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Normalise the problem world to one night grade (target luma 45-60, sat <=95, true blacks) so 1.2, 13.93 and the stock inserts stop jumping by 2x.",
+ "grade_recipe": {
+  "problem_world_night": "eq=brightness=-0.03:contrast=1.12:saturation=0.8, colorbalance=bs=0.06:bm=0.03:rh=-0.02, curves black point 0.04 out 0.0, vignette=PI/5, noise=alls=6:allf=t",
+  "illustrated_ui_in_night": "eq=gamma=0.92:contrast=1.2:saturation=0.6, colorlevels=rimax=0.85:gimax=0.85:bimax=0.88, then the same night balance + grain",
+  "product_ui_solution": "colorlevels rimax/gimax/bimax=0.88, eq=saturation=0.85, gblur on background plate sigma 18, faint warm halo (colorbalance rh=0.04 on highlights), noise=alls=4",
+  "warm_room_and_dawn": "eq=saturation=0.85, colorbalance=rh=0.05:bh=-0.04:bs=0.03, highlights roll-off curves 0.9, glow/halation 3%, grain 4"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:12.47",
+   "to": "00:13.93",
+   "issue": "luma 53.5 -> 104.6 inside one scene"
+  },
+  {
+   "from": "00:01.2",
+   "to": "00:05.07",
+   "issue": "luma 107.5 -> 14.4 -> 46.4, sat 31 -> 125"
+  },
+  {
+   "from": "00:41.6",
+   "to": "00:44.57",
+   "issue": "sat 77 -> 145.6, luma 70.5 -> 28.4"
+  },
+  {
+   "from": "00:58.4",
+   "to": "01:04.4",
+   "issue": "luma 41.7 -> 88.4, contrast 34 -> 90"
+  },
+  {
+   "from": "01:46.3",
+   "to": "01:47.9",
+   "issue": "luma 48 -> 18.8 -> 81.3, sat 63 -> 140 (intended lights-on, but overshoots)"
+  }
+ ]
+}

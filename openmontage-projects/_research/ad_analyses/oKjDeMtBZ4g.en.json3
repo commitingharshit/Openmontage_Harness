@@ -1,0 +1,319 @@
+{
+  "wireMagic": "pb3",
+  "pens": [ {
+  
+  } ],
+  "wsWinStyles": [ {
+  
+  } ],
+  "wpWinPositions": [ {
+  
+  } ],
+  "events": [ {
+    "tStartMs": 5520,
+    "dDurationMs": 4317,
+    "segs": [ {
+      "utf8": "Hi, I'm Reed from the Flow team at Google,\nand I'm going to give a quick walkthrough"
+    } ]
+  }, {
+    "tStartMs": 9920,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "of what Flow is and how it works."
+    } ]
+  }, {
+    "tStartMs": 12360,
+    "dDurationMs": 3477,
+    "segs": [ {
+      "utf8": "Flow is your AI creative studio,\nwhere you can generate and refine images"
+    } ]
+  }, {
+    "tStartMs": 15920,
+    "dDurationMs": 2400,
+    "segs": [ {
+      "utf8": "and videos in whatever\nstyle you can dream up."
+    } ]
+  }, {
+    "tStartMs": 19560,
+    "dDurationMs": 3480,
+    "segs": [ {
+      "utf8": "Designed to support your entire creative\njourney, Flow helps creatives explore"
+    } ]
+  }, {
+    "tStartMs": 23123,
+    "dDurationMs": 5277,
+    "segs": [ {
+      "utf8": "what's possible, from previsualization\nor proof of concept to a final creation."
+    } ]
+  }, {
+    "tStartMs": 29600,
+    "dDurationMs": 1960,
+    "segs": [ {
+      "utf8": "Under the hood,\nit's powered by a combination"
+    } ]
+  }, {
+    "tStartMs": 31643,
+    "dDurationMs": 5037,
+    "segs": [ {
+      "utf8": "of Google DeepMind's most advanced models,\nVeo, Nano Banana, and Gemini."
+    } ]
+  }, {
+    "tStartMs": 36800,
+    "dDurationMs": 1160,
+    "segs": [ {
+      "utf8": "So let's jump right in."
+    } ]
+  }, {
+    "tStartMs": 38280,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "When you enter Flow,\nyou land on your Projects page,"
+    } ]
+  }, {
+    "tStartMs": 41120,
+    "dDurationMs": 3020,
+    "segs": [ {
+      "utf8": "where you can scroll and look through\neverything that you're working on."
+    } ]
+  }, {
+    "tStartMs": 45280,
+    "dDurationMs": 3757,
+    "segs": [ {
+      "utf8": "Here, you can start a new project or click\non an existing one where you'll see"
+    } ]
+  }, {
+    "tStartMs": 49120,
+    "dDurationMs": 1520,
+    "segs": [ {
+      "utf8": "all of your assets appear in a grid."
+    } ]
+  }, {
+    "tStartMs": 52800,
+    "dDurationMs": 3200,
+    "segs": [ {
+      "utf8": "This grid was designed to help simplify\nthe way you manage your assets."
+    } ]
+  }, {
+    "tStartMs": 57280,
+    "dDurationMs": 2557,
+    "segs": [ {
+      "utf8": "As your project grows,\nyou can group assets into custom"
+    } ]
+  }, {
+    "tStartMs": 59920,
+    "dDurationMs": 2397,
+    "segs": [ {
+      "utf8": "collections, search, and filter."
+    } ]
+  }, {
+    "tStartMs": 62400,
+    "dDurationMs": 3480,
+    "segs": [ {
+      "utf8": "This makes it easier to organize images\nand videos as you build out your story."
+    } ]
+  }, {
+    "tStartMs": 67960,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "Now, let's focus on the prompt bar."
+    } ]
+  }, {
+    "tStartMs": 70240,
+    "dDurationMs": 2640,
+    "segs": [ {
+      "utf8": "Just type a prompt in and Flow\nwill generate an image."
+    } ]
+  }, {
+    "tStartMs": 73280,
+    "dDurationMs": 3077,
+    "segs": [ {
+      "utf8": "To help you stay organized,\nyou can also name your image generations"
+    } ]
+  }, {
+    "tStartMs": 76440,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "just like you would\nwith your working files."
+    } ]
+  }, {
+    "tStartMs": 79880,
+    "dDurationMs": 3360,
+    "segs": [ {
+      "utf8": "If you'd like to refine your image,\nyou can simply prompt for a new version,"
+    } ]
+  }, {
+    "tStartMs": 83760,
+    "dDurationMs": 3440,
+    "segs": [ {
+      "utf8": "or use one of the editing options like\nthe Lasso tool for more precision."
+    } ]
+  }, {
+    "tStartMs": 88320,
+    "dDurationMs": 3000,
+    "segs": [ {
+      "utf8": "Just outline the area you want to change,\nadd a prompt,"
+    } ]
+  }, {
+    "tStartMs": 91520,
+    "dDurationMs": 3400,
+    "segs": [ {
+      "utf8": "and flow updates that specific spot while\nkeeping the rest of your image the same."
+    } ]
+  }, {
+    "tStartMs": 96320,
+    "dDurationMs": 2760,
+    "segs": [ {
+      "utf8": "In the prompt bar, you'll\nalso find a Model Selector."
+    } ]
+  }, {
+    "tStartMs": 99880,
+    "dDurationMs": 3280,
+    "segs": [ {
+      "utf8": "This is where you can switch between\ngenerating images and videos and adjust"
+    } ]
+  }, {
+    "tStartMs": 103243,
+    "dDurationMs": 2997,
+    "segs": [ {
+      "utf8": "various settings like orientation,\noutput quantity, or model."
+    } ]
+  }, {
+    "tStartMs": 106600,
+    "dDurationMs": 920,
+    "segs": [ {
+      "utf8": "Let's choose Video."
+    } ]
+  }, {
+    "tStartMs": 108400,
+    "dDurationMs": 1717,
+    "segs": [ {
+      "utf8": "Ready to bring your ideas to life?"
+    } ]
+  }, {
+    "tStartMs": 110200,
+    "dDurationMs": 2357,
+    "segs": [ {
+      "utf8": "You can use images you've created or\nupload your own as"
+    } ]
+  }, {
+    "tStartMs": 112640,
+    "dDurationMs": 1120,
+    "segs": [ {
+      "utf8": "ingredients for your video."
+    } ]
+  }, {
+    "tStartMs": 113843,
+    "dDurationMs": 4077,
+    "segs": [ {
+      "utf8": "Just drag them into the prompt bar,\nuse the @ tag to pull in a named asset,"
+    } ]
+  }, {
+    "tStartMs": 118320,
+    "dDurationMs": 1000,
+    "segs": [ {
+      "utf8": "or mix and match both."
+    } ]
+  }, {
+    "tStartMs": 120920,
+    "dDurationMs": 2800,
+    "segs": [ {
+      "utf8": "Prompt how they should be used\ntogether and hit Generate."
+    } ]
+  }, {
+    "tStartMs": 127120,
+    "dDurationMs": 2157,
+    "segs": [ {
+      "utf8": "Now let's explore Frames to Video."
+    } ]
+  }, {
+    "tStartMs": 129360,
+    "dDurationMs": 3037,
+    "segs": [ {
+      "utf8": "When using Frames to Video,\nyou'll see these little chips that give"
+    } ]
+  }, {
+    "tStartMs": 132480,
+    "dDurationMs": 3080,
+    "segs": [ {
+      "utf8": "you the option to use the first frame,\na last frame, or both."
+    } ]
+  }, {
+    "tStartMs": 136280,
+    "dDurationMs": 3040,
+    "segs": [ {
+      "utf8": "You can generate a frame\nwith Nana Banana Pro directly in Flow,"
+    } ]
+  }, {
+    "tStartMs": 139640,
+    "dDurationMs": 4120,
+    "segs": [ {
+      "utf8": "upload new frames from your device,\nor simply drop frames in from your grid."
+    } ]
+  }, {
+    "tStartMs": 150000,
+    "dDurationMs": 3320,
+    "segs": [ {
+      "utf8": "You'll also notice a few buttons\npop up below the prompt bar."
+    } ]
+  }, {
+    "tStartMs": 153480,
+    "dDurationMs": 2997,
+    "segs": [ {
+      "utf8": "These features help you refine your clips\nafter you generate them"
+    } ]
+  }, {
+    "tStartMs": 156560,
+    "dDurationMs": 1120,
+    "segs": [ {
+      "utf8": "to get them just right."
+    } ]
+  }, {
+    "tStartMs": 157920,
+    "dDurationMs": 3597,
+    "segs": [ {
+      "utf8": "For example, with the insert feature,\nyou're able to add elements to your clip"
+    } ]
+  }, {
+    "tStartMs": 161600,
+    "dDurationMs": 1880,
+    "segs": [ {
+      "utf8": "without generating an entirely new one."
+    } ]
+  }, {
+    "tStartMs": 166680,
+    "dDurationMs": 3517,
+    "segs": [ {
+      "utf8": "You can also shift the perspective of your\nclip by using Camera Control without"
+    } ]
+  }, {
+    "tStartMs": 170280,
+    "dDurationMs": 1560,
+    "segs": [ {
+      "utf8": "needing to describe it in your prompt."
+    } ]
+  }, {
+    "tStartMs": 173240,
+    "dDurationMs": 3120,
+    "segs": [ {
+      "utf8": "And if you like where your clip was going\nand you'd like to continue the story,"
+    } ]
+  }, {
+    "tStartMs": 176443,
+    "dDurationMs": 2017,
+    "segs": [ {
+      "utf8": "you can extend the length of your clip."
+    } ]
+  }, {
+    "tStartMs": 180560,
+    "dDurationMs": 1720,
+    "segs": [ {
+      "utf8": "That's a quick look at how to get\nstarted with Flow."
+    } ]
+  }, {
+    "tStartMs": 183200,
+    "dDurationMs": 1800,
+    "segs": [ {
+      "utf8": "We can't wait to see what you create."
+    } ]
+  } ]
+}

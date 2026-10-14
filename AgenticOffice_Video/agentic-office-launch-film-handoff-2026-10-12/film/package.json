@@ -1,0 +1,21 @@
+{
+  "name": "agentic-office-launch",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "check": "tsc --noEmit",
+    "render": "remotion render src/index.tsx AgenticOfficeLaunch19 out/agentic-office-launch-15-picture.mp4 --muted",
+    "mux": "ffmpeg -y -i out/agentic-office-launch-15-picture.mp4 -i ../../review/agentic-office-launch-11.mp4 -map 0:v -map 1:a -c:v copy -c:a copy -shortest -movflags +faststart out/agentic-office-launch-15.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "typescript": "5.8.3"
+  }
+}

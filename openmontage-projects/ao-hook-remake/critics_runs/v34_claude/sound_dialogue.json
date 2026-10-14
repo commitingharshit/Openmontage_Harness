@@ -1,0 +1,134 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 63,
+ "dimension_scores": {
+  "intelligibility": 72,
+  "performance_casting": 50,
+  "writing_for_the_ear": 75,
+  "pacing": 56,
+  "placement": 72
+ },
+ "issues": [
+  {
+   "shot_id": "00:28",
+   "category": "vo_line_collision",
+   "severity": 0.7,
+   "confidence": 0.7,
+   "evidence": "28.35 line match 0.64: heard 'deck still has the old number. prompt again...' while the 24.0 line's window ends 'but the' - the two lines butt with no gap, so 'But the' is swallowed into the previous read",
+   "suggested_action": "Leave >=0.35 s air: end the 24.0 line by 27.9 (trim 'in the chat' pause) or start n2c at 28.6, then remeasure"
+  },
+  {
+   "shot_id": "00:06-00:31",
+   "category": "rushed_pacing",
+   "severity": 0.65,
+   "confidence": 0.9,
+   "evidence": "hook lines read at 4.13, 4.08, 3.95, 4.17, 3.74, 4.55, 3.67 words/s (premium band 2.3-3.0; >3.5 rushed)",
+   "suggested_action": "Regenerate the hook lines at speed ~0.88 and cut words instead of time: e.g. 24.0 'So you ask for the deck. It builds one. In the chat.'"
+  },
+  {
+   "shot_id": "00:11",
+   "category": "low_match",
+   "severity": 0.55,
+   "confidence": 0.6,
+   "evidence": "'It says it's done.' match 0.78, heard 'it says it's done. then you' - the 6.0 line's window also ends 'it says': lines packed edge to edge",
+   "suggested_action": "Hold 'It says it's done.' on the giant Done card (11.1) with 0.4 s of air after it before 'Then you open the file' at 12.6+"
+  },
+  {
+   "shot_id": "00:15.5",
+   "category": "low_match",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "'So you fix it by hand. Then, an email.' match 0.83, 4.17 w/s; heard bleeds into 'please update'",
+   "suggested_action": "Split: 'So you fix it by hand.' on the typing insert at 15.6, 'Then an email.' on the notification at 17.1, then the partner voice at 18.4"
+  },
+  {
+   "shot_id": "whole",
+   "category": "tts_performance",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "Kokoro af_heart draft narrator across all 24 lines; brief calls it a draft",
+   "suggested_action": "Recast with a premium human-sounding read (low, warm, unhurried) before final; keep one voice for the spine and the British male only for the email"
+  },
+  {
+   "shot_id": "01:07",
+   "category": "misheard_product_word",
+   "severity": 0.3,
+   "confidence": 0.8,
+   "evidence": "'Assistants plan the work' heard as 'assistance plan the work'",
+   "suggested_action": "Re-read with a clear final /ts/ or rewrite 'Its assistants plan the work'"
+  },
+  {
+   "shot_id": "02:12-02:19",
+   "category": "vo_text_mismatch",
+   "severity": 0.25,
+   "confidence": 0.7,
+   "evidence": "VO 'Done. And this time, you've seen every change.' then end card reads 'This time, you checked.'",
+   "suggested_action": "Make VO and card the same words: VO 'Done. And this time, you checked.'"
+  },
+  {
+   "shot_id": "00:58.7",
+   "category": "long_line",
+   "severity": 0.25,
+   "confidence": 0.8,
+   "evidence": "18-word line 'Tell it what changed, once. It finds where that number lives: the model, the memo, the deck.' at 3.6 w/s",
+   "suggested_action": "Slow to 2.8 w/s and let the list land one item per screen beat (model/memo/deck)"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:28.35",
+   "evidence": "match 0.64"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:11.0",
+   "evidence": "match 0.78"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:15.55",
+   "evidence": "match 0.83"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Re-time the 6-31 s hook VO to <=3.2 words/s with >=0.35 s between lines so 'But the deck still has the old number' and 'It says it's done' stop colliding with their neighbours.",
+ "line_fixes": [
+  {
+   "t": "6.0",
+   "issue": "4.13 w/s",
+   "fix": "slow to 3.0 w/s; trim to 'You ask a chatbot to fix the memo.'"
+  },
+  {
+   "t": "11.0",
+   "issue": "match 0.78, no air",
+   "fix": "move to 11.1 on the Done card, 0.4 s silence after"
+  },
+  {
+   "t": "15.55",
+   "issue": "match 0.83, 4.17 w/s",
+   "fix": "split into two lines on the typing insert and the notification"
+  },
+  {
+   "t": "24.0",
+   "issue": "4.55 w/s, runs into next line",
+   "fix": "cut to 'So you ask for the deck. It builds one. In the chat.' at 3.0 w/s, end by 27.9"
+  },
+  {
+   "t": "28.35",
+   "issue": "match 0.64, 'But the' swallowed",
+   "fix": "start at 28.6 after the Done AGAIN chime decays"
+  },
+  {
+   "t": "67.7",
+   "issue": "'Assistants' heard 'assistance'",
+   "fix": "crisp the plural or rewrite 'Its assistants'"
+  },
+  {
+   "t": "132.0",
+   "issue": "differs from end card",
+   "fix": "'Done. And this time, you checked.'"
+  }
+ ]
+}

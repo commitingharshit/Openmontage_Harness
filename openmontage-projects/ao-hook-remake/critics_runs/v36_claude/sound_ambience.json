@@ -1,0 +1,118 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "room_tone_continuity": 62,
+  "world_building": 55,
+  "sound_perspective": 55,
+  "diegetic_logic": 68,
+  "designed_silence": 70
+ },
+ "issues": [
+  {
+   "shot_id": "01:55.0–01:55.6",
+   "category": "near_dead_air_at_cut",
+   "severity": 0.6,
+   "confidence": 0.75,
+   "evidence": "The loudness curve reads -68.0 dBFS at 115.0 and silencedetect starts at 115.14, right on the cut to the end card. The office bed (ends 112.3), city (ends 115.0) and dawn birds (fading out 114.4–115.4) all fade together before the end-card birds fade in from 115.3 over 0.6 s.",
+   "suggested_action": "Overlap the end-card birds or room tone to start at 114.6, so that the floor never drops below about -45 dBFS through the cut."
+  },
+  {
+   "shot_id": "02:00.4–02:01.4",
+   "category": "tail_drops_out",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "The curve reads -65.3 dBFS at 120.5 and silencedetect starts at 120.44, although the candidate claims 'birds/room tone to the last frame'. The bed and music fade-outs (1.0 s and 2.0 s) bottom out before the end.",
+   "suggested_action": "Keep the room tone or birds at about -48 dBFS to the final frame, and fade only in the last 0.3 s."
+  },
+  {
+   "shot_id": "00:49–01:46",
+   "category": "wrong_world_after_reveal",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "The post-reveal locations are a warm home room with candles and lamp (frames f_21, f_35, f_45), but they use the same office.mp3 as the night office, at 0.035. That level is also under a ratio-5 VO duck, so it is likely inaudible. The ticktock only runs 49–52.6.",
+   "suggested_action": "Give the warm room its own bed: low domestic air, a faint fridge or HVAC, a distant street, the clock at -50 dBFS throughout. High-pass at 80 Hz, steady at about -45 dBFS, not ducked below -52."
+  },
+  {
+   "shot_id": "00:00–00:46",
+   "category": "night_office_identity",
+   "severity": 0.35,
+   "confidence": 0.5,
+   "evidence": "The night office relies on a generic office.mp3 at 0.10. The hook frames show a dark office with colleagues and a world-map screen (f_13), but nothing in the cue list signals late night: no HVAC hum, no distant city, no empty-floor air.",
+   "suggested_action": "Layer an HVAC hum (-48 dBFS) and distant night traffic (-55) under the hook, and keep the office walla very low or remove it."
+  },
+  {
+   "shot_id": "00:49–01:47",
+   "category": "no_perspective_shift",
+   "severity": 0.35,
+   "confidence": 0.5,
+   "evidence": "Every product shot starts wide on the laptop in the room and pushes in up to 1.9×, but the room bed is one constant at 0.035 with no change between wide and screen-close.",
+   "suggested_action": "Automate the room bed: -42 dBFS on the wide, falling 4–6 dB and low-passing as the camera pushes into the screen."
+  },
+  {
+   "shot_id": "01:52.4–01:55.3",
+   "category": "second_silence",
+   "severity": 0.25,
+   "confidence": 0.5,
+   "evidence": "The film uses designed silence twice: 43.6–46 (room tone at -48 dBFS plus the thud, well built) and 112–115 under dawn, sinking to -68. The first is earned. The second competes with it and loses its floor.",
+   "suggested_action": "Keep dawn quiet but alive (birds and city at -40 to -45 dBFS), so that the 43.6 silence stays the film's single true void."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "a location change with no ambience change",
+   "shot_id": "00:49.0",
+   "evidence": "night office → warm home room both use office.mp3 (0.10 → 0.035); only a 3.6 s ticktock differs"
+  }
+ ],
+ "ambience_plan": [
+  {
+   "location": "night office (0–46)",
+   "layers": [
+    "HVAC hum",
+    "distant night traffic",
+    "faint electrical buzz of monitors",
+    "very sparse empty-floor air"
+   ],
+   "level_dbfs": "-46 to -50"
+  },
+  {
+   "location": "hook silence 43.6–46",
+   "layers": [
+    "same night-office air only",
+    "head-drop thud"
+   ],
+   "level_dbfs": "-48"
+  },
+  {
+   "location": "warm home room (49–107.9)",
+   "layers": [
+    "domestic room air",
+    "slow clock tick",
+    "distant street",
+    "faint lamp hum"
+   ],
+   "level_dbfs": "-45 (wide) to -50 (screen push)"
+  },
+  {
+   "location": "lights on/dawn (107.9–115.3)",
+   "layers": [
+    "city waking",
+    "early birds",
+    "window air"
+   ],
+   "level_dbfs": "-40 to -45"
+  },
+  {
+   "location": "end card (115.3–121.4)",
+   "layers": [
+    "soft birds",
+    "room air"
+   ],
+   "level_dbfs": "-48 to the last frame"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Give the warm room its own steady, audible bed (domestic air, clock and street at about -45 dBFS, not ducked below -52), and bridge 114.6–115.6 and the last second, so that no window falls to -65/-68 dBFS."
+}

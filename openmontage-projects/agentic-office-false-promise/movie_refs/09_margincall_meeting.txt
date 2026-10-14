@@ -1,0 +1,179 @@
+  19.3-  21.3 Please, sit down.
+  21.3-  25.7 Welcome, everyone.
+  25.7-  27.4 I must apologize for dragging you all here
+  27.4-  28.7 as I was in a common hour,
+  28.7-  29.9 but from what I've been told,
+  29.9-  32.7 this matter needs to be dealt with urgently.
+  32.7-  35.7 So urgently, in fact, probably should have been dressed weeks ago,
+  35.7-  38.2 but that is spilt milk under the bridge.
+  38.2-  43.2 So, why doesn't somebody tell me what they think is going on here?
+  43.2-  46.2 Mr. Told, as I mentioned earlier,
+  46.2-  49.2 if you compare the figure at the top of page 13...
+  49.2-  50.7 Jared is a little early for all that.
+  50.7-  54.5 Just speak to me in plain English.
+  54.5-  55.5 Okay.
+  55.5-  57.5 In fact, I'd like to speak to the guy who put this together.
+  57.5-  58.5 Mr. Sullivan, is it?
+  58.5-  60.0 Does he speak English?
+  60.0-  61.0 Sir?
+  61.0-  63.0 I'd like to speak with the analyst
+  63.0-  64.5 who seems to stumble across this mess.
+  64.5-  65.5 Certainly.
+  65.5-  67.5 That would be Peter Sullivan, right here.
+  67.5-  69.5 Oh, Mr. Sullivan, you're here.
+  69.5-  70.5 Good morning.
+  70.5-  73.0 Maybe you could tell me what you think is going on here.
+  73.0-  77.0 And please, speak as you might to a young child
+  77.0-  79.5 or a golden retriever.
+  79.5-  81.0 It wasn't brains that got me here.
+  81.0-  84.8 I can show you of that.
+  84.8-  88.8 Well, sir, as you may or may not know,
+  88.8-  92.3 I work here for Mr. Rogers as an associate
+  92.3-  95.8 in the Risk Assessment and Management Office at MBS.
+  95.8-  99.3 Please, just relax, stand up, tell us the clear voice.
+  99.3- 104.6 What is the nature of the problem?
+ 104.6- 108.4 Okay, well, as you probably know,
+ 108.4- 110.4 over the last 36 to 40 months,
+ 110.4- 115.4 the firm has begun packaging new MBS products.
+ 115.4- 118.9 That combine several different tranches
+ 118.9- 122.9 of rating classification in one tradable security.
+ 122.9- 124.9 This has been enormously profitable,
+ 124.9- 127.4 as I imagine you noticed.
+ 127.4- 128.9 Aha.
+ 128.9- 130.9 Well, the firm is currently doing a considerable amount
+ 130.9- 132.4 of this business every day.
+ 132.4- 134.9 Now, the problem, which is, I guess,
+ 134.9- 136.9 why we are here tonight,
+ 136.9- 138.9 is that it takes us, the firm,
+ 138.9- 142.9 about a month to layer these products correctly,
+ 142.9- 144.4 thereby posing a challenge
+ 144.4- 146.9 from a risk management standpoint.
+ 146.9- 148.9 And so that challenge is?
+ 148.9- 151.9 Well, we have to hold these assets on our books
+ 151.9- 153.9 longer than we might ideally like to.
+ 153.9- 154.9 Yes.
+ 154.9- 156.4 But the key factor here is,
+ 156.4- 157.9 these are essentially just mortgages,
+ 157.9- 160.4 so that has allowed us to push the leverage
+ 160.4- 162.9 considerably beyond what you might be willing
+ 162.9- 165.4 or allowed to do in any other circumstance,
+ 165.4- 167.9 thereby pushing the risk profile
+ 167.9- 170.9 without raising any red flags.
+ 170.9- 172.9 Now, thank you, sir, sit down.
+ 172.9- 175.4 What I'm guessing your report here says,
+ 175.4- 177.9 and give me some rope here,
+ 177.9- 179.9 what I'm guessing it says is that,
+ 179.9- 182.9 considering the, shall we say, bumpy road
+ 182.9- 184.9 we've been on the last week or so,
+ 184.9- 186.9 that the figures your brilliant coworkers
+ 186.9- 189.9 up the line ahead of you have come up with
+ 189.9- 192.4 don't make much sense anymore,
+ 192.4- 194.9 considering what's taking place today.
+ 194.9- 196.9 Actually, not what's taking place today,
+ 196.9- 199.9 but what's already taken place over the last two weeks.
+ 199.9- 203.4 So you're saying this has already happened?
+ 203.4- 204.4 Sort of.
+ 204.4- 210.5 And, Mr. Sullivan, what does your model say
+ 210.5- 214.5 that that means for us here?
+ 214.5- 217.0 Well, that's where it becomes a projection.
+ 217.0- 221.0 But, um...
+ 221.0- 224.0 You're speaking with me, Mr. Sullivan.
+ 224.0- 226.0 Well, sir,
+ 226.0- 230.0 if those assets decrease by just 25%
+ 230.0- 232.5 and remain on our books,
+ 232.5- 235.0 that loss would be greater
+ 235.0- 237.0 than the current market capitalization
+ 237.0- 244.4 of this entire company.
+ 244.4- 246.9 What you're telling me
+ 246.9- 251.4 is that the music is about to stop
+ 251.4- 254.4 and we're gonna be left holding the biggest bag
+ 254.4- 257.4 of odorous excrement ever assembled
+ 257.4- 266.4 in the history of capitalism.
+ 266.4- 269.4 Sir, I'm not sure that I would put it that way,
+ 269.4- 273.4 but let me clarify, using your analogy,
+ 273.4- 276.4 what this model shows
+ 276.4- 280.7 is the music, so to speak, just slowing.
+ 280.7- 282.7 If the music were to stop, as you put it,
+ 282.7- 286.2 then this model wouldn't be even close to that scenario.
+ 286.2- 289.2 It would be considerably worse.
+ 289.2- 295.1 Let me tell you something, Mr. Sullivan.
+ 295.1- 299.0 Do you care to know
+ 299.0- 301.5 why I'm in this chair with you all?
+ 301.5- 305.5 I mean, why I earned the big bucks.
+ 305.5- 306.5 Yes.
+ 306.5- 310.0 I'm here for one reason and one reason alone.
+ 310.0- 313.0 I'm here to guess what the music might do
+ 313.0- 317.0 a week, a month, a year from now.
+ 317.0- 319.0 That's it.
+ 319.0- 323.5 Nothing more.
+ 323.5- 325.5 I'm standing here tonight
+ 325.5- 332.0 I'm afraid that I don't hear a thing.
+ 332.0- 339.0 Just silence.
+ 339.0- 358.2 But we know the music was stopped.
+ 358.2- 360.2 What can we do about it?
+ 360.2- 363.7 Mr. Cohen, Ms. Robertson,
+ 363.7- 367.7 I'm afraid I think this is where you were supposed to step back in.
+ 367.7- 373.4 Lord knows we've relied enough on Mr. Sullivan tonight.
+ 373.4- 383.9 What do you have for us?
+ 383.9- 387.9 What have I told you since the first day you stepped into my office?
+ 387.9- 391.9 There are three ways to make a living in this business.
+ 391.9- 395.9 Be first, be smarter, or cheat.
+ 395.9- 397.9 No, I don't cheat.
+ 397.9- 403.4 And although I like to think we have some pretty smart people in this building,
+ 403.4- 407.4 it sure is a hell of a lot easier to just be first.
+ 407.4- 409.4 So at all, today?
+ 409.4- 413.9 Is that even possible, Sam?
+ 413.9- 418.4 Yes, but at what cost?
+ 418.4- 421.7 I'll have to pay.
+ 421.7- 423.2 Really?
+ 423.2- 425.2 I think so.
+ 425.2- 429.2 Where is this going to come back to us?
+ 429.2- 431.2 Everywhere.
+ 431.2- 435.2 Sam, I don't think you seem to understand what your boy here has just said.
+ 435.2- 449.3 If I made you, how would you do this?
+ 449.3- 451.8 Well, you call the traders in for the normal 6.30 meeting,
+ 451.8- 455.3 and you'd be honest with them, because they're going to know it's the end either way.
+ 455.3- 458.3 So you're going to have to throw them a bone and a pretty big one.
+ 458.3- 461.3 And then you've got to come out of the gate, storming.
+ 461.3- 463.3 No swaps, no nothing.
+ 463.3- 465.3 40% done by 10.15.
+ 465.3- 467.3 By 11 o'clock, all your trades have to be gone,
+ 467.3- 470.3 because by lunchtime, word's going to be out.
+ 470.3- 473.3 And by 2 o'clock, you're going to be selling at 65 cents on the dollar,
+ 473.3- 474.3 if you're lucky.
+ 474.3- 478.3 And then the Feds are going to be in here, up your ass, trying to slow you down.
+ 478.3- 479.3 Ramesh.
+ 479.3- 480.3 They can slow you down.
+ 480.3- 481.3 They can't stop you.
+ 481.3- 483.3 It's yours to sell.
+ 483.3- 488.3 But, John, even if we manage to pull that off,
+ 488.3- 491.3 and that's saying something,
+ 491.3- 494.3 the real question is, who are we selling this to?
+ 494.3- 497.3 Same people we've been selling it to for the last two years,
+ 497.3- 499.3 and whoever else will buy it.
+ 499.3- 502.3 John, if you do this,
+ 502.3- 505.3 you will kill the market for years.
+ 505.3- 508.0 It's over.
+ 508.0- 511.0 And you're selling something that you know has no value.
+ 511.0- 516.0 We are selling to willing buyers at the current fair market price,
+ 516.0- 520.0 so that we may survive.
+ 520.0- 524.0 You will never sell anything to any of those people ever again.
+ 524.0- 525.0 I understand.
+ 525.0- 526.0 Do you?
+ 526.0- 528.0 Do you?
+ 528.0- 530.0 This is it.
+ 530.0- 532.0 I'm telling you, this is it.
+ 532.0- 545.6 Now, it's four o'clock.
+ 545.6- 548.6 Jared, you got till five to break this down and draw me off the plan.
+ 548.6- 551.6 Is there anybody else who knows what's in here at the moment,
+ 551.6- 553.6 block by block?
+ 553.6- 555.6 Eric Dale.
+ 555.6- 556.6 And where is he?
+ 556.6- 559.6 As of today, he's no longer with the firm.
+ 559.6- 562.6 We have been trying to locate him.
+ 562.6- 567.2 Carmelo.
+ 567.2- 568.2 Yes.
+ 568.2- 570.2 Get me Eric Dale here by 6.30.
+ 570.2- 571.2 It's done.
+ 571.2- 574.2 We meet back here in an hour.
+ 574.2- 578.0 Sam, let's talk.

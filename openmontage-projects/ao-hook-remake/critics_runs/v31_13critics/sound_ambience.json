@@ -1,0 +1,110 @@
+{
+  "critic": "ambience_space_silence",
+  "stage": "animatic",
+  "score": 77,
+  "dimension_scores": {
+    "room_tone_continuity": 68,
+    "world_building": 78,
+    "sound_perspective": 70,
+    "diegetic_logic": 86,
+    "designed_silence": 88
+  },
+  "issues": [
+    {
+      "shot_id": "01:24.11–01:25.12",
+      "category": "digital_silence",
+      "severity": 0.85,
+      "confidence": 1,
+      "evidence": "Measured silence starts at 84.114667 s; digital_silence_windows_s includes 84.5. The film continues to 85.12 s with the logo and CTA visible, rather than an intended black beat.",
+      "suggested_action": "Carry a quiet ambience or identity-tone tail through the final visible frame; place any complete audio cutoff at the picture endpoint."
+    },
+    {
+      "shot_id": "00:00–00:05",
+      "category": "missing_location_air",
+      "severity": 0.45,
+      "confidence": 0.9,
+      "evidence": "The opening shows the protagonist's email workspace, but its listed layers are 'buzz, bass pulse, fast heartbeat'; the office ambience cue begins only at 5.05 s.",
+      "suggested_action": "Start faint office air and filtered distant traffic beneath the opening, then bridge that same ambience through the rewind into the desk shot."
+    },
+    {
+      "shot_id": "00:05–00:44.57",
+      "category": "sound_perspective",
+      "severity": 0.4,
+      "confidence": 0.75,
+      "evidence": "The frames alternate a wide occupied office, intimate typing and reaction inserts, and screen views. The mix specifies one office.mp3 bed at a fixed gain from 5.05 to 43.6 s, without camera-dependent EQ or spatial changes.",
+      "suggested_action": "Verify the ambience stem across these cuts; retain continuous HVAC while bringing distant coworker activity forward in the wide shot and reducing it beneath close reactions and dry keyboard details."
+    },
+    {
+      "shot_id": "00:49.60–01:16.10",
+      "category": "room_tone_bridge",
+      "severity": 0.35,
+      "confidence": 0.8,
+      "evidence": "Office ambience ends at 49.6 s and returns at 72.6 s. The intervening product section lists music and UI effects, while the return to Send restores office air over just a 0.3 s fade.",
+      "suggested_action": "Verify whether the product montage retains an office setting; if it does, preserve a very low office bed underneath it, and introduce the returning desk ambience before the 72.6 s cut."
+    },
+    {
+      "shot_id": "01:16.10–01:19",
+      "category": "window_sound_perspective",
+      "severity": 0.25,
+      "confidence": 0.6,
+      "evidence": "The sunrise frames look outward through an office window. The timeline introduces 'morning city ambience and birds,' but supplies no filtering or distance treatment.",
+      "suggested_action": "Verify the dawn stems; attenuate and low-pass exterior traffic and birds to suggest sound entering through the window, retaining faint interior air."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Digital silence longer than 0.5 s is forbidden except during an intended black beat.",
+      "shot_id": "01:24.11–01:25.12",
+      "evidence": "Measured silence begins at 84.114667 s and the film lasts 85.12 s, leaving approximately 1.0 s of dead air beneath the visible ending."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Extend a quiet ambience or identity-tone tail through the final CTA to eliminate the measured digital-silence failure.",
+  "ambience_plan": [
+    {
+      "location": "Night office and email workspace",
+      "layers": [
+        "Continuous HVAC air",
+        "Filtered distant traffic",
+        "Faint coworker movement in wide shots",
+        "Dry foreground keyboard and mouse details"
+      ],
+      "level_dbfs": "Suggested ambience stem RMS: -38 to -32"
+    },
+    {
+      "location": "Stopped Send cursor and pre-turn pause",
+      "layers": [
+        "Retained office air",
+        "Subtle protagonist breath",
+        "Withdrawn score and heartbeat"
+      ],
+      "level_dbfs": "Suggested ambience stem RMS: -42 to -36"
+    },
+    {
+      "location": "Product montage and return to desk",
+      "layers": [
+        "Very low office air where the setting remains visible",
+        "Localized UI ticks",
+        "Office ambience J-cut into the returning email"
+      ],
+      "level_dbfs": "Suggested ambience stem RMS: -42 to -36"
+    },
+    {
+      "location": "Office window at dawn",
+      "layers": [
+        "Interior air",
+        "Distant filtered morning traffic",
+        "Sparse birds beyond the window"
+      ],
+      "level_dbfs": "Suggested combined ambience stem RMS: -38 to -32"
+    },
+    {
+      "location": "Final logo and CTA",
+      "layers": [
+        "Fading morning-air bridge",
+        "Soft identity-tone decay through the picture endpoint"
+      ],
+      "level_dbfs": "Suggested tail RMS: -44 to -38; no digital mute while picture remains"
+    }
+  ]
+}

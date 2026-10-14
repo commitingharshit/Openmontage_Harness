@@ -1,0 +1,123 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 71,
+ "dimension_scores": {
+  "arc_serves_story": 80,
+  "hit_points": 58,
+  "genre_and_emotion_fit": 68,
+  "motif": 72,
+  "ending": 74
+ },
+ "issues": [
+  {
+   "shot_id": "whole",
+   "category": "hits_are_volume_steps",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "Post-reveal score is one library track (music_digital_clouds_175) re-entered at fixed source offsets with volume steps at 78.0 (0.21), 92.6 (0.34), 96.3 (0.19), 105.0 (0.06), 107.9 (0.27); src 43.6 s at 92.6 is not shown to be a bar line, so the 'downbeat' on Accept-all is a level jump, not a musical accent. cuts_on_sound_pct 44.4.",
+   "suggested_action": "Beat-map the track (hyperframes beats or librosa) and slide the 92.6 and 107.9 entries so a bar-1 downbeat lands at 93.1 (Accept) and 107.65 (Send click)."
+  },
+  {
+   "shot_id": "01:56.8 / 02:01.3",
+   "category": "double_sting",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "identity.mp3 fires at 116.8 and again at 121.3 inside one end card, 4.5 s apart (plus 46.2, 81.5, 107.95 earlier: five uses).",
+   "suggested_action": "Drop the 116.8 sting (or the 81.5 one); keep the motif to reveal 46.2, Send 107.95 and the button 121.3 so it means 'checked and done'."
+  },
+  {
+   "shot_id": "00:49-01:18",
+   "category": "flat_product_bed",
+   "severity": 0.3,
+   "confidence": 0.55,
+   "evidence": "Bed held at a single 0.16 for 29 s across templates, prompt, Room, proposal and plan; section loudness 49-78 s averages -20.6 dBFS with no music change at 'Bring in your team' (67.4).",
+   "suggested_action": "Add a small lift (+2 dB or a new layer such as a pulse/arp) at 67.4 when people join, so the proof act steps up before the 78 s lift."
+  },
+  {
+   "shot_id": "00:05-00:17",
+   "category": "jazz_tone",
+   "severity": 0.25,
+   "confidence": 0.45,
+   "evidence": "'music_hazy_after_hours_132' lounge jazz under the helpful-chatbot act at 0.17; ironic comfort works, but at 0.17 under dense key clicks it may read as hold music rather than a designed choice.",
+   "suggested_action": "Either commit (bring it to 0.22 and filter it into the suspense bed at 17.3) or replace with a light, too-pleasant marimba/pluck at ~120 bpm."
+  },
+  {
+   "shot_id": "00:43.6-00:46.3",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "Music stops at 43.6; curve hits -49.1 dBFS at 44.0 and -47.4 at 45.5 under room tone + heartbeat, then identity sting at 46.2 on the reveal: clear change of state at the product reveal.",
+   "suggested_action": "Keep."
+  },
+  {
+   "shot_id": "01:52-02:02.6",
+   "category": "ending_good",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "Near-silence 112-115.5 (avg -38.1 dBFS) under dawn, music returns 115.6, brand read 119.0-120.96 ducked ~11 dB clear, button sting 121.3 after the name.",
+   "suggested_action": "Keep; just start the 2.0 s fade-out after 121.3, not at 120.6 under the last word."
+  }
+ ],
+ "constraint_failures": [],
+ "cue_sheet": [
+  {
+   "act": "cold open 0-5",
+   "feel": "dread pulse",
+   "tempo_bpm": "~60 heartbeat",
+   "instrumentation": "sub pulse, heartbeat, rewind glitch",
+   "hits": "rewind at 4.45"
+  },
+  {
+   "act": "helpful AI 5-17",
+   "feel": "too-pleasant, light",
+   "tempo_bpm": "120-132",
+   "instrumentation": "marimba/lounge keys, brushed kit",
+   "hits": "chime on 'done' 11.05, cut off at the email 17.1"
+  },
+  {
+   "act": "grind 17-43.6",
+   "feel": "tightening suspense",
+   "tempo_bpm": "90 rising",
+   "instrumentation": "low strings drone, pulse, clock, riser",
+   "hits": "riser peaks into impact 39.7; hard stop 43.6"
+  },
+  {
+   "act": "reveal 46.3",
+   "feel": "breath then clarity",
+   "tempo_bpm": "free",
+   "instrumentation": "identity sting over room tone",
+   "hits": "46.2"
+  },
+  {
+   "act": "proof 49-91.8",
+   "feel": "confident, precise",
+   "tempo_bpm": "~100-110",
+   "instrumentation": "soft synth pads, plucked arp, light kick from 67.4",
+   "hits": "lift at 67.4 and 78"
+  },
+  {
+   "act": "hero 91.8-106",
+   "feel": "release",
+   "tempo_bpm": "same",
+   "instrumentation": "full kit enters",
+   "hits": "bar-1 downbeat on Accept-all 93.1"
+  },
+  {
+   "act": "payoff/end 106-122.6",
+   "feel": "dawn, relief",
+   "tempo_bpm": "same, half-time",
+   "instrumentation": "pads + piano, then silence, then button",
+   "hits": "Send 107.65, near-silence 112-115.5, button 121.3"
+  }
+ ],
+ "free_source_suggestions": [
+  "Pixabay: 'corporate tension minimal pulse'",
+  "Mixkit: 'tech ambient uplifting'",
+  "YouTube Audio Library: mood 'Inspirational', genre 'Ambient', 'cinematic piano build'",
+  "Pixabay: 'marimba light happy loop'",
+  "Mixkit: 'logo sting soft'"
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Beat-map the product track and re-slip its entries so real downbeats land on Accept-all (93.1) and Send (107.65), and cut the duplicate end-card sting at 116.8."
+}

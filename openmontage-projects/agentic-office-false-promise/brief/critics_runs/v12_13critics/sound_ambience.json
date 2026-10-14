@@ -1,0 +1,105 @@
+{
+  "critic": "ambience_space_silence",
+  "stage": "animatic",
+  "score": 47,
+  "dimension_scores": {
+    "room_tone_continuity": 30,
+    "world_building": 45,
+    "sound_perspective": 60,
+    "diegetic_logic": 75,
+    "designed_silence": 30
+  },
+  "issues": [
+    {
+      "shot_id": "00:26–00:28",
+      "category": "digital_dead_air",
+      "severity": 1.0,
+      "confidence": 1.0,
+      "evidence": "Measured digital_silence_windows_s lists 26.0, 26.5, 27.0 and 27.5; the 26.5 frame still shows David's flagged slide and message. black_starts_s is empty.",
+      "suggested_action": "Keep the score's hard stop, but carry quiet office air beneath the flagged message through Maya's reaction and into the product turn."
+    },
+    {
+      "shot_id": "01:13.2–01:16.2",
+      "category": "location_ambience_unchanged",
+      "severity": 0.85,
+      "confidence": 0.95,
+      "evidence": "The frame changes to '9:02 AM · Board meeting', while the timeline specifies one room-tone bed from 70.7–82 with no boardroom ambience transition.",
+      "suggested_action": "Introduce brighter, roomier boardroom air just before 73.2, crossfade out the night-office bed, and include faint distant office activity."
+    },
+    {
+      "shot_id": "00:00–01:10",
+      "category": "generic_world_bed",
+      "severity": 0.55,
+      "confidence": 0.75,
+      "evidence": "The timeline names a 'room-tone bed' but specifies no HVAC, distant city or traffic layers; ambience is also unaccounted for between 25 and 70.7, where score carries most of the sequence.",
+      "suggested_action": "Verify the ambience stem in isolation, then maintain identifiable HVAC and filtered city air beneath the office scenes and screen inserts, including the confident cue."
+    },
+    {
+      "shot_id": "00:28.2–00:30.7",
+      "category": "reaction_sound_perspective",
+      "severity": 0.4,
+      "confidence": 0.65,
+      "evidence": "Maya's close-up follows the flagged message; the measured 28-second section is approximately -49.5 dBFS, and the timeline specifies no breath or perspective adjustment.",
+      "suggested_action": "Verify this close-up's stems; retain quiet air and add a restrained, dry breath if absent, reducing distant city detail relative to the wider desk shot."
+    },
+    {
+      "shot_id": "01:10.2–01:13.2",
+      "category": "physical_action_without_foley",
+      "severity": 0.35,
+      "confidence": 0.8,
+      "evidence": "The 71.5 frame shows Maya's hand on the laptop lid; the listed SFX contain no lid, hinge or desk-contact sound during this beat.",
+      "suggested_action": "Check the moving shot for the exact lid action and synchronize a soft hinge movement or lid contact, with the office bed continuing underneath."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Digital silence longer than 0.5 seconds is forbidden except during an intended black beat.",
+      "shot_id": "00:26–00:28",
+      "evidence": "Four consecutive measured digital-silence windows span approximately two seconds; the flagged-slide frame remains visible and no black interval is detected."
+    },
+    {
+      "rule": "A location change must include an ambience change.",
+      "shot_id": "01:13.2",
+      "evidence": "The night office changes to the morning boardroom, but the supplied timeline carries the same 70.7–82 room-tone bed without a location-specific transition."
+    }
+  ],
+  "ambience_plan": [
+    {
+      "location": "Night office, wide shots and screen inserts",
+      "layers": [
+        "Steady HVAC air",
+        "Filtered distant city and occasional faint traffic",
+        "Sparse synchronized desk and laptop foley"
+      ],
+      "level_dbfs": "Proposed ambience stem RMS: -42 to -36"
+    },
+    {
+      "location": "Night office, close-ups and pre-turn pause",
+      "layers": [
+        "Continuous subdued HVAC air",
+        "Reduced distant city",
+        "Intimate dry breath where supported by performance"
+      ],
+      "level_dbfs": "Proposed ambience stem RMS: -46 to -40"
+    },
+    {
+      "location": "Morning boardroom",
+      "layers": [
+        "Brighter ventilation air with restrained room reflections",
+        "Faint distant phones or corridor activity",
+        "Subtle paper handling if visible"
+      ],
+      "level_dbfs": "Proposed ambience stem RMS: -42 to -36"
+    },
+    {
+      "location": "Final title card",
+      "layers": [
+        "Soft fading boardroom air beneath the tagline",
+        "Continuous low-level tail through the final hold"
+      ],
+      "level_dbfs": "Proposed ambience stem RMS: -48 to -44"
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Replace the digital void at 26–28 seconds with continuous quiet office air, preserving the score stop as a deliberate dramatic pause."
+}

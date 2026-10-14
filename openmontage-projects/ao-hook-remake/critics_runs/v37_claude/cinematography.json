@@ -1,0 +1,134 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 51,
+ "dimension_scores": {
+  "lighting_shape": 55,
+  "lens_depth": 56,
+  "composition": 47,
+  "camera_movement": 50,
+  "frame_design_ui": 48
+ },
+ "issues": [
+  {
+   "shot_id": "00:06–00:09",
+   "category": "set_continuity_flip",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "06.25 she sits at a desk in a blue open-plan office, striped shirt, desk lamp; 08.75 'her laptop' is top-down on a sofa/bed with a pillow, dark long sleeves, no stripes",
+   "suggested_action": "Replace the top-down plate with a desk-surface top-down (or an OTS from the 06.25 angle) in the same blue office, sleeves striped; or cut the protagonist wide and keep only the couch world"
+  },
+  {
+   "shot_id": "00:26–00:36",
+   "category": "flat_ui_unmotivated_light",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "26.25, 28.75, 33.75, 36.25: chat/deck UIs are flat planes under an oval hot-spot vignette with no source; 36.25 'Board_Presentation.pptx · regenerated' card floats on near-black",
+   "suggested_action": "Composite these beats onto her laptop screen (as 08.75/13.75 already do) or on an angled plane in the blue office with screen-glow spill and DOF; kill the oval hot-spot"
+  },
+  {
+   "shot_id": "00:01–00:04, 00:28.75",
+   "category": "accidental_crop",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "01.25/03.75 email window clipped at the top ('Subject' line cut by frame edge); 28.75 chat window cut top-left, 'Here's your updated memo' sliced",
+   "suggested_action": "Reframe with headroom: show the window edge or move in tight deliberately on the ≠ cards and Send button"
+  },
+  {
+   "shot_id": "01:36–01:41",
+   "category": "text_fighting_image",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "96.25 'Bring in your team.' pill sits on top of the ribbon icons; 101.25 'You decide what lands.' overlaps document text; 83.75 'AGENTIC OFFICE · ONE SLIDE ELEMENT' label collides with list row text",
+   "suggested_action": "Give captions a clean zone (lower third over blurred background) and offset labels off the UI content"
+  },
+  {
+   "shot_id": "00:53–01:06 product inserts",
+   "category": "centred_floating_panels",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "53.75, 103.75, 106.25: panel dead-centre or hard left on a uniform blur with no depth cue or light falloff; same panel-on-bokeh treatment repeated ~20 times",
+   "suggested_action": "Alternate: screen-in-room (warm laptop 3/4), macro of screen at a raked angle with focus falloff, and the floating plane; vary angle, not just crop"
+  },
+  {
+   "shot_id": "00:16.25",
+   "category": "missed_focus",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "hands insert is soft throughout (measured sharpness 1.2 at 15.6)",
+   "suggested_action": "Swap for a sharper macro with focus on the fingertips/keycaps, 100mm, f/2.8"
+  },
+  {
+   "shot_id": "01:56–01:59",
+   "category": "unreadable_frame",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "118.75 'This time, you checked.' is near-black on dark gradient, illegible",
+   "suggested_action": "Verify the fade; hold the line at full contrast for ≥1.5 s with a soft key light / glow behind it"
+  },
+  {
+   "shot_id": "01:41–01:52",
+   "category": "world_switch_unmotivated",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Ending laptop (108.75/111.25) is in a candle-lit home room, not the blue office where she failed; the payoff is not on her",
+   "suggested_action": "Pay off in her office: same desk, lamp side preserved, dawn light now warming her face as she clicks Send"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "identity or set flip across a cut",
+   "shot_id": "00:06.25→00:08.75",
+   "evidence": "office desk + striped shirt → sofa/pillow + dark sleeves for the same 'her laptop'"
+  },
+  {
+   "rule": "shot with no motivated light source",
+   "shot_id": "00:26.25–00:36.25",
+   "evidence": "flat UI under an unsourced oval spotlight on black"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Put every problem-act UI beat (26–44 s) onto her laptop in the same blue office set as 06.25, with screen glow on her face, so the hook has one continuous, lit world instead of flat spotlighted screenshots.",
+ "per_shot": [
+  {
+   "t": "00:36",
+   "grade_A_to_F": "F",
+   "fix": "composite the regenerated deck onto her laptop screen, OTS, 50mm f/2, screen spill on her shoulder"
+  },
+  {
+   "t": "00:26",
+   "grade_A_to_F": "D",
+   "fix": "chat window on her screen at a 3/4 angle, keyboard foreground soft, remove hot-spot vignette"
+  },
+  {
+   "t": "00:28",
+   "grade_A_to_F": "D",
+   "fix": "reframe with headroom; push into the partner notification only"
+  },
+  {
+   "t": "00:11",
+   "grade_A_to_F": "D",
+   "fix": "'Done.' as a reflection on the screen glass over her face, not a flat type card"
+  },
+  {
+   "t": "00:08",
+   "grade_A_to_F": "D",
+   "fix": "reshoot/replace top-down on her office desk, striped sleeves, lamp key frame-left"
+  },
+  {
+   "t": "01:46",
+   "grade_A_to_F": "D",
+   "fix": "file tree on a raked plane with falloff, or on the warm laptop screen; text not floating in empty blur"
+  },
+  {
+   "t": "01:36",
+   "grade_A_to_F": "C",
+   "fix": "caption below the panel on blurred area; don't overlay the ribbon"
+  },
+  {
+   "t": "00:01",
+   "grade_A_to_F": "C",
+   "fix": "start on the real dark-room laptop and hold; frame the email with headroom, 35mm push"
+  }
+ ]
+}

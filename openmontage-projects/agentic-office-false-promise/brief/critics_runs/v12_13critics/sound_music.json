@@ -1,0 +1,113 @@
+{
+  "critic": "music_and_score",
+  "stage": "animatic",
+  "score": 71,
+  "dimension_scores": {
+    "arc_serves_story": 78,
+    "hit_points": 60,
+    "genre_and_emotion_fit": 80,
+    "motif": 42,
+    "ending": 82
+  },
+  "issues": [
+    {
+      "shot_id": "00:39–01:10",
+      "category": "proof_act_plateau",
+      "severity": 0.66,
+      "confidence": 0.9,
+      "evidence": "The timeline assigns one confident cue, 'Talent in the Air', to 30.7–70.7. Measured dynamic_sections identify the rise at 32 seconds but no subsequent section boundary through the review, acceptance and corrected memo.",
+      "suggested_action": "Divide the cue into a restrained proof passage, a thinner passage under 'Accept or reject each one', and a brief harmonic resolution at the 63.2-second accepted-state cut."
+    },
+    {
+      "shot_id": "00:36–01:13",
+      "category": "weak_musical_hit_alignment",
+      "severity": 0.61,
+      "confidence": 0.86,
+      "evidence": "Measured cuts_on_sound_pct is 45%; cuts at 36.2, 42.2, 48.7, 51.2 and 73.2 seconds lack a detected sound event. This metric includes all sound layers, so it does not establish musical accents specifically.",
+      "suggested_action": "Verify the music stem against these cuts, then align phrase changes or restrained accents with the Excel proof at 42.2, review panel at 51.2 and boardroom payoff at 73.2; leave incidental cuts unaccented."
+    },
+    {
+      "shot_id": "00:31 / 01:04 / 01:16",
+      "category": "unestablished_product_motif",
+      "severity": 0.55,
+      "confidence": 0.65,
+      "evidence": "The timeline specifies two separate stock cues and a UI click, but identifies no recurring musical phrase connecting 'Introducing Diffs', 'It drives. You approve' and the final brand line. Onset measurements cannot verify melodic recurrence.",
+      "suggested_action": "Verify whether the confident cue already contains a usable short motif; feature it at the reveal and acceptance resolution, then finish its cadence before the final VO."
+    },
+    {
+      "shot_id": "00:26–00:28",
+      "category": "digital_gap_in_score_drop",
+      "severity": 0.46,
+      "confidence": 1.0,
+      "evidence": "The hard stop supports David's 'Which is it?' punch, but measured digital_silence_windows_s are 26.0, 26.5, 27.0 and 27.5; the next measured section returns at approximately −49.5 dBFS.",
+      "suggested_action": "Keep the score completely stopped, but carry a barely audible room-tone floor continuously through the pause and Maya's reaction so the drop feels designed."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Restructure the confident cue around proof, review and acceptance so the product act develops toward a clear resolution instead of remaining one continuous musical state.",
+  "cue_sheet": [
+    {
+      "act": "Opening contradiction",
+      "time": "00:00–00:06.7",
+      "feel": "Exposed, unsettled",
+      "tempo_bpm": null,
+      "instrumentation": "Room tone; optional sustained tonal texture",
+      "hits": "Keep the opening VO exposed; introduce the pulse with David's first message."
+    },
+    {
+      "act": "Manual grind",
+      "time": "00:06.7–00:25.1",
+      "feel": "Contained pressure that accumulates",
+      "tempo_bpm": 80,
+      "instrumentation": "Muted synth pulse, low drone, sparse ticking percussion",
+      "hits": "Add layers at the model and memo steps; tighten tension around the stale deck box; stop before David's challenge."
+    },
+    {
+      "act": "Failure and reaction",
+      "time": "00:25.1–00:30.7",
+      "feel": "Suspended, uncomfortable quiet",
+      "tempo_bpm": null,
+      "instrumentation": "Continuous low room tone; no music",
+      "hits": "Hold the musical absence through 'Which is it?' and Maya's reaction."
+    },
+    {
+      "act": "Product reveal and native-file proof",
+      "time": "00:30.7–00:54.2",
+      "feel": "Release followed by controlled confidence",
+      "tempo_bpm": 100,
+      "instrumentation": "Warm synth harmony, light pulse, short recurring two- or three-note motif",
+      "hits": "Resolve onto the reveal at 30.7; use restrained phrase accents at Word, Excel and the review-panel entrance."
+    },
+    {
+      "act": "Review and acceptance",
+      "time": "00:54.2–00:70.7",
+      "feel": "Deliberate control, then earned relief",
+      "tempo_bpm": 100,
+      "instrumentation": "Reduced pulse during review; motif and resolving harmony at acceptance",
+      "hits": "Thin the arrangement under the 60.3-second VO; resolve at 63.2; sustain gently through the corrected memo and cadence into Maya's relief."
+    },
+    {
+      "act": "Human payoff and brand",
+      "time": "00:70.7–00:82",
+      "feel": "Calm certainty",
+      "tempo_bpm": null,
+      "instrumentation": "Room tone after the completed musical cadence",
+      "hits": "Keep the final 'Diffs. Now in Agentic Office' line exposed; preserve the quiet CTA hold."
+    }
+  ],
+  "free_source_suggestions": [
+    {
+      "source": "Mixkit",
+      "search_terms": ["minimal suspense pulse", "restrained technology confidence", "ambient piano resolution"]
+    },
+    {
+      "source": "Pixabay",
+      "search_terms": ["80 bpm cinematic tension minimal", "100 bpm warm electronic documentary", "short three note sonic logo"]
+    },
+    {
+      "source": "YouTube Audio Library",
+      "search_terms": ["ambient dark minimal", "electronic inspirational restrained", "calm cinematic resolution"]
+    }
+  ]
+}

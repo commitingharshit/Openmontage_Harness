@@ -1,0 +1,73 @@
+{
+ "critic": "sound_mix",
+ "stage": "animatic",
+ "score": 70,
+ "dimension_scores": {
+  "loudness_spec": 85,
+  "vo_vs_bed_balance": 60,
+  "tonal_balance": 60,
+  "dynamics_arc": 80,
+  "transitions_bridges": 50,
+  "stereo_image": 85
+ },
+ "issues": [
+  {
+   "shot_id": "00:00-00:43",
+   "category": "sfx_bus_unducked_over_vo",
+   "severity": 0.6,
+   "confidence": 0.7,
+   "evidence": "Stems re-rendered from sound_mix_v40.py (VO bus vs ducked beds+SFX+room, pre-master), speech-active 50 ms frames: VO-over-rest median 8.7 dB overall (passes >= 8) but hook lines 2.7 (0.4), 4.5 (11.0), 3.8 (12.5), 0.8 (15.35), 0.5 (28.0), 3.5 (30.2), 4.1 (34.6), -0.9 (37.6), 2.2 (40.95) dB. Only beds go through sidechaincompress; the [sfx] bus is summed un-ducked.",
+   "suggested_action": "Key the SFX bus from the VO too (threshold 0.03, ratio 3, attack 5 ms, release 200 ms, ~-5 dB) or hand-ride the hook spots; target >= 8 dB VO clearance on every line."
+  },
+  {
+   "shot_id": "whole",
+   "category": "lra_at_floor",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "integrated -14.4 LUFS, true peak -1.7 dBTP (both in spec), LRA 5.9 LU (below 6-11). Chain is single-pass loudnorm I=-14.3 then +1.9 dB then alimiter 0.79.",
+   "suggested_action": "Two-pass loudnorm with linear=true to -14.0 LUFS, TP -1.5, then limiter ceiling -1.5 dBTP; let the act contrast give LRA ~7."
+  },
+  {
+   "shot_id": "whole",
+   "category": "sub_heavy_dark",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "spectral_balance_pct sub<60 13.3%, low 34.8%, mid 1-4k 15.0% (exactly at threshold), presence 4.0%, air 4.8% (better than V39's 3.2/3.2).",
+   "suggested_action": "High-pass beds/SFX at 40 Hz and shelf bass_pulse/heart/impact -3 dB below 80 Hz; music -3 dB at 2.5 kHz (Q 1) under VO."
+  },
+  {
+   "shot_id": "whole",
+   "category": "silent_cuts",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "cuts_without_sound_event_s 25/45; 106.3, 112.4, 115.3 are hard picture cuts whose only audio change is a 0.2-0.6 s fade-in bed.",
+   "suggested_action": "J-cut each new location's bed 6-10 frames before the cut (start the birds at 111.9, office tone at 105.9) and add a transient on the cut."
+  },
+  {
+   "shot_id": "02:00.6-02:02.6",
+   "category": "fade_under_last_word",
+   "severity": 0.2,
+   "confidence": 0.55,
+   "evidence": "End music (115.6, 7.0 s, 2.0 s fade-out) begins fading at 120.6 while 'Office' runs to 120.96; curve 122.0-122.6 falls to -39.6.",
+   "suggested_action": "Hold music level through 121.3, fade 121.3-122.6."
+  },
+  {
+   "shot_id": "00:43.6 / 01:52",
+   "category": "dynamics_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "dynamic_range 12.4 dB; sections 44 s -34.9, 112 s -35.0 against -16 to -20 elsewhere; 0 clipped samples; stereo_correlation 0.837.",
+   "suggested_action": "Keep."
+  }
+ ],
+ "constraint_failures": [],
+ "mix_recipe": {
+  "ducking": "beds: sidechain from VO threshold 0.02, ratio 6, attack 10 ms, release 300 ms (~-8 dB); SFX bus: threshold 0.03, ratio 3, attack 5 ms, release 200 ms (~-5 dB); room ambience un-ducked",
+  "eq": "VO: HPF 90 Hz, +3 dB 2.5 kHz, +2 dB shelf 9 kHz; music: -3 dB at 2.5 kHz Q1, HPF 40 Hz; SFX: HPF 40 Hz, sub shelf -3 dB < 80 Hz on bass_pulse/heart/impact; ambience HPF 120 Hz",
+  "limiter": "alimiter ceiling -1.5 dBTP (limit=0.84), attack 2 ms, release 60 ms",
+  "loudnorm": "pass 1: loudnorm=I=-14:TP=-1.5:LRA=9:print_format=json; pass 2: loudnorm=I=-14:TP=-1.5:LRA=9:measured_I=..:measured_TP=..:measured_LRA=..:measured_thresh=..:offset=..:linear=true",
+  "targets": "-14.0 LUFS integrated, <= -1.5 dBTP, LRA 7-9, VO >= 8 dB over everything else on every line"
+ },
+ "revision_scope": "opening",
+ "top_revision": "Put the SFX bus under the VO sidechain (about -5 dB) so the hook narrator clears the effects by >= 8 dB; it is currently 0.5 to 4.5 dB on 9 of 12 hook lines."
+}

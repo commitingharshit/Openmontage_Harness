@@ -1,0 +1,79 @@
+{
+  "critic": "story",
+  "stage": "script",
+  "score": 83,
+  "dimension_scores": {
+    "brief_message_adherence": 86,
+    "narrative_progression_coherence": 82,
+    "pain_solution_connection": 88,
+    "shot_purpose_sequencing": 81,
+    "product_demo_benefit_clarity": 80,
+    "pacing_cta": 70
+  },
+  "issues": [
+    {
+      "shot_id": "beat 13",
+      "category": "information_overload",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "The complete 35-word request holds for only the last 2.5 seconds, while narration supplies a different sentence. Its opening introduces '20% DACH growth', which the primary film has not previously explained.",
+      "suggested_action": "Keep the real request unaltered, but use sequential crops emphasizing 'Take DACH Q4 down to 8.5', 'make the memo and the deck match', and 'Show me the diffs'; extend this beat using time removed from beats 10–11."
+    },
+    {
+      "shot_id": "beats 10–12",
+      "category": "delayed_solution",
+      "severity": 0.7,
+      "confidence": 0.88,
+      "evidence": "After David exposes the mismatch at 0:29, the film spends another 12.5 seconds on the chat receipt, Maya's reaction and the transition card before the product request appears at 0:41.5. 'One number. Another place to check.' and 'You still have to carry it through the pack' repeat the already demonstrated problem.",
+      "suggested_action": "Combine beats 10–11 into one three-second receipt with the narration, then move directly through the transition card to Agentic Office around 0:35.5."
+    },
+    {
+      "shot_id": "beats 3, 13 and 16",
+      "category": "model_state_continuity",
+      "severity": 0.65,
+      "confidence": 0.93,
+      "evidence": "David says 'I've run it: the model gives FY26 €74.6m', but Agentic Office later proposes changing Revenue!E6 from 8.9 to 8.5. The primary film never shows Maya updating the model or explains why David's run has left her file unchanged.",
+      "suggested_action": "Change David's text to distinguish his scenario from her saved file: 'My scenario gives FY26 €74.6m at DACH Q4 8.5. Update your model, memo and deck by 9.' Include a short manual E6 edit before the Word paste."
+    },
+    {
+      "shot_id": "beat 3",
+      "category": "setup_reading_pace",
+      "severity": 0.62,
+      "confidence": 0.95,
+      "evidence": "Two messages containing approximately 40 words, timestamps and four financial references arrive within six seconds. The second message has only three seconds before the cut. These messages carry the explanation needed to understand the entire task.",
+      "suggested_action": "Shorten the first bubble to 'My scenario: DACH Q4 8.5. FY26 €74.6m.' and the second to 'Your pack still says €71–73m. Update all three files by 9.'"
+    },
+    {
+      "shot_id": "beats 15–18",
+      "category": "incomplete_payoff",
+      "severity": 0.52,
+      "confidence": 0.94,
+      "evidence": "The missed slide text box receives a strong callback in beat 16, but the final accepted document shown in beat 18 is the memo. Beat 15 proves template preservation before acceptance, rather than showing the corrected slide that resolves David's complaint.",
+      "suggested_action": "If P2 is recorded, place its corrected TextBox 23 shot after Accept all and replace beat 18 with it. Without P2, retain the circled real diff and accepted status as the workable fallback, but connect them consecutively before the closing reaction."
+    },
+    {
+      "shot_id": "beats 16–17",
+      "category": "review_control_clarity",
+      "severity": 0.48,
+      "confidence": 0.9,
+      "evidence": "The primary film's only specified approval action is 'Accept all'. The explicit 'Each change: accept or reject' explanation and close view of individual controls exist only in the director's cut.",
+      "suggested_action": "Use part of beat 16's existing six seconds to frame the real row's ✓ / ✗ controls with 'Accept or reject each change', then retain the recorded Accept-all action. This fallback communicates control without needing P3 or a recorded Reject result."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Show the workflow at the pace a real person would read it, with messages readable on a phone.",
+      "shot_id": "beat 13; 30 s cut 15.5–18.5",
+      "evidence": "The primary gives the complete 35-word request 2.5 seconds; the vertical cut gives the same complete request three seconds as a static crop. Meeting the minimum hold does not make this much text readable on first viewing."
+    },
+    {
+      "rule": "Keep 'Can make mistakes' in the product presentation.",
+      "shot_id": "30 s cut 26–30",
+      "evidence": "The dedicated short end card specifies only 'Agentic Office · AI drives. You approve. · Request early access'; it omits the caution explicitly included on the primary end card and required by UI_REUSE.md."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Compress the repeated aftermath of David's complaint and use the recovered seconds to introduce Agentic Office earlier with a readable, clearly matched model–memo–deck request.",
+  "retell": "A chatbot tells Maya the new number, but her board-pack files remain unchanged. She pastes its text into the memo, rejects its broken replacement deck and manually edits her own slide, missing another occurrence that David flags. She gives Agentic Office a request across the model, memo and deck, and it proposes changes inside those files, including the missed slide text box. She accepts all ten changes, sees the updated memo and is invited to request early access.",
+  "scroll_away_second": 36
+}

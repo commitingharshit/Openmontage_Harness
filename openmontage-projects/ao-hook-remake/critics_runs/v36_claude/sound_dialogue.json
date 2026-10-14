@@ -1,0 +1,131 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "intelligibility": 60,
+  "performance_casting": 50,
+  "writing_for_the_ear": 72,
+  "pacing": 52,
+  "placement": 70
+ },
+ "issues": [
+  {
+   "shot_id": "01:58.9",
+   "category": "brand_name_misheard",
+   "severity": 0.9,
+   "confidence": 0.7,
+   "evidence": "The final line 'Agentic Office.' was measured as heard 'see you next time.' (match 0.32). The identity sting is cued at 118.8 s at 0.30 on the SFX bus, which is not ducked, so it starts 0.1 s under the only spoken brand name. The ASR may also have hallucinated on a short tag, so verify by ear.",
+   "suggested_action": "Move identity.mp3 to 118.2 so it resolves before the line, or to 120.0 after it. Re-render the tag as 'uh-JEN-tick Office' with 0.3 s of air before it, and confirm the match is ≥0.85."
+  },
+  {
+   "shot_id": "00:11.0",
+   "category": "sfx_masking_vo",
+   "severity": 0.6,
+   "confidence": 0.75,
+   "evidence": "'It says it's done.' measured match 0.78 at 4.17 words/s. done_chime.mp3 is cued at 11.05 s at 0.35 on the undducked SFX bus, right on 'It says'.",
+   "suggested_action": "Fire the chime at 11.0 on the giant ✓ and start the VO at 11.35, or start the VO on the chime tail. Slow the line to about 3 words/s."
+  },
+  {
+   "shot_id": "00:06–00:27",
+   "category": "rushed_hook_read",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "Measured words/s for the hook: 4.13 (6.0), 4.17 (11.0), 4.02 (12.5), 3.98 (15.5), 3.71 (18.15), 4.61 (24.0). All are above the 3.5 'rushed' line, and the lines butt against each other (heard windows spill into the next line: 'it says', 'then you', 'so you').",
+   "suggested_action": "Re-read the hook at 2.8–3.2 words/s with 0.3–0.5 s between lines. Cut words to fit: 'You ask a chatbot to fix the memo.' and 'So you ask for the deck. It builds one, in the chat.'"
+  },
+  {
+   "shot_id": "00:46.3 / 01:48.3",
+   "category": "sting_under_vo",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "identity.mp3 sits at 46.2 (0.35) under 'See exactly what changed' at 46.3, and at 107.95 (0.45) under 'Done. And this time…' at 108.3. Both are on the undducked SFX bus.",
+   "suggested_action": "Place each sting at least 0.4 s before its line's first word, or 0.2 s after its last word, or add a 4 dB VO-keyed duck on stings only."
+  },
+  {
+   "shot_id": "00:15.5",
+   "category": "match_below_threshold",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "'So you fix it by hand. Then, an email.' matched 0.83. Heard 'so you fix it by hand, then an email. please update': the read runs straight into the partner email voice at 18.15.",
+   "suggested_action": "Make it two beats: 'So you fix it by hand.' (15.5), then 'Then… an email.' on the buzz at 17.1."
+  },
+  {
+   "shot_id": "Kokoro narrator, whole film",
+   "category": "tts_casting",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "The narrator is a Kokoro af_heart draft TTS with one British male guest voice. Premium launch-film VO for consultants, finance and legal needs a warm, unhurried human read. The flat 'Done.' readings (11.0, 34.6, 108.3) carry the film's motif, and a TTS cannot shade them differently.",
+   "suggested_action": "Before the final, cast a human or premium voice and direct the three 'Done.' reads as believing (11.0), sarcastic (34.6) and relieved and quiet (108.3)."
+  },
+  {
+   "shot_id": "01:48.3",
+   "category": "possible_extra_words",
+   "severity": 0.3,
+   "confidence": 0.4,
+   "evidence": "The heard text ends '...you've seen every change. and that's'. The next VO is 10 s later, so a7b.wav (taken from an older version) may contain a trailing fragment.",
+   "suggested_action": "Trim a7b.wav to end right after 'change.'."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "brand or product name misheard",
+   "shot_id": "01:58.9",
+   "evidence": "expected 'Agentic Office.' heard 'see you next time.' match 0.32"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:11.0",
+   "evidence": "'It says it's done.' match 0.78"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:15.5",
+   "evidence": "'So you fix it by hand. Then, an email.' match 0.83"
+  }
+ ],
+ "line_fixes": [
+  {
+   "t": "118.9",
+   "issue": "brand misheard; sting on top of it",
+   "fix": "Phonetic 'uh-JEN-tick Office', identity sting moved to 118.2, 0.3 s of clean air before the word, VO +2 dB"
+  },
+  {
+   "t": "11.0",
+   "issue": "0.78 match, 4.17 w/s, chime on top",
+   "fix": "Start at 11.35 after the chime transient; read at 3 w/s"
+  },
+  {
+   "t": "6.0",
+   "issue": "4.13 w/s",
+   "fix": "'You ask a chatbot to fix the memo.' at 3 w/s, ending by 8.0 before the keystrokes"
+  },
+  {
+   "t": "12.5",
+   "issue": "4.02 w/s",
+   "fix": "Hold 0.4 s on 'the file…' and land 'wrecked' on the glitch at 14.47"
+  },
+  {
+   "t": "15.5",
+   "issue": "0.83 match, runs into the email",
+   "fix": "Split: 'So you fix it by hand.' / 'Then… an email.' at 17.1"
+  },
+  {
+   "t": "24.0",
+   "issue": "4.61 w/s, the fastest line in the film",
+   "fix": "'So you ask for the deck. It builds one. In the chat.' at 3 w/s, starting 23.7"
+  },
+  {
+   "t": "46.3",
+   "issue": "identity sting under the first word",
+   "fix": "Sting at 45.8; VO at 46.4"
+  },
+  {
+   "t": "108.3",
+   "issue": "sting tail under 'Done.'; possible trailing 'and that's'",
+   "fix": "VO at 108.5; trim the file after 'change.'"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Make the brand tag land: clear the identity sting off 'Agentic Office' (sting at 118.2, word at 118.9 in clean air, phonetic 'uh-JEN-tick'), and re-read the 6–27 s hook at about 3 words/s, so that every line, and above all the brand name, measures ≥0.85."
+}

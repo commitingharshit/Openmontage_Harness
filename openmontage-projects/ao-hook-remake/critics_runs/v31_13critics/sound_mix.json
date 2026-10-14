@@ -1,0 +1,104 @@
+{
+  "critic": "mix_master",
+  "stage": "animatic",
+  "score": 73,
+  "dimension_scores": {
+    "loudness_spec": 55,
+    "vo_vs_bed_balance": 65,
+    "tonal_balance": 62,
+    "dynamics_arc": 85,
+    "transitions_bridges": 83,
+    "stereo_image": 95
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–01:25",
+      "category": "true_peak_exceedance",
+      "severity": 0.95,
+      "confidence": 1,
+      "evidence": "Measured true peak is −0.4 dBFS, exceeding both the −1.5 dBTP delivery target and the −1.0 dBTP hard limit; clipped_samples is 0.",
+      "suggested_action": "Apply oversampled true-peak limiting at −1.5 dBTP, normalize in two passes, and remeasure the encoded delivery file."
+    },
+    {
+      "shot_id": "00:00–01:23",
+      "category": "vo_masking_risk",
+      "severity": 0.72,
+      "confidence": 0.85,
+      "evidence": "Measured 1–4 kHz energy is 10.1%, below the 15% VO balance benchmark; VO/music separation is unavailable. Mean transcription match is 0.89.",
+      "suggested_action": "Verify separation over VO-active windows, target a median VO lead of at least 8 dB, and duck the music plus bass/heartbeat buses under speech."
+    },
+    {
+      "shot_id": "00:00–01:25",
+      "category": "bass_heavy_tonality",
+      "severity": 0.6,
+      "confidence": 0.94,
+      "evidence": "Spectral energy is 12.7% sub, 42.4% low and 30.3% low-mid, with only 1.9% presence; the low band approaches the 45% muddy threshold.",
+      "suggested_action": "Reduce music and pulse energy around 100–200 Hz by 2–3 dB, clear 300–500 Hz by 1–2 dB, and remeasure VO-active tonal balance."
+    },
+    {
+      "shot_id": "00:00–01:25",
+      "category": "restricted_loudness_range",
+      "severity": 0.5,
+      "confidence": 1,
+      "evidence": "LRA is 4.8 LU against the requested 6–11 LU, despite a 12.6 dB dynamic range and a clear quiet section at 00:44 measuring −31.0 dBFS.",
+      "suggested_action": "Preserve consistent VO while widening sustained bed contrast between lounge, overload and product acts; target 6–8 LU without increasing peak levels."
+    },
+    {
+      "shot_id": "01:24–01:25",
+      "category": "digital_dead_tail",
+      "severity": 0.35,
+      "confidence": 1,
+      "evidence": "Digital silence is detected at 84.5 s; the 84 s section measures −108.3 dBFS while the final card continues to approximately 85.1 s.",
+      "suggested_action": "Carry a soft identity-tone or ambience decay through the end card, fading smoothly to zero at the final frame."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "True peak must not exceed −1.0 dBTP.",
+      "shot_id": "00:00–01:25",
+      "evidence": "Measured true peak: −0.4 dBFS."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Remaster with a −1.5 dBTP ceiling and stronger VO-led ducking, preserving the existing act contrasts.",
+  "mix_recipe": {
+    "ducking": {
+      "music_reduction_db": 5,
+      "bass_and_heartbeat_reduction_db": 3,
+      "attack_ms": 15,
+      "release_ms": 250,
+      "lookahead_ms": 10,
+      "target_vo_over_music_db_median": 8
+    },
+    "music_eq_under_vo": {
+      "dynamic_band_hz": [1000, 4000],
+      "maximum_reduction_db": 3,
+      "attack_ms": 20,
+      "release_ms": 200,
+      "low_shelf_hz": 150,
+      "low_shelf_db": -2.5,
+      "lowmid_bell_hz": 350,
+      "lowmid_bell_db": -1.5,
+      "lowmid_bell_q": 0.8
+    },
+    "ambience_high_pass": {
+      "frequency_hz": 100,
+      "slope_db_per_octave": 12
+    },
+    "dynamics": {
+      "target_lra_lu": 7,
+      "automation": "Lower the sustained product bed by 2 dB relative to overload; retain room tone through the pause and preserve stable VO levels."
+    },
+    "limiter": {
+      "ceiling_dbtp": -1.5,
+      "oversampling": 4,
+      "release_ms": 100
+    },
+    "two_pass_loudnorm": {
+      "pass_1": "loudnorm=I=-14:TP=-1.5:LRA=7:print_format=json",
+      "pass_2": "loudnorm=I=-14:TP=-1.5:LRA=7:measured_I=<pass1.input_i>:measured_TP=<pass1.input_tp>:measured_LRA=<pass1.input_lra>:measured_thresh=<pass1.input_thresh>:offset=<pass1.target_offset>:linear=true:print_format=json",
+      "verification": "Measure the revised premaster for pass-one values, then verify integrated loudness, true peak and LRA after delivery encoding."
+    },
+    "stereo": "Retain the current stereo width; measured correlation of 0.87 is within the healthy range."
+  }
+}

@@ -1,0 +1,23 @@
+{"critic":"sound_ambience","stage":"animatic","score":65,
+"dimension_scores":{"room_tone_continuity":72,"world_building":62,"sound_perspective":58,"diegetic_logic":72,"designed_silence":64},
+"issues":[
+{"shot_id":"00:52.6-01:58.3","category":"no_room_under_product","severity":0.45,"confidence":0.7,"evidence":"Every product shot 'starts WIDE: the whole app window floating in the room with the blurred office around it'. Yet no ambience cue runs from 52.6 (office.mp3 ends ~52.6) to 118.3; for about 66 s the music is the only floor.","suggested_action":"Run a quiet warm-room bed (soft HVAC, a distant clock, -48 to -52 dBFS) from 49 to 118.3. Let it lift slightly on each wide establishing frame and recede as the camera pushes in."},
+{"shot_id":"00:41.6-00:46","category":"silence_mostly_spoken_over","severity":0.4,"confidence":0.75,"evidence":"The intended 'total silence' at the stopped cursor is filled by the VO 42.3-45.4 and the thud at 44.57. The measured quiet window is a single 0.5 s at 45.5 (-50.5 dBFS).","suggested_action":"Clear the VO before the cursor stops and hold 1.5-2 s of night-office room tone (-45 dBFS) with the head-drop thud inside it."},
+{"shot_id":"00:00-00:05","category":"cold_open_no_air","severity":0.35,"confidence":0.65,"evidence":"The cold open is a real laptop in a dark room, but 0-4.5 carries only non-diegetic bass_pulse and heart_fast plus a phone buzz. office.mp3 starts at 5.05.","suggested_action":"Start the night room tone (low HVAC, faint distant traffic) at 0.0 under the pulse, so that the rewind at 4.5 has a world to leave."},
+{"shot_id":"whole","category":"one_room_file_for_three_spaces","severity":0.35,"confidence":0.6,"evidence":"The same office.mp3 (different offsets) plays for the blue night office (5-49), the warm lamp room (49-52.6), the dark payoff room (118.3) and under the end card (from 127.3).","suggested_action":"Use separate beds: night office = HVAC hum + distant city; warm room = quieter, lamp buzz, clock; dawn = birds + early traffic. Crossfade them at 49.0 and 124.4."},
+{"shot_id":"various","category":"no_perspective_shaping","severity":0.3,"confidence":0.6,"evidence":"No reverb or EQ appears in the cue graph for any diegetic layer. Close inserts (hands typing 15.6, head drop 44.57) and wide shots (49.0 warm room, 124.4 sunrise) are treated identically and dry.","suggested_action":"Make close-up foley dry and full, give wide shots a short room reverb (0.4-0.6 s) and a high-pass at 120 Hz, and pull the ambience 3 dB down as the camera pushes in."},
+{"shot_id":"02:04-02:07.5","category":"dawn_nearly_empty","severity":0.2,"confidence":0.55,"evidence":"The curve over the dawn reads -40.5 to -37.8 dBFS (124-126.5), then -50.2 at 127.0. City runs to 127.3 at .12 and birds 124.4-127.4. This is good designed near-silence, but the dip at 127 drops close to empty.","suggested_action":"Keep the dawn quiet but hold the birds at about -44 dBFS through 127.5, so the end card's music enters over air, not a hole."},
+{"shot_id":"02:07.3-02:13.8","category":"diegetic_under_card","severity":0.15,"confidence":0.4,"evidence":"Birds (.06) and office room tone (.05) run under the graphic end card.","suggested_action":"Acceptable as a continuity tail. Fade it out by 130.8, so that 'Agentic Office.' sits on score alone."}
+],
+"ambience_plan":[
+{"location":"Cold open, dark room (0-4.5)","layers":["low HVAC hum","faint distant traffic","laptop fan"],"level_dbfs":"-50"},
+{"location":"Night office, blue (5-46)","layers":["HVAC hum","fluorescent buzz","distant city","occasional far phone"],"level_dbfs":"-46 to -48; -44 in the 44-46 silence"},
+{"location":"Warm lamp room + product wides (49-118)","layers":["soft room air","lamp buzz","quiet clock"],"level_dbfs":"-50 to -54 under VO"},
+{"location":"Dark payoff room (118.3-119.9)","layers":["night HVAC","her breath"],"level_dbfs":"-46"},
+{"location":"Lights on (119.9-124.4)","layers":["room brightens","early city"],"level_dbfs":"-46"},
+{"location":"Sunrise (124.4-127.3)","layers":["birds","distant early traffic"],"level_dbfs":"-42 to -44"},
+{"location":"End card (127.3-133.4)","layers":["birds tail fading by 130.8"],"level_dbfs":"-55"}
+],
+"constraint_failures":[],
+"revision_scope":"whole",
+"top_revision":"Clear the VO from the stopped-cursor beat so that 1.5-2 s of night-office room tone carries the head-drop, and lay a distinct quiet warm-room bed under the 49-118 product wides."}

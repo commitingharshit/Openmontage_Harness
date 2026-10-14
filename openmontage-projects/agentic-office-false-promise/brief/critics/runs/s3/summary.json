@@ -1,0 +1,24 @@
+{
+ "round": "s3",
+ "C": 86.05,
+ "S": 87,
+ "P": 87,
+ "Q": 86.8,
+ "constraint_failures": [
+  {
+   "rule": "Every message holds for at least 2.5 seconds.",
+   "shot_id": "director's cut, after beat 8",
+   "evidence": "Three successive filename states are allocated only four seconds."
+  },
+  {
+   "rule": "Every message holds for at least 2.5 seconds.",
+   "shot_id": "beat 13, optional composer opening",
+   "evidence": "Taking 0.5 seconds from the first 2.5-second request crop leaves a two-second hold; this failure applies only if the optional opening is used."
+  },
+  {
+   "rule": "Every message holds for at least 2.5 seconds.",
+   "shot_id": "director's cut, insert after beat 8",
+   "evidence": "Three successive filename states and two regenerations are allocated only four seconds; the specified sequence cannot give each state a 2.5-second hold."
+  }
+ ]
+}

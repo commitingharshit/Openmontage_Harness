@@ -1,0 +1,52 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 81,
+  "dimension_scores": {
+    "brief_adherence": 84,
+    "progression_causality": 80,
+    "pain_solution_link": 88,
+    "block_purpose_connectives": 80,
+    "proof_of_setup": 65,
+    "pacing_cta": 78
+  },
+  "issues": [
+    {
+      "shot_id": "01:04–01:11",
+      "category": "unclosed_setup",
+      "severity": 0.85,
+      "confidence": 1,
+      "evidence": "At 00:26.5 David circles slide 2's stale “€71–73m.” The solution shows the matching “Slide 2 · TextBox 23” proposal and “10 of 10 changes accepted,” but the final document proof shows only “Memo and table: €74.6m.” The corrected slide 2 view is pending.",
+      "suggested_action": "Insert the pending real post-acceptance slide 2 recording immediately after acceptance, showing the previously circled box reading €74.6m alongside the matching title."
+    },
+    {
+      "shot_id": "00:00–00:15",
+      "category": "ambiguous_task_state",
+      "severity": 0.64,
+      "confidence": 0.97,
+      "evidence": "The opening says “Model updated” and shows Excel at €74.6m, but the subsequent chat instructs “Model: Revenue!E6 → 8.5,” followed by “Step 1 of 3, by hand.” No visible connective explains whether this is a rewind or another update.",
+      "suggested_action": "Mark the move into David's 11:52 PM message as “Earlier that night,” and show the manual model change from 8.9 to 8.5 before its €74.6m result."
+    },
+    {
+      "shot_id": "00:34–00:47",
+      "category": "workspace_connection",
+      "severity": 0.48,
+      "confidence": 0.9,
+      "evidence": "The solution starts with tight crops of the request, then separate Word and Excel views. “One request. Her real model, memo and deck” states the connection; the three document tabs become visible only at 00:47.",
+      "suggested_action": "Begin the solution with a brief real workspace view showing the three named files and the request together, then move into the existing request and diff crops."
+    },
+    {
+      "shot_id": "01:11–01:19",
+      "category": "resolution_pacing",
+      "severity": 0.4,
+      "confidence": 0.95,
+      "evidence": "After the clean memo, Maya closes her laptop, then David appears under “9:02 AM · Board meeting,” before the final Diffs CTA. The board-meeting frame supplies no visible confirmation of the pack's consistency.",
+      "suggested_action": "Use the board-meeting slot for the corrected slide 2 proof, retain a short laptop-close reaction, and proceed directly to the existing CTA."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Show the accepted €74.6m in the exact slide 2 box David flagged, closing the film's central failure with real app evidence.",
+  "retell": "She needed DACH Q4 at €8.5m and the FY26 outlook at €74.6m across her model, memo and deck. The chatbot supplied instructions, so she carried the changes into the files herself and missed an old number in the deck. Agentic Office proposed changes across her existing files and let her review and accept them. I saw all ten changes accepted and the corrected memo, but I did not see the flagged slide corrected.",
+  "scroll_away_second": 21
+}

@@ -1,0 +1,69 @@
+{
+  "critic": "claims_and_rights",
+  "stage": "animatic",
+  "score": 70,
+  "dimension_scores": {
+    "claim_accuracy": 62,
+    "ui_authenticity": 60,
+    "rights_provenance": 95,
+    "numeric_consistency": 70
+  },
+  "issues": [
+    {
+      "shot_id": "01:04–01:07",
+      "category": "simulated_product_action",
+      "severity": 0.95,
+      "confidence": 1,
+      "evidence": "Frame 27 shows a cursor on the real Accept control, followed by the accepted Changes list. The composition animates a synthetic pointer over excel-bar.png; UI_REUSE.md identifies the captured acceptance as Accept all and says a single Accept still needs recording.",
+      "suggested_action": "Replace the simulated interaction with the authentic recorded Accept all action, or capture a genuine single Accept and its resulting state."
+    },
+    {
+      "shot_id": "00:30–00:35",
+      "category": "unsupported_time_comparison",
+      "severity": 0.9,
+      "confidence": 1,
+      "evidence": "The caption and VO say 'Five minutes. For one number.' A fabricated regeneration timer precedes the accelerated Agentic Office demonstration, creating an implied speed comparison without an approved benchmark.",
+      "suggested_action": "Remove the quantified wait, regeneration ETA and elapsed-time animation; use 'Regenerate. Check again.' while retaining the real demonstration's sped-up disclosure."
+    },
+    {
+      "shot_id": "01:12–01:16",
+      "category": "unlabelled_fictional_workflow",
+      "severity": 0.85,
+      "confidence": 0.98,
+      "evidence": "The real product demonstration returns to an unlabelled illustrated email client, followed by 'Sent' and 'Memo · model · deck · every change reviewed.' Email sending is outside the approved product truths.",
+      "suggested_action": "Label this entire sequence 'Illustration · sending outside Agentic Office' and distinguish the external email confirmation from the product's recorded review result."
+    },
+    {
+      "shot_id": "01:00–01:04",
+      "category": "cross_file_numeric_mismatch",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "Frame 25 shows the model's Q3 total as 18.6, while frame 26 states 'Revenue for the quarter was €18.2m' and lists Q3 actual revenue as €18.2m. These appear to be the same pack whose consistency the demonstration establishes.",
+      "suggested_action": "Verify whether these figures describe different scopes; if they should tie, correct the native source files and recapture both views, without repainting the screenshots."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Product proof must use authentic interactions; no fake clicks or invented results.",
+      "shot_id": "01:04–01:07",
+      "evidence": "A synthetic cursor and Accept highlight over a still screenshot imply a single acceptance before cutting to the recorded accepted list."
+    },
+    {
+      "rule": "No unapproved implied speed or time savings.",
+      "shot_id": "00:30–00:35",
+      "evidence": "'Five minutes. For one number.' supplies an unsupported quantified comparator before the accelerated product demonstration."
+    },
+    {
+      "rule": "Fictional UI must be distinguished from real product proof; advertised capabilities must be approved.",
+      "shot_id": "01:12–01:16",
+      "evidence": "The unlabelled fictional email and invented Sent confirmation follow authentic product UI, implying an integrated sending workflow."
+    },
+    {
+      "rule": "Numbers must be consistent everywhere.",
+      "shot_id": "01:00–01:04",
+      "evidence": "The real model shows Q3 total 18.6; the real memo shows Q3 actual €18.2m without a scope distinction."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Replace the simulated Accept interaction with authentic recorded acceptance so the central review promise is demonstrated truthfully."
+}

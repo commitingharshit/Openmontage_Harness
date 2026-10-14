@@ -1,0 +1,124 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 65,
+  "dimension_scores": {
+    "lighting_shape": 74,
+    "lens_depth": 76,
+    "composition": 70,
+    "camera_movement": 55,
+    "frame_design_ui": 46
+  },
+  "evaluation_notes": "Inspected all 33 frames at ../artifacts/frames_v13/f_01.jpg through f_33.jpg. Read critics/SHARED.md and the brief; ../references/CINEMATOGRAPHY.md was unavailable. Camera-movement scoring is provisional: 2.5-second samples cannot establish smoothness, jitter, shutter characteristics or screen tracking between frames.",
+  "issues": [
+    {
+      "shot_id": "00:35–01:07",
+      "category": "ui_spatial_integration",
+      "severity": 0.88,
+      "confidence": 0.98,
+      "evidence": "At 00:35, 00:40, 00:52.5 and 01:05, enlarged UI rectangles float over the same blurred desk. Slight perspective provides an angle, but no visible monitor edge, foreground occlusion or shared light establishes their physical depth.",
+      "suggested_action": "Recompose this sequence around Maya's actual monitor plane, retaining a bezel and foreground shoulder; use focused inserts for individual changes and return to the wider reviewing position before acceptance."
+    },
+    {
+      "shot_id": "00:35–00:37.5",
+      "category": "ui_focus_and_text_competition",
+      "severity": 0.8,
+      "confidence": 0.99,
+      "evidence": "The request beginning 'Research says 20% DACH growth' is visibly soft and darkened, including text inside the yellow focus rectangle; a second quotation and 'One request. Her real model, memo and deck.' compete below it.",
+      "suggested_action": "Use a sharper source crop with the active request lines in crisp focus, dim only the surrounding UI, and retain one short caption outside the screen."
+    },
+    {
+      "shot_id": "00:40–00:42.5",
+      "category": "ui_crop_composition",
+      "severity": 0.73,
+      "confidence": 0.99,
+      "evidence": "At 00:40 the memo's right-hand sentences and FY26 table column run into the crop; at 00:42.5 'Insert' loses its opening letter and 'Accept all' is cut by the right edge.",
+      "suggested_action": "Frame each insert around a complete visual unit: the full changed memo sentence or the entire Excel diff bar, leaving breathing room on both sides and placing captions below the document."
+    },
+    {
+      "shot_id": "00:15–00:22.5; 00:45–00:47.5",
+      "category": "repetitive_shot_geometry",
+      "severity": 0.68,
+      "confidence": 0.97,
+      "evidence": "The Excel edit, memo edit, slide edit and PowerPoint playback repeatedly use nearly identical laptop-left/shoulder-right geometry, with the same city bokeh and folder arrangement.",
+      "suggested_action": "Keep the opening shoulder shot, then alternate a tighter screen insert, a lateral hands shot and a reverse reaction while preserving the desk axis and lamp direction."
+    },
+    {
+      "shot_id": "00:50",
+      "category": "lighting_shape",
+      "severity": 0.61,
+      "confidence": 0.93,
+      "evidence": "Maya's reviewing face is dim and broadly filled; the navy shoulder merges into the dark background, with less facial modelling and edge separation than the 00:30 close-up.",
+      "suggested_action": "Shape a soft screen-motivated key from frame-left, reduce opposite-side fill and add a restrained cool window rim along her frame-right shoulder."
+    },
+    {
+      "shot_id": "01:12.5–01:15",
+      "category": "flat_portrait_lighting",
+      "severity": 0.58,
+      "confidence": 0.95,
+      "evidence": "David sits centrally against bright windows; both cheeks receive similar soft illumination and the window background remains relatively detailed, producing a conventional corporate portrait.",
+      "suggested_action": "Use a three-quarter 85mm portrait, negative fill on the near cheek, controlled window highlights and slightly shallower focus; allow lead room toward his glance."
+    },
+    {
+      "shot_id": "00:10 → 00:30 → 00:50",
+      "category": "identity_continuity_verification",
+      "severity": 0.56,
+      "confidence": 0.7,
+      "evidence": "The sampled Maya shots differ in apparent facial proportions, loose hair and blouse neckline; the 00:30 close-up also shows a prominent hoop earring absent from the shoulder views.",
+      "suggested_action": "Verify these cuts at playback size against the approved character reference; if the mismatch persists, replace the reaction insert with a matching take and consistent wardrobe."
+    },
+    {
+      "shot_id": "00:25–00:27.5; 01:17.5–01:20",
+      "category": "camera_movement_verification",
+      "severity": 0.5,
+      "confidence": 0.55,
+      "evidence": "The two sampled flagged-slide frames have essentially unchanged geometry, as do the two end-card frames; the samples do not establish motivated movement through these holds.",
+      "suggested_action": "Verify the full clips before changing them; retain deliberate locked holds, but if the flagged-slide beat feels frozen, introduce one restrained push toward the circled box and settle before the reaction cut."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Recompose the product demo as a sequence of physically grounded monitor shots and sharp, carefully framed inserts, replacing the recurring floating UI rectangles over the blurred desk.",
+  "per_shot": [
+    {
+      "t": "00:35",
+      "grade_A_to_F": "D",
+      "fix": "Use a sharp request crop on a visible monitor plane; remove the duplicate quotation."
+    },
+    {
+      "t": "00:37.5",
+      "grade_A_to_F": "D",
+      "fix": "Keep the selected request lines crisp and dim only surrounding content."
+    },
+    {
+      "t": "00:40",
+      "grade_A_to_F": "C",
+      "fix": "Reframe around the complete tracked sentence and move the caption outside the memo."
+    },
+    {
+      "t": "00:42.5",
+      "grade_A_to_F": "C",
+      "fix": "Show the entire Excel diff bar with margins and a visible monitor edge."
+    },
+    {
+      "t": "00:50",
+      "grade_A_to_F": "C",
+      "fix": "Add a directional screen key, negative fill and a subtle window rim."
+    },
+    {
+      "t": "00:52.5",
+      "grade_A_to_F": "C",
+      "fix": "Tighten around the review panel and retain a physical screen edge instead of the empty black side."
+    },
+    {
+      "t": "01:00",
+      "grade_A_to_F": "C",
+      "fix": "Use a sharper source crop around one full change row and its accept/reject controls."
+    },
+    {
+      "t": "01:15",
+      "grade_A_to_F": "C",
+      "fix": "Use three-quarter framing, an 85mm lens and negative fill to shape David's face."
+    }
+  ]
+}

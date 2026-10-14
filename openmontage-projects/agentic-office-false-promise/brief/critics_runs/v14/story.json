@@ -1,0 +1,87 @@
+{
+ "critic": "story",
+ "stage": "animatic",
+ "score": 71,
+ "dimension_scores": {
+  "brief_adherence": 62,
+  "progression_causality": 78,
+  "pain_solution_link": 66,
+  "block_purpose_connectives": 72,
+  "proof_of_setup": 68,
+  "pacing_cta": 66
+ },
+ "retell": [
+  "Her CFO texts at midnight that one number changed and the model, memo and deck must match by 9.",
+  "She asks an AI chat; it says 'Done' but none of her three files changed, so she copies everything across by hand until 2:41 AM.",
+  "She still misses one box on a slide and the CFO catches it.",
+  "Agentic Office's Diffs makes the changes inside all three files, she approves them in one list, and she's done by 2:49."
+ ],
+ "scroll_away_second": 63,
+ "issues": [
+  {
+   "shot_id": "0:54 vs 1:33 (match cut)",
+   "category": "match_cut_wrong_object",
+   "severity": 0.75,
+   "confidence": 0.8,
+   "evidence": "The box she missed (f_19) sits on the CHART slide, whose title she fixed and which the chat called 'slide 4'. The Diffs list rings 'Slide 2 · TextBox 23 €71–73m → €74.6m' while 'Slide 4 title' and 'Chart data, slide 4' are separate rows. An attentive finance viewer sees a different slide.",
+   "suggested_action": "Make the missed box Slide 2 · TextBox 23 in the problem act: show slide 2 (non-chart) at 2:06 with the title fixed and TextBox 23 still €71–73m, and have David's text say 'slide 2'. Or ring whichever real row matches the chart callout."
+  },
+  {
+   "shot_id": "1:12",
+   "category": "same_request_not_same",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "Caption 'The same request.' over 'Research says 20% DACH growth is too aggressive. Take DACH Q4 down to 8.5…Show me the diffs.' Her chat prompt was 'Update my board pack — DACH Q4 is now 8.5.'",
+   "suggested_action": "Change the caption to 'The same change, asked in Agentic Office.' or re-type her exact chat prompt in a recording."
+  },
+  {
+   "shot_id": "1:03-1:11",
+   "category": "hypothetical_vs_actual",
+   "severity": 0.45,
+   "confidence": 0.65,
+   "evidence": "Card asks 'What if it did the work?' then the film continues the same night ('2:49 AM · DONE'), so it's unclear whether this is a hypothetical replay or she switched tools at 2:41 AM",
+   "suggested_action": "Pick one: label the proof 'Same night. With Diffs.' and keep the clock, or drop the 2:49 clock and treat it as the alternate timeline with a rewind effect to 11:52 PM."
+  },
+  {
+   "shot_id": "whole",
+   "category": "length_vs_brief",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "Render is 128 s; brief Version A asks for ~75 s. Grind 0:31-0:54 has 7 shots repeating 'she types, clock advances'.",
+   "suggested_action": "Cut the walking shot, one eyes-rub (f_16/f_17 duplicate 2:31), the blank INTRODUCING card and the duplicate end Diffs card; target ≤100 s."
+  },
+  {
+   "shot_id": "1:06-1:11 and 1:51-2:08",
+   "category": "duplicate_reveal",
+   "severity": 0.4,
+   "confidence": 0.8,
+   "evidence": "'INTRODUCING Diffs in Agentic Office' card appears twice (f_24 and f_41-43), and f_23 is a blank card with only 'INTRODUCING' for ~2 s",
+   "suggested_action": "Keep one reveal: a short name sting at 1:06 and the full lockup + CTA only at the end; kill the blank frame."
+  },
+  {
+   "shot_id": "0:30-0:42",
+   "category": "grind_screens_illegible",
+   "severity": 0.4,
+   "confidence": 0.75,
+   "evidence": "f_11 Excel grid and f_12 memo (with stray '**€74.6m**') are tiny inside a laptop in a wide shot; the captions carry the story, the screens don't",
+   "suggested_action": "Push in to fill frame on the cell 8.9→8.5 and on the '**' markdown so the by-hand work is seen, not captioned."
+  },
+  {
+   "shot_id": "1:48",
+   "category": "payoff_flat",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "f_40 David at '9:02 AM · BOARD MEETING' is reading paper, eyes down, no visible smile or 'Perfect.'",
+   "suggested_action": "Hold on his nod/smile or super 'Perfect.' as his text reply to Maya; that closes the 'by 9' loop."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "Brief §6 Version A length ~75 s",
+   "shot_id": "whole",
+   "evidence": "128 s render"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Make the box she missed and the ringed Diffs row the SAME slide and textbox (slide 2 · TextBox 23 in both), because the match cut is the spine of the reversal and right now it points at a different slide."
+}

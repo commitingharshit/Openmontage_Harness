@@ -1,0 +1,131 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 70,
+ "dimension_scores": {
+  "room_tone_continuity": 85,
+  "world_building": 55,
+  "sound_perspective": 60,
+  "diegetic_logic": 70,
+  "designed_silence": 82
+ },
+ "issues": [
+  {
+   "shot_id": "01:32-01:42",
+   "category": "location_without_ambience_change",
+   "severity": 0.55,
+   "confidence": 0.6,
+   "evidence": "Hero on the real laptop in the candle-lit warm room (91.8-95.2) and the warm room at 58.4 get only the global office.mp3 bed at .035 that runs 49-106; the ticktock 'warm room' tone exists only 49-52.6.",
+   "suggested_action": "Give the warm room its own bed every time it appears: quiet domestic room tone, faint clock, a candle/fire crackle at ~-45 dBFS; cut it in on 58.4 and 91.8."
+  },
+  {
+   "shot_id": "00:00-00:05",
+   "category": "cold_open_no_room",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "office.mp3 starts at 5.05; 0-4.5 (real laptop in a dark room) is only bass_pulse, heartbeat, buzz, keys.",
+   "suggested_action": "Start a dark-room tone (HVAC + distant traffic, -45 dBFS) at 0.0 so the cold open sits in a real space."
+  },
+  {
+   "shot_id": "multiple",
+   "category": "one_room_for_three_worlds",
+   "severity": 0.4,
+   "confidence": 0.5,
+   "evidence": "The same office.mp3 file covers the night office (5-49), the product UI (49-106), the dark room before Send (106.3) and the end (112-END).",
+   "suggested_action": "Use three distinct beds: night office (HVAC hum, distant city), warm home room (soft air, clock), dawn (city waking, birds); keep the UI shots on the warm-room bed at -50 dBFS."
+  },
+  {
+   "shot_id": "00:41-00:46",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "digital_silence_windows_s is empty; 44.0 measures -48.7 and 45.5 -47.3 dBFS with room tone under the stopped cursor and the head-drop thud.",
+   "suggested_action": "Keep; this is the one deliberate silence and it works."
+  },
+  {
+   "shot_id": "01:52-01:55",
+   "category": "dawn_near_silence",
+   "severity": 0.15,
+   "confidence": 0.6,
+   "evidence": "dynamic section at 112 = -34.7 dBFS with city + birds after the lights come on.",
+   "suggested_action": "Fine; ensure birds come in on the sunrise cut 112.4, not 109.0 while still inside."
+  },
+  {
+   "shot_id": "00:18",
+   "category": "email_voice_perspective",
+   "severity": 0.2,
+   "confidence": 0.4,
+   "evidence": "Partner's email read by a separate British male voice through the same VO bus (high-pass, +4.5 dB at 2.5 kHz) as the narrator.",
+   "suggested_action": "Treat it as an inner/remote voice: band-limit slightly or add a small room so it is not a second narrator."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "a location change with no ambience change",
+   "shot_id": "01:32",
+   "evidence": "cut into the warm-room hero at 91.8 keeps the same office.mp3 bed at .035 that runs over the UI shots; no warm-room layer is cued."
+  }
+ ],
+ "ambience_plan": [
+  {
+   "location": "dark room, cold open 0-4.5",
+   "layers": [
+    "low HVAC",
+    "distant traffic"
+   ],
+   "level_dbfs": "-45"
+  },
+  {
+   "location": "night office 5-46",
+   "layers": [
+    "office HVAC hum",
+    "distant city",
+    "faint fluorescent buzz"
+   ],
+   "level_dbfs": "-42 to -46"
+  },
+  {
+   "location": "warm home room 49-52.6, 58.4-61.4, 91.8-95.2",
+   "layers": [
+    "quiet room air",
+    "clock tick",
+    "soft candle crackle"
+   ],
+   "level_dbfs": "-46"
+  },
+  {
+   "location": "product UI 52.6-106",
+   "layers": [
+    "warm room air only"
+   ],
+   "level_dbfs": "-52"
+  },
+  {
+   "location": "dark room before Send 106.3-107.9",
+   "layers": [
+    "room air",
+    "heartbeat"
+   ],
+   "level_dbfs": "-44"
+  },
+  {
+   "location": "lights on / dawn 107.9-115.3",
+   "layers": [
+    "city waking",
+    "birds",
+    "light hum"
+   ],
+   "level_dbfs": "-38"
+  },
+  {
+   "location": "end card 115.3-121.4",
+   "layers": [
+    "birds tail",
+    "air"
+   ],
+   "level_dbfs": "-50"
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Give the warm room its own ambience bed and cut it in every time the film is in that room (58.4, 91.8), so the location change is heard, not only seen."
+}

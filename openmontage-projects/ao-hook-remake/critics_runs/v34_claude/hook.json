@@ -1,0 +1,84 @@
+{
+ "critic": "hook",
+ "stage": "animatic",
+ "score": 72,
+ "dimension_scores": {
+  "stop_scroll": 68,
+  "three_second_comprehension": 72,
+  "thats_me": 82,
+  "part1_attractor": 70,
+  "part2_curiosity_gap": 80,
+  "part3_proof_roadmap": 50,
+  "framework_fit": 75,
+  "open_loop": 80,
+  "sound_off_legibility": 80
+ },
+ "framework_detected": "In medias res (8:57 cursor on Send, model €74.6m ≠ deck €71–73m, then '45 MINUTES EARLIER') feeding into PAS (three false 'Done.' beats agitate). Executed fully on parts 1–2; the Solve/proof is withheld until 46–49 s, so the opening has no early glimpse of the result.",
+ "framework_recommended": "In medias res + a 1–2 s delayed-gratification flash: keep the ≠ cold open, but add one real frame of the Changes panel catching Slide 4 before the rewind, because a skeptical finance buyer needs a reason to sit through 45 s of pain.",
+ "hook_2s": 6,
+ "hook_alternatives": [
+  {
+   "framework": "Delayed gratification",
+   "first_3s_visual": "Real Changes panel, red ring on 'Slide 4 title €71–73m → €74.6m', counter '10 of 10 reviewed'",
+   "line": "The slide that would have embarrassed you at 9 A.M. Caught at 8:57.",
+   "why": "Shows the payoff and the real product first; the rewind then explains how she got there."
+  },
+  {
+   "framework": "Everything you know is wrong",
+   "first_3s_visual": "Giant green '✓ Done.' over a chat, then a hard glitch revealing the deck still reading €71–73m",
+   "line": "Your AI says it's done. Your deck disagrees.",
+   "why": "Challenges the category belief that a chatbot answer equals finished work; the '✓ Done' image is instantly legible sound-off."
+  },
+  {
+   "framework": "High-stakes challenge",
+   "first_3s_visual": "Red clock 8:57 counting, three file cards (model, memo, deck) with one number mismatched, cursor hovering Send",
+   "line": "Three minutes. Three files. One number that has to match.",
+   "why": "Turns the existing cold open into an explicit countdown with a clear win condition the demo later meets."
+  }
+ ],
+ "issues": [
+  {
+   "shot_id": "00:00-00:04.5",
+   "category": "static_attractor",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "f_01/f_02 are a grey email UI with two dark cards and a cursor; the only motion is the cursor sliding to Send",
+   "suggested_action": "Animate the ≠: punch the €71–73m card in with a red flash and a camera push, or open on the real protagonist's face lit by the screen with the cards overlaid."
+  },
+  {
+   "shot_id": "00:00-00:04.5",
+   "category": "text_density",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Frame 1 carries the full email body, three attachment chips, '8:57 AM · BOARD AT 9:00', and two labelled cards: too much to parse in 3 s",
+   "suggested_action": "Dim or crop the email body; keep only the clock, the two numbers and the ≠ legible for the first 2 s."
+  },
+  {
+   "shot_id": "00:05-00:46",
+   "category": "proof_too_late",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "No glimpse of the product or the resolution until the logo at 46 s (f_19); 'proof and roadmap' is absent from the opening",
+   "suggested_action": "Insert a 1 s flash-forward of the real Slide 4 ring (f_39) right after the ≠ cold open, before '45 MINUTES EARLIER'."
+  },
+  {
+   "shot_id": "00:05",
+   "category": "tonal_mismatch",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "f_03: '45 MINUTES EARLIER' over a dark night office with a team behind her, while the clock says 8:12 AM",
+   "suggested_action": "Grade toward early-morning light or change the super to keep time and image consistent."
+  },
+  {
+   "shot_id": "00:11-00:28",
+   "category": "repetition_dilutes_hook",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "'Done.' (f_05), then the deck generation and 'Done. AGAIN.' and a third 'AND AGAIN.' repeat the same beat",
+   "suggested_action": "Cut the second 'Done.' beat so the opening loop tightens and reaches the slide-4 reversal faster."
+  }
+ ],
+ "constraint_failures": [],
+ "revision_scope": "opening",
+ "top_revision": "Add a 1 s flash-forward of the real Changes panel ringing 'Slide 4 €71–73m → €74.6m' right after the ≠ cold open, so the hook gets proof before 45 s of pain."
+}

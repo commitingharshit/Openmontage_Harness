@@ -1,0 +1,159 @@
+{
+ "critic": "sound_sfx",
+ "stage": "animatic",
+ "score": 62,
+ "dimension_scores": {
+  "foley_coverage": 62,
+  "transition_design": 50,
+  "ui_sound_language": 75,
+  "sync_accuracy": 68,
+  "restraint": 62
+ },
+ "issues": [
+  {
+   "shot_id": "hook 00:01-00:46",
+   "category": "silent_cuts_in_urgent_hook",
+   "severity": 0.75,
+   "confidence": 0.7,
+   "evidence": "cuts_without_sound_event_s lists 16 of the 26 hook cuts (1.2, 5.47, 15.6, 16.5, 22.97, 25.1, 30.0, 30.93, 31.83, 34.5, 35.0, 36.77, 37.4, 39.2, 40.3, 45.63) = 62%, despite V39's 'click+whoosh on every silent cut'. The fill loop targets a stale cut list (5.07, 24.07, 24.87, 31.07 are not measured cuts; 5.47, 23.8, 25.1 are), skips cuts that already have a soft cue (typing_hard at 15.6 with a fade-in is no transient), and click .24/whoosh2 .28 under VO do not register as onsets.",
+   "suggested_action": "Drive the fill from measure_v39.json per_shot times, not the hard-coded CUTS list; on each hook cut put a short transient (tick/impact at ~-18 dBFS peak) exactly 0-30 ms before the cut, and re-measure until cuts_on_sound_pct >= 60."
+  },
+  {
+   "shot_id": "00:05-00:08",
+   "category": "missing_foley",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "Frame f_03 shows her lifting the laptop lid; the cue list has only rewind/static (4.45-5.0) and the jazz entry at 5.05, no lid or chair sound.",
+   "suggested_action": "Add laptop lid open + soft chair creak at the visible action ~5.6."
+  },
+  {
+   "shot_id": "01:48",
+   "category": "lights_on_no_diegetic",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "'real lights come on' at 107.9; the only cue is identity.mp3 at 107.95 (non-diegetic) after the click at 107.65.",
+   "suggested_action": "Add a light-switch clunk or ballast hum swell at 107.9 under the identity sting."
+  },
+  {
+   "shot_id": "00:20-00:35",
+   "category": "missing_body_foley",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "Head in hands 20.4-21.3 and head-scratch insert ~30-35 are real body actions with no cloth/breath cue in sound_mix_v39.py.",
+   "suggested_action": "Add a cloth rustle + exhale at 20.4 and a short scratch/rustle on the insert."
+  },
+  {
+   "shot_id": "00:49-01:46",
+   "category": "whoosh_carpet",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "whoosh2 is placed on almost every product push and cut (49.0, 54.3, 64.35, 67.3, 71.3, 77.9, 84.95, 88.35, 91.15, 94.95, 99.9, 101.75, 104.95...) plus click+whoosh fill; the same sample ~20 times reads as a template, not a design.",
+   "suggested_action": "Keep whooshes for camera pushes into the screen only; use UI ticks (key/pop) for in-app cuts, and vary the whoosh sample."
+  },
+  {
+   "shot_id": "00:01-00:02",
+   "category": "phone_buzz_unseen",
+   "severity": 0.2,
+   "confidence": 0.4,
+   "evidence": "buzz.mp3 at 0.05 while frames f_01/f_02 show only the email and cursor on Send.",
+   "suggested_action": "Either show the phone in the cold open or replace the buzz with an email-client alert sound."
+  },
+  {
+   "shot_id": "00:08-00:31",
+   "category": "typing_sync_good",
+   "severity": 0.1,
+   "confidence": 0.75,
+   "evidence": "Typing is one key.mp3 per real keystroke from typing_keys.json, matching the on-screen schedule; Send click 107.65 at .7 on her finger.",
+   "suggested_action": "Keep."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "more than 50% of cuts with no sound event in a film that claims urgency",
+   "shot_id": "hook 00:00-00:46",
+   "evidence": "16 of 26 hook cuts (62%) and 28 of 46 overall have no measured onset within 0.12 s."
+  }
+ ],
+ "spotting_list": [
+  {
+   "t": "1.2",
+   "event": "cut into the real laptop",
+   "sound": "short tick",
+   "source": "Mixkit 'interface click tick'"
+  },
+  {
+   "t": "5.47",
+   "event": "cut to protagonist / lid opens",
+   "sound": "laptop lid open + chair creak",
+   "source": "Freesound 'laptop lid open'"
+  },
+  {
+   "t": "15.6",
+   "event": "cut to hands typing",
+   "sound": "hard key transient on the cut",
+   "source": "Freesound 'keyboard single key hard'"
+  },
+  {
+   "t": "16.5",
+   "event": "cut to fixing by hand",
+   "sound": "mouse click",
+   "source": "Mixkit 'mouse click'"
+  },
+  {
+   "t": "20.4",
+   "event": "head in hands",
+   "sound": "cloth rustle + exhale",
+   "source": "Freesound 'cloth rustle sigh'"
+  },
+  {
+   "t": "22.97",
+   "event": "cut",
+   "sound": "soft whoosh-in",
+   "source": "Mixkit 'fast whoosh'"
+  },
+  {
+   "t": "25.1",
+   "event": "slides generating",
+   "sound": "UI tick",
+   "source": "Mixkit 'ui notification tick'"
+  },
+  {
+   "t": "30.0 / 30.93 / 31.83",
+   "event": "re-prompt cuts",
+   "sound": "hard key / tick / clock tick on each",
+   "source": "Freesound 'clock tick single'"
+  },
+  {
+   "t": "34.5 / 35.0",
+   "event": "Done #3 and slide 4 reverted",
+   "sound": "glitch hit + error tone",
+   "source": "Mixkit 'glitch error'"
+  },
+  {
+   "t": "36.77 / 37.4 / 39.2 / 40.3",
+   "event": "overload whip pans",
+   "sound": "tight whip + stab on each cut",
+   "source": "Mixkit 'whip swoosh'"
+  },
+  {
+   "t": "45.63",
+   "event": "cut into logo",
+   "sound": "soft riser tail / air",
+   "source": "Pixabay 'soft reverse swell'"
+  },
+  {
+   "t": "107.9",
+   "event": "lights come on",
+   "sound": "switch clunk + hum",
+   "source": "Freesound 'light switch fluorescent'"
+  },
+  {
+   "t": "112.4 / 115.3",
+   "event": "cut to sunrise / end card",
+   "sound": "air swell / soft tick",
+   "source": "Mixkit 'ambient swell'"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Re-drive the cut-transient pass from the measured cut times (not the stale CUTS list) with audible 0-30 ms pre-cut ticks, so the hook's cuts_on_sound rises from 39% to at least 60%."
+}

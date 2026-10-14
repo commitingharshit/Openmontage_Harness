@@ -1,0 +1,206 @@
+{
+  "critic": "sfx_foley",
+  "stage": "animatic",
+  "score": 49,
+  "dimension_scores": {
+    "foley_coverage": 35,
+    "transition_design": 45,
+    "ui_sound_language": 35,
+    "sync_accuracy": 60,
+    "restraint": 85
+  },
+  "issues": [
+    {
+      "shot_id": "01:10–01:13",
+      "category": "missing_key_foley",
+      "severity": 0.9,
+      "confidence": 1.0,
+      "evidence": "At 71.5 s Maya lowers the laptop lid; the timeline explicitly states 'No foley on ... the laptop close.'",
+      "suggested_action": "Add a quiet hinge movement followed by a firm lid contact, synchronized to the actual closure."
+    },
+    {
+      "shot_id": "00:11–01:13",
+      "category": "unscored_transitions",
+      "severity": 0.85,
+      "confidence": 1.0,
+      "evidence": "Measured cuts_on_sound_pct is 45%; 11 cuts lack sound events: 11.2, 13.7, 16.7, 19.7, 22.2, 28.2, 36.2, 42.2, 48.7, 51.2 and 73.2 s.",
+      "suggested_action": "Spot these cuts with restrained action transients, UI ticks or existing score accents; prioritize the manual-work cuts and the review-panel arrival."
+    },
+    {
+      "shot_id": "00:51–01:07",
+      "category": "weak_accept_signature",
+      "severity": 0.8,
+      "confidence": 0.96,
+      "evidence": "The review sequence shows 'Changes ready for review' followed by '10 of 10 changes accepted'; the only specified product interaction sound is 'UI click at Accept all ~61.1.'",
+      "suggested_action": "Give the actual Accept all press a precise click and the completed state a short, distinctive confirmation tone from the same UI sound family."
+    },
+    {
+      "shot_id": "00:26–00:28",
+      "category": "digital_dead_air",
+      "severity": 0.75,
+      "confidence": 1.0,
+      "evidence": "The flagged-number message occupies the punch beat; measured digital_silence_windows_s includes 26.0, 26.5, 27.0 and 27.5, with the 26 s section at -180 dBFS.",
+      "suggested_action": "Keep the score stop but carry a faint office ambience through the message and reaction so the pause retains physical presence."
+    },
+    {
+      "shot_id": "00:12",
+      "category": "missing_paper_foley",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "At 12.2 s Maya's hand meets the paper stack beside the laptop; the timeline explicitly lists no paper foley.",
+      "suggested_action": "Add a close, dry paper brush or shuffle at the hand contact; verify motion before adding any page-turn sound."
+    },
+    {
+      "shot_id": "00:03–01:09",
+      "category": "incomplete_ui_sound_language",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "The frames show chat cards, a selected spreadsheet cell, pasted memo text, slide changes, highlighted diff rows and a completed review state; specified cues are only keyboard at 13.85, mouse click at 16.75 and Accept all click around 61.1.",
+      "suggested_action": "Use one restrained UI family for card arrivals, selections, paste and diff navigation, reserving the clearest confirmation sound for acceptance."
+    },
+    {
+      "shot_id": "00:13–01:04",
+      "category": "sync_requires_verification",
+      "severity": 0.5,
+      "confidence": 0.7,
+      "evidence": "Keyboard starts at 13.85 s after the 13.7 s cut, mouse click is at 16.75 s after the 16.7 s cut, and acceptance is specified only as '~61.1'; sampled frames do not establish the exact contact frames.",
+      "suggested_action": "Verify each cue against the moving recording and align it to the keystroke, mouse-down or state change, rather than moving it automatically to the cut."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A visible key action must have sound.",
+      "shot_id": "01:11",
+      "evidence": "Visible laptop closure; the supplied timeline explicitly confirms no laptop-close foley."
+    },
+    {
+      "rule": "No more than 50% of cuts may lack a sound event in a film that claims urgency.",
+      "shot_id": "00:00–01:22",
+      "evidence": "The late-night deadline sequence establishes urgency; measured cuts_on_sound_pct is 45%, leaving 55% without sound events."
+    }
+  ],
+  "spotting_list": [
+    {
+      "t": "00:03.3–00:04.5",
+      "event": "Chat answer card arrives",
+      "sound": "Soft card-arrival tick",
+      "source": "Mixkit/Freesound search term: minimal interface notification tick"
+    },
+    {
+      "t": "00:11.2–00:12.2",
+      "event": "Cut to Maya and hand contact with paper stack",
+      "sound": "Dry paper brush at contact, optionally bridging the cut",
+      "source": "Mixkit/Freesound search term: office paper stack shuffle"
+    },
+    {
+      "t": "00:13.7",
+      "event": "Spreadsheet view arrives",
+      "sound": "Muted interface selection tick",
+      "source": "Mixkit/Freesound search term: soft UI select click"
+    },
+    {
+      "t": "00:16.7–00:18.0",
+      "event": "Memo view arrives and pasted text appears",
+      "sound": "Quiet paste tick; retain existing mouse click at its verified action",
+      "source": "Mixkit/Freesound search term: subtle computer interface click"
+    },
+    {
+      "t": "00:19.7",
+      "event": "Original slide and chatbot slide comparison appears",
+      "sound": "Short dry transition accent",
+      "source": "Mixkit/Freesound search term: minimal soft transition swipe"
+    },
+    {
+      "t": "00:22.2",
+      "event": "Edited slide view arrives",
+      "sound": "Muted UI tick",
+      "source": "Mixkit/Freesound search term: interface navigation tick"
+    },
+    {
+      "t": "00:28.2",
+      "event": "Cut to Maya's reaction",
+      "sound": "Faint fabric movement or breath, verified against motion",
+      "source": "Mixkit/Freesound search term: seated clothing rustle quiet breath"
+    },
+    {
+      "t": "00:33.7–00:38.7",
+      "event": "Request view arrives and highlight moves between clauses",
+      "sound": "Soft arrival tick and one restrained highlight sweep at 36.2",
+      "source": "Mixkit/Freesound search term: subtle UI highlight sweep"
+    },
+    {
+      "t": "00:38.7",
+      "event": "Word tracked-change view appears",
+      "sound": "Soft diff-reveal tick",
+      "source": "Mixkit/Freesound search term: minimal interface reveal"
+    },
+    {
+      "t": "00:42.2",
+      "event": "Excel inline diff view appears",
+      "sound": "Matching diff-reveal tick",
+      "source": "Mixkit/Freesound search term: minimal interface reveal"
+    },
+    {
+      "t": "00:45.7",
+      "event": "PowerPoint tab and deck view appear",
+      "sound": "Matching navigation tick",
+      "source": "Mixkit/Freesound search term: soft interface tab click"
+    },
+    {
+      "t": "00:48.7",
+      "event": "Cut back to Maya at laptop",
+      "sound": "Quiet sleeve or desk-contact foley, conditional on verified movement",
+      "source": "Mixkit/Freesound search term: clothing sleeve desk movement"
+    },
+    {
+      "t": "00:51.2",
+      "event": "Changes review panel arrives",
+      "sound": "Distinct but restrained review-ready cue",
+      "source": "Mixkit/Freesound search term: soft UI notification two notes"
+    },
+    {
+      "t": "00:54.2–01:00.0",
+      "event": "Diff list navigates to flagged text box and dependent chart",
+      "sound": "Matching selection ticks at actual navigation events",
+      "source": "Mixkit/Freesound search term: subtle interface navigation click"
+    },
+    {
+      "t": "01:00.0–01:02.0",
+      "event": "Accept/reject controls receive visual emphasis",
+      "sound": "Soft focus tick; verify whether any actual click occurs",
+      "source": "Mixkit/Freesound search term: minimal UI focus tick"
+    },
+    {
+      "t": "01:03.2",
+      "event": "All changes reviewed state appears",
+      "sound": "Short acceptance confirmation motif",
+      "source": "Mixkit/Freesound search term: subtle success confirmation chime"
+    },
+    {
+      "t": "01:07.2",
+      "event": "Accepted memo and table appear",
+      "sound": "Quiet resolved-state tick",
+      "source": "Mixkit/Freesound search term: soft UI completion tick"
+    },
+    {
+      "t": "01:10.2–01:13.2",
+      "event": "Maya lowers and closes laptop",
+      "sound": "Hinge movement and padded lid contact at actual closure",
+      "source": "Mixkit/Freesound search term: laptop lid close gentle"
+    },
+    {
+      "t": "01:13.2–01:14.6",
+      "event": "Boardroom cut; David holds printed pack",
+      "sound": "Light paper handling at verified movement, bridging the cut",
+      "source": "Mixkit/Freesound search term: document handling boardroom paper"
+    },
+    {
+      "t": "01:16.2",
+      "event": "Final Diffs title and CTA arrive",
+      "sound": "Brief restrained variation of acceptance motif",
+      "source": "Mixkit/Freesound search term: minimal tonal logo confirmation"
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Add a restrained, synchronized spotting pass across the film, prioritizing laptop closure, manual work, currently unscored cuts and a distinctive acceptance confirmation."
+}

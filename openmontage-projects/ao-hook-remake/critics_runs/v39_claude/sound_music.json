@@ -1,0 +1,130 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 66,
+ "dimension_scores": {
+  "arc_serves_story": 74,
+  "hit_points": 55,
+  "genre_and_emotion_fit": 68,
+  "motif": 76,
+  "ending": 52
+ },
+ "issues": [
+  {
+   "shot_id": "01:59-02:01",
+   "category": "ending_no_button",
+   "severity": 0.65,
+   "confidence": 0.7,
+   "evidence": "Score returns at 115.6 (vol .18) with a 2.0 s fade-out to END 121.4; the brand read starts 119.3 and runs to 121.26, so the music fades out across the product name and there is no button, sting or silence after it. Measured 121.0 = -24.7, 121.4 = -15.8 dBFS: the film ends mid-sound.",
+   "suggested_action": "End card: pull the score to a held pad at ~-28 dBFS from 117.5, put the identity sting as the button AFTER the brand read (~120.0), or cut to a 1 s room-tone-only tail; never fade the score across the brand name."
+  },
+  {
+   "shot_id": "hook 00:00-00:46",
+   "category": "cuts_not_on_music",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "cuts_on_sound_pct 39.1; the hook score is beds (jazz, suspense, bass_pulse, heartbeats, riser) with no metric accents placed on cuts; only the riser->impact at 39.7 and the Done chimes are hits.",
+   "suggested_action": "Cut the overload montage 37.4-41.6 to a grid: pick a bpm (e.g. 120) and place stabs on 37.4, 39.2, 40.3, 41.6; or move the cuts onto the suspense track's downbeats."
+  },
+  {
+   "shot_id": "01:32",
+   "category": "downbeat_late",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Hero cut at 91.8 (measured); score lift with .34 vol starts 92.6 and the Accept impact at 93.1, 0.8-1.3 s after the cut.",
+   "suggested_action": "Start the lift segment at 91.75 with a 0.05 s fade-in so the hero cut itself is the downbeat, keep the Accept impact at 93.1."
+  },
+  {
+   "shot_id": "00:49-01:18",
+   "category": "flat_product_bed",
+   "severity": 0.35,
+   "confidence": 0.55,
+   "evidence": "One library track (music_digital_clouds_175) at .16 for 29 s from 49.0; dynamic_sections show 46-76 flat at ~-20 dBFS with no build into the plan/memo payoff at 71.4.",
+   "suggested_action": "Add a gentle build (layer or a later section of the cue) from 67.7 into the €74.6m lift at ~74.7."
+  },
+  {
+   "shot_id": "00:05-00:17",
+   "category": "genre_fit_hook",
+   "severity": 0.25,
+   "confidence": 0.5,
+   "evidence": "'hazy after hours' jazz at .17 under the helpful-AI beat, then suspense from 17.3: the turn is right, but the jazz reads as lounge rather than false confidence.",
+   "suggested_action": "Keep the structure; consider a bright, slightly too-cheerful synth loop so its death at the email feels ironic."
+  },
+  {
+   "shot_id": "00:43.6-00:46",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "Measured 44.0 = -48.7 and 45.5 = -47.3 dBFS; music stops at 43.6, identity sting at 46.2 changes state at the reveal, product score starts 49.0.",
+   "suggested_action": "Keep exactly; this is the SMITH-style drop the film needs."
+  }
+ ],
+ "constraint_failures": [],
+ "cue_sheet": [
+  {
+   "act": "cold open 0-4.5",
+   "feel": "dread pulse",
+   "tempo_bpm": "~60 heartbeat",
+   "instrumentation": "sub pulse, heartbeat, single high string",
+   "hits": "impact on the ≠ at 3.1, rewind 4.45"
+  },
+  {
+   "act": "false help 5-17",
+   "feel": "bright, slightly too easy",
+   "tempo_bpm": "100-110",
+   "instrumentation": "light synth/Rhodes loop",
+   "hits": "chime on Done 11.05; loop dies on the email 17.1"
+  },
+  {
+   "act": "grind 17-43.6",
+   "feel": "tightening tension",
+   "tempo_bpm": "120 grid",
+   "instrumentation": "ostinato strings, ticking, sub pulse, riser",
+   "hits": "stabs on 37.4/39.2/40.3/41.6, cut to silence at 43.6"
+  },
+  {
+   "act": "silence 43.6-46",
+   "feel": "breath",
+   "tempo_bpm": "-",
+   "instrumentation": "room tone only",
+   "hits": "head-drop thud 44.57"
+  },
+  {
+   "act": "reveal + proof 46-91.8",
+   "feel": "calm confidence, building",
+   "tempo_bpm": "90-100",
+   "instrumentation": "warm pads, plucked synth, light percussion added at 67.7",
+   "hits": "identity 46.2, swell into €74.6m 74.7"
+  },
+  {
+   "act": "hero 91.8-106",
+   "feel": "release",
+   "tempo_bpm": "same",
+   "instrumentation": "full kit drop-in on 91.8",
+   "hits": "downbeat on the cut 91.8, Accept 93.1"
+  },
+  {
+   "act": "Send + dawn 106-115",
+   "feel": "exhale",
+   "tempo_bpm": "free",
+   "instrumentation": "swell then near-silence, city and birds",
+   "hits": "click 107.65 then swell"
+  },
+  {
+   "act": "end card 115-121.4",
+   "feel": "resolved",
+   "tempo_bpm": "free",
+   "instrumentation": "held pad, then sting as button",
+   "hits": "brand read clear ~118, sting after it ~120"
+  }
+ ],
+ "free_source_suggestions": [
+  "Pixabay: 'corporate tension ostinato 120 bpm'",
+  "Mixkit: 'tech ambient uplifting'",
+  "YouTube Audio Library: mood 'Dramatic', genre 'Cinematic', short",
+  "Pixabay: 'logo sting minimal piano'",
+  "Mixkit: 'suspense pulse'"
+ ],
+ "revision_scope": "ending",
+ "top_revision": "Rebuild the last 4 s so the score holds low under the brand read and the identity sting lands AFTER 'Agentic Office' as a button, with no fade across the name."
+}

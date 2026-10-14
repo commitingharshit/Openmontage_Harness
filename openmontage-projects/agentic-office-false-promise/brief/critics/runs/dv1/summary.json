@@ -1,0 +1,14 @@
+{
+ "round": "dv1",
+ "C": 75.3,
+ "S": 76,
+ "P": 79,
+ "Q": 77.2,
+ "constraint_failures": [
+  {
+   "rule": "Every message must be large enough to read on a phone.",
+   "shot_id": "00:05.5\u201300:08",
+   "evidence": "The side-by-side slide details and labels in the 00:06.5 frame are too small for comfortable phone-feed reading during the 2.5-second comparison."
+  }
+ ]
+}

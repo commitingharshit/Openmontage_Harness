@@ -1,0 +1,20 @@
+{"critic":"customer","stage":"animatic","score":71,
+"dimension_scores":{"pain_specificity":86,"relatability":80,"emotional_authenticity":66,"product_pain_fit":80,"trust_credibility":58,"purchase_motivation":56},
+"recognition":9,"resonance":7,"persuasion":6,
+"purchase_objections":[
+"I never see the edited deck/memo opened in real PowerPoint/Word with our template intact — the exact 'formatting wrecked' pain the film set up.",
+"'Cloud AI may process document content' plus 'Can make mistakes' with no statement on training, residency or client confidentiality — a blocker for legal and client work.",
+"Demo cues: 'No model' picker, 'not signed in' teammates, 'simulated teammate', '8× speed' — it reads as a prototype, and the CTA is early access.",
+"The Room shot re-proposes the €71–73m fix over a memo still showing €71–73m, which makes me wonder whether the first change actually stuck.",
+"I already have Copilot in Office; the film doesn't say why this beats it inside my existing files."],
+"would_try":"maybe — the cell/sentence/slide-element diff list with 'Slide 4 title' caught is exactly what I'd want before a board meeting, but I'd only pilot it on a non-client file until data handling is clear.",
+"buy_decision":"TRY_FIRST — flips to BUY if I see it run on my own firm-template board pack and round-trip to native .docx/.pptx with tracked changes intact, with a written no-training/data-residency guarantee.",
+"issues":[
+{"shot_id":"1:42–1:45","category":"trust_data_handling","severity":0.5,"confidence":0.75,"evidence":"f_42: 'Your files, stored on your device.' directly above 'Cloud AI may process document content.'","suggested_action":"Add one concrete line on what leaves the device and that it isn't used for training (only if true/approved)."},
+{"shot_id":"1:12–1:25","category":"missing_native_roundtrip","severity":0.45,"confidence":0.7,"evidence":"Proof stays in the app's panels (f_30–f_34); the edited deck is never opened as a native .pptx with the firm template","suggested_action":"Add a 2–3 s shot of the reviewed deck/memo open in PowerPoint/Word with the template and tracked changes intact."},
+{"shot_id":"1:27–1:32","category":"credibility_contradiction","severity":0.4,"confidence":0.7,"evidence":"f_37: 'Replace “€71–73m” with “€74.6m”' Accept/Reject over a memo still reading €71–73m","suggested_action":"Change the teammate proposal to the cash-runway edit so it doesn't undercut the earlier fix."},
+{"shot_id":"1:05","category":"prototype_tell","severity":0.25,"confidence":0.6,"evidence":"f_28 bottom of assistant panel: '% No model'; f_35 'Editing · not signed in'","suggested_action":"Blur or crop the model picker and sign-in states in the product shots."},
+{"shot_id":"0:20–0:30","category":"melodrama","severity":0.2,"confidence":0.6,"evidence":"Head-in-hands shot used three times (f_09, f_10, f_13) plus head on desk","suggested_action":"Keep one reaction; subtle reads truer to a senior consultant."}],
+"constraint_failures":[],
+"revision_scope":"product_demo",
+"top_revision":"Add one beat showing the reviewed deck and memo opened in native PowerPoint/Word with the firm template and tracked changes intact, answering the 'formatting wrecked' setup and the switching-cost objection at once."}

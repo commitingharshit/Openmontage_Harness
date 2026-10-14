@@ -1,0 +1,432 @@
+{
+ "critic": "realfilm",
+ "stage": "animatic",
+ "score": 45,
+ "dimension_scores": {
+  "production_value": 45,
+  "photorealism_no_ai_tells": 55,
+  "cohesion_with_ref_look": 35,
+  "ui_and_graphics_finish": 42
+ },
+ "issues": [
+  {
+   "shot_id": "00:07.5-00:42.5",
+   "category": "slide_deck_ui",
+   "severity": 0.85,
+   "confidence": 0.85,
+   "evidence": "14 of the first 18 sampled frames are illustrated white UI or type cards on black (scores 2-4); none would sit in the Codex or SMITH reel.",
+   "suggested_action": "Put the problem-world UI on her laptop in the night office (corner-pin, OTS, screen light on her face)."
+  },
+  {
+   "shot_id": "01:55-02:00",
+   "category": "flat_slab",
+   "severity": 0.65,
+   "confidence": 0.9,
+   "evidence": "Half-frame flat saturated blue slab beside the Evidence panel.",
+   "suggested_action": "Replace with the cited document page or a blurred set backdrop."
+  },
+  {
+   "shot_id": "00:22.5 / 00:30",
+   "category": "stock_tell",
+   "severity": 0.6,
+   "confidence": 0.85,
+   "evidence": "Soft upscaled stock with visible black edges, repeated twice.",
+   "suggested_action": "Fill frame / higher-res plate; use a different reaction for the second beat."
+  },
+  {
+   "shot_id": "01:25-01:30",
+   "category": "generated_image_in_ui",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "Slide element shows a glossy stock/generated boardroom render, reads as placeholder art.",
+   "suggested_action": "Show the actual €74.6m title change on slide 4 instead."
+  },
+  {
+   "shot_id": "02:10-02:13",
+   "category": "continuity",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "Ending laptop is in a different candle-lit room, protagonist absent, email shows one attachment vs three in the opening.",
+   "suggested_action": "Bookend in her office with her in frame; match the three attachments."
+  },
+  {
+   "shot_id": "02:19-02:25",
+   "category": "end_on_black",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Tagline and logo on near-black gradient; refs end on an image.",
+   "suggested_action": "Tagline over the sunrise or her face, then logo."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "real_film_index < 60",
+   "shot_id": "whole",
+   "evidence": "real_film_index 41.7"
+  },
+  {
+   "rule": "a UI frame that looks like a screenshot pasted on black",
+   "shot_id": "00:35 / 00:42.5",
+   "evidence": "regenerated deck card on near-black (0:35); cropped white email panel on black (0:42.5)"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Replace the first-half floating white UI frames with in-world laptop shots in the protagonist's night office, the way 0:50 and 0:57.5 already do.",
+ "frame_scores": [
+  {
+   "t": "00:00.0",
+   "score": 3,
+   "tell": "illustrated email UI on black with glowing cards",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:02.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:05.0",
+   "score": 6,
+   "tell": "real stock, slightly soft",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "00:07.5",
+   "score": 2,
+   "tell": "white chatbot UI with hot glow, screenshot feel",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:10.0",
+   "score": 2,
+   "tell": "giant type over greyed UI",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:12.5",
+   "score": 2,
+   "tell": "Word look-alike, flat",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:15.0",
+   "score": 5,
+   "tell": "real hands, soft upscale",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "00:17.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:20.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:22.5",
+   "score": 4,
+   "tell": "black border around soft stock plate",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:25.0",
+   "score": 2,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:27.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:30.0",
+   "score": 4,
+   "tell": "same clip reused, black border",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:32.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:35.0",
+   "score": 3,
+   "tell": "card pasted on black",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:37.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:40.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:42.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:45.0",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:47.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:50.0",
+   "score": 7,
+   "tell": "tracked laptop in a lit room: convincing",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "00:52.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:55.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "00:57.5",
+   "score": 7,
+   "tell": "real top-down footage, convincing",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:00.0",
+   "score": 7,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:02.5",
+   "score": 3,
+   "tell": "soft, empty prompt box",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:05.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:07.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:10.0",
+   "score": 4,
+   "tell": "flat teal slab half-frame",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:12.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:15.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:17.5",
+   "score": 5,
+   "tell": "UI on blurred backdrop, reasonable",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:20.0",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:22.5",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:25.0",
+   "score": 5,
+   "tell": "generated-looking boardroom image inside slide",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:27.5",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:30.0",
+   "score": 4,
+   "tell": "empty teal slide area",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:32.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:35.0",
+   "score": 5,
+   "tell": "ring + callout reads well",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:37.5",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:40.0",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:42.5",
+   "score": 5,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "01:45.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:47.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:50.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:52.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:55.0",
+   "score": 3,
+   "tell": "flat saturated blue slab, half frame",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "01:57.5",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:00.0",
+   "score": 3,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:02.5",
+   "score": 4,
+   "tell": "centred panel in blur, slide-like",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:05.0",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:07.5",
+   "score": 4,
+   "tell": "flat UI frame, no in-world staging",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:10.0",
+   "score": 6,
+   "tell": "real hand, red cast",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "02:12.5",
+   "score": 7,
+   "tell": "real laptop in candle room, convincing",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "02:15.0",
+   "score": 7,
+   "tell": "real sunrise",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "02:17.5",
+   "score": 7,
+   "tell": "real UI on blurred backdrop",
+   "fix": "keep; match grade and grain"
+  },
+  {
+   "t": "02:20.0",
+   "score": 3,
+   "tell": "text on black",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  },
+  {
+   "t": "02:22.5",
+   "score": 4,
+   "tell": "end card on black",
+   "fix": "stage UI on the laptop in-scene with screen light and grain"
+  }
+ ],
+ "real_film_index": 41.7,
+ "closest_ref": "Closest to the 9nVEfjmDlVk product sheet (UI floating on blurred dark backdrops with live-action inserts); the gap is that its UI is graded into the scene and every UI beat pays off in a lit live-action shot, while here half the runtime is hot-white or flat-slab panels on black.",
+ "top_3_upgrades": [
+  "Corner-pin all problem-world UI onto her laptop in the night office with screen light on her face",
+  "Remove flat colour slabs (teal 1:07-1:32, blue 1:55-2:00) and put panels on angled planes over blurred set plates with grain",
+  "Bookend the ending in her office with her in frame and the tagline over a live-action image, not black"
+ ]
+}

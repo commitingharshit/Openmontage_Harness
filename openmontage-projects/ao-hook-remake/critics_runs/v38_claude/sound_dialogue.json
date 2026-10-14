@@ -1,0 +1,121 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 58,
+ "dimension_scores": {
+  "intelligibility": 55,
+  "performance_casting": 50,
+  "writing_for_the_ear": 72,
+  "pacing": 50,
+  "placement": 68
+ },
+ "issues": [
+  {
+   "shot_id": "01:59",
+   "category": "brand_name_misheard",
+   "severity": 0.95,
+   "confidence": 0.85,
+   "evidence": "vo_lines t=119.3 expected 'Agentic Office.' heard 'office.' match 0.60, words_per_s 5.56: the product name is lost on the final brand read; identity sting at 117.9 (SFX bus, not ducked) and music return at 115.6 sit under it, and the read starts only 2.1 s before the end",
+   "suggested_action": "Re-record/regenerate 'Agentic Office.' slower (~1.6 s, phonetic 'uh-JEN-tick OFF-iss'), start it at 118.6, move the sting to 117.2 so it decays before the read, and duck music/sting -10 dB under it; re-measure until match >= 0.95"
+  },
+  {
+   "shot_id": "00:06-00:27",
+   "category": "rushed_hook_reads",
+   "severity": 0.7,
+   "confidence": 0.75,
+   "evidence": "Measured words/s: 6.0 '…update the board memo.' 4.13; 11.0 'It says it's done.' 4.17; 12.5 '…formatting's wrecked.' 4.02; 15.5 4.0; 24.0 '…builds one, in the chat.' 4.61 (> 3.5 = rushed)",
+   "suggested_action": "Time-stretch or regenerate these lines at 0.85-0.9 speed (target 3.0-3.3 w/s) and trim words: 24.0 -> 'So you ask it for the deck. It builds one. In the chat.'"
+  },
+  {
+   "shot_id": "00:11, 00:15",
+   "category": "low_match_lines",
+   "severity": 0.5,
+   "confidence": 0.45,
+   "evidence": "'It says it's done.' match 0.78 and 'So you fix it by hand. Then, an email.' match 0.83; the heard text is word-correct but the window bleeds into the next line ('then you', 'please update'), so this is partly a measurement artifact",
+   "suggested_action": "Verify first: re-measure with per-line windows clipped to VO duration; if still < 0.85, add 0.3 s air after each line so the transcriber (and viewer) gets a clean boundary"
+  },
+  {
+   "shot_id": "00:28-00:30",
+   "category": "vo_back_to_back",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "'But the deck... still has the old number.' (28.0, 7 words at 3.36 w/s, ends ~30.1) runs straight into 'Prompt again…' at 30.2 while the partner's email text 'The deck still says €71–73m… Fix slide 2.' is held on screen 28.4-31.0",
+   "suggested_action": "Cut the VO at 28.0 (the on-screen email already says it) or shorten to 'Still the old number.' and start 'Prompt again' at 30.5 on the re-prompt cut"
+  },
+  {
+   "shot_id": "all",
+   "category": "tts_performance",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "Candidate: 'Kokoro TTS draft narrator (af_heart)'; uniform delivery across grind and resolve, homophone 'slide for' heard twice at 34.6 and 93.8",
+   "suggested_action": "Cast a human or premium VO for final; direct the hook tired/dry and the payoff warm; land 'four' with a slight stress and pause"
+  },
+  {
+   "shot_id": "01:35-01:41",
+   "category": "vo_vs_onscreen_text",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "VO 93.8 'Every change is marked, in every file. Accept it, or reject it. Even slide four.' plays over supers 'The slide that slipped. Slide 4. Caught.' and 'See every change. Choose what stays.'",
+   "suggested_action": "Make one super echo the VO ('Even slide four.') or drop 'The slide that slipped…' so the viewer reads and hears the same idea"
+  },
+  {
+   "shot_id": "00:58",
+   "category": "long_line",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "58.7 line is 18 words over ~5.1 s at 3.56 w/s: 'Tell it what changed, once. It finds where that number lives: the model, the memo, the deck.'",
+   "suggested_action": "Split into two reads with a 0.4 s beat on the cut at 61.4: 'Tell it what changed. Once.' / 'It finds every place that number lives.'"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "brand or product name misheard",
+   "shot_id": "01:59",
+   "evidence": "expected 'Agentic Office.' heard 'office.' match 0.60"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:11",
+   "evidence": "'It says it's done.' match 0.78 (likely window-bleed artifact; verify)"
+  },
+  {
+   "rule": "any line with match < 0.85",
+   "shot_id": "00:15",
+   "evidence": "'So you fix it by hand. Then, an email.' match 0.83 (likely window-bleed artifact; verify)"
+  }
+ ],
+ "line_fixes": [
+  {
+   "t": "119.3",
+   "issue": "brand heard as 'office.' (0.60)",
+   "fix": "phonetic 'uh-JEN-tick OFF-iss', 1.6 s read, start 118.6, sting moved to 117.2, everything else -10 dB under it"
+  },
+  {
+   "t": "24.0",
+   "issue": "4.61 w/s",
+   "fix": "'So you ask it for the deck. It builds one. In the chat.' at ~3.0 w/s"
+  },
+  {
+   "t": "6.0",
+   "issue": "4.13 w/s",
+   "fix": "slow to 3.2 w/s; start at 5.6 on the protagonist cut"
+  },
+  {
+   "t": "11.0",
+   "issue": "4.17 w/s, 0.78 match",
+   "fix": "slow to ~2.8 w/s and leave 0.3 s air before 12.5"
+  },
+  {
+   "t": "28.0",
+   "issue": "duplicates on-screen email, butts into 30.2",
+   "fix": "drop or shorten to 'Still the old number.'; move 30.2 to 30.5"
+  },
+  {
+   "t": "34.6 / 93.8",
+   "issue": "'four' heard 'for'",
+   "fix": "stress and lengthen 'four', brief pause before it"
+  }
+ ],
+ "revision_scope": "ending",
+ "top_revision": "Re-read 'Agentic Office.' clearly and earlier (118.6, sting moved off it, beds ducked) so the brand name is actually heard."
+}

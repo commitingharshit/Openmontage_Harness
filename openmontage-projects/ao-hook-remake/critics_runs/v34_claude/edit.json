@@ -1,0 +1,125 @@
+{
+ "critic": "edit",
+ "stage": "animatic",
+ "score": 57,
+ "dimension_scores": {
+  "rhythm_wave": 60,
+  "cut_motivation": 58,
+  "connectives": 64,
+  "economy": 45,
+  "transitions_quality": 60
+ },
+ "issues": [
+  {
+   "shot_id": "01:44-02:10",
+   "category": "second_half_sag",
+   "severity": 0.8,
+   "confidence": 0.85,
+   "evidence": "Measured shots of 11.0 s (1:44 Room), 8.0 s (1:55 Evidence), 7.0 s (2:03 file tree) back to back: 26 s with three cuts, on static panels with captions; frames 1:50 and 1:52.5 are identical, 1:57.5-2:00 identical, 2:02.5-2:07.5 identical.",
+   "suggested_action": "Cut Room to 5 s, Evidence to 4 s, file tree to 3 s; recover ~14 s."
+  },
+  {
+   "shot_id": "01:11.4-01:18 / 01:50-01:55",
+   "category": "redundant_beat",
+   "severity": 0.65,
+   "confidence": 0.85,
+   "evidence": "The same Room thread ('Priya's Assistant plan / handoff … €74.6m') is shown at 1:12.5-1:15 and again at 1:50-1:52.5.",
+   "suggested_action": "Drop the second Room-thread shot; let 'Your team. Their agents.' land on the Accept/Reject proposal instead."
+  },
+  {
+   "shot_id": "00:22.97 / 00:31.07",
+   "category": "repeated_clip",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "The identical head-in-hands clip at the same framing is used twice (f 0:22.5 and 0:30).",
+   "suggested_action": "Replace one with a different reaction (eyes CU, pushing laptop away) so the escalation reads as new."
+  },
+  {
+   "shot_id": "01:18-01:31",
+   "category": "long_split_hold",
+   "severity": 0.45,
+   "confidence": 0.75,
+   "evidence": "Split screen held 13 s (8.2 + 4.8) with only the left progress bar moving 4%→26%; ONE CELL/ONE SENTENCE/ONE SLIDE ELEMENT are good beats but each is ~4 s.",
+   "suggested_action": "Make it a burst: three 2 s beats cut on the VO words 'cell', 'sentence', 'slide element', each with a whoosh."
+  },
+  {
+   "shot_id": "00:43-00:49",
+   "category": "bridge_to_reveal",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "Silence on the stopped cursor then logo fade from black (f 0:45 dim logo); works as a hold but the reveal is a hard cut to a card.",
+   "suggested_action": "Hold the silence 1 s longer on her head-down insert, then let the logo resolve out of the Send button glow (match cut)."
+  },
+  {
+   "shot_id": "01:01.4-01:04.4",
+   "category": "dead_air_shot",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "'Describe what to build' empty prompt box, soft (sharp 51), mostly empty dark frame for 3 s.",
+   "suggested_action": "Trim to 1.2 s or start on the prompt text already typing."
+  },
+  {
+   "shot_id": "02:16-02:25",
+   "category": "ending_pacing",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "Sunrise 2.9 s then text-on-black tagline + end card 6.1 s; the payoff 'This time, you checked.' sits on black rather than on an image.",
+   "suggested_action": "Overlay the strike-through line on the sunrise, then cut to the logo on the beat."
+  },
+  {
+   "shot_id": "00:37.4-00:41.6",
+   "category": "burst_works",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "0.6 s / 1.7 s / 0.6 s / 1.3 s whip-pan burst on 'Copy. Paste. Check. Repeat.' is the film's best rhythm moment.",
+   "suggested_action": "Keep; tighten the 1.7 s shot at 0:38 to 0.8 s so all four words hit the same pulse."
+  }
+ ],
+ "constraint_failures": [],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Cut the 1:44-2:10 run of 11 s / 8 s / 7 s static holds (and the repeated Room thread) by ~14 s so the product half breathes-then-bursts instead of sagging into the end card.",
+ "recut_plan": [
+  {
+   "t": "01:44-01:55",
+   "edit": "trim Room people/proposal shot from 11.0 s to 5 s; keep Accept/Reject ring"
+  },
+  {
+   "t": "01:50-01:55",
+   "edit": "delete the repeated Room thread (already shown 1:12.5)"
+  },
+  {
+   "t": "01:55-02:03",
+   "edit": "trim Evidence from 8 s to 4 s; push-in on 'FY26 Model B5:B14'"
+  },
+  {
+   "t": "02:03-02:10",
+   "edit": "trim file tree from 7 s to 3 s"
+  },
+  {
+   "t": "01:18-01:31",
+   "edit": "split into three 2 s beats on 'cell / sentence / slide element' with whoosh cuts"
+  },
+  {
+   "t": "00:30-00:31",
+   "edit": "replace the second head-in-hands with a different reaction angle"
+  },
+  {
+   "t": "01:01.4-01:04.4",
+   "edit": "trim empty prompt box to 1.2 s"
+  },
+  {
+   "t": "02:16-02:19",
+   "edit": "dissolve 'This time, you checked.' over the sunrise instead of cutting to black"
+  }
+ ],
+ "target_shot_stats": {
+  "duration_s": 130,
+  "shots": 55,
+  "asl_s": 2.4,
+  "median_shot_s": 2.0,
+  "pct_shots_under_1s": 25,
+  "pct_shots_over_4s": 12,
+  "longest_s": 6,
+  "note": "Codex-style holds for emotion (her reactions, sunrise), a16z-style bursts for the grind and the three-edit proof; no static UI over 6 s"
+ }
+}

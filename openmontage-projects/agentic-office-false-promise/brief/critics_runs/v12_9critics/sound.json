@@ -1,0 +1,89 @@
+{
+  "critic": "sound",
+  "stage": "animatic",
+  "score": 69,
+  "dimension_scores": {
+    "vo_clarity_performance": 70,
+    "music_arc": 78,
+    "sfx_foley": 45,
+    "room_tone_continuity": 65,
+    "deliberate_silence": 92,
+    "technical": 55
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–01:22",
+      "category": "true_peak_exceeded",
+      "severity": 0.95,
+      "confidence": 1.0,
+      "evidence": "Measured true peak is 0.0 dBFS; integrated loudness is -14.0 LUFS.",
+      "suggested_action": "Apply oversampled true-peak limiting with a -1.5 dBTP ceiling, then remeasure the encoded deliverable and retain integrated loudness within -14 LUFS ±1."
+    },
+    {
+      "shot_id": "00:11–00:25",
+      "category": "missing_workflow_foley",
+      "severity": 0.65,
+      "confidence": 0.9,
+      "evidence": "Frames show laptop work, a cell edit, pasted memo text and deck revisions; the supplied timeline lists pulse music and phone buzzes but no typing, paste or edit sounds.",
+      "suggested_action": "Add restrained keyboard and mouse foley synchronized to visible edits at approximately 00:15, 00:18 and 00:23, keeping transients below the narration."
+    },
+    {
+      "shot_id": "01:10–01:16",
+      "category": "missing_resolution_foley",
+      "severity": 0.55,
+      "confidence": 0.9,
+      "evidence": "The 01:11.5 frame shows Maya closing her laptop, followed by David holding papers; the timeline specifies only room tone from 70.7–82 seconds.",
+      "suggested_action": "Add a soft laptop hinge and closure sound on the actual closure frame, plus subtle paper movement where David visibly handles the pack."
+    },
+    {
+      "shot_id": "00:30–01:10",
+      "category": "music_arc_underdefined",
+      "severity": 0.5,
+      "confidence": 0.65,
+      "evidence": "The timeline specifies one 'score 30.7–70.7' span across introduction, request, review and acceptance, without internal build or resolve cues.",
+      "suggested_action": "Verify the existing score's dynamics; if absent, introduce a restrained build through review and a harmonic resolution at '10 of 10 changes accepted' around 01:04, releasing naturally into room tone at 01:10.7."
+    },
+    {
+      "shot_id": "00:11–01:02",
+      "category": "vo_masking_unverified",
+      "severity": 0.5,
+      "confidence": 0.4,
+      "evidence": "VO at 11.3 seconds overlaps pulse music; VO at 30.8, 33.9, 57.8 and 61.8 seconds overlaps the score. No stem levels or ducking data are supplied.",
+      "suggested_action": "Verify intelligibility on phone speakers, especially 'Diffs' and 'accept or reject'; automate approximately 6–10 dB of music attenuation beneath affected phrases if masking occurs."
+    },
+    {
+      "shot_id": "00:00–01:22",
+      "category": "vo_performance_unverified",
+      "severity": 0.4,
+      "confidence": 0.35,
+      "evidence": "All VO is identified as local Kokoro TTS 'af_heart'; no playable audio is supplied to assess cadence, pronunciation or premium delivery.",
+      "suggested_action": "Audition the existing VO before replacing it; check emphasis and pauses in 'Memo and deck… still wrong,' the product introduction and 'It drives. You approve,' and revise only takes with audible performance defects."
+    },
+    {
+      "shot_id": "00:00–00:25",
+      "category": "room_tone_continuity_unverified",
+      "severity": 0.35,
+      "confidence": 0.55,
+      "evidence": "Room tone is explicitly listed only for 70.7–82 seconds, although the film includes a night-office shot at 00:12.2.",
+      "suggested_action": "Verify ambient continuity under the earlier office footage and add a low office-air bed if absent; fade it out before the deliberate silence beginning at 25.742531 seconds."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "True peak must not exceed -1.0 dBFS.",
+      "shot_id": "00:00–01:22",
+      "evidence": "Measured true_peak_dbfs is 0.0."
+    }
+  ],
+  "mix_fixes": [
+    "Limit true peak from 0.0 to ≤ -1.5 dBTP and verify the final encoded file at -14 LUFS ±1.",
+    "Add synchronized typing, mouse and edit foley around 00:15, 00:18 and 00:23.",
+    "Add laptop closure foley around 01:11–01:13 and paper handling around 01:14–01:16, synchronized to motion.",
+    "Verify music ducking beneath VO at 00:11.3, 00:30.8, 00:33.9, 00:57.8 and 01:01.8; attenuate 6–10 dB where needed.",
+    "Verify a musical build through review and resolution around 01:04 before the room-tone transition at 01:10.7.",
+    "Preserve the deliberate silence from approximately 00:25.74–00:30.7, including removal of music and reverb tails."
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Correct the measured 0.0 dBFS true peak with oversampled limiting to ≤ -1.5 dBTP while preserving the -14 LUFS target and deliberate silence.",
+  "evaluation_limits": "Scores are provisional where listening is required: supplied frames, timeline and measurements establish timing and technical defects, but cannot establish audible TTS quality, masking or level jumps. The requested CINEMATOGRAPHY.md was not found."
+}

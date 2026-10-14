@@ -1,0 +1,51 @@
+{
+  "critic": "claims_rights",
+  "stage": "animatic",
+  "score": 86,
+  "dimension_scores": {
+    "claim_accuracy": 75,
+    "ui_authenticity": 82,
+    "rights_provenance": 96,
+    "numeric_consistency": 100
+  },
+  "issues": [
+    {
+      "shot_id": "00:57.8",
+      "category": "unapproved_claim_wording",
+      "severity": 0.85,
+      "confidence": 1,
+      "evidence": "VO says “Every change, as a diff. Accept or reject each one.” The approved wording distinguishes tracked changes in Word from diffs in PowerPoint and Excel; the Word frame at 00:40 shows tracked changes.",
+      "suggested_action": "Replace this VO with “Every change, reviewable. Tracked changes in Word, diffs in PowerPoint and Excel — accept or reject each one.”"
+    },
+    {
+      "shot_id": "00:40–00:47",
+      "category": "speed_disclosure",
+      "severity": 0.8,
+      "confidence": 0.95,
+      "evidence": "The accelerated work sequence shows Word at 00:40 and Excel at 00:44 without a visible speed disclosure; “Real app · sped up” appears on the PowerPoint frame at 00:47. UI_REUSE.md requires a “sped up” label throughout the accelerated work beat.",
+      "suggested_action": "Keep “Real app · sped up” visible in the final composition throughout every accelerated recording, including the Word and Excel close-ups."
+    },
+    {
+      "shot_id": "01:04.5–01:08.5",
+      "category": "pending_result_verification",
+      "severity": 0.55,
+      "confidence": 1,
+      "evidence": "The frames show “10 of 10 changes accepted” and the corrected memo table at €74.6m, but no corrected slide 2 result. The task identifies that recording as PENDING.",
+      "suggested_action": "Capture and insert the real post-acceptance slide 2 showing the previously flagged box at €74.6m; verify the result without constructing or editing product UI."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every product claim must match the approved wording and demonstrated behavior.",
+      "shot_id": "00:57.8",
+      "evidence": "“Every change, as a diff” replaces the approved distinction: tracked changes in Word, diffs in PowerPoint and Excel."
+    },
+    {
+      "rule": "Accelerated product footage must retain a visible “sped up” label and must not imply product speed.",
+      "shot_id": "00:40–00:44",
+      "evidence": "The accelerated Word and Excel frames have no visible speed label; disclosure appears only in the later PowerPoint frame."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Replace the blanket diff claim with the approved wording that distinguishes Word tracked changes from PowerPoint and Excel diffs."
+}

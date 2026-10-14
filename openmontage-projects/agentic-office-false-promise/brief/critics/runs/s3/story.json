@@ -1,0 +1,68 @@
+{
+  "critic": "story",
+  "stage": "script",
+  "score": 87,
+  "dimension_scores": {
+    "brief_message_adherence": 92,
+    "narrative_progression_coherence": 89,
+    "pain_solution_connection": 92,
+    "shot_purpose_sequencing": 84,
+    "product_demo_benefit_clarity": 80,
+    "pacing_cta": 72
+  },
+  "issues": [
+    {
+      "shot_id": "beats 20–21",
+      "category": "missing_outcome_payoff",
+      "severity": 0.65,
+      "confidence": 0.97,
+      "evidence": "After \"10 of 10 changes accepted,\" the film cuts to Maya closing her laptop. The corrected slide containing the exact text box David flagged appears only as optional recording P2.",
+      "suggested_action": "Make P2 the primary payoff immediately after Accept all: show slide 2 in the original template with TextBox 23 reading €74.6m, then move to the ending. The existing fallback remains understandable through beat 17 and the accepted count, but proves the resolution less directly."
+    },
+    {
+      "shot_id": "beats 13–16",
+      "category": "workspace_context_missing",
+      "severity": 0.58,
+      "confidence": 0.93,
+      "evidence": "The product introduction shows three crops of a request bubble, a memo paragraph crop, the deck, and then individual Changes-panel crops. No specified hold explicitly connects these files to the shared folder introduced in beat 2.",
+      "suggested_action": "Use the opening portion of beat 15 to establish the real workspace with the model, memo and deck visible together in the file tree, then punch into the deck. Add the caption \"Your model, memo and deck. One workspace.\""
+    },
+    {
+      "shot_id": "00:32–00:45",
+      "category": "delayed_solution_progress",
+      "severity": 0.56,
+      "confidence": 0.9,
+      "evidence": "Agentic Office arrives at 00:35, but the first visible product change arrives at 00:45. After David exposes the mismatch, viewers spend another 16.5 seconds on the receipt, introduction card and request before seeing the solution act.",
+      "suggested_action": "Put \"You still have to carry it through the pack\" over beat 10 and remove beat 11. Carry the Agentic Office introduction as an overlay into the first request crop, retaining all three 2.5-second request holds."
+    },
+    {
+      "shot_id": "30 s vertical, 00:05.5–00:11.5",
+      "category": "missing_manual_work_bridge",
+      "severity": 0.52,
+      "confidence": 0.94,
+      "evidence": "The short jumps from \"Not your deck\" straight to David's circled mismatch. It omits beats 5, 6 and 9, so viewers never see Maya carrying the chat's answer into her own files before the error returns.",
+      "suggested_action": "Replace the stacked deck comparison with a 2.5-second version of beat 9 showing Maya changing her own slide title by hand, captioned \"You carry the answer into your files.\" Keep David's message immediately afterward."
+    },
+    {
+      "shot_id": "director's cut, P3 replacement before beat 20",
+      "category": "review_count_continuity",
+      "severity": 0.35,
+      "confidence": 0.78,
+      "evidence": "P3 holds \"1 of 10\" after a single Accept, then specifies \"beat 20 as is,\" whose original source comes from the all-pending review sequence.",
+      "suggested_action": "Verify the count at the beginning of beat 20. When using P3, use its newly recorded continuation from \"1 of 10\" through Accept all to \"10 of 10,\" rather than returning to footage that could reset the count. The existing no-click row-control fallback works."
+    },
+    {
+      "shot_id": "director's cut, N8 insert after inline review",
+      "category": "atmosphere_only_beat",
+      "severity": 0.25,
+      "confidence": 0.96,
+      "evidence": "The insert specifies only \"one calm gaze shift\" between product-review shots, without narration or a visible decision.",
+      "suggested_action": "Remove this three-second insert and continue directly from inline review to the Changes panel; retain the closing reaction as the resolution beat."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "After Accept all, show the corrected €74.6m text box on the same slide David flagged, completing the pain-to-solution chain inside her original deck.",
+  "retell": "Maya needs to update a model, memo and deck for David's scenario, which uses DACH Q4 8.5 and FY26 €74.6m. The chatbot supplies instructions and an unsuitable replacement deck, so she edits her own files by hand and misses another occurrence of the old number. With Agentic Office, one request produces proposed changes across the model, memo and deck, including the missed text box and chart data. She can accept or reject each change, accepts all ten, and the film invites viewers to request early access.",
+  "scroll_away_second": 32
+}

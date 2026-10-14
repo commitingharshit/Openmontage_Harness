@@ -1,0 +1,8 @@
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/1.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/2.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/w.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/3.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/4.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/5.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/6.mp4'
+file '/Users/harshitverma/Desktop/OpenMontage/projects/agentic-office-false-promise/artifacts/segs/7.mp4'

@@ -1,0 +1,133 @@
+{
+  "critic": "music_and_score",
+  "stage": "animatic",
+  "score": 75,
+  "dimension_scores": {
+    "arc_serves_story": 82,
+    "hit_points": 50,
+    "genre_and_emotion_fit": 80,
+    "motif": 78,
+    "ending": 85
+  },
+  "issues": [
+    {
+      "shot_id": "00:37.4–00:41.6",
+      "category": "musical_hit_alignment",
+      "severity": 0.78,
+      "confidence": 0.97,
+      "evidence": "Measured cuts_on_sound_pct is 32.5%; overload cuts at 37.4, 38.4, 39.7 and 40.3 lack aligned sound events despite the timeline specifying 'whooshes per whip' and an impact on 'Repeat.'",
+      "suggested_action": "Align existing percussion and whoosh attacks with the four window cuts, then place the strongest musical accent on 'Repeat.' before dropping to heartbeat."
+    },
+    {
+      "shot_id": "00:49.6",
+      "category": "reveal_downbeat",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "The logo and screenshot reveal begins at 49.6, which is listed among cuts without sound events; the nearest measured onset is 49.75. The timeline starts the confident electronic bed at 49.6.",
+      "suggested_action": "Trim or offset the bed so its first clear harmonic attack lands at 49.6, using the identity tone as the reveal's musical pickup."
+    },
+    {
+      "shot_id": "00:28.3–00:41.6",
+      "category": "build_definition",
+      "severity": 0.48,
+      "confidence": 0.66,
+      "evidence": "The timeline promises bass pulse, heartbeat, a swell and an overload riser, but the reported dynamic_sections identify no sustained build in this interval; overall LRA is 6.0 LU. These full-mix measurements cannot isolate the score.",
+      "suggested_action": "Verify the music stem's build; if it stays flat, add successive pulse subdivisions and rising harmonic tension at 30.8, 34.45 and 37.4 while preserving the drop at 41.6."
+    },
+    {
+      "shot_id": "01:19–01:25",
+      "category": "brand_button",
+      "severity": 0.35,
+      "confidence": 0.73,
+      "evidence": "The ending specifies only 'music returns under dawn and end card.' The measured level falls to -31.5 dBFS at 84 seconds, but no final identity-tone reprise or musical button is specified for the logo and CTA.",
+      "suggested_action": "Reprise the 46.2 identity tone on the final logo, resolve the harmony, and let its short tail finish beneath the held CTA."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Re-edit the existing score's attacks to land on the overload cuts and the 49.6 product reveal while preserving the measured quiet trough before the reveal.",
+  "cue_sheet": [
+    {
+      "act": "Cold open",
+      "time": "00:00–00:04.5",
+      "feel": "Immediate deadline tension",
+      "tempo_bpm": 90,
+      "instrumentation": "Sparse sub pulse and muted electronic percussion",
+      "where_it_hits": "Attachment mismatch reveal; terminate into the rewind at 4.5."
+    },
+    {
+      "act": "False ease",
+      "time": "00:05–00:17.3",
+      "feel": "Routine work with restrained optimism",
+      "tempo_bpm": 96,
+      "instrumentation": "Light piano, brushed percussion and restrained bass",
+      "where_it_hits": "Soft Done motif at 11.05; destabilize harmony at the formatting failure; end the bed as the partner notification takes over."
+    },
+    {
+      "act": "Grind and overload",
+      "time": "00:17.3–00:41.6",
+      "feel": "Increasing repetition and pressure",
+      "tempo_bpm": 108,
+      "instrumentation": "Low synth ostinato, ticking percussion, dissonant sustained tones and a controlled riser",
+      "where_it_hits": "Done at 27.5; bass entry at 28.3; distorted Done at 34.45; synchronized window accents from 37.4; final impact on Repeat."
+    },
+    {
+      "act": "Decision void",
+      "time": "00:41.6–00:46.2",
+      "feel": "Suspension and uncertainty",
+      "tempo_bpm": 0,
+      "instrumentation": "No score; heartbeat followed by room tone",
+      "where_it_hits": "Remove musical energy at 41.6 and heartbeat at 43.6; preserve room tone through the stopped Send gesture."
+    },
+    {
+      "act": "Product reveal and proof",
+      "time": "00:46.2–01:12.6",
+      "feel": "Relief becoming measured confidence",
+      "tempo_bpm": 100,
+      "instrumentation": "Distinct identity tone, warm synth harmony, clean plucked ostinato and restrained percussion",
+      "where_it_hits": "Identity tone at 46.2; harmonic downbeat at 49.6; small musical transitions at It finds, It fixes and You decide; leave space for edit ticks."
+    },
+    {
+      "act": "Reviewed send",
+      "time": "01:12.6–01:16.1",
+      "feel": "Brief suspense resolved through deliberate action",
+      "tempo_bpm": 0,
+      "instrumentation": "Held harmonic tail, then identity tone",
+      "where_it_hits": "Dip at 72.6; expose the mouse click at 74.55; resolve on Sent at 75.0 without a fresh tension build."
+    },
+    {
+      "act": "Dawn and brand ending",
+      "time": "01:16.1–01:25.1",
+      "feel": "Warm release and assurance",
+      "tempo_bpm": 100,
+      "instrumentation": "Warm pads, sparse piano and the product identity motif",
+      "where_it_hits": "Return harmony on dawn at 76.1; simplify at 79.0; final motif on the logo, followed by a short resolving tail."
+    }
+  ],
+  "free_source_suggestions": [
+    {
+      "source": "Mixkit",
+      "search_terms": [
+        "minimal suspense pulse",
+        "light jazz piano brushes",
+        "confident ambient electronic"
+      ]
+    },
+    {
+      "source": "Pixabay",
+      "search_terms": [
+        "ticking tension underscore",
+        "minimal technology ostinato",
+        "warm electronic logo sting"
+      ]
+    },
+    {
+      "source": "YouTube Audio Library",
+      "search_terms": [
+        "ambient suspense",
+        "restrained jazz",
+        "hopeful minimal electronic"
+      ]
+    }
+  ]
+}

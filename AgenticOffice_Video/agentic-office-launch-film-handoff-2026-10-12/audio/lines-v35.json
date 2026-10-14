@@ -1,0 +1,8 @@
+[
+ {"id": "v4b", "text": "It plans the work, then checks it. And the number it validated travels with it.", "speed": 1.0},
+ {"id": "c2b", "text": "You see each proposal, and you decide what lands.", "speed": 1.0},
+ {"id": "v8b", "text": "Each answer shows its sources, file by file, so you can check before you trust.", "speed": 1.0},
+ {"id": "k3c", "text": "It says it's done.", "speed": 0.88},
+ {"id": "o4b", "text": "So you fix it by hand. Then, an email.", "speed": 0.98},
+ {"id": "n2d", "text": "But the deck... still has the old number.", "speed": 0.95}
+]

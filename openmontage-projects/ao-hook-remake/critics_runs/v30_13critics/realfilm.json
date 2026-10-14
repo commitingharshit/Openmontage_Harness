@@ -1,0 +1,134 @@
+{
+  "critic": "real_film_benchmark",
+  "stage": "animatic",
+  "score": 60,
+  "dimension_scores": {
+    "production_value": 55,
+    "photorealism_no_ai_tells": 85,
+    "cohesion_with_ref_look": 47,
+    "ui_and_graphics_finish": 43
+  },
+  "issues": [
+    {
+      "shot_id": "00:49.6–01:12.6",
+      "category": "screenshots_on_dark_background",
+      "severity": 0.94,
+      "confidence": 1,
+      "evidence": "f_22 fans three rectangular product screenshots across a dark background; f_25 floats a spreadsheet crop beneath 'It fixes.'; f_28 presents an isolated vertical Changes panel.",
+      "suggested_action": "Recompose the real captures into one continuous screen environment with consistent scale, subtle perspective and a softly lit office background; move between the request, cell diff and Changes panel within that environment."
+    },
+    {
+      "shot_id": "00:08–00:41.6",
+      "category": "presentation_graphics",
+      "severity": 0.86,
+      "confidence": 0.99,
+      "evidence": "f_04, f_11 and f_14 show broad white chatbot panels; f_15 isolates a slide-thumbnail strip; f_16 overlays the giant word 'Copy.' on a spreadsheet.",
+      "suggested_action": "Place the illustrative workflow on the protagonist's laptop using a consistent screen angle and tighter action-focused crops; reserve oversized typography for the recurring Done interruption."
+    },
+    {
+      "shot_id": "00:01–00:46",
+      "category": "unmotivated_vignette",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "f_01, f_04 and f_06 have bright white centers with heavily darkened edges; f_05 dims the entire interface behind 'Done.' without introducing physical lighting or depth.",
+      "suggested_action": "Replace the broad radial vignette with screen-plane light falloff and controlled reflections, keeping document whites and the active text consistently exposed."
+    },
+    {
+      "shot_id": "00:55–01:12.6",
+      "category": "capture_scaling_and_crop_finish",
+      "severity": 0.78,
+      "confidence": 0.98,
+      "evidence": "f_23 enlarges soft chat text; f_24 leaves a large empty dark area beside the app; f_26 places 'It fixes.' partly over the document; f_28 truncates filenames and replacement descriptions.",
+      "suggested_action": "Recapture the real app at higher resolution and prepare deliberate crops for each proof point, with a protected annotation margin and no enlargement beyond the source's readable resolution."
+    },
+    {
+      "shot_id": "00:01–01:15",
+      "category": "annotation_system_inconsistency",
+      "severity": 0.72,
+      "confidence": 0.99,
+      "evidence": "The film mixes red clocks, a neon-green check, cyan emphasis, glowing Send buttons, oversized white cursors and the red ellipse around 'Slide 4 title' in f_29.",
+      "suggested_action": "Use one annotation system with consistent stroke width, cursor scale and typography; assign red to unresolved discrepancies and cyan to review guidance, and remove decorative button glows."
+    },
+    {
+      "shot_id": "00:15.6–00:36.77",
+      "category": "stock_coverage_and_softness",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "f_07 is dominated by a soft hand close-up; f_10 and f_13 repeat nearly the same centered head-in-hands composition. Measured sharpness is 3.1 at 15.6 seconds and 5.7 at 22.97 seconds.",
+      "suggested_action": "Replace the soft typing insert with a focused key or trackpad action and select distinct reaction moments from the existing protagonist footage, varying shot size while preserving her identity and lighting."
+    },
+    {
+      "shot_id": "00:05–01:19",
+      "category": "mixed_visual_worlds",
+      "severity": 0.62,
+      "confidence": 0.96,
+      "evidence": "f_03 and f_10 use blue office lighting, the illustrative interfaces are bright neutral white, the product captures are dark gray, and f_31–f_32 abruptly introduce a warm empty office window. Measured luma spread is 66.3.",
+      "suggested_action": "Match stock and screen surrounds to one cool office grade, preserve neutral screen whites, and bridge into the sunrise with the same desk or monitor visible in the preceding shot."
+    },
+    {
+      "shot_id": "00:46–01:25",
+      "category": "generic_brand_card_finish",
+      "severity": 0.57,
+      "confidence": 0.97,
+      "evidence": "f_20, f_21, f_33 and f_34 repeat centered bold white-and-cyan type over a teal glow; the logo is a white rounded square containing a blue document icon.",
+      "suggested_action": "Give the brand reveal a distinct composition derived from the three-file workspace, reduce the ambient glow and carry the same typography and spacing into a single restrained closing lockup."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "real_film_index must be at least 60",
+      "shot_id": "whole",
+      "evidence": "The 34 supplied candidate frames average 5.0882/10, producing a real_film_index of 50.88."
+    },
+    {
+      "rule": "No UI frame that looks like a screenshot pasted on black",
+      "shot_id": "00:49.6–01:12.6",
+      "evidence": "f_22 shows a screenshot fan on a dark field; f_25 shows a floating spreadsheet rectangle; f_28 shows a detached Changes-panel crop with no physical screen context."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Rebuild the screen sequences as one coherent cinematic screen environment, preserving the real product evidence while replacing floating rectangles, heavy vignettes and inconsistent annotations.",
+  "frame_scores": [
+    {"t":"f_01","score":5,"tell":"Flat email crop with heavy edge shading.","fix":"Place the email on a motivated screen plane."},
+    {"t":"f_02","score":5,"tell":"Comparison cards read as presentation overlays.","fix":"Anchor both values to their source attachments with restrained callouts."},
+    {"t":"f_03","score":8,"tell":"Convincing real office light and natural face; no obvious AI tell.","fix":"Preserve skin detail and match subsequent office shots."},
+    {"t":"f_04","score":4,"tell":"Large white UI panel with synthetic radial vignette.","fix":"Use a tighter screen composition and physical light falloff."},
+    {"t":"f_05","score":4,"tell":"Giant green check and Done overlay resemble a slide.","fix":"Reduce glow and integrate the interruption into the screen."},
+    {"t":"f_06","score":5,"tell":"Readable document but flat toolbar and vignetted page.","fix":"Frame the document within the laptop environment."},
+    {"t":"f_07","score":5,"tell":"Natural hand anatomy, but excessive softness obscures the action.","fix":"Use a focused keyboard action insert."},
+    {"t":"f_08","score":5,"tell":"Oversized notification floats above blurred document.","fix":"Keep notification scale consistent with the screen."},
+    {"t":"f_09","score":5,"tell":"Cyan word emphasis adds another annotation style.","fix":"Use the shared callout treatment."},
+    {"t":"f_10","score":7,"tell":"Natural face and hands; familiar stock stress pose.","fix":"Choose a more specific reaction tied to the screen action."},
+    {"t":"f_11","score":4,"tell":"Sparse chatbot rectangle reads as a demo slide.","fix":"Crop around the generation action with environmental depth."},
+    {"t":"f_12","score":4,"tell":"Tiny thumbnails and notification competing at the top edge.","fix":"Isolate slide 2 and reserve a notification margin."},
+    {"t":"f_13","score":7,"tell":"Realistic face, but repeats the same reaction framing.","fix":"Use a distinct angle or action from the same protagonist."},
+    {"t":"f_14","score":4,"tell":"Clock, progress bar and bottom caption form a slide layout.","fix":"Give the progress action one focal area and simplify overlays."},
+    {"t":"f_15","score":4,"tell":"Detached thumbnail strip on a dark gradient.","fix":"Retain the deck within its screen context."},
+    {"t":"f_16","score":4,"tell":"Giant Copy text on a flat spreadsheet.","fix":"Show the selected cell and actual copy action in a tighter composition."},
+    {"t":"f_17","score":5,"tell":"Window pile has depth but resembles layered desktop graphics.","fix":"Match perspective and light across the overlapping windows."},
+    {"t":"f_18","score":4,"tell":"Oversized cursor and glowing Send button on an isolated panel.","fix":"Normalize cursor scale and remove button bloom."},
+    {"t":"f_19","score":6,"tell":"Black transition; no photoreal subject to assess.","fix":"Verify its duration in playback before changing the intended pause."},
+    {"t":"f_20","score":6,"tell":"Clean typography with a generic cyan-glow treatment.","fix":"Use more distinctive spacing and a quieter background."},
+    {"t":"f_21","score":5,"tell":"Generic document icon and centered logo lockup.","fix":"Develop a brand reveal connected to the workspace."},
+    {"t":"f_22","score":4,"tell":"Three screenshots visibly pasted onto a dark field.","fix":"Unify them within one dimensional screen environment."},
+    {"t":"f_23","score":5,"tell":"Authentic UI, but enlarged soft text and abrupt panel crop.","fix":"Recapture at higher resolution and frame the prompt deliberately."},
+    {"t":"f_24","score":4,"tell":"Off-center app rectangle, empty right side and competing labels.","fix":"Balance the app framing and protect annotation space."},
+    {"t":"f_25","score":5,"tell":"Useful real cell diff presented as a floating spreadsheet strip.","fix":"Keep the diff within the continuous screen composition."},
+    {"t":"f_26","score":5,"tell":"Real tracked changes, but soft enlargement and title overlap.","fix":"Use a sharper capture with a clean caption margin."},
+    {"t":"f_27","score":5,"tell":"Oversized cursor and artificial green Accept glow.","fix":"Use the real cursor and a restrained click accent."},
+    {"t":"f_28","score":4,"tell":"Detached narrow Changes panel with truncated text.","fix":"Show the panel in context at readable scale."},
+    {"t":"f_29","score":5,"tell":"Red ellipse and side caption improve focus but retain pasted-panel appearance.","fix":"Integrate the highlight into the shared screen and callout system."},
+    {"t":"f_30","score":4,"tell":"Isolated email corner and enlarged cursor repeat earlier graphic treatment.","fix":"Return to the same physical email-screen framing as the opening."},
+    {"t":"f_31","score":7,"tell":"Natural sunrise and silhouette; weak connection to protagonist coverage.","fix":"Bridge with a matching desk or monitor shot."},
+    {"t":"f_32","score":7,"tell":"Convincing real light; nearly identical to preceding sunrise frame.","fix":"Verify continuous motion rather than infer a freeze from these stills."},
+    {"t":"f_33","score":6,"tell":"Polished but familiar centered type and strike-through.","fix":"Refine spacing and carry the established annotation style."},
+    {"t":"f_34","score":6,"tell":"Clear CTA, but conventional glow-backed logo card.","fix":"Use a restrained closing lockup with a distinctive brand composition."}
+  ],
+  "real_film_index": 50.88,
+  "closest_ref": "REF_bJcA23ckzcY_sheet_01.jpg, OpenAI Codex 'It's time to fly': the cool office footage is closest, but the candidate lacks its continuous physical setting, varied intimate coverage and integrated screen photography.",
+  "top_3_upgrades": [
+    "Recompose illustrative and real UI footage into a coherent screen environment with depth, motivated light and deliberate crops.",
+    "Recapture product proof at higher resolution and standardize typography, callouts, cursor scale and screen exposure.",
+    "Replace soft generic inserts and repeated stress coverage with focused actions from the same office world, then bridge that world into the sunrise."
+  ]
+}

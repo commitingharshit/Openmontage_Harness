@@ -1,0 +1,129 @@
+{
+ "critic": "grade",
+ "stage": "animatic",
+ "score": 48,
+ "dimension_scores": {
+  "look_family_unity": 50,
+  "skin_tones": 68,
+  "contrast_curve_blacks": 44,
+  "shot_to_shot_match": 36,
+  "finish": 48
+ },
+ "issues": [
+  {
+   "shot_id": "00:41.6–00:46",
+   "category": "hard_jump_in_scene",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "measured: 40.3 luma 64.9 → 41.6 email luma 131.5 / contrast 110 → 44.57 head-drop luma 42.1 / sat 110.8; frame 43.75 is a near-white email window beside dark teal stock",
+   "suggested_action": "Pull the email UI down to ~70 luma, sat into the night teal, blacks lifted to match 44.57; or composite it on her screen"
+  },
+  {
+   "shot_id": "00:04.5–00:08",
+   "category": "saturation_jump",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "measured 1.2 (luma 107.5, sat 31) → 4.5 (luma 20.6) → 5.07 (sat 118.2); 22.97 sat 141.7 and 35.0 sat 120 vs UI shots sat 36–50",
+   "suggested_action": "Desaturate the blue-office stock by ~35% (sat target 70–80) and warm the lamp; bring night UI sat up to ~60 so both sit in one teal family"
+  },
+  {
+   "shot_id": "00:09.8–00:31",
+   "category": "milky_blacks",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "measured contrast 23.1 (9.8), 20.7 (15.6), 22.5 (16.5), 21.1 (24.87); frames 18.75–28.75 show a grey veil over the UI, no true black anywhere",
+   "suggested_action": "Set black point to ~16 IRE with a toe roll-off; keep the night look via colour, not a grey fog"
+  },
+  {
+   "shot_id": "01:08.7–01:18",
+   "category": "exposure_jump",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "68.73 luma 50.9/sat 90 → 71.4 luma 128.4/sat 30/contrast 107; white memo page clips at 73.75–76.25",
+   "suggested_action": "Roll off paper white to ~85% and add the warm room's tint to the page so it reads as lit by the same world"
+  },
+  {
+   "shot_id": "01:41.8–01:52",
+   "category": "exposure_jump",
+   "severity": 0.5,
+   "confidence": 0.75,
+   "evidence": "101.8 luma 32.1 → 106.3 48.1 → 107.3 luma 18.8 → 107.9 luma 81.3 / sat 140.3 (candle room oversaturated orange)",
+   "suggested_action": "Cap the warm room at sat ~90; make the light-on a graded ramp over 1 s rather than a cut"
+  },
+  {
+   "shot_id": "00:52.6",
+   "category": "finish_inconsistent",
+   "severity": 0.35,
+   "confidence": 0.7,
+   "evidence": "letterbox appears only on 52.6 (22 rows; 2.2% of shots)",
+   "suggested_action": "Either letterbox the whole film 2.39:1 or remove it from 52.6"
+  },
+  {
+   "shot_id": "product world 00:49–01:41",
+   "category": "look_split",
+   "severity": 0.4,
+   "confidence": 0.65,
+   "evidence": "warm amber laptop plates (51.25, 86.25) intercut with cold teal-bokeh UI panels (63.75–101.25); measured sat swings 23.8↔96.6",
+   "suggested_action": "Pick neutral-warm for the whole product world: tint the bokeh backgrounds amber-grey to echo the warm room"
+  },
+  {
+   "shot_id": "01:56–02:01",
+   "category": "end_card_mismatch",
+   "severity": 0.2,
+   "confidence": 0.5,
+   "evidence": "end cards cold teal-black after the warm sunrise (113.75)",
+   "suggested_action": "Carry a warm cast into the end-card gradient"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:41.6→00:44.57",
+   "evidence": "luma 131.5→42.1, sat 46.7→110.8 within the Send/head-drop scene"
+  },
+  {
+   "rule": "UI frames left raw and white beside graded film",
+   "shot_id": "00:43.75",
+   "evidence": "near-white email window (luma 131.5) cut against teal night stock"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Conform the problem world to one night-teal curve (stock sat down ~35%, UI sat up, real black point) so the measured sat SD of 30.6 and luma SD of 29.3 drop by half.",
+ "grade_recipe": {
+  "night_problem_world": "ffmpeg: curves=master='0/0.05 0.25/0.18 0.75/0.70 1/0.92',colorbalance=rs=-0.06:bs=0.08:rm=-0.03:bm=0.05:rh=0.05:gh=0.02,eq=saturation=0.72 on stock / 1.15 on UI,vignette=PI/5,noise=alls=7:allf=t; warm the lamp with a hue-qualified key (+0.08 r highlights)",
+  "warm_product_world": "curves=master='0/0.04 0.5/0.50 1/0.90',colorbalance=rs=0.04:rm=0.05:bh=-0.04,eq=saturation=0.85,gamma=1.02; paper white capped at 0.88; UI bokeh tinted amber-grey; same noise=alls=6:allf=t and vignette",
+  "dawn_and_end": "colortemperature=6200 on sunrise, eq=saturation=0.9; end-card gradient warm-grey not teal"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:40.3",
+   "to": "00:41.6",
+   "issue": "luma 64.9→131.5, contrast 45.7→110"
+  },
+  {
+   "from": "00:41.6",
+   "to": "00:44.57",
+   "issue": "luma 131.5→42.1, sat 46.7→110.8"
+  },
+  {
+   "from": "00:01.2",
+   "to": "00:05.07",
+   "issue": "luma 107.5→20.6→46.4, sat 31→118"
+  },
+  {
+   "from": "01:08.73",
+   "to": "01:11.4",
+   "issue": "luma 50.9→128.4, sat 90→30"
+  },
+  {
+   "from": "01:47.3",
+   "to": "01:47.9",
+   "issue": "luma 18.8→81.3, sat 63→140"
+  },
+  {
+   "from": "00:21.0",
+   "to": "00:22.97",
+   "issue": "sat ~73→141.7 into head-in-hands"
+  }
+ ]
+}

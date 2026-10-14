@@ -1,0 +1,19 @@
+{
+ "round": "d1",
+ "C": 81,
+ "S": 82,
+ "P": 86.7,
+ "Q": 83.9,
+ "constraint_failures": [
+  {
+   "rule": "Keep the speed badge visible on sped-up product motion, or add a 'sped up' label.",
+   "shot_id": "00:45\u201300:46",
+   "evidence": "The moving memo segment crops out the source badge and adds no replacement label."
+  },
+  {
+   "rule": "Messages must be phone-readable; SCRIPT_v10 specifies at least 42 px at 1080p.",
+   "shot_id": "01:10.5\u201301:16",
+   "evidence": "The end-card feature description is rendered at 38 px."
+  }
+ ]
+}

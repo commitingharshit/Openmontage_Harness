@@ -1,0 +1,66 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 80.45,
+  "dimension_scores": {
+    "brief_message_adherence": 85,
+    "narrative_progression_coherence": 82,
+    "pain_solution_connection": 86,
+    "shot_purpose_sequencing": 78,
+    "product_demo_benefit_clarity": 70,
+    "pacing_cta": 69
+  },
+  "issues": [
+    {
+      "shot_id": "00:47",
+      "category": "contradictory_solution_evidence",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "The real memo shows the paragraph changing to €74.6m, while the visible Table 1 still reads €71–73m. This repeats the partial-update failure established in the manual workflow.",
+      "suggested_action": "Use the planned paragraph-only crop here. Verify whether the real review includes the table correction before using a wider memo view as evidence that the pack matches."
+    },
+    {
+      "shot_id": "00:50–01:07",
+      "category": "missing_outcome_payoff",
+      "severity": 0.8,
+      "confidence": 0.97,
+      "evidence": "“Still your deck” accompanies the Board Pack Q3 cover slide. The circled Slide 2 textbox later appears as a proposed change, but the accepted status leads into Maya closing the laptop without showing that same slide corrected.",
+      "suggested_action": "After acceptance, show a verified real capture of Slide 2 with the formerly circled textbox reading €74.6m; replace part of the cover-slide or closing-reaction hold to preserve runtime."
+    },
+    {
+      "shot_id": "00:40",
+      "category": "request_information_overload",
+      "severity": 0.74,
+      "confidence": 0.99,
+      "evidence": "The frame presents the entire request, beginning “Research says 20% DACH growth is too aggressive,” instead of the script’s sequential crops. The new research premise competes with the familiar instruction to update the model, memo and deck.",
+      "suggested_action": "Implement the three planned crops: DACH Q4 to 8.5, make the memo and deck match, then show the diffs. Hold each for 2.5 seconds with the existing task caption."
+    },
+    {
+      "shot_id": "00:32–00:45",
+      "category": "delayed_solution_progress",
+      "severity": 0.66,
+      "confidence": 0.96,
+      "evidence": "After the partner flags the mismatch, the film returns to the chat receipt, presents a transition card, then spends 7.5 seconds on the request. The first visible native-file change arrives around 00:45.",
+      "suggested_action": "Shorten the receipt and transition card, then introduce the real model-change footage under “One request across the model, memo and deck,” bringing visible execution forward while preserving readable request holds."
+    },
+    {
+      "shot_id": "00:51.5–01:03.5",
+      "category": "review_sequence_repetition",
+      "severity": 0.56,
+      "confidence": 0.94,
+      "evidence": "Four consecutive review-panel holds explain the model row, Slide 2 textbox, Slide 4 chart and row controls before the acceptance click. The essential pain-to-solution connection is already established by the Slide 2 textbox row.",
+      "suggested_action": "Keep the model row, the circled Slide 2 correction and the accept/reject controls. Compress the chart row into the broader deck review and use the recovered time for the corrected-slide payoff."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Show every message at a size and pace readable on a phone; split long text into sequential crops.",
+      "shot_id": "00:40",
+      "evidence": "The full multi-line research and update request appears together, rather than the three short, sequential crops specified for this message."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Complete the reversal with a verified post-acceptance view of the same Slide 2 textbox David flagged, now reading €74.6m.",
+  "retell": "A chatbot tells Maya how to revise a financial pack, but leaves her three files unchanged. She updates them manually, pastes awkward memo text and receives a deck in the wrong template, then a partner spots an old number she missed. Agentic Office takes a similar request and proposes changes inside her existing files, including the missed textbox and chart data. She accepts all ten changes, although I do not see the flagged slide corrected afterward.",
+  "scroll_away_second": 40
+}

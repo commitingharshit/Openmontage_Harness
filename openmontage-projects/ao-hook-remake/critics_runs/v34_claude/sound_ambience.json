@@ -1,0 +1,148 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "room_tone_continuity": 70,
+  "world_building": 55,
+  "sound_perspective": 55,
+  "diegetic_logic": 70,
+  "designed_silence": 65
+ },
+ "issues": [
+  {
+   "shot_id": "02:24.5",
+   "category": "tail_dead_air",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "digital_silence 144.5-145.0 (curve -180 dBFS at 144.5 and 145.0) while picture goes black only at 145.1; office.mp3 cued from src 12 for 6.5 s likely runs out",
+   "suggested_action": "Loop or extend the room tone to 145.5 and fade with the picture; check office.mp3 length"
+  },
+  {
+   "shot_id": "00:05-00:46",
+   "category": "generic_world",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "one office.mp3 at 0.10/0.07 is the whole blue night office; no HVAC, distant city, late-night specifics",
+   "suggested_action": "Layer a night-office bed: HVAC hum (-40 dBFS), distant traffic (-46), occasional far elevator ding"
+  },
+  {
+   "shot_id": "00:49",
+   "category": "location_without_ambience_change",
+   "severity": 0.4,
+   "confidence": 0.6,
+   "evidence": "warm-room laptop footage uses the same office.mp3 (0.06) as the night office",
+   "suggested_action": "Warm domestic room tone with a faint lamp-hum/clock for 49.0-52.6"
+  },
+  {
+   "shot_id": "00:52.6-02:10",
+   "category": "no_air_under_screens",
+   "severity": 0.35,
+   "confidence": 0.6,
+   "evidence": "cue list has no ambience from 52.6 to 130.0; the real top-down hands shot 58.4-61.4 has typing but no room",
+   "suggested_action": "Run a very low (-48 dBFS) room tone under the screen world and lift it on the real-footage shots 58.4-61.4"
+  },
+  {
+   "shot_id": "02:10-02:19",
+   "category": "perspective",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "dark room -> lights on -> sunrise all use flat files at 0.07-0.12, no change of space at the lights coming on",
+   "suggested_action": "Open the room on the lights (wider reverb, add soft HVAC start) at 131.65, then exterior air through glass at 136.1"
+  },
+  {
+   "shot_id": "02:12-02:25",
+   "category": "no_silence_before_tagline",
+   "severity": 0.3,
+   "confidence": 0.7,
+   "evidence": "music back at 132 at 0.24 and runs into the end card; the only designed silence is 44.5-45.5",
+   "suggested_action": "Second, shorter breath: room tone only from 139.0 to 142.5"
+  },
+  {
+   "shot_id": "00:44-00:46",
+   "category": "designed_silence_ok",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "44.5-45.5 at -34.6/-49.9 dBFS, room tone 0.07 + slow heartbeat under it, not digital",
+   "suggested_action": "Keep; extend to a full 1.5 s after the VO ends"
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "digital silence > 0.5 s except intended black beat",
+   "shot_id": "02:24.5",
+   "evidence": "-180 dBFS from 144.5 while the end card is still up until black at 145.1 (~0.6 s)"
+  },
+  {
+   "rule": "location change with no ambience change",
+   "shot_id": "00:49",
+   "evidence": "night office and warm-room laptop share office.mp3"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Give each location its own ambience bed (night office HVAC/city, warm room, screen-world low air, sunrise exterior) and run room tone to the last frame.",
+ "ambience_plan": [
+  {
+   "location": "cold open email 0-4.5",
+   "layers": [
+    "low room tone"
+   ],
+   "level_dbfs": "-48"
+  },
+  {
+   "location": "night office 5-46",
+   "layers": [
+    "HVAC hum",
+    "distant city traffic",
+    "far elevator/door"
+   ],
+   "level_dbfs": "-40 to -46"
+  },
+  {
+   "location": "warm room laptop 49-52.6",
+   "layers": [
+    "domestic room tone",
+    "lamp hum"
+   ],
+   "level_dbfs": "-44"
+  },
+  {
+   "location": "screen world 52.6-130",
+   "layers": [
+    "near-silent air"
+   ],
+   "level_dbfs": "-50"
+  },
+  {
+   "location": "top-down hands 58.4-61.4",
+   "layers": [
+    "desk room tone"
+   ],
+   "level_dbfs": "-44"
+  },
+  {
+   "location": "dark room/lights on 130-136",
+   "layers": [
+    "dark room tone",
+    "HVAC start on lights"
+   ],
+   "level_dbfs": "-42"
+  },
+  {
+   "location": "sunrise 136-139",
+   "layers": [
+    "city morning",
+    "birds",
+    "glass-filtered air"
+   ],
+   "level_dbfs": "-38"
+  },
+  {
+   "location": "end card 139-145.5",
+   "layers": [
+    "room tone to last frame"
+   ],
+   "level_dbfs": "-50"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 81.1,
+  "dimension_scores": {
+    "pain_specificity_salience": 89,
+    "target_relatability": 86,
+    "emotional_authenticity_progression": 82,
+    "product_pain_fit": 78,
+    "trust_transformation_credibility": 72,
+    "purchase_motivation_cta": 74
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 7.5,
+  "issues": [
+    {
+      "shot_id": "00:25",
+      "category": "unresolved_customer_risk",
+      "severity": 0.78,
+      "confidence": 0.99,
+      "evidence": "David flags the stale €71–73m box at 00:09.5. The product shows its proposed replacement at 00:20.5, but the resolution is '10 of 10 changes accepted'; I never see that box corrected in my original slide.",
+      "suggested_action": "When the pending recording is available, replace part of the acceptance-panel hold with the real accepted slide 2, showing €74.6m in the flagged box and the original layout preserved."
+    },
+    {
+      "shot_id": "00:05.5–00:08",
+      "category": "competitive_skepticism",
+      "severity": 0.61,
+      "confidence": 0.94,
+      "evidence": "'Not your deck.' contrasts her formatted slide with 'The chat’s' default slide. As someone already using AI inside Office, I recognise this failure but do not see it as the defining limitation of all my current tools.",
+      "suggested_action": "Keep the specific failed-deck example, but add 'One pack. Changes across all three files.' over the real product sequence so the differentiation rests on coordinated, reviewable edits."
+    },
+    {
+      "shot_id": "00:01.5–00:15",
+      "category": "task_causality",
+      "severity": 0.57,
+      "confidence": 0.97,
+      "evidence": "The opening request says 'Update my model, memo and deck to the new FY26 number.' The first explicit input change, 8.9 → 8.5, appears in Excel much later. I can follow the stale outlook but must infer why that cell and the outlook belong to the same task.",
+      "suggested_action": "Make the opening request explicit: 'Set DACH Q4 to €8.5m. Update the model, memo and deck to FY26 €74.6m.' Hold it long enough to read on a phone."
+    },
+    {
+      "shot_id": "00:22–00:26",
+      "category": "approval_credibility",
+      "severity": 0.48,
+      "confidence": 0.93,
+      "evidence": "The sequence moves from proposed diffs to 'Accept all' and '10 of 10 changes accepted' under 'It drives. You approve.' The expanded memo diff helps, but the decisive action still looks like bulk approval—the moment where I worry about rubber-stamping a board pack.",
+      "suggested_action": "Hold the expanded −€71–73m / +€74.6m comparison before the existing Accept all action, and use 'Every change, reviewable' there to emphasise informed review."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "product_demo",
+  "top_revision": "Close David’s exact concern with real footage of the accepted slide showing the corrected €74.6m box in its preserved layout.",
+  "purchase_objections": [
+    "Will it preserve my actual deck formatting after acceptance?",
+    "Does it coordinate the whole pack better than the AI tools I already use inside Office?",
+    "Can I assess consequential changes individually before approving the pack?"
+  ],
+  "would_try": "yes — The late-night mismatch feels familiar, and the definition card plus three real diff views make the newly introduced feature understandable; I would test it on a copy of a board pack before trusting a live deliverable."
+}

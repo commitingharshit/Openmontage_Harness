@@ -1,0 +1,76 @@
+{
+  "critic": "customer_psychology",
+  "stage": "animatic",
+  "score": 79,
+  "dimension_scores": {
+    "pain_specificity": 93,
+    "relatability": 88,
+    "emotional_authenticity": 79,
+    "product_pain_fit": 86,
+    "trust_credibility": 61,
+    "purchase_motivation": 54
+  },
+  "recognition": 9,
+  "resonance": 8,
+  "persuasion": 6,
+  "issues": [
+    {
+      "shot_id": "01:04–01:08",
+      "category": "missing_outcome_proof",
+      "severity": 0.87,
+      "confidence": 1,
+      "evidence": "The review panel says '10 of 10 changes accepted' and the final memo shows €74.6m, but the film never returns to the corrected slide 2 textbox that David flagged.",
+      "suggested_action": "Add the pending real post-acceptance slide 2 recording, showing the flagged textbox now reading €74.6m in the original template, immediately before Maya closes the laptop."
+    },
+    {
+      "shot_id": "00:08–00:15",
+      "category": "financial_logic_confusion",
+      "severity": 0.72,
+      "confidence": 0.98,
+      "evidence": "David already supplies 'FY26 €74.6m' before Maya edits the model; later the product request takes DACH Q4 'down to 8.5' while FY26 rises from €71–73m to €74.6m.",
+      "suggested_action": "Briefly establish that €71–73m is stale guidance and show the real model's recalculated FY26 result after the DACH input changes, so the viewer understands the distinction between the assumption and the outdated pack."
+    },
+    {
+      "shot_id": "00:40–01:04",
+      "category": "review_tax_unresolved",
+      "severity": 0.66,
+      "confidence": 0.96,
+      "evidence": "The Changes panel lists 'Slide 2 · TextBox 23', 'Chart data, slide 4' and 'Slide 4 · TextBox 6', followed by all ten changes being accepted; no selected deck change is shown in its slide context.",
+      "suggested_action": "Show one real deck diff selected and inspected in place before acceptance, demonstrating how Maya checks the proposed change without searching through the pack."
+    },
+    {
+      "shot_id": "00:23–00:26",
+      "category": "failure_attribution",
+      "severity": 0.57,
+      "confidence": 0.97,
+      "evidence": "'AI chat said: Deck: slide 2 title → €74.6m' is followed by a corrected title but an unchanged €71–73m textbox and David's 'Which is it?' message.",
+      "suggested_action": "Make the omitted reference explicit with a brief 'Title updated. Outlook box missed.' annotation, tying the mistake to incomplete guidance rather than leaving it to read as Maya's careless editing."
+    },
+    {
+      "shot_id": "00:52–01:04",
+      "category": "competitor_switching_case",
+      "severity": 0.48,
+      "confidence": 0.93,
+      "evidence": "The film shows changes grouped across three files, but its closing promise is 'Every change across your model, memo and deck. Accept or reject each one.'",
+      "suggested_action": "Hold a real workspace view showing all three original file tabs and their proposed changes together, with a concise 'One request. Your existing pack.' caption to strengthen the reason to try this alongside existing Office tools."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Use the approved product wording distinguishing Word tracked changes from PowerPoint and Excel diffs.",
+      "shot_id": "01:00",
+      "evidence": "The supplied narration says 'Every change, as a diff. Accept or reject each one.' instead of 'Every change, reviewable. Tracked changes in Word, diffs in PowerPoint and Excel — accept or reject each one.'"
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Close the proof loop with real footage of the previously flagged slide 2 textbox corrected to €74.6m after acceptance.",
+  "purchase_objections": [
+    "An accepted change list does not prove the entire pack now ties out; I still need to inspect the corrected deck.",
+    "Can it preserve my actual templates and handle references beyond this curated example?",
+    "Does reviewing its changes reduce my checking burden, or add another queue to audit?",
+    "I already use Office tools and model-to-slide links; I need evidence that this handles cross-file revisions more reliably.",
+    "My CFO and compliance team would still need deployment, data-handling and commercial details before approving a purchase."
+  ],
+  "would_try": "yes — the stale textbox, broken pasted formatting and late CFO revision are recognizably my work, and proposals inside my existing files justify a controlled trial.",
+  "buy_decision": "TRY_FIRST — a successful pilot on my own recurring pack, preserving its formatting and correctly updating every dependent reference, would flip me to BUY."
+}

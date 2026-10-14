@@ -1,0 +1,125 @@
+{
+  "critic": "edit_and_rhythm",
+  "stage": "animatic",
+  "score": 63,
+  "dimension_scores": {
+    "rhythm_wave": 52,
+    "cut_motivation": 72,
+    "connectives": 62,
+    "economy": 63,
+    "transitions_quality": 78
+  },
+  "issues": [
+    {
+      "shot_id": "00:13.7–00:28.2",
+      "category": "missing_rhythm_burst",
+      "severity": 0.88,
+      "confidence": 1.0,
+      "evidence": "The manual-work sequence uses 3.0, 3.0, 2.5 and 6.0-second shots. Across the entire 82-second film, the shortest measured shot is 2.5 seconds and 0% are under one second, despite 'fix the memo and deck by 9' and pulse music.",
+      "suggested_action": "Keep readable holds for each failure, then insert a short burst of existing action details—cell entry, paste, formatting cleanup and slide switching—with three or four 0.5–0.9-second cuts timed to the pulse."
+    },
+    {
+      "shot_id": "00:51.2–01:07.2",
+      "category": "review_sequence_plateau",
+      "severity": 0.8,
+      "confidence": 0.98,
+      "evidence": "The Changes panel receives a 3-second setup, a 9-second shot covering the flagged box, chart and accept/reject controls, then a 4-second '10 of 10 changes accepted' hold. The visual emphasis advances, but the measured cutting rhythm scarcely accelerates.",
+      "suggested_action": "Reshape the review into a setup hold, distinct box/chart detail beats, a brief decision-action burst and one resolved acceptance hold; retain enough reading time for every new message."
+    },
+    {
+      "shot_id": "01:03.2–01:13.2",
+      "category": "missing_visual_callback",
+      "severity": 0.77,
+      "confidence": 1.0,
+      "evidence": "After '10 of 10 changes accepted', the film shows the corrected memo and table at 01:08.5, then Maya closing her laptop at 01:11.5. The previously circled slide-2 box is not shown resolved; its post-acceptance recording is pending.",
+      "suggested_action": "When the recording exists, place the corrected slide-2 box immediately after acceptance, matching the framing of David's circled error, before the memo and laptop-close payoff."
+    },
+    {
+      "shot_id": "00:48.7–00:51.2",
+      "category": "interrupted_demo_momentum",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "The Word → Excel → PowerPoint proof sequence cuts to a 2.5-second shot of Maya looking down at her laptop before returning to 'Changes ready for review'.",
+      "suggested_action": "Trim this reaction to 0.7–0.9 seconds and use it as an eyeline bridge into the Changes panel, carrying the score continuously across both cuts."
+    },
+    {
+      "shot_id": "00:22.2–00:30.7",
+      "category": "slow_crisis_handoff",
+      "severity": 0.59,
+      "confidence": 0.9,
+      "evidence": "The slide/error-message section occupies a measured 6-second shot, followed by a 2.5-second face reaction. The buzz lands at 00:24.75 and silence begins at 00:25.74, leaving nearly five seconds before the product reveal.",
+      "suggested_action": "Preserve at least 2.5 seconds for David's complete message, then cut directly to Maya's reaction and shorten its tail; let the silence concentrate on her recognition rather than prolong both beats."
+    },
+    {
+      "shot_id": "01:10.2–01:22",
+      "category": "extended_ending",
+      "severity": 0.52,
+      "confidence": 0.98,
+      "evidence": "The ending spends 3 seconds on laptop closure, 3 seconds on the boardroom man, and 5.8 seconds on the CTA, with room tone throughout and the final VO beginning at 01:16.3.",
+      "suggested_action": "Cut the laptop closure on the physical action, trim the boardroom response to its first clear recognition beat, and arrive at the CTA roughly two seconds earlier while preserving a readable final hold."
+    },
+    {
+      "shot_id": "00:38.7–00:45.7",
+      "category": "weak_cross_file_connective",
+      "severity": 0.48,
+      "confidence": 0.72,
+      "evidence": "The supplied frames move from a bright Word page with tracked changes to Excel's inline bar, then to a dark teal PowerPoint cover. The timeline supplies a continuous score but no specific action or sound bridge between these file views.",
+      "suggested_action": "Verify the full-motion cuts; where the changes are hard cuts, use the existing file-tab selection as the cut trigger and align the changed-value area across the Word and Excel crops."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A film over 45 seconds that claims urgency must contain a shot under one second.",
+      "shot_id": "00:00–01:22",
+      "evidence": "Duration is 82 seconds; the deadline message says 'fix the memo and deck by 9'; measured shortest shot is 2.5 seconds and pct_shots_under_1s is 0.0."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Introduce a brief action-driven burst in the manual-work sequence, then make acceptance land on a matched view of the corrected slide-2 box.",
+  "recut_plan": [
+    {
+      "timestamp": "00:13.7–00:22.2",
+      "edit": "Keep the cell, memo and wrong-template reading holds, but add three or four 0.5–0.9-second action inserts between them, cut to the pulse."
+    },
+    {
+      "timestamp": "00:24.75–00:30.7",
+      "edit": "Hold David's complete message for at least 2.5 seconds, cut to the reaction on its recognition beat, and remove excess silent tail before the reveal."
+    },
+    {
+      "timestamp": "00:33.7–00:38.7",
+      "edit": "Retain the two 2.5-second request-reading beats; move the highlight between clauses in continuous motion to connect them."
+    },
+    {
+      "timestamp": "00:38.7–00:48.7",
+      "edit": "Use native file-tab actions to motivate the Word → Excel → PowerPoint cuts; keep the score continuous and align changed-value crops where possible."
+    },
+    {
+      "timestamp": "00:48.7–00:51.2",
+      "edit": "Trim Maya's reaction to 0.7–0.9 seconds and cut on her downward eyeline into the review panel."
+    },
+    {
+      "timestamp": "00:54.2–01:03.2",
+      "edit": "Divide the review passage into readable flagged-box and chart beats, then use a brief control/action insert around the 01:01.1 click before holding the accepted state."
+    },
+    {
+      "timestamp": "01:03.2–01:10.2",
+      "edit": "Shorten the acceptance-status hold and insert the pending corrected slide-2 recording, matched to the earlier circled box, followed by the corrected memo."
+    },
+    {
+      "timestamp": "01:10.2–01:22",
+      "edit": "Trim closure and boardroom coverage by approximately two seconds combined; preserve a 4–5-second final CTA hold."
+    }
+  ],
+  "target_shot_stats": {
+    "style": "Screen-led cinematic product launch with readable proof holds and brief action bursts",
+    "duration_s": "74–78",
+    "shots": "27–31",
+    "asl_s": "2.4–2.9",
+    "median_shot_s": "2.5–3.0",
+    "shortest_s": "0.5–0.8",
+    "longest_s": "5–7",
+    "pct_shots_under_1s": "13–20",
+    "pct_shots_over_4s": "10–15",
+    "message_minimum_hold_s": 2.5
+  }
+}

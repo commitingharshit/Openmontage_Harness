@@ -1,0 +1,124 @@
+{
+  "critic": "cinematography",
+  "stage": "animatic",
+  "score": 68,
+  "dimension_scores": {
+    "lighting_shape": 65,
+    "lens_depth": 70,
+    "composition": 73,
+    "camera_movement": 62,
+    "frame_design_ui": 70
+  },
+  "issues": [
+    {
+      "shot_id": "00:24, 00:32, 01:14",
+      "category": "insert_visibility",
+      "severity": 0.78,
+      "confidence": 0.78,
+      "evidence": "The dark inserts at 24.07, 32.9 and 74.0 seconds have measured mean luma of 12.6, 11.9 and 15.4; the first two also have contrast of only 7.4 and 5.2. Their brief durations leave little opportunity to resolve the hand action.",
+      "suggested_action": "Verify these inserts in motion; selectively lift the hands and mouse while preserving blacks, and use a take with a visible monitor-side edge light if the action remains indistinct."
+    },
+    {
+      "shot_id": "00:08–00:15",
+      "category": "lighting_discontinuity",
+      "severity": 0.73,
+      "confidence": 0.96,
+      "evidence": "The blue office shot at 00:05 has mean luma 36.5, followed by the nearly white chatbot at 00:08 with luma 202.8 and Word window at 00:12 with luma 199.0. The supplied UI frames fill most of the image with evenly illuminated white.",
+      "suggested_action": "Reduce the UI's apparent screen exposure and retain a consistent dark surround with directional screen spill, connecting these frames to the office lighting."
+    },
+    {
+      "shot_id": "00:23, 00:29",
+      "category": "subject_separation",
+      "severity": 0.66,
+      "confidence": 0.92,
+      "evidence": "The head-in-hands frames show dark hair merging into the black right background, while the cyan map and background figures remain conspicuous. The two supplied reaction views have nearly identical frontal framing.",
+      "suggested_action": "Lift the existing blue hair edge selectively, suppress the background map, and choose a tighter alternate crop for the second reaction."
+    },
+    {
+      "shot_id": "00:55–01:00",
+      "category": "ui_composition",
+      "severity": 0.64,
+      "confidence": 0.95,
+      "evidence": "The prompt close-up places the assistant panel against the right edge and cuts off much of the surrounding app; the subsequent 'It finds.' frame shows a large document, a narrow assistant panel and substantial empty space on the right.",
+      "suggested_action": "Compose a deliberate two-part frame with the document on the left third and a larger assistant panel on the right third, using one controlled push toward the active area."
+    },
+    {
+      "shot_id": "00:30–00:35",
+      "category": "text_image_competition",
+      "severity": 0.6,
+      "confidence": 0.97,
+      "evidence": "In the regeneration frame, the red '8:45' clock overlaps the lower window and sidebar area, while 'Five minutes. For one number.' sits across the window's bottom boundary.",
+      "suggested_action": "Scale the window down enough to create a clear lower graphics band, placing the clock and sentence entirely within that band."
+    },
+    {
+      "shot_id": "01:02",
+      "category": "graphic_overlap",
+      "severity": 0.56,
+      "confidence": 0.96,
+      "evidence": "The enlarged memo extends behind 'It fixes.' at the upper left, leaving part of the heading over the bright document edge; the page also exits the frame at the bottom.",
+      "suggested_action": "Reserve a dark top margin for the heading and frame the tracked-change paragraph beneath it, keeping the page edge clear of the title."
+    },
+    {
+      "shot_id": "00:37–00:42",
+      "category": "camera_movement_verification",
+      "severity": 0.5,
+      "confidence": 0.52,
+      "evidence": "The supplied 'Copy.' and piled-window frames show strong scale and angle changes across shots lasting 0.6–1.3 seconds, but still frames cannot establish smooth trajectories or natural motion blur.",
+      "suggested_action": "Verify the rendered sequence at normal speed; give each whip a consistent travel direction, readable landing frame and motion blur, correcting only moves that jitter or fail to settle."
+    },
+    {
+      "shot_id": "01:06–01:12",
+      "category": "ui_depth",
+      "severity": 0.45,
+      "confidence": 0.93,
+      "evidence": "The review list is a narrow, straight-on vertical strip in a large dark field. The red ellipse and 'Slide 4. Caught.' callout create hierarchy, but the panel itself has little spatial separation.",
+      "suggested_action": "Add restrained panel-edge light and a soft contact shadow, then use a small push that settles on the circled row while holding the callout stationary."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Unify the white illustration UIs and dark live-action inserts through consistent screen-motivated exposure, retaining readable hands, faces and interface focal points.",
+  "per_shot": [
+    {
+      "t": "00:24",
+      "grade_A_to_F": "D",
+      "fix": "Verify visibility in motion; lift the hand locally and preserve a monitor-side edge."
+    },
+    {
+      "t": "00:32",
+      "grade_A_to_F": "D",
+      "fix": "Recover directional contrast on the fingers or select a more legible existing take."
+    },
+    {
+      "t": "01:14",
+      "grade_A_to_F": "D",
+      "fix": "Lift the mouse and clicking finger locally without raising the surrounding blacks."
+    },
+    {
+      "t": "00:08",
+      "grade_A_to_F": "C",
+      "fix": "Lower apparent screen exposure and retain a dark, directionally lit surround."
+    },
+    {
+      "t": "00:12",
+      "grade_A_to_F": "C",
+      "fix": "Frame the document within a darker screen surround and reduce the white-field dominance."
+    },
+    {
+      "t": "00:30",
+      "grade_A_to_F": "C",
+      "fix": "Create a dedicated lower band for the clock and sentence, clear of the window."
+    },
+    {
+      "t": "00:55",
+      "grade_A_to_F": "C",
+      "fix": "Rebalance document and assistant panel across thirds, with a controlled focal push."
+    },
+    {
+      "t": "01:02",
+      "grade_A_to_F": "C",
+      "fix": "Keep 'It fixes.' on dark negative space above the enlarged tracked-change paragraph."
+    }
+  ],
+  "evaluation_limits": "SHARED.md, CINEMATOGRAPHY.md and the named brief files were not found in the available project tree. Assessment uses the supplied frames, shot timings and measured data; movement smoothness and shutter blur remain unverified."
+}

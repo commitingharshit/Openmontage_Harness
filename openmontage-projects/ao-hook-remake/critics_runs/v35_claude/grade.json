@@ -1,0 +1,121 @@
+{
+ "critic": "color_grade",
+ "stage": "animatic",
+ "score": 46,
+ "dimension_scores": {
+  "look_family_unity": 48,
+  "skin_tones": 62,
+  "contrast_curve_blacks": 55,
+  "shot_to_shot_match": 30,
+  "finish": 42
+ },
+ "issues": [
+  {
+   "shot_id": "00:12.47→00:13.93→00:15.6",
+   "category": "exposure_jump_in_scene",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "Measured luma 53.7 (laptop) → 145.6 (illustrated Word) → 50.7 (hands insert) inside one 3 s beat; sat 50→21→76. Overall luma spread SD 40.7, sat SD 34.7 — very high for a 2-world film.",
+   "suggested_action": "Pull the 13.93 Word shot down to luma ~70 with the same night LUT as 9.8–12.4 (gain 0.6, lift −0.02, cool WB)."
+  },
+  {
+   "shot_id": "00:24.07→00:24.87 / 00:30→00:31.07",
+   "category": "exposure_jump_in_scene",
+   "severity": 0.7,
+   "confidence": 0.85,
+   "evidence": "16.5 → 133.8 luma at 24.07→24.87 and 130.3 → 33.4 at 30.0→31.07. f_11/f_12/f_14 chat frames are light grey (luma 130–141) despite the stated 'night grade over all illustrated UI 9.8–41.6'.",
+   "suggested_action": "Apply the night grade for real on 24.87–31.83 and 37.4–41.6: target luma 60–80, sat ×0.8, teal shadow tint matching f_03."
+  },
+  {
+   "shot_id": "01:11.4 / 01:42–01:46 vs 01:48.8",
+   "category": "product_world_drift",
+   "severity": 0.6,
+   "confidence": 0.8,
+   "evidence": "Product shots swing sat 10.0 (71.4, white doc) and 11–12 (102, 106) to sat 121.2 (108.8 Evidence panel, saturated blue slide). White document pages at luma 139–142 sit beside dark UI at 33–42.",
+   "suggested_action": "One product LUT: knee highlights at 220, page white to ~200, desaturate the blue slide 25%, common teal-black floor."
+  },
+  {
+   "shot_id": "01:58.3→01:59.9 (f_48→f_49)",
+   "category": "payoff_world_shift",
+   "severity": 0.45,
+   "confidence": 0.7,
+   "evidence": "Dark room sat 88.8 → candle room sat 141.9 (highest in film), very orange. Deliberate warmth is fine, but it is a different set and the saturation is the film's peak.",
+   "suggested_action": "Hold the warm payoff to sat ~100; keep it the same set so the colour change reads as lights-on, not a new location."
+  },
+  {
+   "shot_id": "00:22.97, 00:24.07, 00:31.07, 00:44.57",
+   "category": "crushed_soft_inserts",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "Real inserts measure luma 16.5–42 with contrast 9.7–34 and sharpness 3–25: muddy, lifted-then-crushed, no separation (f_07 hand insert is flat blue-grey).",
+   "suggested_action": "Re-expose inserts: lift mids +0.08, add S-curve contrast, keep blacks at 4–6 IRE, not milky."
+  },
+  {
+   "shot_id": "whole",
+   "category": "finish_inconsistent",
+   "severity": 0.4,
+   "confidence": 0.65,
+   "evidence": "Vignette present on illustrated UI (f_11,f_12,f_14), absent on product screenshots (f_37,f_42); no visible grain on UI vs stock grain on real clips; letterbox 2% of shots only (52.6, 18 rows).",
+   "suggested_action": "Single finishing pass over everything: 2% vignette, fine grain 0.04, slight halation on highlights; remove the stray letterbox at 52.6."
+  },
+  {
+   "shot_id": "00:05–00:30",
+   "category": "skin_tone",
+   "severity": 0.25,
+   "confidence": 0.6,
+   "evidence": "f_03 skin reads warm under the lamp; f_10 skin is pushed cyan-grey by the blue grade (sat 118 overall but skin flattened).",
+   "suggested_action": "Key-qualify skin and hold it at the vectorscope skin line under the teal grade."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "hard grade jump inside one scene",
+   "shot_id": "00:12.47–00:15.6",
+   "evidence": "luma 53.7 → 145.6 → 50.7 within the same 'open the file' beat."
+  },
+  {
+   "rule": "UI frames left raw and white beside graded film",
+   "shot_id": "00:24.87–00:31.83, 01:11.4–01:18",
+   "evidence": "Chat UI luma 130–141 (f_11,f_12) next to night stock at 16–33; product doc at luma 138.9, sat 10."
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Actually apply one night LUT to every hook UI shot (target luma 60–80) so the 9.8–41.6 world stops jumping 16→141 across cuts.",
+ "grade_recipe": {
+  "problem_world_night": "eq=gamma=0.85:contrast=1.08:saturation=0.85, colorbalance=rs=-0.05:bs=0.08:rm=-0.03:bm=0.04, curves=master='0/0.02 0.5/0.42 1/0.88', vignette=PI/5, noise=alls=6:allf=t; target luma 55–80",
+  "product_world": "lift 0.01 teal-black floor, highlight knee at 0.86 (page white ≈ 200/255), sat 0.85 on blue slides, colorbalance=bs=0.04:bh=-0.02, same grain 6, vignette PI/6",
+  "payoff_warm": "colortemperature=4200, saturation=1.0 (not >1.1), soft halation (gblur sigma 12 screen-blend 15% on highlights), same grain"
+ },
+ "worst_jumps": [
+  {
+   "from": "00:12.47",
+   "to": "00:13.93",
+   "issue": "luma 53.7→145.6, sat 50→21"
+  },
+  {
+   "from": "00:24.07",
+   "to": "00:24.87",
+   "issue": "luma 16.5→133.8"
+  },
+  {
+   "from": "00:30.0",
+   "to": "00:31.07",
+   "issue": "luma 130.3→33.4"
+  },
+  {
+   "from": "00:41.6",
+   "to": "00:44.57",
+   "issue": "luma 131.6→42.2, sat 46→111"
+  },
+  {
+   "from": "01:46.0",
+   "to": "01:48.8",
+   "issue": "sat 11.1→121.2"
+  },
+  {
+   "from": "01:58.3",
+   "to": "01:59.9",
+   "issue": "sat 88.8→141.9, new set"
+  }
+ ]
+}

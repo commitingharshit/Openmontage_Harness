@@ -1,0 +1,47 @@
+{
+  "critic": "hook",
+  "stage": "animatic",
+  "score": 86,
+  "dimension_scores": {
+    "stop_scroll": 84,
+    "three_second_comprehension": 90,
+    "thats_me": 91,
+    "sound_off_legibility": 74
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–00:03",
+      "category": "mobile_reading_load",
+      "severity": 0.35,
+      "confidence": 0.95,
+      "evidence": "The opening shows three cards containing application labels, filenames and separate sentences beneath 'Model updated. Memo and deck still wrong.' The specific mismatch requires reading €74.6m against €71–73m across the cards.",
+      "suggested_action": "Keep the headline, but simplify the cards to large 'Model €74.6m', 'Memo €71–73m' and 'Deck €71–73m' labels; remove filenames and sentence fragments from the opening."
+    },
+    {
+      "shot_id": "00:00–00:03",
+      "category": "manual_burden_understated",
+      "severity": 0.22,
+      "confidence": 0.88,
+      "evidence": "Both the headline and opening VO say 'Model updated. Memo and deck… still wrong.' This identifies the mismatch clearly, but leaves the viewer's remaining work implicit.",
+      "suggested_action": "Test 'Model updated. Now fix the memo and deck. Again.' over the same mismatch visual to make the associate's recurring rework explicit."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "opening",
+  "top_revision": "Simplify the opening to three oversized file values so a muted phone viewer can recognize the mismatch without reading filenames or paragraphs.",
+  "hook_alternatives": [
+    {
+      "line": "One number changed. Three files to fix.",
+      "visual": "A large model value changes to €74.6m while adjacent memo and deck values remain red at €71–73m."
+    },
+    {
+      "line": "Your model is right. Your board pack isn't.",
+      "visual": "A green €74.6m model sits beside a memo and board slide displaying €71–73m, with the conflicting values enlarged."
+    },
+    {
+      "line": "AI gave you the answer. You're still updating the files.",
+      "visual": "A chat answer displays €74.6m above a memo and deck that still show €71–73m; a cursor moves toward the first manual edit."
+    }
+  ],
+  "hook_2s": 9
+}

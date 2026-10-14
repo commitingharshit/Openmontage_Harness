@@ -1,0 +1,124 @@
+{
+  "critic": "music_and_score",
+  "stage": "animatic",
+  "score": 78,
+  "dimension_scores": {
+    "arc_serves_story": 85,
+    "hit_points": 55,
+    "genre_and_emotion_fit": 88,
+    "motif": 78,
+    "ending": 74
+  },
+  "issues": [
+    {
+      "shot_id": "00:49.6–01:12.6",
+      "category": "musical_hit_alignment",
+      "severity": 0.75,
+      "confidence": 0.96,
+      "evidence": "Measured cuts_on_sound_pct is 31.4. The product reveal at 49.6 and proof cuts at 55.0, 59.73, 62.2 and 64.4 lack aligned detected sound events; the first onset after the reveal is 49.75. Onsets include every audio layer, so they do not establish musical accents.",
+      "suggested_action": "Re-edit the electronic cue so a clear harmonic arrival lands at 49.6, with restrained phrase accents at 59.73 and 64.4; preserve uninterrupted passages between these anchors."
+    },
+    {
+      "shot_id": "00:34.5–00:41.6",
+      "category": "build_payoff",
+      "severity": 0.58,
+      "confidence": 0.86,
+      "evidence": "The timeline specifies a swell into Done #3 and an overload riser, but measured cuts at 34.5, 37.4 and 40.3 lack aligned events. The measured dynamic sections do not isolate a distinct overload crest before the drop.",
+      "suggested_action": "Verify the music stem, then shape one continuous build through the window pileup, aligning its strongest accent with 'Repeat.' and cutting the score at 41.6."
+    },
+    {
+      "shot_id": "01:19–01:25",
+      "category": "brand_button",
+      "severity": 0.5,
+      "confidence": 0.79,
+      "evidence": "The ending specifies music returning under dawn and continuing into the end card, without a named closing musical button. Measurements show -16.7 dBFS at 80 seconds and digital silence from approximately 84.1 seconds; these establish termination, not a resolved cadence.",
+      "suggested_action": "Verify the cue's final phrase and land the identity motif just after the 82.6-second brand VO, allowing its natural decay to finish before the existing silence."
+    },
+    {
+      "shot_id": "00:46.2–01:23.6",
+      "category": "motif_continuity",
+      "severity": 0.4,
+      "confidence": 0.86,
+      "evidence": "The false-completion chime explicitly repeats three times, while the product identity tone appears at 46.2 and on 'Sent.' Its connection to the electronic bed and final logo is unspecified.",
+      "suggested_action": "Carry the identity tone's short pitch pattern into the reveal bed, repeat it softly on 'Sent,' and resolve the same pattern on the final logo."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Re-edit the existing score around a few decisive picture anchors, especially the 49.6-second product reveal, so the musical release lands with the visual release.",
+  "cue_sheet": [
+    {
+      "act": "Cold open",
+      "time_s": [0, 5],
+      "feel": "Immediate unresolved tension",
+      "tempo_bpm": 96,
+      "instrumentation": "Muted synth bass pulse, sparse low percussion",
+      "hits": "Establish tension beneath the mismatch cards; terminate into the 4.5-second rewind."
+    },
+    {
+      "act": "False reassurance",
+      "time_s": [5, 17.3],
+      "feel": "Light routine confidence turning brittle",
+      "tempo_bpm": 88,
+      "instrumentation": "Restrained lounge keys, brushed percussion, soft bass",
+      "hits": "Leave room for the 11.05-second Done chime; destabilize harmony at the formatting failure and end the lounge phrase as the partner notification arrives."
+    },
+    {
+      "act": "Grind and overload",
+      "time_s": [17.3, 41.6],
+      "feel": "Escalating pressure and repetition",
+      "tempo_bpm": 96,
+      "instrumentation": "Low synth ostinato, dry percussion, gradually narrowing sustained textures",
+      "hits": "Add weight at 28.3; build toward Done #3 at 34.5; reach the strongest accent on 'Repeat.' before removing the score at 41.6."
+    },
+    {
+      "act": "Stop and reset",
+      "time_s": [41.6, 49.6],
+      "feel": "Vulnerability followed by space",
+      "tempo_bpm": 0,
+      "instrumentation": "No music initially; one sparse identity tone from 46.2",
+      "hits": "Protect the score-free hesitation and room tone from 43.6; introduce the identity tone without rebuilding tension beneath the promise."
+    },
+    {
+      "act": "Reveal and proof",
+      "time_s": [49.6, 72.6],
+      "feel": "Calm competence and human control",
+      "tempo_bpm": 100,
+      "instrumentation": "Warm electronic chords, light plucked motif, restrained steady percussion",
+      "hits": "Harmonic arrival at 49.6; small phrase accents at the first visible fix and 'You decide'; leave space around 'Even slide four.'"
+    },
+    {
+      "act": "Reviewed send and dawn",
+      "time_s": [72.6, 79],
+      "feel": "Brief hesitation resolving into relief",
+      "tempo_bpm": 100,
+      "instrumentation": "Reduced electronic bed, identity motif, warm sustained chords",
+      "hits": "Thin the bed at 72.6; let the mouse click lead; resolve the identity motif on 'Sent' and open the harmony at the 76.1-second dawn cut."
+    },
+    {
+      "act": "Brand ending",
+      "time_s": [79, 85.1],
+      "feel": "Quiet assurance",
+      "tempo_bpm": 100,
+      "instrumentation": "Identity motif over a resolving chord, percussion removed",
+      "hits": "Support 'This time, you checked'; place the final motif after the brand VO and decay naturally into the final silence."
+    }
+  ],
+  "free_source_suggestions": [
+    {
+      "source": "Mixkit",
+      "search_terms": ["minimal suspense pulse", "restrained lounge jazz", "warm confident electronic"],
+      "purpose": "Search vocabulary for alternate cue edits; retain the existing tracks if their phrases can support the anchors."
+    },
+    {
+      "source": "Pixabay",
+      "search_terms": ["minimal tension underscore stems", "ambient electronic hopeful resolution", "short synth sonic logo"],
+      "purpose": "Find sparse build textures and a reusable identity motif."
+    },
+    {
+      "source": "YouTube Audio Library",
+      "search_terms": ["ambient suspense", "downtempo electronic calm", "warm synth instrumental"],
+      "purpose": "Find unobtrusive beds with space for narration and a usable closing cadence."
+    }
+  ]
+}

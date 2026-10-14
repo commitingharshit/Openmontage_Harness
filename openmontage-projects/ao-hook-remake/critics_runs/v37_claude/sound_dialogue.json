@@ -1,0 +1,139 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 56,
+ "dimension_scores": {
+  "intelligibility": 50,
+  "performance_casting": 50,
+  "writing_for_the_ear": 72,
+  "pacing": 52,
+  "placement": 64
+ },
+ "issues": [
+  {
+   "shot_id": "01:58.9",
+   "category": "brand_name_misheard",
+   "severity": 1.0,
+   "confidence": 0.9,
+   "evidence": "Final VO line expected \"Agentic Office.\" measured heard \"see you next time.\", match 0.32. The identity sting is cued at 118.8 s (0.1 s earlier) on the un-ducked SFX bus, the music returns at 115.6 s, and loudness is -13.3 dBFS at 118.5 s.",
+   "suggested_action": "Re-record the tag as \"uh-JEN-tick Office\" with a 0.3 s pause between the words. Move the identity sting to 118.2 s so it finishes before the VO, duck the music 8 dB under the tag, then re-measure until match is at least 0.95."
+  },
+  {
+   "shot_id": "00:06–00:31",
+   "category": "rushed_hook_pacing",
+   "severity": 0.7,
+   "confidence": 0.95,
+   "evidence": "Measured words/s: 6.0 s 4.13, 11.0 s 4.17, 12.5 s 4.02, 15.5 s 3.98, 18.15 s 3.71, 24.0 s 4.61. All are above the 3.5 rushed threshold. Post-reveal lines sit at 2.3–3.6.",
+   "suggested_action": "Re-render the hook lines at speed 0.88–0.9, targeting 3.0–3.3 words/s. To buy the time, cut words rather than squeezing them: \"You ask a chatbot to fix the memo.\" and \"So you ask for the deck. It builds one. In the chat.\""
+  },
+  {
+   "shot_id": "00:11.0 / 00:15.5",
+   "category": "low_match_lines",
+   "severity": 0.45,
+   "confidence": 0.6,
+   "evidence": "Line at 11.0 s \"It says it's done.\" has match 0.78, and line at 15.5 s \"So you fix it by hand. Then, an email.\" has match 0.83. Both \"heard\" strings contain every expected word plus the next line's opening (\"then you\", \"please update\"), so this is probably window bleed, not mispronunciation. The 11.0 s line runs at 4.17 w/s with only 1.5 s before the next line.",
+   "suggested_action": "Verify each clip in isolation. Leave at least 0.35 s of air after each line so the lines separate: move 12.5 s to 12.8 s and 18.15 s to 18.4 s."
+  },
+  {
+   "shot_id": "00:00–01:58",
+   "category": "tts_performance",
+   "severity": 0.55,
+   "confidence": 0.85,
+   "evidence": "The brief states the narrator is \"Kokoro TTS draft narrator (af_heart)\". The same flat read covers the 9 A.M. dread, the frustration (\"Prompt again. Wait again.\") and the calm proof. Only the partner email uses a second (British male) voice.",
+   "suggested_action": "For the final, cast a human VO or a premium TTS with direction per act: clipped and tense in 0–46 s, slower and lower in 46–106 s, warm and almost private on \"Done. And this time…\"."
+  },
+  {
+   "shot_id": "00:54.7–00:58.4",
+   "category": "vo_vs_super_mismatch",
+   "severity": 0.4,
+   "confidence": 0.7,
+   "evidence": "The VO says \"Start from your templates, or just describe it.\" while the super reads \"Templates, or a sentence.\" At 56.0–58.4 s the super switches to \"Something new? Every new element is marked.\" while the VO is still on templates and then starts \"Tell it what changed\" (58.7 s).",
+   "suggested_action": "Either make the super echo the VO (\"Your templates. Or just describe it.\") or drop the 56.0–58.4 \"Something new?\" super, so that two different sentences are not read at once."
+  },
+  {
+   "shot_id": "01:00–01:07",
+   "category": "vo_vs_super_mismatch",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "VO 58.7 s: \"It finds where that number lives: the model, the memo, the deck.\" The on-screen super reads \"The context is already here.\"",
+   "suggested_action": "Change the super to \"Model. Memo. Deck.\" so it lands under the three VO nouns."
+  },
+  {
+   "shot_id": "00:34.6 / 01:27",
+   "category": "pronunciation_number",
+   "severity": 0.15,
+   "confidence": 0.7,
+   "evidence": "\"slide four\" is heard as \"slide for\" in both lines (34.6 s and 87.0 s). Only the transcript is off, but the payoff \"Even slide four.\" depends on the number reading as a number.",
+   "suggested_action": "Give \"four\" a slight stress and a 0.15 s pause before it (\"Even… slide four\")."
+  },
+  {
+   "shot_id": "01:48.3",
+   "category": "trailing_artifact",
+   "severity": 0.2,
+   "confidence": 0.4,
+   "evidence": "Line at 108.3 s is heard as \"...you've seen every change. and that's\". No VO is scheduled after it until 118.9 s.",
+   "suggested_action": "Verify the a7b clip tail for a leftover breath or word fragment and trim it."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "Brand or product name misheard",
+   "shot_id": "01:58.9",
+   "evidence": "\"Agentic Office.\" heard as \"see you next time.\" (match 0.32)"
+  },
+  {
+   "rule": "Any line with match < 0.85",
+   "shot_id": "00:11.0",
+   "evidence": "\"It says it's done.\" match 0.78 (likely window bleed; verify)"
+  },
+  {
+   "rule": "Any line with match < 0.85",
+   "shot_id": "00:15.5",
+   "evidence": "\"So you fix it by hand. Then, an email.\" match 0.83 (likely window bleed; verify)"
+  }
+ ],
+ "line_fixes": [
+  {
+   "t": "118.9",
+   "issue": "Brand misheard as \"see you next time.\"",
+   "fix": "Spell it phonetically, \"uh-JEN-tick Office\"; move the identity sting to 118.2 s; duck the music 8 dB; aim for match 0.95 or higher"
+  },
+  {
+   "t": "6.0",
+   "issue": "4.13 words/s",
+   "fix": "\"You ask a chatbot to fix the memo.\" at speed 0.9, about 3.0 words/s"
+  },
+  {
+   "t": "11.0",
+   "issue": "4.17 words/s, match 0.78, butts into the 12.5 s line",
+   "fix": "Slow to about 3.0 words/s and move the next line to 12.8 s"
+  },
+  {
+   "t": "12.5",
+   "issue": "4.02 words/s",
+   "fix": "Keep the \"...\" pause on the glitch; slow to 3.2 words/s"
+  },
+  {
+   "t": "15.5",
+   "issue": "3.98 words/s, match 0.83",
+   "fix": "Split the line: \"So you fix it by hand.\" [0.4 s] \"Then — an email.\" Move the partner read to 18.4 s"
+  },
+  {
+   "t": "24.0",
+   "issue": "4.61 words/s (fastest line)",
+   "fix": "\"You ask for the deck. It builds one… in the chat.\" at about 3.2 words/s"
+  },
+  {
+   "t": "54.7",
+   "issue": "VO and super say different sentences",
+   "fix": "Make the super echo the VO wording"
+  },
+  {
+   "t": "87.0",
+   "issue": "\"four\" heard as \"for\"",
+   "fix": "Stress \"four\"; add a 0.15 s pause before it"
+  }
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Re-record the end tag so \"Agentic Office\" is pronounced clearly with nothing under it (sting moved earlier, music ducked), then slow the six hook lines from about 4 w/s to about 3.1 w/s."
+}

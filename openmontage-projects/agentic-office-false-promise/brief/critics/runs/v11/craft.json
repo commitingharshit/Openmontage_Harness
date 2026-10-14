@@ -1,0 +1,84 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 76,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 80,
+    "subject_character_consistency": 88,
+    "motion_temporal_stability": 75,
+    "composition_camera_readability": 61,
+    "audio_editing": 75
+  },
+  "issues": [
+    {
+      "shot_id": "00:14–00:19",
+      "category": "product_footage_framing",
+      "severity": 0.85,
+      "confidence": 0.99,
+      "evidence": "At 00:15, the Excel frame devotes most of its height to ribbon controls and empty cells; the diff bar clips at both edges. At 00:17.5, the Word replacement appears inside a paragraph cropped mid-sentence on both sides.",
+      "suggested_action": "Reframe each native recording around its complete change: retain Revenue!E6, 8.9 → 8.5 and both review buttons in Excel, then isolate the full €71–73m → €74.6m tracked replacement in Word."
+    },
+    {
+      "shot_id": "00:19–00:22",
+      "category": "overlay_collision",
+      "severity": 0.7,
+      "confidence": 0.99,
+      "evidence": "At 00:20.5, 'POWERPOINT · the box David flagged' overlays an unrelated Word change row above the circled PowerPoint row.",
+      "suggested_action": "Place the PowerPoint label in a reserved band above the footage and crop around the deck group heading and complete Slide 2 · TextBox 23 row."
+    },
+    {
+      "shot_id": "00:03.2–00:05.5",
+      "category": "insufficient_reading_time",
+      "severity": 0.67,
+      "confidence": 1.0,
+      "evidence": "The two-line message 'AI gave you the answer. You still have a board pack to fix.' holds for only 2.3 seconds.",
+      "suggested_action": "Extend this card to at least 2.5 seconds, taking 0.2 seconds from the opening tiles."
+    },
+    {
+      "shot_id": "00:22–00:26",
+      "category": "review_state_readability",
+      "severity": 0.62,
+      "confidence": 0.97,
+      "evidence": "At 00:23, the panel shows '7 of 10 changes accepted' alongside '0 of 3 accepted' for the memo. At 00:25, 'It drives. You approve.' covers a memo change row.",
+      "suggested_action": "Frame the acceptance action tightly around the button and progress header, then hold the completed 10 of 10 state with the slogan outside the panel."
+    },
+    {
+      "shot_id": "00:00–00:03.2",
+      "category": "text_layout",
+      "severity": 0.45,
+      "confidence": 0.99,
+      "evidence": "The opening Word tile breaks the range across lines as '€71–' and '73m', while the PowerPoint tile keeps '€71–73m' together.",
+      "suggested_action": "Shorten the memo excerpt or prevent the numeric range from wrapping so both stale values can be scanned immediately."
+    },
+    {
+      "shot_id": "00:26–00:30",
+      "category": "feed_safe_area",
+      "severity": 0.4,
+      "confidence": 0.8,
+      "evidence": "At 00:28, 'Can make mistakes. You review every change.' sits close to the bottom of the frame, beneath substantial empty space.",
+      "suggested_action": "Verify the ending against the intended platforms' feed overlays and move the disclaimer beneath the CTA within the central safe area."
+    },
+    {
+      "shot_id": "00:00–00:30",
+      "category": "temporal_audio_verification",
+      "severity": 0.25,
+      "confidence": 0.45,
+      "evidence": "The supplied evidence contains twelve still frames and timing information; it does not establish motion smoothness, transition behavior, or audible narration and music balance. The render has an AAC audio stream.",
+      "suggested_action": "Verify the rendered MP4 at phone size with sound on, checking narration intelligibility, the music change at 11.5 seconds, acceptance timing, and the final audio tail before export approval."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Every message holds for at least 2.5 seconds.",
+      "shot_id": "00:03.2–00:05.5",
+      "evidence": "The 'AI gave you the answer' card lasts 2.3 seconds."
+    },
+    {
+      "rule": "Workflow graphics must be large enough to read on a phone.",
+      "shot_id": "00:14–00:19",
+      "evidence": "The Excel review bar is clipped horizontally, and the Word tracked-change sentence extends beyond both frame edges."
+    }
+  ],
+  "revision_scope": "product_demo",
+  "top_revision": "Reframe the real product sequence into complete, readable change regions with labels outside the footage and a clear hold on the final 10 of 10 accepted state."
+}

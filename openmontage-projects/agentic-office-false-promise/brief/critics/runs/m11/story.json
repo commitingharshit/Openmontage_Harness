@@ -1,0 +1,60 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 83.65,
+  "dimension_scores": {
+    "brief_message_adherence": 88,
+    "narrative_progression_coherence": 82,
+    "pain_solution_connection": 89,
+    "shot_purpose_sequencing": 78,
+    "product_demo_benefit_clarity": 81,
+    "pacing_cta": 74
+  },
+  "issues": [
+    {
+      "shot_id": "01:02–01:08",
+      "category": "missing_payoff",
+      "severity": 0.78,
+      "confidence": 1.0,
+      "evidence": "The central failure is David's circled slide 2 box still saying €71–73m. After '10 of 10 changes accepted', the film shows the corrected memo and table, then Maya closing her laptop; the corrected slide 2 box never appears.",
+      "suggested_action": "When the pending recording is available, replace part of the relief beat with the accepted slide 2 view showing that same box at €74.6m, then briefly show the model, memo and deck agreeing."
+    },
+    {
+      "shot_id": "00:13–00:36",
+      "category": "unclear_scenario_reset",
+      "severity": 0.65,
+      "confidence": 0.96,
+      "evidence": "The manual sequence already sets Revenue!E6 to 8.5 and the memo paragraph to €74.6m. After David flags the remaining deck mismatch, the product request again says 'Take DACH Q4 down to 8.5', and the real Excel diff again proposes 8.9 → 8.5.",
+      "suggested_action": "Mark the product turn as an alternative execution of the original request with a brief 'Same request. This time, Agentic Office.' transition before showing the request and original values."
+    },
+    {
+      "shot_id": "00:11–00:31",
+      "category": "delayed_solution",
+      "severity": 0.56,
+      "confidence": 0.91,
+      "evidence": "The opening establishes the mismatch and execution gap by 6.7 seconds, but the film then spends roughly 21 more seconds on setup, reaction, manual edits and escalation before naming Agentic Office at 28.2 seconds.",
+      "suggested_action": "Keep the Word paste failure, wrong-template comparison and David's circled mismatch, but shorten the exhale and manual Excel holds so the product turn arrives around 23–25 seconds."
+    },
+    {
+      "shot_id": "00:43",
+      "category": "weak_proof_beat",
+      "severity": 0.44,
+      "confidence": 1.0,
+      "evidence": "The PowerPoint beat shows the 'Board Pack Q3' cover with 'POWERPOINT · still her own deck'. It establishes template continuity but shows neither the stale outlook box nor its proposed correction.",
+      "suggested_action": "Use real slide 2 footage for this beat, retaining the template-continuity caption while directing attention to the outlook object that the next Changes-panel beat identifies."
+    },
+    {
+      "shot_id": "00:46–01:01",
+      "category": "repetitive_review_explanation",
+      "severity": 0.36,
+      "confidence": 0.94,
+      "evidence": "The review sequence separately introduces the Changes panel, identifies TextBox 23, identifies chart data, explains accept/reject controls, and finally shows Accept all across approximately 15 seconds.",
+      "suggested_action": "Preserve TextBox 23 and the dependent chart as the two proof points, explain accept/reject while their controls are visible, and cut directly to Accept all instead of holding a separate controls beat."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Close David's exact slide 2 mismatch with a real post-acceptance view of that same box at €74.6m before the final CTA.",
+  "retell": "Her model has the new FY26 number, but her memo and deck still contain the old outlook. The chatbot tells her what to change, so she edits the files herself and still leaves a mismatch that the CFO flags. Agentic Office proposes changes across her actual model, memo and deck, including the missed slide box and chart data, and she accepts them. The corrected memo is shown, and the film asks me to request early access to Diffs in Agentic Office.",
+  "scroll_away_second": 18
+}

@@ -1,0 +1,113 @@
+{
+  "critic": "color_grade",
+  "stage": "animatic",
+  "score": 68,
+  "dimension_scores": {
+    "look_family_unity": 76,
+    "skin_tones": 74,
+    "contrast_curve_blacks": 69,
+    "shot_to_shot_match": 51,
+    "finish": 70
+  },
+  "issues": [
+    {
+      "shot_id": "00:05–00:16",
+      "category": "exposure_match",
+      "severity": 0.85,
+      "confidence": 0.98,
+      "evidence": "The blue office cuts to a near-white chatbot, then bright Word and dark hands. Measured luma: 46.4 → 202.9 at 00:08; 198.5 → 66.4 at 00:15.6. Overall luma SD is 64.0. The eased transition softens the first cut but leaves a large sustained brightness difference.",
+      "suggested_action": "Compress illustration UI whites to approximately 78–82 IRE and gently lift stock midtones; match settled frames across these cuts without flattening the night atmosphere."
+    },
+    {
+      "shot_id": "00:59.73–01:06.60",
+      "category": "product_demo_match",
+      "severity": 0.79,
+      "confidence": 0.97,
+      "evidence": "The Excel proof, white memo and dark Changes panel alternate sharply: luma 98.2 → 167.8 → 55.8 → 31.0; saturation 69.3 → 29.7 → 75.8 → 73.5. White pages dominate one frame while dark panels dominate the next.",
+      "suggested_action": "Match document paper whites across the real demo, slightly lift dark panel midtones, and hold the surrounding teal background at one exposure; preserve original status and diff colors."
+    },
+    {
+      "shot_id": "00:15.60, 00:23, 00:31, 01:24",
+      "category": "stock_insert_unity",
+      "severity": 0.7,
+      "confidence": 0.92,
+      "evidence": "The typing hands look warm brown beside the cool blue protagonist, while the mouse insert is substantially darker. Measured insert luma varies from 66.4 at 00:15.6 to 16.5 at 00:24.07 and 18.8 at 01:24.",
+      "suggested_action": "Balance each insert to the office reference using cool shadows and neutral skin midtones; raise the darkest inserts selectively until fingers and desk surfaces retain visible separation."
+    },
+    {
+      "shot_id": "00:05, 00:23, 00:36.77",
+      "category": "skin_tone_separation",
+      "severity": 0.56,
+      "confidence": 0.83,
+      "evidence": "The protagonist's face appears muted grey-brown under the blue office light, particularly in the head-in-hands close-up. The office wide has saturation 118.2 and the later reaction 113.0, concentrated visually in blue surroundings rather than healthy skin separation.",
+      "suggested_action": "Use a tracked skin qualifier to reduce cyan contamination and add restrained red warmth and midtone exposure, leaving the office shadows blue."
+    },
+    {
+      "shot_id": "00:16.50–00:23",
+      "category": "vignette_finish",
+      "severity": 0.5,
+      "confidence": 0.94,
+      "evidence": "The Word notification frames have a bright central paper area and heavily shaded corners; the straight Word frame is much brighter. Measured luma changes from 198.5 at 00:12.3 to 95.0 at 00:16.5. Across supplied UI frames, edge shading sometimes makes paper appear grey.",
+      "suggested_action": "Separate intentional notification dimming from the finishing vignette; use a fixed, broad vignette on the surrounding composition and reduce shading over document text and paper."
+    },
+    {
+      "shot_id": "00:11.10",
+      "category": "letterbox_consistency",
+      "severity": 0.3,
+      "confidence": 0.58,
+      "evidence": "Only 2.7% of shots are detected as letterboxed; the first Done shot reports 96 letterbox rows while every other shot reports zero. The supplied frame also contains extensive dark surround, which could trigger the detector.",
+      "suggested_action": "Verify whether these rows are actual bars or dark composition content; if actual bars, remove them to preserve the continuous 16:9 finish."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "whole",
+  "top_revision": "Match UI paper whites and stock midtones within each world to reduce exposure jolts while preserving the deliberate warm dawn.",
+  "grade_recipe": {
+    "problem_world": {
+      "recipe": "Starting point for stock: eq=contrast=1.04:brightness=0.012:gamma=1.06:saturation=0.88; colorbalance=bs=0.018:gs=0.006:rs=-0.008. Apply shot-specific exposure matching before this look.",
+      "secondary": "Protect skin with a tracked qualifier, reducing cyan locally and adding slight red warmth; retain shadow texture rather than lowering the black floor.",
+      "ui": "Use a luminance curve with normalized points 0/0, 0.25/0.25, 0.5/0.48, 0.75/0.69, 1/0.82 on illustration layers before compositing; keep alert red saturated.",
+      "finish": "Use one broad vignette with approximately 0.15-stop edge loss; optional monochrome grain at 0.4% on stock and backgrounds, keeping small UI text clean."
+    },
+    "solution_world": {
+      "recipe": "Keep teal backgrounds consistent; for screenshot layers use curves=master='0/0 0.1/0.12 0.5/0.5 0.8/0.76 1/0.88', then match paper whites between Excel and memo.",
+      "secondary": "Preserve cyan branding and native Accept/Reject/diff colors; lift dark panel midtones selectively rather than adding saturation globally.",
+      "finish": "Use the same broad vignette strength throughout the demo, applied principally to the background; avoid halation on text and interface borders."
+    },
+    "dawn_world": {
+      "recipe": "Starting point: eq=contrast=1.03:gamma=1.04:saturation=0.92. Preserve the existing warm sky; gently lift desk shadows with a masked curve.",
+      "finish": "Retain the shared restrained grain and vignette; keep the sunrise as the intentional first warm scene."
+    }
+  },
+  "worst_jumps": [
+    {
+      "from": "00:05.07",
+      "to": "00:08.00",
+      "issue": "Office → chatbot: luma +156.5, saturation −105.3; the transition eases entry but the destination remains much brighter."
+    },
+    {
+      "from": "00:24.07",
+      "to": "00:24.87",
+      "issue": "Dark insert → chatbot: luma +171.3; abrupt dark-to-white alternation within the problem world."
+    },
+    {
+      "from": "00:30.00",
+      "to": "00:31.07",
+      "issue": "Regeneration UI → reaction: luma −149.2, saturation +52.0."
+    },
+    {
+      "from": "01:02.20",
+      "to": "01:04.40",
+      "issue": "White memo → Changes panel: luma −112.0, saturation +46.1; content coverage contributes substantially, but perceived brightness still jolts."
+    },
+    {
+      "from": "01:22.60",
+      "to": "01:24.00",
+      "issue": "Email → mouse insert: luma −153.4; the insert loses substantial shadow detail before returning to the bright email."
+    }
+  ],
+  "assessment_limits": [
+    "CINEMATOGRAPHY.md was not found in the project or searched reference locations; the available sibling SHARED.md was read.",
+    "Whole-frame luma and saturation statistics include changes in UI coverage and composition; they do not independently establish a hard grade discontinuity."
+  ]
+}

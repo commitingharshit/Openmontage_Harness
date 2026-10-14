@@ -1,0 +1,60 @@
+{
+  "critic": "story",
+  "stage": "animatic",
+  "score": 82,
+  "dimension_scores": {
+    "brief_message_adherence": 83,
+    "narrative_progression_coherence": 84,
+    "pain_solution_connection": 89,
+    "shot_purpose_sequencing": 80,
+    "product_demo_benefit_clarity": 79,
+    "pacing_cta": 70
+  },
+  "issues": [
+    {
+      "shot_id": "00:35–00:45",
+      "category": "feature_definition",
+      "severity": 0.78,
+      "confidence": 0.96,
+      "evidence": "The card says “Introducing Diffs in Agentic Office,” but the next three shots explain the request. The explicit explanation “Every change, as a diff. Accept or reject each one” arrives at 57.6 seconds.",
+      "suggested_action": "Define Diffs at the introduction with “Every change across your files, reviewable,” then immediately show a before-and-after change and its review controls."
+    },
+    {
+      "shot_id": "00:50–01:09",
+      "category": "incomplete_payoff",
+      "severity": 0.7,
+      "confidence": 0.98,
+      "evidence": "The central failure is the stale €71–73m text box on slide 2. The solution identifies “Slide 2 · TextBox 23 · €71–73m → €74.6m,” but the accepted result shown at 66 seconds is the memo and table. The corrected slide itself never appears.",
+      "suggested_action": "Capture and insert the accepted slide 2 with its text box reading €74.6m immediately after acceptance, matching the earlier flagged slide."
+    },
+    {
+      "shot_id": "00:17–00:35",
+      "category": "delayed_feature_arrival",
+      "severity": 0.67,
+      "confidence": 0.93,
+      "evidence": "After “0 of 3 files changed,” the film adds the manual model edit, broken memo paste, replacement deck, manual title edit, CFO correction and chat receipt before naming the feature at 35 seconds.",
+      "suggested_action": "Shorten the broken-deck detour and merge the receipt into the CFO correction, bringing the Diffs introduction forward while preserving the manual edit and missed text-box setup."
+    },
+    {
+      "shot_id": "00:37.5–00:45",
+      "category": "repeated_instruction",
+      "severity": 0.55,
+      "confidence": 0.97,
+      "evidence": "Three consecutive request crops repeat “Take DACH Q4 down to 8.5,” “make the memo and the deck match,” and “Show me the diffs,” beneath the persistent caption “Update the model, memo and deck. Show the diffs.” The task has already been established by David and the manual workflow.",
+      "suggested_action": "Keep one readable request crop establishing the same task, then move the remaining time into the actual changes and review sequence."
+    },
+    {
+      "shot_id": "00:48.5–00:51.5",
+      "category": "weak_product_proof",
+      "severity": 0.48,
+      "confidence": 0.98,
+      "evidence": "“Still your deck” accompanies the unchanged “Board Pack Q3” title slide. It establishes template continuity but shows no proposed deck edit.",
+      "suggested_action": "Replace the title-slide hold with real footage of an affected slide, followed by its corresponding Changes-panel entry, so template preservation and file editing are demonstrated together."
+    }
+  ],
+  "constraint_failures": [],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Introduce Diffs earlier as reviewable changes across the real files, then finish by showing the accepted correction on the exact slide that caused the problem.",
+  "retell": "A CFO asks an associate to update a revenue assumption across a model, memo and deck. The chatbot gives instructions, so she edits the files herself and misses an old number in the deck. Agentic Office proposes changes across those same files, including the missed text box, and she accepts all ten. Diffs is introduced as the feature that makes those changes reviewable, with an invitation to request early access.",
+  "scroll_away_second": 23
+}

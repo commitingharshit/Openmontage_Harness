@@ -1,0 +1,21 @@
+{"critic":"sound_ambience","stage":"animatic","score":50,
+"dimension_scores":{"room_tone_continuity":40,"world_building":50,"sound_perspective":55,"diegetic_logic":62,"designed_silence":48},
+"issues":[
+{"shot_id":"01:02.0–01:03.8","category":"digital_silence","severity":0.85,"confidence":0.9,"evidence":"silencedetect at -60 dB: 61.99→63.77 (1.79 s). The noise floor in 57–64 is -inf and the loudness curve at 62.5–63.5 reads -180 dBFS. It plays over the cream 'AI answers. You do the work.' card, not over a black beat.","suggested_action":"Fill 61.9–63.8 with continuous night-office room tone (-48 dBFS) and a breath, or close the gap by moving the 'What if' line up."},
+{"shot_id":"00:57.3–00:59.2","category":"designed_silence_too_short","severity":0.6,"confidence":0.75,"evidence":"The 'She missed one' silence measures -60 dBFS for only about 1.5 s (57.5–58.9) before the card cut at 59.2 and VO at 59.4. That is too short to register, and at -60 it is effectively dead rather than room tone.","suggested_action":"Hold it for 2.5–3 s under room tone at about -46 dBFS with a faint HVAC tone and one exhale, and only then cut to the card."},
+{"shot_id":"00:04–00:11","category":"thin_world","severity":0.6,"confidence":0.8,"evidence":"RMS is -43.5 dBFS with no onsets. The 'empty floor, one lamp' shot (11:52 PM) promises 'HVAC, distant traffic'; at -46 dBFS on a phone speaker this reads as dead air.","suggested_action":"Layer HVAC hum (-40 dBFS, 120 Hz high-passed), distant city traffic through glass (-42) and an occasional far elevator ding."},
+{"shot_id":"01:46–01:49","category":"location_change_no_ambience","severity":0.6,"confidence":0.6,"evidence":"The dawn cut at 106.2 is in cuts_without_sound_event_s, and the payoff bed noise floor is about -20 dBFS (music wall). Birds and morning city, if present, are masked.","suggested_action":"Duck music 6 dB at 106.2 and bring in birds plus soft morning traffic (-30 dBFS), with an open window feel."},
+{"shot_id":"01:49.2","category":"location_change_no_ambience","severity":0.55,"confidence":0.6,"evidence":"The boardroom at 9:02 AM (cut 109.2) has no sound event; there is nothing to separate it from the night office.","suggested_action":"Add a larger, brighter room: air-con, a far door, paper and a chair settle, with more early-reflection reverb than the office."},
+{"shot_id":"00:31–00:57","category":"night_progression","severity":0.4,"confidence":0.5,"evidence":"The clock goes 12:31→2:31 but the noise floor holds at about -38.8 dBFS throughout. The night doesn't get emptier.","suggested_action":"Thin the traffic layer at each time stamp, so that by 2:31 only HVAC and the clock tick remain."}],
+"ambience_plan":[
+{"location":"night office, 11:47 PM – 2:41 AM (0–62)","layers":["HVAC hum 120–250 Hz","distant city traffic through glass, thinning over the night","fluorescent/lamp faint buzz","wall clock tick from 51"],"level_dbfs":"-42 to -48"},
+{"location":"designed silence, 'She missed one' (57.2–60)","layers":["room tone only","single exhale"],"level_dbfs":"-46 to -50"},
+{"location":"cream cards / Agentic Office UI (59–92)","layers":["very low air tone so the cards never go -inf"],"level_dbfs":"-55"},
+{"location":"night office, 2:47 AM payoff (92–106)","layers":["HVAC","lamp","laptop close room reflection"],"level_dbfs":"-45"},
+{"location":"dawn office (106–109)","layers":["birds","early traffic","brighter room air"],"level_dbfs":"-32 to -38"},
+{"location":"boardroom 9:02 AM (109–113)","layers":["air-con","paper","chair","distant phones"],"level_dbfs":"-38"}],
+"constraint_failures":[
+{"rule":"digital silence > 0.5 s outside an intended black beat","shot_id":"01:02.0–01:03.8","evidence":"1.79 s at -inf (noise floor -inf; curve -180 dBFS) over the cream card"},
+{"rule":"location change with no ambience change","shot_id":"01:46.2 / 01:49.2","evidence":"The dawn and boardroom cuts have no sound event; the bed is a flat -20 dBFS music wall"}],
+"revision_scope":"whole",
+"top_revision":"Lay one continuous night-office room tone (-46 dBFS) under 0–62 s, stretch the 'She missed one' silence to 2.5–3 s on top of it, and remove the 1.8 s of digital silence at 62.0–63.8."}

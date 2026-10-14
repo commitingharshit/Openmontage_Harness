@@ -1,0 +1,68 @@
+{
+  "critic": "craft",
+  "stage": "animatic",
+  "score": 82,
+  "dimension_scores": {
+    "visual_quality_aesthetics": 88,
+    "subject_character_consistency": 90,
+    "motion_temporal_stability": 80,
+    "composition_camera_readability": 66,
+    "audio_editing": 86
+  },
+  "issues": [
+    {
+      "shot_id": "00:47",
+      "category": "diff_readability",
+      "severity": 0.78,
+      "confidence": 0.97,
+      "evidence": "The memo occupies almost the entire frame, including its heading and table. The essential €71–73m → €74.6m change is small, with overlapping purple deletion and insertion marks. The caption also covers part of the table.",
+      "suggested_action": "Crop the real footage to paragraph 2, enlarge the changed amount and assumption, and place the caption below the document crop; hold the settled crop for at least 2.5 seconds."
+    },
+    {
+      "shot_id": "00:30.5",
+      "category": "phone_readability",
+      "severity": 0.7,
+      "confidence": 0.97,
+      "evidence": "The circled stale value is a small two-line label inside an already reduced slide. The red ellipse is prominent, but €71–73m remains much smaller than David's message.",
+      "suggested_action": "Enlarge the real slide region containing the stale text box above David's message, keeping both amounts readable without requiring viewers to inspect the miniature slide."
+    },
+    {
+      "shot_id": "01:06",
+      "category": "post_acceptance_readability",
+      "severity": 0.64,
+      "confidence": 0.95,
+      "evidence": "The fallback visibly shows €74.6m in both the memo paragraph and Table 1, but the full-width document makes those values small. The green caption covers lower document text.",
+      "suggested_action": "Keep this real memo fallback, tighten the crop around paragraph 2 and Table 1, and move the caption into a separate bottom band so both €74.6m values remain unobstructed."
+    },
+    {
+      "shot_id": "00:24",
+      "category": "comparison_readability",
+      "severity": 0.57,
+      "confidence": 0.96,
+      "evidence": "The side-by-side slides clearly distinguish teal branding from a default white slide, but the right slide's bullets and left slide's outlook label are tiny at the supplied frame size.",
+      "suggested_action": "Increase both slide crops and enlarge the synthetic slide's title and three bullets, preserving the side-by-side comparison and its three-second hold."
+    },
+    {
+      "shot_id": "00:16",
+      "category": "spreadsheet_layout",
+      "severity": 0.44,
+      "confidence": 0.98,
+      "evidence": "The synthetic spreadsheet shows Q2 under column D and Q4 under F, with no quarter heading over the selected E6 value. The bottom label appears crowded as 'SummaryFY26'.",
+      "suggested_action": "Align the quarter headings and row labels around E6, make the DACH Q4 input's location visually explicit, and separate the summary label from FY26."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "Essential text must be phone-readable; SCRIPT_v10 specifies at least 42 px at 1080p.",
+      "shot_id": "00:47",
+      "evidence": "The tracked-change amounts and assumption text remain below the specified visual size in the full-document view."
+    },
+    {
+      "rule": "Show the workflow with messages and essential values large enough to read on a phone.",
+      "shot_id": "00:30.5",
+      "evidence": "The stale €71–73m value inside the circled slide text box is substantially smaller than the surrounding message."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Tighten the document and slide crops around the exact changed or stale values, with captions outside the footage and at least 2.5 seconds of unobstructed reading time."
+}

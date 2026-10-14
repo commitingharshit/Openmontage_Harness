@@ -1,0 +1,103 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 63,
+ "dimension_scores": {
+  "intelligibility": 62,
+  "performance_casting": 55,
+  "writing_for_the_ear": 78,
+  "pacing": 58,
+  "placement": 66
+ },
+ "issues": [
+  {
+   "shot_id": "01:59",
+   "category": "brand_name_not_recognised",
+   "severity": 0.9,
+   "confidence": 0.6,
+   "evidence": "vo_lines t=119.3 expected 'Agentic... Office.' heard 'you've seen every change.' match 0.16. Whole-film whisper did not produce the brand words at all; b2.wav is 1.96 s placed at 119.3 so it ends at 121.26 of 121.41 s, under the score's 2.0 s fade-out and the birds/room bed. May be whisper repeating prior text, but the measured result is that the brand did not read.",
+   "suggested_action": "Move the brand read to ~118.0 (sting now ends 119.18, so start the sting at ~115.6 or shorten it), leave >=1.5 s of air after it, duck the end-card music 6 dB under it, then re-measure the read in isolation; if still unrecognised re-voice as 'uh-JEN-tick Office'."
+  },
+  {
+   "shot_id": "00:06-00:27",
+   "category": "rushed_hook_reads",
+   "severity": 0.6,
+   "confidence": 0.75,
+   "evidence": "Measured words/s after the '8% slower' re-read: 6.0 = 3.85, 11.0 = 4.17, 12.5 = 3.85, 15.35 = 3.78, 18.15 = 3.74, 24.0 = 4.4, 40.95 = 3.88 (target 2.3-3.0, >3.5 rushed). Measured over the first n expected words, so bleed does not inflate it.",
+   "suggested_action": "Re-render 6.0, 11.0, 24.0 and 40.95 at ~0.85x speed (aim 3.0 w/s) and win the time back by trimming the gaps 15.35-18.15 and 28-30.2; keep the frantic feel through cutting, not through the narrator's speed."
+  },
+  {
+   "shot_id": "00:00-01:52",
+   "category": "tts_performance",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "Narrator is Kokoro TTS af_heart (CANDIDATE: 'Kokoro TTS draft narrator'); the same flat read carries the 'grind' and the product confidence, with no change of register between 0:46 and 1:48.",
+   "suggested_action": "For the next pass cast a human or premium neural VO; at minimum give the post-reveal lines (46.3 onward) a lower, slower take so the register changes at the reveal."
+  },
+  {
+   "shot_id": "00:58-01:01",
+   "category": "vo_vs_super_conflict",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "Frames show the super 'The context is already here.' and 'Something new? Every new element is marked.' while the VO says 'Tell it what changed, once. It finds where that number lives' and 'Start from your templates, or just describe it.'",
+   "suggested_action": "Make the supers echo the VO keywords ('Once.' / 'Model. Memo. Deck.') or drop them while the VO speaks."
+  },
+  {
+   "shot_id": "00:11",
+   "category": "window_bleed_low_match",
+   "severity": 0.15,
+   "confidence": 0.8,
+   "evidence": "11.0 match 0.78 heard 'it says it's done. then you'; 15.35 match 0.83 heard 'so you fix it by hand, then an email. please update'. All expected words are present; the score drop is the next line bleeding into the window.",
+   "suggested_action": "No re-record needed; verify only. Optionally add 0.2 s between 11.0 and 12.5 so 'done' lands on the Done card alone."
+  },
+  {
+   "shot_id": "01:49",
+   "category": "payoff_line_fine",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "108.3 'Done. And this time, you've seen every change.' match 1.0, 2.92 w/s; 102.0 match 1.0, 2.52 w/s.",
+   "suggested_action": "Keep; use these two reads as the pace reference for the hook re-render."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "brand or product name misheard",
+   "shot_id": "01:59",
+   "evidence": "'Agentic... Office.' heard as 'you've seen every change.' (match 0.16); verify in isolation, the read ends 0.15 s before the last frame."
+  }
+ ],
+ "line_fixes": [
+  {
+   "t": "119.3",
+   "issue": "brand not recognised; ends 0.15 s before film end under a music fade",
+   "fix": "Start at ~118.0, 1.5 s tail, music ducked 6 dB; phonetic 'uh-JEN-tick... Office.'"
+  },
+  {
+   "t": "24.0",
+   "issue": "4.4 w/s, the fastest line in the film",
+   "fix": "Slow to ~3.0 w/s; drop 'in the chat' if it will not fit before 28.0"
+  },
+  {
+   "t": "11.0",
+   "issue": "4.17 w/s on a four-word beat that should land",
+   "fix": "Slow to ~2.6 w/s and start it on the Done card cut at 11.0"
+  },
+  {
+   "t": "6.0",
+   "issue": "3.85 w/s",
+   "fix": "Slow to ~3.0 w/s"
+  },
+  {
+   "t": "40.95",
+   "issue": "3.88 w/s on the emotional low point",
+   "fix": "Slow to ~2.8 w/s; it still ends before the cursor stops at 43.6 if started at 40.6"
+  },
+  {
+   "t": "34.6 / 93.8",
+   "issue": "'slide four' transcribed 'slide for'",
+   "fix": "Harmless homophone; optionally stress 'FOUR' in the read"
+  }
+ ],
+ "revision_scope": "ending",
+ "top_revision": "Re-place and verify the brand read: start 'Agentic... Office.' at ~118.0 with the music ducked under it and at least 1.5 s of air after it, so the one line that names the product is actually recognised."
+}

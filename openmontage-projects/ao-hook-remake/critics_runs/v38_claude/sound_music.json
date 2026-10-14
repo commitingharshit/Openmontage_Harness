@@ -1,0 +1,115 @@
+{
+ "critic": "sound_music",
+ "stage": "animatic",
+ "score": 61,
+ "dimension_scores": {
+  "arc_serves_story": 70,
+  "hit_points": 45,
+  "genre_and_emotion_fit": 65,
+  "motif": 68,
+  "ending": 55
+ },
+ "issues": [
+  {
+   "shot_id": "00:00-00:46",
+   "category": "hits_not_on_cuts",
+   "severity": 0.6,
+   "confidence": 0.75,
+   "evidence": "cuts_on_sound_pct 31.8; hook cuts 13.93, 15.6, 22.97, 24.07, 31.07, 35.0, 39.2 have no sound event; the music beds (hazy jazz, suspense) are laid as continuous stock with no edits to cut points",
+   "suggested_action": "Edit the suspense bed to the cut list: accent/stab on 22.97 (head in hands), 35.0 (slide 4 reverted) and each whip at 37.4/39.2/40.3; riser peak exactly on 41.6"
+  },
+  {
+   "shot_id": "00:46-01:18",
+   "category": "flat_reveal_energy",
+   "severity": 0.55,
+   "confidence": 0.65,
+   "evidence": "dynamic_sections: 46 s -19.9 dBFS for 30 s vs hook -16.1/-18.8; score enters at 49.0 at vol 0.16 and stays 'low 49-78'; first musical lift at 78 and the real downbeat only at 92.6 (76% of runtime)",
+   "suggested_action": "Keep the restraint but give the reveal a state change: a soft pad/pulse entry on the logo at 46.2 and a first rhythmic layer on 'Not another chatbot' at 49.3; save the full drop for Accept all"
+  },
+  {
+   "shot_id": "02:00",
+   "category": "weak_button",
+   "severity": 0.5,
+   "confidence": 0.6,
+   "evidence": "Music returns at 115.6 (vol .18) and fades out over the last 2.0 s; identity sting at 117.9; brand VO 119.3 heard only as 'office.'; silence_starts 120.75",
+   "suggested_action": "Hold the dawn near-silence through 'This time, you checked.', hit one clean button (the identity motif resolved on the tonic) on the logo at ~118.2, then let the brand line sit over its tail"
+  },
+  {
+   "shot_id": "00:05-00:17",
+   "category": "genre_fit",
+   "severity": 0.35,
+   "confidence": 0.5,
+   "evidence": "'music_hazy_after_hours_132' light jazz under 'You ask a chatbot…' while the cold open's bass_pulse/heart_fast already established dread; the two stock tracks share no key or instrument with the product score (digital_clouds)",
+   "suggested_action": "Use a stem of the product score (filtered, detuned) for the 'helpful AI' bed so the false comfort and the real answer are the same theme in two states"
+  },
+  {
+   "shot_id": "01:41-01:55",
+   "category": "cliche_layering",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "Hook stacks heart_slow/heart_fast four times (0.0, 30.8, 37.4, 41.6) plus swell, riser, bass_pulse",
+   "suggested_action": "Keep one heartbeat (41.6, at Send); replace the others with score tension (ostinato tightening)"
+  }
+ ],
+ "constraint_failures": [],
+ "cue_sheet": [
+  {
+   "act": "Cold open 0-4.5",
+   "feel": "dread, suspended",
+   "tempo_bpm": "free",
+   "instrumentation": "sub drone, single low piano note, ticking",
+   "hits": "≠ card at 3.1, rewind 4.5"
+  },
+  {
+   "act": "False help 5-17",
+   "feel": "too-easy, glossy",
+   "tempo_bpm": "96",
+   "instrumentation": "product theme on soft synth keys, filtered",
+   "hits": "'Done.' chime 11.05 as the motif's first statement"
+  },
+  {
+   "act": "Grind 17-41.6",
+   "feel": "tightening anxiety",
+   "tempo_bpm": "96->120 ostinato",
+   "instrumentation": "pulsing bass, muted strings, clock percussion",
+   "hits": "22.97, 27.5 Done #2, 35.0 slide 4 reverts, whips 37.4/39.2/40.3, riser peak 41.6"
+  },
+  {
+   "act": "Silence 43.6-46.2",
+   "feel": "held breath",
+   "tempo_bpm": "-",
+   "instrumentation": "room tone only",
+   "hits": "head drop 44.57"
+  },
+  {
+   "act": "Reveal + demo 46-92",
+   "feel": "calm confidence, precise",
+   "tempo_bpm": "100",
+   "instrumentation": "warm pads, plucked arpeggio, light kit entering at 78",
+   "hits": "logo 46.2, 49.0, 61.4, 71.4 €74.6m lift, 78.0"
+  },
+  {
+   "act": "Accept + proof 92.6-106",
+   "feel": "release",
+   "tempo_bpm": "100",
+   "instrumentation": "full arrangement, downbeat on Accept all",
+   "hits": "92.6 downbeat, 95.2 Slide 4 ring"
+  },
+  {
+   "act": "Send / dawn / end 106-121.4",
+   "feel": "relief, resolve",
+   "tempo_bpm": "free",
+   "instrumentation": "swell on Sent, drop to silence at dawn, motif resolved",
+   "hits": "107.9 Sent, 112.4 silence, 118.2 button"
+  }
+ ],
+ "free_source_suggestions": [
+  "Pixabay: 'corporate tension ostinato'",
+  "Pixabay: 'ambient technology pad hopeful'",
+  "Mixkit: 'cinematic suspense build'",
+  "YouTube Audio Library: 'Ambient / Calm' filter, 90-100 bpm",
+  "Pixabay: 'logo sting minimal piano'"
+ ],
+ "revision_scope": "whole",
+ "top_revision": "Re-edit the beds so the accents fall on the measured cuts (31.8% today), and give the reveal at 46-49 a clear musical entry instead of a 30 s low bed."
+}

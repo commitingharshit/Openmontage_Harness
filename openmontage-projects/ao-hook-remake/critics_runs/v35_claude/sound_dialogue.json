@@ -1,0 +1,29 @@
+{"critic":"sound_dialogue","stage":"animatic","score":65,
+"dimension_scores":{"intelligibility":78,"performance_casting":50,"writing_for_the_ear":72,"pacing":55,"placement":64},
+"issues":[
+{"shot_id":"00:06-00:27","category":"rushed_hook_read","severity":0.65,"confidence":0.85,"evidence":"Measured words/s: 6.0s 4.13, 11.0s 4.17, 12.5s 3.98, 15.5s 3.91, 18.15s 3.71, 24.0s 4.61. Six of ten hook lines exceed 3.5 wps even after the V35 re-reads.","suggested_action":"Re-read the hook lines at 2.8-3.2 wps; to make room, cut words ('So you ask it for the deck... and it builds one, in the chat.' -> 'So you ask for the deck. It builds one.')."},
+{"shot_id":"00:11.0, 00:15.5","category":"line_match_below_threshold","severity":0.55,"confidence":0.6,"evidence":"'It says it's done.' heard 'it says it's done. then you' match 0.78; 'So you fix it by hand. Then, an email.' match 0.83. Every expected word is present; the next line bleeds into the window, so the gaps are under ~0.5 s.","suggested_action":"Re-measure with per-line windows. Either way, open 0.4-0.6 s of air after each of these lines so it reads as its own beat."},
+{"shot_id":"00:00-00:46, 01:49-01:54","category":"tts_casting","severity":0.5,"confidence":0.7,"evidence":"Narrator is the Kokoro af_heart draft. A premium film for consultants, finance teams and lawyers needs a human, warm and low-key read, not a uniform TTS cadence over a 134 s spine.","suggested_action":"Cast a human VO (or a premium TTS with direction tags) for the final. Keep the British male voice for the partner's email."},
+{"shot_id":"00:42.3-00:46","category":"vo_over_designed_silence","severity":0.45,"confidence":0.8,"evidence":"The candidate says the cursor stops on Send with 'total silence', but 'The worst part? You don't even know what's wrong anymore.' runs about 42.3-45.4 s, under the 44.57 head-drop. The only measured silence is the 45.5 window (-50.5 dBFS).","suggested_action":"Move the line to 41.0 so it ends before the cursor stops at about 44.0, then hold 1.5 s of room tone and the thud before 'See exactly what changed.'"},
+{"shot_id":"00:34.6","category":"misplaced_pause","severity":0.35,"confidence":0.6,"evidence":"Heard as 'done except now. slide for changed.' The read pauses after 'now' rather than after 'Done', so the turn lands on the wrong word.","suggested_action":"Re-read it as 'Done.' [0.4 s] 'Except now... slide four changed.' and push 'four' as the stress word."},
+{"shot_id":"01:31.3","category":"vo_masks_music_hit","severity":0.35,"confidence":0.7,"evidence":"'Every change is marked, in every file. Accept it, or reject it. Even slide four.' runs about 91.3-96.1 s, straight over the Accept-all hit at 92.3. The loudness curve shows the hit as only -14.3 dBFS against -17 around it.","suggested_action":"Start the line at 93.0 after the Accept-all hit, or split it: 'Every change is marked.' (91.3) / [hit 92.3] / 'Accept it, or reject it. Even slide four.' (93.4)."},
+{"shot_id":"02:00.3 vs 02:07.3","category":"tagline_wording_mismatch","severity":0.3,"confidence":0.65,"evidence":"The VO says 'Done. And this time, you've seen every change.' The end card says 'This time, you checked.' These are two versions of the payoff line, 7 s apart.","suggested_action":"Make the VO and the card the same words, e.g. VO 'Done. And this time... you checked.' over the strike-through card at 127.3."},
+{"shot_id":"00:28.0-00:30.2, 01:42.3-01:46.2","category":"tight_or_overlapping_lines","severity":0.25,"confidence":0.4,"evidence":"Estimated from words/wps: the 28.0 line ends about 30.36, after the 30.2 line starts; the 102.3 line ends about 106.04, 0.16 s before the 106.2 line.","suggested_action":"Verify with VO-stem envelopes. Move the 30.2 line to 30.6 and the 106.2 line to 106.5."}
+],
+"line_fixes":[
+{"t":"6.0","issue":"4.13 wps","fix":"Re-read at 3.0 wps; the line can run to 8.7 s"},
+{"t":"11.0","issue":"match 0.78, 4.17 wps, next line 0.5 s later","fix":"Slow 'It says... it's done.' to about 1.4 s and start the next line at 12.7"},
+{"t":"15.5","issue":"match 0.83, 3.91 wps","fix":"'So you fix it by hand.' [0.3 s] 'Then... an email.' starting 15.4; end the line by 17.9"},
+{"t":"24.0","issue":"4.61 wps","fix":"Trim to 'So you ask for the deck. It builds one, in the chat.' at 3.0 wps"},
+{"t":"34.6","issue":"pause on the wrong word; 'four' heard as 'for'","fix":"Put the beat after 'Done.' and stress 'FOUR'"},
+{"t":"42.3","issue":"talks through the designed silence","fix":"Move it to 41.0 and land the final word before the cursor stops"},
+{"t":"58.7","issue":"3.57 wps, 18 words","fix":"Drop 'once', or re-read at 3.0 wps with the picture extended 0.6 s"},
+{"t":"91.3","issue":"masks the Accept-all hit","fix":"Split the line around the 92.3 hit"},
+{"t":"106.2","issue":"3.63 wps, 0.16 s after the previous line","fix":"Start at 106.5 and read at 3.0 wps"}
+],
+"constraint_failures":[
+{"rule":"any line with match < 0.85","shot_id":"00:11.0","evidence":"'It says it's done.' match 0.78"},
+{"rule":"any line with match < 0.85","shot_id":"00:15.5","evidence":"'So you fix it by hand. Then, an email.' match 0.83"}
+],
+"revision_scope":"opening",
+"top_revision":"Re-read the hook (6.0-27 s) at 2.8-3.2 words/s with 0.4-0.6 s of air between lines, trimming words to fit, so that every line clears 0.85 match and the 42.3 line ends before the cursor stops on Send."}

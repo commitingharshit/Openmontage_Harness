@@ -1,0 +1,102 @@
+{
+ "critic": "sound_ambience",
+ "stage": "animatic",
+ "score": 70,
+ "dimension_scores": {
+  "room_tone_continuity": 86,
+  "world_building": 56,
+  "sound_perspective": 58,
+  "diegetic_logic": 70,
+  "designed_silence": 86
+ },
+ "issues": [
+  {
+   "shot_id": "00:49-01:42",
+   "category": "warm_room_reuses_office",
+   "severity": 0.5,
+   "confidence": 0.7,
+   "evidence": "The candle-lit warm room (frames show amber lamps/candles) is carried by the same office.mp3 used for the night office, now at 0.035, plus ticktock 0.07 only on 54.4-58.4, 64.4-78.2, 91.8-95.2; under the product bed (non-VO stem ~ -31 to -35 dB) the room is effectively inaudible, so the location change at 49 is barely heard.",
+   "suggested_action": "Give the warm room its own bed: soft room air, faint candle/fireplace crackle, distant evening street at -42 dBFS, cut in on every warm-room shot (49.0, 54.4, 64.4, 74.2, 91.8) and out on screen-filling UI."
+  },
+  {
+   "shot_id": "00:00-00:05",
+   "category": "cold_open_no_air",
+   "severity": 0.3,
+   "confidence": 0.6,
+   "evidence": "0-5.05 has bass_pulse, heart_fast, phone buzz and VO but no office room tone (office.mp3 starts 5.05), though the picture is her real night office.",
+   "suggested_action": "Start office room tone at 0.0 at 0.06 under the cold open; it then carries through the rewind to 5.05."
+  },
+  {
+   "shot_id": "whole",
+   "category": "no_perspective_on_push_ins",
+   "severity": 0.3,
+   "confidence": 0.5,
+   "evidence": "Every product shot opens wide on the laptop in the room and pushes into the screen, but room tone is a constant level; nothing narrows as the camera enters the screen.",
+   "suggested_action": "Automate room bed -4 dB and LPF from 12 kHz to 6 kHz across each push-in, restore on the next wide."
+  },
+  {
+   "shot_id": "01:47.9",
+   "category": "lights_on_not_diegetic",
+   "severity": 0.25,
+   "confidence": 0.55,
+   "evidence": "Lights come on is scored by a non-diegetic identity sting; the room itself does not change.",
+   "suggested_action": "Swap office tone for a brighter morning room bed at 107.9 (window air, faint birds) before the city/birds at 109."
+  },
+  {
+   "shot_id": "00:43.6-00:46.3 / 01:52-01:55.5",
+   "category": "designed_silence_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "digital_silence_windows_s empty; 43.6-46.3 drops to -49 dBFS with room tone + heartbeat under the cursor stop; 112-115.5 averages -38 dBFS with city/birds under the sunrise.",
+   "suggested_action": "Keep both; they are the film's two breaths."
+  }
+ ],
+ "constraint_failures": [],
+ "ambience_plan": [
+  {
+   "location": "her night office (0-43.6, 106.3-107.9)",
+   "layers": [
+    "HVAC hum",
+    "distant open-plan air",
+    "faint traffic"
+   ],
+   "level_dbfs": "-40 to -36"
+  },
+  {
+   "location": "designed silence 43.6-46.3",
+   "layers": [
+    "room tone only",
+    "heartbeat"
+   ],
+   "level_dbfs": "-50 to -46"
+  },
+  {
+   "location": "warm evening room (49-105, product shots)",
+   "layers": [
+    "soft room air",
+    "candle/fire crackle",
+    "distant evening street"
+   ],
+   "level_dbfs": "-44 to -40, -4 dB + LPF when inside the screen"
+  },
+  {
+   "location": "lights on / dawn (107.9-115.3)",
+   "layers": [
+    "brighter room air",
+    "city waking",
+    "birds"
+   ],
+   "level_dbfs": "-38 to -34"
+  },
+  {
+   "location": "end card (115.3-122.6)",
+   "layers": [
+    "birds tail",
+    "light air"
+   ],
+   "level_dbfs": "-46"
+  }
+ ],
+ "revision_scope": "product_demo",
+ "top_revision": "Build a distinct warm-room ambience (air + candle crackle + distant street at ~-42 dBFS) and cut it in on every warm-room shot instead of reusing the night-office loop at 0.035."
+}

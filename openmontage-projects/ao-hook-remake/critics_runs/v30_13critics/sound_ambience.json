@@ -1,0 +1,100 @@
+{
+  "critic": "ambience_space_silence",
+  "stage": "animatic",
+  "score": 80,
+  "dimension_scores": {
+    "room_tone_continuity": 94,
+    "world_building": 60,
+    "sound_perspective": 68,
+    "diegetic_logic": 85,
+    "designed_silence": 94
+  },
+  "issues": [
+    {
+      "shot_id": "01:12.6–01:19",
+      "category": "missing_environment_return",
+      "severity": 0.65,
+      "confidence": 0.95,
+      "evidence": "The picture returns to the email, a real mouse-hand insert and the sunrise window. The timeline specifies music, heartbeat, click and identity tone; the mix cue list ends office ambience at 49.6 s and supplies no returning office or dawn ambience.",
+      "suggested_action": "Bring back the established office air at 72.6 s, then crossfade toward faint morning traffic and exterior city air at the sunrise cut, carrying it beneath the returning music."
+    },
+    {
+      "shot_id": "00:00–00:05",
+      "category": "unestablished_acoustic_space",
+      "severity": 0.5,
+      "confidence": 0.95,
+      "evidence": "The opening shows a real phone buzzing on a desk, but its listed layers are 'buzz, bass pulse, fast heartbeat'; the office room-tone cue begins at 5.05 s.",
+      "suggested_action": "Start a quiet HVAC and distant-city layer beneath the opening buzz, bridge it through the email, and briefly interrupt or reverse it with the rewind."
+    },
+    {
+      "shot_id": "00:05–00:43.6",
+      "category": "generic_world_building",
+      "severity": 0.42,
+      "confidence": 0.85,
+      "evidence": "The wide office frame contains other workers, while the documented environmental layer is a single 'office.mp3' bed. No separate distant traffic, colleague movement or remote office activity is specified.",
+      "suggested_action": "Verify what the office asset already contains; if absent, add sparse distant keyboard activity and muted city traffic to the wide office shots, keeping the workstation foreground clear."
+    },
+    {
+      "shot_id": "00:15.6–00:16.5",
+      "category": "perspective_unverified",
+      "severity": 0.35,
+      "confidence": 0.6,
+      "evidence": "A tight hands-on-keyboard insert uses 'typing_hard.mp3' over the same office bed used for the wide protagonist shot. The cue list documents gain and fades but no perspective treatment; aggregate measurements cannot establish the asset's recorded distance or reverb.",
+      "suggested_action": "Verify the typing stem's perspective against the close-up; use intimate, dry key transients and reduce distant office activity during the insert if the current sound reads as roomy."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "A location change must have an ambience change.",
+      "shot_id": "01:16.1",
+      "evidence": "The view changes to the dawn office window, but the documented mix carries only the returning music and supplies no environmental transition from the workstation to the window."
+    }
+  ],
+  "revision_scope": "shot_sequence",
+  "top_revision": "Restore the office's acoustic world around the final Send sequence and transition it into restrained morning city ambience at the sunrise.",
+  "ambience_plan": [
+    {
+      "location": "Opening office desk and email, 0–4.5 s",
+      "layers": [
+        "Quiet HVAC",
+        "Faint distant city traffic",
+        "Desk-coupled phone vibration"
+      ],
+      "level_dbfs": "Target ambience RMS −38 to −34"
+    },
+    {
+      "location": "Night office and workstation, 5–43.6 s",
+      "layers": [
+        "Continuous HVAC and city air",
+        "Sparse distant colleague activity in wide shots",
+        "Dry foreground typing in hand close-ups"
+      ],
+      "level_dbfs": "Target ambience RMS −36 to −32; foreground foley separately"
+    },
+    {
+      "location": "Stopped cursor and pre-reveal pause, 43.6–46.2 s",
+      "layers": [
+        "Reduced continuous room tone",
+        "Subtle natural breath if available"
+      ],
+      "level_dbfs": "Preserve approximately −33 RMS; measured digital_silence_windows_s is empty"
+    },
+    {
+      "location": "Return to office desk, 72.6–76.1 s",
+      "layers": [
+        "Established office HVAC",
+        "Faint city air",
+        "Dry mouse click"
+      ],
+      "level_dbfs": "Target ambience RMS −38 to −34"
+    },
+    {
+      "location": "Dawn office window, 76.1–79 s",
+      "layers": [
+        "Soft interior air",
+        "Distant morning traffic through closed glass"
+      ],
+      "level_dbfs": "Target ambience RMS −36 to −32"
+    }
+  ]
+}

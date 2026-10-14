@@ -1,0 +1,23 @@
+{"critic":"customer","stage":"animatic","score":64,
+"dimension_scores":{"pain_specificity":82,"relatability":72,"emotional_authenticity":55,"product_pain_fit":78,"trust_credibility":52,"purchase_motivation":50},
+"recognition":8,"resonance":6,"persuasion":5,
+"purchase_objections":[
+"Security: 'Cloud AI may process document content' on screen; board and client numbers cannot leave our approved environment without a clear data-handling answer.",
+"Does it work on our real .xlsx/.pptx files with linked models and house templates, or only on its own demo pack?",
+"The chatbot rival feels like a strawman: I don't regenerate a 12-slide deck in a chat window; I'd edit slide 4 myself in PowerPoint or use Copilot inside it.",
+"After 'All changes reviewed 10 of 10' the Room shot shows the memo back at €71–73m, which makes me wonder what actually got saved.",
+"Memo Table 1 still reads €71–73m in the tracked-change shot; exactly the kind of miss I'm scared of.",
+"Room shows 'not signed in' and a 'simulated teammate'; collaboration looks unfinished.",
+"Early access only, no price, no mention of Microsoft 365 / SharePoint integration."],
+"would_try":"maybe — the cross-file change list (Revenue!E6 8.9→8.5, Slide 4 title €71–73m→€74.6m) is exactly what I check by hand, but I'd only try it on a non-client file until data handling is clear.",
+"buy_decision":"TRY_FIRST — flips to BUY if the film shows it opening my own existing deck/model (not a demo pack) and states plainly where document content goes and who can see it.",
+"issues":[
+{"shot_id":"00:08-00:37","category":"strawman_competitor","severity":0.5,"confidence":0.65,"evidence":"'Regenerating all 12 slides… about 5 min left' and 'Generating presentation…' in a generic chat; my real alternative is fixing the cell by hand or Copilot inside PowerPoint.","suggested_action":"Make the rival the manual hunt (find every place €71–73m lives across 3 files) rather than a chatbot that rebuilds decks, or show both."},
+{"shot_id":"01:35-01:41","category":"trust_contradiction","severity":0.45,"confidence":0.7,"evidence":"Room memo reads 'revising the FY26 revenue outlook to €71–73m' after '10 of 10 changes accepted'.","suggested_action":"Reorder the Room beat before Accept-all or show the memo at €74.6m there."},
+{"shot_id":"01:42-01:46","category":"data_handling_unresolved","severity":0.45,"confidence":0.6,"evidence":"'Your files, stored on your device.' immediately qualified by small grey 'Cloud AI may process document content.'","suggested_action":"Add one concrete, approved line on what is sent and whether a local/enterprise model option exists; for lawyers and finance this is the gate."},
+{"shot_id":"01:11-01:18","category":"incomplete_fix_visible","severity":0.35,"confidence":0.6,"evidence":"Tracked change in the memo sentence, but Table 1 'FY26 outlook €71–73m' unchanged in the same frame.","suggested_action":"Show the table cell's tracked change as well."},
+{"shot_id":"00:05-00:46","category":"melodrama_over_truth","severity":0.3,"confidence":0.55,"evidence":"Head in hands twice, head dropped on desk, ghosted shaking 'AND AGAIN.'; the busy professional in me rolls eyes at the third collapse.","suggested_action":"Keep one real reaction (the head drop) and let the numbers carry the rest."},
+{"shot_id":"00:55-00:58","category":"irrelevant_feature","severity":0.2,"confidence":0.55,"evidence":"Conference-room image with 'New element added' badges has nothing to do with my board pack problem.","suggested_action":"Replace with a change on slide 4 of the same deck."}],
+"constraint_failures":[],
+"revision_scope":"product_demo",
+"top_revision":"Fix the trust leaks in the demo (Room memo showing €71–73m after 10/10 accepted, unchanged memo table) and state plainly where document content goes, because those, not the story, are what stop a finance or legal buyer."}

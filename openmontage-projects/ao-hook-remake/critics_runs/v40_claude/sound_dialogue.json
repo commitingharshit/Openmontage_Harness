@@ -1,0 +1,110 @@
+{
+ "critic": "sound_dialogue",
+ "stage": "animatic",
+ "score": 68,
+ "dimension_scores": {
+  "intelligibility": 76,
+  "performance_casting": 52,
+  "writing_for_the_ear": 80,
+  "pacing": 62,
+  "placement": 68
+ },
+ "issues": [
+  {
+   "shot_id": "00:00-00:43",
+   "category": "hook_vo_masked",
+   "severity": 0.6,
+   "confidence": 0.7,
+   "evidence": "Stems re-rendered from sound_mix_v40.py (VO bus vs ducked beds+SFX+room, pre-master), speech-active 50 ms frames: VO over everything else is 2.7 dB at 0.4, 0.8 dB at 15.35, 0.5 dB at 28.0, -0.9 dB at 37.6 ('Five tabs. Copy. Paste...'), 2.2 dB at 40.95; hook median ~3.9 dB vs ~10.8 dB after 46 s. The un-ducked SFX bus (buzz 0.6, five whooshes 0.45-0.5, riser, impact, clock) sits on top of the narrator.",
+   "suggested_action": "Duck the SFX bus too (or hand-ride buzz/whoosh/riser -6 dB) inside every hook VO line so each line sits >= 8 dB clear; ASR still parsed the words, a viewer on a phone speaker will not."
+  },
+  {
+   "shot_id": "00:24.0 / 01:14.5",
+   "category": "rushed_reads",
+   "severity": 0.45,
+   "confidence": 0.8,
+   "evidence": "Measured from file durations: 'So you ask it for the deck... and it builds one, in the chat.' 13 words in 3.07 s = 4.2 w/s; 'It plans the work, then checks it, and shows you the diffs.' 12 words in 2.94 s = 4.1 w/s; 'Tell it what changed, once...' 3.6 w/s; 'You ask a chatbot...' 3.6 w/s.",
+   "suggested_action": "Re-read n1s and v4c at ~3.0 w/s (n1s needs ~4.3 s: it has room until 28.0 if the deck line starts 23.7); trim v3 to 'Tell it what changed, once. It finds every place that number lives.'"
+  },
+  {
+   "shot_id": "00:18.1 / 00:30.15 / 00:49.2",
+   "category": "lines_butted",
+   "severity": 0.4,
+   "confidence": 0.8,
+   "evidence": "Line ends vs next starts: o4s ends 18.10, email voice starts 18.15 (50 ms); n2d ends 30.15, n3s starts 30.20 (50 ms); k6 'Decide what stays.' ends 49.22, v1 'Not another chatbot' starts 49.30 (80 ms) so the promise and the next claim run together.",
+   "suggested_action": "Give each at least 0.3 s: start v1 at 49.6 and n3s at 30.45; start the partner's email voice at 18.4 so the voice change reads as a new speaker."
+  },
+  {
+   "shot_id": "whole",
+   "category": "tts_casting_consistency",
+   "severity": 0.4,
+   "confidence": 0.55,
+   "evidence": "Candidate states 'Kokoro TTS draft narrator (af_heart)'; the 24 lines come from eight render batches (v22, v29, v31, v33, v34, v35, v38, v39). Every line sits at -22.2 to -23.5 dB RMS (level is matched), but timbre/prosody drift across batches cannot be ruled out and a draft TTS voice is not a premium ad VO.",
+   "suggested_action": "Re-render all 24 lines in one session with one voice/settings (or record a human read) before picture lock; A/B adjacent batch boundaries at 11.0, 15.35, 37.6, 67.7."
+  },
+  {
+   "shot_id": "00:11.0 / 00:15.35",
+   "category": "match_below_085_window_bleed",
+   "severity": 0.2,
+   "confidence": 0.5,
+   "evidence": "Measured match 0.78 ('It says it's done.') and 0.83 ('So you fix it by hand. Then, an email.') but 'heard' contains every expected word verbatim plus the next line's opening ('then you', 'please update'); the drop is the measuring window, not the read.",
+   "suggested_action": "Re-run the per-line check with windows trimmed to each file's duration (1.24 s, 2.75 s) to confirm >= 0.85 before treating as a failure."
+  },
+  {
+   "shot_id": "02:02",
+   "category": "brand_read_good",
+   "severity": 0.1,
+   "confidence": 0.8,
+   "evidence": "'Agentic... Office.' heard 'agentic office.' match 1.0, 10.9 dB above the bed, ends 120.96 before the button sting at 121.3.",
+   "suggested_action": "Keep."
+  },
+  {
+   "shot_id": "01:17.4-01:25.2",
+   "category": "placement_good",
+   "severity": 0.1,
+   "confidence": 0.7,
+   "evidence": "7.8 s VO-free precision montage and the Accept-all downbeat at 93.1 lands before 'Every change is marked' at 93.8.",
+   "suggested_action": "Keep the music-only stretches."
+  }
+ ],
+ "constraint_failures": [],
+ "line_fixes": [
+  {
+   "t": "0:24.0",
+   "issue": "4.2 w/s, rushed",
+   "fix": "re-read at 3.0 w/s, start 23.7"
+  },
+  {
+   "t": "1:14.5",
+   "issue": "4.1 w/s",
+   "fix": "re-read at 3.0 w/s; may run to 78.5 (VO-free until 85.2)"
+  },
+  {
+   "t": "0:49.3",
+   "issue": "80 ms after 'Decide what stays.'",
+   "fix": "move 0.3 s later"
+  },
+  {
+   "t": "0:30.2",
+   "issue": "50 ms after 'old number'",
+   "fix": "move to 30.45"
+  },
+  {
+   "t": "0:18.15",
+   "issue": "email voice butts narrator (50 ms)",
+   "fix": "move to 18.4"
+  },
+  {
+   "t": "0:37.6",
+   "issue": "VO -0.9 dB under whooshes/riser",
+   "fix": "pull whoosh/riser/impact -6 dB under the line"
+  },
+  {
+   "t": "0:28.0",
+   "issue": "VO 0.5 dB over buzz+bell+chime+bass",
+   "fix": "move buzz to 27.7 or -6 dB"
+  }
+ ],
+ "revision_scope": "opening",
+ "top_revision": "Clear the hook narrator: duck the SFX bus under every hook VO line so it sits >= 8 dB clear (it is 0.5 to 3 dB at 0.4, 15.35, 28.0, 37.6 and 40.95), and re-read the two 4+ w/s lines."
+}

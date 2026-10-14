@@ -1,0 +1,134 @@
+{
+ "critic": "cinematography",
+ "stage": "animatic",
+ "score": 56,
+ "dimension_scores": {
+  "lighting_shape": 58,
+  "lens_depth": 54,
+  "composition": 55,
+  "camera_movement": 55,
+  "frame_design_ui": 58
+ },
+ "issues": [
+  {
+   "shot_id": "01:32",
+   "category": "unreadable_composition",
+   "severity": 0.75,
+   "confidence": 0.85,
+   "evidence": "Hero 'on the real laptop' frame at 92.5 shows no laptop at all: a cropped Changes panel, a teal slide edge with a cut-off '3 / 26 outlook', and an orange smear filling the right third. Measured sharp 131 vs 280-598 on neighbours.",
+   "suggested_action": "Open WIDE on the warm-room laptop (35mm, f/2.8, lamp key frame-left) for 1 s, then push to the panel; never let the orange spill occupy more than a rim on frame-right."
+  },
+  {
+   "shot_id": "00:07.5",
+   "category": "set_identity_flip",
+   "severity": 0.7,
+   "confidence": 0.8,
+   "evidence": "At 5.0 she is at an office desk in a striped shirt under a blue practical; at 7.5 'her' hands type on a laptop on a bed/couch with a pillow and dark knit sleeves - different set, different wardrobe.",
+   "suggested_action": "Use a top-down insert shot in an office desk set with striped cuffs, or cut to a side-angle insert from the same desk clip; at minimum crop out the pillow and sleeves."
+  },
+  {
+   "shot_id": "00:07.5-00:12.5",
+   "category": "screen_hotspot",
+   "severity": 0.55,
+   "confidence": 0.8,
+   "evidence": "Top-down laptop composites (7.5, 12.5, 57.5, 60) render the screen as a radial white bloom brighter in the centre than any real panel, with the UI barely readable; reads as a spotlight, not an emissive display.",
+   "suggested_action": "Flatten the screen falloff to <15% centre-to-edge, drop screen gain ~1 stop, and add a faint keyboard spill instead of a centre bloom."
+  },
+  {
+   "shot_id": "00:15.6",
+   "category": "focus_miss",
+   "severity": 0.5,
+   "confidence": 0.85,
+   "evidence": "Hands-typing insert at 15.6 is fully defocused (measured sharpness 1.2); also 22.97 (1.8), 24.07 (3.2), 44.57 (2.3), 107.3 (3.5).",
+   "suggested_action": "Rack to sharp on the fingers within the first 8 frames, or replace with an in-focus 85mm insert; deliberate defocus should resolve, not stay mush."
+  },
+  {
+   "shot_id": "00:00-00:42.5",
+   "category": "flat_ui_frames",
+   "severity": 0.5,
+   "confidence": 0.8,
+   "evidence": "Illustrated UI (0, 10, 17.5, 25, 27.5, 35, 42.5) is a flat, front-on screenshot under a vignette, centred, no depth plane or light; 35.0 is a slide strip floating on black.",
+   "suggested_action": "Put each illustrated window on a monitor plane in her office (slight 8-12 degree yaw, foreground bokeh of her desk lamp), or at least a parallax layer of the room behind."
+  },
+  {
+   "shot_id": "01:25-01:30",
+   "category": "text_over_ui",
+   "severity": 0.4,
+   "confidence": 0.8,
+   "evidence": "'Bring in your team.' (85, 87.5) and 'You decide what lands.' (90) sit on top of toolbar/UI text top-left, both readable only through a dark box.",
+   "suggested_action": "Move supers to the empty lower-left negative space or the bokeh field; reserve a clean third for type."
+  },
+  {
+   "shot_id": "00:22.5/00:30",
+   "category": "repeated_setup",
+   "severity": 0.35,
+   "confidence": 0.75,
+   "evidence": "The head-in-hands stock shot at 22.5 and the 'scratches head' insert at 30.0 are the same framing, same teal map background, same pose.",
+   "suggested_action": "Replace 30.0 with a different size/angle (profile CU against the monitor glow, 85mm) so the second beat escalates."
+  },
+  {
+   "shot_id": "01:47.5-01:50",
+   "category": "lights_on_not_visible",
+   "severity": 0.3,
+   "confidence": 0.55,
+   "evidence": "Lights-come-on beat: 107.5 and 110 are the same candle-warm exposure; no visible change of motivated light between frames.",
+   "suggested_action": "Start the shot in true darkness with only screen key, then cut the practical lamp on so the room gains ~2 stops."
+  }
+ ],
+ "constraint_failures": [
+  {
+   "rule": "identity or set flip across a cut",
+   "shot_id": "00:05->00:07.5",
+   "evidence": "office desk + striped shirt -> bed/couch + dark knit sleeves for the same protagonist"
+  },
+  {
+   "rule": "unreadable composition (subject lost)",
+   "shot_id": "01:32.5",
+   "evidence": "hero laptop never visible; cropped panel + orange smear"
+  }
+ ],
+ "revision_scope": "shot_sequence",
+ "top_revision": "Re-frame the 91.8 hero as a true wide of the warm-room laptop pushing to the Changes panel, so the film's payoff shot actually shows the product in a place.",
+ "per_shot": [
+  {
+   "t": "01:32.5",
+   "grade_A_to_F": "F",
+   "fix": "wide 35mm on the laptop, lamp key frame-left, push to panel; kill the orange smear"
+  },
+  {
+   "t": "00:07.5",
+   "grade_A_to_F": "D",
+   "fix": "same desk set as 5.0, striped cuffs, flatten screen bloom"
+  },
+  {
+   "t": "00:35.0",
+   "grade_A_to_F": "D",
+   "fix": "put the slide strip on a monitor in her office, 10 degree yaw, lamp bokeh foreground"
+  },
+  {
+   "t": "00:10.0",
+   "grade_A_to_F": "D",
+   "fix": "'Done.' over the screen in the room, not a grey flat card; real blacks"
+  },
+  {
+   "t": "00:15.0",
+   "grade_A_to_F": "D",
+   "fix": "85mm insert, focus on fingers, key from the screen"
+  },
+  {
+   "t": "00:17.5",
+   "grade_A_to_F": "D",
+   "fix": "monitor in space, rack from her eyes to the notification"
+  },
+  {
+   "t": "00:52.5",
+   "grade_A_to_F": "D",
+   "fix": "remove the letterbox, float the window in the room with a slow push"
+  },
+  {
+   "t": "01:57.5",
+   "grade_A_to_F": "D",
+   "fix": "near-black dead frame; hold the struck line or go to the logo"
+  }
+ ]
+}

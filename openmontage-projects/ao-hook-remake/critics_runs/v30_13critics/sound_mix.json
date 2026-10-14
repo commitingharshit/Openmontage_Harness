@@ -1,0 +1,93 @@
+{
+  "critic": "mix_master",
+  "stage": "animatic",
+  "score": 67,
+  "dimension_scores": {
+    "loudness_spec": 35,
+    "vo_vs_bed_balance": 62,
+    "tonal_balance": 55,
+    "dynamics_arc": 90,
+    "transitions_bridges": 75,
+    "stereo_image": 95
+  },
+  "issues": [
+    {
+      "shot_id": "00:00–01:25",
+      "category": "master_clipping",
+      "severity": 1.0,
+      "confidence": 1.0,
+      "evidence": "Measured true peak is +0.6 dB, with 8 clipped samples. Integrated loudness is −15.0 LUFS and LRA is 6.0 LU, both within the requested ranges.",
+      "suggested_action": "Locate the clipped events, rebuild them from unclipped stems with additional bus headroom, then normalize and true-peak limit the master to −1.5 dBTP or lower; verify the encoded delivery."
+    },
+    {
+      "shot_id": "00:00–01:25",
+      "category": "vo_masking_risk",
+      "severity": 0.72,
+      "confidence": 0.82,
+      "evidence": "The measured mix has only 10.4% energy in 1–4 kHz, below the 15% VO balance benchmark; sub is 19.3% and low is 40.7%. No stem-based VO-over-music measurement is supplied.",
+      "suggested_action": "Duck music and competing effects under narration, apply VO-keyed attenuation around 1–4 kHz on the music, and reduce sustained bass energy; verify VO-active windows and a median VO-over-music margin of at least 8 dB."
+    },
+    {
+      "shot_id": "00:55 and 01:22.6",
+      "category": "speech_edge_intelligibility",
+      "severity": 0.52,
+      "confidence": 0.58,
+      "evidence": "At 55.1 s, expected 'Tell it what changed. Once.' is measured as 'it what changed. once' with match 0.67; at 82.6 s, 'Agentic Office.' is measured as 'office.' with match 0.60.",
+      "suggested_action": "Verify these two VO clips in isolation and in the mix for trimmed consonants or masking; preserve their complete clip heads and duck the bed before each phrase if confirmed."
+    },
+    {
+      "shot_id": "00:37.4–00:41.6",
+      "category": "transition_alignment",
+      "severity": 0.4,
+      "confidence": 0.65,
+      "evidence": "The timeline specifies 'whooshes per whip', but cuts at 37.4, 38.4, 39.7 and 40.3 s appear in cuts_without_sound_event_s; overall cuts_on_sound_pct is 32.5%. These measurements do not establish hard audio chops.",
+      "suggested_action": "Verify whoosh alignment against the actual whip motion, reposition existing cues where needed, and carry short tails across the cuts without adding hits to every reaction insert."
+    }
+  ],
+  "constraint_failures": [
+    {
+      "rule": "True peak must not exceed −1.0 dBTP.",
+      "shot_id": "00:00–01:25",
+      "evidence": "Measured true_peak_dbfs: +0.6; peak timestamp unavailable."
+    },
+    {
+      "rule": "clipped_samples must equal 0.",
+      "shot_id": "00:00–01:25",
+      "evidence": "Measured clipped_samples: 8; sample locations unavailable."
+    }
+  ],
+  "revision_scope": "whole",
+  "top_revision": "Rebuild the master from unclipped stems with VO-led ducking, then deliver −14 LUFS integrated with a verified ceiling of −1.5 dBTP.",
+  "mix_recipe": {
+    "ducking": {
+      "music_under_vo_db": 5,
+      "competing_sfx_under_vo_db": 3,
+      "attack_ms": 20,
+      "release_ms": 220,
+      "lookahead_ms": 10,
+      "target_vo_over_music_db_median": 8
+    },
+    "eq": {
+      "music_under_vo": "VO-keyed bell at 2.2 kHz, Q 0.8, maximum reduction 3 dB across approximately 1–4 kHz.",
+      "music_low_end": "Start with a −2 dB low shelf at 180 Hz and a 30 Hz high-pass; retain brief heartbeat and bass accents.",
+      "ambience": "High-pass office room tone at 100 Hz, 12 dB/octave; retain continuous air through the designed silence."
+    },
+    "transitions": {
+      "music_crossfade_ms": 200,
+      "sfx_tail_overlap_ms": 100,
+      "direction": "Preserve the measured quiet trough around 44–46 s and the product-act contrast; maintain LRA within 6–11 LU."
+    },
+    "limiter": {
+      "true_peak_ceiling_dbtp": -1.5,
+      "oversampling": 4,
+      "lookahead_ms": 5,
+      "release_ms": 100
+    },
+    "two_pass_loudnorm": {
+      "pass_1": "loudnorm=I=-14:TP=-1.5:LRA=7:print_format=json",
+      "pass_2": "loudnorm=I=-14:TP=-1.5:LRA=7:measured_I=<pass1_input_i>:measured_TP=<pass1_input_tp>:measured_LRA=<pass1_input_lra>:measured_thresh=<pass1_input_thresh>:offset=<pass1_target_offset>:linear=true:print_format=json",
+      "verification": "Run pass 1 on the repaired mix and use its fresh measurements in pass 2; remeasure the final encoded file for true peak, clipping, integrated loudness and LRA."
+    },
+    "stereo": "Preserve the measured correlation of 0.829; keep VO centered and verify mono compatibility."
+  }
+}
